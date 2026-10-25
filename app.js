@@ -366,10 +366,15 @@ function safeUrl(url) {
   }
 }
 
+function cssVar(name, fallback) {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return raw || fallback;
+}
+
 function riskColor(risk) {
-  const raw = getComputedStyle(document.documentElement).getPropertyValue(`--risk-${risk}`).trim();
+  const raw = cssVar(`--risk-${risk}`, "");
   if (raw) return raw;
-  const fallback = ["#1d4e89", "#1f7a4d", "#8a5a12", "#0f6f78", "#6d3a78", "#a33b4a"];
+  const fallback = ["#7ea2ff", "#45bd84", "#f0b429", "#3ec6cf", "#b07cff", "#ef6a70"];
   let hash = 0;
   for (const ch of String(risk)) hash = (hash + ch.charCodeAt(0)) % fallback.length;
   return fallback[hash];
@@ -827,12 +832,12 @@ function buildSvg(lanes, dated, width) {
         y: PAD_TOP + index * LANE,
         width,
         height: LANE,
-        fill: "#f6f8fb",
+        fill: cssVar("--panel-hover", "#151c28"),
       }));
     }
     if (index > 0) {
       const y = PAD_TOP + index * LANE + 0.5;
-      root.append(svgEl("line", { x1: 0, x2: width, y1: y, y2: y, stroke: "#e2e8ef" }));
+      root.append(svgEl("line", { x1: 0, x2: width, y1: y, y2: y, stroke: cssVar("--border", "#252d3c") }));
     }
   });
   root.append(svgEl("line", {
@@ -840,10 +845,10 @@ function buildSvg(lanes, dated, width) {
     x2: width,
     y1: PAD_TOP + 0.5,
     y2: PAD_TOP + 0.5,
-    stroke: "#d5dde6",
+    stroke: cssVar("--border-strong", "#364157"),
   }));
   const base = PAD_TOP + lanes.length * LANE + 0.5;
-  root.append(svgEl("line", { x1: 0, x2: width, y1: base, y2: base, stroke: "#d5dde6" }));
+  root.append(svgEl("line", { x1: 0, x2: width, y1: base, y2: base, stroke: cssVar("--border-strong", "#364157") }));
 
   monthTicks(width).forEach((tick) => {
     if (tick.line != null) {
@@ -852,7 +857,7 @@ function buildSvg(lanes, dated, width) {
         x2: tick.line,
         y1: PAD_TOP,
         y2: PAD_TOP + lanes.length * LANE,
-        stroke: "#e6edf3",
+        stroke: cssVar("--border", "#252d3c"),
       }));
     }
     if (tick.show) {
@@ -886,8 +891,8 @@ function buildSvg(lanes, dated, width) {
       width: tagW,
       height: 18,
       rx: 9,
-      fill: "#ffffff",
-      stroke: "#c5d4e6",
+      fill: cssVar("--panel", "#111722"),
+      stroke: cssVar("--border-strong", "#364157"),
     }));
     const todayText = svgEl("text", {
       x: tagX + tagW / 2,
@@ -1001,14 +1006,14 @@ function drawDot(dot) {
       cy,
       r: 9.6,
       fill: "none",
-      stroke: "#0c2f57",
+      stroke: cssVar("--accent", "#4f7cff"),
       "stroke-width": 1.15,
       "stroke-opacity": "0.62",
     }));
   }
   const paint = {
     class: "mark",
-    fill: event.status === "happened" ? color : "#ffffff",
+    fill: event.status === "happened" ? color : cssVar("--panel", "#111722"),
     stroke: color,
     "stroke-width": 2,
   };
@@ -1662,7 +1667,37 @@ async function main() {
   }
 }
 
+function paintThemeButton() {
+  const theme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  const button = document.getElementById("themeButton");
+  if (!button) return;
+  button.textContent = theme === "dark" ? "Light" : "Dark";
+  button.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+}
+
+function setTheme(theme) {
+  const next = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  document.documentElement.style.backgroundColor = "";
+  document.documentElement.style.colorScheme = next;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", next === "light" ? "#eef1f6" : "#0b0f16");
+  try { localStorage.setItem("moonshot-theme", next); } catch (err) {}
+  paintThemeButton();
+  if (model) {
+    mountLegend();
+    apply();
+  }
+}
+
 function bindChrome() {
+  document.documentElement.style.backgroundColor = "";
+  paintThemeButton();
+  document.getElementById("themeButton").addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    setTheme(current === "dark" ? "light" : "dark");
+  });
+
   document.addEventListener("click", (event) => {
     if (!state.pinned) return;
     if (event.target.closest(".popover, .dot, .next-btn, .scrim")) return;

@@ -226,7 +226,7 @@ export function inWindow(event, key, today) {
   return time >= start.getTime() && time <= end.getTime();
 }
 
-export function prepare(eventsCsv, companiesCsv, today = todayUtc()) {
+export function prepare(eventsCsv, companiesCsv) {
   const companies = rowsToObjects(companiesCsv).map((row, index) => {
     const commodities = splitList(row.commodity);
     return {
@@ -252,8 +252,7 @@ export function prepare(eventsCsv, companiesCsv, today = todayUtc()) {
       what: row.what_happened,
       risk: row.risk_removed,
       stage: row.stage_reached,
-      status: resolveStatus(row.status, when, today),
-      statusSource: String(row.status || "").trim().toLowerCase(),
+      status: row.status,
       sourceUrl: row.source_url,
       precision: when.precision,
       date: when.date,
@@ -352,21 +351,6 @@ function plural(count, phrase) {
   const irregular = { company: "companies" };
   const word = count === 1 ? noun : (irregular[noun] || `${noun}s`);
   return `${count} ${[...parts, word].join(" ")}`;
-}
-
-export function resolveStatus(rawStatus, when, today) {
-  const status = String(rawStatus || "").trim().toLowerCase();
-  if (!when || !when.date || when.precision === "undated") return status;
-  if (when.precision === "month") {
-    const monthStart = Date.UTC(when.date.getUTCFullYear(), when.date.getUTCMonth(), 1);
-    const monthEnd = Date.UTC(when.date.getUTCFullYear(), when.date.getUTCMonth() + 1, 0);
-    if (status === "expected" && monthEnd < today.getTime()) return "happened";
-    if (status === "happened" && monthStart > today.getTime()) return "expected";
-    return status;
-  }
-  if (status === "expected" && when.date.getTime() < today.getTime()) return "happened";
-  if (status === "happened" && when.date.getTime() > today.getTime()) return "expected";
-  return status;
 }
 
 function unique(list) {

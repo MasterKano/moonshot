@@ -366,6 +366,11 @@ main {
   border-radius: 11px;
 }
 
+.segment.scope {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 12px;
+}
+
 .segment button {
   min-height: 32px;
   border: 0;
@@ -468,6 +473,21 @@ main {
 }
 
 .showing { margin-top: 10px; font-variant-numeric: tabular-nums; }
+
+.showing .show-all {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.showing .show-all:hover { color: var(--text); }
+
+.stat-split .bar { margin-top: 8px; }
 
 .legend { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
 
@@ -1270,6 +1290,7 @@ td .source { font-weight: 700; white-space: nowrap; }
   .panel-meta { text-align: left; }
   .segment { grid-template-columns: 1fr 1fr; }
   .segment button:last-child { grid-column: 1 / -1; }
+  .segment.scope button:last-child { grid-column: auto; }
   .plot-col { min-width: 680px; }
   .cards.narrow-only { display: flex; }
   .sort-label.narrow-only { display: flex; }

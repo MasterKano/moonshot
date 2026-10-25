@@ -72,8 +72,8 @@ const state = {
   status: "all",
   gate: "all",
   market: "all",
-  material: "all",
-  trap: "all",
+  material: "Y",
+  trap: "N",
   window: "all",
   sortKey: "date",
   sortDir: "asc",
@@ -401,8 +401,44 @@ function eventMatches(event, filters, today) {
   return inWindow(event, filters.window, today);
 }
 
-function filtersActive() {
-  return ["company", "sector", "stage", "risk", "status", "gate", "market", "material", "trap", "window"].some((key) => state[key] !== "all");
+const FILTER_KEYS = ["company", "sector", "stage", "risk", "status", "gate", "market", "material", "trap", "window"];
+const SCOPE_KEY = "moonshot-scope";
+
+function viewIsFiltered() {
+  return FILTER_KEYS.some((key) => state[key] !== "all");
+}
+
+function isDefaultView() {
+  return state.material === "Y"
+    && state.trap === "N"
+    && FILTER_KEYS.every((key) => key === "material" || key === "trap" || state[key] === "all");
+}
+
+function scopeMode() {
+  if (state.material === "Y" && state.trap === "N") return "focus";
+  if (!viewIsFiltered()) return "all";
+  return "";
+}
+
+function savedScope() {
+  try {
+    return localStorage.getItem(SCOPE_KEY) === "all" ? "all" : "focus";
+  } catch (err) {
+    return "focus";
+  }
+}
+
+function rememberScope(scope) {
+  try {
+    localStorage.setItem(SCOPE_KEY, scope === "all" ? "all" : "focus");
+  } catch (err) {}
+}
+
+function applySavedScope() {
+  if (savedScope() === "all") {
+    state.material = "all";
+    state.trap = "all";
+  }
 }
 
 function onChart(event) {
@@ -471,13 +507,15 @@ function renderStats(events) {
   const expected = events.filter((event) => event.status === "expected").length;
   const companies = new Set(events.map((event) => event.ticker)).size;
   const upcoming = nextDated(events, today);
-  const narrowed = filtersActive();
+  const narrowed = viewIsFiltered();
+  const scopeHint = narrowed ? "in this view" : "in the full register";
   const pct = events.length ? (happened / events.length) * 100 : 0;
+  const logged = model.events.length;
 
   const eventsCard = h("article", { class: "stat stat-total" }, [
     h("p", { class: "stat-label", text: "Total events" }),
     h("p", { class: "num", text: String(events.length) }),
-    h("p", { class: "hint", text: narrowed ? `of ${model.events.length} in the register` : "in the register" }),
+    h("p", { class: "hint", text: narrowed ? `of ${logged} logged` : `all ${logged} logged` }),
   ]);
 
   const split = h("article", { class: "stat stat-split" }, [
@@ -489,19 +527,20 @@ function renderStats(events) {
     h("div", { class: "bar", role: "img", "aria-label": `${happened} happened and ${expected} expected` }, [
       h("span", { style: `width:${pct}%` }),
     ]),
+    h("p", { class: "hint", text: scopeHint }),
   ]);
 
   const gateCount = events.filter((event) => event.gate === "Y").length;
   const gateCard = h("article", { class: "stat stat-gate" }, [
     h("p", { class: "stat-label", text: "Gate pass" }),
     h("p", { class: "num", text: String(gateCount) }),
-    h("p", { class: "hint", text: narrowed ? "in this view" : "cleared the screen" }),
+    h("p", { class: "hint", text: scopeHint }),
   ]);
 
   const companiesCard = h("article", { class: "stat stat-companies" }, [
     h("p", { class: "stat-label", text: "Companies covered" }),
     h("p", { class: "num", text: String(companies) }),
-    h("p", { class: "hint", text: narrowed ? "in this view" : "in the register" }),
+    h("p", { class: "hint", text: scopeHint }),
   ]);
 
   let nextBody;
@@ -530,6 +569,7 @@ function renderStats(events) {
     h("article", { class: "stat stat-next" }, [
       h("p", { class: "stat-label", text: "Next dated event" }),
       nextBody,
+      h("p", { class: "hint", text: narrowed ? "in this view" : "on or after today" }),
     ]),
   );
 }
@@ -565,6 +605,12 @@ function mountFilters() {
   );
 
   document.getElementById("reset").addEventListener("click", resetFilters);
+  document.querySelectorAll("#scope button").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.scope === "all") showAllEvents();
+      else showFocus();
+    });
+  });
 
   const sort = document.getElementById("sortSelect");
   sort.replaceChildren(...SORTS.map(([key, dir, label]) => option(`${key}:${dir}`, label)));
@@ -650,7 +696,11 @@ function updateFilterChrome(events) {
     const select = field.querySelector("select");
     field.classList.toggle("active", select.value !== "all");
   });
-  document.getElementById("reset").disabled = !filtersActive();
+  document.getElementById("reset").disabled = isDefaultView();
+  const mode = scopeMode();
+  document.querySelectorAll("#scope button").forEach((button) => {
+    button.setAttribute("aria-checked", button.dataset.scope === mode ? "true" : "false");
+  });
 
   const hint = document.getElementById("windowHint");
   hint.textContent = state.window === "all"
@@ -673,9 +723,15 @@ function updateFilterChrome(events) {
 
   const shown = events.length;
   const total = model.events.length;
-  document.getElementById("showing").textContent = shown === total
-    ? `Showing ${plural(shown, "event")}`
-    : `Showing ${shown} of ${plural(total, "event")}`;
+  const showing = document.getElementById("showing");
+  if (shown === total) {
+    showing.textContent = `Showing ${plural(shown, "event")}`;
+  } else {
+    showing.replaceChildren(
+      document.createTextNode(`Showing ${shown} of ${plural(total, "event")}. `),
+      h("button", { type: "button", class: "show-all", onClick: showAllEvents, text: "Show all" }),
+    );
+  }
 }
 
 function chip(key, name, value) {
@@ -714,20 +770,39 @@ function windowLabel(key) {
   return found ? found[1] : key;
 }
 
-function resetFilters() {
-  state.company = "all";
-  state.sector = "all";
-  state.stage = "all";
-  state.risk = "all";
-  state.status = "all";
-  state.gate = "all";
-  state.market = "all";
-  state.material = "all";
-  state.trap = "all";
-  state.window = "all";
+function syncFilterSelects() {
   document.querySelectorAll("select[data-filter]").forEach((select) => {
-    select.value = "all";
+    if (select.dataset.filter in state) select.value = state[select.dataset.filter];
   });
+}
+
+function showFocus() {
+  state.material = "Y";
+  state.trap = "N";
+  rememberScope("focus");
+  syncFilterSelects();
+  closePopover();
+  apply();
+}
+
+function showAllEvents() {
+  FILTER_KEYS.forEach((key) => {
+    state[key] = "all";
+  });
+  rememberScope("all");
+  syncFilterSelects();
+  closePopover();
+  apply();
+}
+
+function resetFilters() {
+  FILTER_KEYS.forEach((key) => {
+    state[key] = "all";
+  });
+  state.material = "Y";
+  state.trap = "N";
+  rememberScope("focus");
+  syncFilterSelects();
   closePopover();
   apply();
 }
@@ -746,7 +821,7 @@ function renderChart(events) {
     empty.hidden = false;
     empty.replaceChildren(
       h("strong", { text: "No dated events in this view" }),
-      h("p", { text: "Adjust the filters, or reset them to see the full timeline." }),
+      h("p", { text: "Adjust the filters, or reset them to return to the default view." }),
       h("button", { type: "button", class: "text-btn", onClick: resetFilters, text: "Reset filters" }),
     );
   } else {
@@ -1658,6 +1733,7 @@ async function main() {
     setChartBounds(model.events);
     document.getElementById("loading").hidden = true;
     document.getElementById("app").hidden = false;
+    applySavedScope();
     mountFilters();
     apply();
     document.body.dataset.ready = "true";

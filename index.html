@@ -48,6 +48,10 @@
           <p class="eyebrow" id="filter-label">Filters</p>
           <button type="button" class="reset" id="reset" disabled>Reset</button>
         </div>
+        <div class="segment scope" id="scope" role="radiogroup" aria-label="Which events to show">
+          <button type="button" role="radio" data-scope="focus" aria-checked="false">Material, no trap</button>
+          <button type="button" role="radio" data-scope="all" aria-checked="false">All events</button>
+        </div>
         <div class="segment" id="window" role="radiogroup" aria-label="Time window"></div>
         <p class="window-hint" id="windowHint"></p>
         <div class="fields" id="fields"></div>
@@ -59,7 +63,7 @@
         <details>
           <summary>How to read the labels</summary>
           <div class="howto-body">
-            <p>Every event is logged. Labels describe the event. They do not hide a row until you set a filter.</p>
+            <p>Every event is logged. The page opens on material events that are not traps. Choose All events to see the full register. Labels describe each event.</p>
             <dl>
               <dt>Gate pass</dt>
               <dd>Yes when the event cleared the screen for whether it still deserves attention. A thin ring on the timeline marks a yes.</dd>

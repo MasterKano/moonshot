@@ -1,5 +1,6 @@
-const CHART_START = Date.UTC(2026, 3, 25);
-const CHART_END = Date.UTC(2027, 3, 25);
+const DAY = 86400000;
+let chartStart = Date.UTC(2026, 3, 25);
+let chartEnd = Date.UTC(2027, 3, 25);
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const PAD_TOP = 28;
 const PAD_BOT = 34;
@@ -24,7 +25,9 @@ const SECTOR_LABELS = {
   renewables: "Renewables",
 };
 
-const STAGE_ORDER = ["Exploration", "Appraisal", "Development", "Production", "Capital Return"];
+const STAGE_ORDER = ["Discovery", "Resource", "Study", "Permits", "Funded", "Construction", "Production", "Sold", "n/a"];
+const MARKET_ORDER = ["Upcoming", "New", "Unreacted", "Recognized", "Orphan"];
+const YN_CHOICES = [["all", "All"], ["Y", "Yes"], ["N", "No"]];
 
 const WINDOWS = [
   ["past3", "Past 3 months"],
@@ -45,8 +48,8 @@ const SORTS = [
   ["what", "desc", "What happened Z to A"],
   ["risk", "asc", "Risk A to Z"],
   ["risk", "desc", "Risk Z to A"],
-  ["stage", "asc", "Stage A to Z"],
-  ["stage", "desc", "Stage Z to A"],
+  ["stage", "asc", "Stage, first to last"],
+  ["stage", "desc", "Stage, last to first"],
   ["status", "asc", "Status A to Z"],
   ["status", "desc", "Status Z to A"],
 ];
@@ -67,6 +70,10 @@ const state = {
   stage: "all",
   risk: "all",
   status: "all",
+  gate: "all",
+  market: "all",
+  material: "all",
+  trap: "all",
   window: "all",
   sortKey: "date",
   sortDir: "asc",
@@ -189,6 +196,68 @@ function statusLabel(status) {
   return clean(status);
 }
 
+function yn(value) {
+  const flag = String(value ?? "").trim().toUpperCase();
+  return flag === "Y" || flag === "N" ? flag : "";
+}
+
+function ynLabel(value) {
+  if (value === "Y") return "Yes";
+  if (value === "N") return "No";
+  return "—";
+}
+
+function pctLabel(raw) {
+  const text = String(raw ?? "").trim();
+  if (!text) return "—";
+  const number = Number(text);
+  if (!Number.isFinite(number)) return "—";
+  const body = text.replace(/^[+-]/, "");
+  return `${number < 0 ? "−" : ""}${body}%`;
+}
+
+function confidenceLabel(value) {
+  if (value === "low") return "Low";
+  if (value === "medium") return "Medium";
+  if (value === "high") return "High";
+  return "—";
+}
+
+function announcedDiffers(event) {
+  if (!event.announcedDate || event.announcedPrecision === "undated") return false;
+  if (!event.date || event.precision === "undated") return true;
+  if (event.announcedPrecision !== event.precision) return true;
+  return event.announcedDate.getTime() !== event.date.getTime();
+}
+
+function announcedWhen(event) {
+  return { precision: event.announcedPrecision, date: event.announcedDate };
+}
+
+function trapText(event) {
+  if (event.trap !== "Y") return ynLabel(event.trap);
+  const reason = clean(event.trapReason);
+  return reason ? `Yes. ${reason}` : "Yes";
+}
+
+function formatStamp(ms) {
+  const date = new Date(ms);
+  return `${date.getUTCDate()} ${MONTHS[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
+}
+
+function setChartBounds(events) {
+  chartStart = Date.UTC(2026, 3, 25);
+  let last = chartStart;
+  events.forEach((event) => {
+    if (event.date && event.date.getTime() > last) last = event.date.getTime();
+  });
+  chartEnd = Math.max(Date.UTC(2027, 3, 25), last + 20 * DAY);
+}
+
+function chartRange() {
+  return `${formatStamp(chartStart)} to ${formatStamp(chartEnd)}`;
+}
+
 export function formatWhen(event) {
   if (!event || event.precision === "undated" || !event.date) return "Undated";
   const mon = MONTHS[event.date.getUTCMonth()];
@@ -242,6 +311,7 @@ export function prepare(eventsCsv, companiesCsv) {
   const byTicker = new Map(companies.map((company) => [company.ticker, company]));
   const events = rowsToObjects(eventsCsv).map((row, index) => {
     const when = parseWhen(row.date);
+    const announced = parseWhen(row.announced_date);
     const company = byTicker.get(row.ticker);
     return {
       seq: index,
@@ -251,9 +321,23 @@ export function prepare(eventsCsv, companiesCsv) {
       asset: row.asset,
       what: row.what_happened,
       risk: row.risk_removed,
-      stage: row.stage_reached,
+      stage: row.stage || "n/a",
       status: row.status,
       sourceUrl: row.source_url,
+      announcedPrecision: announced.precision,
+      announcedDate: announced.date,
+      material: yn(row.material),
+      trap: yn(row.trap),
+      trapReason: row.trap_reason || "",
+      market: row.market_status || "",
+      runup60: row.runup_60d || "",
+      excess20: row.excess_20d || "",
+      excess3m: row.excess_3m || "",
+      sizeEst: row.size_est_pct || "",
+      confidence: String(row.confidence || "").trim().toLowerCase(),
+      exit: yn(row.exit),
+      gate: yn(row.gate_pass),
+      notes: row.label_notes || "",
       precision: when.precision,
       date: when.date,
       sector: company ? company.sector : "",
@@ -296,6 +380,10 @@ function eventMatches(event, filters, today) {
   if (filters.stage !== "all" && event.stage !== filters.stage) return false;
   if (filters.risk !== "all" && event.risk !== filters.risk) return false;
   if (filters.status !== "all" && event.status !== filters.status) return false;
+  if (filters.gate !== "all" && event.gate !== filters.gate) return false;
+  if (filters.market !== "all" && event.market !== filters.market) return false;
+  if (filters.material !== "all" && event.material !== filters.material) return false;
+  if (filters.trap !== "all" && event.trap !== filters.trap) return false;
   if (filters.sector !== "all") {
     const idx = filters.sector.indexOf(":");
     const kind = filters.sector.slice(0, idx);
@@ -309,13 +397,13 @@ function eventMatches(event, filters, today) {
 }
 
 function filtersActive() {
-  return ["company", "sector", "stage", "risk", "status", "window"].some((key) => state[key] !== "all");
+  return ["company", "sector", "stage", "risk", "status", "gate", "market", "material", "trap", "window"].some((key) => state[key] !== "all");
 }
 
 function onChart(event) {
   if (event.precision === "undated" || !event.date) return false;
   const time = event.date.getTime();
-  return time >= CHART_START && time <= CHART_END;
+  return time >= chartStart && time <= chartEnd;
 }
 
 function h(tag, props, children) {
@@ -381,7 +469,7 @@ function renderStats(events) {
   const narrowed = filtersActive();
   const pct = events.length ? (happened / events.length) * 100 : 0;
 
-  const eventsCard = h("article", { class: "stat" }, [
+  const eventsCard = h("article", { class: "stat stat-total" }, [
     h("p", { class: "stat-label", text: "Total events" }),
     h("p", { class: "num", text: String(events.length) }),
     h("p", { class: "hint", text: narrowed ? `of ${model.events.length} in the register` : "in the register" }),
@@ -398,7 +486,14 @@ function renderStats(events) {
     ]),
   ]);
 
-  const companiesCard = h("article", { class: "stat" }, [
+  const gateCount = events.filter((event) => event.gate === "Y").length;
+  const gateCard = h("article", { class: "stat stat-gate" }, [
+    h("p", { class: "stat-label", text: "Gate pass" }),
+    h("p", { class: "num", text: String(gateCount) }),
+    h("p", { class: "hint", text: narrowed ? "in this view" : "cleared the screen" }),
+  ]);
+
+  const companiesCard = h("article", { class: "stat stat-companies" }, [
     h("p", { class: "stat-label", text: "Companies covered" }),
     h("p", { class: "num", text: String(companies) }),
     h("p", { class: "hint", text: narrowed ? "in this view" : "in the register" }),
@@ -425,6 +520,7 @@ function renderStats(events) {
   root.replaceChildren(
     eventsCard,
     split,
+    gateCard,
     companiesCard,
     h("article", { class: "stat stat-next" }, [
       h("p", { class: "stat-label", text: "Next dated event" }),
@@ -457,6 +553,10 @@ function mountFilters() {
     selectField("stage", "Stage", orderedChoices(unique(model.events.map((event) => event.stage)), STAGE_ORDER, clean)),
     selectField("risk", "Risk removed", orderedChoices(unique(model.events.map((event) => event.risk)), RISK_ORDER, riskLabel)),
     selectField("status", "Status", [["all", "All"], ["happened", "Happened"], ["expected", "Expected"]]),
+    selectField("gate", "Gate pass", YN_CHOICES),
+    selectField("market", "Market status", orderedChoices(unique(model.events.map((event) => event.market)), MARKET_ORDER, clean)),
+    selectField("material", "Material", YN_CHOICES),
+    selectField("trap", "Trap", YN_CHOICES),
   );
 
   document.getElementById("reset").addEventListener("click", resetFilters);
@@ -516,6 +616,8 @@ function mountLegend() {
     legendItem("happened", "Happened"),
     legendItem("expected", "Expected"),
     legendItem("month", "Month only"),
+    legendItem("gate", "Gate pass"),
+    legendItem("exit", "Exit"),
   ]);
   const risks = unique(model.events.map((event) => event.risk));
   risks.sort((a, b) => orderIndex(RISK_ORDER, a) - orderIndex(RISK_ORDER, b));
@@ -557,6 +659,10 @@ function updateFilterChrome(events) {
   if (state.stage !== "all") items.push(chip("stage", "Stage", clean(state.stage)));
   if (state.risk !== "all") items.push(chip("risk", "Risk", riskLabel(state.risk)));
   if (state.status !== "all") items.push(chip("status", "Status", statusLabel(state.status)));
+  if (state.gate !== "all") items.push(chip("gate", "Gate pass", ynLabel(state.gate)));
+  if (state.market !== "all") items.push(chip("market", "Market status", clean(state.market)));
+  if (state.material !== "all") items.push(chip("material", "Material", ynLabel(state.material)));
+  if (state.trap !== "all") items.push(chip("trap", "Trap", ynLabel(state.trap)));
   if (state.window !== "all") items.push(chip("window", "Window", windowLabel(state.window)));
   chips.replaceChildren(...items);
 
@@ -609,6 +715,10 @@ function resetFilters() {
   state.stage = "all";
   state.risk = "all";
   state.status = "all";
+  state.gate = "all";
+  state.market = "all";
+  state.material = "all";
+  state.trap = "all";
   state.window = "all";
   document.querySelectorAll("select[data-filter]").forEach((select) => {
     select.value = "all";
@@ -652,6 +762,8 @@ function renderChart(events) {
       h("div", { class: "bottom-spacer" }),
     ]);
     const plot = h("div", { class: "plot-col" });
+    const months = (chartEnd - chartStart) / (30.437 * DAY);
+    plot.style.minWidth = `${Math.round(Math.max(680, months * 48))}px`;
     scroll.replaceChildren(h("div", { class: "chart-grid" }, [labels, plot]));
     const width = Math.max(1, Math.round(plot.getBoundingClientRect().width));
     plot.append(buildSvg(lanes, dated, width));
@@ -672,7 +784,10 @@ function renderChart(events) {
     : "No dated events";
 
   renderUndated(events);
-  if (narrow) scroll.setAttribute("aria-label", "Company timeline from 25 Apr 2026 to 25 Apr 2027. Scroll sideways for later months.");
+  const range = chartRange();
+  scroll.setAttribute("aria-label", narrow
+    ? `Company timeline from ${range}. Scroll sideways for later months.`
+    : `Company timeline from ${range}.`);
 }
 
 function laneModels(dated) {
@@ -692,7 +807,7 @@ function laneModels(dated) {
 function xFor(time, width) {
   const pad = 16;
   const span = Math.max(width - pad * 2, 1);
-  const ratio = (time - CHART_START) / (CHART_END - CHART_START);
+  const ratio = (time - chartStart) / (chartEnd - chartStart);
   return pad + Math.min(1, Math.max(0, ratio)) * span;
 }
 
@@ -753,7 +868,7 @@ function buildSvg(lanes, dated, width) {
   });
 
   const today = todayUtc().getTime();
-  if (today >= CHART_START && today <= CHART_END) {
+  if (today >= chartStart && today <= chartEnd) {
     const x = xFor(today, width);
     root.append(svgEl("line", {
       x1: x,
@@ -799,18 +914,19 @@ function buildSvg(lanes, dated, width) {
 function monthTicks(width) {
   const ticks = [];
   let first = true;
-  for (let cursor = Date.UTC(2026, 3, 1); cursor <= CHART_END; cursor = Date.UTC(new Date(cursor).getUTCFullYear(), new Date(cursor).getUTCMonth() + 1, 1)) {
+  const origin = new Date(chartStart);
+  for (let cursor = Date.UTC(origin.getUTCFullYear(), origin.getUTCMonth(), 1); cursor <= chartEnd; cursor = Date.UTC(new Date(cursor).getUTCFullYear(), new Date(cursor).getUTCMonth() + 1, 1)) {
     const monthDate = new Date(cursor);
     const next = Date.UTC(monthDate.getUTCFullYear(), monthDate.getUTCMonth() + 1, 1);
-    const visibleStart = Math.max(cursor, CHART_START);
-    const visibleEnd = Math.min(next, CHART_END);
-    const visibleDays = (visibleEnd - visibleStart) / 86400000;
+    const visibleStart = Math.max(cursor, chartStart);
+    const visibleEnd = Math.min(next, chartEnd);
+    const visibleDays = (visibleEnd - visibleStart) / DAY;
     const show = visibleDays >= 18;
     const year = monthDate.getUTCFullYear();
     const name = MONTHS[monthDate.getUTCMonth()];
     const withYear = first || monthDate.getUTCMonth() === 0;
     ticks.push({
-      line: cursor >= CHART_START && cursor <= CHART_END ? xFor(cursor, width) : null,
+      line: cursor >= chartStart && cursor <= chartEnd ? xFor(cursor, width) : null,
       labelX: xFor((visibleStart + visibleEnd) / 2, width),
       show,
       text: show && withYear ? `${name} ’${String(year).slice(2)}` : name,
@@ -858,6 +974,10 @@ function drawDot(dot) {
     tabindex: "0",
     role: "button",
     "data-id": event.id,
+    "data-precision": event.precision,
+    "data-gate": event.gate,
+    "data-exit": event.exit,
+    "data-date": event.date ? event.date.toISOString().slice(0, 10) : "",
     "aria-label": dotLabel(event),
   });
   group.append(svgEl("circle", {
@@ -866,21 +986,35 @@ function drawDot(dot) {
     r: 14,
     fill: "transparent",
   }));
+  const cx = dot.x + dot.xOff;
+  const cy = dot.y + dot.yOff;
   group.append(svgEl("circle", {
     class: "halo",
-    cx: dot.x + dot.xOff,
-    cy: dot.y + dot.yOff,
+    cx,
+    cy,
     r: 11,
   }));
-  const mark = svgEl("circle", {
+  if (event.gate === "Y") {
+    group.append(svgEl("circle", {
+      class: "gate-ring",
+      cx,
+      cy,
+      r: 9.6,
+      fill: "none",
+      stroke: "#0c2f57",
+      "stroke-width": 1.15,
+      "stroke-opacity": "0.62",
+    }));
+  }
+  const paint = {
     class: "mark",
-    cx: dot.x + dot.xOff,
-    cy: dot.y + dot.yOff,
-    r: 6.5,
     fill: event.status === "happened" ? color : "#ffffff",
     stroke: color,
     "stroke-width": 2,
-  });
+  };
+  const mark = event.exit === "Y"
+    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 7.2} ${cx + 7.2},${cy} ${cx},${cy + 7.2} ${cx - 7.2},${cy}` })
+    : svgEl("circle", { ...paint, cx, cy, r: 6.5 });
   if (event.precision === "month") mark.setAttribute("stroke-dasharray", "2.2 1.8");
   group.append(mark);
   group.addEventListener("mouseenter", () => preview(event.id));
@@ -903,7 +1037,19 @@ function drawDot(dot) {
 
 function dotLabel(event) {
   const when = event.precision === "month" ? `${formatWhen(event)}, month only` : formatWhen(event);
-  return `${when}. ${clean(event.company)}. ${clean(event.asset)}. ${clean(event.what)} Stage ${clean(event.stage)}. Status ${statusLabel(event.status)}. Risk removed ${riskLabel(event.risk)}.`;
+  const bits = [
+    when,
+    clean(event.company),
+    clean(event.asset),
+    clean(event.what),
+    `Stage ${clean(event.stage)}`,
+    `Status ${statusLabel(event.status)}`,
+    `Risk removed ${riskLabel(event.risk)}`,
+    `Market ${clean(event.market) || "—"}`,
+    `Gate pass ${ynLabel(event.gate)}`,
+  ];
+  if (event.exit === "Y") bits.push("Exit");
+  return `${bits.join(". ")}.`;
 }
 
 function renderUndated(events) {
@@ -957,6 +1103,7 @@ function renderUndated(events) {
             h("span", { text: clean(event.stage) }),
             link,
           ]),
+          cardFlags(event),
         ]),
       ]);
     });
@@ -1009,6 +1156,10 @@ function sortItems(items) {
   const dir = state.sortDir === "asc" ? 1 : -1;
   copy.sort((a, b) => {
     if (state.sortKey === "date") return dateCmp(a, b, dir);
+    if (state.sortKey === "stage") {
+      const cmp = orderIndex(STAGE_ORDER, a.stage) - orderIndex(STAGE_ORDER, b.stage);
+      return cmp === 0 ? a.seq - b.seq : cmp * dir;
+    }
     const cmp = String(sortValue(a)).localeCompare(String(sortValue(b)), "en", { sensitivity: "base", numeric: true });
     return cmp === 0 ? a.seq - b.seq : cmp * dir;
   });
@@ -1049,6 +1200,11 @@ function sortCaption() {
     return state.sortDir === "asc"
       ? "Grouped by company, events in date order."
       : "Grouped by company, latest events first.";
+  }
+  if (state.sortKey === "stage") {
+    return state.sortDir === "asc"
+      ? "Grouped by company, stage from Discovery toward Sold."
+      : "Grouped by company, stage from Sold back toward Discovery.";
   }
   const names = {
     asset: "asset",
@@ -1142,8 +1298,15 @@ function renderTable(groups) {
     );
     groupRow.append(groupCell);
     body.append(groupRow);
-    group.items.forEach((event) => body.append(eventRow(event)));
     table.append(body);
+    group.items.forEach((event) => {
+      const block = h("tbody", {
+        class: state.openId === event.id ? "event-block is-selected" : "event-block",
+        "data-row": event.id,
+      });
+      block.append(eventRow(event), labelRow(event));
+      table.append(block);
+    });
   });
   return table;
 }
@@ -1154,7 +1317,7 @@ function groupMeta(group) {
 }
 
 function eventRow(event) {
-  const row = h("tr", { class: state.openId === event.id ? "event is-selected" : "event", "data-row": event.id });
+  const row = h("tr", { class: "event" });
   row.append(
     dateCell(event),
     h("td", { class: "asset", text: clean(event.asset) }),
@@ -1165,6 +1328,40 @@ function eventRow(event) {
     h("td", {}, [sourceLink(event, "Source")]),
   );
   return row;
+}
+
+function labelRow(event) {
+  const row = h("tr", { class: "labels" });
+  const cell = h("td", { colspan: String(COLUMNS.length) });
+  cell.append(labelBlock(event));
+  row.append(cell);
+  return row;
+}
+
+function fact(key, value, extra) {
+  return h("span", { class: extra ? `fact ${extra}` : "fact" }, [
+    h("span", { class: "k", text: key }),
+    document.createTextNode(value),
+  ]);
+}
+
+function labelBlock(event) {
+  const strip = h("div", { class: "label-strip" }, [
+    fact("Market", clean(event.market) || "—"),
+    fact("Gate", ynLabel(event.gate), event.gate === "Y" ? "is-gate" : ""),
+    fact("Material", ynLabel(event.material)),
+    fact("Trap", trapText(event), event.trap === "Y" && event.trapReason ? "is-long" : ""),
+    fact("60-day run-up", pctLabel(event.runup60)),
+    fact("20-day excess", pctLabel(event.excess20)),
+    fact("3-month excess", pctLabel(event.excess3m)),
+    fact("Size estimate", pctLabel(event.sizeEst)),
+    fact("Confidence", confidenceLabel(event.confidence), event.confidence === "low" ? "flag-low" : ""),
+  ]);
+  if (event.exit === "Y") strip.append(fact("Exit", "Yes", "is-exit"));
+  if (announcedDiffers(event)) strip.append(fact("Announced", formatWhen(announcedWhen(event))));
+  const block = h("div", { class: "label-block" }, [strip]);
+  if (event.notes) block.append(h("p", { class: "label-notes", text: clean(event.notes) }));
+  return block;
 }
 
 function dateCell(event) {
@@ -1202,12 +1399,48 @@ function renderCardGroup(group) {
       event.precision === "month" ? h("div", {}, [h("span", { class: "precision", text: "Month" })]) : null,
       h("h4", { class: "card-asset", text: clean(event.asset) }),
       h("p", { class: "card-what", text: clean(event.what) }),
+      cardFlags(event),
       h("div", { class: "card-meta" }, [
         riskSpan(event),
         h("span", { text: clean(event.stage) }),
         sourceLink(event, "Source"),
       ]),
+      cardDetails(event),
     ])),
+  ]);
+}
+
+function cardFlags(event) {
+  const flags = [h("span", { class: "mini", text: clean(event.market) || "—" })];
+  if (event.gate === "Y") flags.push(h("span", { class: "mini is-gate", text: "Gate pass" }));
+  if (event.exit === "Y") flags.push(h("span", { class: "mini is-exit", text: "Exit" }));
+  if (event.confidence === "low") flags.push(h("span", { class: "mini flag-low", text: "Low confidence" }));
+  return h("div", { class: "card-flags" }, flags);
+}
+
+function moreLine(key, value, extra) {
+  return h("p", { class: extra ? `more-line ${extra}` : "more-line" }, [
+    h("span", { class: "k", text: key }),
+    document.createTextNode(value),
+  ]);
+}
+
+function cardDetails(event) {
+  const body = h("div", { class: "more-body" }, [
+    moreLine("Material", ynLabel(event.material)),
+    moreLine("Trap", trapText(event)),
+    moreLine("Exit", ynLabel(event.exit)),
+    moreLine("60-day run-up", pctLabel(event.runup60)),
+    moreLine("20-day excess", pctLabel(event.excess20)),
+    moreLine("3-month excess", pctLabel(event.excess3m)),
+    moreLine("Size estimate", pctLabel(event.sizeEst)),
+    moreLine("Confidence", confidenceLabel(event.confidence), event.confidence === "low" ? "flag-low" : ""),
+  ]);
+  if (announcedDiffers(event)) body.append(moreLine("Announced", formatWhen(announcedWhen(event))));
+  if (event.notes) body.append(h("p", { class: "label-notes", text: clean(event.notes) }));
+  return h("details", { class: "more" }, [
+    h("summary", { text: "Label detail" }),
+    body,
   ]);
 }
 
@@ -1265,12 +1498,8 @@ function openPopover(id, { pin, focus }) {
     ]),
     h("div", { class: "pop-asset", id: "pop-title", text: clean(event.asset) }),
     h("p", { class: "pop-what", text: clean(event.what) }),
-    h("dl", { class: "pop-rows" }, [
-      h("dt", { text: "Stage" }),
-      h("dd", { text: clean(event.stage) }),
-      h("dt", { text: "Risk removed" }),
-      h("dd", { text: riskLabel(event.risk) }),
-    ]),
+    popRows(event),
+    event.notes ? h("p", { class: "pop-notes", text: clean(event.notes) }) : null,
     sourceLink(event, "Source"),
   );
   pop.setAttribute("aria-labelledby", "pop-title");
@@ -1283,6 +1512,32 @@ function openPopover(id, { pin, focus }) {
     const link = pop.querySelector("a");
     (link || pop).focus();
   }
+}
+
+function popRows(event) {
+  const rows = [
+    ["Market status", clean(event.market) || "—", ""],
+    ["Gate pass", ynLabel(event.gate), ""],
+    ["Material", ynLabel(event.material), ""],
+    ["Trap", trapText(event), ""],
+    ["Stage", clean(event.stage) || "—", ""],
+    ["Risk removed", riskLabel(event.risk), ""],
+    ["Exit", ynLabel(event.exit), ""],
+    ["60-day run-up", pctLabel(event.runup60), ""],
+    ["20-day excess", pctLabel(event.excess20), ""],
+    ["3-month excess", pctLabel(event.excess3m), ""],
+    ["Size estimate", pctLabel(event.sizeEst), ""],
+    ["Confidence", confidenceLabel(event.confidence), event.confidence === "low" ? "flag-low" : ""],
+  ];
+  if (announcedDiffers(event)) rows.push(["Announced", formatWhen(announcedWhen(event)), ""]);
+  const dl = h("dl", { class: "pop-rows" });
+  rows.forEach(([key, value, extra]) => {
+    dl.append(
+      h("dt", { text: key }),
+      h("dd", extra ? { class: extra, text: value } : { text: value }),
+    );
+  });
+  return dl;
 }
 
 function positionPopover() {
@@ -1352,7 +1607,16 @@ function focusEvent(id) {
   if (row) row.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
+function syncRangeCopy() {
+  const range = chartRange();
+  const lede = document.getElementById("lede");
+  if (lede) lede.textContent = `De-risking events for listed resource companies. The timeline runs from ${range}.`;
+  const sub = document.getElementById("timelineSub");
+  if (sub) sub.textContent = `One row per company, ${range}.`;
+}
+
 function apply() {
+  syncRangeCopy();
   const events = filteredEvents();
   if (state.openId && !events.some((event) => event.id === state.openId && onChart(event))) closePopover();
   renderStats(events);
@@ -1386,6 +1650,7 @@ async function main() {
       }),
     ]);
     model = prepare(eventsCsv, companiesCsv);
+    setChartBounds(model.events);
     document.getElementById("loading").hidden = true;
     document.getElementById("app").hidden = false;
     mountFilters();

@@ -18,7 +18,7 @@
         <p class="eyebrow">Events register</p>
         <h1>Moonshot</h1>
       </div>
-      <p class="lede">De-risking events for listed resource companies. The timeline runs from 25 Apr 2026 to 25 Apr 2027.</p>
+      <p class="lede" id="lede">De-risking events for listed resource companies. Every event is logged.</p>
     </div>
   </header>
   <main class="wrap" id="main">
@@ -39,17 +39,54 @@
         <p class="showing" id="showing" aria-live="polite"></p>
       </section>
 
+      <section class="howto" aria-label="How to read the labels">
+        <details>
+          <summary>How to read the labels</summary>
+          <div class="howto-body">
+            <p>Every event is logged. Labels describe the event. They do not hide a row until you set a filter.</p>
+            <dl>
+              <dt>Gate pass</dt>
+              <dd>Yes when the event cleared the screen for whether it still deserves attention. A thin ring on the timeline marks a yes.</dd>
+              <dt>Market status</dt>
+              <dd>Upcoming has not occurred. New is a fresh print, still inside the first reaction window. Unreacted has occurred and is not treated as already priced. Recognized has already been taken in by the market. Orphan has no clean read on the reaction.</dd>
+              <dt>Material</dt>
+              <dd>Yes when the event is large enough to matter for the company.</dd>
+              <dt>Trap</dt>
+              <dd>Yes when there is a reason not to take the headline at face value. The reason is shown with the flag.</dd>
+              <dt>Stage</dt>
+              <dd>A fixed ladder: Discovery, Resource, Study, Permits, Funded, Construction, Production, Sold. n/a means the event is not a project stage.</dd>
+              <dt>60-day run-up</dt>
+              <dd>Share-price move over the 60 days before the event, in percent. A dash means the figure is not in the register.</dd>
+              <dt>20-day excess</dt>
+              <dd>Price move after the event, beyond the sector, over about 20 days, in percent. A dash means it is not in the register yet.</dd>
+              <dt>3-month excess</dt>
+              <dd>The same comparison over about three months, in percent. A dash means it is not in the register yet.</dd>
+              <dt>Size estimate</dt>
+              <dd>A rough scale for the event, in percent. A dash means none is given.</dd>
+              <dt>Confidence</dt>
+              <dd>How firmly the labels are held. Low confidence is flagged in amber.</dd>
+              <dt>Exit</dt>
+              <dd>A sale or other way out of the position. Exits are diamonds on the timeline.</dd>
+              <dt>Announced date</dt>
+              <dd>Shown only when it differs from the event date. A month and a full date count as different.</dd>
+              <dt>Label notes</dt>
+              <dd>Short notes from the register on that row.</dd>
+            </dl>
+          </div>
+        </details>
+      </section>
+
       <section class="panel" id="timeline" aria-labelledby="timeline-title">
         <div class="panel-head">
           <div>
             <h2 id="timeline-title">Timeline</h2>
-            <p class="panel-sub">One row per company, 25 Apr 2026 to 25 Apr 2027.</p>
+            <p class="panel-sub" id="timelineSub">One row per company.</p>
           </div>
           <p class="panel-meta" id="chartMeta"></p>
         </div>
         <div class="legend" id="legend"></div>
-        <p class="chart-note">Filled means happened. Hollow means expected. A dashed ring is a month-only date, placed on the 15th. The vertical dashed line is today.</p>
-        <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline from 25 Apr 2026 to 25 Apr 2027"></div>
+        <p class="chart-note">Filled means happened. Hollow means expected. A dashed outline is a month-only date, placed on the 15th. A thin ring marks a gate pass. A diamond marks an exit. The vertical dashed line is today. Scroll sideways for later months.</p>
+        <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline"></div>
         <div class="empty" id="chartEmpty" hidden></div>
         <div id="undated"></div>
       </section>

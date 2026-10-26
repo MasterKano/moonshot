@@ -481,11 +481,14 @@ function bindSearch() {
 }
 
 function applyTab(tab, persist) {
-  const next = tab === "smallcaps" ? "smallcaps" : "events";
+  const allowed = ["events", "smallcaps", "norway"];
+  const next = allowed.includes(tab) ? tab : "events";
   document.documentElement.dataset.view = next;
   document.body.dataset.view = next;
-  const capsPanel = document.getElementById("smallcaps");
-  if (capsPanel) capsPanel.hidden = next !== "smallcaps";
+  ["smallcaps", "norway"].forEach((id) => {
+    const panel = document.getElementById(id);
+    if (panel) panel.hidden = next !== id;
+  });
   document.querySelectorAll(".view-tabs [role='tab']").forEach((button) => {
     const on = button.dataset.view === next;
     button.setAttribute("aria-selected", on ? "true" : "false");
@@ -493,8 +496,9 @@ function applyTab(tab, persist) {
   });
   const skip = document.querySelector(".skip");
   if (skip) {
-    skip.href = next === "smallcaps" ? "#smallcaps" : "#timeline";
-    skip.textContent = next === "smallcaps" ? "Skip to screen" : "Skip to timeline";
+    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "norway" ? ["#norway", "Skip to Norway"] : ["#timeline", "Skip to timeline"];
+    skip.href = target[0];
+    skip.textContent = target[1];
   }
   if (persist) {
     try { localStorage.setItem(TAB_KEY, next); } catch (err) {}
@@ -546,7 +550,8 @@ async function loadCaps() {
 
 function boot() {
   bindTabs();
-  const initial = document.documentElement.dataset.view === "smallcaps" ? "smallcaps" : "events";
+  const view = document.documentElement.dataset.view;
+  const initial = view === "smallcaps" || view === "norway" ? view : "events";
   applyTab(initial, false);
   loadCaps().catch(showCapsError);
 }

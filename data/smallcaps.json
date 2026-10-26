@@ -1,99 +1,2868 @@
 [
-  {
-    "code": "EXG",
-    "name": "Example Data Gold Co",
-    "exchange": "ASX",
-    "band": "Micro (US$5-100M)",
-    "type": "Gold",
-    "stage": "Explorer",
-    "description": "Fake example record for a gold explorer on the small-cap screen.",
-    "mkt_cap_usd_m": 42,
-    "as_of": "2026-10-20",
-    "median_daily_value_k": 180,
-    "currency": "AUD",
-    "material_events_12m": 2,
-    "latest_event_date": "2026-09-14",
-    "latest_event_type": "Resource",
-    "latest_event_headline": "Example maiden resource at North Ridge",
-    "setbacks_12m": 0,
-    "cash_flag": null,
-    "url": "https://example.com/exchange/EXG",
-    "events": [
-      {
-        "date": "2026-09-14",
-        "type": "Resource",
-        "headline": "Example maiden resource at North Ridge",
-        "setback": false
-      },
-      {
-        "date": "2026-04-02",
-        "type": "Drilling",
-        "headline": "Example drill hits at North Ridge",
-        "setback": false
-      }
-    ]
-  },
-  {
-    "code": "EXC",
-    "name": "Example Data Copper Co",
-    "exchange": "AIM",
-    "band": "Main (US$100M-5B)",
-    "type": "Copper",
-    "stage": "Study stage (low confidence)",
-    "description": "Fake example record for a copper developer, with a low-confidence stage.",
-    "mkt_cap_usd_m": 640,
-    "as_of": "2026-10-18",
-    "median_daily_value_k": 920,
-    "currency": "GBP",
-    "material_events_12m": 1,
-    "latest_event_date": "2026-08-03",
-    "latest_event_type": "Study",
-    "latest_event_headline": "Example scoping study for Red Hill",
-    "setbacks_12m": 1,
-    "cash_flag": "Cash under 12 months",
-    "url": "https://example.com/exchange/EXC",
-    "events": [
-      {
-        "date": "2026-08-03",
-        "type": "Study",
-        "headline": "Example scoping study for Red Hill",
-        "setback": false
-      },
-      {
-        "date": "2026-06-11",
-        "type": "Permit",
-        "headline": "Example permit delayed at Red Hill",
-        "setback": true
-      }
-    ]
-  },
-  {
-    "code": "EXO",
-    "name": "Example Data Oil Co",
-    "exchange": "Main Market",
-    "band": "Micro (US$5-100M)",
-    "type": "Oil and gas",
-    "stage": "Producer",
-    "description": "Fake example record with missing market cap, setbacks, and cash flag.",
-    "currency": "GBP",
-    "material_events_12m": 3,
-    "latest_event_date": "2026-10-01",
-    "latest_event_type": "Production",
-    "latest_event_headline": "Example first oil from West Bank",
-    "cash_flag": null,
-    "url": "https://example.com/exchange/EXO",
-    "events": [
-      {
-        "date": "2026-10-01",
-        "type": "Production",
-        "headline": "Example first oil from West Bank",
-        "setback": false
-      },
-      {
-        "date": "2026-01-19",
-        "type": "Funding",
-        "headline": "Example placing to fund the West Bank tie-in"
-      }
-    ]
-  }
+ {
+  "code": "WCN",
+  "name": "White Cliff Minerals Limited",
+  "type": "Copper",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 58.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 16,
+  "latest_event_date": "2026-10-26",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper explorer, Rae project, Nunavut, Canada",
+  "events": [
+   {
+    "date": "2026-10-26",
+    "type": "Discovery or drill result",
+    "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
+    "setback": false
+   },
+   {
+    "date": "2026-10-13",
+    "type": "Discovery or drill result",
+    "headline": "New Cu Discovery on 2.8km Structure Parallel to Danvers 1",
+    "setback": false
+   },
+   {
+    "date": "2026-10-06",
+    "type": "Discovery or drill result",
+    "headline": "76.5m @ 2.01% Cu Expands Copper Envelope at Danvers 1",
+    "setback": false
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Discovery or drill result",
+    "headline": "Bornite Hills Delivers Significant Copper Discovery at Rae",
+    "setback": false
+   },
+   {
+    "date": "2026-09-15",
+    "type": "Funding",
+    "headline": "Hancock Prospecting Acquires 13.5% Strategic Stake in WCN",
+    "setback": false
+   },
+   {
+    "date": "2026-09-02",
+    "type": "Discovery or drill result",
+    "headline": "23m at 6.18% Cu Extends Ultra High-Grade Danvers 3",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Discovery or drill result",
+    "headline": "Step-out Drilling Expands Danvers 3 - 42m @ 1.43% Cu",
+    "setback": false
+   },
+   {
+    "date": "2026-07-28",
+    "type": "Discovery or drill result",
+    "headline": "First Diamond Drill Hole Assays 50.9M at 2.81% Cu",
+    "setback": false
+   },
+   {
+    "date": "2026-06-17",
+    "type": "Discovery or drill result",
+    "headline": "Major Copper Discovery at Rae Adjacent to Teshierpi Fault",
+    "setback": false
+   },
+   {
+    "date": "2026-06-12",
+    "type": "M and A",
+    "headline": "Completion of Great Bear Divestment and Receipt of $1.2M Cash",
+    "setback": false
+   },
+   {
+    "date": "2026-06-10",
+    "type": "Discovery or drill result",
+    "headline": "Exceptional-Grade Copper Discovery at Danvers",
+    "setback": false
+   },
+   {
+    "date": "2026-05-20",
+    "type": "Funding",
+    "headline": "Astrotricha Capital SECZ Cornerstones WCNO Underwriting",
+    "setback": false
+   },
+   {
+    "date": "2026-02-23",
+    "type": "M and A",
+    "headline": "Sale of Great Bear Project for A$5.8m and Board Changes",
+    "setback": false
+   },
+   {
+    "date": "2025-11-03",
+    "type": "M and A",
+    "headline": "Strategic acquisition of Bornite Lake prospect at Rae",
+    "setback": false
+   },
+   {
+    "date": "2025-10-31",
+    "type": "M and A",
+    "headline": "Completion of Sale of Reedy South Gold Project",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "Discovery or drill result",
+    "headline": "Drilling at Stark Identifies Sedimentary Copper Discovery",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/WCN",
+  "median_daily_value_k": 173.0
+ },
+ {
+  "code": "NMR",
+  "name": "Native Mineral Resources Holdings Limited",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 32.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 11,
+  "latest_event_date": "2026-10-12",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "NMR secures refinancing to support gold production growth",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.2 qtrs runway (yfinance, low conf)",
+  "description": "Gold producer, Blackjack and Podosky, Charters Towers region, Queensland",
+  "events": [
+   {
+    "date": "2026-10-12",
+    "type": "Funding",
+    "headline": "NMR secures refinancing to support gold production growth",
+    "setback": false
+   },
+   {
+    "date": "2026-09-07",
+    "type": "Discovery or drill result",
+    "headline": "North Pit drilling returns 19m at 3.09g/t gold at Blackjack",
+    "setback": false
+   },
+   {
+    "date": "2026-09-03",
+    "type": "M and A",
+    "headline": "NMR executes Joint Venture agreement with Citigold",
+    "setback": false
+   },
+   {
+    "date": "2026-04-23",
+    "type": "First production",
+    "headline": "Blackjack restart delivers 315oz dore",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "Discovery or drill result",
+    "headline": "NMR - 5.45m @ 14.23g/t Au Diamond Drilling, Blackjack",
+    "setback": false
+   },
+   {
+    "date": "2026-04-07",
+    "type": "Funding",
+    "headline": "Unsecured Funding Facility",
+    "setback": false
+   },
+   {
+    "date": "2026-03-09",
+    "type": "Discovery or drill result",
+    "headline": "NMR hits 18m @ 11.33g/t Au from 12m at Podosky, QLD",
+    "setback": false
+   },
+   {
+    "date": "2026-02-26",
+    "type": "Discovery or drill result",
+    "headline": "NMR hits 14m @ 8.21g/t Au from 15m at Podosky, QLD",
+    "setback": false
+   },
+   {
+    "date": "2026-02-16",
+    "type": "Discovery or drill result",
+    "headline": "NMR hits 10m @ 7.14g/t Au from 16m at Blackjack",
+    "setback": false
+   },
+   {
+    "date": "2026-01-30",
+    "type": "Discovery or drill result",
+    "headline": "NMR hits 14m @ 4.29g/t Au from 9m at Blackjack",
+    "setback": false
+   },
+   {
+    "date": "2025-12-02",
+    "type": "M and A",
+    "headline": "Joint Venture with Haoma Mining to develop Ravenswood Gold",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/NMR",
+  "median_daily_value_k": 109.0
+ },
+ {
+  "code": "TNC",
+  "name": "True North Copper Limited",
+  "type": "Copper",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 27.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 11,
+  "latest_event_date": "2026-09-30",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "High-Grade Results at Cloncurry with 11m at 4.23% CuEq",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper project at PFS stage, Cloncurry, Queensland",
+  "events": [
+   {
+    "date": "2026-09-30",
+    "type": "Discovery or drill result",
+    "headline": "High-Grade Results at Cloncurry with 11m at 4.23% CuEq",
+    "setback": false
+   },
+   {
+    "date": "2026-09-16",
+    "type": "Resource",
+    "headline": "Cloncurry Resource Update Delivers 18% Copper Increase",
+    "setback": false
+   },
+   {
+    "date": "2026-09-02",
+    "type": "Discovery or drill result",
+    "headline": "Mt Oxide Discovery Grows to 2.3km with New Chidna Zone",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Resource",
+    "headline": "Wynberg Gold-Copper Mineral Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2026-07-20",
+    "type": "M and A",
+    "headline": "TNC divests Bundarra Copper Project and retains upside",
+    "setback": false
+   },
+   {
+    "date": "2026-07-02",
+    "type": "Discovery or drill result",
+    "headline": "TNC hits 25m @ 4.2% CuEq in new Wallace North structure",
+    "setback": false
+   },
+   {
+    "date": "2026-06-18",
+    "type": "M and A",
+    "headline": "RNX: Renegade completes $2.88m Carpentaria JV divestment",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "M and A",
+    "headline": "TNC strengthens Cloncurry Copper Project with Strategic JV",
+    "setback": false
+   },
+   {
+    "date": "2026-02-10",
+    "type": "Resource",
+    "headline": "Cloncurry Copper Project - Great Australia Resource Update",
+    "setback": false
+   },
+   {
+    "date": "2025-11-18",
+    "type": "Discovery or drill result",
+    "headline": "TNC hits 7 m @ 7.9% Cu at Mount Oxide's new Aquila Discovery",
+    "setback": false
+   },
+   {
+    "date": "2025-11-04",
+    "type": "Discovery or drill result",
+    "headline": "TNC extends Mt Oxide copper discovery strike to beyond 500m",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/TNC",
+  "median_daily_value_k": 102.0
+ },
+ {
+  "code": "HMX",
+  "name": "Hammer Metals Limited",
+  "type": "Copper",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 45.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 10,
+  "latest_event_date": "2026-10-08",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Dispatch of Scheme Booklet and Amended Scheme Booklet",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.5 qtrs runway (yfinance, low conf)",
+  "description": "Copper and gold explorer, Mount Isa, Queensland, under scheme to be acquired by Austral Resources",
+  "events": [
+   {
+    "date": "2026-10-08",
+    "type": "M and A",
+    "headline": "Dispatch of Scheme Booklet and Amended Scheme Booklet",
+    "setback": false
+   },
+   {
+    "date": "2026-10-02",
+    "type": "M and A",
+    "headline": "Results of First Court Hearing and Lodgement of Scheme Booklet",
+    "setback": false
+   },
+   {
+    "date": "2026-08-11",
+    "type": "M and A",
+    "headline": "Austral Resources to Acquire Hammer Metals",
+    "setback": false
+   },
+   {
+    "date": "2026-08-10",
+    "type": "M and A",
+    "headline": "Update Regarding Status of Larvotto Transaction",
+    "setback": false
+   },
+   {
+    "date": "2026-08-03",
+    "type": "M and A",
+    "headline": "Receipt of a Superior Proposal from Austral Resources",
+    "setback": false
+   },
+   {
+    "date": "2026-07-07",
+    "type": "M and A",
+    "headline": "Unsolicited, Non-binding Proposal from Austral Resources",
+    "setback": false
+   },
+   {
+    "date": "2026-06-11",
+    "type": "M and A",
+    "headline": "Larvotto Resources To Acquire Hammer Metals",
+    "setback": false
+   },
+   {
+    "date": "2026-06-05",
+    "type": "M and A",
+    "headline": "Mount Isa JV and Earn-in Updates",
+    "setback": false
+   },
+   {
+    "date": "2026-01-27",
+    "type": "Resource",
+    "headline": "Copper-Gold Resource Declared at South Hope",
+    "setback": false
+   },
+   {
+    "date": "2025-11-04",
+    "type": "M and A",
+    "headline": "Ownership Regained over two areas within Mount Isa East JV",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/HMX",
+  "median_daily_value_k": 174.0
+ },
+ {
+  "code": "ASN",
+  "name": "Anson Resources Limited",
+  "type": "Lithium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 40.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 10,
+  "latest_event_date": "2026-10-07",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Incentives Increase Green River Post-Tax NPV8 to US$1.05B",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
+  "description": "Lithium brine project, Green River, Utah, USA",
+  "events": [
+   {
+    "date": "2026-10-07",
+    "type": "Study",
+    "headline": "Incentives Increase Green River Post-Tax NPV8 to US$1.05B",
+    "setback": false
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Funding",
+    "headline": "Strategic Offtake and Financing MoU with Wogen and Xcelsior",
+    "setback": false
+   },
+   {
+    "date": "2026-09-11",
+    "type": "Funding",
+    "headline": "Anson Receives $212M Additional Tax Credit from Utah",
+    "setback": false
+   },
+   {
+    "date": "2026-09-04",
+    "type": "Funding",
+    "headline": "ASN Receives $193M Incentive from Utah Inland Port Authority",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Funding",
+    "headline": "Utah Backs Green River with Potential US$357.7 M Incentive",
+    "setback": false
+   },
+   {
+    "date": "2026-07-22",
+    "type": "Funding",
+    "headline": "First Tranche Payment from POSCO Holdings",
+    "setback": false
+   },
+   {
+    "date": "2026-06-11",
+    "type": "M and A",
+    "headline": "Anson and POSCO Sign Binding Agreement for DLE Demo Plant",
+    "setback": false
+   },
+   {
+    "date": "2026-05-19",
+    "type": "Study",
+    "headline": "Engineering Study Confirms Green River as Low-Cost Producer",
+    "setback": false
+   },
+   {
+    "date": "2026-05-04",
+    "type": "Resource",
+    "headline": "Anson Upgrades Green River JORC Resource Estimate by 650%",
+    "setback": false
+   },
+   {
+    "date": "2025-12-08",
+    "type": "Funding",
+    "headline": "ASN Signs MoU Lithium Chloride Offtake Agreement with Nusano",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/ASN",
+  "median_daily_value_k": 51.0
+ },
+ {
+  "code": "SHN",
+  "name": "Sunshine Metals Limited",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 58.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 10,
+  "latest_event_date": "2026-09-21",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Updated Mining Study for Liontown Gold Operation",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold project at mining study stage, Liontown, Ravenswood, Queensland",
+  "events": [
+   {
+    "date": "2026-09-21",
+    "type": "Study",
+    "headline": "Updated Mining Study for Liontown Gold Operation",
+    "setback": false
+   },
+   {
+    "date": "2026-07-15",
+    "type": "Resource",
+    "headline": "Significant Upgrade to Liontown Resource",
+    "setback": false
+   },
+   {
+    "date": "2026-07-02",
+    "type": "M and A",
+    "headline": "Mt Moss Acquisition Completed and Production Pathway Advanced",
+    "setback": false
+   },
+   {
+    "date": "2026-06-09",
+    "type": "M and A",
+    "headline": "Sunshine Divests Non-Core Hodgkinson Project",
+    "setback": false
+   },
+   {
+    "date": "2026-05-13",
+    "type": "Discovery or drill result",
+    "headline": "Drilling returns 22m @ 20.25g/t Au from Liontown Gold Panel",
+    "setback": false
+   },
+   {
+    "date": "2026-04-30",
+    "type": "M and A",
+    "headline": "Mt Moss Acquisition and Successful Capital Raising",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "Discovery or drill result",
+    "headline": "Further Shallow High-Grade Results incld. 14m @ 12.38g/t Au",
+    "setback": false
+   },
+   {
+    "date": "2026-02-16",
+    "type": "Study",
+    "headline": "Robust Mining Study for Liontown Gold Operation",
+    "setback": false
+   },
+   {
+    "date": "2025-11-26",
+    "type": "Resource",
+    "headline": "Significant Upgrade in Liontown Shallow Gold Resource",
+    "setback": false
+   },
+   {
+    "date": "2025-11-17",
+    "type": "Discovery or drill result",
+    "headline": "Final diamond drill results include 4.5m @ 17.23g/t Au",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/SHN",
+  "median_daily_value_k": 134.0
+ },
+ {
+  "code": "PNN",
+  "name": "Power Minerals Limited",
+  "type": "Rare earths",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 41.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-09-08",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "MORRO DO FERRO GRANTED MINAS GERAIS PRIORITY PROJECT STATUS",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Rare earths explorer, Morro do Ferro, Minas Gerais, Brazil, plus lithium projects in Argentina",
+  "events": [
+   {
+    "date": "2026-09-08",
+    "type": "Permit or approval",
+    "headline": "MORRO DO FERRO GRANTED MINAS GERAIS PRIORITY PROJECT STATUS",
+    "setback": false
+   },
+   {
+    "date": "2026-09-07",
+    "type": "Discovery or drill result",
+    "headline": "NEW HIGH GRADE REE ZONE DISCOVERED AT DEPTH",
+    "setback": false
+   },
+   {
+    "date": "2026-04-27",
+    "type": "M and A",
+    "headline": "HIGH GRADE MORRO DO FERRO REE PROJECT ACQUISITION COMPLETE",
+    "setback": false
+   },
+   {
+    "date": "2026-03-05",
+    "type": "M and A",
+    "headline": "PNN TO ACQUIRE COMPLEMENTARY, HIGH GRADE RARE EARTH PROJECT",
+    "setback": false
+   },
+   {
+    "date": "2026-01-14",
+    "type": "Setback",
+    "headline": "PNN TERMINATES RINCON LITHIUM JV TO RETAIN 100% OWNERSHIP",
+    "setback": true
+   },
+   {
+    "date": "2025-12-01",
+    "type": "M and A",
+    "headline": "Power completes acquisition of Santa Anna Project, Brazil",
+    "setback": false
+   },
+   {
+    "date": "2025-11-27",
+    "type": "Study",
+    "headline": "PNN DELIVERS DEVELOPMENT STUDY FOR INCAHUASI LITHIUM PROJECT",
+    "setback": false
+   },
+   {
+    "date": "2025-11-20",
+    "type": "M and A",
+    "headline": "POWER ADVANCES RINCON LITHIUM PROJECT JOINT VENTURE",
+    "setback": false
+   },
+   {
+    "date": "2025-11-10",
+    "type": "M and A",
+    "headline": "Amended - PNN to Acquire High Grade Rare Earth Project",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/PNN",
+  "median_daily_value_k": 375.0
+ },
+ {
+  "code": "TM1",
+  "name": "Terra Metals Limited",
+  "type": "Platinum group metals",
+  "stage": "Resource defined (low confidence)",
+  "mkt_cap_usd_m": 90.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-09-08",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "SOUTHWEST RETURNS 14M @ 3.13G/T and 80M @ 1.30G/T 3E",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Platinum group metals, copper and titanium-vanadium explorer, Dante, West Musgrave, Western Australia",
+  "events": [
+   {
+    "date": "2026-09-08",
+    "type": "Discovery or drill result",
+    "headline": "SOUTHWEST RETURNS 14M @ 3.13G/T and 80M @ 1.30G/T 3E",
+    "setback": false
+   },
+   {
+    "date": "2026-07-13",
+    "type": "Discovery or drill result",
+    "headline": "SOUTHWEST DISCOVERY CONTINUES TO GROW",
+    "setback": false
+   },
+   {
+    "date": "2026-02-27",
+    "type": "Funding",
+    "headline": "$85 Million Institutional Placement to Advance Southwest",
+    "setback": false
+   },
+   {
+    "date": "2026-02-11",
+    "type": "Discovery or drill result",
+    "headline": "New Thick Ti-V-Ga Discovery Across Southwest SW3 and SW4",
+    "setback": false
+   },
+   {
+    "date": "2026-01-27",
+    "type": "Discovery or drill result",
+    "headline": "Major High-Grade Platinum Group Metal Discovery at Southwest",
+    "setback": false
+   },
+   {
+    "date": "2026-01-14",
+    "type": "Discovery or drill result",
+    "headline": "New Platinum Group Metal Sulfide Discovery at SW5",
+    "setback": false
+   },
+   {
+    "date": "2026-01-06",
+    "type": "Discovery or drill result",
+    "headline": "New Platinum Group Metal Sulfide Discovery at Dante",
+    "setback": false
+   },
+   {
+    "date": "2025-11-03",
+    "type": "Discovery or drill result",
+    "headline": "Multiple Titanium-Sulfide Reefs Discovered at Southwest",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/TM1",
+  "median_daily_value_k": 177.0
+ },
+ {
+  "code": "WWI",
+  "name": "West Wits Mining Limited",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 94.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 7,
+  "latest_event_date": "2026-08-27",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Scoping Study Update",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold producer, Qala Shallows, Central Rand, South Africa",
+  "events": [
+   {
+    "date": "2026-08-27",
+    "type": "Study",
+    "headline": "Scoping Study Update",
+    "setback": false
+   },
+   {
+    "date": "2026-07-01",
+    "type": "Funding",
+    "headline": "Financial Close and First Drawdown of Senior Loan Facility",
+    "setback": false
+   },
+   {
+    "date": "2026-05-21",
+    "type": "Funding",
+    "headline": "Binding Term Sheet for New ZAR 875M Senior Loan Facility",
+    "setback": false
+   },
+   {
+    "date": "2026-04-29",
+    "type": "M and A",
+    "headline": "WWI Enters Agreement to Divest Mt Cecelia Project",
+    "setback": false
+   },
+   {
+    "date": "2026-03-18",
+    "type": "First production",
+    "headline": "West Wits Achieves First Gold at Qala Shallows",
+    "setback": false
+   },
+   {
+    "date": "2026-02-02",
+    "type": "Resource",
+    "headline": "2.2Moz Increase to WBP Global Resource Estimate to 7.24Moz",
+    "setback": false
+   },
+   {
+    "date": "2026-01-20",
+    "type": "Funding",
+    "headline": "WWI Raises $27.5M to Advance Gold and Uranium Projects",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/WWI",
+  "median_daily_value_k": 231.0
+ },
+ {
+  "code": "RML",
+  "name": "Resolution Minerals Ltd",
+  "type": "Antimony",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 56.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 7,
+  "latest_event_date": "2026-04-23",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "$20M Placement to Accelerate US Critical Minerals Strategy",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Antimony, gold and tungsten explorer, Horse Heaven project, USA",
+  "events": [
+   {
+    "date": "2026-04-23",
+    "type": "Funding",
+    "headline": "$20M Placement to Accelerate US Critical Minerals Strategy",
+    "setback": false
+   },
+   {
+    "date": "2026-03-02",
+    "type": "M and A",
+    "headline": "Acquisition of Processing Mill and Tungsten Stockpiles",
+    "setback": false
+   },
+   {
+    "date": "2026-02-09",
+    "type": "Discovery or drill result",
+    "headline": "New Gold Discovery at Golden Gate South",
+    "setback": false
+   },
+   {
+    "date": "2025-12-02",
+    "type": "Discovery or drill result",
+    "headline": "Golden Gate Discovery Grows with Multiple Gold Intercepts",
+    "setback": false
+   },
+   {
+    "date": "2025-11-03",
+    "type": "Discovery or drill result",
+    "headline": "Significant Gold Discoveries Continue at Golden Gate",
+    "setback": false
+   },
+   {
+    "date": "2025-10-31",
+    "type": "M and A",
+    "headline": "RML to Acquire Processing Mill and Tungsten Stockpiles",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "Discovery or drill result",
+    "headline": "Significant Gold Discovery at Horse Heaven Project",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/RML",
+  "median_daily_value_k": 437.0
+ },
+ {
+  "code": "EXR",
+  "name": "Elixir Energy Limited",
+  "type": "Oil and gas",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 96.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-10-23",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Strategic Portfolio Farmout to Beach Energy",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.3 qtrs runway (yfinance, low conf)",
+  "description": "Gas explorer and appraiser, Taroom Trough, Queensland",
+  "events": [
+   {
+    "date": "2026-10-23",
+    "type": "M and A",
+    "headline": "Strategic Portfolio Farmout to Beach Energy",
+    "setback": false
+   },
+   {
+    "date": "2026-08-03",
+    "type": "Discovery or drill result",
+    "headline": "Regionally impactful flow testing at Lorelle-3H",
+    "setback": false
+   },
+   {
+    "date": "2026-04-24",
+    "type": "Resource",
+    "headline": "24% Increase in Taroom Trough Gas Resources",
+    "setback": false
+   },
+   {
+    "date": "2025-12-24",
+    "type": "Permit or approval",
+    "headline": "Elixir granted PCA 356 in the Taroom Trough",
+    "setback": false
+   },
+   {
+    "date": "2025-11-25",
+    "type": "Funding",
+    "headline": "Omega takes 19.4% stake supporting $16.6m raise",
+    "setback": false
+   },
+   {
+    "date": "2025-11-06",
+    "type": "Resource",
+    "headline": "Increase in Taroom Trough Contingent Gas Resources",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/EXR",
+  "median_daily_value_k": 384.0
+ },
+ {
+  "code": "QML",
+  "name": "Qmines Limited",
+  "type": "Copper",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 32.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-10-23",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "QMines Completes $1.4 Million Sale of Drilling Business",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper and gold explorer, Mount Chalmers, near Rockhampton, Queensland",
+  "events": [
+   {
+    "date": "2026-10-23",
+    "type": "M and A",
+    "headline": "QMines Completes $1.4 Million Sale of Drilling Business",
+    "setback": false
+   },
+   {
+    "date": "2026-10-12",
+    "type": "Discovery or drill result",
+    "headline": "Copper Discovery at Mt Chalmers",
+    "setback": false
+   },
+   {
+    "date": "2026-09-18",
+    "type": "M and A",
+    "headline": "Strategic Land Acquisitions Unlock Botos Deposit",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Resource",
+    "headline": "Mt Mackenzie Resource Upgrade Delivers 32% Increase in Gold",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "Funding",
+    "headline": "QIC Invests $15m to Fast-Track Mt Chalmers into Development",
+    "setback": false
+   },
+   {
+    "date": "2026-02-23",
+    "type": "Resource",
+    "headline": "Develin Creek Resource Upgrade Unlocks Expansion Planning",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/QML",
+  "median_daily_value_k": 94.0
+ },
+ {
+  "code": "MKR",
+  "name": "Manuka Resources Ltd",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 59.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-10-01",
+  "latest_event_type": "First production",
+  "latest_event_headline": "First Gold Revenues from Wonawinta",
+  "setbacks_12m": 1,
+  "cash_flag": "Cash risk: about 1.6 qtrs runway (yfinance, low conf)",
+  "description": "Gold and silver producer, Wonawinta and Mt Boppy, Cobar Basin, New South Wales",
+  "events": [
+   {
+    "date": "2026-10-01",
+    "type": "First production",
+    "headline": "First Gold Revenues from Wonawinta",
+    "setback": false
+   },
+   {
+    "date": "2026-08-21",
+    "type": "First production",
+    "headline": "Gold Production Restarts at Wonawinta",
+    "setback": false
+   },
+   {
+    "date": "2026-07-13",
+    "type": "Reserve",
+    "headline": "Updated Ore Reserve - Wonawinta Silver Mine",
+    "setback": false
+   },
+   {
+    "date": "2026-03-23",
+    "type": "Study",
+    "headline": "Amended Announcement - Updated Cobar Basin PFS",
+    "setback": false
+   },
+   {
+    "date": "2026-02-05",
+    "type": "Setback",
+    "headline": "Draft Panel Decision to Decline Taranaki VTM Application",
+    "setback": true
+   },
+   {
+    "date": "2026-01-30",
+    "type": "Study",
+    "headline": "Cobar Basin PFS Shows Substantial Increase in Profit and NPV",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "Funding",
+    "headline": "Term Sheet for US$22.5 million Loan Facility Executed",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/MKR",
+  "median_daily_value_k": 417.0
+ },
+ {
+  "code": "SRZ",
+  "name": "Stellar Resources Limited",
+  "type": "Tin",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 71.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-07-02",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Severn Resource Up 64%",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Tin explorer, Heemskirk, western Tasmania",
+  "events": [
+   {
+    "date": "2026-07-02",
+    "type": "Resource",
+    "headline": "Severn Resource Up 64%",
+    "setback": false
+   },
+   {
+    "date": "2026-05-04",
+    "type": "Funding",
+    "headline": "$22.1M Placement to Advance Heemskirk",
+    "setback": false
+   },
+   {
+    "date": "2026-04-30",
+    "type": "Funding",
+    "headline": "$17 Million Strategic Placement to Metals X",
+    "setback": false
+   },
+   {
+    "date": "2026-03-05",
+    "type": "Discovery or drill result",
+    "headline": "New High-Grade Tin Lode Discovered Below Severn Resource",
+    "setback": false
+   },
+   {
+    "date": "2026-02-23",
+    "type": "Resource",
+    "headline": "Queen Hill Resource Up 41%",
+    "setback": false
+   },
+   {
+    "date": "2026-02-10",
+    "type": "M and A",
+    "headline": "Stellar Completes Granite Tor Tin Project Acquisition",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/SRZ",
+  "median_daily_value_k": 107.0
+ },
+ {
+  "code": "CPN",
+  "name": "Caspin Resources Limited",
+  "type": "Tin",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 19.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-10-12",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "45% Increase to MRE at Kelpie Tin Deposit",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Tin explorer, Bygoo, near Ardlethan, New South Wales",
+  "events": [
+   {
+    "date": "2026-10-12",
+    "type": "Resource",
+    "headline": "45% Increase to MRE at Kelpie Tin Deposit",
+    "setback": false
+   },
+   {
+    "date": "2026-07-29",
+    "type": "Discovery or drill result",
+    "headline": "High-Grade Tin at Kelpie including 3m @ 9.32% Sn",
+    "setback": false
+   },
+   {
+    "date": "2026-06-03",
+    "type": "Discovery or drill result",
+    "headline": "New High-Grade Lode Position Discovered",
+    "setback": false
+   },
+   {
+    "date": "2026-05-18",
+    "type": "M and A",
+    "headline": "AMN: Completion of Acquisition",
+    "setback": false
+   },
+   {
+    "date": "2026-04-22",
+    "type": "M and A",
+    "headline": "Mount Squires Divestment",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/CPN",
+  "median_daily_value_k": 63.0
+ },
+ {
+  "code": "BCM",
+  "name": "Brazilian Critical Minerals Limited",
+  "type": "Rare earths",
+  "stage": "Developer",
+  "mkt_cap_usd_m": 82.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-10-05",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "BCM Acquires MAGSUL process plant",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Rare earths developer, Ema project, Amazonas, Brazil",
+  "events": [
+   {
+    "date": "2026-10-05",
+    "type": "M and A",
+    "headline": "BCM Acquires MAGSUL process plant",
+    "setback": false
+   },
+   {
+    "date": "2026-06-30",
+    "type": "Study",
+    "headline": "Ema BFS Delivers Exceptional Economics",
+    "setback": false
+   },
+   {
+    "date": "2026-06-15",
+    "type": "Permit or approval",
+    "headline": "Federal Mines Agency Approval",
+    "setback": false
+   },
+   {
+    "date": "2026-04-22",
+    "type": "Resource",
+    "headline": "Ema Indicated MRE Increases 58% to 392Mt",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "Funding",
+    "headline": "BCM and SAM to enter strategic partnership",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/BCM",
+  "median_daily_value_k": 317.0
+ },
+ {
+  "code": "AWJ",
+  "name": "Auric Mining Limited",
+  "type": "Gold",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 31.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-09-16",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Significant Processing Infrastructure Acquired for Burbanks",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold miner between campaigns, Munda and Burbanks, Western Australia",
+  "events": [
+   {
+    "date": "2026-09-16",
+    "type": "M and A",
+    "headline": "Significant Processing Infrastructure Acquired for Burbanks",
+    "setback": false
+   },
+   {
+    "date": "2026-09-09",
+    "type": "Resource",
+    "headline": "Union Jack Acquisition and Major Resource Upgrade",
+    "setback": false
+   },
+   {
+    "date": "2026-05-25",
+    "type": "Resource",
+    "headline": "Munda Gold Deposit Mineral Resource Increased by 32%",
+    "setback": false
+   },
+   {
+    "date": "2025-11-05",
+    "type": "First production",
+    "headline": "First Munda Gold Mine Sales at average A$6,130 an ounce",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "M and A",
+    "headline": "Lindsays Gold Project Acquisition Update",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/AWJ",
+  "median_daily_value_k": 75.0
+ },
+ {
+  "code": "TLG",
+  "name": "Talga Group Ltd",
+  "type": "Graphite",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 73.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-07-27",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Japan's Hanwa Signs Strategic Investment and Offtake LOI",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Graphite and battery anode developer, Sweden",
+  "events": [
+   {
+    "date": "2026-07-27",
+    "type": "Funding",
+    "headline": "Japan's Hanwa Signs Strategic Investment and Offtake LOI",
+    "setback": false
+   },
+   {
+    "date": "2026-07-16",
+    "type": "Funding",
+    "headline": "Talga and Dainen Execute Offtake LOI for Japan Anode Supply",
+    "setback": false
+   },
+   {
+    "date": "2026-07-03",
+    "type": "Funding",
+    "headline": "Talga Anode Sales Commence Under Nyobolt Offtake",
+    "setback": false
+   },
+   {
+    "date": "2026-01-27",
+    "type": "Permit or approval",
+    "headline": "Swedish Government adopts Detailed Plan for Graphite Mine",
+    "setback": false
+   },
+   {
+    "date": "2025-11-20",
+    "type": "Funding",
+    "headline": "Talga receives A$13.3m Industriklivet grant funds",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/TLG",
+  "median_daily_value_k": 54.0
+ },
+ {
+  "code": "RTR",
+  "name": "Rumble Resources Limited",
+  "type": "Zinc and lead",
+  "stage": "Study stage (low confidence)",
+  "mkt_cap_usd_m": 37.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-06-24",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Western Queen Gold Resources Upgraded to 433koz",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Zinc and lead explorer, Earaheedy, plus Western Queen gold, Western Australia",
+  "events": [
+   {
+    "date": "2026-06-24",
+    "type": "Resource",
+    "headline": "Western Queen Gold Resources Upgraded to 433koz",
+    "setback": false
+   },
+   {
+    "date": "2026-05-15",
+    "type": "M and A",
+    "headline": "Sale of Lamil Project to Aventine Resources",
+    "setback": false
+   },
+   {
+    "date": "2026-05-04",
+    "type": "M and A",
+    "headline": "Rumble sells 2.5% Western Queen gold NSR royalty for A$10m",
+    "setback": false
+   },
+   {
+    "date": "2026-02-06",
+    "type": "M and A",
+    "headline": "Thunderstorm Gold Project Acquisition Complete and Cleansing",
+    "setback": false
+   },
+   {
+    "date": "2025-11-27",
+    "type": "Study",
+    "headline": "Western Queen South Scoping Study",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/RTR",
+  "median_daily_value_k": 65.0
+ },
+ {
+  "code": "EL8",
+  "name": "Elevate Uranium Ltd",
+  "type": "Uranium",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 64.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-06-10",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Marenica Resource Increases by 31%",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uranium explorer, Koppies, Namib Desert, Namibia",
+  "events": [
+   {
+    "date": "2026-06-10",
+    "type": "Resource",
+    "headline": "Marenica Resource Increases by 31%",
+    "setback": false
+   },
+   {
+    "date": "2026-04-15",
+    "type": "Resource",
+    "headline": "Koppies Project resource base increased to 76.2 Mlb U3O8",
+    "setback": false
+   },
+   {
+    "date": "2026-02-05",
+    "type": "Resource",
+    "headline": "Marenica Resource Update Doubles Grade",
+    "setback": false
+   },
+   {
+    "date": "2025-12-23",
+    "type": "M and A",
+    "headline": "Acquisition of Napperby Uranium Resource",
+    "setback": false
+   },
+   {
+    "date": "2025-10-31",
+    "type": "Funding",
+    "headline": "$25M to Accelerate U-pgrade Plant and Resource Drilling",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/EL8",
+  "median_daily_value_k": 151.0
+ },
+ {
+  "code": "CRI",
+  "name": "Critica Limited",
+  "type": "Rare earths",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 42.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-20",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Jupiter Scoping Study Defines Pathway to Development",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Rare earths project, Jupiter, Yalgoo, Western Australia",
+  "events": [
+   {
+    "date": "2026-10-20",
+    "type": "Study",
+    "headline": "Jupiter Scoping Study Defines Pathway to Development",
+    "setback": false
+   },
+   {
+    "date": "2026-10-12",
+    "type": "Resource",
+    "headline": "Jupiter Delivers First 160Mt Indicated Rare Earth Resource",
+    "setback": false
+   },
+   {
+    "date": "2026-09-29",
+    "type": "Study",
+    "headline": "Mt Lindsay Study Delivers Strong Tungsten and Tin Economics",
+    "setback": false
+   },
+   {
+    "date": "2026-09-14",
+    "type": "Resource",
+    "headline": "Critica Updates Mt Lindsay Mineral Resource to JORC 2012",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/CRI",
+  "median_daily_value_k": 74.0
+ },
+ {
+  "code": "FAL",
+  "name": "Falcon Metals Ltd",
+  "type": "Gold",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 80.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-19",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "First Hole at Errabiddy Hits 12m @ 2.8g/t Gold from Surface",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer, Blue Moon, Bendigo, Victoria",
+  "events": [
+   {
+    "date": "2026-10-19",
+    "type": "Discovery or drill result",
+    "headline": "First Hole at Errabiddy Hits 12m @ 2.8g/t Gold from Surface",
+    "setback": false
+   },
+   {
+    "date": "2026-08-28",
+    "type": "Funding",
+    "headline": "$30 Million Placement Positions Falcon to Expand Drilling",
+    "setback": false
+   },
+   {
+    "date": "2026-02-16",
+    "type": "Discovery or drill result",
+    "headline": "Blue Moon extended 80m along strike hitting 0.4m @ 167g/t Au",
+    "setback": false
+   },
+   {
+    "date": "2025-12-18",
+    "type": "Discovery or drill result",
+    "headline": "Blue Moon Extended Along Strike Hitting 2.75m @ 41.9g/t Au",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/FAL",
+  "median_daily_value_k": 226.0
+ },
+ {
+  "code": "AEE",
+  "name": "Aura Energy Limited",
+  "type": "Uranium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 48.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-16",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Tiris BFS Confirms Low-Cost, Near-Term Uranium Project",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uranium project with completed BFS, Tiris, Mauritania",
+  "events": [
+   {
+    "date": "2026-10-16",
+    "type": "Study",
+    "headline": "Tiris BFS Confirms Low-Cost, Near-Term Uranium Project",
+    "setback": false
+   },
+   {
+    "date": "2026-03-12",
+    "type": "M and A",
+    "headline": "Haggan Project Transaction Update",
+    "setback": false
+   },
+   {
+    "date": "2026-02-02",
+    "type": "Funding",
+    "headline": "Aura Energy Successfully Raises A$20 million via Placement",
+    "setback": false
+   },
+   {
+    "date": "2026-01-23",
+    "type": "Funding",
+    "headline": "Investment establishes C$50M valuation for Haggan project",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/AEE",
+  "median_daily_value_k": 196.0
+ },
+ {
+  "code": "ODY",
+  "name": "Odyssey Gold Ltd",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 22.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-14",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Update on Kirkalocka Toll Milling and Tuckanarra Joint Venture",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold project, Tuckanarra, Western Australia",
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "M and A",
+    "headline": "Update on Kirkalocka Toll Milling and Tuckanarra Joint Venture",
+    "setback": false
+   },
+   {
+    "date": "2026-07-16",
+    "type": "Discovery or drill result",
+    "headline": "High-Grade Results Confirm New Shackle Discovery",
+    "setback": false
+   },
+   {
+    "date": "2026-07-09",
+    "type": "Study",
+    "headline": "Stage 1 Scoping Study Supports Development at Tuckanarra",
+    "setback": false
+   },
+   {
+    "date": "2026-07-07",
+    "type": "Resource",
+    "headline": "New Cable Resource Increased to 60% Indicated",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/ODY",
+  "median_daily_value_k": 69.0
+ },
+ {
+  "code": "TOR",
+  "name": "Torque Metals Limited",
+  "type": "Gold",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 90.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-08",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Torque Completes A$25 million Placement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer, Ritz project, south of Kalgoorlie, Western Australia",
+  "events": [
+   {
+    "date": "2026-10-08",
+    "type": "Funding",
+    "headline": "Torque Completes A$25 million Placement",
+    "setback": false
+   },
+   {
+    "date": "2026-07-07",
+    "type": "Resource",
+    "headline": "MRE Update - Paris Gold Deposit",
+    "setback": false
+   },
+   {
+    "date": "2026-02-12",
+    "type": "Discovery or drill result",
+    "headline": "20m at 5.8g/t Gold in Paris as High-Grade System Grows",
+    "setback": false
+   },
+   {
+    "date": "2025-11-13",
+    "type": "Discovery or drill result",
+    "headline": "First Extension Hole at HHH Hits 5m at 15.2 g/t Gold",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/TOR",
+  "median_daily_value_k": 227.0
+ },
+ {
+  "code": "AEU",
+  "name": "Atomic Eagle Ltd",
+  "type": "Uranium",
+  "stage": "Resource defined (low confidence)",
+  "mkt_cap_usd_m": 94.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-09-24",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Madaouela Mining Convention Formally Executed",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uranium projects, Muntanga, Zambia, and Madaouela, Niger",
+  "events": [
+   {
+    "date": "2026-09-24",
+    "type": "Permit or approval",
+    "headline": "Madaouela Mining Convention Formally Executed",
+    "setback": false
+   },
+   {
+    "date": "2026-08-24",
+    "type": "Resource",
+    "headline": "Madaouela Foreign Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2026-06-24",
+    "type": "Permit or approval",
+    "headline": "Muntanga ESIA and RAP approvals",
+    "setback": false
+   },
+   {
+    "date": "2026-03-03",
+    "type": "Resource",
+    "headline": "Uranium Resources increase by 24%",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/AEU",
+  "median_daily_value_k": 212.0
+ },
+ {
+  "code": "MRD",
+  "name": "Mount Ridley Mines Limited",
+  "type": "Rare earths",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 41.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-08-26",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Significant Scandium Resource Upgrade",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Rare earths, scandium and gallium explorer, Mount Ridley, Western Australia",
+  "events": [
+   {
+    "date": "2026-08-26",
+    "type": "Resource",
+    "headline": "Significant Scandium Resource Upgrade",
+    "setback": false
+   },
+   {
+    "date": "2026-03-24",
+    "type": "Resource",
+    "headline": "Major Heavy Rare Earth Resource at Mount Ridley Project",
+    "setback": false
+   },
+   {
+    "date": "2026-01-28",
+    "type": "Resource",
+    "headline": "367.98Mt Scandium Resource Estimate at Mount Ridley Project",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "Resource",
+    "headline": "838.7Mt Gallium Resource Estimate at Mt Ridley Project",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/MRD",
+  "median_daily_value_k": 108.0
+ },
+ {
+  "code": "BKB",
+  "name": "Black Bear Minerals Limited",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 41.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-08-03",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Independence Scoping Study Delivers Strong Post Tax NPV",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold and silver projects, Independence, Nevada and Shafter, Texas, USA",
+  "events": [
+   {
+    "date": "2026-08-03",
+    "type": "Study",
+    "headline": "Independence Scoping Study Delivers Strong Post Tax NPV",
+    "setback": false
+   },
+   {
+    "date": "2026-05-13",
+    "type": "Resource",
+    "headline": "Independence Project MRE Increased to 2.2Moz",
+    "setback": false
+   },
+   {
+    "date": "2026-02-17",
+    "type": "Permit or approval",
+    "headline": "Shafter Major Permitting Secured",
+    "setback": false
+   },
+   {
+    "date": "2025-11-21",
+    "type": "M and A",
+    "headline": "High-Grade Shafter Silver Project Acquisition Completed",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/BKB",
+  "median_daily_value_k": 114.0
+ },
+ {
+  "code": "VBX",
+  "name": "Vbx Limited",
+  "type": "Bauxite",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 30.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-07-24",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Bauxite Offtake and Investment Framework Agreement",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.2 qtrs runway (yfinance, low conf)",
+  "description": "Bauxite project in DFS, Wuudagu, northern Western Australia",
+  "events": [
+   {
+    "date": "2026-07-24",
+    "type": "Funding",
+    "headline": "Bauxite Offtake and Investment Framework Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-07-01",
+    "type": "Funding",
+    "headline": "Indicative Term Sheet Prepayment and Offtake Facility",
+    "setback": false
+   },
+   {
+    "date": "2026-02-05",
+    "type": "Resource",
+    "headline": "Wuudagu D, E and F Mineral Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2026-01-20",
+    "type": "Resource",
+    "headline": "Wuudagu B and C Mineral Resource Estimate",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/VBX",
+  "median_daily_value_k": 50.0
+ },
+ {
+  "code": "BVR",
+  "name": "Bellavista Resources Ltd",
+  "type": "Gold",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 30.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-04-29",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Completion of Pickle Crow Gold Project Acquisition",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer, Pickle Crow, Ontario, Canada",
+  "events": [
+   {
+    "date": "2026-04-29",
+    "type": "M and A",
+    "headline": "Completion of Pickle Crow Gold Project Acquisition",
+    "setback": false
+   },
+   {
+    "date": "2026-04-24",
+    "type": "M and A",
+    "headline": "Pickle Crow Project Acquisition Conditions Satisfied/Waived",
+    "setback": false
+   },
+   {
+    "date": "2026-02-04",
+    "type": "Funding",
+    "headline": "Successful A$35m Placement",
+    "setback": false
+   },
+   {
+    "date": "2026-02-02",
+    "type": "M and A",
+    "headline": "Pickle Crow Gold Project Acquisition and Placement",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/BVR",
+  "median_daily_value_k": 301.0
+ },
+ {
+  "code": "IVR",
+  "name": "Investigator Silver Limited",
+  "type": "Silver",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 73.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-03-03",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "A$55M Placement to accelerate Paris",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Silver project with completed DFS, Paris, near Kimba, South Australia",
+  "events": [
+   {
+    "date": "2026-03-03",
+    "type": "Funding",
+    "headline": "A$55M Placement to accelerate Paris",
+    "setback": false
+   },
+   {
+    "date": "2026-02-27",
+    "type": "Reserve",
+    "headline": "Paris DFS Confirms Maiden Ore Reserve, Strong Economics",
+    "setback": false
+   },
+   {
+    "date": "2026-01-19",
+    "type": "M and A",
+    "headline": "TVN: Tivan completes acquisition of the Molyhil Project",
+    "setback": false
+   },
+   {
+    "date": "2025-12-16",
+    "type": "Study",
+    "headline": "Paris Silver DFS Update - Optimisation and Recovery Lift",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/IVR",
+  "median_daily_value_k": 335.0
+ },
+ {
+  "code": "WCE",
+  "name": "West Coast Silver Limited",
+  "type": "Silver",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 17.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-21",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "WCE-Falcon JV Reports 12m @ 2.8g/t Gold at Errabiddy",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Silver explorer, Elizabeth Hill, Pilbara, Western Australia",
+  "events": [
+   {
+    "date": "2026-10-21",
+    "type": "Discovery or drill result",
+    "headline": "WCE-Falcon JV Reports 12m @ 2.8g/t Gold at Errabiddy",
+    "setback": false
+   },
+   {
+    "date": "2026-07-09",
+    "type": "Discovery or drill result",
+    "headline": "Elizabeth Hill New High Grade Silver Discovery",
+    "setback": false
+   },
+   {
+    "date": "2026-04-22",
+    "type": "Resource",
+    "headline": "Elizabeth Hill - 2.8Moz Silver Mineral Resource Estimate",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/WCE",
+  "median_daily_value_k": 85.0
+ },
+ {
+  "code": "MMA",
+  "name": "Maronan Metals Limited",
+  "type": "Silver",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 83.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-13",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Strategic $20M Placement with Strong Institutional Support",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Silver and lead project, Maronan, northwest Queensland",
+  "events": [
+   {
+    "date": "2026-10-13",
+    "type": "Funding",
+    "headline": "Strategic $20M Placement with Strong Institutional Support",
+    "setback": false
+   },
+   {
+    "date": "2026-05-20",
+    "type": "Funding",
+    "headline": "$22 Million Strategic Investment by Kinterra Capital",
+    "setback": false
+   },
+   {
+    "date": "2026-03-03",
+    "type": "Permit or approval",
+    "headline": "Maronan Silver Project Mineral Development Licence Granted",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/MMA",
+  "median_daily_value_k": 98.0
+ },
+ {
+  "code": "STM",
+  "name": "Sunstone Metals Ltd",
+  "type": "Gold",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 35.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-13",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Bramaderos resource up 72% to 6.2Moz AuEq",
+  "setbacks_12m": 1,
+  "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
+  "description": "Gold and copper project, Bramaderos, Loja Province, Ecuador",
+  "events": [
+   {
+    "date": "2026-10-13",
+    "type": "Resource",
+    "headline": "Bramaderos resource up 72% to 6.2Moz AuEq",
+    "setback": false
+   },
+   {
+    "date": "2026-05-11",
+    "type": "Setback",
+    "headline": "Retraction announcement of scoping study",
+    "setback": true
+   },
+   {
+    "date": "2026-02-04",
+    "type": "Discovery or drill result",
+    "headline": "Discovery of high grade surface mineralisation at Porotillo",
+    "setback": false
+   },
+   {
+    "date": "2025-11-24",
+    "type": "Resource",
+    "headline": "Bramaderos resource jumps 33% to 3.6Moz AuEq",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/STM",
+  "median_daily_value_k": 71.0
+ },
+ {
+  "code": "KAO",
+  "name": "Kaoko Metals Limited",
+  "type": "Copper",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 37.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-12",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "First Chalkos holes return Cu-Ag grades at Otniel discovery",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper explorer, Chalkos, Namibia",
+  "events": [
+   {
+    "date": "2026-10-12",
+    "type": "Discovery or drill result",
+    "headline": "First Chalkos holes return Cu-Ag grades at Otniel discovery",
+    "setback": false
+   },
+   {
+    "date": "2026-09-07",
+    "type": "Funding",
+    "headline": "$20m Institutional-led Placement to Accelerate Drilling",
+    "setback": false
+   },
+   {
+    "date": "2026-07-02",
+    "type": "Discovery or drill result",
+    "headline": "New Copper Discoveries boost Chalkos Project",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/KAO",
+  "median_daily_value_k": 265.0
+ },
+ {
+  "code": "G50",
+  "name": "G50 Corp Limited",
+  "type": "Gold",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 52.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-08",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "White Caps drilling restarts, follows 13.5m @ 7.67 g/t gold",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.8 qtrs runway (yfinance, low conf)",
+  "description": "Gold explorer, Golconda, Arizona, USA",
+  "events": [
+   {
+    "date": "2026-10-08",
+    "type": "Discovery or drill result",
+    "headline": "White Caps drilling restarts, follows 13.5m @ 7.67 g/t gold",
+    "setback": false
+   },
+   {
+    "date": "2026-07-29",
+    "type": "Funding",
+    "headline": "A$26.25m Raised for Drilling at Golconda and White Caps",
+    "setback": false
+   },
+   {
+    "date": "2026-06-22",
+    "type": "Discovery or drill result",
+    "headline": "13.5m at 7.67 g/t gold at White Caps",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/G50",
+  "median_daily_value_k": 141.0
+ },
+ {
+  "code": "LOT",
+  "name": "Lotus Resources Limited",
+  "type": "Uranium",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 63.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-08",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Inventory Prepayment Facility and Export Permitting",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.0 qtrs runway (yfinance, low conf)",
+  "description": "Uranium producer, Kayelekera, Malawi",
+  "events": [
+   {
+    "date": "2026-10-08",
+    "type": "Funding",
+    "headline": "Inventory Prepayment Facility and Export Permitting",
+    "setback": false
+   },
+   {
+    "date": "2026-07-23",
+    "type": "Funding",
+    "headline": "Strategic Funding Package - Balance Sheet Reset",
+    "setback": false
+   },
+   {
+    "date": "2026-02-06",
+    "type": "Funding",
+    "headline": "Completion of A$76 million Placement",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/LOT",
+  "median_daily_value_k": 1869.0
+ },
+ {
+  "code": "PEN",
+  "name": "Peninsula Energy Limited",
+  "type": "Uranium",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 74.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-25",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Mineral Resource Increases to 59.0Mlbs U3O8 at Lance Project",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Uranium producer, Lance project, Wyoming, USA",
+  "events": [
+   {
+    "date": "2026-09-25",
+    "type": "Resource",
+    "headline": "Mineral Resource Increases to 59.0Mlbs U3O8 at Lance Project",
+    "setback": false
+   },
+   {
+    "date": "2026-09-24",
+    "type": "Setback",
+    "headline": "Non-Cash Impairment",
+    "setback": true
+   },
+   {
+    "date": "2026-06-10",
+    "type": "Funding",
+    "headline": "Convertible Note Debt Facility Agreement Executed",
+    "setback": false
+   },
+   {
+    "date": "2026-05-14",
+    "type": "Funding",
+    "headline": "Peninsula Secures US$56M Funding Package",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/PEN",
+  "median_daily_value_k": 391.0
+ },
+ {
+  "code": "ANX",
+  "name": "Anax Metals Limited",
+  "type": "Copper",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 33.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-25",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Mons Cupri Mineral Resource Update",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper and zinc project, Whim Creek, Pilbara, Western Australia",
+  "events": [
+   {
+    "date": "2026-08-25",
+    "type": "Resource",
+    "headline": "Mons Cupri Mineral Resource Update",
+    "setback": false
+   },
+   {
+    "date": "2026-02-24",
+    "type": "Study",
+    "headline": "Whim Creek DFS Update Confirms Outstanding Economics",
+    "setback": false
+   },
+   {
+    "date": "2025-12-08",
+    "type": "Funding",
+    "headline": "Anax Completes Strategic Placement and Secures Loan Funding",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/ANX",
+  "median_daily_value_k": 59.0
+ },
+ {
+  "code": "SS1",
+  "name": "Sun Silver Limited",
+  "type": "Silver",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 95.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-19",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "Further High-Grade Silver Discovered Outside MRE",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Silver and gold explorer, Maverick Springs, Nevada, USA",
+  "events": [
+   {
+    "date": "2026-08-19",
+    "type": "Discovery or drill result",
+    "headline": "Further High-Grade Silver Discovered Outside MRE",
+    "setback": false
+   },
+   {
+    "date": "2026-07-23",
+    "type": "M and A",
+    "headline": "Strategic Acquisition and Land Consolidation at Maverick",
+    "setback": false
+   },
+   {
+    "date": "2025-12-09",
+    "type": "Resource",
+    "headline": "Resource grows 59Moz to 539Moz AgEq at 71g/t",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/SS1",
+  "median_daily_value_k": 1001.0
+ },
+ {
+  "code": "LFT",
+  "name": "Li-Ft Power Ltd",
+  "type": "Lithium",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 94.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-13",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "LIFT Closes C$23 Million Public Offering",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Lithium explorer, Yellowknife, Northwest Territories, Canada",
+  "events": [
+   {
+    "date": "2026-08-13",
+    "type": "Funding",
+    "headline": "LIFT Closes C$23 Million Public Offering",
+    "setback": false
+   },
+   {
+    "date": "2026-07-14",
+    "type": "M and A",
+    "headline": "Court Approves Option to Acquire Renard Mine Site",
+    "setback": false
+   },
+   {
+    "date": "2026-06-24",
+    "type": "M and A",
+    "headline": "Li-Ft enters Agreement to Acquire Renard Mine Site",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/LFT",
+  "median_daily_value_k": 87.0
+ },
+ {
+  "code": "JGH",
+  "name": "Jade Gas Holdings Limited",
+  "type": "Oil and gas",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 84.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-07-20",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "JGH Signs Non-Binding Agreement to Secure Est. $1.1B Funding",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Coal bed methane gas project, Tavan Tolgoi, South Gobi, Mongolia",
+  "events": [
+   {
+    "date": "2026-07-20",
+    "type": "Funding",
+    "headline": "JGH Signs Non-Binding Agreement to Secure Est. $1.1B Funding",
+    "setback": false
+   },
+   {
+    "date": "2026-06-01",
+    "type": "Reserve",
+    "headline": "Jade Books First Ever Gas Reserve in Mongolia",
+    "setback": false
+   },
+   {
+    "date": "2025-11-10",
+    "type": "Funding",
+    "headline": "$70m LOI Signed for Red Lake Development",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/JGH",
+  "median_daily_value_k": 229.0
+ },
+ {
+  "code": "IVZ",
+  "name": "Invictus Energy Ltd",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 76.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-05-28",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Petroleum Production Sharing Agreement Signed",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer, Cabora Bassa, northern Zimbabwe",
+  "events": [
+   {
+    "date": "2026-05-28",
+    "type": "Permit or approval",
+    "headline": "Petroleum Production Sharing Agreement Signed",
+    "setback": false
+   },
+   {
+    "date": "2026-01-27",
+    "type": "Funding",
+    "headline": "Al Mansour Holdings Strategic Partnership Update",
+    "setback": false
+   },
+   {
+    "date": "2025-11-26",
+    "type": "M and A",
+    "headline": "AMOG Joint Venture and Strategic Partnership Update",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/IVZ",
+  "median_daily_value_k": 90.0
+ },
+ {
+  "code": "GRR",
+  "name": "Grange Resources Limited",
+  "type": "Iron ore",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 85.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-10-14",
+  "latest_event_type": "FID or construction decision",
+  "latest_event_headline": "FID to deliver the Savage River Underground",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Iron ore and pellet producer, Savage River, Tasmania",
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "FID or construction decision",
+    "headline": "FID to deliver the Savage River Underground",
+    "setback": false
+   },
+   {
+    "date": "2026-07-30",
+    "type": "Setback",
+    "headline": "Potential Non-Cash Impairment of Carrying Value of Assets",
+    "setback": true
+   },
+   {
+    "date": "2026-04-02",
+    "type": "Reserve",
+    "headline": "Savage River Mineral Resources and Ore Reserves Update",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/GRR",
+  "median_daily_value_k": 69.0
+ },
+ {
+  "code": "VR8",
+  "name": "Vanadium Resources Limited",
+  "type": "Vanadium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 14.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-10-05",
+  "latest_event_type": "Study",
+  "latest_event_headline": "V-Iron Plant Scoping Study Supports Progression to DFS",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.5 qtrs runway (yfinance, low conf)",
+  "description": "Vanadium project, Steelpoortdrift, Limpopo, South Africa",
+  "events": [
+   {
+    "date": "2026-10-05",
+    "type": "Study",
+    "headline": "V-Iron Plant Scoping Study Supports Progression to DFS",
+    "setback": false
+   },
+   {
+    "date": "2026-04-28",
+    "type": "Funding",
+    "headline": "US Vanadium Non Binding Offtake Term Sheet",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/VR8",
+  "median_daily_value_k": 103.0
+ },
+ {
+  "code": "KZR",
+  "name": "Kalamazoo Resources Limited",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 38.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-09-29",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "50m @ 4.9g/t Au Leads Final Mt Olympus Results",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.0 qtrs runway (yfinance, low conf)",
+  "description": "Gold project at scoping stage, Ashburton, near Paraburdoo, Western Australia",
+  "events": [
+   {
+    "date": "2026-09-29",
+    "type": "Discovery or drill result",
+    "headline": "50m @ 4.9g/t Au Leads Final Mt Olympus Results",
+    "setback": false
+   },
+   {
+    "date": "2025-11-05",
+    "type": "Study",
+    "headline": "Compelling Mt Olympus Scoping Study",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/KZR",
+  "median_daily_value_k": 53.0
+ },
+ {
+  "code": "BH6",
+  "name": "Broken Hill Gold Ltd",
+  "type": "Gold",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 43.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-09-22",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Completion of Strategic Demerger of North Queensland Assets",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.5 qtrs runway (yfinance, low conf)",
+  "description": "Gold explorer with small heap leach gold pours, White Dam, South Australia",
+  "events": [
+   {
+    "date": "2026-09-22",
+    "type": "M and A",
+    "headline": "Completion of Strategic Demerger of North Queensland Assets",
+    "setback": false
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Resource",
+    "headline": "White Dam Gold Copper Project - Vertigo MRE Update",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/BH6",
+  "median_daily_value_k": 91.0
+ },
+ {
+  "code": "IXR",
+  "name": "Ionic Rare Earths Limited",
+  "type": "Rare earths",
+  "stage": "Study stage (low confidence)",
+  "mkt_cap_usd_m": 99.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-09-03",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "IXR AND USSM TO FORM USA MAGNET RECYCLING JV",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.3 qtrs runway (yfinance, low conf)",
+  "description": "Rare earths project, Makuutu, Uganda, plus magnet recycling in the UK",
+  "events": [
+   {
+    "date": "2026-09-03",
+    "type": "M and A",
+    "headline": "IXR AND USSM TO FORM USA MAGNET RECYCLING JV",
+    "setback": false
+   },
+   {
+    "date": "2026-01-27",
+    "type": "Funding",
+    "headline": "UK GOVT PROVIDES GBP12M GRANT OFFER TO IONIC TECHNOLOGIES",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/IXR",
+  "median_daily_value_k": 198.0
+ },
+ {
+  "code": "CVV",
+  "name": "Caravel Minerals Limited",
+  "type": "Copper",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 76.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-06-19",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "Updated Ore Reserve - Caravel Copper Project",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Copper project in DFS, Caravel, Western Australia",
+  "events": [
+   {
+    "date": "2026-06-19",
+    "type": "Reserve",
+    "headline": "Updated Ore Reserve - Caravel Copper Project",
+    "setback": false
+   },
+   {
+    "date": "2026-06-15",
+    "type": "Funding",
+    "headline": "$15 Million Royalty Funding Arrangement",
+    "setback": false
+   },
+   {
+    "date": "2025-11-14",
+    "type": "Setback",
+    "headline": "Strategic Mine Plan Update - Retraction",
+    "setback": true
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/CVV",
+  "median_daily_value_k": 76.0
+ },
+ {
+  "code": "AVM",
+  "name": "Advance Metals Limited",
+  "type": "Silver",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 12.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-04-08",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "33Moz AgEq JORC Mineral Resource for Yoquivo",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Silver and gold explorer, Yoquivo, Chihuahua, Mexico",
+  "events": [
+   {
+    "date": "2026-04-08",
+    "type": "Resource",
+    "headline": "33Moz AgEq JORC Mineral Resource for Yoquivo",
+    "setback": false
+   },
+   {
+    "date": "2026-01-21",
+    "type": "Discovery or drill result",
+    "headline": "New High Grade Gold Zone Discovered Near Happy Valley",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/AVM",
+  "median_daily_value_k": 69.0
+ },
+ {
+  "code": "SYR",
+  "name": "Syrah Resources Limited",
+  "type": "Graphite",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 99.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-03-26",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Equity Raising and Strategic Funding Proposals",
+  "setbacks_12m": 3,
+  "cash_flag": null,
+  "description": "Graphite producer, Balama, Mozambique, plus Vidalia anode facility, USA",
+  "events": [
+   {
+    "date": "2026-03-26",
+    "type": "Funding",
+    "headline": "Equity Raising and Strategic Funding Proposals",
+    "setback": false
+   },
+   {
+    "date": "2026-03-16",
+    "type": "Setback",
+    "headline": "Tesla offtake alleged default cure date extended",
+    "setback": true
+   },
+   {
+    "date": "2026-03-02",
+    "type": "Funding",
+    "headline": "Syrah signs Balama binding offtake with NextSource",
+    "setback": false
+   },
+   {
+    "date": "2026-01-19",
+    "type": "Setback",
+    "headline": "Tesla offtake alleged default cure date extended",
+    "setback": true
+   },
+   {
+    "date": "2025-11-17",
+    "type": "Setback",
+    "headline": "Tesla offtake alleged default cure date extended",
+    "setback": true
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/SYR",
+  "median_daily_value_k": 186.0
+ },
+ {
+  "code": "DEV",
+  "name": "Devex Resources Limited",
+  "type": "Uranium",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 74.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2025-12-03",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Capital Raising of $35m to Underpin Activities and Growth",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uranium explorer, Nabarlek, Northern Territory",
+  "events": [
+   {
+    "date": "2025-12-03",
+    "type": "Funding",
+    "headline": "Capital Raising of $35m to Underpin Activities and Growth",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "M and A",
+    "headline": "DevEx to Acquire Alligator Energy's NT Uranium Tenure",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/DEV",
+  "median_daily_value_k": 206.0
+ },
+ {
+  "code": "PGL",
+  "name": "Pilbara Gold Limited",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 62.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-10-14",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Mt York PFS and Extensional Drilling Results",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold project at PFS stage, Mt York, Pilbara, Western Australia",
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "Study",
+    "headline": "Mt York PFS and Extensional Drilling Results",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/PGL",
+  "median_daily_value_k": 110.0
+ },
+ {
+  "code": "LKE",
+  "name": "Lake Resources N.L.",
+  "type": "Lithium",
+  "stage": "Study stage (low confidence)",
+  "mkt_cap_usd_m": 50.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-09-29",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Lake Resources Granted Environmental Impact Declaration",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.9 qtrs runway (yfinance, low conf)",
+  "description": "Lithium brine project, Kachi, Catamarca, Argentina",
+  "events": [
+   {
+    "date": "2026-09-29",
+    "type": "Permit or approval",
+    "headline": "Lake Resources Granted Environmental Impact Declaration",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/LKE",
+  "median_daily_value_k": 257.0
+ },
+ {
+  "code": "AUZ",
+  "name": "Australian Mines Limited",
+  "type": "Scandium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 35.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-04-28",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Flemington delivers standout Scoping Study economics",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Scandium project, Flemington, New South Wales, plus Boa Vista gold, Brazil",
+  "events": [
+   {
+    "date": "2026-04-28",
+    "type": "Study",
+    "headline": "Flemington delivers standout Scoping Study economics",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/AUZ",
+  "median_daily_value_k": 327.0
+ },
+ {
+  "code": "ENR",
+  "name": "Encounter Resources Limited",
+  "type": "Niobium",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 82.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-04-22",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Aileron Resources Grow by Over 50% to 120Mt",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Niobium and rare earths explorer, Aileron, Western Australia",
+  "events": [
+   {
+    "date": "2026-04-22",
+    "type": "Resource",
+    "headline": "Aileron Resources Grow by Over 50% to 120Mt",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/ENR",
+  "median_daily_value_k": 104.0
+ },
+ {
+  "code": "LKY",
+  "name": "Locksley Resources Limited",
+  "type": "Antimony",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 16.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2025-11-03",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "LKY Receives up to US$191M Potential Support from EXIM Bank",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Antimony and rare earths explorer, Mojave, California, USA",
+  "events": [
+   {
+    "date": "2025-11-03",
+    "type": "Funding",
+    "headline": "LKY Receives up to US$191M Potential Support from EXIM Bank",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/LKY",
+  "median_daily_value_k": 110.0
+ },
+ {
+  "code": "GHM",
+  "name": "Golden Horse Minerals Limited",
+  "type": "Gold",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 80.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2025-10-31",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "$35 Million Placement to Accelerate Growth at Southern Cross",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer, Hopes Hill, Southern Cross, Western Australia",
+  "events": [
+   {
+    "date": "2025-10-31",
+    "type": "Funding",
+    "headline": "$35 Million Placement to Accelerate Growth at Southern Cross",
+    "setback": false
+   }
+  ],
+  "exchange": "ASX",
+  "band": "Micro (US$5-100M)",
+  "currency": "AUD",
+  "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/GHM",
+  "median_daily_value_k": 148.0
+ }
 ]

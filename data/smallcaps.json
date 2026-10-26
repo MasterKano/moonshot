@@ -70,7 +70,7 @@
    },
    {
     "date": "2026-06-12",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Great Bear Divestment and Receipt of $1.2M Cash",
     "setback": false
    },
@@ -88,19 +88,19 @@
    },
    {
     "date": "2026-02-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Great Bear Project for A$5.8m and Board Changes",
     "setback": false
    },
    {
     "date": "2025-11-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Strategic acquisition of Bornite Lake prospect at Rae",
     "setback": false
    },
    {
     "date": "2025-10-31",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Sale of Reedy South Gold Project",
     "setback": false
    },
@@ -146,7 +146,7 @@
    },
    {
     "date": "2026-09-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "NMR executes Joint Venture agreement with Citigold",
     "setback": false
    },
@@ -194,7 +194,7 @@
    },
    {
     "date": "2025-12-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Joint Venture with Haoma Mining to develop Ravenswood Gold",
     "setback": false
    }
@@ -246,7 +246,7 @@
    },
    {
     "date": "2026-07-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TNC divests Bundarra Copper Project and retains upside",
     "setback": false
    },
@@ -258,13 +258,13 @@
    },
    {
     "date": "2026-06-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "RNX: Renegade completes $2.88m Carpentaria JV divestment",
     "setback": false
    },
    {
     "date": "2026-04-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TNC strengthens Cloncurry Copper Project with Strategic JV",
     "setback": false
    },
@@ -346,7 +346,7 @@
    },
    {
     "date": "2026-06-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Anson and POSCO Sign Binding Agreement for DLE Demo Plant",
     "setback": false
    },
@@ -404,13 +404,13 @@
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Mt Moss Acquisition Completed and Production Pathway Advanced",
     "setback": false
    },
    {
     "date": "2026-06-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sunshine Divests Non-Core Hodgkinson Project",
     "setback": false
    },
@@ -422,7 +422,7 @@
    },
    {
     "date": "2026-04-30",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Mt Moss Acquisition and Successful Capital Raising",
     "setback": false
    },
@@ -486,13 +486,13 @@
    },
    {
     "date": "2026-04-27",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "HIGH GRADE MORRO DO FERRO REE PROJECT ACQUISITION COMPLETE",
     "setback": false
    },
    {
     "date": "2026-03-05",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "PNN TO ACQUIRE COMPLEMENTARY, HIGH GRADE RARE EARTH PROJECT",
     "setback": false
    },
@@ -504,7 +504,7 @@
    },
    {
     "date": "2025-12-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Power completes acquisition of Santa Anna Project, Brazil",
     "setback": false
    },
@@ -516,13 +516,13 @@
    },
    {
     "date": "2025-11-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "POWER ADVANCES RINCON LITHIUM PROJECT JOINT VENTURE",
     "setback": false
    },
    {
     "date": "2025-11-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Amended - PNN to Acquire High Grade Rare Earth Project",
     "setback": false
    }
@@ -638,7 +638,7 @@
    },
    {
     "date": "2026-04-29",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "WWI Enters Agreement to Divest Mt Cecelia Project",
     "setback": false
    },
@@ -690,7 +690,7 @@
    },
    {
     "date": "2026-03-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Processing Mill and Tungsten Stockpiles",
     "setback": false
    },
@@ -714,7 +714,7 @@
    },
    {
     "date": "2025-10-31",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "RML to Acquire Processing Mill and Tungsten Stockpiles",
     "setback": false
    },
@@ -740,7 +740,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 6,
   "latest_event_date": "2026-10-23",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Strategic Portfolio Farmout to Beach Energy",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.3 qtrs runway (yfinance, low conf)",
@@ -748,7 +748,7 @@
   "events": [
    {
     "date": "2026-10-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Strategic Portfolio Farmout to Beach Energy",
     "setback": false
    },
@@ -798,7 +798,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 6,
   "latest_event_date": "2026-10-23",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "QMines Completes $1.4 Million Sale of Drilling Business",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -806,7 +806,7 @@
   "events": [
    {
     "date": "2026-10-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "QMines Completes $1.4 Million Sale of Drilling Business",
     "setback": false
    },
@@ -818,7 +818,7 @@
    },
    {
     "date": "2026-09-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Strategic Land Acquisitions Unlock Botos Deposit",
     "setback": false
    },
@@ -856,7 +856,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 6,
   "latest_event_date": "2026-10-13",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "AKN to Acquire High Grade Greenland Niobium Project",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -864,37 +864,37 @@
   "events": [
    {
     "date": "2026-10-13",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TSK:Completion of sale of Green Exploration to AuKing Mining",
     "setback": false
    },
    {
     "date": "2026-10-13",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AKN to Acquire High Grade Greenland Niobium Project",
     "setback": false
    },
    {
     "date": "2026-08-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TSK: AKN to acquire 100% of Green Exploration from TSK",
     "setback": false
    },
    {
     "date": "2026-08-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TSK: Proposed Sale of Machinga REE Project to AuKing Mining",
     "setback": false
    },
    {
     "date": "2026-08-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AuKing to Acquire High Grade Heavy Rare Earths Project",
     "setback": false
    },
    {
     "date": "2026-01-29",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Tin and Silver Prospects",
     "setback": false
    }
@@ -978,7 +978,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 6,
   "latest_event_date": "2026-07-03",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "M96: Completion of Acquisition of Viper Project",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -986,13 +986,13 @@
   "events": [
    {
     "date": "2026-07-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "West Arunta Divestment Completed",
     "setback": false
    },
    {
     "date": "2026-07-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "M96: Completion of Acquisition of Viper Project",
     "setback": false
    },
@@ -1004,7 +1004,7 @@
    },
    {
     "date": "2026-04-27",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Caprice Divests West Arunta Assets for $2.89 Million",
     "setback": false
    },
@@ -1016,7 +1016,7 @@
    },
    {
     "date": "2025-12-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Comet Exploration Project Acquisition Completes",
     "setback": false
    }
@@ -1074,7 +1074,7 @@
    },
    {
     "date": "2026-02-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Stellar Completes Granite Tor Tin Project Acquisition",
     "setback": false
    }
@@ -1120,13 +1120,13 @@
    },
    {
     "date": "2026-05-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AMN: Completion of Acquisition",
     "setback": false
    },
    {
     "date": "2026-04-22",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Mount Squires Divestment",
     "setback": false
    }
@@ -1146,7 +1146,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 5,
   "latest_event_date": "2026-10-05",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "BCM Acquires MAGSUL process plant",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -1154,7 +1154,7 @@
   "events": [
    {
     "date": "2026-10-05",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "BCM Acquires MAGSUL process plant",
     "setback": false
    },
@@ -1264,19 +1264,19 @@
    },
    {
     "date": "2026-05-15",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Lamil Project to Aventine Resources",
     "setback": false
    },
    {
     "date": "2026-05-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Rumble sells 2.5% Western Queen gold NSR royalty for A$10m",
     "setback": false
    },
    {
     "date": "2026-02-06",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Thunderstorm Gold Project Acquisition Complete and Cleansing",
     "setback": false
    },
@@ -1328,7 +1328,7 @@
    },
    {
     "date": "2025-12-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Napperby Uranium Resource",
     "setback": false
    },
@@ -1552,7 +1552,7 @@
    },
    {
     "date": "2026-08-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "OD6 COMPLETES ACQUISITION OF HIGH-GRADE QUINN PROJECT",
     "setback": false
    },
@@ -1564,7 +1564,7 @@
    },
    {
     "date": "2026-03-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "OD6 TO ACQUIRE ULTRA HIGH GRADE USA FLUORSPAR PROJECTS",
     "setback": false
    }
@@ -1598,7 +1598,7 @@
    },
    {
     "date": "2026-08-26",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sentinel completes acquisition of 1.0Moz Big Springs Project",
     "setback": false
    },
@@ -1610,7 +1610,7 @@
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sentinel to acquire the 1.0Moz Big Springs Gold Project",
     "setback": false
    }
@@ -1630,7 +1630,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-09-16",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Significant Processing Infrastructure Acquired for Burbanks",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -1638,7 +1638,7 @@
   "events": [
    {
     "date": "2026-09-16",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Significant Processing Infrastructure Acquired for Burbanks",
     "setback": false
    },
@@ -1690,7 +1690,7 @@
    },
    {
     "date": "2026-06-29",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "VIKING DIVESTS NON-CORE GOLD PROJECT FOR UP TO $5M",
     "setback": false
    },
@@ -1702,7 +1702,7 @@
    },
    {
     "date": "2025-12-16",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "VKA TO ACQUIRE PRODUCTION PROVEN USA TUNGSTEN PROJECTS",
     "setback": false
    }
@@ -1768,7 +1768,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-08-11",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Austral Resources to Acquire Hammer Metals",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.5 qtrs runway (yfinance, low conf)",
@@ -1776,13 +1776,13 @@
   "events": [
    {
     "date": "2026-08-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Austral Resources to Acquire Hammer Metals",
     "setback": false
    },
    {
     "date": "2026-06-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Larvotto Resources To Acquire Hammer Metals",
     "setback": false
    },
@@ -1794,7 +1794,7 @@
    },
    {
     "date": "2025-11-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Ownership Regained over two areas within Mount Isa East JV",
     "setback": false
    }
@@ -1840,7 +1840,7 @@
    },
    {
     "date": "2025-11-21",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "High-Grade Shafter Silver Project Acquisition Completed",
     "setback": false
    }
@@ -1860,7 +1860,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-07-28",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "AT4 to Acquire Transformational US Critical Metals Refinery",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -1868,7 +1868,7 @@
   "events": [
    {
     "date": "2026-07-28",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AT4 to Acquire Transformational US Critical Metals Refinery",
     "setback": false
    },
@@ -1880,13 +1880,13 @@
    },
    {
     "date": "2026-01-28",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AT4 ACQUIRES FULLY PERMITTED U.S. TUNGSTEN MILL",
     "setback": false
    },
    {
     "date": "2025-12-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "ATAA to spin out Drummond and NSW assets",
     "setback": false
    }
@@ -1972,7 +1972,7 @@
    },
    {
     "date": "2026-01-19",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TVN: Tivan completes acquisition of the Molyhil Project",
     "setback": false
    },
@@ -2052,13 +2052,13 @@
    },
    {
     "date": "2026-06-05",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of 100% of Yundamindra and Kookynie Projects",
     "setback": false
    },
    {
     "date": "2026-02-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "NME: NME divests Arika Joint Venture interest",
     "setback": false
    }
@@ -2078,7 +2078,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-10-19",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of Serra Negra Project Acquisition",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2086,7 +2086,7 @@
   "events": [
    {
     "date": "2026-10-19",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Serra Negra Project Acquisition",
     "setback": false
    },
@@ -2098,7 +2098,7 @@
    },
    {
     "date": "2026-04-28",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Oceana acquires global-scale rare earths project in Brazil",
     "setback": false
    }
@@ -2410,7 +2410,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-09-21",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Sale of Canadian Assets",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2418,19 +2418,19 @@
   "events": [
    {
     "date": "2026-09-21",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Canadian Assets",
     "setback": false
    },
    {
     "date": "2026-07-21",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Los Warbos Project Acquisition",
     "setback": false
    },
    {
     "date": "2026-05-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "La Lorena Project Acquisition",
     "setback": false
    }
@@ -2504,7 +2504,7 @@
    },
    {
     "date": "2026-07-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Strategic Acquisition and Land Consolidation at Maverick",
     "setback": false
    },
@@ -2530,7 +2530,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-08-18",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "AMD acquires Pilbara iron ore project targeting DSO deposits",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2538,19 +2538,19 @@
   "events": [
    {
     "date": "2026-08-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AMD acquires Pilbara iron ore project targeting DSO deposits",
     "setback": false
    },
    {
     "date": "2026-06-24",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Arrow completes Yarraloola Copper Project acquisition",
     "setback": false
    },
    {
     "date": "2026-04-28",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Arrow to acquire Yarraloola Copper Project in WA Pilbara",
     "setback": false
    }
@@ -2650,7 +2650,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-05-18",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Cauldron Acquires Tenements Surrounding Manyingee",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2658,7 +2658,7 @@
   "events": [
    {
     "date": "2026-05-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Cauldron Acquires Tenements Surrounding Manyingee",
     "setback": false
    },
@@ -2690,7 +2690,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-04-29",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of Pickle Crow Gold Project Acquisition",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2698,7 +2698,7 @@
   "events": [
    {
     "date": "2026-04-29",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Pickle Crow Gold Project Acquisition",
     "setback": false
    },
@@ -2710,7 +2710,7 @@
    },
    {
     "date": "2026-02-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Pickle Crow Gold Project Acquisition and Placement",
     "setback": false
    }
@@ -2730,7 +2730,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-04-09",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquisition of Highly Prospective Historical Asset-North NSW",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -2738,7 +2738,7 @@
   "events": [
    {
     "date": "2026-04-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Highly Prospective Historical Asset-North NSW",
     "setback": false
    },
@@ -2750,7 +2750,7 @@
    },
    {
     "date": "2025-11-28",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of the Acquisition of Webbs Consol Silver Project",
     "setback": false
    }
@@ -2878,7 +2878,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-09-22",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of Strategic Demerger of North Queensland Assets",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.5 qtrs runway (yfinance, low conf)",
@@ -2886,7 +2886,7 @@
   "events": [
    {
     "date": "2026-09-22",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Strategic Demerger of North Queensland Assets",
     "setback": false
    },
@@ -2912,7 +2912,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-09-03",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "IXR AND USSM TO FORM USA MAGNET RECYCLING JV",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.3 qtrs runway (yfinance, low conf)",
@@ -2920,7 +2920,7 @@
   "events": [
    {
     "date": "2026-09-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "IXR AND USSM TO FORM USA MAGNET RECYCLING JV",
     "setback": false
    },
@@ -2960,7 +2960,7 @@
    },
    {
     "date": "2026-06-24",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Li-Ft enters Agreement to Acquire Renard Mine Site",
     "setback": false
    }
@@ -3020,7 +3020,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-06-11",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Killi Acquires Major WA Iron Ore Project",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -3028,7 +3028,7 @@
   "events": [
    {
     "date": "2026-06-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Killi Acquires Major WA Iron Ore Project",
     "setback": false
    },
@@ -3188,7 +3188,7 @@
    },
    {
     "date": "2025-12-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "DevEx to Acquire Alligator Energy's NT Uranium Tenure",
     "setback": false
    }
@@ -3264,7 +3264,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2026-06-09",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Golden Patricia Acquisition from Barrick Completed",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -3272,7 +3272,7 @@
   "events": [
    {
     "date": "2026-06-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Golden Patricia Acquisition from Barrick Completed",
     "setback": false
    }
@@ -3348,7 +3348,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2026-04-21",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquisition of Advanced Lithium Project, Minas Gerais Brazil",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -3356,7 +3356,7 @@
   "events": [
    {
     "date": "2026-04-21",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Advanced Lithium Project, Minas Gerais Brazil",
     "setback": false
    }
@@ -3376,7 +3376,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2026-02-17",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "KRR to acquire High-Grade Mindoolah Gold Project",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -3384,7 +3384,7 @@
   "events": [
    {
     "date": "2026-02-17",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "KRR to acquire High-Grade Mindoolah Gold Project",
     "setback": false
    }
@@ -3460,7 +3460,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 10,
   "latest_event_date": "2026-05-29",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquires Strategic Surface Land at Topaz Project",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.4 qtrs runway (yfinance, low conf)",
@@ -3468,7 +3468,7 @@
   "events": [
    {
     "date": "2026-05-29",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquires Strategic Surface Land at Topaz Project",
     "setback": false
    },
@@ -3492,7 +3492,7 @@
    },
    {
     "date": "2026-01-05",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Michigan Helium Exploration Assets",
     "setback": false
    },
@@ -3510,7 +3510,7 @@
    },
    {
     "date": "2025-11-04",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Definitive Agreement to Acquire Land Position",
     "setback": false
    },
@@ -3522,7 +3522,7 @@
    },
    {
     "date": "2025-10-27",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed Acquisition Michigan Helium Assets",
     "setback": false
    }
@@ -3545,7 +3545,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 8,
   "latest_event_date": "2026-10-01",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of acquisition of Spirit Energy assets",
   "setbacks_12m": 1,
   "cash_flag": null,
@@ -3553,7 +3553,7 @@
   "events": [
    {
     "date": "2026-10-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of acquisition of Spirit Energy assets",
     "setback": false
    },
@@ -3565,7 +3565,7 @@
    },
    {
     "date": "2026-07-27",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Recommended acquisition of Pharos Energy plc",
     "setback": false
    },
@@ -3577,25 +3577,25 @@
    },
    {
     "date": "2026-06-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of acquisition of assets from ONE-Dyas",
     "setback": false
    },
    {
     "date": "2026-03-26",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of acquisition of TotalEnergies assets",
     "setback": false
    },
    {
     "date": "2025-12-16",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of assets from Spirit Energy",
     "setback": false
    },
    {
     "date": "2025-12-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of acquisition of Prax Upstream Limited",
     "setback": false
    },
@@ -3828,7 +3828,7 @@
    },
    {
     "date": "2026-09-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Muratdere Royalty",
     "setback": false
    },
@@ -3840,7 +3840,7 @@
    },
    {
     "date": "2026-07-06",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Senala Joint Venture Agreement",
     "setback": false
    },
@@ -3914,7 +3914,7 @@
    },
    {
     "date": "2026-07-13",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Gardaq A/S exploration JV funding secured",
     "setback": false
    },
@@ -3926,7 +3926,7 @@
    },
    {
     "date": "2025-12-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Closing of Strategic Acquisitions, Total Voti...",
     "setback": false
    },
@@ -4003,7 +4003,7 @@
    },
    {
     "date": "2026-03-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of JHI and Navitas Partnership",
     "setback": false
    },
@@ -4064,7 +4064,7 @@
    },
    {
     "date": "2026-07-07",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of additional interests in WHM and DBM",
     "setback": false
    },
@@ -4251,7 +4251,7 @@
    },
    {
     "date": "2025-12-17",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of NLZM Processing Plant Acquisition",
     "setback": false
    },
@@ -4313,19 +4313,19 @@
    },
    {
     "date": "2026-07-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Implementation of the Emmerson Scheme",
     "setback": false
    },
    {
     "date": "2026-06-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed Acquisition of Emmerson Resources - ...",
     "setback": false
    },
    {
     "date": "2026-03-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Pan African to acquire Emmerson Resources",
     "setback": false
    },
@@ -4456,7 +4456,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 5,
   "latest_event_date": "2026-09-01",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "2nd Copper JV Agreement",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -4464,19 +4464,19 @@
   "events": [
    {
     "date": "2026-09-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "2nd Copper JV Agreement",
     "setback": false
    },
    {
     "date": "2026-03-19",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Copper JV Agreement Signed with Xinhai Mining",
     "setback": false
    },
    {
     "date": "2025-12-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "JV Agreement for Development of Verkhuba",
     "setback": false
    },
@@ -4488,7 +4488,7 @@
    },
    {
     "date": "2025-11-13",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "$25M+ Strategic JV Agreement with Endeavour Mining",
     "setback": false
    }
@@ -4521,7 +4521,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 5,
   "latest_event_date": "2026-06-10",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Significant Acquisition in Malaysia",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -4529,7 +4529,7 @@
   "events": [
    {
     "date": "2026-06-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Significant Acquisition in Malaysia",
     "setback": false
    },
@@ -4567,7 +4567,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "exact",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Malaysian acquisitions to complete on 31 December 2026 (Group above 100,000 boepd)",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -4624,7 +4624,7 @@
    },
    {
     "date": "2026-05-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of 13.6% Interest in Zenit for US$19.5m Cash",
     "setback": false
    },
@@ -4659,7 +4659,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-10-22",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Proposed Acquisition of Lions Bay Resources",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.5 qtrs runway (yfinance, low conf)",
@@ -4667,25 +4667,25 @@
   "events": [
    {
     "date": "2026-10-22",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed Acquisition of Lions Bay Resources",
     "setback": false
    },
    {
     "date": "2026-03-31",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of 30% of Lions Bay Resources",
     "setback": false
    },
    {
     "date": "2026-03-16",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Partial Sale of Interest in CleanTech Lithium Plc",
     "setback": false
    },
    {
     "date": "2026-03-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Disposal of partial interest in Fulcrum Metals Plc",
     "setback": false
    }
@@ -4795,7 +4795,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-10-14",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquisition of further Paradox Basin acreage",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.5 qtrs runway (yfinance, low conf)",
@@ -4803,25 +4803,25 @@
   "events": [
    {
     "date": "2026-10-14",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of further Paradox Basin acreage",
     "setback": false
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of further Paradox Basin acreage",
     "setback": false
    },
    {
     "date": "2026-06-26",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of additional acreage and divestment",
     "setback": false
    },
    {
     "date": "2026-05-21",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Further divestment of undeveloped acreage",
     "setback": false
    }
@@ -4844,7 +4844,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-10-14",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquisition of Ringhorne Production Licences",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -4852,13 +4852,13 @@
   "events": [
    {
     "date": "2026-10-14",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Ringhorne Production Licences",
     "setback": false
    },
    {
     "date": "2026-09-15",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completed Acquisition of Blocks 3 and 4",
     "setback": false
    },
@@ -4870,7 +4870,7 @@
    },
    {
     "date": "2025-12-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition - Block 9 and Block 3 and 4, Oman",
     "setback": false
    }
@@ -4893,7 +4893,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Oman Block 9 acquisition completion expected H2 2026",
     "net": "loose",
     "material_if_delivered": "Y",
@@ -4941,7 +4941,7 @@
    },
    {
     "date": "2026-06-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed acquisition of Cygnus Metals Limited",
     "setback": false
    },
@@ -4970,7 +4970,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 4,
   "latest_event_date": "2026-09-25",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Increased Cash Offer for Capricorn by Genel Energy",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -4978,25 +4978,25 @@
   "events": [
    {
     "date": "2026-09-25",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Increased Cash Offer for Capricorn by Genel Energy",
     "setback": false
    },
    {
     "date": "2026-09-17",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Revised All-Cash Offer for Capricorn by DNO",
     "setback": false
    },
    {
     "date": "2026-09-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Recommended Cash Acquisition of Capricorn by DNO",
     "setback": false
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Recommended cash acquisition of Capricorn by Genel",
     "setback": false
    }
@@ -5098,7 +5098,7 @@
    },
    {
     "date": "2026-04-08",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition, funding and capital reorganisation",
     "setback": false
    },
@@ -5118,7 +5118,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "quarter",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of NZ acquisition (Matahio) to follow government consent",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -5228,19 +5228,19 @@
    },
    {
     "date": "2026-06-24",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Sale of Eclipse Mining Lease",
     "setback": false
    },
    {
     "date": "2026-05-19",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Execution of SPA for Eclipse Mining Lease",
     "setback": false
    },
    {
     "date": "2025-12-30",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Conditional Sale of 75% of Eclipse Gold Project",
     "setback": false
    }
@@ -5437,7 +5437,7 @@
    },
    {
     "date": "2026-06-17",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition of Lincoln Estates and Water Rights",
     "setback": false
    },
@@ -5567,7 +5567,7 @@
    },
    {
     "date": "2026-09-07",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "ACG to Acquire Licence to Extend Gold Production",
     "setback": false
    },
@@ -5606,7 +5606,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-09-25",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Genel Energy PLC: INCREASED RECOMMENDED CASH OFFER for Capricorn Energy plc by Genel Energy No.9 Limited",
   "setbacks_12m": 1,
   "cash_flag": null,
@@ -5614,7 +5614,7 @@
   "events": [
    {
     "date": "2026-09-25",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Genel Energy PLC: INCREASED RECOMMENDED CASH OFFER for Capricorn Energy plc by Genel Energy No.9 Limited",
     "setback": false
    },
@@ -5626,7 +5626,7 @@
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Genel Energy PLC: RECOMMENDED CASH ACQUISITIO...",
     "setback": false
    },
@@ -5750,7 +5750,7 @@
    },
    {
     "date": "2026-08-14",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Arrow Announces Alberta Property Acquisition",
     "setback": false
    },
@@ -5779,7 +5779,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-09-10",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "KON-16: Definitive Transaction Documents Executed",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -5787,7 +5787,7 @@
   "events": [
    {
     "date": "2026-09-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "KON-16: Definitive Transaction Documents Executed",
     "setback": false
    },
@@ -5822,7 +5822,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition completion expected H2 2026 (within 2026)",
     "net": "loose",
     "material_if_delivered": "Y",
@@ -5850,7 +5850,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-09-03",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Diversified Announces Accretive Acquisition o...",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.4 qtrs runway (yfinance, low conf)",
@@ -5858,19 +5858,19 @@
   "events": [
    {
     "date": "2026-09-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Diversified Announces Accretive Acquisition o...",
     "setback": false
    },
    {
     "date": "2026-05-06",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Diversified and Carlyle Partner to Acquire As...",
     "setback": false
    },
    {
     "date": "2026-02-26",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Diversified to Acquire Complementary, High-Qu...",
     "setback": false
    }
@@ -5893,7 +5893,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-09-01",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "MKANGO COMPLETES ACQUISITION OF REMLOY",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -5901,13 +5901,13 @@
   "events": [
    {
     "date": "2026-09-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "MKANGO COMPLETES ACQUISITION OF REMLOY",
     "setback": false
    },
    {
     "date": "2026-05-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "AGREEMENT WITH HERAEUS TO ACQUIRE HERAEUS REMLOY",
     "setback": false
    },
@@ -6032,7 +6032,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-08-10",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Strategic Transaction to Accelerate Copper Growth",
   "setbacks_12m": 1,
   "cash_flag": null,
@@ -6040,7 +6040,7 @@
   "events": [
    {
     "date": "2026-08-10",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Strategic Transaction to Accelerate Copper Growth",
     "setback": false
    },
@@ -6058,7 +6058,7 @@
    },
    {
     "date": "2026-01-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Closing of Sale of South African Operations",
     "setback": false
    }
@@ -6091,7 +6091,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-08-07",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Recommended Increased Acquisition of Pharos",
   "setbacks_12m": 1,
   "cash_flag": null,
@@ -6105,19 +6105,19 @@
    },
    {
     "date": "2026-08-07",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Recommended Increased Acquisition of Pharos",
     "setback": false
    },
    {
     "date": "2026-07-27",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Recommended acquisition of Pharos Energy plc",
     "setback": false
    },
    {
     "date": "2026-06-24",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "RECOMMENDED ACQUISITION OF PHAROS ENERGY PLC",
     "setback": false
    }
@@ -6140,7 +6140,7 @@
    {
     "date": "2027-06-30",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Scheme expected to become effective in 1H 2027",
     "net": "loose",
     "material_if_delivered": "Y",
@@ -6245,7 +6245,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-07-13",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of Acquisition of Keyes Helium Complex",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.0 qtrs runway (yfinance, low conf)",
@@ -6253,19 +6253,19 @@
   "events": [
    {
     "date": "2026-07-13",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of Acquisition of Keyes Helium Complex",
     "setback": false
    },
    {
     "date": "2026-07-02",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition, Placing and Retail Offer",
     "setback": false
    },
    {
     "date": "2026-06-08",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Agreement to Acquire TSD LLC and Drilling Rig",
     "setback": false
    }
@@ -6351,7 +6351,7 @@
    },
    {
     "date": "2025-12-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Afentra Completes Somaliland Divestment",
     "setback": false
    }
@@ -6402,7 +6402,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 3,
   "latest_event_date": "2026-05-07",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Binding Scheme Implementation Deed with Huayou",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -6410,7 +6410,7 @@
   "events": [
    {
     "date": "2026-05-07",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Binding Scheme Implementation Deed with Huayou",
     "setback": false
    },
@@ -6436,7 +6436,7 @@
    {
     "date": "2026-11-30",
     "date_precision": "month",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Scheme meeting to approve Huayou takeover expected November 2026",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -6445,7 +6445,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "month",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Scheme implementation expected December 2026",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -6484,7 +6484,7 @@
    },
    {
     "date": "2026-02-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Tullow signs SPA to acquire TEN FPSO in Ghana",
     "setback": false
    }
@@ -6498,7 +6498,7 @@
    {
     "date": "2027-03-31",
     "date_precision": "month",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "TEN FPSO acquisition completion expected March 2027",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -6641,7 +6641,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-10-20",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Gulf Keystone to combine with ShaMaran Petrol...",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -6649,7 +6649,7 @@
   "events": [
    {
     "date": "2026-10-20",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Gulf Keystone to combine with ShaMaran Petrol...",
     "setback": false
    },
@@ -6697,7 +6697,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-10-14",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Completion of sale of Croatian geothermal company",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -6705,13 +6705,13 @@
   "events": [
    {
     "date": "2026-10-14",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Completion of sale of Croatian geothermal company",
     "setback": false
    },
    {
     "date": "2026-04-24",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Croatian geothermal company",
     "setback": false
    }
@@ -6725,7 +6725,7 @@
    {
     "date": "2026-10-31",
     "date_precision": "month",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Licence sale expected to complete by end of October 2026",
     "net": "tight",
     "material_if_delivered": "N",
@@ -6828,7 +6828,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-09-09",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Sale of Indokal Limited and Special Dividend",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -6836,13 +6836,13 @@
   "events": [
    {
     "date": "2026-09-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Indokal Limited and Special Dividend",
     "setback": false
    },
    {
     "date": "2025-11-06",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Asiamet’s Interest in the KSK Project",
     "setback": false
    }
@@ -6916,7 +6916,7 @@
    },
    {
     "date": "2025-12-22",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed Acquisition: Gulf International Minerals",
     "setback": false
    }
@@ -7322,7 +7322,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2026-02-19",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Acquisition Funding of Oil Production in Angola",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 1.1 qtrs runway (yfinance, low conf)",
@@ -7330,13 +7330,13 @@
   "events": [
    {
     "date": "2026-02-19",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Acquisition Funding of Oil Production in Angola",
     "setback": false
    },
    {
     "date": "2025-12-18",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Disposal of Water Business",
     "setback": false
    }
@@ -7350,7 +7350,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "First Angolan oil transaction expected to close H2 2026",
     "net": "loose",
     "material_if_delivered": "Y",
@@ -7359,7 +7359,7 @@
    {
     "date": "2027-06-30",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Second Angolan transaction to follow early 2027",
     "net": "loose",
     "material_if_delivered": "Y",
@@ -7378,7 +7378,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2025-12-23",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Government Approve Sale of Kangerluarsuk to Amaroq",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -7386,13 +7386,13 @@
   "events": [
    {
     "date": "2025-12-23",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Government Approve Sale of Kangerluarsuk to Amaroq",
     "setback": false
    },
    {
     "date": "2025-11-03",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Binding Heads of Term With US Group to JV Disko",
     "setback": false
    }
@@ -7425,7 +7425,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 2,
   "latest_event_date": "2025-11-11",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "ACQUISITION OF ADDITIONAL RE-ENTRY TARGETS",
   "setbacks_12m": 1,
   "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
@@ -7439,7 +7439,7 @@
    },
    {
     "date": "2025-11-11",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "ACQUISITION OF ADDITIONAL RE-ENTRY TARGETS",
     "setback": false
    },
@@ -7893,7 +7893,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2026-04-09",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Proposed Acquisition of Silver Lake Project, W.A.",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -7901,7 +7901,7 @@
   "events": [
    {
     "date": "2026-04-09",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Proposed Acquisition of Silver Lake Project, W.A.",
     "setback": false
    }
@@ -7952,7 +7952,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "quarter",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Angola entry completion by year-end 2026",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -8061,7 +8061,7 @@
    {
     "date": "2027-03-31",
     "date_precision": "quarter",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "MOU-6 partial divestment targeted early Q1 2027",
     "net": "tight",
     "material_if_delivered": "Y",
@@ -8271,7 +8271,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2025-12-17",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Tiernan Gold Completes Qualifying Transaction",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -8279,7 +8279,7 @@
   "events": [
    {
     "date": "2025-12-17",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Tiernan Gold Completes Qualifying Transaction",
     "setback": false
    }
@@ -8353,7 +8353,7 @@
   "as_of": "2026-10-26",
   "material_events_12m": 1,
   "latest_event_date": "2025-12-01",
-  "latest_event_type": "M and A",
+  "latest_event_type": "MnA",
   "latest_event_headline": "Sale of Goedehoop North",
   "setbacks_12m": 0,
   "cash_flag": null,
@@ -8361,7 +8361,7 @@
   "events": [
    {
     "date": "2025-12-01",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Sale of Goedehoop North",
     "setback": false
    }
@@ -8375,7 +8375,7 @@
    {
     "date": "2026-12-31",
     "date_precision": "half",
-    "type": "M and A",
+    "type": "MnA",
     "headline": "Goedehoop North sale expected to complete in H2 2026",
     "net": "loose",
     "material_if_delivered": "N",

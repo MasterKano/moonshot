@@ -394,7 +394,7 @@ DTEND;VALUE=DATE:20250308
 DTSTAMP:20261026T090000Z
 UID:NO023-moonshot-norway
 CATEGORIES:DNO,Sval
-DESCRIPTION:Type: M and A. Operator: DNO. Partners: Sval. Licence/field: n
+DESCRIPTION:Type: MnA. Operator: DNO. Partners: Sval. Licence/field: n
  /a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confidence: hig
  h. Signed. Completion 12.06.2025 and Sodir merger 17.12.2025 not material.
   Source: https://newsweb.oslobors.no/message/640686
@@ -462,7 +462,7 @@ DTEND;VALUE=DATE:20250315
 DTSTAMP:20261026T090000Z
 UID:NO027-moonshot-norway
 CATEGORIES:Aker BP,OKEA,DNO,Equinor
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: OKEA\, DNO\, Equin
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: OKEA\, DNO\, Equin
  or. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (pa
  st). Confidence: high.  Source: https://newsweb.oslobors.no/message/641305
 URL:https://newsweb.oslobors.no/message/641305
@@ -929,7 +929,7 @@ DTEND;VALUE=DATE:20250702
 DTSTAMP:20261026T090000Z
 UID:NO057-moonshot-norway
 CATEGORIES:Pandion,INPEX Idemitsu
-DESCRIPTION:Month estimate (placed on the 1st). Type: M and A. Operator: P
+DESCRIPTION:Month estimate (placed on the 1st). Type: MnA. Operator: P
  andion. Partners: INPEX Idemitsu. Licence/field: n/a. Material: Y. Setback
  : N. Upcoming: N. Net: n/a (past). Confidence: low. Month estimate\; buyer
   inferred from Sodir transfers completed 31.10.2025. Source: https://pandi
@@ -1037,7 +1037,7 @@ DTEND;VALUE=DATE:20250729
 DTSTAMP:20261026T090000Z
 UID:NO064-moonshot-norway
 CATEGORIES:Aker BP,Japex
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: Japex. Licence/fie
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: Japex. Licence/fie
  ld: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confidence
  : high.  Source: https://newsweb.oslobors.no/message/651807
 URL:https://newsweb.oslobors.no/message/651807
@@ -1144,7 +1144,7 @@ DTEND;VALUE=DATE:20250829
 DTSTAMP:20261026T090000Z
 UID:NO071-moonshot-norway
 CATEGORIES:Aker BP,OKEA,Harbour,INPEX Idemitsu
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: OKEA\, Harbour\, I
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: OKEA\, Harbour\, I
  NPEX Idemitsu. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. N
  et: n/a (past). Confidence: high.  Source: https://newsweb.oslobors.no/mes
  sage/654042
@@ -1339,7 +1339,7 @@ DTEND;VALUE=DATE:20251002
 DTSTAMP:20261026T090000Z
 UID:NO084-moonshot-norway
 CATEGORIES:Vår Energi,TotalEnergies,ORLEN
-DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: TotalEnergies
+DESCRIPTION:Type: MnA. Operator: Vår Energi. Partners: TotalEnergies
  \, ORLEN. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n
  /a (past). Confidence: medium. ORLEN also took a share (Sodir transfer 18.
  12.2025). Source: https://newsweb.oslobors.no/message/656463
@@ -1491,7 +1491,7 @@ DTEND;VALUE=DATE:20251107
 DTSTAMP:20261026T090000Z
 UID:NO093-moonshot-norway
 CATEGORIES:Aker BP,DNO
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: DNO. Licence/field
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: DNO. Licence/field
  : n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confidence: 
  high.  Source: https://newsweb.oslobors.no/message/658877
 URL:https://newsweb.oslobors.no/message/658877
@@ -1568,7 +1568,7 @@ DTEND;VALUE=DATE:20251119
 DTSTAMP:20261026T090000Z
 UID:NO098-moonshot-norway
 CATEGORIES:DNO,ORLEN
-DESCRIPTION:Type: M and A. Operator: DNO. Partners: ORLEN. Licence/field: 
+DESCRIPTION:Type: MnA. Operator: DNO. Partners: ORLEN. Licence/field: 
  n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confidence: hi
  gh.  Source: https://newsweb.oslobors.no/message/659899
 URL:https://newsweb.oslobors.no/message/659899
@@ -2480,7 +2480,7 @@ DTEND;VALUE=DATE:20260421
 DTSTAMP:20261026T090000Z
 UID:NO155-moonshot-norway
 CATEGORIES:Equinor,DNO,INPEX Idemitsu,OKEA,Japex
-DESCRIPTION:Type: M and A. Operator: Equinor. Partners: DNO\, INPEX Idemit
+DESCRIPTION:Type: MnA. Operator: Equinor. Partners: DNO\, INPEX Idemit
  su\, OKEA\, Japex. Licence/field: PL1119. Material: Y. Setback: N. Upcomin
  g: N. Net: n/a (past). Confidence: high. Mistral Nord well planned early 2
  027 (Japex). Source: https://newsweb.oslobors.no/message/670937
@@ -2580,7 +2580,7 @@ DTEND;VALUE=DATE:20260522
 DTSTAMP:20261026T090000Z
 UID:NO162-moonshot-norway
 CATEGORIES:Aker BP,Equinor
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: Equinor. Licence/f
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: Equinor. Licence/f
  ield: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confiden
  ce: high. Completion 30.09.2026 (Sodir) not material. Source: https://news
  web.oslobors.no/message/674060
@@ -2726,7 +2726,7 @@ DTEND;VALUE=DATE:20260619
 DTSTAMP:20261026T090000Z
 UID:NO171-moonshot-norway
 CATEGORIES:Vår Energi,Pandion,DNO,ORLEN
-DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Pandion\, DNO
+DESCRIPTION:Type: MnA. Operator: Vår Energi. Partners: Pandion\, DNO
  \, ORLEN. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n
  /a (past). Confidence: high. Completion of Pandion deal 30.09.2026 not mat
  erial. Source: https://newsweb.oslobors.no/message/676457
@@ -2771,7 +2771,7 @@ DTEND;VALUE=DATE:20260701
 DTSTAMP:20261026T090000Z
 UID:NO174-moonshot-norway
 CATEGORIES:Vår Energi,Equinor
-DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Equinor. Licen
+DESCRIPTION:Type: MnA. Operator: Vår Energi. Partners: Equinor. Licen
  ce/field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Conf
  idence: high.  Source: https://newsweb.oslobors.no/message/677309
 URL:https://newsweb.oslobors.no/message/677309
@@ -2894,7 +2894,7 @@ DTEND;VALUE=DATE:20260722
 DTSTAMP:20261026T090000Z
 UID:NO182-moonshot-norway
 CATEGORIES:Vår Energi
-DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: none. Licence/
+DESCRIPTION:Type: MnA. Operator: Vår Energi. Partners: none. Licence/
  field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confide
  nce: high. Recommended combination\; adds DCS assets\, not NCS. Source: ht
  tps://newsweb.oslobors.no/message/678467
@@ -2972,7 +2972,7 @@ DTEND;VALUE=DATE:20260820
 DTSTAMP:20261026T090000Z
 UID:NO187-moonshot-norway
 CATEGORIES:Aker BP,ConocoPhillips,INPEX Idemitsu
-DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: ConocoPhillips\, I
+DESCRIPTION:Type: MnA. Operator: Aker BP. Partners: ConocoPhillips\, I
  NPEX Idemitsu. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. N
  et: n/a (past). Confidence: medium. COP keeps 29%\, INPEX 20%. Source: htt
  ps://akerbp.com
@@ -3030,7 +3030,7 @@ DTEND;VALUE=DATE:20260902
 DTSTAMP:20261026T090000Z
 UID:NO191-moonshot-norway
 CATEGORIES:DNO
-DESCRIPTION:Type: M and A. Operator: DNO. Partners: none. Licence/field: n
+DESCRIPTION:Type: MnA. Operator: DNO. Partners: none. Licence/field: n
  /a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confidence: hig
  h. Recommended takeover\; Capricorn assets are outside NCS. Source: https:
  //newsweb.oslobors.no/message/681349
@@ -3248,7 +3248,7 @@ DTEND;VALUE=DATE:20261015
 DTSTAMP:20261026T090000Z
 UID:NO203-moonshot-norway
 CATEGORIES:Vår Energi,Kistos
-DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Kistos. Licenc
+DESCRIPTION:Type: MnA. Operator: Vår Energi. Partners: Kistos. Licenc
  e/field: n/a. Material: Y. Setback: N. Upcoming: N. Net: n/a (past). Confi
  dence: low.  Source: https://www.investegate.co.uk
 URL:https://www.investegate.co.uk

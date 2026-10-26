@@ -20,6 +20,10 @@ const SORTS = [
   ["events", "asc", "Material events, low to high"],
   ["latest", "desc", "Latest event, newest"],
   ["latest", "asc", "Latest event, oldest"],
+  ["next", "asc", "Next event, soonest"],
+  ["next", "desc", "Next event, latest"],
+  ["upcoming", "desc", "Upcoming, high to low"],
+  ["upcoming", "asc", "Upcoming, low to high"],
   ["setbacks", "desc", "Setbacks, high to low"],
   ["setbacks", "asc", "Setbacks, low to high"],
   ["cash", "asc", "Cash flag A to Z"],
@@ -34,6 +38,8 @@ const COLUMNS = [
   ["median", "Median daily"],
   ["events", "Material events 12m"],
   ["latest", "Latest material event"],
+  ["next", "Next"],
+  ["upcoming", "Upcoming"],
   ["setbacks", "Setbacks"],
   ["cash", "Cash flag"],
 ];
@@ -44,6 +50,7 @@ const capsState = {
   band: "all",
   type: "all",
   stage: "all",
+  hasUpcoming: false,
   sortKey: "name",
   sortDir: "asc",
   open: new Set(),
@@ -118,6 +125,27 @@ function formatDate(value) {
   return `${Number(match[3])} ${month} ${match[1]}`;
 }
 
+function formatUpcomingDate(item) {
+  const text = String(item?.date ?? "").trim();
+  const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return showText(text);
+  const year = match[1];
+  const monthIndex = Number(match[2]) - 1;
+  const month = MONTHS[monthIndex];
+  if (!month) return showText(text);
+  if (item.date_precision === "year") return year;
+  if (item.date_precision === "quarter") return `Q${Math.floor(monthIndex / 3) + 1} ${year}`;
+  if (item.date_precision === "half") return `${monthIndex < 6 ? "H1" : "H2"} ${year}`;
+  if (item.date_precision === "month") return `${month} ${year}`;
+  return formatDate(text);
+}
+
+function netBadge(net) {
+  if (net === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
+  if (net === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
+  return null;
+}
+
 function stageKey(stage) {
   return String(stage ?? "").replace(/ \(low confidence\)$/, "").trim();
 }
@@ -169,6 +197,9 @@ function normalize(raw, index) {
     cash: row.cash_flag,
     url: row.url,
     events: events.map((event) => (event && typeof event === "object" ? event : {})),
+    upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object"),
+    upcomingCount: asNumber(row.upcoming_count),
+    nextDate: row.next_event_date,
   };
 }
 
@@ -177,6 +208,7 @@ function searchBlob(row) {
     row.name, row.code, row.exchange, row.band, row.type, row.stage, row.description,
     row.cash, row.currency, row.latestHeadline, row.latestType,
     ...row.events.flatMap((event) => [event.headline, event.type, event.date]),
+    ...row.upcoming.flatMap((item) => [item.headline, item.type, item.date]),
   ];
   return parts.map((part) => showText(part) === "—" ? "" : showText(part)).join(" ").toLowerCase();
 }
@@ -186,6 +218,7 @@ function matches(row) {
   if (capsState.band !== "all" && showText(row.band) !== capsState.band) return false;
   if (capsState.type !== "all" && showText(row.type) !== capsState.type) return false;
   if (capsState.stage !== "all" && stageKey(row.stage) !== capsState.stage) return false;
+  if (capsState.hasUpcoming && !(row.upcomingCount > 0)) return false;
   const query = capsState.q.trim().toLowerCase();
   if (query && !searchBlob(row).includes(query)) return false;
   return true;
@@ -222,6 +255,8 @@ function compareRows(a, b) {
       if (key === "median") return row.median;
       if (key === "events") return row.events12m;
       if (key === "setbacks") return row.setbacks;
+      if (key === "upcoming") return row.upcomingCount;
+      if (key === "next") return dateValue(row.nextDate);
       return dateValue(row.latestDate);
     };
     const av = value(a);
@@ -272,6 +307,13 @@ function companyNode(row) {
   ]);
 }
 
+function headlineLink(item) {
+  const href = safeUrl(item.source_url);
+  const text = showText(item.headline);
+  if (!href) return el("span", { text });
+  return el("a", { href, target: "_blank", rel: "noopener noreferrer", text });
+}
+
 function expandBody(row) {
   const events = row.events.length
     ? el("ul", { class: "cap-events" }, row.events.map((event) => el("li", { class: "cap-event" }, [
@@ -281,6 +323,20 @@ function expandBody(row) {
       el("span", { text: `Setback: ${setbackLabel(event.setback)}` }),
     ])))
     : el("p", { class: "cap-desc", text: "No events listed." });
+  const upcoming = row.upcoming.length
+    ? [
+      el("p", { class: "eyebrow", text: "Upcoming" }),
+      el("ul", { class: "cap-events" }, row.upcoming.map((item) => el("li", { class: "cap-event" }, [
+        el("span", { class: "cap-date", text: formatUpcomingDate(item) }),
+        el("span", { text: showText(item.type) }),
+        headlineLink(item),
+        el("span", {}, [
+          netBadge(item.net),
+          item.material_if_delivered === "Y" ? el("span", { class: "no-badge", text: "Material" }) : null,
+        ]),
+      ]))),
+    ]
+    : [];
   const href = safeUrl(row.url);
   const link = href
     ? el("a", { href, target: "_blank", rel: "noopener noreferrer", text: "Exchange page" })
@@ -289,6 +345,7 @@ function expandBody(row) {
     el("p", { class: "cap-desc", text: showText(row.description) }),
     el("p", { class: "eyebrow", text: "Events" }),
     events,
+    ...upcoming,
     el("p", {}, [el("span", { class: "eyebrow", text: "Exchange" }), " ", link]),
   ]);
 }
@@ -348,6 +405,8 @@ function renderTable(rows) {
       el("td", { text: formatMedian(row) }),
       el("td", { text: formatNum(row.events12m) }),
       el("td", {}, [latestNode(row)]),
+      el("td", { text: blank(row.nextDate) ? "" : formatDate(row.nextDate) }),
+      el("td", { text: row.upcomingCount == null ? "" : formatNum(row.upcomingCount) }),
       el("td", { text: formatNum(row.setbacks) }),
       el("td", { text: showText(row.cash) }),
     );
@@ -390,6 +449,10 @@ function renderCards(rows) {
         fact("Mkt cap US$m", formatNum(row.cap)),
         fact("Median daily", formatMedian(row)),
         fact("Material events 12m", formatNum(row.events12m)),
+        ...(row.upcomingCount == null && blank(row.nextDate) ? [] : [
+          fact("Next", blank(row.nextDate) ? "" : formatDate(row.nextDate)),
+          fact("Upcoming", row.upcomingCount == null ? "" : formatNum(row.upcomingCount)),
+        ]),
         fact("Setbacks", formatNum(row.setbacks)),
         fact("Cash flag", showText(row.cash)),
       ]),
@@ -419,7 +482,7 @@ function renderLists() {
     empty.hidden = false;
     empty.replaceChildren(
       el("strong", { text: "No companies match" }),
-      el("p", { text: "Clear the search or set every filter back to All." }),
+      el("p", { text: "Clear the search, turn off Has upcoming, or set every filter back to All." }),
     );
     return;
   }
@@ -432,7 +495,7 @@ function setSort(key) {
   if (capsState.sortKey === key) capsState.sortDir = capsState.sortDir === "asc" ? "desc" : "asc";
   else {
     capsState.sortKey = key;
-    capsState.sortDir = ["cap", "median", "events", "latest", "setbacks"].includes(key) ? "desc" : "asc";
+    capsState.sortDir = ["cap", "median", "events", "latest", "setbacks", "upcoming"].includes(key) ? "desc" : "asc";
   }
   const sort = document.getElementById("smallcaps-sort");
   if (sort) sort.value = `${capsState.sortKey}:${capsState.sortDir}`;
@@ -468,7 +531,21 @@ function mountFilters() {
       renderLists();
     });
     return el("label", { class: "field" }, [label, select]);
-  }));
+  }), el("label", { class: "field" }, [
+    "Upcoming",
+    el("button", {
+      type: "button",
+      class: "toggle-btn",
+      id: "smallcaps-upcoming",
+      "aria-pressed": "false",
+      onClick: (event) => {
+        capsState.hasUpcoming = !capsState.hasUpcoming;
+        event.currentTarget.setAttribute("aria-pressed", capsState.hasUpcoming ? "true" : "false");
+        renderLists();
+      },
+      text: "Has upcoming",
+    }),
+  ]));
 }
 
 function bindSearch() {

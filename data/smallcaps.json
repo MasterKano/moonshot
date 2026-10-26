@@ -3531,7 +3531,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PLSR",
-  "median_daily_value_k": 49.3
+  "median_daily_value_k": 49.3,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "SQZ",
@@ -3607,7 +3610,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SQZ",
-  "median_daily_value_k": 3344.1
+  "median_daily_value_k": 3344.1,
+  "upcoming": [
+   {
+    "date": "2027-01-20",
+    "date_precision": "exact",
+    "type": "Results due",
+    "headline": "2027 guidance to be given in Trading and Operations Update on 20 January 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249"
+   },
+   {
+    "date": "2027-09-30",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Bruce drilling campaign (SCE and SCW wells) to begin in Q3 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "Exploration at Skerryvore next year",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2027-01-20"
  },
  {
   "code": "RSG",
@@ -3683,7 +3717,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/RSG",
-  "median_daily_value_k": 47.8
+  "median_daily_value_k": 47.8,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "BRES",
@@ -3753,7 +3790,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/BRES",
-  "median_daily_value_k": 139.3
+  "median_daily_value_k": 139.3,
+  "upcoming": [
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "First production",
+    "headline": "Close about US$45m project financing to commence Orom-Cross P1 production in 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/blencowe-resources--bres/half-year-financial-report/9585922"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-12-31"
  },
  {
   "code": "ORR",
@@ -3817,7 +3867,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ORR",
-  "median_daily_value_k": 25.9
+  "median_daily_value_k": 25.9,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "year",
+    "type": "Resource",
+    "headline": "Maiden MRE and/or JORC Exploration Target for Wapouze in 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/oriole-resources--orr/interim-results-/9783191"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "year",
+    "type": "Permit or approval",
+    "headline": "Exploitation Licence application for Wapouze to be submitted later in the year",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/oriole-resources--orr/interim-results-/9783191"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "AMRQ",
@@ -3881,7 +3953,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/AMRQ",
-  "median_daily_value_k": 868.0
+  "median_daily_value_k": 868.0,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Study",
+    "headline": "Further update on Maarrmorilik development plans during Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/gnw/amaroq-ltd---amrq/q2-2026-operational-and-financial-results/9719004"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "ECO",
@@ -3939,7 +4024,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ECO",
-  "median_daily_value_k": 371.5
+  "median_daily_value_k": 371.5,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "KZG",
@@ -3997,7 +4085,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KZG",
-  "median_daily_value_k": 34.4
+  "median_daily_value_k": 34.4,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "GGP",
@@ -4055,7 +4146,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GGP",
-  "median_daily_value_k": 9955.4
+  "median_daily_value_k": 9955.4,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "EOG",
@@ -4107,7 +4201,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/EOG",
-  "median_daily_value_k": 49.6
+  "median_daily_value_k": 49.6,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "Barracuda exploration well (EG-08) targeted to spud in H1 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/europa-oil-gas-holdings---eog/interim-results/9769101"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "BZT",
@@ -4159,7 +4266,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/BZT",
-  "median_daily_value_k": 190.9
+  "median_daily_value_k": 190.9,
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "month",
+    "type": "First production",
+    "headline": "First Hope and Gorob concentrate shipment in early November 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/bezant-resources--bzt/interim-results-for-the-six-months-to-30-june-2026/9797671"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "Drilling expected to commence during 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/bezant-resources--bzt/interim-results-for-the-six-months-to-30-june-2026/9797671"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "PAF",
@@ -4211,7 +4340,47 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PAF",
-  "median_daily_value_k": 6509.2
+  "median_daily_value_k": 6509.2,
+  "upcoming": [
+   {
+    "date": "2026-11-19",
+    "date_precision": "exact",
+    "type": "Other",
+    "headline": "AGM on 19 November 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-results-for-the-year-ended-/9774204"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "FID or construction decision",
+    "headline": "FID on new tailings retreatment project (DFS done, US$216m capex) expected December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-results-for-the-year-ended-/9774204"
+   },
+   {
+    "date": "2027-02-28",
+    "date_precision": "month",
+    "type": "First production",
+    "headline": "First power from Tennant Mines 6.3MW solar PV facility by February 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-results-for-the-year-ended-/9774204"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "First production",
+    "headline": "First blast at new mine development scheduled for early 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-results-for-the-year-ended-/9774204"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-11-19"
  },
  {
   "code": "SVML",
@@ -4263,7 +4432,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SVML",
-  "median_daily_value_k": 81.4
+  "median_daily_value_k": 81.4,
+  "upcoming": [
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Study",
+    "headline": "Pre-Feasibility Study integrating rare earths into Kasiya, completion targeted 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sovereign-metals-limited-npv-di---svml/annual-financial-report/9790283"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-12-31"
  },
  {
   "code": "EST",
@@ -4315,7 +4497,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/EST",
-  "median_daily_value_k": 167.6
+  "median_daily_value_k": 167.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Drill Rulikha Target 1 prospect in Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/east-star-resources--est/half-year-report/9783165"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "ENQ",
@@ -4367,7 +4562,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ENQ",
-  "median_daily_value_k": 1447.0
+  "median_daily_value_k": 1447.0,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "exact",
+    "type": "M and A",
+    "headline": "Malaysian acquisitions to complete on 31 December 2026 (Group above 100,000 boepd)",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-results/9752860"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "First production",
+    "headline": "First oil from second well in programme expected early 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-results/9752860"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Other",
+    "headline": "Ninian Bypass Project scheduled to complete in 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-results/9752860"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "AAU",
@@ -4419,7 +4645,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/AAU",
-  "median_daily_value_k": 31.0
+  "median_daily_value_k": 31.0,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "MET1",
@@ -4465,7 +4694,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/MET1",
-  "median_daily_value_k": 50.6
+  "median_daily_value_k": 50.6,
+  "upcoming": [
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "First production",
+    "headline": "Evolution targets first Chilalo graphite concentrate in 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/metals-one--met1/half-year-financial-report/9799196"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-12-31"
  },
  {
   "code": "THS",
@@ -4511,7 +4753,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/THS",
-  "median_daily_value_k": 193.8
+  "median_daily_value_k": 193.8,
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "month",
+    "type": "Funding",
+    "headline": "Project debt drawdowns expected to commence from November 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/production-report-for-q4-and-full-year-fy2026-/9819089"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Mechanical installation planned to start Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/production-report-for-q4-and-full-year-fy2026-/9819089"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "First ore to mill targeted Q4 calendar 2027 (commissioning July to October 2027)",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/production-report-for-q4-and-full-year-fy2026-/9819089"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "ZPHR",
@@ -4557,7 +4830,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ZPHR",
-  "median_daily_value_k": 54.8
+  "median_daily_value_k": 54.8,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "KIST",
@@ -4603,7 +4879,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KIST",
-  "median_daily_value_k": 433.2
+  "median_daily_value_k": 433.2,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "First production",
+    "headline": "Balder Phase VI first oil scheduled for December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/interim-results/9771745"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "Oman Block 9 acquisition completion expected H2 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/interim-results/9771745"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "First production",
+    "headline": "Balder Next start-up expected by end of 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/interim-results/9771745"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "CAML",
@@ -4649,7 +4956,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/CAML",
-  "median_daily_value_k": 1469.1
+  "median_daily_value_k": 1469.1,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "CNE",
@@ -4695,7 +5005,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/CNE",
-  "median_daily_value_k": 367.7
+  "median_daily_value_k": 367.7,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "OMI",
@@ -4741,7 +5054,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/OMI",
-  "median_daily_value_k": 421.8
+  "median_daily_value_k": 421.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "year",
+    "type": "Resource",
+    "headline": "Potential APTA resource estimate later this year",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/orosur-mining-inc-full-year-2026-results-/9792643"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "SNDA",
@@ -4787,7 +5113,38 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SNDA",
-  "median_daily_value_k": 49.7
+  "median_daily_value_k": 49.7,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "M and A",
+    "headline": "Completion of NZ acquisition (Matahio) to follow government consent",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/interim-results-/9764277"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "Oru-2 exploration well expected to spud early 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/interim-results-/9764277"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "KTJ (Chuditch PSC) wells expected to be drilled in 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/interim-results-/9764277"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "CMCL",
@@ -4833,7 +5190,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/CMCL",
-  "median_daily_value_k": 48.3
+  "median_daily_value_k": 48.3,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Results due",
+    "headline": "Firm 2027 production and cost guidance after budgeting at end of 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/caledonia-mining-corporation-di---cmcl/results-for-q2-and-half-year-ended-june-30-2026/9711895"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "EEE",
@@ -4879,7 +5249,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/EEE",
-  "median_daily_value_k": 602.9
+  "median_daily_value_k": 602.9,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "Funding",
+    "headline": "ASX dual listing on track for H2 2026",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/empire-metals-limited-npv-di---eee/interim-results/9742112"
+   },
+   {
+    "date": "2027-09-30",
+    "date_precision": "quarter",
+    "type": "Resource",
+    "headline": "Further Pitfield MRE upgrade in mid-2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/empire-metals-limited-npv-di---eee/interim-results/9742112"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "1SN",
@@ -4925,7 +5317,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/1SN",
-  "median_daily_value_k": 26.4
+  "median_daily_value_k": 26.4,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "SAV",
@@ -4971,7 +5366,47 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SAV",
-  "median_daily_value_k": 76.7
+  "median_daily_value_k": 76.7,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Permit or approval",
+    "headline": "RECAPE submission in Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "Post due diligence conditional project finance offers by end of 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Permit or approval",
+    "headline": "Environmental licence, project finance and offtake finalised in Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "FID or construction decision",
+    "headline": "Barroso lithium FID targeted early 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "GMET",
@@ -5017,7 +5452,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GMET",
-  "median_daily_value_k": 340.5
+  "median_daily_value_k": 340.5,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Study",
+    "headline": "Pilot Mountain Definitive Feasibility Study in period to June 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/guardian-metal-resources-plc--gmet/financial-results-for-the-year-ended-30-june-2026/9776253"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Resource",
+    "headline": "Maiden resource at Tempiute in period to June 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/guardian-metal-resources-plc--gmet/financial-results-for-the-year-ended-30-june-2026/9776253"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "PRE",
@@ -5063,7 +5520,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PRE",
-  "median_daily_value_k": 309.0
+  "median_daily_value_k": 309.0,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Other",
+    "headline": "Mining and stockpiling at Longonjo planned to start early 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/unaudited-interim-results-for-the-six-months-/9495809"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "First production",
+    "headline": "Longonjo first production and commissioning scheduled for 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/unaudited-interim-results-for-the-six-months-/9495809"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "ACG",
@@ -5103,7 +5582,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ACG",
-  "median_daily_value_k": 68.1
+  "median_daily_value_k": 68.1,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Gediktepe full commercial production including zinc concentrate by end of 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/acg-acquisition-company-limited-cls-a-npv-di---acg/h1-2026-interim-results/9776263"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "GENL",
@@ -5149,7 +5641,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GENL",
-  "median_daily_value_k": 171.8
+  "median_daily_value_k": 171.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "Other",
+    "headline": "New 3D seismic acquisition in H2 2026",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-for-the-p-/9702685"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "First MWO exploration well on the licence in H1 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-for-the-p-/9702685"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "Two commitment wells on Oman Block 54 in 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-for-the-p-/9702685"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "MNO",
@@ -5189,7 +5712,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/MNO",
-  "median_daily_value_k": 258.1
+  "median_daily_value_k": 258.1,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Study",
+    "headline": "Cabacal Definitive Feasibility Study targeted for Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/meridian-mining-plc--mno/meridian-reports-half-year-financial-results/9719036"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "AXL",
@@ -5229,7 +5765,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/AXL",
-  "median_daily_value_k": 209.9
+  "median_daily_value_k": 209.9,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "SEI",
@@ -5269,7 +5808,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SEI",
-  "median_daily_value_k": 27.5
+  "median_daily_value_k": 27.5,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Results due",
+    "headline": "Fast-track seismic results from first season expected Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-to-30-june-2026-/9742130"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "Acquisition completion expected H2 2026 (within 2026)",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-to-30-june-2026-/9742130"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "Results due",
+    "headline": "Full PSDM seismic results expected Q2 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-to-30-june-2026-/9742130"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "DEC",
@@ -5309,7 +5879,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/DEC",
-  "median_daily_value_k": 652.9
+  "median_daily_value_k": 652.9,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "MKA",
@@ -5349,7 +5922,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/MKA",
-  "median_daily_value_k": 453.5
+  "median_daily_value_k": 453.5,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "RKH",
@@ -5389,7 +5965,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/RKH",
-  "median_daily_value_k": 1102.8
+  "median_daily_value_k": 1102.8,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "Sea Lion development drilling expected to commence early 2027 (first oil Q1 2028)",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "ATM",
@@ -5429,7 +6018,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ATM",
-  "median_daily_value_k": 365.2
+  "median_daily_value_k": 365.2,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "JLP",
@@ -5475,7 +6067,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/JLP",
-  "median_daily_value_k": 88.9
+  "median_daily_value_k": 88.9,
+  "upcoming": [
+   {
+    "date": "2027-02-28",
+    "date_precision": "month",
+    "type": "FID or construction decision",
+    "headline": "Project G development targeted to commence from February 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/jubilee-metals-group--jlp/fy2026-production-and-operational-update-/9769108"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-02-28"
  },
  {
   "code": "PHAR",
@@ -5521,7 +6126,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PHAR",
-  "median_daily_value_k": 78.6
+  "median_daily_value_k": 78.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "El Fayum six-well programme scheduled to complete by end of year",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/pharos-energy--phar/2026-interim-results/9785618"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "Scheme expected to become effective in 1H 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/pharos-energy--phar/2026-interim-results/9785618"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "TERA",
@@ -5561,7 +6188,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TERA",
-  "median_daily_value_k": 57.7
+  "median_daily_value_k": 57.7,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "HE1",
@@ -5601,7 +6231,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/HE1",
-  "median_daily_value_k": 100.8
+  "median_daily_value_k": 100.8,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "HEX",
@@ -5641,7 +6274,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/HEX",
-  "median_daily_value_k": 312.0
+  "median_daily_value_k": 312.0,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "XTR",
@@ -5681,7 +6317,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/XTR",
-  "median_daily_value_k": 38.4
+  "median_daily_value_k": 38.4,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "AET",
@@ -5721,7 +6360,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/AET",
-  "median_daily_value_k": 438.8
+  "median_daily_value_k": 438.8,
+  "upcoming": [
+   {
+    "date": "2027-01-31",
+    "date_precision": "month",
+    "type": "First production",
+    "headline": "Impala-2 first oil expected January 2027 (about 4,000 bopd gross)",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Pacassa SW sidetrack first oil anticipated Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Other",
+    "headline": "Focused seismic programme considered for KON4 in H1 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2027-01-31"
  },
  {
   "code": "ALL",
@@ -5761,7 +6431,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ALL",
-  "median_daily_value_k": 133.7
+  "median_daily_value_k": 133.7,
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "month",
+    "type": "M and A",
+    "headline": "Scheme meeting to approve Huayou takeover expected November 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/atlantic-lithium-limited-npv-di---all/2026-annual-financial-report/9766680"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "M and A",
+    "headline": "Scheme implementation expected December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/atlantic-lithium-limited-npv-di---all/2026-annual-financial-report/9766680"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "TLW",
@@ -5801,7 +6493,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TLW",
-  "median_daily_value_k": 2219.7
+  "median_daily_value_k": 2219.7,
+  "upcoming": [
+   {
+    "date": "2027-03-31",
+    "date_precision": "month",
+    "type": "M and A",
+    "headline": "TEN FPSO acquisition completion expected March 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tullow-oil--tlw/replacement-2026-half-year-results/9793960"
+   },
+   {
+    "date": "2027-09-30",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Rig for 2027-28 Ghana Campaign 2 (up to 10 wells) arriving around mid-year",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tullow-oil--tlw/replacement-2026-half-year-results/9793960"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2027-03-31"
  },
  {
   "code": "PXEN",
@@ -5841,7 +6555,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PXEN",
-  "median_daily_value_k": 32.1
+  "median_daily_value_k": 32.1,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "ST3 water injection test starting Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/prospex-energy--pxen/half-year-report/9792618"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "Potential development well in 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/prospex-energy--pxen/half-year-report/9792618"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "QHE",
@@ -5881,7 +6617,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/QHE",
-  "median_daily_value_k": 44.1
+  "median_daily_value_k": 44.1,
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "month",
+    "type": "Drilling start",
+    "headline": "Sagebrush-1 larger-volume propped fracture stimulation targeted November 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/quantum-helium-limited--qhe/sagebrush-stimulation-and-operations-update-/9824416"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "GKP",
@@ -5915,7 +6664,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GKP",
-  "median_daily_value_k": 796.4
+  "median_daily_value_k": 796.4,
+  "upcoming": [
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "PF-2 water handling start-up targeted Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-ltd-com-shs-di---gkp/2026-half-year-results-announcement/9737591"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Drilling start",
+    "headline": "Potential return to Shaikan field development and drilling in 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-ltd-com-shs-di---gkp/2026-half-year-results-announcement/9737591"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2027-03-31"
  },
  {
   "code": "STAR",
@@ -5949,7 +6720,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/STAR",
-  "median_daily_value_k": 28.6
+  "median_daily_value_k": 28.6,
+  "upcoming": [
+   {
+    "date": "2026-10-31",
+    "date_precision": "month",
+    "type": "M and A",
+    "headline": "Licence sale expected to complete by end of October 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/star-energy-group-plc--star/half-year-report/9773895"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-10-31"
  },
  {
   "code": "HREE",
@@ -5983,7 +6767,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/HREE",
-  "median_daily_value_k": 37.5
+  "median_daily_value_k": 37.5,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "TUN",
@@ -6017,7 +6804,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TUN",
-  "median_daily_value_k": 879.0
+  "median_daily_value_k": 879.0,
+  "upcoming": [
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Hemerdon restart construction and full commissioning complete by end of Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tungsten-west--tun/financial-results-for-the-year-ended-31-march-2026/9752872"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-03-31"
  },
  {
   "code": "ARS",
@@ -6051,7 +6851,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ARS",
-  "median_daily_value_k": 38.4
+  "median_daily_value_k": 38.4,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "FXPO",
@@ -6085,7 +6888,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/FXPO",
-  "median_daily_value_k": 131.9
+  "median_daily_value_k": 131.9,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "VAST",
@@ -6119,7 +6925,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/VAST",
-  "median_daily_value_k": 32.0
+  "median_daily_value_k": 32.0,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Soviet Tailings pilot flotation plant commissioning Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/vast-resources--vast/q3-2026-aprelevka-production-report-/9816783"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Results due",
+    "headline": "Assaying for maiden Soviet Tailings MRE scheduled Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/vast-resources--vast/q3-2026-aprelevka-production-report-/9816783"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "ORCP",
@@ -6153,7 +6981,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ORCP",
-  "median_daily_value_k": 30.5
+  "median_daily_value_k": 30.5,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "TIN",
@@ -6187,7 +7018,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TIN",
-  "median_daily_value_k": 96.4
+  "median_daily_value_k": 96.4,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Overall engineering completion expected by end of 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-months-/9788241"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "FID or construction decision",
+    "headline": "South Crofty process plant construction to begin Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-months-/9788241"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Other",
+    "headline": "Dewatering to 400-level and shaft refurbishment in H1 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-months-/9788241"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "KDNC",
@@ -6221,7 +7083,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KDNC",
-  "median_daily_value_k": 38.2
+  "median_daily_value_k": 38.2,
+  "upcoming": [
+   {
+    "date": "2027-12-31",
+    "date_precision": "year",
+    "type": "Study",
+    "headline": "DFS planned to commence in 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/cadence-minerals--kdnc/interim-results-for-six-months-ended-30-june-2026/9796971"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-12-31"
  },
  {
   "code": "CTL",
@@ -6255,7 +7130,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/CTL",
-  "median_daily_value_k": 28.8
+  "median_daily_value_k": 28.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "ASX dual listing targeted Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/cleantech-lithium--ctl/interim-results-for-six-month-ending-30-june-2026/9780758"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "SML",
@@ -6289,7 +7177,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SML",
-  "median_daily_value_k": 504.6
+  "median_daily_value_k": 504.6,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "Results due",
+    "headline": "22,500m Redmoor drilling completion targeted Q2 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/strategic-minerals--sml/half-year-report/9790269"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "JSE",
@@ -6323,7 +7224,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/JSE",
-  "median_daily_value_k": 361.9
+  "median_daily_value_k": 361.9,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "FID or construction decision",
+    "headline": "Nam Du/U Minh FID and farm-out by end of 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/jadestone-energy--jse/2026-half-year-results-/9742142"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Stag production restart expected Q2 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/jadestone-energy--jse/2026-half-year-results-/9742142"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "RBW",
@@ -6357,7 +7280,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/RBW",
-  "median_daily_value_k": 94.4
+  "median_daily_value_k": 94.4,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Study",
+    "headline": "Phalaborwa Pre-Feasibility Study targeted Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Study",
+    "headline": "Phalaborwa DFS expected H1 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858"
+   },
+   {
+    "date": "2027-09-30",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "Additional funding expected to be required in Q3 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "CHAR",
@@ -6391,7 +7345,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/CHAR",
-  "median_daily_value_k": 163.4
+  "median_daily_value_k": 163.4,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "First Angolan oil transaction expected to close H2 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "Second Angolan transaction to follow early 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "80M",
@@ -6425,7 +7401,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/80M",
-  "median_daily_value_k": 473.9
+  "median_daily_value_k": 473.9,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "Greenland drilling expected in winter 2027, subject to permitting",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/80-mile--80m/interim-results-/9773913"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "GEX",
@@ -6465,7 +7454,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GEX",
-  "median_daily_value_k": 673.5
+  "median_daily_value_k": 673.5,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "SEA",
@@ -6493,7 +7485,47 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SEA",
-  "median_daily_value_k": 178.3
+  "median_daily_value_k": 178.3,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Permit or approval",
+    "headline": "Temaris Cluster Field Development and Abandonment Plan submission Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results-and-investor-webcast/9797863"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Block 2A rig award anticipated mid-Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results-and-investor-webcast/9797863"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "FID or construction decision",
+    "headline": "DEWA Cluster sanction targeted around end of 2026 (operator EnQuest)",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results-and-investor-webcast/9797863"
+   },
+   {
+    "date": "2027-09-30",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Kertang well spud scheduled for summer 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results-and-investor-webcast/9797863"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "NTVO",
@@ -6521,7 +7553,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/NTVO",
-  "median_daily_value_k": 31.2
+  "median_daily_value_k": 31.2,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "La Patona gold plant commissioning expected Q2 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/nativo-resources--ntvo/half-year-report/9785123"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "RMR",
@@ -6549,7 +7594,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/RMR",
-  "median_daily_value_k": 26.9
+  "median_daily_value_k": 26.9,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "2027 exploration programme to be finalised and announced by end of 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rome-resources--rmr/half-year-results/9797591"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "KEFI",
@@ -6577,7 +7635,38 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KEFI",
-  "median_daily_value_k": 491.8
+  "median_daily_value_k": 491.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "Tulu Kapi project debt drawdown on track for Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operational-update/9702439"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "FID or construction decision",
+    "headline": "Jibal Qutman Stage 1 FID targeted H2 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operational-update/9702439"
+   },
+   {
+    "date": "2027-12-31",
+    "date_precision": "half",
+    "type": "First production",
+    "headline": "Tulu Kapi commissioning targeted to commence late 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operational-update/9702439"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "MILA",
@@ -6605,7 +7694,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/MILA",
-  "median_daily_value_k": 32.2
+  "median_daily_value_k": 32.2,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "year",
+    "type": "Resource",
+    "headline": "Initial Yarrol MRE scheduled for 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/mila-resources--mila/final-results/9833713"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Drilling start",
+    "headline": "Further resource drilling scheduled H1 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/mila-resources--mila/final-results/9833713"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "TRP",
@@ -6633,7 +7744,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TRP",
-  "median_daily_value_k": 37.6
+  "median_daily_value_k": 37.6,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "NJOM-3 well spud expected early Q2 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-results-to-30-june-2026-/9792645"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "KMR",
@@ -6661,7 +7785,10 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KMR",
-  "median_daily_value_k": 116.7
+  "median_daily_value_k": 116.7,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "SRB",
@@ -6701,7 +7828,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/SRB",
-  "median_daily_value_k": 636.6
+  "median_daily_value_k": 636.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Coringa transition to mechanised sublevel stoping on track for Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/gnw/serabi-gold--srb/reports-q3-2026-production-operational-high-/9832718"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "GFM",
@@ -6729,7 +7869,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/GFM",
-  "median_daily_value_k": 57.1
+  "median_daily_value_k": 57.1,
+  "upcoming": [
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Permit or approval",
+    "headline": "TSF4 approval and return to full capacity expected early 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/griffin-mining-ltd---gfm/half-year-financial-report/9765337"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2027-06-30"
  },
  {
   "code": "WSBN",
@@ -6757,7 +7910,10 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/WSBN",
-  "median_daily_value_k": 45.0
+  "median_daily_value_k": 45.0,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  },
  {
   "code": "ENOG",
@@ -6791,7 +7947,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ENOG",
-  "median_daily_value_k": 2276.8
+  "median_daily_value_k": 2276.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "M and A",
+    "headline": "Angola entry completion by year-end 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/trading-statement-operational-update/9576511"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "First production",
+    "headline": "Katlan first gas on track for H1 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/trading-statement-operational-update/9576511"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "UPL",
@@ -6819,7 +7997,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/UPL",
-  "median_daily_value_k": 65.9
+  "median_daily_value_k": 65.9,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Three wells to be connected to pipeline with production before year-end",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/upland-resources-limited-npv--upl/drilling-production-report/9780787"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "PRD",
@@ -6847,7 +8038,47 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PRD",
-  "median_daily_value_k": 69.1
+  "median_daily_value_k": 69.1,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Permit or approval",
+    "headline": "Licence extension to 5 February 2027 expected before end of 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-financial-statements/9798892"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "First production",
+    "headline": "Snowcap-3 first oil sales targeted Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-financial-statements/9798892"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "M and A",
+    "headline": "MOU-6 partial divestment targeted early Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-financial-statements/9798892"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "Placings needed in Q2 2027 to meet commitments",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-financial-statements/9798892"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "PTAL",
@@ -6875,7 +8106,29 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/PTAL",
-  "median_daily_value_k": 98.9
+  "median_daily_value_k": 98.9,
+  "upcoming": [
+   {
+    "date": "2026-11-09",
+    "date_precision": "exact",
+    "type": "Results due",
+    "headline": "Q3 2026 results webcast on 9 November 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/petrotal-corporation-npv-di---ptal/q3-2026-operations-and-financial-updates/9821322"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Bretana production back to about 20,000 bopd by end of Q1 2027",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/petrotal-corporation-npv-di---ptal/q3-2026-operations-and-financial-updates/9821322"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-11-09"
  },
  {
   "code": "ZIOC",
@@ -6903,7 +8156,29 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ZIOC",
-  "median_daily_value_k": 28.9
+  "median_daily_value_k": 28.9,
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "exact",
+    "type": "Funding",
+    "headline": "Red Arc Minerals strategic investment transaction deadline 30 November 2026 (potential US$500m DFI financing)",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc/interim-results-for-six-months-ended-30-june-2026-/9795204"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Other",
+    "headline": "AGM in December 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc/interim-results-for-six-months-ended-30-june-2026-/9795204"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "THX",
@@ -6931,7 +8206,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/THX",
-  "median_daily_value_k": 262.2
+  "median_daily_value_k": 262.2,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Resource",
+    "headline": "Updated Douta MRE targeted by end of the year (for optimised PFS)",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/mfn/thor-explorations-ltd-di---thx/thor-explorations-announces-q3-2026-operating-/9821588"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "NEO",
@@ -6959,7 +8247,20 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/NEO",
-  "median_daily_value_k": 74.8
+  "median_daily_value_k": 74.8,
+  "upcoming": [
+   {
+    "date": "2026-12-06",
+    "date_precision": "exact",
+    "type": "Permit or approval",
+    "headline": "Ministerial consent for Beatrix Mining Right transfer required on or before 6 December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/neo-energy-metals--neo/operational-update-for-period-ended-30-june-2026/9642985"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-06"
  },
  {
   "code": "HOC",
@@ -6987,7 +8288,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/HOC",
-  "median_daily_value_k": 7616.8
+  "median_daily_value_k": 7616.8,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "FID or construction decision",
+    "headline": "Monte Do Carmo FID in December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/hochschild-mining--hoc/q3-and-9-month-production-report/9832838"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "BOR",
@@ -7015,7 +8329,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/BOR",
-  "median_daily_value_k": 108.6
+  "median_daily_value_k": 108.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Permit or approval",
+    "headline": "Falklands licence extensions expected to be signed before year end",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/borders-southern-petroleum--bor/half-year-financial-report/9780712"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "TGA",
@@ -7043,7 +8370,20 @@
   "band": "Main (US$100M-5B)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/TGA",
-  "median_daily_value_k": 1559.6
+  "median_daily_value_k": 1559.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "half",
+    "type": "M and A",
+    "headline": "Goedehoop North sale expected to complete in H2 2026",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/thungela-resources-limited-npv-di---tga/interim-results-announcement-2026/9723785"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "KOD",
@@ -7071,6 +8411,9 @@
   "band": "Micro (US$5-100M)",
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KOD",
-  "median_daily_value_k": 67.6
+  "median_daily_value_k": 67.6,
+  "upcoming": [],
+  "upcoming_count": 0,
+  "next_event_date": null
  }
 ]

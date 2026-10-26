@@ -713,19 +713,21 @@ table.norway tr.band th {
 table.caps {
   table-layout: fixed;
   width: 100%;
-  min-width: 1180px;
+  min-width: 1360px;
 }
 
-table.caps th:nth-child(1) { width: 15%; }
-table.caps th:nth-child(2) { width: 8%; }
-table.caps th:nth-child(3) { width: 9%; }
-table.caps th:nth-child(4) { width: 12%; }
+table.caps th:nth-child(1) { width: 14%; }
+table.caps th:nth-child(2) { width: 7%; }
+table.caps th:nth-child(3) { width: 8%; }
+table.caps th:nth-child(4) { width: 10%; }
 table.caps th:nth-child(5) { width: 7%; }
-table.caps th:nth-child(6) { width: 11%; }
-table.caps th:nth-child(7) { width: 8%; }
-table.caps th:nth-child(8) { width: 16%; }
-table.caps th:nth-child(9) { width: 6%; }
-table.caps th:nth-child(10) { width: 8%; }
+table.caps th:nth-child(6) { width: 9%; }
+table.caps th:nth-child(7) { width: 7%; }
+table.caps th:nth-child(8) { width: 13%; }
+table.caps th:nth-child(9) { width: 8%; }
+table.caps th:nth-child(10) { width: 6%; }
+table.caps th:nth-child(11) { width: 6%; }
+table.caps th:nth-child(12) { width: 5%; }
 
 table.caps thead button { white-space: normal; text-align: left; }
 

@@ -1,5 +1,87 @@
 [
  {
+  "date": "2025-01-01",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Equinor and Petoro (PL073, PL073 B, PL091, PL095 and 11 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Petoro"
+  ],
+  "licence_field": "PL073, PL073 B, PL091, PL095, PL107 B, PL107 D, PL1078, PL1079, PL1080, PL1239, PL124, PL124 B, PL375, PL532, PL608",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Material: state SDFI reallocation changes big producing-field stakes (Heidrun, Tyrihans, Johan Castberg). PL073: Equinor 22.52% to Petoro 22.52% (stakes Equinor 58.767% to 36.247%, Petoro 0% to 22.52%) | PL073 B: Equinor 22.52% to Petoro 22.52% (stakes Equinor 58.8336% to 36.3136%, Petoro 0% to 22.52%) | PL091: Equinor 22.52% to Petoro 22.52% (stakes Equinor 59.1% to 36.58%, Petoro 0% to 22.52%) | PL095: Petoro 22.6021% to Equinor 22.6021% (stakes Equinor 10% to 32.6021%, Petoro 59% to 36.3979%) | PL107 B: Petoro 7.5% to Equinor 7.5% (stakes Equinor 20% to 27.5%, Petoro 7.5% to 0%) | PL107 D: Petoro 7.5% to Equinor 7.5% (stakes Equinor 20% to 27.5%, Petoro 7.5% to 0%) | PL1078: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%) | PL1079: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%) | PL1080: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%) | PL1239: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%) | PL124: Petoro 4.79628% to Equinor 4.79628% (stakes Equinor 35% to 39.7963%, Petoro 27.0896% to 22.2933%) | PL124 B: Equinor 9.30827% to Petoro 9.30827% (stakes Equinor 35% to 25.6917%, Petoro 27.0896% to 36.3979%) | PL375: Equinor 10% to Petoro 10% (stakes Equinor 60% to 50%, Petoro 0% to 10%) | PL532: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%) | PL608: Equinor 3.7% to Petoro 3.7% (stakes Equinor 50% to 46.3%, Petoro 20% to 23.7%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Petoro"
+  ],
+  "id": "NO001"
+ },
+ {
+  "date": "2025-01-01",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL018 C, PL018 ES, PL159 F",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Petrolia NOCO",
+   "TotalEnergies",
+   "Shell",
+   "Sval",
+   "DNO",
+   "ORLEN",
+   "Wellesley"
+  ],
+  "licence_field": "PL018 C, PL018 ES, PL159 F",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 01.01.2025). PL018 C (operator TotalEnergies; Petrolia NOCO 11.654%, TotalEnergies 88.346%) | PL018 ES (operator Shell; Shell 40%, Sval 15%, DNO 45%) | PL159 F (operator ORLEN; ORLEN 60%, Wellesley 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petrolia NOCO",
+   "TotalEnergies",
+   "Shell",
+   "Sval",
+   "DNO",
+   "ORLEN",
+   "Wellesley"
+  ],
+  "id": "NO002"
+ },
+ {
+  "date": "2025-01-02",
+  "date_confidence": "exact",
+  "title": "Concedo takes interest from Japex in PL1049",
+  "type": "licence change",
+  "operator": "DNO",
+  "companies": [
+   "Concedo",
+   "Japex"
+  ],
+  "licence_field": "PL1049",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1049: Japex 25% to Concedo 25% (stakes Concedo 15% to 40%, Japex 25% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Concedo",
+   "Japex"
+  ],
+  "id": "NO003"
+ },
+ {
   "date": "2025-01-14",
   "date_confidence": "exact",
   "title": "24/12-8 S dry",
@@ -16,10 +98,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-2412-8-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Concedo"
   ],
-  "id": "NO001"
+  "id": "NO004"
  },
  {
   "date": "2025-01-14",
@@ -57,6 +140,7 @@
   "note": "Counts per company (licences/operated): Equinor 27/7; Aker BP 19/16; Vår Energi 16/5; DNO 13/4; Petoro 13/0; INPEX Idemitsu 8/2; OKEA 8/2; ORLEN 8/0; Sval 7/2; Petrolia NOCO 5/3; Harbour 4/3; OMV 4/3; Concedo 3/0; ConocoPhillips 3/3; Pandion 3/0; Wellesley 3/2; M Vest 2/0; TotalEnergies 2/0; Shell 1/1; Lime 1/0; Source Energy 1/0. Material N: early-stage acreage. Sodir formal grant date 14.03.2025.",
   "source_url": "https://newsweb.oslobors.no/message/636472",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Aker BP",
@@ -80,7 +164,7 @@
    "Lime",
    "Source Energy"
   ],
-  "id": "NO002"
+  "id": "NO005"
  },
  {
   "date": "2025-01-17",
@@ -101,12 +185,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/funn-av-gass-i-barentshavet-71229-2/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Equinor",
    "Aker BP"
   ],
-  "id": "NO003"
+  "id": "NO006"
  },
  {
   "date": "2025-01-22",
@@ -125,10 +210,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-630510-1/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Shell"
   ],
-  "id": "NO004"
+  "id": "NO007"
  },
  {
   "date": "2025-02-06",
@@ -148,11 +234,184 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-5-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Harbour",
    "Vår Energi"
   ],
-  "id": "NO005"
+  "id": "NO008"
+ },
+ {
+  "date": "2025-02-13",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1041",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Concedo",
+   "Aker BP"
+  ],
+  "licence_field": "PL1041",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 13.02.2025). PL1041 (operator Aker BP; Concedo 20%, Aker BP 80%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Concedo"
+  ],
+  "id": "NO009"
+ },
+ {
+  "date": "2025-02-14",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1076",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1076",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.02.2025). PL1076 (operator Equinor; Equinor 50%, Vår Energi 50%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Vår Energi"
+  ],
+  "id": "NO010"
+ },
+ {
+  "date": "2025-02-16",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL1176, PL1190, PL1191",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Concedo",
+   "Aker BP",
+   "Lime",
+   "ORLEN",
+   "Harbour",
+   "Equinor"
+  ],
+  "licence_field": "PL1176, PL1190, PL1191",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 16.02.2025). PL1176 (operator Aker BP; Concedo 40%, Aker BP 60%) | PL1190 (operator Harbour; Lime 30%, ORLEN 20%, Harbour 50%) | PL1191 (operator Equinor; Harbour 30%, Equinor 40%, Aker BP 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Concedo",
+   "Aker BP",
+   "Lime",
+   "ORLEN",
+   "Harbour",
+   "Equinor"
+  ],
+  "id": "NO011"
+ },
+ {
+  "date": "2025-02-17",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL1173, PL1181, PL1195",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petrolia NOCO",
+   "Harbour"
+  ],
+  "licence_field": "PL1173, PL1181, PL1195",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 17.02.2025). PL1173 (operator Vår Energi; Equinor 40%, Vår Energi 60%) | PL1181 (operator Petrolia NOCO; Petrolia NOCO 60%, Harbour 40%) | PL1195 (operator Equinor; Harbour 30%, Equinor 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Vår Energi",
+   "Petrolia NOCO",
+   "Harbour"
+  ],
+  "id": "NO012"
+ },
+ {
+  "date": "2025-02-18",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1092, PL1120",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Harbour",
+   "Aker BP",
+   "Vår Energi",
+   "Equinor",
+   "DNO"
+  ],
+  "licence_field": "PL1092, PL1120",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 18.02.2025). PL1092 (operator Aker BP; Harbour 50%, Aker BP 50%) | PL1120 (operator DNO; Vår Energi 20%, Equinor 20%, Harbour 20%, DNO 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour",
+   "Aker BP",
+   "Vår Energi",
+   "Equinor",
+   "DNO"
+  ],
+  "id": "NO013"
+ },
+ {
+  "date": "2025-02-19",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL1100, PL1123, PL1129",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "OMV",
+   "Japex",
+   "Source Energy",
+   "Harbour",
+   "Aker BP",
+   "ConocoPhillips",
+   "ORLEN",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1100, PL1123, PL1129",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 19.02.2025). PL1100 (operator OMV; OMV 40%, Japex 20%, Source Energy 20%, Harbour 20%) | PL1123 (operator ConocoPhillips; Harbour 10%, Aker BP 20%, ConocoPhillips 40%, ORLEN 30%) | PL1129 (operator Harbour; INPEX Idemitsu 30%, Harbour 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OMV",
+   "Japex",
+   "Source Energy",
+   "Harbour",
+   "Aker BP",
+   "ConocoPhillips",
+   "ORLEN",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO014"
  },
  {
   "date": "2025-02-21",
@@ -172,11 +431,35 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-63066-3-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "ConocoPhillips"
   ],
-  "id": "NO006"
+  "id": "NO015"
+ },
+ {
+  "date": "2025-02-25",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1084",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "PL1084",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 25.02.2025). PL1084 (operator Aker BP; Aker BP 60%, DNO 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO"
+  ],
+  "id": "NO016"
  },
  {
   "date": "2025-02-27",
@@ -195,10 +478,85 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-barentshavet-71228-3-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO007"
+  "id": "NO017"
+ },
+ {
+  "date": "2025-02-28",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Harbour and Vår Energi (PL107 B, PL107 D, PL820 S, PL820 SB and 1 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Harbour",
+   "Vår Energi"
+  ],
+  "licence_field": "PL107 B, PL107 D, PL820 S, PL820 SB, PL956",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL107 B: Vår Energi 5% to Harbour 5% (stakes Harbour 45% to 50%, Vår Energi 27.5% to 22.5%) | PL107 D: Vår Energi 5% to Harbour 5% (stakes Harbour 45% to 50%, Vår Energi 27.5% to 22.5%) | PL820 S: Harbour 6.5% to Vår Energi 6.5% (stakes Harbour 6.5% to 0%, Vår Energi 30% to 36.5%) | PL820 SB: Harbour 6.5% to Vår Energi 6.5% (stakes Harbour 6.5% to 0%, Vår Energi 30% to 36.5%) | PL956: Harbour 15% to Vår Energi 15% (stakes Harbour 15% to 0%, Vår Energi 50% to 65%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour",
+   "Vår Energi"
+  ],
+  "id": "NO018"
+ },
+ {
+  "date": "2025-02-28",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1013, PL1013 B",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Petrolia NOCO",
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "PL1013, PL1013 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 28.02.2025). PL1013 (operator Equinor; Petrolia NOCO 20%, Equinor 40%, ORLEN 40%) | PL1013 B (operator Equinor; Equinor 40%, ORLEN 40%, Petrolia NOCO 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petrolia NOCO",
+   "ORLEN"
+  ],
+  "id": "NO019"
+ },
+ {
+  "date": "2025-03-01",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1016",
+  "type": "relinquishment",
+  "operator": "OMV",
+  "companies": [
+   "Japex",
+   "INPEX Idemitsu",
+   "OMV"
+  ],
+  "licence_field": "PL1016",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 01.03.2025). PL1016 (operator OMV; Japex 20%, INPEX Idemitsu 40%, OMV 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Japex",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO020"
  },
  {
   "date": "2025-03-04",
@@ -219,12 +577,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-71-4-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Petoro",
    "Aker BP"
   ],
-  "id": "NO008"
+  "id": "NO021"
  },
  {
   "date": "2025-03-05",
@@ -244,11 +603,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensat-funn-i-norskehavet-64066-7-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Pandion",
    "OKEA"
   ],
-  "id": "NO009"
+  "id": "NO022"
  },
  {
   "date": "2025-03-07",
@@ -267,10 +627,75 @@
   "note": "Signed. Completion 12.06.2025 and Sodir merger 17.12.2025 not material.",
   "source_url": "https://newsweb.oslobors.no/message/640686",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Sval"
   ],
-  "id": "NO010"
+  "id": "NO023"
+ },
+ {
+  "date": "2025-03-10",
+  "date_confidence": "exact",
+  "title": "5 licences relinquished: PL1138, PL1152, PL1155, PL1155 B, PL1163",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Sval",
+   "Harbour",
+   "Aker BP",
+   "Equinor",
+   "Petoro",
+   "Vår Energi",
+   "ConocoPhillips"
+  ],
+  "licence_field": "PL1138, PL1152, PL1155, PL1155 B, PL1163",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 10.03.2025). PL1138 (operator Harbour; Sval 30%, Harbour 40%, Aker BP 30%) | PL1152 (operator Equinor; Equinor 50%, Aker BP 50%) | PL1155 (operator Harbour; Petoro 20%, Harbour 50%, Equinor 30%) | PL1155 B (operator Harbour; Equinor 30%, Harbour 50%, Petoro 20%) | PL1163 (operator ConocoPhillips; Aker BP 20%, Vår Energi 20%, ConocoPhillips 40%, Equinor 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Sval",
+   "Harbour",
+   "Aker BP",
+   "Equinor",
+   "Petoro",
+   "Vår Energi",
+   "ConocoPhillips"
+  ],
+  "id": "NO024"
+ },
+ {
+  "date": "2025-03-11",
+  "date_confidence": "exact",
+  "title": "4 licences relinquished: PL1149, PL1149 B, PL1162, PL1167",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Pandion",
+   "Aker BP",
+   "Harbour",
+   "Petoro",
+   "Equinor"
+  ],
+  "licence_field": "PL1149, PL1149 B, PL1162, PL1167",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 11.03.2025). PL1149 (operator Harbour; Pandion 30%, Aker BP 30%, Harbour 40%) | PL1149 B (operator Harbour; Pandion 30%, Harbour 40%, Aker BP 30%) | PL1162 (operator Aker BP; Petoro 20%, Harbour 30%, Aker BP 50%) | PL1167 (operator Equinor; Equinor 60%, Harbour 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Pandion",
+   "Aker BP",
+   "Harbour",
+   "Petoro",
+   "Equinor"
+  ],
+  "id": "NO025"
  },
  {
   "date": "2025-03-14",
@@ -290,11 +715,12 @@
   "note": "Sodir status Producing from 14.03.2025; Vår release 17.03.2025.",
   "source_url": "https://newsweb.oslobors.no/message/641396",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO011"
+  "id": "NO026"
  },
  {
   "date": "2025-03-14",
@@ -315,12 +741,65 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/641305",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "OKEA",
    "DNO",
    "Equinor"
   ],
-  "id": "NO012"
+  "id": "NO027"
+ },
+ {
+  "date": "2025-03-14",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1202 S",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "Petoro"
+  ],
+  "licence_field": "PL1202 S",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.03.2025). PL1202 S (operator Equinor; Aker BP 30%, Equinor 50%, Petoro 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Petoro"
+  ],
+  "id": "NO028"
+ },
+ {
+  "date": "2025-03-16",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1133, PL1134",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Aker BP",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1133, PL1134",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 16.03.2025). PL1133 (operator Aker BP; Equinor 35%, Petoro 20%, Aker BP 35%, INPEX Idemitsu 10%) | PL1134 (operator Aker BP; Equinor 45%, Aker BP 35%, Petoro 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Petoro",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO029"
  },
  {
   "date": "2025-03-26",
@@ -341,12 +820,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-6/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Pandion",
    "Aker BP",
    "DNO"
   ],
-  "id": "NO013"
+  "id": "NO030"
  },
  {
   "date": "2025-03-27",
@@ -366,11 +846,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-65072-8/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO014"
+  "id": "NO031"
  },
  {
   "date": "2025-03-28",
@@ -391,12 +872,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-i-nordsjoen-3510-15-s-og-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Japex",
    "Concedo",
    "Aker BP"
   ],
-  "id": "NO015"
+  "id": "NO032"
  },
  {
   "date": "2025-03-31",
@@ -416,11 +898,132 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/642634",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO016"
+  "id": "NO033"
+ },
+ {
+  "date": "2025-03-31",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between DNO and OKEA (PL1109, PL1119)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "OKEA"
+  ],
+  "licence_field": "PL1109, PL1119",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1109: DNO 10% to OKEA 10% (stakes DNO 30% to 20%, OKEA 0% to 10%) | PL1119: OKEA 10% to DNO 10% (stakes DNO 0% to 10%, OKEA 30% to 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "OKEA"
+  ],
+  "id": "NO034"
+ },
+ {
+  "date": "2025-03-31",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from Pandion in PL820 S, PL820 SB",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Pandion",
+   "Vår Energi"
+  ],
+  "licence_field": "PL820 S, PL820 SB",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL820 S: Pandion 7.5% to Vår Energi 7.5% (stakes Pandion 7.5% to 0%, Vår Energi 36.5% to 44%) | PL820 SB: Pandion 7.5% to Vår Energi 7.5% (stakes Pandion 7.5% to 0%, Vår Energi 36.5% to 44%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Pandion",
+   "Vår Energi"
+  ],
+  "id": "NO035"
+ },
+ {
+  "date": "2025-04-30",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from Sval in PL1158, PL1177",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Sval"
+  ],
+  "licence_field": "PL1158, PL1177",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1158: Sval 20% to Equinor 20% (stakes Equinor 0% to 20%, Sval 20% to 0%) | PL1177: Sval 15% to Equinor 15% (stakes Equinor 40% to 55%, Sval 30% to 15%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Sval"
+  ],
+  "id": "NO036"
+ },
+ {
+  "date": "2025-05-01",
+  "date_confidence": "exact",
+  "title": "Equinor and INPEX Idemitsu take interest from Vår Energi in PL090 HS",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "INPEX Idemitsu",
+   "Vår Energi"
+  ],
+  "licence_field": "PL090 HS",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL090 HS: Vår Energi 20% to Equinor 15%; INPEX Idemitsu 5% (stakes Equinor 60% to 75%, INPEX Idemitsu 20% to 25%, Vår Energi 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "INPEX Idemitsu",
+   "Vår Energi"
+  ],
+  "id": "NO037"
+ },
+ {
+  "date": "2025-05-14",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1072, PL1072 B",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "OMV",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1072, PL1072 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.05.2025). PL1072 (operator Vår Energi; OMV 30%, Vår Energi 70%) | PL1072 B (operator Vår Energi; OMV 30%, Vår Energi 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OMV"
+  ],
+  "id": "NO038"
  },
  {
   "date": "2025-05-20",
@@ -441,12 +1044,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-norskehavet-65075-13-s-og-65075-13-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Harbour",
    "ORLEN"
   ],
-  "id": "NO017"
+  "id": "NO039"
  },
  {
   "date": "2025-05-28",
@@ -468,13 +1072,60 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-og-torr-bronn-i-nordsjoen-314-a-23-f-og-314-a-23-g/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "M Vest",
    "Lime",
    "Petrolia NOCO",
    "DNO"
   ],
-  "id": "NO018"
+  "id": "NO040"
+ },
+ {
+  "date": "2025-05-31",
+  "date_confidence": "exact",
+  "title": "OKEA takes interest from Harbour in PL1113",
+  "type": "licence change",
+  "operator": "OKEA",
+  "companies": [
+   "Harbour",
+   "OKEA"
+  ],
+  "licence_field": "PL1113",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1113: Harbour 40% to OKEA 40% (stakes Harbour 40% to 0%, OKEA 30% to 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour"
+  ],
+  "id": "NO041"
+ },
+ {
+  "date": "2025-06-10",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1165",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL1165",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 10.06.2025). PL1165 (operator Equinor; Aker BP 40%, Equinor 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO042"
  },
  {
   "date": "2025-06-18",
@@ -493,10 +1144,11 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/649457",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO019"
+  "id": "NO043"
  },
  {
   "date": "2025-06-19",
@@ -515,10 +1167,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgrensningsbronn-bekrefter-oljefunn-i-norskehavet-65075-12-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Pandion"
   ],
-  "id": "NO020"
+  "id": "NO044"
  },
  {
   "date": "2025-06-23",
@@ -537,10 +1190,11 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/649822",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO021"
+  "id": "NO045"
  },
  {
   "date": "2025-06-25",
@@ -560,11 +1214,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-64057-4/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Shell",
    "Vår Energi"
   ],
-  "id": "NO022"
+  "id": "NO046"
  },
  {
   "date": "2025-06-26",
@@ -584,11 +1239,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-2511-30-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO023"
+  "id": "NO047"
  },
  {
   "date": "2025-06-26",
@@ -608,11 +1264,12 @@
   "note": "Partners taken from Fram field.",
   "source_url": "https://newsweb.oslobors.no/message/650103",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO024"
+  "id": "NO048"
  },
  {
   "date": "2025-06-27",
@@ -634,13 +1291,14 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/650227",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Equinor",
    "ORLEN",
    "Vår Energi"
   ],
-  "id": "NO025"
+  "id": "NO049"
  },
  {
   "date": "2025-06-27",
@@ -662,13 +1320,14 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Lime",
    "DNO",
    "Petrolia NOCO",
    "M Vest"
   ],
-  "id": "NO026"
+  "id": "NO050"
  },
  {
   "date": "2025-06-30",
@@ -688,11 +1347,108 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-ved-johan-castberg-feltet-i-barentshavet-72207-cd-1h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO027"
+  "id": "NO051"
+ },
+ {
+  "date": "2025-06-30",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Aker BP and Equinor and Vår Energi (PL1238)",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1238",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1238: Aker BP 20%; Equinor 5% to Vår Energi 5%; Equinor 20% (stakes Aker BP 20% to 0%, Equinor 40% to 55%, Vår Energi 20% to 25%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Vår Energi"
+  ],
+  "id": "NO052"
+ },
+ {
+  "date": "2025-06-30",
+  "date_confidence": "exact",
+  "title": "ConocoPhillips takes interest from Wellesley in PL1259",
+  "type": "licence change",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "Wellesley"
+  ],
+  "licence_field": "PL1259",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1259: Wellesley 20% to ConocoPhillips 20% (stakes ConocoPhillips 50% to 70%, Wellesley 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Wellesley"
+  ],
+  "id": "NO053"
+ },
+ {
+  "date": "2025-06-30",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Equinor and Wellesley (PL1148, PL1148 B, PL1148 CS, PL1184 S and 5 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Wellesley"
+  ],
+  "licence_field": "PL1148, PL1148 B, PL1148 CS, PL1184 S, PL248 C, PL293, PL878, PL878 B, PL878 C",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1148: Wellesley 20% to Equinor 20% (stakes Equinor 10% to 30%, Wellesley 50% to 30%) | PL1148 B: Wellesley 20% to Equinor 20% (stakes Equinor 10% to 30%, Wellesley 50% to 30%) | PL1148 CS: Wellesley 20% to Equinor 20% (stakes Equinor 10% to 30%, Wellesley 50% to 30%) | PL1184 S: Wellesley 5% to Equinor 5% (stakes Equinor 90% to 95%, Wellesley 10% to 5%) | PL248 C: Wellesley 15% to Equinor 15% (stakes Equinor 30% to 45%, Wellesley 30% to 15%) | PL293: Equinor 5% to Wellesley 5% (stakes Equinor 75% to 70%, Wellesley 0% to 5%) | PL878: Equinor 5% to Wellesley 5% (stakes Equinor 80% to 75%, Wellesley 0% to 5%) | PL878 B: Equinor 5% to Wellesley 5% (stakes Equinor 80% to 75%, Wellesley 0% to 5%) | PL878 C: Equinor 5% to Wellesley 5% (stakes Equinor 80% to 75%, Wellesley 0% to 5%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Wellesley"
+  ],
+  "id": "NO054"
+ },
+ {
+  "date": "2025-06-30",
+  "date_confidence": "exact",
+  "title": "Lime takes interest from Harbour in PL1093, PL1093 B",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Harbour",
+   "Lime"
+  ],
+  "licence_field": "PL1093, PL1093 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1093: Harbour 50% to Lime 50% (stakes Harbour 50% to 0%, Lime 20% to 70%) | PL1093 B: Harbour 50% to Lime 50% (stakes Harbour 50% to 0%, Lime 20% to 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour",
+   "Lime"
+  ],
+  "id": "NO055"
  },
  {
   "date": "2025-07-01",
@@ -713,12 +1469,13 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/650425",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO028"
+  "id": "NO056"
  },
  {
   "date": "2025-07-01",
@@ -737,10 +1494,34 @@
   "note": "Month estimate; buyer inferred from Sodir transfers completed 31.10.2025.",
   "source_url": "https://pandionenergy.no",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "INPEX Idemitsu"
   ],
-  "id": "NO029"
+  "id": "NO057"
+ },
+ {
+  "date": "2025-07-01",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from ORLEN in PL1174 S",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "PL1174 S",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1174 S: ORLEN 20% to Equinor 20% (stakes Equinor 60% to 80%, ORLEN 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "ORLEN"
+  ],
+  "id": "NO058"
  },
  {
   "date": "2025-07-07",
@@ -761,12 +1542,13 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Vår Energi",
    "TotalEnergies"
   ],
-  "id": "NO030"
+  "id": "NO059"
  },
  {
   "date": "2025-07-10",
@@ -786,11 +1568,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gassfunn-ved-johan-castberg-feltet-i-barentshavet-72205-4/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO031"
+  "id": "NO060"
  },
  {
   "date": "2025-07-16",
@@ -810,11 +1593,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-66064-1-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO032"
+  "id": "NO061"
  },
  {
   "date": "2025-07-17",
@@ -834,11 +1618,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-346-8-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Aker BP"
   ],
-  "id": "NO033"
+  "id": "NO062"
  },
  {
   "date": "2025-07-21",
@@ -858,11 +1643,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensatfunn-i-norskehavet-640611-2-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO",
    "Sval"
   ],
-  "id": "NO034"
+  "id": "NO063"
  },
  {
   "date": "2025-07-28",
@@ -881,10 +1667,111 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/651807",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Japex"
   ],
-  "id": "NO035"
+  "id": "NO064"
+ },
+ {
+  "date": "2025-08-04",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL817, PL817 B",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Source Energy"
+  ],
+  "licence_field": "PL817, PL817 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 04.08.2025). PL817 (operator Vår Energi; Vår Energi 80%, Source Energy 20%) | PL817 B (operator Vår Energi; Vår Energi 80%, Source Energy 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Source Energy"
+  ],
+  "id": "NO065"
+ },
+ {
+  "date": "2025-08-12",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL935",
+  "type": "relinquishment",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "Petrolia NOCO",
+   "ConocoPhillips",
+   "Petoro",
+   "Aker BP"
+  ],
+  "licence_field": "PL935",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 12.08.2025). PL935 (operator ConocoPhillips; Petrolia NOCO 10%, ConocoPhillips 50%, Petoro 20%, Aker BP 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petrolia NOCO",
+   "Petoro",
+   "Aker BP"
+  ],
+  "id": "NO066"
+ },
+ {
+  "date": "2025-08-13",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL1055, PL1055 B, PL1055 C",
+  "type": "relinquishment",
+  "operator": "ORLEN",
+  "companies": [
+   "Shell",
+   "ORLEN"
+  ],
+  "licence_field": "PL1055, PL1055 B, PL1055 C",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 13.08.2025). PL1055 (operator ORLEN; Shell 40%, ORLEN 60%) | PL1055 B (operator ORLEN; Shell 40%, ORLEN 60%) | PL1055 C (operator ORLEN; Shell 40%, ORLEN 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Shell"
+  ],
+  "id": "NO067"
+ },
+ {
+  "date": "2025-08-16",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1187",
+  "type": "relinquishment",
+  "operator": "OKEA",
+  "companies": [
+   "Harbour",
+   "DNO",
+   "M Vest",
+   "OKEA"
+  ],
+  "licence_field": "PL1187",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 16.08.2025). PL1187 (operator OKEA; Harbour 20%, DNO 30%, M Vest 10%, OKEA 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour",
+   "DNO",
+   "M Vest"
+  ],
+  "id": "NO068"
  },
  {
   "date": "2025-08-22",
@@ -904,11 +1791,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-yggdrasil-omradet-251-14-251-14-a-b-c-d-e-f-og-g/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "ORLEN"
   ],
-  "id": "NO036"
+  "id": "NO069"
  },
  {
   "date": "2025-08-25",
@@ -928,11 +1816,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-nar-framfeltet-i-nordsjoen-3511-31-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "INPEX Idemitsu",
    "Vår Energi"
   ],
-  "id": "NO037"
+  "id": "NO070"
  },
  {
   "date": "2025-08-28",
@@ -953,12 +1842,13 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/654042",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "OKEA",
    "Harbour",
    "INPEX Idemitsu"
   ],
-  "id": "NO038"
+  "id": "NO071"
  },
  {
   "date": "2025-08-29",
@@ -979,12 +1869,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatfunn-i-norskehavet-650612-pb-3-h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "TotalEnergies",
    "Petoro",
    "Vår Energi"
   ],
-  "id": "NO039"
+  "id": "NO072"
  },
  {
   "date": "2025-08-29",
@@ -1004,11 +1895,59 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO040"
+  "id": "NO073"
+ },
+ {
+  "date": "2025-08-29",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from Aker BP in PL1102 C",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL1102 C",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1102 C: Aker BP 35% to Equinor 35% (stakes Aker BP 55% to 20%, Equinor 15% to 50%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO074"
+ },
+ {
+  "date": "2025-08-29",
+  "date_confidence": "exact",
+  "title": "OKEA takes interest from Aker BP in PL1102, PL1102 B",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "OKEA"
+  ],
+  "licence_field": "PL1102, PL1102 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1102: Aker BP 35% to OKEA 35% (stakes Aker BP 55% to 20%, OKEA 0% to 35%) | PL1102 B: Aker BP 35% to OKEA 35% (stakes Aker BP 55% to 20%, OKEA 0% to 35%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "OKEA"
+  ],
+  "id": "NO075"
  },
  {
   "date": "2025-09-01",
@@ -1028,11 +1967,58 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-barentshavet-71174-1/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO041"
+  "id": "NO076"
+ },
+ {
+  "date": "2025-09-01",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1093, PL1093 B",
+  "type": "relinquishment",
+  "operator": "Lime",
+  "companies": [
+   "Petoro",
+   "Lime"
+  ],
+  "licence_field": "PL1093, PL1093 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 01.09.2025). PL1093 (operator Lime; Petoro 30%, Lime 70%) | PL1093 B (operator Lime; Petoro 30%, Lime 70%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petoro"
+  ],
+  "id": "NO077"
+ },
+ {
+  "date": "2025-09-10",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1145",
+  "type": "relinquishment",
+  "operator": "DNO",
+  "companies": [
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "PL1145",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 10.09.2025). PL1145 (operator DNO; Aker BP 40%, DNO 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO078"
  },
  {
   "date": "2025-09-11",
@@ -1054,13 +2040,41 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-nordsjoen-314-a-15-b/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "M Vest",
    "Lime",
    "Petrolia NOCO",
    "DNO"
   ],
-  "id": "NO042"
+  "id": "NO079"
+ },
+ {
+  "date": "2025-09-14",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1229",
+  "type": "relinquishment",
+  "operator": "Sval",
+  "companies": [
+   "Sval",
+   "DNO",
+   "ORLEN",
+   "Harbour"
+  ],
+  "licence_field": "PL1229",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.09.2025). PL1229 (operator Sval; Sval 30%, DNO 30%, ORLEN 20%, Harbour 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "ORLEN",
+   "Harbour"
+  ],
+  "id": "NO080"
  },
  {
   "date": "2025-09-19",
@@ -1080,11 +2094,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-348-20-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP",
    "Vår Energi"
   ],
-  "id": "NO043"
+  "id": "NO081"
  },
  {
   "date": "2025-09-23",
@@ -1106,13 +2121,37 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/655947",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "TotalEnergies",
    "Vår Energi",
    "Harbour"
   ],
-  "id": "NO044"
+  "id": "NO082"
+ },
+ {
+  "date": "2025-09-30",
+  "date_confidence": "exact",
+  "title": "Source Energy takes interest from ORLEN in PL1135",
+  "type": "licence change",
+  "operator": "ORLEN",
+  "companies": [
+   "ORLEN",
+   "Source Energy"
+  ],
+  "licence_field": "PL1135",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1135: ORLEN 20% to Source Energy 20% (stakes ORLEN 100% to 80%, Source Energy 0% to 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Source Energy"
+  ],
+  "id": "NO083"
  },
  {
   "date": "2025-10-01",
@@ -1132,11 +2171,62 @@
   "note": "ORLEN also took a share (Sodir transfer 18.12.2025).",
   "source_url": "https://newsweb.oslobors.no/message/656463",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "TotalEnergies",
    "ORLEN"
   ],
-  "id": "NO045"
+  "id": "NO084"
+ },
+ {
+  "date": "2025-10-02",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from TotalEnergies in PL1192",
+  "type": "licence change",
+  "operator": "Vår Energi",
+  "companies": [
+   "TotalEnergies",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1192",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1192: TotalEnergies 50% to Vår Energi 50% (stakes TotalEnergies 50% to 0%, Vår Energi 50% to 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "TotalEnergies"
+  ],
+  "id": "NO085"
+ },
+ {
+  "date": "2025-10-06",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL894",
+  "type": "relinquishment",
+  "operator": "Harbour",
+  "companies": [
+   "Petoro",
+   "Aker BP",
+   "Equinor",
+   "Harbour"
+  ],
+  "licence_field": "PL894",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 06.10.2025). PL894 (operator Harbour; Petoro 20%, Aker BP 10%, Equinor 40%, Harbour 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petoro",
+   "Aker BP",
+   "Equinor"
+  ],
+  "id": "NO086"
  },
  {
   "date": "2025-10-07",
@@ -1157,12 +2247,112 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/656737",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Harbour",
    "OKEA"
   ],
-  "id": "NO046"
+  "id": "NO087"
+ },
+ {
+  "date": "2025-10-09",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Aker BP and Japex (PL1182 S, PL1212 S, PL127, PL127 C and 3 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "Japex"
+  ],
+  "licence_field": "PL1182 S, PL1212 S, PL127, PL127 C, PL127 DS, PL293 B, PL293 CS",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1182 S: Japex 15% to Aker BP 15% (stakes Aker BP 30% to 45%, Japex 15% to 0%) | PL1212 S: Japex 20% to Aker BP 20% (stakes Aker BP 0% to 20%, Japex 20% to 0%) | PL127: Aker BP 25% to Japex 25% (stakes Aker BP 50% to 25%, Japex 0% to 25%) | PL127 C: Aker BP 10% to Japex 10% (stakes Aker BP 68.0825% to 58.0825%, Japex 0% to 10%) | PL127 DS: Aker BP 44.0412% to Japex 44.0412% (stakes Aker BP 88.0825% to 44.0412%, Japex 0% to 44.0412%) | PL293 B: Japex 10% to Aker BP 10% (stakes Aker BP 0% to 10%, Japex 10% to 0%) | PL293 CS: Japex 10% to Aker BP 10% (stakes Aker BP 0% to 10%, Japex 10% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Japex"
+  ],
+  "id": "NO088"
+ },
+ {
+  "date": "2025-10-29",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1170",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "INPEX Idemitsu",
+   "Equinor",
+   "Petoro"
+  ],
+  "licence_field": "PL1170",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 29.10.2025). PL1170 (operator Aker BP; Aker BP 35%, INPEX Idemitsu 10%, Equinor 35%, Petoro 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "INPEX Idemitsu",
+   "Equinor",
+   "Petoro"
+  ],
+  "id": "NO089"
+ },
+ {
+  "date": "2025-10-31",
+  "date_confidence": "exact",
+  "title": "INPEX Idemitsu takes interest from Pandion in PL006 B, PL006 G, PL033, PL033 B and 3 more",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "INPEX Idemitsu",
+   "Pandion"
+  ],
+  "licence_field": "PL006 B, PL006 G, PL033, PL033 B, PL1119, PL891, PL891 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL006 B: Pandion 10% to INPEX Idemitsu 10% (stakes INPEX Idemitsu 0% to 10%, Pandion 10% to 0%) | PL006 G: Pandion 10% to INPEX Idemitsu 10% (stakes INPEX Idemitsu 0% to 10%, Pandion 10% to 0%) | PL033: Pandion 10% to INPEX Idemitsu 10% (stakes INPEX Idemitsu 0% to 10%, Pandion 10% to 0%) | PL033 B: Pandion 10% to INPEX Idemitsu 10% (stakes INPEX Idemitsu 0% to 10%, Pandion 10% to 0%) | PL1119: Pandion 20% to INPEX Idemitsu 20% (stakes INPEX Idemitsu 0% to 20%, Pandion 20% to 0%) | PL891: Pandion 20% to INPEX Idemitsu 20% (stakes INPEX Idemitsu 0% to 20%, Pandion 20% to 0%) | PL891 B: Pandion 20% to INPEX Idemitsu 20% (stakes INPEX Idemitsu 0% to 20%, Pandion 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "INPEX Idemitsu",
+   "Pandion"
+  ],
+  "id": "NO090"
+ },
+ {
+  "date": "2025-11-04",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from DNO in PL1226",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "Equinor"
+  ],
+  "licence_field": "PL1226",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1226: DNO 40% to Equinor 40% (stakes DNO 40% to 0%, Equinor 60% to 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Equinor"
+  ],
+  "id": "NO091"
  },
  {
   "date": "2025-11-06",
@@ -1182,11 +2372,12 @@
   "note": "Concept/fast-track launch, not formal PDO.",
   "source_url": "https://newsweb.oslobors.no/message/658866",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Concedo",
    "DNO"
   ],
-  "id": "NO047"
+  "id": "NO092"
  },
  {
   "date": "2025-11-06",
@@ -1205,10 +2396,11 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/658877",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO"
   ],
-  "id": "NO048"
+  "id": "NO093"
  },
  {
   "date": "2025-11-07",
@@ -1228,11 +2420,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-3011-16-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "ORLEN"
   ],
-  "id": "NO049"
+  "id": "NO094"
  },
  {
   "date": "2025-11-11",
@@ -1252,11 +2445,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-34-6-9-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Aker BP"
   ],
-  "id": "NO050"
+  "id": "NO095"
  },
  {
   "date": "2025-11-13",
@@ -1275,10 +2469,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgrensing-av-oljefunnet-zagato-i-barentshavet--71228-4-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO051"
+  "id": "NO096"
  },
  {
   "date": "2025-11-18",
@@ -1299,12 +2494,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-26-8-s-og-26-8-st2/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Source Energy",
    "Aker BP"
   ],
-  "id": "NO052"
+  "id": "NO097"
  },
  {
   "date": "2025-11-18",
@@ -1323,10 +2519,106 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/659899",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO053"
+  "id": "NO098"
+ },
+ {
+  "date": "2025-11-18",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1108",
+  "type": "relinquishment",
+  "operator": "DNO",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "Pandion"
+  ],
+  "licence_field": "PL1108",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 18.11.2025). PL1108 (operator DNO; OKEA 30%, DNO 40%, Pandion 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OKEA",
+   "Pandion"
+  ],
+  "id": "NO099"
+ },
+ {
+  "date": "2025-11-20",
+  "date_confidence": "exact",
+  "title": "OKEA takes interest from Sval in PL1113",
+  "type": "licence change",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "Sval"
+  ],
+  "licence_field": "PL1113",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1113: Sval 30% to OKEA 30% (stakes OKEA 70% to 100%, Sval 30% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Sval"
+  ],
+  "id": "NO100"
+ },
+ {
+  "date": "2025-11-28",
+  "date_confidence": "exact",
+  "title": "Wellesley takes interest from Equinor in PL1226",
+  "type": "licence change",
+  "operator": "Wellesley",
+  "companies": [
+   "Equinor",
+   "Wellesley"
+  ],
+  "licence_field": "PL1226",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1226: Equinor 30% to Wellesley 30% (stakes Equinor 100% to 70%, Wellesley 0% to 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO101"
+ },
+ {
+  "date": "2025-11-30",
+  "date_confidence": "exact",
+  "title": "OKEA takes interest from Harbour in PL1153",
+  "type": "licence change",
+  "operator": "Aker BP",
+  "companies": [
+   "Harbour",
+   "OKEA"
+  ],
+  "licence_field": "PL1153",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1153: Harbour 20% to OKEA 20% (stakes Harbour 30% to 10%, OKEA 0% to 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Harbour",
+   "OKEA"
+  ],
+  "id": "NO102"
  },
  {
   "date": "2025-12-01",
@@ -1349,6 +2641,7 @@
   "note": "Sodir field status Producing from 01.12.2025.",
   "source_url": "https://factpages.sodir.no/en/field/PageView/All",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Sval",
@@ -1356,7 +2649,7 @@
    "Japex",
    "ORLEN"
   ],
-  "id": "NO054"
+  "id": "NO103"
  },
  {
   "date": "2025-12-04",
@@ -1375,10 +2668,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-i-barentshavet-71227-8/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO055"
+  "id": "NO104"
  },
  {
   "date": "2025-12-05",
@@ -1397,10 +2691,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensatfunn-i-nordsjoen-155-8-s-og-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO056"
+  "id": "NO105"
  },
  {
   "date": "2025-12-11",
@@ -1420,11 +2715,41 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/661692",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO057"
+  "id": "NO106"
+ },
+ {
+  "date": "2025-12-11",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL886, PL886 B, PL1005",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Petoro",
+   "Aker BP",
+   "ConocoPhillips",
+   "Shell",
+   "Vår Energi"
+  ],
+  "licence_field": "PL886, PL886 B, PL1005",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 11.12.2025). PL886 (operator Aker BP; Petoro 20%, Aker BP 60%, ConocoPhillips 20%) | PL886 B (operator Aker BP; Petoro 20%, ConocoPhillips 20%, Aker BP 60%) | PL1005 (operator Aker BP; Shell 20%, Vår Energi 40%, Aker BP 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petoro",
+   "ConocoPhillips",
+   "Shell",
+   "Vår Energi"
+  ],
+  "id": "NO107"
  },
  {
   "date": "2025-12-16",
@@ -1447,6 +2772,7 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/662090",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "TotalEnergies",
    "Vår Energi",
@@ -1454,7 +2780,7 @@
    "Petoro",
    "ORLEN"
   ],
-  "id": "NO058"
+  "id": "NO108"
  },
  {
   "date": "2025-12-17",
@@ -1476,13 +2802,62 @@
   "note": "",
   "source_url": "https://varenergi.no/en/newsroom/stock-exchange-announcements/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos",
    "Equinor",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO059"
+  "id": "NO109"
+ },
+ {
+  "date": "2025-12-18",
+  "date_confidence": "exact",
+  "title": "ORLEN takes interest from TotalEnergies in PL044, PL044 D",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "ORLEN",
+   "TotalEnergies"
+  ],
+  "licence_field": "PL044, PL044 D",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL044: TotalEnergies 15% to ORLEN 15% (stakes ORLEN 30% to 45%, TotalEnergies 15% to 0%) | PL044 D: TotalEnergies 15% to ORLEN 15% (stakes ORLEN 30% to 45%, TotalEnergies 15% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "ORLEN",
+   "TotalEnergies"
+  ],
+  "id": "NO110"
+ },
+ {
+  "date": "2025-12-18",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from TotalEnergies in PL018 B, PL018 F",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "TotalEnergies",
+   "Vår Energi"
+  ],
+  "licence_field": "PL018 B, PL018 F",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL018 B: TotalEnergies 39.896% to Vår Energi 39.896% (stakes TotalEnergies 39.896% to 0%, Vår Energi 12.388% to 52.284%) | PL018 F: TotalEnergies 39.896% to Vår Energi 39.896% (stakes TotalEnergies 39.896% to 0%, Vår Energi 12.388% to 52.284%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "TotalEnergies",
+   "Vår Energi"
+  ],
+  "id": "NO111"
  },
  {
   "date": "2025-12-19",
@@ -1501,10 +2876,35 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass--og-kondensatfunn-i-nordsjoen-358-8-s-og-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro"
   ],
-  "id": "NO060"
+  "id": "NO112"
+ },
+ {
+  "date": "2025-12-19",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between DNO and ORLEN (PL018 B, PL018 F, PL1135, PL127 DS)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "ORLEN"
+  ],
+  "licence_field": "PL018 B, PL018 F, PL1135, PL127 DS",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL018 B: DNO 7.604% to ORLEN 7.604% (stakes DNO 7.604% to 0%, ORLEN 0% to 7.604%) | PL018 F: DNO 7.604% to ORLEN 7.604% (stakes DNO 7.604% to 0%, ORLEN 0% to 7.604%) | PL1135: ORLEN 20% to DNO 20% (stakes DNO 0% to 20%, ORLEN 80% to 60%) | PL127 DS: ORLEN 11.9175% to DNO 11.9175% (stakes DNO 0% to 11.9175%, ORLEN 11.9175% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "ORLEN"
+  ],
+  "id": "NO113"
  },
  {
   "date": "2025-12-22",
@@ -1525,12 +2925,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatfunn-nar-tyrihansfeltet-i-norskehavet-64071-b-2-h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "TotalEnergies",
    "Petoro"
   ],
-  "id": "NO061"
+  "id": "NO114"
  },
  {
   "date": "2025-12-22",
@@ -1551,12 +2952,115 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/662606",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Petoro",
    "Kistos"
   ],
-  "id": "NO062"
+  "id": "NO115"
+ },
+ {
+  "date": "2025-12-23",
+  "date_confidence": "exact",
+  "title": "Petoro takes interest from ConocoPhillips and Equinor and Repsol in PL120, PL120 CS",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "ConocoPhillips",
+   "Equinor",
+   "Petoro",
+   "Repsol"
+  ],
+  "licence_field": "PL120, PL120 CS",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL120: ConocoPhillips 3.9%; Repsol 3.3%; Equinor 5.86452% to Petoro 3.3%; Petoro 5.86452%; Petoro 3.9% (stakes ConocoPhillips 13% to 9.1%, Equinor 59.0645% to 53.2%, Petoro 16.9355% to 30%, Repsol 11% to 7.7%) | PL120 CS: Equinor 5.86452%; Repsol 3.3%; ConocoPhillips 3.9% to Petoro 3.9%; Petoro 3.3%; Petoro 5.86452% (stakes ConocoPhillips 13% to 9.1%, Equinor 59.0645% to 53.2%, Petoro 16.9355% to 30%, Repsol 11% to 7.7%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "ConocoPhillips",
+   "Equinor",
+   "Petoro",
+   "Repsol"
+  ],
+  "id": "NO116"
+ },
+ {
+  "date": "2025-12-23",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from OKEA in PL1186",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "OKEA"
+  ],
+  "licence_field": "PL1186",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1186: OKEA 20% to Equinor 20% (stakes Equinor 40% to 60%, OKEA 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OKEA"
+  ],
+  "id": "NO117"
+ },
+ {
+  "date": "2025-12-29",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Aker BP and DNO (PL036 D, PL1171, PL1175, PL1175 B and 6 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "PL036 D, PL1171, PL1175, PL1175 B, PL1204, PL1204 BS, PL127, PL127 DS, PL293 B, PL293 CS",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL036 D: DNO 28.853% to Aker BP 28.853% (stakes Aker BP 46.904% to 75.757%, DNO 28.853% to 0%) | PL1171: DNO 16% to Aker BP 16% (stakes Aker BP 50% to 66%, DNO 50% to 34%) | PL1175: DNO 10% to Aker BP 10% (stakes Aker BP 50% to 60%, DNO 30% to 20%) | PL1175 B: DNO 10% to Aker BP 10% (stakes Aker BP 50% to 60%, DNO 30% to 20%) | PL1204: DNO 20% to Aker BP 20% (stakes Aker BP 0% to 20%, DNO 60% to 40%) | PL1204 BS: DNO 20% to Aker BP 20% (stakes Aker BP 0% to 20%, DNO 60% to 40%) | PL127: Aker BP 25% to DNO 25% (stakes Aker BP 25% to 0%, DNO 0% to 25%) | PL127 DS: Aker BP 44.0412% to DNO 44.0412% (stakes Aker BP 44.0412% to 0%, DNO 11.9175% to 55.9588%) | PL293 B: DNO 9% to Aker BP 9% (stakes Aker BP 10% to 19%, DNO 29% to 20%) | PL293 CS: DNO 9% to Aker BP 9% (stakes Aker BP 10% to 19%, DNO 29% to 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "DNO"
+  ],
+  "id": "NO118"
+ },
+ {
+  "date": "2025-12-31",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL052",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Petoro",
+   "Equinor",
+   "Harbour",
+   "Repsol"
+  ],
+  "licence_field": "PL052",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 31.12.2025). PL052 (operator Equinor; Petoro 37%, Equinor 18%, Harbour 18%, Repsol 27%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petoro",
+   "Harbour",
+   "Repsol"
+  ],
+  "id": "NO119"
  },
  {
   "date": "2026-01-13",
@@ -1592,6 +3096,7 @@
   "note": "Counts per company (licences/operated): Equinor 35/16; Aker BP 22/12; Petoro 20/0; DNO 16/4; Vår Energi 14/7; Harbour 9/4; INPEX Idemitsu 5/1; ORLEN 5/0; Wellesley 5/5; OMV 4/2; OKEA 3/1; Concedo 2/1; Japex 2/0; Source Energy 2/0; ConocoPhillips 1/1; Pandion 1/0; Petrolia NOCO 1/1; Repsol 1/1; TotalEnergies 1/0. Material N: early-stage acreage. Sodir formal grant date 20.03.2026.",
   "source_url": "https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awarded/id3145952/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Aker BP",
@@ -1613,7 +3118,7 @@
    "Repsol",
    "TotalEnergies"
   ],
-  "id": "NO063"
+  "id": "NO120"
  },
  {
   "date": "2026-01-16",
@@ -1632,10 +3137,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgrensningsbronn-bekrefter-oljefunn-i-barentshavet-71228-3-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO064"
+  "id": "NO121"
  },
  {
   "date": "2026-01-19",
@@ -1656,12 +3162,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-norskehavet-65078-12-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ConocoPhillips",
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO065"
+  "id": "NO122"
  },
  {
   "date": "2026-01-20",
@@ -1680,10 +3187,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass--og-kondensatfunn-i-nordsjoen-158--3-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO066"
+  "id": "NO123"
  },
  {
   "date": "2026-01-28",
@@ -1705,13 +3213,14 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO",
    "Petrolia NOCO",
    "Lime",
    "M Vest"
   ],
-  "id": "NO067"
+  "id": "NO124"
  },
  {
   "date": "2026-02-02",
@@ -1731,11 +3240,12 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/664571",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "OMV",
    "Harbour"
   ],
-  "id": "NO068"
+  "id": "NO125"
  },
  {
   "date": "2026-02-12",
@@ -1754,10 +3264,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-258-c-23-d/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO069"
+  "id": "NO126"
  },
  {
   "date": "2026-02-13",
@@ -1779,13 +3290,68 @@
   "note": "",
   "source_url": "https://www.conocophillips.no",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "ORLEN",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO070"
+  "id": "NO127"
+ },
+ {
+  "date": "2026-02-13",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1040, PL1080",
+  "type": "relinquishment",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1040, PL1080",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 13.02.2026). PL1040 (operator Equinor; Equinor 70%, Aker BP 30%) | PL1080 (operator Equinor; Petoro 23.7%, Equinor 46.3%, Vår Energi 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "id": "NO128"
+ },
+ {
+  "date": "2026-02-14",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1073, PL1079",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "OMV",
+   "Vår Energi",
+   "Equinor",
+   "Petoro"
+  ],
+  "licence_field": "PL1073, PL1079",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.02.2026). PL1073 (operator Vår Energi; OMV 30%, Vår Energi 70%) | PL1079 (operator Vår Energi; Equinor 46.3%, Vår Energi 30%, Petoro 23.7%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OMV",
+   "Equinor",
+   "Petoro"
+  ],
+  "id": "NO129"
  },
  {
   "date": "2026-02-16",
@@ -1805,11 +3371,90 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje--og-gassfunn-og-torr-bronn-i-nordsjoen-3312-n-3-hh-og-3312-n-3-gh/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "OMV",
    "Petoro"
   ],
-  "id": "NO071"
+  "id": "NO130"
+ },
+ {
+  "date": "2026-02-16",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1172, PL1185",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "ORLEN",
+   "DNO",
+   "Equinor",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1172, PL1185",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 16.02.2026). PL1172 (operator Aker BP; Aker BP 40%, ORLEN 30%, DNO 30%) | PL1185 (operator Equinor; Aker BP 20%, Equinor 40%, DNO 20%, Vår Energi 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "ORLEN",
+   "DNO",
+   "Equinor",
+   "Vår Energi"
+  ],
+  "id": "NO131"
+ },
+ {
+  "date": "2026-02-17",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from OMV in PL1196",
+  "type": "licence change",
+  "operator": "Vår Energi",
+  "companies": [
+   "OMV",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1196",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1196: OMV 30% to Vår Energi 30% (stakes OMV 30% to 0%, Vår Energi 70% to 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OMV"
+  ],
+  "id": "NO132"
+ },
+ {
+  "date": "2026-02-17",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1197",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor",
+   "Petoro"
+  ],
+  "licence_field": "PL1197",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 17.02.2026). PL1197 (operator Vår Energi; Vår Energi 50%, Equinor 30%, Petoro 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Petoro"
+  ],
+  "id": "NO133"
  },
  {
   "date": "2026-02-18",
@@ -1829,11 +3474,69 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-barentshavet-70185-2/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO072"
+  "id": "NO134"
+ },
+ {
+  "date": "2026-02-18",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1090, PL1115",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro",
+   "Aker BP",
+   "Harbour",
+   "OKEA"
+  ],
+  "licence_field": "PL1090, PL1115",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 18.02.2026). PL1090 (operator Vår Energi; Equinor 10%, Vår Energi 50%, Petoro 20%, Aker BP 20%) | PL1115 (operator Harbour; Harbour 30%, Equinor 30%, OKEA 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro",
+   "Aker BP",
+   "Harbour",
+   "OKEA"
+  ],
+  "id": "NO135"
+ },
+ {
+  "date": "2026-03-01",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL1025 S, PL1025 SB",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1025 S, PL1025 SB",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 01.03.2026). PL1025 S (operator Vår Energi; Equinor 20%, Petoro 20%, Vår Energi 60%) | PL1025 SB (operator Vår Energi; Vår Energi 60%, Petoro 20%, Equinor 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "Petoro"
+  ],
+  "id": "NO136"
  },
  {
   "date": "2026-03-02",
@@ -1855,13 +3558,39 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/fant-mer-olje-ved-snorre-344-19-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "INPEX Idemitsu",
    "Vår Energi",
    "Harbour",
    "Petoro"
   ],
-  "id": "NO073"
+  "id": "NO137"
+ },
+ {
+  "date": "2026-03-02",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL917",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "Vår Energi"
+  ],
+  "licence_field": "PL917",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 02.03.2026). PL917 (operator Vår Energi; Aker BP 40%, Equinor 20%, Vår Energi 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "id": "NO138"
  },
  {
   "date": "2026-03-10",
@@ -1880,10 +3609,139 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-nordsjoen-3511-32-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "INPEX Idemitsu"
   ],
-  "id": "NO074"
+  "id": "NO139"
+ },
+ {
+  "date": "2026-03-11",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1143",
+  "type": "relinquishment",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ORLEN"
+  ],
+  "licence_field": "PL1143",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 11.03.2026). PL1143 (operator Aker BP; Aker BP 82.06%, ORLEN 17.94%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "ORLEN"
+  ],
+  "id": "NO140"
+ },
+ {
+  "date": "2026-03-13",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from DNO and Harbour in PL1213 S",
+  "type": "licence change",
+  "operator": "Vår Energi",
+  "companies": [
+   "DNO",
+   "Harbour",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1213 S",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1213 S: Harbour 30%; DNO 30% to Vår Energi 60% (stakes DNO 30% to 0%, Harbour 30% to 0%, Vår Energi 40% to 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Harbour"
+  ],
+  "id": "NO141"
+ },
+ {
+  "date": "2026-03-14",
+  "date_confidence": "exact",
+  "title": "6 licences relinquished: PL1205, PL1208, PL1218, PL1221, PL1233 and 1 more",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "ConocoPhillips",
+   "Aker BP",
+   "Equinor",
+   "Vår Energi",
+   "Petrolia NOCO",
+   "OMV",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1205, PL1208, PL1218, PL1221, PL1233, PL1273",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.03.2026). PL1205 (operator ConocoPhillips; DNO 40%, ConocoPhillips 60%) | PL1208 (operator ConocoPhillips; Aker BP 40%, ConocoPhillips 60%) | PL1218 (operator Aker BP; Aker BP 40%, Equinor 40%, Vår Energi 20%) | PL1221 (operator Petrolia NOCO; Equinor 60%, Petrolia NOCO 40%) | PL1233 (operator OMV; OMV 50%, INPEX Idemitsu 50%) | PL1273 (operator Petrolia NOCO; DNO 40%, Petrolia NOCO 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "ConocoPhillips",
+   "Aker BP",
+   "Equinor",
+   "Vår Energi",
+   "Petrolia NOCO",
+   "OMV",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO142"
+ },
+ {
+  "date": "2026-03-15",
+  "date_confidence": "exact",
+  "title": "13 licences relinquished: PL1206 S, PL1209, PL1211, PL1212 S, PL1215 and 8 more",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "ORLEN",
+   "Aker BP",
+   "DNO",
+   "Equinor",
+   "Concedo",
+   "Vår Energi",
+   "Harbour",
+   "Source Energy",
+   "OKEA",
+   "OMV",
+   "Petoro",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1206 S, PL1209, PL1211, PL1212 S, PL1215, PL1216, PL1220, PL1222, PL1228, PL1239, PL1241, PL1242, PL1276",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 15.03.2026). PL1206 S (operator Aker BP; ORLEN 12.3%, Aker BP 87.7%) | PL1209 (operator DNO; DNO 40%, Equinor 30%, Concedo 30%) | PL1211 (operator Vår Energi; Vår Energi 50%, Concedo 50%) | PL1212 S (operator Equinor; Equinor 40%, Aker BP 20%, DNO 40%) | PL1215 (operator Aker BP; Aker BP 40%, Vår Energi 30%, Equinor 30%) | PL1216 (operator DNO; Harbour 30%, Source Energy 30%, DNO 40%) | PL1220 (operator ORLEN; Equinor 30%, ORLEN 70%) | PL1222 (operator Equinor; OKEA 30%, Aker BP 30%, Equinor 40%) | PL1228 (operator OMV; OMV 30%, DNO 30%, Equinor 40%) | PL1239 (operator Equinor; Vår Energi 30%, Petoro 23.7%, Equinor 46.3%) | PL1241 (operator Vår Energi; Equinor 30%, Petoro 20%, Vår Energi 50%) | PL1242 (operator Aker BP; Equinor 20%, Aker BP 40%, Petoro 20%, Vår Energi 20%) | PL1276 (operator OMV; INPEX Idemitsu 50%, OMV 50%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "ORLEN",
+   "Aker BP",
+   "DNO",
+   "Equinor",
+   "Concedo",
+   "Vår Energi",
+   "Harbour",
+   "Source Energy",
+   "OKEA",
+   "OMV",
+   "Petoro",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO143"
  },
  {
   "date": "2026-03-17",
@@ -1902,10 +3760,11 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO075"
+  "id": "NO144"
  },
  {
   "date": "2026-03-18",
@@ -1925,11 +3784,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-barentshavet-72207-5/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO076"
+  "id": "NO145"
  },
  {
   "date": "2026-03-23",
@@ -1949,11 +3809,12 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO077"
+  "id": "NO146"
  },
  {
   "date": "2026-03-25",
@@ -1975,13 +3836,106 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/669230",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO",
    "Petrolia NOCO",
    "Lime",
    "M Vest"
   ],
-  "id": "NO078"
+  "id": "NO147"
+ },
+ {
+  "date": "2026-03-26",
+  "date_confidence": "exact",
+  "title": "Aker BP and OKEA take interest from DNO in PL1270",
+  "type": "licence change",
+  "operator": "DNO",
+  "companies": [
+   "Aker BP",
+   "DNO",
+   "OKEA"
+  ],
+  "licence_field": "PL1270",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1270: DNO 30%; DNO 30% to Aker BP 30%; OKEA 30% (stakes Aker BP 0% to 30%, DNO 100% to 40%, OKEA 0% to 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "OKEA"
+  ],
+  "id": "NO148"
+ },
+ {
+  "date": "2026-03-26",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from Aker BP in PL1147",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL1147",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1147: Aker BP 20% to Equinor 20% (stakes Aker BP 60% to 40%, Equinor 20% to 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO149"
+ },
+ {
+  "date": "2026-03-26",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1113",
+  "type": "relinquishment",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA"
+  ],
+  "licence_field": "PL1113",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 26.03.2026). PL1113 (operator OKEA; OKEA 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [],
+  "id": "NO150"
+ },
+ {
+  "date": "2026-03-27",
+  "date_confidence": "exact",
+  "title": "Aker BP takes interest from Equinor in PL1139, PL1177",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL1139, PL1177",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1139: Equinor 10% to Aker BP 10% (stakes Aker BP 60% to 70%, Equinor 40% to 30%) | PL1177: Equinor 15% to Aker BP 15% (stakes Aker BP 0% to 15%, Equinor 55% to 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "id": "NO151"
  },
  {
   "date": "2026-04-07",
@@ -2001,11 +3955,41 @@
   "note": "Sodir status Producing from 01.04.2026.",
   "source_url": "https://newsweb.oslobors.no/message/670011",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "DNO"
   ],
-  "id": "NO079"
+  "id": "NO152"
+ },
+ {
+  "date": "2026-04-14",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1109",
+  "type": "relinquishment",
+  "operator": "OMV",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "OMV",
+   "Aker BP",
+   "Pandion"
+  ],
+  "licence_field": "PL1109",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 14.04.2026). PL1109 (operator OMV; OKEA 10%, DNO 20%, OMV 30%, Aker BP 20%, Pandion 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OKEA",
+   "DNO",
+   "Aker BP",
+   "Pandion"
+  ],
+  "id": "NO153"
  },
  {
   "date": "2026-04-15",
@@ -2024,10 +4008,11 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/670663",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO080"
+  "id": "NO154"
  },
  {
   "date": "2026-04-20",
@@ -2049,13 +4034,14 @@
   "note": "Mistral Nord well planned early 2027 (Japex).",
   "source_url": "https://newsweb.oslobors.no/message/670937",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO",
    "INPEX Idemitsu",
    "OKEA",
    "Japex"
   ],
-  "id": "NO081"
+  "id": "NO155"
  },
  {
   "date": "2026-04-22",
@@ -2076,12 +4062,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-348-a-37-h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Repsol",
    "Petoro",
    "ConocoPhillips"
   ],
-  "id": "NO082"
+  "id": "NO156"
  },
  {
   "date": "2026-05-05",
@@ -2100,10 +4087,11 @@
   "note": "Sodir status Producing from 03.05.2026.",
   "source_url": "https://www.equinor.com/news/20260505-eirin-field-production",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO083"
+  "id": "NO157"
  },
  {
   "date": "2026-05-05",
@@ -2125,13 +4113,14 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "ORLEN",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO084"
+  "id": "NO158"
  },
  {
   "date": "2026-05-08",
@@ -2151,11 +4140,62 @@
   "note": "",
   "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO085"
+  "id": "NO159"
+ },
+ {
+  "date": "2026-05-11",
+  "date_confidence": "exact",
+  "title": "Havtil consent to use Irpa subsea system and Aasta Hansteen modifications",
+  "type": "consent",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Harbour",
+   "Shell"
+  ],
+  "licence_field": "IRPA",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.havtil.no/en/supervision/consents/2026/equinor--consent-to-use-irpa/",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Petoro",
+   "Harbour",
+   "Shell"
+  ],
+  "id": "NO160"
+ },
+ {
+  "date": "2026-05-17",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1178",
+  "type": "relinquishment",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "Lime"
+  ],
+  "licence_field": "PL1178",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 17.05.2026). PL1178 (operator OKEA; OKEA 50%, Lime 50%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Lime"
+  ],
+  "id": "NO161"
  },
  {
   "date": "2026-05-21",
@@ -2174,10 +4214,113 @@
   "note": "Completion 30.09.2026 (Sodir) not material.",
   "source_url": "https://newsweb.oslobors.no/message/674060",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO086"
+  "id": "NO162"
+ },
+ {
+  "date": "2026-05-27",
+  "date_confidence": "exact",
+  "title": "2 licences relinquished: PL932, PL938",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Vår Energi",
+   "Equinor",
+   "Aker BP",
+   "OKEA",
+   "Pandion"
+  ],
+  "licence_field": "PL932, PL938",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 27.05.2026). PL932 (operator Aker BP; Vår Energi 20%, Equinor 40%, Aker BP 40%) | PL938 (operator Vår Energi; OKEA 30%, Vår Energi 50%, Pandion 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Vår Energi",
+   "Equinor",
+   "Aker BP",
+   "OKEA",
+   "Pandion"
+  ],
+  "id": "NO163"
+ },
+ {
+  "date": "2026-05-28",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1192",
+  "type": "relinquishment",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi"
+  ],
+  "licence_field": "PL1192",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 28.05.2026). PL1192 (operator Vår Energi; Vår Energi 100%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [],
+  "id": "NO164"
+ },
+ {
+  "date": "2026-05-29",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between DNO and Equinor (PL1102 C, PL1119, PL1121, PL836 S and 4 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "Equinor"
+  ],
+  "licence_field": "PL1102 C, PL1119, PL1121, PL836 S, PL878, PL878 B, PL923, PL923 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1102 C: DNO 30% to Equinor 30% (stakes DNO 30% to 0%, Equinor 50% to 80%) | PL1119: DNO 10% to Equinor 10% (stakes DNO 10% to 0%, Equinor 50% to 60%) | PL1121: DNO 30% to Equinor 30% (stakes DNO 30% to 0%, Equinor 40% to 70%) | PL836 S: DNO 30% to Equinor 30% (stakes DNO 30% to 0%, Equinor 30% to 60%) | PL878: Equinor 19% to DNO 19% (stakes DNO 0% to 19%, Equinor 75% to 56%) | PL878 B: Equinor 19% to DNO 19% (stakes DNO 0% to 19%, Equinor 75% to 56%) | PL923: DNO 20% to Equinor 20% (stakes DNO 20% to 0%, Equinor 60% to 80%) | PL923 B: DNO 20% to Equinor 20% (stakes DNO 20% to 0%, Equinor 60% to 80%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Equinor"
+  ],
+  "id": "NO165"
+ },
+ {
+  "date": "2026-05-29",
+  "date_confidence": "exact",
+  "title": "DNO and ORLEN take interest from Equinor and Vår Energi in PL293, PL293 D",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "Equinor",
+   "ORLEN",
+   "Vår Energi"
+  ],
+  "licence_field": "PL293, PL293 D",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL293: Equinor 10%; Vår Energi 25% to ORLEN 25%; DNO 10% (stakes DNO 0% to 10%, Equinor 70% to 60%, ORLEN 0% to 25%, Vår Energi 25% to 0%) | PL293 D: Equinor 10%; Vår Energi 25% to ORLEN 25%; DNO 10% (stakes DNO 0% to 10%, Equinor 70% to 60%, ORLEN 0% to 25%, Vår Energi 25% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Equinor",
+   "ORLEN",
+   "Vår Energi"
+  ],
+  "id": "NO166"
  },
  {
   "date": "2026-06-15",
@@ -2198,12 +4341,13 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/676144",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO087"
+  "id": "NO167"
  },
  {
   "date": "2026-06-16",
@@ -2224,12 +4368,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-norskehavet-65078-d-4-ch/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ConocoPhillips",
    "Petoro",
    "Vår Energi"
   ],
-  "id": "NO088"
+  "id": "NO168"
  },
  {
   "date": "2026-06-18",
@@ -2248,10 +4393,11 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/676445",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO089"
+  "id": "NO169"
  },
  {
   "date": "2026-06-18",
@@ -2270,10 +4416,11 @@
   "note": "Concept select, not FID; partners beyond Equinor and Aker BP not resolved (8 licences).",
   "source_url": "https://newsweb.oslobors.no/message/676465",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO090"
+  "id": "NO170"
  },
  {
   "date": "2026-06-18",
@@ -2294,12 +4441,13 @@
   "note": "Completion of Pandion deal 30.09.2026 not material.",
   "source_url": "https://newsweb.oslobors.no/message/676457",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Pandion",
    "DNO",
    "ORLEN"
   ],
-  "id": "NO091"
+  "id": "NO171"
  },
  {
   "date": "2026-06-22",
@@ -2320,12 +4468,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/bekrefter-gass-kondensatfunn-i-nordsjoen-3510-16-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "Aker BP",
    "DNO"
   ],
-  "id": "NO092"
+  "id": "NO172"
  },
  {
   "date": "2026-06-25",
@@ -2347,13 +4496,14 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/676966",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP",
    "DNO",
    "Harbour",
    "Pandion"
   ],
-  "id": "NO093"
+  "id": "NO173"
  },
  {
   "date": "2026-06-30",
@@ -2372,10 +4522,108 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/677309",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO094"
+  "id": "NO174"
+ },
+ {
+  "date": "2026-06-30",
+  "date_confidence": "exact",
+  "title": "DNO takes interest from INPEX Idemitsu in PL090 C",
+  "type": "licence change",
+  "operator": "Harbour",
+  "companies": [
+   "DNO",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL090 C",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL090 C: INPEX Idemitsu 15% to DNO 15% (stakes DNO 25% to 40%, INPEX Idemitsu 15% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO175"
+ },
+ {
+  "date": "2026-06-30",
+  "date_confidence": "exact",
+  "title": "Equinor takes interest from OMV and Repsol in PL025 C, PL187 B",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "OMV",
+   "Repsol"
+  ],
+  "licence_field": "PL025 C, PL187 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL025 C: Repsol 15%; OMV 24% to Equinor 24%; Equinor 15% (stakes Equinor 36% to 75%, OMV 24% to 0%, Repsol 15% to 0%) | PL187 B: Repsol 15%; OMV 24% to Equinor 24%; Equinor 15% (stakes Equinor 36% to 75%, OMV 24% to 0%, Repsol 15% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Equinor",
+   "OMV",
+   "Repsol"
+  ],
+  "id": "NO176"
+ },
+ {
+  "date": "2026-06-30",
+  "date_confidence": "exact",
+  "title": "Wellesley takes interest from Equinor in PL293 D",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Wellesley"
+  ],
+  "licence_field": "PL293 D",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL293 D: Equinor 25% to Wellesley 25% (stakes Equinor 60% to 35%, Wellesley 5% to 30%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Wellesley"
+  ],
+  "id": "NO177"
+ },
+ {
+  "date": "2026-06-30",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between OKEA and Wellesley (PL1255, PL1255 B, PL1260)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "OKEA",
+   "Wellesley"
+  ],
+  "licence_field": "PL1255, PL1255 B, PL1260",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1255: Wellesley 30% to OKEA 30% (stakes OKEA 20% to 50%, Wellesley 30% to 0%) | PL1255 B: Wellesley 30% to OKEA 30% (stakes OKEA 20% to 50%, Wellesley 30% to 0%) | PL1260: OKEA 20% to Wellesley 20% (stakes OKEA 20% to 0%, Wellesley 0% to 20%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "OKEA",
+   "Wellesley"
+  ],
+  "id": "NO178"
  },
  {
   "date": "2026-07-01",
@@ -2395,11 +4643,12 @@
   "note": "Headline level; partners from Dvalin field.",
   "source_url": "https://www.harbourenergy.com/news-and-media/announcements-and-latest-news/first-gas-achieved-at-dvalin-north-norway/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "DNO"
   ],
-  "id": "NO095"
+  "id": "NO179"
  },
  {
   "date": "2026-07-01",
@@ -2418,10 +4667,11 @@
   "note": "Month estimate; headline level.",
   "source_url": "https://energywatch.com/EnergyNews/Oil___Gas/article19444725.ece",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "DNO"
   ],
-  "id": "NO096"
+  "id": "NO180"
  },
  {
   "date": "2026-07-15",
@@ -2441,11 +4691,12 @@
   "note": "",
   "source_url": "https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-report.pdf",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO097"
+  "id": "NO181"
  },
  {
   "date": "2026-07-21",
@@ -2463,8 +4714,9 @@
   "note": "Recommended combination; adds DCS assets, not NCS.",
   "source_url": "https://newsweb.oslobors.no/message/678467",
   "upcoming": "N",
+  "net": "",
   "other_partners": [],
-  "id": "NO098"
+  "id": "NO182"
  },
  {
   "date": "2026-07-23",
@@ -2484,11 +4736,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-ved-johan-castberg-feltet-72205-ec-2-h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO099"
+  "id": "NO183"
  },
  {
   "date": "2026-08-01",
@@ -2510,13 +4763,14 @@
   "note": "Month estimate (late August 2026); headline level.",
   "source_url": "https://www.offshore-technology.com/news/equinor-production-troll-phase-3-stage-2/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "Shell",
    "TotalEnergies",
    "ConocoPhillips"
   ],
-  "id": "NO100"
+  "id": "NO184"
  },
  {
   "date": "2026-08-11",
@@ -2535,10 +4789,41 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-156-17/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO101"
+  "id": "NO185"
+ },
+ {
+  "date": "2026-08-13",
+  "date_confidence": "exact",
+  "title": "3 licences relinquished: PL1045, PL1045 B, PL1049",
+  "type": "relinquishment",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "ConocoPhillips",
+   "Petoro",
+   "DNO",
+   "Concedo"
+  ],
+  "licence_field": "PL1045, PL1045 B, PL1049",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 13.08.2026). PL1045 (operator Aker BP; Aker BP 80%, ConocoPhillips 20%) | PL1045 B (operator Aker BP; ConocoPhillips 20%, Aker BP 80%) | PL1049 (operator DNO; Petoro 20%, DNO 40%, Concedo 40%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "ConocoPhillips",
+   "Petoro",
+   "DNO",
+   "Concedo"
+  ],
+  "id": "NO186"
  },
  {
   "date": "2026-08-19",
@@ -2558,11 +4843,12 @@
   "note": "COP keeps 29%, INPEX 20%.",
   "source_url": "https://akerbp.com",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "ConocoPhillips",
    "INPEX Idemitsu"
   ],
-  "id": "NO102"
+  "id": "NO187"
  },
  {
   "date": "2026-08-24",
@@ -2581,10 +4867,11 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gasskondensat-funn-i-nordsjoen-257-13/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO103"
+  "id": "NO188"
  },
  {
   "date": "2026-08-24",
@@ -2604,11 +4891,12 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/680584",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Aker BP",
    "Vår Energi"
   ],
-  "id": "NO104"
+  "id": "NO189"
  },
  {
   "date": "2026-08-26",
@@ -2630,13 +4918,14 @@
   "note": "",
   "source_url": "https://newsweb.oslobors.no/message/680777",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Harbour",
    "ORLEN",
    "Japex",
    "Equinor"
   ],
-  "id": "NO105"
+  "id": "NO190"
  },
  {
   "date": "2026-09-01",
@@ -2654,8 +4943,9 @@
   "note": "Recommended takeover; Capricorn assets are outside NCS.",
   "source_url": "https://newsweb.oslobors.no/message/681349",
   "upcoming": "N",
+  "net": "",
   "other_partners": [],
-  "id": "NO106"
+  "id": "NO191"
  },
  {
   "date": "2026-09-01",
@@ -2673,8 +4963,32 @@
   "note": "Month estimate; headline level; partners not resolved.",
   "source_url": "https://energiwatch.no/nyheter/olje_gass/article19607447.ece",
   "upcoming": "N",
+  "net": "",
   "other_partners": [],
-  "id": "NO107"
+  "id": "NO192"
+ },
+ {
+  "date": "2026-09-11",
+  "date_confidence": "exact",
+  "title": "1 licence relinquished: PL1150 S",
+  "type": "relinquishment",
+  "operator": "OKEA",
+  "companies": [
+   "DNO",
+   "OKEA"
+  ],
+  "licence_field": "PL1150 S",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: licence(s) relinquished or expired (Sodir status INACTIVE, valid to 11.09.2026). PL1150 S (operator OKEA; DNO 40%, OKEA 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO"
+  ],
+  "id": "NO193"
  },
  {
   "date": "2026-09-16",
@@ -2695,12 +5009,13 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/aker-bp-har-gjort-et-gassfunn-i-nordsjoen-364-2-og-364-2-a/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "OKEA",
    "INPEX Idemitsu",
    "Harbour"
   ],
-  "id": "NO108"
+  "id": "NO194"
  },
  {
   "date": "2026-09-25",
@@ -2720,11 +5035,134 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgrensningsbronn-i-nordsjoen-oker-anslaget-161-ea-4-h/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor",
    "DNO"
   ],
-  "id": "NO109"
+  "id": "NO195"
+ },
+ {
+  "date": "2026-09-30",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between Aker BP and Equinor (PL090 JS, PL248 C, PL248 I, PL537 and 5 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL090 JS, PL248 C, PL248 I, PL537, PL537 B, PL630, PL923, PL923 B, PL925",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL090 JS: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 40% to 21%) | PL248 C: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 45% to 26%) | PL248 I: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 55% to 36%) | PL537: Aker BP 7.5% to Equinor 7.5% (stakes Aker BP 35% to 27.5%, Equinor 35% to 42.5%) | PL537 B: Aker BP 7.5% to Equinor 7.5% (stakes Aker BP 35% to 27.5%, Equinor 35% to 42.5%) | PL630: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 95% to 76%) | PL923: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 80% to 61%) | PL923 B: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 80% to 61%) | PL925: Equinor 19% to Aker BP 19% (stakes Aker BP 0% to 19%, Equinor 85% to 66%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "id": "NO196"
+ },
+ {
+  "date": "2026-09-30",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from DNO and Pandion in PL418, PL418 B",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "Pandion",
+   "Vår Energi"
+  ],
+  "licence_field": "PL418, PL418 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL418: Pandion 10%; DNO 5% to Vår Energi 10%; Vår Energi 5% (stakes DNO 45% to 40%, Pandion 10% to 0%, Vår Energi 0% to 15%) | PL418 B: DNO 5%; Pandion 10% to Vår Energi 10%; Vår Energi 5% (stakes DNO 45% to 40%, Pandion 10% to 0%, Vår Energi 0% to 15%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Pandion",
+   "Vår Energi"
+  ],
+  "id": "NO197"
+ },
+ {
+  "date": "2026-09-30",
+  "date_confidence": "exact",
+  "title": "Licence swap completed between DNO and Vår Energi (PL153, PL153 B, PL153 C, PL956 and 1 more)",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "DNO",
+   "Vår Energi"
+  ],
+  "licence_field": "PL153, PL153 B, PL153 C, PL956, PL956 B",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL153: Vår Energi 5% to DNO 5% (stakes DNO 0% to 5%, Vår Energi 30% to 25%) | PL153 B: Vår Energi 5% to DNO 5% (stakes DNO 0% to 5%, Vår Energi 30% to 25%) | PL153 C: Vår Energi 5% to DNO 5% (stakes DNO 0% to 5%, Vår Energi 30% to 25%) | PL956: DNO 15% to Vår Energi 15% (stakes DNO 15% to 0%, Vår Energi 65% to 80%) | PL956 B: DNO 15% to Vår Energi 15% (stakes DNO 15% to 0%, Vår Energi 65% to 80%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Vår Energi"
+  ],
+  "id": "NO198"
+ },
+ {
+  "date": "2026-09-30",
+  "date_confidence": "exact",
+  "title": "Japex takes interest from OKEA in PL1119",
+  "type": "licence change",
+  "operator": "Equinor",
+  "companies": [
+   "Japex",
+   "OKEA"
+  ],
+  "licence_field": "PL1119",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1119: OKEA 20% to Japex 20% (stakes Japex 0% to 20%, OKEA 20% to 0%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Japex",
+   "OKEA"
+  ],
+  "id": "NO199"
+ },
+ {
+  "date": "2026-09-30",
+  "date_confidence": "exact",
+  "title": "Vår Energi takes interest from Pandion in PL1151, PL1151 B, PL1180, PL1288 S and 7 more",
+  "type": "licence change",
+  "operator": null,
+  "companies": [
+   "Pandion",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1151, PL1151 B, PL1180, PL1288 S, PL263 D, PL263 E, PL263 F, PL263 G, PL263 H, PL378, PL929",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Background: Sodir-registered completion of a stake change; not material unless noted. PL1151: Pandion 20% to Vår Energi 20% (stakes Pandion 20% to 0%, Vår Energi 0% to 20%) | PL1151 B: Pandion 20% to Vår Energi 20% (stakes Pandion 20% to 0%, Vår Energi 0% to 20%) | PL1180: Pandion 30% to Vår Energi 30% (stakes Pandion 30% to 0%, Vår Energi 40% to 70%) | PL1288 S: Pandion 20% to Vår Energi 20% (stakes Pandion 20% to 0%, Vår Energi 0% to 20%) | PL263 D: Pandion 49% to Vår Energi 49% (stakes Pandion 49% to 0%, Vår Energi 0% to 49%) | PL263 E: Pandion 49% to Vår Energi 49% (stakes Pandion 49% to 0%, Vår Energi 0% to 49%) | PL263 F: Pandion 49% to Vår Energi 49% (stakes Pandion 49% to 0%, Vår Energi 0% to 49%) | PL263 G: Pandion 49% to Vår Energi 49% (stakes Pandion 49% to 0%, Vår Energi 0% to 49%) | PL263 H: Pandion 49% to Vår Energi 49% (stakes Pandion 49% to 0%, Vår Energi 0% to 49%) | PL378: Pandion 12.12% to Vår Energi 12.12% (stakes Pandion 12.12% to 0%, Vår Energi 0% to 12.12%) | PL929: Pandion 20% to Vår Energi 20% (stakes Pandion 20% to 0%, Vår Energi 40% to 60%)",
+  "source_url": "https://factpages.sodir.no/en/licence",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "Pandion",
+   "Vår Energi"
+  ],
+  "id": "NO200"
  },
  {
   "date": "2026-10-07",
@@ -2746,13 +5184,14 @@
   "note": "",
   "source_url": "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "TotalEnergies",
    "Vår Energi",
    "Harbour"
   ],
-  "id": "NO110"
+  "id": "NO201"
  },
  {
   "date": "2026-10-14",
@@ -2772,11 +5211,12 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje--og-gassfunn-i-nordsjoen-308-7-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO111"
+  "id": "NO202"
  },
  {
   "date": "2026-10-14",
@@ -2795,10 +5235,11 @@
   "note": "",
   "source_url": "https://www.investegate.co.uk",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO112"
+  "id": "NO203"
  },
  {
   "date": "2026-10-19",
@@ -2817,10 +5258,38 @@
   "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
   "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass-og-kondensatfunn-i-norskehavet-64075-3-s/",
   "upcoming": "N",
+  "net": "",
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO113"
+  "id": "NO204"
+ },
+ {
+  "date": "2026-10-23",
+  "date_confidence": "exact",
+  "title": "Havtil consent to start-up and operation of Bestla",
+  "type": "consent",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "Lime",
+   "M Vest"
+  ],
+  "licence_field": "BESTLA",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.havtil.no/en/supervision/consents/2026/okea-consent-to-start-up-and-operation-of-the-bestla-field/",
+  "upcoming": "N",
+  "net": "",
+  "other_partners": [
+   "DNO",
+   "Lime",
+   "M Vest"
+  ],
+  "id": "NO205"
  },
  {
   "date": "2026-10-28",
@@ -2836,10 +5305,11 @@
   "setback": "N",
   "confidence": "high",
   "note": "",
-  "source_url": "https://newsweb.oslobors.no/message/654072",
+  "source_url": "https://www.equinor.com/investors/events-and-presentations",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO114"
+  "id": "NO206"
  },
  {
   "date": "2026-10-29",
@@ -2857,8 +5327,9 @@
   "note": "",
   "source_url": "https://akerbp.com/en/investor/calendar/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO115"
+  "id": "NO207"
  },
  {
   "date": "2026-10-29",
@@ -2874,10 +5345,116 @@
   "setback": "N",
   "confidence": "high",
   "note": "",
-  "source_url": "https://newsweb.oslobors.no/search?issuer=DNO",
+  "source_url": "https://www.dno.no/en/investors/calendar/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO116"
+  "id": "NO208"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "OMV Q3 2026 results",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/en/investors/financial-calendar",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO209"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Q3 2026 results",
+  "type": "results",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO210"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "Repsol Q3 2026 results",
+  "type": "results",
+  "operator": "Repsol",
+  "companies": [
+   "Repsol"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.repsol.com/en/shareholders-and-investors/calendar/third-quarter-2026-financial-results-presentation/index.cshtml",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO211"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "Shell Q3 2026 results and interim dividend",
+  "type": "results",
+  "operator": "Shell",
+  "companies": [
+   "Shell"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2026/advance-notice-of-third-quarter-2026-results-and-third-quarter-2026-interim-dividend-announcement.html",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO212"
+ },
+ {
+  "date": "2026-10-31",
+  "date_confidence": "month",
+  "title": "Kjøttkake PDO submission planned (October 2026)",
+  "type": "PDO submitted",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "DNO",
+   "Concedo"
+  ],
+  "licence_field": "PL1182 S",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Month date from Aker BP impact assessment schedule (Table 2-3: PDO October 2026, drilling and pipelay June 2027, start-up March 2028). Placed on 31 Oct because the month has not ended and no submission seen by 26 Oct.",
+  "source_url": "https://akerbp.com/wp-content/uploads/2026/06/2026-kjottkake.pdf",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [
+   "DNO",
+   "Concedo"
+  ],
+  "id": "NO213"
  },
  {
   "date": "2026-11-03",
@@ -2893,15 +5470,161 @@
   "setback": "N",
   "confidence": "high",
   "note": "",
-  "source_url": "https://newsweb.oslobors.no/search?issuer=OKEA",
+  "source_url": "https://www.okea.no/investor/financial-calendar/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO117"
+  "id": "NO214"
+ },
+ {
+  "date": "2026-11-05",
+  "date_confidence": "exact",
+  "title": "Harbour Energy trading and operations update",
+  "type": "results",
+  "operator": "Harbour",
+  "companies": [
+   "Harbour"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.harbourenergy.com/investors/financial-calendar/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO215"
+ },
+ {
+  "date": "2026-11-05",
+  "date_confidence": "exact",
+  "title": "ConocoPhillips Q3 2026 results and call",
+  "type": "results",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.conocophillips.com/news-media/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO216"
+ },
+ {
+  "date": "2026-11-05",
+  "date_confidence": "exact",
+  "title": "ORLEN Q3 2026 consolidated report (moved forward from 19 Nov)",
+  "type": "results",
+  "operator": "ORLEN",
+  "companies": [
+   "ORLEN"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.orlen.pl/pl/relacje-inwestorskie/raporty-i-publikacje/raporty-biezace/2026/02/Raport-biezacy-nr-35-2026",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO217"
+ },
+ {
+  "date": "2026-11-11",
+  "date_confidence": "exact",
+  "title": "Vår Energi extraordinary general meeting",
+  "type": "shareholder meeting",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://varenergi.no/en/investors/financial-calendar/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO218"
+ },
+ {
+  "date": "2026-11-12",
+  "date_confidence": "exact",
+  "title": "INPEX results for nine months to 30 Sep 2026 (investor meeting 13 Nov)",
+  "type": "results",
+  "operator": "INPEX Idemitsu",
+  "companies": [
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Parent INPEX Corp (1605); Norway entity INPEX Idemitsu Norge.",
+  "source_url": "https://www.inpex.live/english/ir/calendar.html",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO219"
+ },
+ {
+  "date": "2026-11-12",
+  "date_confidence": "exact",
+  "title": "JAPEX results for 2Q FY2027/3",
+  "type": "results",
+  "operator": "Japex",
+  "companies": [
+   "Japex"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Parent JAPEX (1662).",
+  "source_url": "https://www.japex.co.jp/en/ir/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO220"
+ },
+ {
+  "date": "2026-12-01",
+  "date_confidence": "month",
+  "title": "Hugin A platform sailaway planned December 2026 (Yggdrasil)",
+  "type": "milestone",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ORLEN",
+   "Equinor"
+  ],
+  "licence_field": "HUGIN",
+  "material": "N",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Month date from Aker BP Q2 2026 presentation; placed on the 1st.",
+  "source_url": "https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-presentation.pdf",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [
+   "ORLEN",
+   "Equinor"
+  ],
+  "id": "NO221"
  },
  {
   "date": "2026-12-01",
   "date_confidence": "quarter",
-  "title": "Irpa (Aasta Hansteen tie-back) first gas, targeted Q4 2026 / by year-end",
+  "title": "Irpa (Aasta Hansteen tie-back) first gas targeted Q4 2026",
   "type": "first oil",
   "operator": "Equinor",
   "companies": [
@@ -2913,47 +5636,81 @@
   "licence_field": "IRPA",
   "material": "Y",
   "setback": "N",
-  "confidence": "medium",
-  "note": "Quarter estimate placed on 1 Dec; source Equinor Irpa page and Harbour H1 2026.",
+  "confidence": "low",
+  "note": "TIGHT-NET EXCEPTION: only quarter precision public (Equinor Q4 2026; Sodir and Havtil say 2026). Havtil consent to use given 11.05.2026. Placed on 1 Dec.",
   "source_url": "https://www.equinor.com/energy/irpa",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [
    "Petoro",
    "Harbour",
    "Shell"
   ],
-  "id": "NO118"
+  "id": "NO222"
  },
  {
   "date": "2027-01-01",
-  "date_confidence": "estimated",
-  "title": "APA 2026 award expected (January, per prior rounds)",
+  "date_confidence": "quarter",
+  "title": "APA 2026 award planned start of 2027",
   "type": "licence award",
   "operator": null,
   "companies": [
    "Equinor",
    "Aker BP",
    "Vår Energi",
-   "DNO"
+   "DNO",
+   "Concedo",
+   "ConocoPhillips",
+   "Harbour",
+   "INPEX Idemitsu",
+   "Japex",
+   "Kistos",
+   "Lime",
+   "OKEA",
+   "OMV",
+   "ORLEN",
+   "Petrolia NOCO",
+   "Repsol",
+   "Shell",
+   "Source Energy",
+   "TotalEnergies",
+   "Wellesley"
   ],
   "licence_field": "",
   "material": "N",
   "setback": "N",
   "confidence": "low",
-  "note": "Month estimate. Estimated from prior pattern (14.01.2025, 13.01.2026); not yet announced.",
-  "source_url": "https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awarded/id3145952/",
+  "note": "TIGHT-NET EXCEPTION: ministry press release 11.09.2026 says awards planned at the start of 2027 (no month); prior rounds announced 14.01.2025 and 13.01.2026. 21 applicants incl. Pandion (former); companies listed are the current-licensee applicants.",
+  "source_url": "https://www.regjeringen.no/no/aktuelt/stor-interesse-for-nytt-leteareal-i-tfo-2026/id3172356/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [
    "Equinor",
    "Aker BP",
    "Vår Energi",
-   "DNO"
+   "DNO",
+   "Concedo",
+   "ConocoPhillips",
+   "Harbour",
+   "INPEX Idemitsu",
+   "Japex",
+   "Kistos",
+   "Lime",
+   "OKEA",
+   "OMV",
+   "ORLEN",
+   "Petrolia NOCO",
+   "Repsol",
+   "Shell",
+   "Source Energy",
+   "TotalEnergies",
+   "Wellesley"
   ],
-  "id": "NO119"
+  "id": "NO223"
  },
  {
   "date": "2027-01-01",
-  "date_confidence": "estimated",
+  "date_confidence": "quarter",
   "title": "Bestla first oil expected early 2027",
   "type": "first oil",
   "operator": "OKEA",
@@ -2967,21 +5724,22 @@
   "material": "Y",
   "setback": "N",
   "confidence": "low",
-  "note": "Month estimate; source OKEA Q4 2025 presentation (early 2027).",
-  "source_url": "https://okea.no/wp-content/uploads/2026/02/Q4-2025-Quarterly-Results-Presentation.pdf",
+  "note": "TIGHT-NET EXCEPTION: OKEA says early 2027, no month. Havtil start-up consent 23.10.2026. Placed on 1 Jan.",
+  "source_url": "https://okea.no/wp-content/uploads/2026/09/2026-09-16-Pareto-Energy-Conference.pdf",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [
    "DNO",
    "Lime",
    "M Vest"
   ],
-  "id": "NO120"
+  "id": "NO224"
  },
  {
   "date": "2027-01-01",
-  "date_confidence": "estimated",
+  "date_confidence": "quarter",
   "title": "Mistral Nord well planned early 2027",
-  "type": "well result",
+  "type": "well spud",
   "operator": "Equinor",
   "companies": [
    "Equinor",
@@ -2992,14 +5750,115 @@
   "material": "N",
   "setback": "N",
   "confidence": "low",
-  "note": "Month estimate; source Japex release 20.04.2026.",
+  "note": "TIGHT-NET EXCEPTION: Japex release 20.04.2026 says early 2027, no month. Placed on 1 Jan.",
   "source_url": "https://www.japex.co.jp",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [
    "Japex",
    "INPEX Idemitsu"
   ],
-  "id": "NO121"
+  "id": "NO225"
+ },
+ {
+  "date": "2027-01-18",
+  "date_confidence": "exact",
+  "title": "OMV Q4 2026 trading statement",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO226"
+ },
+ {
+  "date": "2027-01-26",
+  "date_confidence": "exact",
+  "title": "Vår Energi Q4 2026 trading update",
+  "type": "results",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://varenergi.no/en/investors/financial-calendar/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO227"
+ },
+ {
+  "date": "2027-02-04",
+  "date_confidence": "exact",
+  "title": "Equinor Q4 and full year 2026 results",
+  "type": "results",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.equinor.com/investors/events-and-presentations",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO228"
+ },
+ {
+  "date": "2027-02-04",
+  "date_confidence": "exact",
+  "title": "OMV Q4 and full year 2026 results",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO229"
+ },
+ {
+  "date": "2027-02-09",
+  "date_confidence": "exact",
+  "title": "Vår Energi Q4 2026 results and Capital Markets Update",
+  "type": "results and CMD",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://varenergi.no/en/investors/financial-calendar/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO230"
  },
  {
   "date": "2027-02-10",
@@ -3017,8 +5876,29 @@
   "note": "",
   "source_url": "https://akerbp.com/en/investor/calendar/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO122"
+  "id": "NO231"
+ },
+ {
+  "date": "2027-02-10",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Q4 and full year 2026 results",
+  "type": "results",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO232"
  },
  {
   "date": "2027-03-19",
@@ -3036,13 +5916,114 @@
   "note": "",
   "source_url": "https://akerbp.com/en/investor/calendar/",
   "upcoming": "Y",
+  "net": "tight",
   "other_partners": [],
-  "id": "NO123"
+  "id": "NO233"
+ },
+ {
+  "date": "2027-03-25",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Sustainability and Climate investor workshop",
+  "type": "investor event",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO234"
+ },
+ {
+  "date": "2027-04-12",
+  "date_confidence": "exact",
+  "title": "OMV Q1 2027 trading statement",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO235"
+ },
+ {
+  "date": "2027-04-14",
+  "date_confidence": "exact",
+  "title": "Aker BP calendar entry (unlabelled; likely AGM)",
+  "type": "shareholder meeting",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Date listed on Aker BP IR calendar without a label.",
+  "source_url": "https://akerbp.com/en/investor/calendar/",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO236"
+ },
+ {
+  "date": "2027-04-23",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Q1 2027 results",
+  "type": "results",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "tight",
+  "other_partners": [],
+  "id": "NO237"
+ },
+ {
+  "date": "2027-04-29",
+  "date_confidence": "exact",
+  "title": "OMV Q1 2027 results",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [],
+  "id": "NO238"
  },
  {
   "date": "2027-06-01",
-  "date_confidence": "estimated",
-  "title": "Yggdrasil and Valhall PWP-Fenris first oil targeted summer 2027",
+  "date_confidence": "quarter",
+  "title": "Yggdrasil and Valhall PWP-Fenris first oil targeted 2027 (summer per Aker BP Q2 2026)",
   "type": "first oil",
   "operator": "Aker BP",
   "companies": [
@@ -3054,14 +6035,120 @@
   "material": "Y",
   "setback": "N",
   "confidence": "medium",
-  "note": "Month estimate (summer 2027) per Aker BP Q2 2026.",
-  "source_url": "https://www.ogj.com/members/news/55391292/aker-bp-increases-project-cost-estimates-to-protect-2027-startups",
+  "note": "Summer 2027 window placed on 1 Jun; Aker BP latest wording is 2027 start-up.",
+  "source_url": "https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-report.pdf",
   "upcoming": "Y",
+  "net": "loose",
   "other_partners": [
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO124"
+  "id": "NO239"
+ },
+ {
+  "date": "2027-06-01",
+  "date_confidence": "month",
+  "title": "Kjøttkake drilling and pipeline installation planned to start June 2027",
+  "type": "milestone",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "DNO",
+   "Concedo"
+  ],
+  "licence_field": "PL1182 S",
+  "material": "N",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Aker BP impact assessment Table 2-3; placed on the 1st.",
+  "source_url": "https://akerbp.com/wp-content/uploads/2026/06/2026-kjottkake.pdf",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [
+   "DNO",
+   "Concedo"
+  ],
+  "id": "NO240"
+ },
+ {
+  "date": "2027-07-12",
+  "date_confidence": "exact",
+  "title": "OMV Q2 2027 trading statement",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [],
+  "id": "NO241"
+ },
+ {
+  "date": "2027-07-23",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Q2 2027 results",
+  "type": "results",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [],
+  "id": "NO242"
+ },
+ {
+  "date": "2027-07-30",
+  "date_confidence": "exact",
+  "title": "OMV Q2 2027 results",
+  "type": "results",
+  "operator": "OMV",
+  "companies": [
+   "OMV"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [],
+  "id": "NO243"
+ },
+ {
+  "date": "2027-09-28",
+  "date_confidence": "exact",
+  "title": "TotalEnergies Investor Day 2027",
+  "type": "investor event",
+  "operator": "TotalEnergies",
+  "companies": [
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://totalenergies.com/news/calendar",
+  "upcoming": "Y",
+  "net": "loose",
+  "other_partners": [],
+  "id": "NO244"
  },
  {
   "date": "2027-10-01",
@@ -3082,12 +6169,13 @@
   "note": "Quarter estimate placed on 1 Oct.",
   "source_url": "https://newsweb.oslobors.no/message/650425",
   "upcoming": "Y",
+  "net": "loose",
   "other_partners": [
    "Aker BP",
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO125"
+  "id": "NO245"
  },
  {
   "date": "2027-10-01",
@@ -3105,44 +6193,15 @@
   "material": "Y",
   "setback": "N",
   "confidence": "medium",
-  "note": "Quarter estimate; partners headline-level.",
+  "note": "Quarter estimate placed on 1 Oct; partners headline-level.",
   "source_url": "https://www.equinor.com/news/20260625-wisting-proposal-environmental-impact-assessment-programme",
   "upcoming": "Y",
+  "net": "loose",
   "other_partners": [
    "Aker BP",
    "Petoro",
    "INPEX Idemitsu"
   ],
-  "id": "NO126"
- },
- {
-  "date": "2028-10-01",
-  "date_confidence": "quarter",
-  "title": "Ekofisk PPF and Johan Castberg Isflak first production targeted Q4 2028",
-  "type": "first oil",
-  "operator": "ConocoPhillips",
-  "companies": [
-   "ConocoPhillips",
-   "Vår Energi",
-   "ORLEN",
-   "Petoro",
-   "TotalEnergies",
-   "Equinor"
-  ],
-  "licence_field": "ALBUSKJELL, VEST EKOFISK, TOMMELITEN GAMMA, JOHAN CASTBERG",
-  "material": "Y",
-  "setback": "N",
-  "confidence": "high",
-  "note": "Quarter estimate placed on 1 Oct.",
-  "source_url": "https://newsweb.oslobors.no/message/661692",
-  "upcoming": "Y",
-  "other_partners": [
-   "Vår Energi",
-   "ORLEN",
-   "Petoro",
-   "TotalEnergies",
-   "Equinor"
-  ],
-  "id": "NO127"
+  "id": "NO246"
  }
 ]

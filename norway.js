@@ -5,12 +5,13 @@ const state = {
   mode: "calendar",
   company: "all",
   type: "all",
-  materialOnly: true,
+  showBackground: false,
   when: "all",
 };
 
 let companies = [];
 let events = [];
+let windowRange = { today: "", start: "", tightEnd: "", end: "" };
 
 function el(tag, props, children) {
   const node = document.createElement(tag);
@@ -88,17 +89,56 @@ function safeUrl(url) {
   }
 }
 
-function eventCount(name) {
-  return events.filter((event) => event.companies.includes(name)).length;
+function isoFromLocal(date) {
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${month}-${day}`;
 }
 
-function matches(event) {
+function shiftMonths(iso, months) {
+  const [year, month, day] = iso.split("-").map(Number);
+  const cursor = new Date(year, month - 1 + months, 1);
+  const last = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 0).getDate();
+  cursor.setDate(Math.min(day, last));
+  return isoFromLocal(cursor);
+}
+
+function setWindow(today) {
+  windowRange = {
+    today,
+    start: shiftMonths(today, -12),
+    tightEnd: shiftMonths(today, 6),
+    end: shiftMonths(today, 12),
+  };
+}
+
+function inWindow(event) {
+  return event.date >= windowRange.start && event.date <= windowRange.end;
+}
+
+function isBackground(event) {
+  return event.material !== "Y" && event.setback !== "Y" && event.upcoming !== "Y";
+}
+
+function isTight(event) {
+  return event.upcoming === "Y" && event.date <= windowRange.tightEnd;
+}
+
+function eventCount(name) {
+  return events.filter((event) => event.companies.includes(name) && inWindow(event) && (state.showBackground || !isBackground(event))).length;
+}
+
+function passesFilters(event) {
+  if (!inWindow(event)) return false;
   if (state.company !== "all" && !event.companies.includes(state.company)) return false;
   if (state.type !== "all" && event.type !== state.type) return false;
-  if (state.materialOnly && event.material !== "Y") return false;
   if (state.when === "upcoming" && event.upcoming !== "Y") return false;
   if (state.when === "past" && event.upcoming === "Y") return false;
   return true;
+}
+
+function matches(event) {
+  return passesFilters(event) && (state.showBackground || !isBackground(event));
 }
 
 function byDate(a, b) {
@@ -118,6 +158,8 @@ function flags(event) {
     event.material === "Y" ? badge("Material") : null,
     event.setback === "Y" ? badge("Setback", "setback") : null,
     event.upcoming === "Y" ? badge("Upcoming", "upcoming") : null,
+    event.net === "tight" ? badge("Tight", "tight") : null,
+    event.net === "loose" ? badge("Loose", "loose") : null,
   ]);
 }
 
@@ -169,8 +211,15 @@ function monthLabelRow(text) {
   return row;
 }
 
+function eventClass(event) {
+  const classes = [];
+  if (event.upcoming === "Y") classes.push("is-upcoming");
+  if (isTight(event)) classes.push("is-tight");
+  return classes.join(" ");
+}
+
 function eventRow(event) {
-  const row = el("tr", { class: event.upcoming === "Y" ? "is-upcoming" : "" });
+  const row = el("tr", { class: eventClass(event) });
   row.append(
     el("td", {}, [dateCell(event)]),
     el("td", { text: showText(event.title) }),
@@ -184,14 +233,41 @@ function eventRow(event) {
   return row;
 }
 
-function appendSection(table, title, list, direction) {
-  if (!list.length) return;
-  const body = el("tbody");
-  body.append(sectionLabel(title));
+function appendMonths(body, list, direction) {
   groupMonths(list, direction).forEach((group) => {
     body.append(monthLabelRow(group.label));
     group.events.forEach((event) => body.append(eventRow(event)));
   });
+}
+
+function bandLabelRow(text) {
+  const row = el("tr", { class: "group band" });
+  row.append(el("th", { colspan: String(CAL_COLUMNS.length), scope: "rowgroup", text }));
+  return row;
+}
+
+function appendUpcoming(table, list) {
+  if (!list.length) return;
+  const tight = list.filter((event) => event.date <= windowRange.tightEnd);
+  const loose = list.filter((event) => event.date > windowRange.tightEnd);
+  const body = el("tbody");
+  body.append(sectionLabel("Upcoming"));
+  if (tight.length) {
+    body.append(bandLabelRow("Tight 6m"));
+    appendMonths(body, tight, "asc");
+  }
+  if (loose.length) {
+    body.append(bandLabelRow("Loose 12m"));
+    appendMonths(body, loose, "asc");
+  }
+  table.append(body);
+}
+
+function appendSection(table, title, list, direction) {
+  if (!list.length) return;
+  const body = el("tbody");
+  body.append(sectionLabel(title));
+  appendMonths(body, list, direction);
   table.append(body);
 }
 
@@ -204,7 +280,7 @@ function renderCalendarTable(rows) {
   table.append(head);
   const upcoming = rows.filter((event) => event.upcoming === "Y");
   const past = rows.filter((event) => event.upcoming !== "Y");
-  appendSection(table, "Upcoming", upcoming, "asc");
+  appendUpcoming(table, upcoming);
   appendSection(table, "Past", past, "desc");
   const tableRoot = document.getElementById("norway-cal-table");
   if (rows.length) tableRoot.replaceChildren(table);
@@ -212,7 +288,7 @@ function renderCalendarTable(rows) {
 }
 
 function eventCard(event) {
-  return el("article", { class: event.upcoming === "Y" ? "card is-upcoming" : "card" }, [
+  return el("article", { class: eventClass(event) ? `card ${eventClass(event)}` : "card" }, [
     el("span", { class: "card-top" }, [
       dateCell(event),
       flags(event),
@@ -228,16 +304,31 @@ function eventCard(event) {
 function renderCalendarCards(rows) {
   const root = document.getElementById("norway-cal-cards");
   const blocks = [];
-  const add = (title, list, direction) => {
-    if (!list.length) return;
-    blocks.push(el("h3", { class: "eyebrow", text: title }));
+  const addMonths = (list, direction) => {
     groupMonths(list, direction).forEach((group) => {
       blocks.push(el("h3", { text: group.label }));
       group.events.forEach((event) => blocks.push(eventCard(event)));
     });
   };
-  add("Upcoming", rows.filter((event) => event.upcoming === "Y"), "asc");
-  add("Past", rows.filter((event) => event.upcoming !== "Y"), "desc");
+  const upcoming = rows.filter((event) => event.upcoming === "Y");
+  const past = rows.filter((event) => event.upcoming !== "Y");
+  if (upcoming.length) {
+    const tight = upcoming.filter((event) => event.date <= windowRange.tightEnd);
+    const loose = upcoming.filter((event) => event.date > windowRange.tightEnd);
+    blocks.push(el("h3", { class: "eyebrow", text: "Upcoming" }));
+    if (tight.length) {
+      blocks.push(el("h3", { class: "band-label", text: "Tight 6m" }));
+      addMonths(tight, "asc");
+    }
+    if (loose.length) {
+      blocks.push(el("h3", { class: "band-label", text: "Loose 12m" }));
+      addMonths(loose, "asc");
+    }
+  }
+  if (past.length) {
+    blocks.push(el("h3", { class: "eyebrow", text: "Past" }));
+    addMonths(past, "desc");
+  }
   root.replaceChildren(...blocks);
 }
 
@@ -319,7 +410,7 @@ function renderCompanyCards() {
 function render() {
   const rows = visibleEvents();
   const shown = rows.length;
-  const total = events.length;
+  const total = events.filter(passesFilters).length;
   document.getElementById("norway-showing").textContent = shown === total
     ? `Showing ${total} events`
     : `Showing ${shown} of ${total} events`;
@@ -338,7 +429,7 @@ function render() {
     empty.hidden = false;
     empty.replaceChildren(
       el("strong", { text: "No events match" }),
-      el("p", { text: "Turn off Material only, or set the other filters back to All." }),
+      el("p", { text: "Turn on Show background, or set the other filters back to All." }),
     );
   } else {
     empty.hidden = true;
@@ -347,8 +438,8 @@ function render() {
   }
   renderCompanyTable();
   renderCompanyCards();
-  const material = document.getElementById("norway-material");
-  if (material) material.setAttribute("aria-pressed", state.materialOnly ? "true" : "false");
+  const background = document.getElementById("norway-background");
+  if (background) background.setAttribute("aria-pressed", state.showBackground ? "true" : "false");
 }
 
 function focusCompany(name) {
@@ -382,21 +473,16 @@ function mountFilters() {
       render();
     });
     return el("label", { class: "field" }, [label, select]);
-  }), el("label", { class: "field" }, [
-    "Material",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "norway-material",
-      "aria-pressed": "true",
-      onClick: (event) => {
-        state.materialOnly = !state.materialOnly;
-        event.currentTarget.setAttribute("aria-pressed", state.materialOnly ? "true" : "false");
-        render();
-      },
-      text: "Material only",
-    }),
-  ]));
+  }));
+}
+
+function bindBackground() {
+  const button = document.getElementById("norway-background");
+  if (!button) return;
+  button.addEventListener("click", () => {
+    state.showBackground = !state.showBackground;
+    render();
+  });
 }
 
 function bindMode() {
@@ -433,13 +519,19 @@ async function load() {
     ...row,
     companies: Array.isArray(row.companies) ? row.companies : [],
     upcoming: row.upcoming === "Y" ? "Y" : "N",
+    net: row.net === "tight" || row.net === "loose" ? row.net : "",
   }));
+  setWindow(isoFromLocal(new Date()));
+  const sub = document.getElementById("norway-sub");
+  if (sub) sub.textContent = `Norwegian shelf oil and gas. ${formatDate(windowRange.start)} to ${formatDate(windowRange.end)}.`;
   document.getElementById("norway-loading").hidden = true;
   mountFilters();
+  bindBackground();
   bindMode();
   render();
   document.body.dataset.norway = String(events.length);
   document.body.dataset.norwayCompanies = String(companies.length);
+  document.body.dataset.norwayWindow = `${windowRange.start}:${windowRange.tightEnd}:${windowRange.end}`;
 }
 
 function boot() {

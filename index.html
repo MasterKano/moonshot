@@ -167,14 +167,17 @@
       <div class="panel-head">
         <div>
           <h2 id="norway-title">Norway</h2>
-          <p class="panel-sub">Norwegian shelf oil and gas.</p>
+          <p class="panel-sub" id="norway-sub">Norwegian shelf oil and gas. 12 months back and 12 months ahead.</p>
         </div>
         <a class="subscribe" href="https://masterkano.github.io/moonshot/norway_events.ics">Subscribe</a>
       </div>
       <p class="chart-note">Add to Google Calendar: Other calendars, From URL, paste this link.</p>
-      <div class="segment scope" id="norway-mode" role="tablist" aria-label="Norway section">
-        <button type="button" role="tab" data-norway-mode="calendar" aria-selected="true">Calendar</button>
-        <button type="button" role="tab" data-norway-mode="companies" aria-selected="false">Companies</button>
+      <div class="norway-tools">
+        <div class="segment scope" id="norway-mode" role="tablist" aria-label="Norway section">
+          <button type="button" role="tab" data-norway-mode="calendar" aria-selected="true">Calendar</button>
+          <button type="button" role="tab" data-norway-mode="companies" aria-selected="false">Companies</button>
+        </div>
+        <button type="button" class="toggle-btn" id="norway-background" aria-pressed="false">Show background</button>
       </div>
       <div id="norway-cal">
         <div class="fields" id="norway-filters"></div>

@@ -20,6 +20,11 @@
       root.style.colorScheme = theme;
       var meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.setAttribute("content", theme === "light" ? "#eef1f6" : "#0b0f16");
+      var tab = "events";
+      try {
+        if (localStorage.getItem("moonshot-tab") === "smallcaps") tab = "smallcaps";
+      } catch (err) {}
+      root.setAttribute("data-view", tab);
     })();
   </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f16'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%234f7cff'/%3E%3C/svg%3E">
@@ -38,6 +43,13 @@
     </div>
   </header>
   <main class="wrap" id="main">
+    <div class="view-bar">
+      <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
+        <button type="button" role="tab" id="tab-events" data-view="events" aria-controls="events-view" aria-selected="true">Events</button>
+        <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Small caps</button>
+      </div>
+    </div>
+    <div id="events-view">
     <p class="loading" id="loading">Loading the register…</p>
     <noscript><p class="error">This page needs JavaScript to load the events register.</p></noscript>
     <div id="app" hidden>
@@ -126,14 +138,39 @@
         <div class="cards narrow-only" id="cards"></div>
       </section>
     </div>
+    </div>
+    <section class="panel" id="smallcaps" aria-labelledby="smallcaps-title" hidden>
+      <div class="panel-head">
+        <div>
+          <h2 id="smallcaps-title">Small caps</h2>
+        </div>
+        <label class="sort-label narrow-only">Sort
+          <select id="smallcaps-sort" aria-label="Sort small caps"></select>
+        </label>
+      </div>
+      <div class="cap-tools">
+        <label class="field">Search
+          <input id="smallcaps-search" type="search" placeholder="Name, code, or headline" autocomplete="off" enterkeyhint="search">
+        </label>
+        <div class="fields" id="smallcaps-filters"></div>
+      </div>
+      <p class="showing" id="smallcaps-showing" aria-live="polite"></p>
+      <p class="chart-note" id="smallcaps-note">Liquid resource small caps with at least one material de-risking event in the last 12 months. Screened from exchange data and announcement headlines; labels can be low confidence.</p>
+      <p class="loading" id="smallcaps-loading">Loading small caps…</p>
+      <div class="empty" id="smallcaps-empty" hidden></div>
+      <div class="table-wrap wide-only cap-scroll" id="smallcaps-table"></div>
+      <div class="cards narrow-only" id="smallcaps-cards"></div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Source: Moonshot Events Register, as of 25 Oct 2026</p>
+      <p class="source-events">Source: Moonshot Events Register, as of 25 Oct 2026</p>
+      <p class="source-caps">Source: example small-cap records, for layout only.</p>
     </div>
   </footer>
   <div class="scrim" id="scrim" hidden></div>
   <div class="popover" id="popover" role="dialog" aria-modal="false" tabindex="-1" hidden></div>
   <script type="module" src="app.js"></script>
+  <script type="module" src="smallcaps.js"></script>
 </body>
 </html>

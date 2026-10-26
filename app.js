@@ -692,7 +692,7 @@ function updateFilterChrome(events) {
   document.querySelectorAll("#window button").forEach((button) => {
     button.setAttribute("aria-checked", button.dataset.window === state.window ? "true" : "false");
   });
-  document.querySelectorAll(".field").forEach((field) => {
+  document.querySelectorAll("#fields .field").forEach((field) => {
     const select = field.querySelector("select");
     field.classList.toggle("active", select.value !== "all");
   });

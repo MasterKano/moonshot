@@ -1,0 +1,99 @@
+[
+  {
+    "code": "EXG",
+    "name": "Example Data Gold Co",
+    "exchange": "ASX",
+    "band": "Micro (US$5-100M)",
+    "type": "Gold",
+    "stage": "Explorer",
+    "description": "Fake example record for a gold explorer on the small-cap screen.",
+    "mkt_cap_usd_m": 42,
+    "as_of": "2026-10-20",
+    "median_daily_value_k": 180,
+    "currency": "AUD",
+    "material_events_12m": 2,
+    "latest_event_date": "2026-09-14",
+    "latest_event_type": "Resource",
+    "latest_event_headline": "Example maiden resource at North Ridge",
+    "setbacks_12m": 0,
+    "cash_flag": null,
+    "url": "https://example.com/exchange/EXG",
+    "events": [
+      {
+        "date": "2026-09-14",
+        "type": "Resource",
+        "headline": "Example maiden resource at North Ridge",
+        "setback": false
+      },
+      {
+        "date": "2026-04-02",
+        "type": "Drilling",
+        "headline": "Example drill hits at North Ridge",
+        "setback": false
+      }
+    ]
+  },
+  {
+    "code": "EXC",
+    "name": "Example Data Copper Co",
+    "exchange": "AIM",
+    "band": "Main (US$100M-5B)",
+    "type": "Copper",
+    "stage": "Study stage (low confidence)",
+    "description": "Fake example record for a copper developer, with a low-confidence stage.",
+    "mkt_cap_usd_m": 640,
+    "as_of": "2026-10-18",
+    "median_daily_value_k": 920,
+    "currency": "GBP",
+    "material_events_12m": 1,
+    "latest_event_date": "2026-08-03",
+    "latest_event_type": "Study",
+    "latest_event_headline": "Example scoping study for Red Hill",
+    "setbacks_12m": 1,
+    "cash_flag": "Cash under 12 months",
+    "url": "https://example.com/exchange/EXC",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "type": "Study",
+        "headline": "Example scoping study for Red Hill",
+        "setback": false
+      },
+      {
+        "date": "2026-06-11",
+        "type": "Permit",
+        "headline": "Example permit delayed at Red Hill",
+        "setback": true
+      }
+    ]
+  },
+  {
+    "code": "EXO",
+    "name": "Example Data Oil Co",
+    "exchange": "Main Market",
+    "band": "Micro (US$5-100M)",
+    "type": "Oil and gas",
+    "stage": "Producer",
+    "description": "Fake example record with missing market cap, setbacks, and cash flag.",
+    "currency": "GBP",
+    "material_events_12m": 3,
+    "latest_event_date": "2026-10-01",
+    "latest_event_type": "Production",
+    "latest_event_headline": "Example first oil from West Bank",
+    "cash_flag": null,
+    "url": "https://example.com/exchange/EXO",
+    "events": [
+      {
+        "date": "2026-10-01",
+        "type": "Production",
+        "headline": "Example first oil from West Bank",
+        "setback": false
+      },
+      {
+        "date": "2026-01-19",
+        "type": "Funding",
+        "headline": "Example placing to fund the West Bank tie-in"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1851 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Moonshot Norway NCS//EN
+X-WR-CALNAME:Moonshot Norway NCS events
+BEGIN:VEVENT
+SUMMARY:Aker BP: 24/12-8 S dry
+DTSTART;VALUE=DATE:20250114
+DTEND;VALUE=DATE:20250115
+DTSTAMP:20261026T090000Z
+UID:NO001-moonshot-norway
+CATEGORIES:Aker BP,Concedo
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Concedo. Licence/
+ field: PL869. Material: Y. Setback: Y. Upcoming: N. Confidence: high. Sodi
+ r exploration result\; event date is Sodir publication date. Partners = li
+ censees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resulta
+ t-av-leteboring/2025/torr-bronn-i-nordsjoen-2412-8-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-2412-8-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:NCS licensees: APA 2024 award: 53 production licences to 21 compan
+ ies
+DTSTART;VALUE=DATE:20250114
+DTEND;VALUE=DATE:20250115
+DTSTAMP:20261026T090000Z
+UID:NO002-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Vår Energi,DNO,Petoro,INPEX Idemitsu,OKEA,ORLE
+ N,Sval,Petrolia NOCO,Harbour,OMV,Concedo,ConocoPhillips,Pandion,Wellesley,
+ M Vest,TotalEnergies,Shell,Lime,Source Energy
+DESCRIPTION:Type: licence award. Operator: n/a. Partners: Equinor\, Aker B
+ P\, Vår Energi\, DNO\, Petoro\, INPEX Idemitsu\, OKEA\, ORLEN\, Sval\, Pe
+ trolia NOCO\, Harbour\, OMV\, Concedo\, ConocoPhillips\, Pandion\, Wellesl
+ ey\, M Vest\, TotalEnergies\, Shell\, Lime\, Source Energy. Licence/field:
+  n/a. Material: N. Setback: N. Upcoming: N. Confidence: high. Counts per c
+ ompany (licences/operated): Equinor 27/7\; Aker BP 19/16\; Vår Energi 16/
+ 5\; DNO 13/4\; Petoro 13/0\; INPEX Idemitsu 8/2\; OKEA 8/2\; ORLEN 8/0\; S
+ val 7/2\; Petrolia NOCO 5/3\; Harbour 4/3\; OMV 4/3\; Concedo 3/0\; Conoco
+ Phillips 3/3\; Pandion 3/0\; Wellesley 3/2\; M Vest 2/0\; TotalEnergies 2/
+ 0\; Shell 1/1\; Lime 1/0\; Source Energy 1/0. Material N: early-stage acre
+ age. Sodir formal grant date 14.03.2025. Source: https://newsweb.oslobors.
+ no/message/636472
+URL:https://newsweb.oslobors.no/message/636472
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7122/9-2 Elgol gas discovery\, not commercial
+DTSTART;VALUE=DATE:20250117
+DTEND;VALUE=DATE:20250118
+DTSTAMP:20261026T090000Z
+UID:NO003-moonshot-norway
+CATEGORIES:Vår Energi,Petoro,Equinor,Aker BP
+DESCRIPTION:Type: discovery. Operator: Vår Energi. Partners: Petoro\, Equ
+ inor\, Aker BP. Licence/field: PL1131. Material: Y. Setback: Y. Upcoming: 
+ N. Confidence: high. Sodir exploration result\; event date is Sodir public
+ ation date. Partners = licensees on that date. Source: https://www.sodir.n
+ o/aktuelt/nyheter/resultat-av-leteboring/2025/funn-av-gass-i-barentshavet-
+ 71229-2/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/funn-
+ av-gass-i-barentshavet-71229-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ORLEN: 6305/10-1 Tomcat dry
+DTSTART;VALUE=DATE:20250122
+DTEND;VALUE=DATE:20250123
+DTSTAMP:20261026T090000Z
+UID:NO004-moonshot-norway
+CATEGORIES:ORLEN,Shell
+DESCRIPTION:Type: dry well. Operator: ORLEN. Partners: Shell. Licence/fiel
+ d: PL1055. Material: Y. Setback: Y. Upcoming: N. Confidence: high. Sodir e
+ xploration result\; event date is Sodir publication date. Partners = licen
+ sees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resultat-a
+ v-leteboring/2025/torr-bronn-i-norskehavet-630510-1/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-norskehavet-630510-1/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 35/6-5 S dry
+DTSTART;VALUE=DATE:20250206
+DTEND;VALUE=DATE:20250207
+DTSTAMP:20261026T090000Z
+UID:NO005-moonshot-norway
+CATEGORIES:Aker BP,Harbour,Vår Energi
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Harbour\, Vår En
+ ergi. Licence/field: PL1110. Material: Y. Setback: Y. Upcoming: N. Confide
+ nce: high. Sodir exploration result\; event date is Sodir publication date
+ . Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/
+ nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-5-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-356-5-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 6306/6-3 S dry
+DTSTART;VALUE=DATE:20250221
+DTEND;VALUE=DATE:20250222
+DTSTAMP:20261026T090000Z
+UID:NO006-moonshot-norway
+CATEGORIES:Aker BP,Petoro,ConocoPhillips
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Petoro\, ConocoPh
+ illips. Licence/field: PL886. Material: Y. Setback: Y. Upcoming: N. Confid
+ ence: high. Sodir exploration result\; event date is Sodir publication dat
+ e. Partners = licensees on that date. Source: https://www.sodir.no/aktuelt
+ /nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-63066-3-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-norskehavet-63066-3-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7122/8-3 S Zagato oil discovery near Goliat
+DTSTART;VALUE=DATE:20250227
+DTEND;VALUE=DATE:20250228
+DTSTAMP:20261026T090000Z
+UID:NO007-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: discovery. Operator: Vår Energi. Partners: Equinor. Lic
+ ence/field: PL229. Material: Y. Setback: N. Upcoming: N. Confidence: high.
+  Sodir exploration result\; event date is Sodir publication date. Partners
+  = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/re
+ sultat-av-leteboring/2025/oljefunn-i-barentshavet-71228-3-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-i-barentshavet-71228-3-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7/1-4 S Kokopelli dry
+DTSTART;VALUE=DATE:20250304
+DTEND;VALUE=DATE:20250305
+DTSTAMP:20261026T090000Z
+UID:NO008-moonshot-norway
+CATEGORIES:Vår Energi,Equinor,Petoro,Aker BP
+DESCRIPTION:Type: dry well. Operator: Vår Energi. Partners: Equinor\, Pet
+ oro\, Aker BP. Licence/field: PL1090. Material: Y. Setback: Y. Upcoming: N
+ . Confidence: high. Sodir exploration result\; event date is Sodir publica
+ tion date. Partners = licensees on that date. Source: https://www.sodir.no
+ /aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-71-4-s
+ /
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-71-4-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 6406/6-7 S Mistral Sør gas/condensate discovery (19-44 m
+ mboe)
+DTSTART;VALUE=DATE:20250305
+DTEND;VALUE=DATE:20250306
+DTSTAMP:20261026T090000Z
+UID:NO009-moonshot-norway
+CATEGORIES:Equinor,Pandion,OKEA
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Pandion\, OKEA. 
+ Licence/field: PL1119. Material: Y. Setback: N. Upcoming: N. Confidence: h
+ igh. Sodir exploration result\; event date is Sodir publication date. Part
+ ners = licensees on that date. Source: https://www.sodir.no/aktuelt/nyhete
+ r/resultat-av-leteboring/2025/gass-kondensat-funn-i-norskehavet-64066-7-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-
+ kondensat-funn-i-norskehavet-64066-7-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: DNO to acquire Sval Energi from HitecVision (EV about USD 1.6
+ bn)\, quadruples North Sea output
+DTSTART;VALUE=DATE:20250307
+DTEND;VALUE=DATE:20250308
+DTSTAMP:20261026T090000Z
+UID:NO010-moonshot-norway
+CATEGORIES:DNO,Sval
+DESCRIPTION:Type: M and A. Operator: DNO. Partners: Sval. Licence/field: n
+ /a. Material: Y. Setback: N. Upcoming: N. Confidence: high. Signed. Comple
+ tion 12.06.2025 and Sodir merger 17.12.2025 not material. Source: https://
+ newsweb.oslobors.no/message/640686
+URL:https://newsweb.oslobors.no/message/640686
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Halten Øst on stream
+DTSTART;VALUE=DATE:20250314
+DTEND;VALUE=DATE:20250315
+DTSTAMP:20261026T090000Z
+UID:NO011-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: first oil. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: HALTEN ØST. Material: Y. Setback: N. Upcoming: N. Co
+ nfidence: high. Sodir status Producing from 14.03.2025\; Vår release 17.0
+ 3.2025. Source: https://newsweb.oslobors.no/message/641396
+URL:https://newsweb.oslobors.no/message/641396
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: OKEA farms into Tverrdal (35% of southern PL1102/1102B) f
+ rom Aker BP
+DTSTART;VALUE=DATE:20250314
+DTEND;VALUE=DATE:20250315
+DTSTAMP:20261026T090000Z
+UID:NO012-moonshot-norway
+CATEGORIES:Aker BP,OKEA,DNO,Equinor
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: OKEA\, DNO\, Equin
+ or. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: 
+ high.  Source: https://newsweb.oslobors.no/message/641305
+URL:https://newsweb.oslobors.no/message/641305
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OMV: 35/6-6 Horatio dry
+DTSTART;VALUE=DATE:20250326
+DTEND;VALUE=DATE:20250327
+DTSTAMP:20261026T090000Z
+UID:NO013-moonshot-norway
+CATEGORIES:OMV,Pandion,Aker BP,DNO
+DESCRIPTION:Type: dry well. Operator: OMV. Partners: Pandion\, Aker BP\, D
+ NO. Licence/field: PL1109. Material: Y. Setback: Y. Upcoming: N. Confidenc
+ e: high. Sodir exploration result\; event date is Sodir publication date. 
+ Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/ny
+ heter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-6/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-356-6/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 6507/2-8 Kongeørn dry
+DTSTART;VALUE=DATE:20250327
+DTEND;VALUE=DATE:20250328
+DTSTAMP:20261026T090000Z
+UID:NO014-moonshot-norway
+CATEGORIES:Aker BP,ORLEN,Equinor
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: ORLEN\, Equinor. 
+ Licence/field: PL942. Material: Y. Setback: Y. Upcoming: N. Confidence: hi
+ gh. Sodir exploration result\; event date is Sodir publication date. Partn
+ ers = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter
+ /resultat-av-leteboring/2025/torr-bronn-i-norskehavet-65072-8/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-norskehavet-65072-8/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: 35/10-15 S Kjøttkake oil and gas discovery
+DTSTART;VALUE=DATE:20250328
+DTEND;VALUE=DATE:20250329
+DTSTAMP:20261026T090000Z
+UID:NO015-moonshot-norway
+CATEGORIES:DNO,Japex,Concedo,Aker BP
+DESCRIPTION:Type: discovery. Operator: DNO. Partners: Japex\, Concedo\, Ak
+ er BP. Licence/field: PL1182 S. Material: Y. Setback: N. Upcoming: N. Conf
+ idence: high. Sodir exploration result\; event date is Sodir publication d
+ ate. Partners = licensees on that date. Source: https://www.sodir.no/aktue
+ lt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-i-nordsjoen-3510-
+ 15-s-og-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje-
+ -og-gassfunn-i-nordsjoen-3510-15-s-og-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Castberg starts production
+DTSTART;VALUE=DATE:20250331
+DTEND;VALUE=DATE:20250401
+DTSTAMP:20261026T090000Z
+UID:NO016-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: first oil. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: JOHAN CASTBERG. Material: Y. Setback: N. Upcoming: N.
+  Confidence: high.  Source: https://newsweb.oslobors.no/message/642634
+URL:https://newsweb.oslobors.no/message/642634
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 6507/5-13 S oil discovery near Skarv
+DTSTART;VALUE=DATE:20250520
+DTEND;VALUE=DATE:20250521
+DTSTAMP:20261026T090000Z
+UID:NO017-moonshot-norway
+CATEGORIES:Aker BP,Equinor,Harbour,ORLEN
+DESCRIPTION:Type: discovery. Operator: Aker BP. Partners: Equinor\, Harbou
+ r\, ORLEN. Licence/field: PL212. Material: Y. Setback: N. Upcoming: N. Con
+ fidence: high. Sodir exploration result\; event date is Sodir publication 
+ date. Partners = licensees on that date. Source: https://www.sodir.no/aktu
+ elt/nyheter/resultat-av-leteboring/2025/oljefunn-i-norskehavet-65075-13-s-
+ og-65075-13-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-i-norskehavet-65075-13-s-og-65075-13-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: 31/4-A-23 F Prince Sør oil discovery and 31/4-A-23 G dry
+DTSTART;VALUE=DATE:20250528
+DTEND;VALUE=DATE:20250529
+DTSTAMP:20261026T090000Z
+UID:NO018-moonshot-norway
+CATEGORIES:OKEA,M Vest,Lime,Petrolia NOCO,DNO
+DESCRIPTION:Type: discovery. Operator: OKEA. Partners: M Vest\, Lime\, Pet
+ rolia NOCO\, DNO. Licence/field: PL055. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high. Sodir exploration result\; event date is Sodir publi
+ cation date. Partners = licensees on that date. Source: https://www.sodir.
+ no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-og-torr-bronn-i-no
+ rdsjoen-314-a-23-f-og-314-a-23-g/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-og-torr-bronn-i-nordsjoen-314-a-23-f-og-314-a-23-g/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Balder Phase VI FID
+DTSTART;VALUE=DATE:20250618
+DTEND;VALUE=DATE:20250619
+DTSTAMP:20261026T090000Z
+UID:NO019-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: FID. Operator: Vår Energi. Partners: Kistos. Licence/fi
+ eld: BALDER. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Sour
+ ce: https://newsweb.oslobors.no/message/649457
+URL:https://newsweb.oslobors.no/message/649457
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ConocoPhillips: 6507/5-12 S Slagugle appraisal confirms
+DTSTART;VALUE=DATE:20250619
+DTEND;VALUE=DATE:20250620
+DTSTAMP:20261026T090000Z
+UID:NO020-moonshot-norway
+CATEGORIES:ConocoPhillips,Pandion
+DESCRIPTION:Type: appraisal. Operator: ConocoPhillips. Partners: Pandion. 
+ Licence/field: PL891. Material: Y. Setback: N. Upcoming: N. Confidence: hi
+ gh. Sodir exploration result\; event date is Sodir publication date. Partn
+ ers = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter
+ /resultat-av-leteboring/2025/avgrensningsbronn-bekrefter-oljefunn-i-norske
+ havet-65075-12-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgre
+ nsningsbronn-bekrefter-oljefunn-i-norskehavet-65075-12-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Balder X: first production through Jotun FPSO
+DTSTART;VALUE=DATE:20250623
+DTEND;VALUE=DATE:20250624
+DTSTAMP:20261026T090000Z
+UID:NO021-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: first oil. Operator: Vår Energi. Partners: Kistos. Lice
+ nce/field: BALDER. Material: Y. Setback: N. Upcoming: N. Confidence: high.
+   Source: https://newsweb.oslobors.no/message/649822
+URL:https://newsweb.oslobors.no/message/649822
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 6405/7-4 Rondeslottet dry
+DTSTART;VALUE=DATE:20250625
+DTEND;VALUE=DATE:20250626
+DTSTAMP:20261026T090000Z
+UID:NO022-moonshot-norway
+CATEGORIES:Aker BP,Shell,Vår Energi
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Shell\, Vår Ener
+ gi. Licence/field: PL1005. Material: Y. Setback: Y. Upcoming: N. Confidenc
+ e: high. Sodir exploration result\; event date is Sodir publication date. 
+ Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/ny
+ heter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-64057-4/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-norskehavet-64057-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 25/11-30 S Lit dry
+DTSTART;VALUE=DATE:20250626
+DTEND;VALUE=DATE:20250627
+DTSTAMP:20261026T090000Z
+UID:NO023-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Vår Energi\, Pet
+ oro. Licence/field: PL169. Material: Y. Setback: Y. Upcoming: N. Confidenc
+ e: high. Sodir exploration result\; event date is Sodir publication date. 
+ Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/ny
+ heter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-2511-30-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-2511-30-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Fram Sør PDO submitted
+DTSTART;VALUE=DATE:20250626
+DTEND;VALUE=DATE:20250627
+DTSTAMP:20261026T090000Z
+UID:NO024-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,INPEX Idemitsu
+DESCRIPTION:Type: PDO submitted. Operator: Equinor. Partners: Vår Energi
+ \, INPEX Idemitsu. Licence/field: FRAM. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high. Partners taken from Fram field. Source: https://news
+ web.oslobors.no/message/650103
+URL:https://newsweb.oslobors.no/message/650103
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shell: Ormen Lange phase 3 (subsea compression) starts production
+DTSTART;VALUE=DATE:20250627
+DTEND;VALUE=DATE:20250628
+DTSTAMP:20261026T090000Z
+UID:NO025-moonshot-norway
+CATEGORIES:Shell,Petoro,Equinor,ORLEN,Vår Energi
+DESCRIPTION:Type: first oil. Operator: Shell. Partners: Petoro\, Equinor\,
+  ORLEN\, Vår Energi. Licence/field: ORMEN LANGE. Material: Y. Setback: N.
+  Upcoming: N. Confidence: medium.  Source: https://newsweb.oslobors.no/mes
+ sage/650227
+URL:https://newsweb.oslobors.no/message/650227
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: Brage Talisker PDO exemption granted
+DTSTART;VALUE=DATE:20250627
+DTEND;VALUE=DATE:20250628
+DTSTAMP:20261026T090000Z
+UID:NO026-moonshot-norway
+CATEGORIES:OKEA,Lime,DNO,Petrolia NOCO,M Vest
+DESCRIPTION:Type: PDO approved. Operator: OKEA. Partners: Lime\, DNO\, Pet
+ rolia NOCO\, M Vest. Licence/field: BRAGE. Material: Y. Setback: N. Upcomi
+ ng: N. Confidence: high.  Source: https://factpages.sodir.no/en/field/Tabl
+ eView/PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7220/7-CD-1 H Drivis oil discovery near Johan Castberg
+DTSTART;VALUE=DATE:20250630
+DTEND;VALUE=DATE:20250701
+DTSTAMP:20261026T090000Z
+UID:NO027-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: PL532. Material: Y. Setback: N. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2025/oljefunn-ved-johan-castberg-feltet-i-ba
+ rentshavet-72207-cd-1h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-ved-johan-castberg-feltet-i-barentshavet-72207-cd-1h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Sverdrup Phase 3 FID (40-50 mmboe\, NOK 13bn\, star
+ t Q4 2027)
+DTSTART;VALUE=DATE:20250701
+DTEND;VALUE=DATE:20250702
+DTSTAMP:20261026T090000Z
+UID:NO028-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Petoro,TotalEnergies
+DESCRIPTION:Type: FID. Operator: Equinor. Partners: Aker BP\, Petoro\, Tot
+ alEnergies. Licence/field: JOHAN SVERDRUP. Material: Y. Setback: N. Upcomi
+ ng: N. Confidence: high.  Source: https://newsweb.oslobors.no/message/6504
+ 25
+URL:https://newsweb.oslobors.no/message/650425
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pandion: Pandion sells Valhall/Hod and Slagugle/Mistral interests 
+ to INPEX Idemitsu
+DTSTART;VALUE=DATE:20250701
+DTEND;VALUE=DATE:20250702
+DTSTAMP:20261026T090000Z
+UID:NO029-moonshot-norway
+CATEGORIES:Pandion,INPEX Idemitsu
+DESCRIPTION:Month estimate (placed on the 1st). Type: M and A. Operator: P
+ andion. Partners: INPEX Idemitsu. Licence/field: n/a. Material: Y. Setback
+ : N. Upcoming: N. Confidence: low. Month estimate\; buyer inferred from So
+ dir transfers completed 31.10.2025. Source: https://pandionenergy.no
+URL:https://pandionenergy.no
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Smørbukk Midt PDO exemption granted
+DTSTART;VALUE=DATE:20250707
+DTEND;VALUE=DATE:20250708
+DTSTAMP:20261026T090000Z
+UID:NO030-moonshot-norway
+CATEGORIES:Equinor,Petoro,Vår Energi,TotalEnergies
+DESCRIPTION:Type: PDO approved. Operator: Equinor. Partners: Petoro\, Vår
+  Energi\, TotalEnergies. Licence/field: ÅSGARD. Material: Y. Setback: N. 
+ Upcoming: N. Confidence: high.  Source: https://factpages.sodir.no/en/fiel
+ d/TableView/PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7220/5-4 Skred gas discovery
+DTSTART;VALUE=DATE:20250710
+DTEND;VALUE=DATE:20250711
+DTSTAMP:20261026T090000Z
+UID:NO031-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: PL532. Material: Y. Setback: N. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2025/gassfunn-ved-johan-castberg-feltet-i-ba
+ rentshavet-72205-4/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gassf
+ unn-ved-johan-castberg-feltet-i-barentshavet-72205-4/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OMV: 6606/4-1 S Hoffmann dry
+DTSTART;VALUE=DATE:20250716
+DTEND;VALUE=DATE:20250717
+DTSTAMP:20261026T090000Z
+UID:NO032-moonshot-norway
+CATEGORIES:OMV,Vår Energi,INPEX Idemitsu
+DESCRIPTION:Type: dry well. Operator: OMV. Partners: Vår Energi\, INPEX I
+ demitsu. Licence/field: PL1194. Material: Y. Setback: Y. Upcoming: N. Conf
+ idence: high. Sodir exploration result\; event date is Sodir publication d
+ ate. Partners = licensees on that date. Source: https://www.sodir.no/aktue
+ lt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-66064-1-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-norskehavet-66064-1-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 34/6-8 S dry
+DTSTART;VALUE=DATE:20250717
+DTEND;VALUE=DATE:20250718
+DTSTAMP:20261026T090000Z
+UID:NO033-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Aker BP
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Vår Energi\, Ake
+ r BP. Licence/field: PL554. Material: Y. Setback: Y. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-346-8-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-346-8-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 6406/11-2 S Vidsyn gas/condensate discovery near Fenj
+ a (25-40 mmboe)
+DTSTART;VALUE=DATE:20250721
+DTEND;VALUE=DATE:20250722
+DTSTAMP:20261026T090000Z
+UID:NO034-moonshot-norway
+CATEGORIES:Vår Energi,DNO,Sval
+DESCRIPTION:Type: discovery. Operator: Vår Energi. Partners: DNO\, Sval. 
+ Licence/field: PL586. Material: Y. Setback: N. Upcoming: N. Confidence: hi
+ gh. Sodir exploration result\; event date is Sodir publication date. Partn
+ ers = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter
+ /resultat-av-leteboring/2025/gass-kondensatfunn-i-norskehavet-640611-2-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-
+ kondensatfunn-i-norskehavet-640611-2-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP and Japex swap: Aker BP gets Kjøttkake 15%\, Kve
+ ikje 10%\, PL1212S 20%\; Japex gets Alve Nord 10%\, Verdande 3.5%
+DTSTART;VALUE=DATE:20250728
+DTEND;VALUE=DATE:20250729
+DTSTAMP:20261026T090000Z
+UID:NO035-moonshot-norway
+CATEGORIES:Aker BP,Japex
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: Japex. Licence/fie
+ ld: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Source: 
+ https://newsweb.oslobors.no/message/651807
+URL:https://newsweb.oslobors.no/message/651807
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Omega Alfa (25/1-14 A-G) significant oil discovery in Ygg
+ drasil area
+DTSTART;VALUE=DATE:20250822
+DTEND;VALUE=DATE:20250823
+DTSTAMP:20261026T090000Z
+UID:NO036-moonshot-norway
+CATEGORIES:Aker BP,Equinor,ORLEN
+DESCRIPTION:Type: discovery. Operator: Aker BP. Partners: Equinor\, ORLEN.
+  Licence/field: PL873 B. Material: Y. Setback: N. Upcoming: N. Confidence:
+  high. Sodir exploration result\; event date is Sodir publication date. Pa
+ rtners = licensees on that date. Source: https://www.sodir.no/aktuelt/nyhe
+ ter/resultat-av-leteboring/2025/oljefunn-i-yggdrasil-omradet-251-14-251-14
+ -a-b-c-d-e-f-og-g/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-i-yggdrasil-omradet-251-14-251-14-a-b-c-d-e-f-og-g/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 35/11-31 S F-Sør oil/gas discovery
+DTSTART;VALUE=DATE:20250825
+DTEND;VALUE=DATE:20250826
+DTSTAMP:20261026T090000Z
+UID:NO037-moonshot-norway
+CATEGORIES:Equinor,INPEX Idemitsu,Vår Energi
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: INPEX Idemitsu\,
+  Vår Energi. Licence/field: PL090. Material: Y. Setback: N. Upcoming: N. 
+ Confidence: high. Sodir exploration result\; event date is Sodir publicati
+ on date. Partners = licensees on that date. Source: https://www.sodir.no/a
+ ktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-nar-framfelte
+ t-i-nordsjoen-3511-31-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje-
+ -og-gassfunn-nar-framfeltet-i-nordsjoen-3511-31-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: OKEA farms into Alpehumle (PL1153\, 20%) from Harbour
+DTSTART;VALUE=DATE:20250828
+DTEND;VALUE=DATE:20250829
+DTSTAMP:20261026T090000Z
+UID:NO038-moonshot-norway
+CATEGORIES:Aker BP,OKEA,Harbour,INPEX Idemitsu
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: OKEA\, Harbour\, I
+ NPEX Idemitsu. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. C
+ onfidence: high.  Source: https://newsweb.oslobors.no/message/654042
+URL:https://newsweb.oslobors.no/message/654042
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 6506/12-PB-3 H Smørbukk Midt discovery
+DTSTART;VALUE=DATE:20250829
+DTEND;VALUE=DATE:20250830
+DTSTAMP:20261026T090000Z
+UID:NO039-moonshot-norway
+CATEGORIES:Equinor,TotalEnergies,Petoro,Vår Energi
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: TotalEnergies\, 
+ Petoro\, Vår Energi. Licence/field: PL094. Material: Y. Setback: N. Upcom
+ ing: N. Confidence: high. Sodir exploration result\; event date is Sodir p
+ ublication date. Partners = licensees on that date. Source: https://www.so
+ dir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatf
+ unn-i-norskehavet-650612-pb-3-h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje-
+ -og-gasskondensatfunn-i-norskehavet-650612-pb-3-h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Fram Sør PDO approved
+DTSTART;VALUE=DATE:20250829
+DTEND;VALUE=DATE:20250830
+DTSTAMP:20261026T090000Z
+UID:NO040-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,INPEX Idemitsu
+DESCRIPTION:Type: PDO approved. Operator: Equinor. Partners: Vår Energi\,
+  INPEX Idemitsu. Licence/field: FRAM. Material: Y. Setback: N. Upcoming: N
+ . Confidence: high.  Source: https://factpages.sodir.no/en/field/TableView
+ /PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7117/4-1 Deimos dry
+DTSTART;VALUE=DATE:20250901
+DTEND;VALUE=DATE:20250902
+DTSTAMP:20261026T090000Z
+UID:NO041-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Vår Energi\, Pet
+ oro. Licence/field: PL1238. Material: Y. Setback: Y. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2025/torr-bronn-i-barentshavet-71174-1/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-barentshavet-71174-1/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: 31/4-A-15 B Talisker oil discovery at Brage
+DTSTART;VALUE=DATE:20250911
+DTEND;VALUE=DATE:20250912
+DTSTAMP:20261026T090000Z
+UID:NO042-moonshot-norway
+CATEGORIES:OKEA,M Vest,Lime,Petrolia NOCO,DNO
+DESCRIPTION:Type: discovery. Operator: OKEA. Partners: M Vest\, Lime\, Pet
+ rolia NOCO\, DNO. Licence/field: PL055. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high. Sodir exploration result\; event date is Sodir publi
+ cation date. Partners = licensees on that date. Source: https://www.sodir.
+ no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-nordsjoen-314-a-
+ 15-b/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljef
+ unn-i-nordsjoen-314-a-15-b/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 34/8-20 S dry
+DTSTART;VALUE=DATE:20250919
+DTEND;VALUE=DATE:20250920
+DTSTAMP:20261026T090000Z
+UID:NO043-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Vår Energi
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Aker BP\, Vår En
+ ergi. Licence/field: PL554 E. Material: Y. Setback: Y. Upcoming: N. Confid
+ ence: high. Sodir exploration result\; event date is Sodir publication dat
+ e. Partners = licensees on that date. Source: https://www.sodir.no/aktuelt
+ /nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-348-20-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-348-20-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Askeladd Vest starts gas production (Snøhvit plateau)
+DTSTART;VALUE=DATE:20250923
+DTEND;VALUE=DATE:20250924
+DTSTAMP:20261026T090000Z
+UID:NO044-moonshot-norway
+CATEGORIES:Equinor,Petoro,TotalEnergies,Vår Energi,Harbour
+DESCRIPTION:Type: first oil. Operator: Equinor. Partners: Petoro\, TotalEn
+ ergies\, Vår Energi\, Harbour. Licence/field: SNØHVIT. Material: Y. Setb
+ ack: N. Upcoming: N. Confidence: high.  Source: https://newsweb.oslobors.n
+ o/message/655947
+URL:https://newsweb.oslobors.no/message/655947
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Vår Energi acquires TotalEnergies interest in Ekofis
+ k PPF (PL018F)
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+DTSTAMP:20261026T090000Z
+UID:NO045-moonshot-norway
+CATEGORIES:Vår Energi,TotalEnergies,ORLEN
+DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: TotalEnergies
+ \, ORLEN. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Confid
+ ence: medium. ORLEN also took a share (Sodir transfer 18.12.2025). Source:
+  https://newsweb.oslobors.no/message/656463
+URL:https://newsweb.oslobors.no/message/656463
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Gjøa low pressure project start-up raises production
+  and reserves
+DTSTART;VALUE=DATE:20251007
+DTEND;VALUE=DATE:20251008
+DTSTAMP:20261026T090000Z
+UID:NO046-moonshot-norway
+CATEGORIES:Vår Energi,Petoro,Harbour,OKEA
+DESCRIPTION:Type: first oil. Operator: Vår Energi. Partners: Petoro\, Har
+ bour\, OKEA. Licence/field: GJØA. Material: N. Setback: N. Upcoming: N. C
+ onfidence: high.  Source: https://newsweb.oslobors.no/message/656737
+URL:https://newsweb.oslobors.no/message/656737
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Kjøttkake fast-track tie-back launched\; operatorship to
+  Aker BP
+DTSTART;VALUE=DATE:20251106
+DTEND;VALUE=DATE:20251107
+DTSTAMP:20261026T090000Z
+UID:NO047-moonshot-norway
+CATEGORIES:Aker BP,Concedo,DNO
+DESCRIPTION:Type: FID. Operator: Aker BP. Partners: Concedo\, DNO. Licence
+ /field: PL1182 S. Material: Y. Setback: N. Upcoming: N. Confidence: medium
+ . Concept/fast-track launch\, not formal PDO. Source: https://newsweb.oslo
+ bors.no/message/658866
+URL:https://newsweb.oslobors.no/message/658866
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP and DNO asset swap: Aker BP takes Kjøttkake oper
+ atorship and more Vilje/Kveikje\; sells Verdande to DNO
+DTSTART;VALUE=DATE:20251106
+DTEND;VALUE=DATE:20251107
+DTSTAMP:20261026T090000Z
+UID:NO048-moonshot-norway
+CATEGORIES:Aker BP,DNO
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: DNO. Licence/field
+ : n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Source: ht
+ tps://newsweb.oslobors.no/message/658877
+URL:https://newsweb.oslobors.no/message/658877
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 30/11-16 S dry
+DTSTART;VALUE=DATE:20251107
+DTEND;VALUE=DATE:20251108
+DTSTAMP:20261026T090000Z
+UID:NO049-moonshot-norway
+CATEGORIES:Aker BP,Equinor,ORLEN
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Equinor\, ORLEN. 
+ Licence/field: PL873. Material: Y. Setback: Y. Upcoming: N. Confidence: hi
+ gh. Sodir exploration result\; event date is Sodir publication date. Partn
+ ers = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter
+ /resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-3011-16-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-3011-16-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 34/6-9 S dry
+DTSTART;VALUE=DATE:20251111
+DTEND;VALUE=DATE:20251112
+DTSTAMP:20261026T090000Z
+UID:NO050-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Aker BP
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Vår Energi\, Ake
+ r BP. Licence/field: PL554. Material: Y. Setback: Y. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-34-6-9-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-34-6-9-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7122/8-4 S Zagato North appraisal confirms oil
+DTSTART;VALUE=DATE:20251113
+DTEND;VALUE=DATE:20251114
+DTSTAMP:20261026T090000Z
+UID:NO051-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: appraisal. Operator: Vår Energi. Partners: Equinor. Lic
+ ence/field: PL229. Material: Y. Setback: N. Upcoming: N. Confidence: high.
+  Sodir exploration result\; event date is Sodir publication date. Partners
+  = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/re
+ sultat-av-leteboring/2025/avgrensing-av-oljefunnet-zagato-i-barentshavet--
+ 71228-4-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgre
+ nsing-av-oljefunnet-zagato-i-barentshavet--71228-4-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: 2/6-8 S Page dry
+DTSTART;VALUE=DATE:20251118
+DTEND;VALUE=DATE:20251119
+DTSTAMP:20261026T090000Z
+UID:NO052-moonshot-norway
+CATEGORIES:DNO,Petoro,Source Energy,Aker BP
+DESCRIPTION:Type: dry well. Operator: DNO. Partners: Petoro\, Source Energ
+ y\, Aker BP. Licence/field: PL1086. Material: Y. Setback: Y. Upcoming: N. 
+ Confidence: high. Sodir exploration result\; event date is Sodir publicati
+ on date. Partners = licensees on that date. Source: https://www.sodir.no/a
+ ktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-26-8-s-o
+ g-26-8-st2/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-
+ bronn-i-nordsjoen-26-8-s-og-26-8-st2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: DNO sells 7.604% Ekofisk PPF to ORLEN\; buys 20% PL1135 (Cass
+ io) and 0.83% Verdande
+DTSTART;VALUE=DATE:20251118
+DTEND;VALUE=DATE:20251119
+DTSTAMP:20261026T090000Z
+UID:NO053-moonshot-norway
+CATEGORIES:DNO,ORLEN
+DESCRIPTION:Type: M and A. Operator: DNO. Partners: ORLEN. Licence/field: 
+ n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Source: http
+ s://newsweb.oslobors.no/message/659899
+URL:https://newsweb.oslobors.no/message/659899
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Verdande on stream
+DTSTART;VALUE=DATE:20251201
+DTEND;VALUE=DATE:20251202
+DTSTAMP:20261026T090000Z
+UID:NO054-moonshot-norway
+CATEGORIES:Equinor,Petoro,Sval,Aker BP,Japex,ORLEN
+DESCRIPTION:Type: first oil. Operator: Equinor. Partners: Petoro\, Sval\, 
+ Aker BP\, Japex\, ORLEN. Licence/field: VERDANDE. Material: Y. Setback: N.
+  Upcoming: N. Confidence: high. Sodir field status Producing from 01.12.20
+ 25. Source: https://factpages.sodir.no/en/field/PageView/All
+URL:https://factpages.sodir.no/en/field/PageView/All
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7122/7-8 Goliat Nord oil/gas discovery
+DTSTART;VALUE=DATE:20251204
+DTEND;VALUE=DATE:20251205
+DTSTAMP:20261026T090000Z
+UID:NO055-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: discovery. Operator: Vår Energi. Partners: Equinor. Lic
+ ence/field: PL229. Material: Y. Setback: N. Upcoming: N. Confidence: high.
+  Sodir exploration result\; event date is Sodir publication date. Partners
+  = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/re
+ sultat-av-leteboring/2025/olje--og-gassfunn-i-barentshavet-71227-8/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje-
+ -og-gassfunn-i-barentshavet-71227-8/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 15/5-8 S and A Lofn/Langemann gas/condensate discovery (3
+ 0-110 mmboe)
+DTSTART;VALUE=DATE:20251205
+DTEND;VALUE=DATE:20251206
+DTSTAMP:20261026T090000Z
+UID:NO056-moonshot-norway
+CATEGORIES:Equinor,Aker BP
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Aker BP. Licence
+ /field: PL1140. Material: Y. Setback: N. Upcoming: N. Confidence: high. So
+ dir exploration result\; event date is Sodir publication date. Partners = 
+ licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resul
+ tat-av-leteboring/2025/gass-kondensatfunn-i-nordsjoen-155-8-s-og-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-
+ kondensatfunn-i-nordsjoen-155-8-s-og-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Castberg Isflak FID (start Q4 2028)
+DTSTART;VALUE=DATE:20251211
+DTEND;VALUE=DATE:20251212
+DTSTAMP:20261026T090000Z
+UID:NO057-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: FID. Operator: Equinor. Partners: Vår Energi\, Petoro. 
+ Licence/field: JOHAN CASTBERG. Material: Y. Setback: N. Upcoming: N. Confi
+ dence: high.  Source: https://newsweb.oslobors.no/message/661692
+URL:https://newsweb.oslobors.no/message/661692
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ConocoPhillips: Ekofisk PPF project sanctioned (Albuskjell\, Vest 
+ Ekofisk\, Tommeliten Gamma)
+DTSTART;VALUE=DATE:20251216
+DTEND;VALUE=DATE:20251217
+DTSTAMP:20261026T090000Z
+UID:NO058-moonshot-norway
+CATEGORIES:ConocoPhillips,TotalEnergies,Vår Energi,Sval,Petoro,ORLEN
+DESCRIPTION:Type: FID. Operator: ConocoPhillips. Partners: TotalEnergies\,
+  Vår Energi\, Sval\, Petoro\, ORLEN. Licence/field: EKOFISK\, TOMMELITEN 
+ GAMMA. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Source: ht
+ tps://newsweb.oslobors.no/message/662090
+URL:https://newsweb.oslobors.no/message/662090
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Balder Phase V start-up\; Åsgard LPP3 completion
+DTSTART;VALUE=DATE:20251217
+DTEND;VALUE=DATE:20251218
+DTSTAMP:20261026T090000Z
+UID:NO059-moonshot-norway
+CATEGORIES:Vår Energi,Kistos,Equinor,Petoro,TotalEnergies
+DESCRIPTION:Type: first oil. Operator: Vår Energi. Partners: Kistos\, Equ
+ inor\, Petoro\, TotalEnergies. Licence/field: BALDER\, ÅSGARD. Material: 
+ Y. Setback: N. Upcoming: N. Confidence: high.  Source: https://varenergi.n
+ o/en/newsroom/stock-exchange-announcements/
+URL:https://varenergi.no/en/newsroom/stock-exchange-announcements/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Harbour: 35/8-8 S and A Camilla Nord discovery
+DTSTART;VALUE=DATE:20251219
+DTEND;VALUE=DATE:20251220
+DTSTAMP:20261026T090000Z
+UID:NO060-moonshot-norway
+CATEGORIES:Harbour,Petoro
+DESCRIPTION:Type: discovery. Operator: Harbour. Partners: Petoro. Licence/
+ field: PL248 LS. Material: Y. Setback: N. Upcoming: N. Confidence: high. S
+ odir exploration result\; event date is Sodir publication date. Partners =
+  licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resu
+ ltat-av-leteboring/2025/gass--og-kondensatfunn-i-nordsjoen-358-8-s-og-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-
+ -og-kondensatfunn-i-nordsjoen-358-8-s-og-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 6407/1-B-2 H Tyrihans Øst discovery
+DTSTART;VALUE=DATE:20251222
+DTEND;VALUE=DATE:20251223
+DTSTAMP:20261026T090000Z
+UID:NO061-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,TotalEnergies,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Vår Energi\, To
+ talEnergies\, Petoro. Licence/field: PL073. Material: Y. Setback: N. Upcom
+ ing: N. Confidence: high. Sodir exploration result\; event date is Sodir p
+ ublication date. Partners = licensees on that date. Source: https://www.so
+ dir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatf
+ unn-nar-tyrihansfeltet-i-norskehavet-64071-b-2-h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje-
+ -og-gasskondensatfunn-nar-tyrihansfeltet-i-norskehavet-64071-b-2-h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Vår Energi cuts 2025 guidance to low end: Johan Cast
+ berg offloading hose issues and Jotun FPSO interruptions
+DTSTART;VALUE=DATE:20251222
+DTEND;VALUE=DATE:20251223
+DTSTAMP:20261026T090000Z
+UID:NO062-moonshot-norway
+CATEGORIES:Vår Energi,Equinor,Petoro,Kistos
+DESCRIPTION:Type: shutdown. Operator: Vår Energi. Partners: Equinor\, Pet
+ oro\, Kistos. Licence/field: n/a. Material: Y. Setback: Y. Upcoming: N. Co
+ nfidence: high.  Source: https://newsweb.oslobors.no/message/662606
+URL:https://newsweb.oslobors.no/message/662606
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:NCS licensees: APA 2025 award: 56 production licences to 19 compan
+ ies
+DTSTART;VALUE=DATE:20260113
+DTEND;VALUE=DATE:20260114
+DTSTAMP:20261026T090000Z
+UID:NO063-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Petoro,DNO,Vår Energi,Harbour,INPEX Idemitsu,O
+ RLEN,Wellesley,OMV,OKEA,Concedo,Japex,Source Energy,ConocoPhillips,Pandion
+ ,Petrolia NOCO,Repsol,TotalEnergies
+DESCRIPTION:Type: licence award. Operator: n/a. Partners: Equinor\, Aker B
+ P\, Petoro\, DNO\, Vår Energi\, Harbour\, INPEX Idemitsu\, ORLEN\, Welles
+ ley\, OMV\, OKEA\, Concedo\, Japex\, Source Energy\, ConocoPhillips\, Pand
+ ion\, Petrolia NOCO\, Repsol\, TotalEnergies. Licence/field: n/a. Material
+ : N. Setback: N. Upcoming: N. Confidence: high. Counts per company (licenc
+ es/operated): Equinor 35/16\; Aker BP 22/12\; Petoro 20/0\; DNO 16/4\; Vå
+ r Energi 14/7\; Harbour 9/4\; INPEX Idemitsu 5/1\; ORLEN 5/0\; Wellesley 5
+ /5\; OMV 4/2\; OKEA 3/1\; Concedo 2/1\; Japex 2/0\; Source Energy 2/0\; Co
+ nocoPhillips 1/1\; Pandion 1/0\; Petrolia NOCO 1/1\; Repsol 1/1\; TotalEne
+ rgies 1/0. Material N: early-stage acreage. Sodir formal grant date 20.03.
+ 2026. Source: https://www.regjeringen.no/en/whats-new/57-new-production-li
+ censes-awarded/id3145952/
+URL:https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awa
+ rded/id3145952/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 7122/8-3 A Zagato appraisal with production tests
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+DTSTAMP:20261026T090000Z
+UID:NO064-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: appraisal. Operator: Vår Energi. Partners: Equinor. Lic
+ ence/field: PL229. Material: Y. Setback: N. Upcoming: N. Confidence: high.
+  Sodir exploration result\; event date is Sodir publication date. Partners
+  = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/re
+ sultat-av-leteboring/2026/avgrensningsbronn-bekrefter-oljefunn-i-barentsha
+ vet-71228-3-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgre
+ nsningsbronn-bekrefter-oljefunn-i-barentshavet-71228-3-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 6507/8-12 S Othello Sør oil discovery
+DTSTART;VALUE=DATE:20260119
+DTEND;VALUE=DATE:20260120
+DTSTAMP:20261026T090000Z
+UID:NO065-moonshot-norway
+CATEGORIES:Equinor,ConocoPhillips,Vår Energi,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: ConocoPhillips\,
+  Vår Energi\, Petoro. Licence/field: PL124 B. Material: Y. Setback: N. Up
+ coming: N. Confidence: high. Sodir exploration result\; event date is Sodi
+ r publication date. Partners = licensees on that date. Source: https://www
+ .sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-norskehav
+ et-65078-12-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljef
+ unn-i-norskehavet-65078-12-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 15/8-3 S Sissel gas/condensate discovery
+DTSTART;VALUE=DATE:20260120
+DTEND;VALUE=DATE:20260121
+DTSTAMP:20261026T090000Z
+UID:NO066-moonshot-norway
+CATEGORIES:Equinor,ORLEN
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: ORLEN. Licence/f
+ ield: PL1137. Material: Y. Setback: N. Upcoming: N. Confidence: high. Sodi
+ r exploration result\; event date is Sodir publication date. Partners = li
+ censees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resulta
+ t-av-leteboring/2026/gass--og-kondensatfunn-i-nordsjoen-158--3-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass-
+ -og-kondensatfunn-i-nordsjoen-158--3-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: 31/4-A-15 D Knockando discovery at Brage
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260129
+DTSTAMP:20261026T090000Z
+UID:NO067-moonshot-norway
+CATEGORIES:OKEA,DNO,Petrolia NOCO,Lime,M Vest
+DESCRIPTION:Type: discovery. Operator: OKEA. Partners: DNO\, Petrolia NOCO
+ \, Lime\, M Vest. Licence/field: PL055. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high. Sodir exploration result\; event date is Sodir publi
+ cation date. Partners = licensees on that date. Source: https://www.sodir.
+ no/aktuelt/nyheter/resultat-av-leteboring/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Solveig Phase 2 on stream
+DTSTART;VALUE=DATE:20260202
+DTEND;VALUE=DATE:20260203
+DTSTAMP:20261026T090000Z
+UID:NO068-moonshot-norway
+CATEGORIES:Aker BP,OMV,Harbour
+DESCRIPTION:Type: first oil. Operator: Aker BP. Partners: OMV\, Harbour. L
+ icence/field: SOLVEIG. Material: Y. Setback: N. Upcoming: N. Confidence: h
+ igh.  Source: https://newsweb.oslobors.no/message/664571
+URL:https://newsweb.oslobors.no/message/664571
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 25/8-C-23 D dry
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260213
+DTSTAMP:20261026T090000Z
+UID:NO069-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: dry well. Operator: Vår Energi. Partners: Kistos. Licen
+ ce/field: PL027. Material: Y. Setback: Y. Upcoming: N. Confidence: high. S
+ odir exploration result\; event date is Sodir publication date. Partners =
+  licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resu
+ ltat-av-leteboring/2026/torr-bronn-i-nordsjoen-258-c-23-d/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-
+ bronn-i-nordsjoen-258-c-23-d/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ConocoPhillips: PPF PDOs submitted (90-120 mmboe\, first gas Q4 20
+ 28)
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+DTSTAMP:20261026T090000Z
+UID:NO070-moonshot-norway
+CATEGORIES:ConocoPhillips,Vår Energi,ORLEN,Petoro,TotalEnergies
+DESCRIPTION:Type: PDO submitted. Operator: ConocoPhillips. Partners: Vår 
+ Energi\, ORLEN\, Petoro\, TotalEnergies. Licence/field: ALBUSKJELL\, VEST 
+ EKOFISK\, TOMMELITEN GAMMA. Material: Y. Setback: N. Upcoming: N. Confiden
+ ce: medium.  Source: https://www.conocophillips.no
+URL:https://www.conocophillips.no
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 33/12-N-3 HH Granat oil/gas discovery and GH dry
+DTSTART;VALUE=DATE:20260216
+DTEND;VALUE=DATE:20260217
+DTSTAMP:20261026T090000Z
+UID:NO071-moonshot-norway
+CATEGORIES:Equinor,OMV,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: OMV\, Petoro. Li
+ cence/field: PL037 B. Material: Y. Setback: N. Upcoming: N. Confidence: hi
+ gh. Sodir exploration result\; event date is Sodir publication date. Partn
+ ers = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter
+ /resultat-av-leteboring/2026/olje--og-gassfunn-og-torr-bronn-i-nordsjoen-3
+ 312-n-3-hh-og-3312-n-3-gh/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje-
+ -og-gassfunn-og-torr-bronn-i-nordsjoen-3312-n-3-hh-og-3312-n-3-gh/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7018/5-2 Vikingskipet dry
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+DTSTAMP:20261026T090000Z
+UID:NO072-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Vår Energi\, Pet
+ oro. Licence/field: PL1236. Material: Y. Setback: Y. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2026/torr-bronn-i-barentshavet-70185-2/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-
+ bronn-i-barentshavet-70185-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 34/4-19 S Omega Sør Alfa oil discovery
+DTSTART;VALUE=DATE:20260302
+DTEND;VALUE=DATE:20260303
+DTSTAMP:20261026T090000Z
+UID:NO073-moonshot-norway
+CATEGORIES:Equinor,INPEX Idemitsu,Vår Energi,Harbour,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: INPEX Idemitsu\,
+  Vår Energi\, Harbour\, Petoro. Licence/field: PL057. Material: Y. Setbac
+ k: N. Upcoming: N. Confidence: high. Sodir exploration result\; event date
+  is Sodir publication date. Partners = licensees on that date. Source: htt
+ ps://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/fant-mer-olj
+ e-ved-snorre-344-19-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/fant-
+ mer-olje-ved-snorre-344-19-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 35/11-32 S Byrding C oil discovery
+DTSTART;VALUE=DATE:20260310
+DTEND;VALUE=DATE:20260311
+DTSTAMP:20261026T090000Z
+UID:NO074-moonshot-norway
+CATEGORIES:Equinor,INPEX Idemitsu
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: INPEX Idemitsu. 
+ Licence/field: PL090 HS. Material: Y. Setback: N. Upcoming: N. Confidence:
+  high. Sodir exploration result\; event date is Sodir publication date. Pa
+ rtners = licensees on that date. Source: https://www.sodir.no/aktuelt/nyhe
+ ter/resultat-av-leteboring/2026/oljefunn-i-nordsjoen-3511-32-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljef
+ unn-i-nordsjoen-3511-32-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Ringhorne fase 5 PDO exemption granted
+DTSTART;VALUE=DATE:20260317
+DTEND;VALUE=DATE:20260318
+DTSTAMP:20261026T090000Z
+UID:NO075-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: PDO approved. Operator: Vår Energi. Partners: Kistos. L
+ icence/field: BALDER. Material: Y. Setback: N. Upcoming: N. Confidence: hi
+ gh.  Source: https://factpages.sodir.no/en/field/TableView/PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7220/7-5 Polynya oil discovery
+DTSTART;VALUE=DATE:20260318
+DTEND;VALUE=DATE:20260319
+DTSTAMP:20261026T090000Z
+UID:NO076-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: PL532. Material: Y. Setback: N. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2026/oljefunn-i-barentshavet-72207-5/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljef
+ unn-i-barentshavet-72207-5/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Fram F-Øst PDO exemption granted
+DTSTART;VALUE=DATE:20260323
+DTEND;VALUE=DATE:20260324
+DTSTAMP:20261026T090000Z
+UID:NO077-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,INPEX Idemitsu
+DESCRIPTION:Type: PDO approved. Operator: Equinor. Partners: Vår Energi\,
+  INPEX Idemitsu. Licence/field: FRAM. Material: Y. Setback: N. Upcoming: N
+ . Confidence: high.  Source: https://factpages.sodir.no/en/field/TableView
+ /PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: OKEA raises Talisker West resources to 23-44 mmboe\; first o
+ il 2027
+DTSTART;VALUE=DATE:20260325
+DTEND;VALUE=DATE:20260326
+DTSTAMP:20261026T090000Z
+UID:NO078-moonshot-norway
+CATEGORIES:OKEA,DNO,Petrolia NOCO,Lime,M Vest
+DESCRIPTION:Type: appraisal. Operator: OKEA. Partners: DNO\, Petrolia NOCO
+ \, Lime\, M Vest. Licence/field: PL055. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high.  Source: https://newsweb.oslobors.no/message/669230
+URL:https://newsweb.oslobors.no/message/669230
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Symra on stream\, nine months early
+DTSTART;VALUE=DATE:20260407
+DTEND;VALUE=DATE:20260408
+DTSTAMP:20261026T090000Z
+UID:NO079-moonshot-norway
+CATEGORIES:Aker BP,Equinor,DNO
+DESCRIPTION:Type: first oil. Operator: Aker BP. Partners: Equinor\, DNO. L
+ icence/field: SYMRA. Material: Y. Setback: N. Upcoming: N. Confidence: hig
+ h. Sodir status Producing from 01.04.2026. Source: https://newsweb.oslobor
+ s.no/message/670011
+URL:https://newsweb.oslobors.no/message/670011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Goliat Gas Export amended PDO submitted (112 mmboe gr
+ oss 2P)
+DTSTART;VALUE=DATE:20260415
+DTEND;VALUE=DATE:20260416
+DTSTAMP:20261026T090000Z
+UID:NO080-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: PDO submitted. Operator: Vår Energi. Partners: Equinor.
+  Licence/field: GOLIAT. Material: Y. Setback: N. Upcoming: N. Confidence: 
+ high.  Source: https://newsweb.oslobors.no/message/670663
+URL:https://newsweb.oslobors.no/message/670663
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: OKEA sells 20% PL1119 (Mistral) to Japex for USD 30m plus
+  contingent
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260421
+DTSTAMP:20261026T090000Z
+UID:NO081-moonshot-norway
+CATEGORIES:Equinor,DNO,INPEX Idemitsu,OKEA,Japex
+DESCRIPTION:Type: M and A. Operator: Equinor. Partners: DNO\, INPEX Idemit
+ su\, OKEA\, Japex. Licence/field: PL1119. Material: Y. Setback: N. Upcomin
+ g: N. Confidence: high. Mistral Nord well planned early 2027 (Japex). Sour
+ ce: https://newsweb.oslobors.no/message/670937
+URL:https://newsweb.oslobors.no/message/670937
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 34/8-A-37 H dry
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+DTSTAMP:20261026T090000Z
+UID:NO082-moonshot-norway
+CATEGORIES:Equinor,Repsol,Petoro,ConocoPhillips
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: Repsol\, Petoro\,
+  ConocoPhillips. Licence/field: PL120. Material: Y. Setback: Y. Upcoming: 
+ N. Confidence: high. Sodir exploration result\; event date is Sodir public
+ ation date. Partners = licensees on that date. Source: https://www.sodir.n
+ o/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-348-a
+ -37-h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-
+ bronn-i-nordsjoen-348-a-37-h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Eirin gas field in production
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+DTSTAMP:20261026T090000Z
+UID:NO083-moonshot-norway
+CATEGORIES:Equinor,ORLEN
+DESCRIPTION:Type: first oil. Operator: Equinor. Partners: ORLEN. Licence/f
+ ield: EIRIN. Material: Y. Setback: N. Upcoming: N. Confidence: high. Sodir
+  status Producing from 03.05.2026. Source: https://www.equinor.com/news/20
+ 260505-eirin-field-production
+URL:https://www.equinor.com/news/20260505-eirin-field-production
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ConocoPhillips: PPF PDOs approved (Albuskjell\, Vest Ekofisk\, Tom
+ meliten Gamma)
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+DTSTAMP:20261026T090000Z
+UID:NO084-moonshot-norway
+CATEGORIES:ConocoPhillips,Vår Energi,ORLEN,Petoro,TotalEnergies
+DESCRIPTION:Type: PDO approved. Operator: ConocoPhillips. Partners: Vår E
+ nergi\, ORLEN\, Petoro\, TotalEnergies. Licence/field: ALBUSKJELL\, VEST E
+ KOFISK\, TOMMELITEN GAMMA. Material: Y. Setback: N. Upcoming: N. Confidenc
+ e: high.  Source: https://factpages.sodir.no/en/field/TableView/PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Castberg Isflak PDO exemption granted
+DTSTART;VALUE=DATE:20260508
+DTEND;VALUE=DATE:20260509
+DTSTAMP:20261026T090000Z
+UID:NO085-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: PDO approved. Operator: Equinor. Partners: Vår Energi\,
+  Petoro. Licence/field: JOHAN CASTBERG. Material: Y. Setback: N. Upcoming:
+  N. Confidence: high.  Source: https://factpages.sodir.no/en/field/TableVi
+ ew/PDO
+URL:https://factpages.sodir.no/en/field/TableView/PDO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP and Equinor strategic collaboration and transacti
+ ons in Ringvei Vest\, Yggdrasil and Wisting areas
+DTSTART;VALUE=DATE:20260521
+DTEND;VALUE=DATE:20260522
+DTSTAMP:20261026T090000Z
+UID:NO086-moonshot-norway
+CATEGORIES:Aker BP,Equinor
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: Equinor. Licence/f
+ ield: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high. Complet
+ ion 30.09.2026 (Sodir) not material. Source: https://newsweb.oslobors.no/m
+ essage/674060
+URL:https://newsweb.oslobors.no/message/674060
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Sverdrup phase 4 maturation: 20-30 mmboe found by a
+ ppraisal\, potential start 2029
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260616
+DTSTAMP:20261026T090000Z
+UID:NO087-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Petoro,TotalEnergies
+DESCRIPTION:Type: appraisal. Operator: Equinor. Partners: Aker BP\, Petoro
+ \, TotalEnergies. Licence/field: JOHAN SVERDRUP. Material: Y. Setback: N. 
+ Upcoming: N. Confidence: high.  Source: https://newsweb.oslobors.no/messag
+ e/676144
+URL:https://newsweb.oslobors.no/message/676144
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 6507/8-D-4 CH dry
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+DTSTAMP:20261026T090000Z
+UID:NO088-moonshot-norway
+CATEGORIES:Equinor,ConocoPhillips,Petoro,Vår Energi
+DESCRIPTION:Type: dry well. Operator: Equinor. Partners: ConocoPhillips\, 
+ Petoro\, Vår Energi. Licence/field: PL124. Material: Y. Setback: Y. Upcom
+ ing: N. Confidence: high. Sodir exploration result\; event date is Sodir p
+ ublication date. Partners = licensees on that date. Source: https://www.so
+ dir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-norskehave
+ t-65078-d-4-ch/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-
+ bronn-i-norskehavet-65078-d-4-ch/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Balder Next New Wells FID
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+DTSTAMP:20261026T090000Z
+UID:NO089-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: FID. Operator: Vår Energi. Partners: Kistos. Licence/fi
+ eld: BALDER. Material: Y. Setback: N. Upcoming: N. Confidence: high.  Sour
+ ce: https://newsweb.oslobors.no/message/676445
+URL:https://newsweb.oslobors.no/message/676445
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Ringvei Vest concept agreed (about 240 mmboe\, tie-back t
+ o Troll B)
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+DTSTAMP:20261026T090000Z
+UID:NO090-moonshot-norway
+CATEGORIES:Equinor,Aker BP
+DESCRIPTION:Type: concept select. Operator: Equinor. Partners: Aker BP. Li
+ cence/field: n/a. Material: N. Setback: N. Upcoming: N. Confidence: high. 
+ Concept select\, not FID\; partners beyond Equinor and Aker BP not resolve
+ d (8 licences). Source: https://newsweb.oslobors.no/message/676465
+URL:https://newsweb.oslobors.no/message/676465
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Vår Energi portfolio deals: buys Pandion portfolio (
+ USD 110m)\, swap with DNO (Gjøa 5% for Nova 5% and Ringhorne Nord 15%)\, 
+ sells Goliat 20% and Fenja stakes\; ORLEN buys 20% of five Vår licences i
+ ncl Goliat
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+DTSTAMP:20261026T090000Z
+UID:NO091-moonshot-norway
+CATEGORIES:Vår Energi,Pandion,DNO,ORLEN
+DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Pandion\, DNO
+ \, ORLEN. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. Confid
+ ence: high. Completion of Pandion deal 30.09.2026 not material. Source: ht
+ tps://newsweb.oslobors.no/message/676457
+URL:https://newsweb.oslobors.no/message/676457
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wellesley: 35/10-16 S Carmen appraisal (21-107 mmboe\, tight reser
+ voir)
+DTSTART;VALUE=DATE:20260622
+DTEND;VALUE=DATE:20260623
+DTSTAMP:20261026T090000Z
+UID:NO092-moonshot-norway
+CATEGORIES:Wellesley,Equinor,Aker BP,DNO
+DESCRIPTION:Type: appraisal. Operator: Wellesley. Partners: Equinor\, Aker
+  BP\, DNO. Licence/field: PL1148. Material: Y. Setback: N. Upcoming: N. Co
+ nfidence: high. Sodir exploration result\; event date is Sodir publication
+  date. Partners = licensees on that date. Source: https://www.sodir.no/akt
+ uelt/nyheter/resultat-av-leteboring/2026/bekrefter-gass-kondensatfunn-i-no
+ rdsjoen-3510-16-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/bekre
+ fter-gass-kondensatfunn-i-nordsjoen-3510-16-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Gjøa Subsea Projects FID and PDO submitted (Ofelia\,
+  Gjøa Nord\, Cerisa)
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+DTSTAMP:20261026T090000Z
+UID:NO093-moonshot-norway
+CATEGORIES:Vår Energi,Aker BP,DNO,Harbour,Pandion
+DESCRIPTION:Type: FID. Operator: Vår Energi. Partners: Aker BP\, DNO\, Ha
+ rbour\, Pandion. Licence/field: PL929. Material: Y. Setback: N. Upcoming: 
+ N. Confidence: high.  Source: https://newsweb.oslobors.no/message/676966
+URL:https://newsweb.oslobors.no/message/676966
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Vår Energi and Equinor swap: Vår gets 32.5% and ope
+ ratorship of Peon gas discovery\; sells Fram 5% and Grosbeak 5%
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+DTSTAMP:20261026T090000Z
+UID:NO094-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Equinor. Licen
+ ce/field: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high.  So
+ urce: https://newsweb.oslobors.no/message/677309
+URL:https://newsweb.oslobors.no/message/677309
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Harbour: Dvalin North first gas
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+DTSTAMP:20261026T090000Z
+UID:NO095-moonshot-norway
+CATEGORIES:Harbour,Petoro,DNO
+DESCRIPTION:Type: first oil. Operator: Harbour. Partners: Petoro\, DNO. Li
+ cence/field: DVALIN. Material: Y. Setback: N. Upcoming: N. Confidence: low
+ . Headline level\; partners from Dvalin field. Source: https://www.harbour
+ energy.com/news-and-media/announcements-and-latest-news/first-gas-achieved
+ -at-dvalin-north-norway/
+URL:https://www.harbourenergy.com/news-and-media/announcements-and-latest-
+ news/first-gas-achieved-at-dvalin-north-norway/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP shuts Tambar production in strike and lockout
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+DTSTAMP:20261026T090000Z
+UID:NO096-moonshot-norway
+CATEGORIES:Aker BP,DNO
+DESCRIPTION:Month estimate (placed on the 1st). Type: shutdown. Operator: 
+ Aker BP. Partners: DNO. Licence/field: TAMBAR. Material: N. Setback: Y. Up
+ coming: N. Confidence: low. Month estimate\; headline level. Source: https
+ ://energywatch.com/EnergyNews/Oil___Gas/article19444725.ece
+URL:https://energywatch.com/EnergyNews/Oil___Gas/article19444725.ece
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP raises cost estimates: Yggdrasil to USD 12.5-13.0
+ bn\, Valhall PWP-Fenris to USD 7.3-7.6bn (to protect 2027 start-ups)
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+DTSTAMP:20261026T090000Z
+UID:NO097-moonshot-norway
+CATEGORIES:Aker BP,ORLEN,Equinor
+DESCRIPTION:Type: cost overrun. Operator: Aker BP. Partners: ORLEN\, Equin
+ or. Licence/field: HUGIN\, MUNIN\, FULLA\, FENRIS. Material: Y. Setback: Y
+ . Upcoming: N. Confidence: medium.  Source: https://akerbp.com/wp-content/
+ uploads/2026/07/aker-bp-2026-q2-report.pdf
+URL:https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-report.p
+ df
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Vår Energi to combine with BlueNord (Danish shelf as
+ sets)
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260722
+DTSTAMP:20261026T090000Z
+UID:NO098-moonshot-norway
+CATEGORIES:Vår Energi
+DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: none. Licence/
+ field: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: high. Recomm
+ ended combination\; adds DCS assets\, not NCS. Source: https://newsweb.osl
+ obors.no/message/678467
+URL:https://newsweb.oslobors.no/message/678467
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 7220/5-EC-2 H Skrugard Nord oil discovery
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+DTSTAMP:20261026T090000Z
+UID:NO099-moonshot-norway
+CATEGORIES:Equinor,Vår Energi,Petoro
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Vår Energi\, Pe
+ toro. Licence/field: PL532. Material: Y. Setback: N. Upcoming: N. Confiden
+ ce: high. Sodir exploration result\; event date is Sodir publication date.
+  Partners = licensees on that date. Source: https://www.sodir.no/aktuelt/n
+ yheter/resultat-av-leteboring/2026/oljefunn-ved-johan-castberg-feltet-7220
+ 5-ec-2-h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljef
+ unn-ved-johan-castberg-feltet-72205-ec-2-h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Troll phase 3 stage 2 starts production
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20260802
+DTSTAMP:20261026T090000Z
+UID:NO100-moonshot-norway
+CATEGORIES:Equinor,Petoro,Shell,TotalEnergies,ConocoPhillips
+DESCRIPTION:Month estimate (placed on the 1st). Type: first oil. Operator:
+  Equinor. Partners: Petoro\, Shell\, TotalEnergies\, ConocoPhillips. Licen
+ ce/field: TROLL. Material: Y. Setback: N. Upcoming: N. Confidence: low. Mo
+ nth estimate (late August 2026)\; headline level. Source: https://www.offs
+ hore-technology.com/news/equinor-production-troll-phase-3-stage-2/
+URL:https://www.offshore-technology.com/news/equinor-production-troll-phas
+ e-3-stage-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 15/6-17 Svarteknippa dry
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260812
+DTSTAMP:20261026T090000Z
+UID:NO101-moonshot-norway
+CATEGORIES:Aker BP,Equinor
+DESCRIPTION:Type: dry well. Operator: Aker BP. Partners: Equinor. Licence/
+ field: PL979. Material: Y. Setback: Y. Upcoming: N. Confidence: high. Sodi
+ r exploration result\; event date is Sodir publication date. Partners = li
+ censees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resulta
+ t-av-leteboring/2026/torr-bronn-i-nordsjoen-156-17/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-
+ bronn-i-nordsjoen-156-17/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP signs for Losgann (UK\, from Apache) and 51% oper
+ ated Slagugle (PL891/891B/891C) from ConocoPhillips
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+DTSTAMP:20261026T090000Z
+UID:NO102-moonshot-norway
+CATEGORIES:Aker BP,ConocoPhillips,INPEX Idemitsu
+DESCRIPTION:Type: M and A. Operator: Aker BP. Partners: ConocoPhillips\, I
+ NPEX Idemitsu. Licence/field: n/a. Material: Y. Setback: N. Upcoming: N. C
+ onfidence: medium. COP keeps 29%\, INPEX 20%. Source: https://akerbp.com
+URL:https://akerbp.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 25/7-13 Linga gas/condensate discovery
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+DTSTAMP:20261026T090000Z
+UID:NO103-moonshot-norway
+CATEGORIES:Equinor,Aker BP
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Aker BP. Licence
+ /field: PL782 S. Material: Y. Setback: N. Upcoming: N. Confidence: high. S
+ odir exploration result\; event date is Sodir publication date. Partners =
+  licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/resu
+ ltat-av-leteboring/2026/gasskondensat-funn-i-nordsjoen-257-13/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gassk
+ ondensat-funn-i-nordsjoen-257-13/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Equinor\, Aker BP and Vår Energi form strategic explorat
+ ion collaboration
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+DTSTAMP:20261026T090000Z
+UID:NO104-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Vår Energi
+DESCRIPTION:Type: strategy. Operator: Equinor. Partners: Aker BP\, Vår En
+ ergi. Licence/field: n/a. Material: N. Setback: N. Upcoming: N. Confidence
+ : high.  Source: https://newsweb.oslobors.no/message/680584
+URL:https://newsweb.oslobors.no/message/680584
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Skarv Satellites (Alve Nord\, Idun Nord\, Ørn) start pro
+ duction\, one year early
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+DTSTAMP:20261026T090000Z
+UID:NO105-moonshot-norway
+CATEGORIES:Aker BP,Harbour,ORLEN,Japex,Equinor
+DESCRIPTION:Type: first oil. Operator: Aker BP. Partners: Harbour\, ORLEN
+ \, Japex\, Equinor. Licence/field: ALVE NORD\, IDUN NORD\, ØRN. Material:
+  Y. Setback: N. Upcoming: N. Confidence: high.  Source: https://newsweb.os
+ lobors.no/message/680777
+URL:https://newsweb.oslobors.no/message/680777
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: DNO recommended cash acquisition of Capricorn Energy plc (rev
+ ised 17.09.2026)
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+DTSTAMP:20261026T090000Z
+UID:NO106-moonshot-norway
+CATEGORIES:DNO
+DESCRIPTION:Type: M and A. Operator: DNO. Partners: none. Licence/field: n
+ /a. Material: Y. Setback: N. Upcoming: N. Confidence: high. Recommended ta
+ keover\; Capricorn assets are outside NCS. Source: https://newsweb.oslobor
+ s.no/message/681349
+URL:https://newsweb.oslobors.no/message/681349
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP puts Storjo tie-back to Skarv (about NOK 7bn) on 
+ hold
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+DTSTAMP:20261026T090000Z
+UID:NO107-moonshot-norway
+CATEGORIES:Aker BP
+DESCRIPTION:Month estimate (placed on the 1st). Type: delay. Operator: Ake
+ r BP. Partners: none. Licence/field: n/a. Material: Y. Setback: Y. Upcomin
+ g: N. Confidence: low. Month estimate\; headline level\; partners not reso
+ lved. Source: https://energiwatch.no/nyheter/olje_gass/article19607447.ece
+URL:https://energiwatch.no/nyheter/olje_gass/article19607447.ece
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 36/4-2 and A Alpehumle gas discovery (1-15 mmboe\, small)
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+DTSTAMP:20261026T090000Z
+UID:NO108-moonshot-norway
+CATEGORIES:Aker BP,OKEA,INPEX Idemitsu,Harbour
+DESCRIPTION:Type: discovery. Operator: Aker BP. Partners: OKEA\, INPEX Ide
+ mitsu\, Harbour. Licence/field: PL1153. Material: Y. Setback: Y. Upcoming:
+  N. Confidence: high. Sodir exploration result\; event date is Sodir publi
+ cation date. Partners = licensees on that date. Source: https://www.sodir.
+ no/aktuelt/nyheter/resultat-av-leteboring/2026/aker-bp-har-gjort-et-gassfu
+ nn-i-nordsjoen-364-2-og-364-2-a/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/aker-
+ bp-har-gjort-et-gassfunn-i-nordsjoen-364-2-og-364-2-a/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: 16/1-EA-4 H Verdandi/Lillefix appraisal increases estimat
+ e
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+DTSTAMP:20261026T090000Z
+UID:NO109-moonshot-norway
+CATEGORIES:Aker BP,Equinor,DNO
+DESCRIPTION:Type: appraisal. Operator: Aker BP. Partners: Equinor\, DNO. L
+ icence/field: PL167. Material: Y. Setback: N. Upcoming: N. Confidence: hig
+ h. Sodir exploration result\; event date is Sodir publication date. Partne
+ rs = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/
+ resultat-av-leteboring/2026/avgrensningsbronn-i-nordsjoen-oker-anslaget-16
+ 1-ea-4-h/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgre
+ nsningsbronn-i-nordsjoen-oker-anslaget-161-ea-4-h/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Snøhvit Future cost estimate raised to NOK 26.5bn (timet
+ able unchanged)
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+DTSTAMP:20261026T090000Z
+UID:NO110-moonshot-norway
+CATEGORIES:Equinor,Petoro,TotalEnergies,Vår Energi,Harbour
+DESCRIPTION:Type: cost overrun. Operator: Equinor. Partners: Petoro\, Tota
+ lEnergies\, Vår Energi\, Harbour. Licence/field: SNØHVIT. Material: Y. S
+ etback: Y. Upcoming: N. Confidence: high.  Source: https://www.equinor.com
+ /news/20261007-updated-cost-estimate-snohvit-future
+URL:https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-fu
+ ture
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: 30/8-7 S Grimsnes oil/gas discovery (19-50 mmboe)
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+DTSTAMP:20261026T090000Z
+UID:NO111-moonshot-norway
+CATEGORIES:Equinor,Petoro,TotalEnergies
+DESCRIPTION:Type: discovery. Operator: Equinor. Partners: Petoro\, TotalEn
+ ergies. Licence/field: PL190. Material: Y. Setback: N. Upcoming: N. Confid
+ ence: high. Sodir exploration result\; event date is Sodir publication dat
+ e. Partners = licensees on that date. Source: https://www.sodir.no/aktuelt
+ /nyheter/resultat-av-leteboring/2026/olje--og-gassfunn-i-nordsjoen-308-7-s
+ /
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje-
+ -og-gassfunn-i-nordsjoen-308-7-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: Kistos signs for 10% of PL169E/956/956B from Vår Ene
+ rgi (USD 12.9m)
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+DTSTAMP:20261026T090000Z
+UID:NO112-moonshot-norway
+CATEGORIES:Vår Energi,Kistos
+DESCRIPTION:Type: M and A. Operator: Vår Energi. Partners: Kistos. Licenc
+ e/field: n/a. Material: Y. Setback: N. Upcoming: N. Confidence: low.  Sour
+ ce: https://www.investegate.co.uk
+URL:https://www.investegate.co.uk
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Vår Energi: 6407/5-3 S Lakris gas/condensate discovery
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+DTSTAMP:20261026T090000Z
+UID:NO113-moonshot-norway
+CATEGORIES:Vår Energi,Equinor
+DESCRIPTION:Type: discovery. Operator: Vår Energi. Partners: Equinor. Lic
+ ence/field: PL1002. Material: Y. Setback: N. Upcoming: N. Confidence: high
+ . Sodir exploration result\; event date is Sodir publication date. Partner
+ s = licensees on that date. Source: https://www.sodir.no/aktuelt/nyheter/r
+ esultat-av-leteboring/2026/gass-og-kondensatfunn-i-norskehavet-64075-3-s/
+URL:https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass-
+ og-kondensatfunn-i-norskehavet-64075-3-s/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Equinor Q3 2026 results
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+DTSTAMP:20261026T090000Z
+UID:NO114-moonshot-norway
+CATEGORIES:Equinor
+DESCRIPTION:Type: results. Operator: Equinor. Partners: none. Licence/fiel
+ d: n/a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: h
+ ttps://newsweb.oslobors.no/message/654072
+URL:https://newsweb.oslobors.no/message/654072
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP Q3 2026 results
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+DTSTAMP:20261026T090000Z
+UID:NO115-moonshot-norway
+CATEGORIES:Aker BP
+DESCRIPTION:Type: results. Operator: Aker BP. Partners: none. Licence/fiel
+ d: n/a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: h
+ ttps://akerbp.com/en/investor/calendar/
+URL:https://akerbp.com/en/investor/calendar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:DNO: DNO Q3 2026 results
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+DTSTAMP:20261026T090000Z
+UID:NO116-moonshot-norway
+CATEGORIES:DNO
+DESCRIPTION:Type: results. Operator: DNO. Partners: none. Licence/field: n
+ /a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: https
+ ://newsweb.oslobors.no/search?issuer=DNO
+URL:https://newsweb.oslobors.no/search?issuer=DNO
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: OKEA Q3 2026 results
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+DTSTAMP:20261026T090000Z
+UID:NO117-moonshot-norway
+CATEGORIES:OKEA
+DESCRIPTION:Type: results. Operator: OKEA. Partners: none. Licence/field: 
+ n/a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: http
+ s://newsweb.oslobors.no/search?issuer=OKEA
+URL:https://newsweb.oslobors.no/search?issuer=OKEA
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Irpa (Aasta Hansteen tie-back) first gas\, targeted Q4 20
+ 26 / by year-end
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+DTSTAMP:20261026T090000Z
+UID:NO118-moonshot-norway
+CATEGORIES:Equinor,Petoro,Harbour,Shell
+DESCRIPTION:Quarter estimate\, month estimate placement. Type: first oil. 
+ Operator: Equinor. Partners: Petoro\, Harbour\, Shell. Licence/field: IRPA
+ . Material: Y. Setback: N. Upcoming: Y. Confidence: medium. Quarter estima
+ te placed on 1 Dec\; source Equinor Irpa page and Harbour H1 2026. Source:
+  https://www.equinor.com/energy/irpa
+URL:https://www.equinor.com/energy/irpa
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:NCS licensees: APA 2026 award expected (January\, per prior rounds
+ )
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20261026T090000Z
+UID:NO119-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Vår Energi,DNO
+DESCRIPTION:Estimated date\, month estimate. Type: licence award. Operator
+ : n/a. Partners: Equinor\, Aker BP\, Vår Energi\, DNO. Licence/field: n/a
+ . Material: N. Setback: N. Upcoming: Y. Confidence: low. Month estimate. E
+ stimated from prior pattern (14.01.2025\, 13.01.2026)\; not yet announced.
+  Source: https://www.regjeringen.no/en/whats-new/57-new-production-license
+ s-awarded/id3145952/
+URL:https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awa
+ rded/id3145952/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:OKEA: Bestla first oil expected early 2027
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20261026T090000Z
+UID:NO120-moonshot-norway
+CATEGORIES:OKEA,DNO,Lime,M Vest
+DESCRIPTION:Estimated date\, month estimate. Type: first oil. Operator: OK
+ EA. Partners: DNO\, Lime\, M Vest. Licence/field: BESTLA. Material: Y. Set
+ back: N. Upcoming: Y. Confidence: low. Month estimate\; source OKEA Q4 202
+ 5 presentation (early 2027). Source: https://okea.no/wp-content/uploads/20
+ 26/02/Q4-2025-Quarterly-Results-Presentation.pdf
+URL:https://okea.no/wp-content/uploads/2026/02/Q4-2025-Quarterly-Results-P
+ resentation.pdf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Mistral Nord well planned early 2027
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+DTSTAMP:20261026T090000Z
+UID:NO121-moonshot-norway
+CATEGORIES:Equinor,Japex,INPEX Idemitsu
+DESCRIPTION:Estimated date\, month estimate. Type: well result. Operator: 
+ Equinor. Partners: Japex\, INPEX Idemitsu. Licence/field: PL1119. Material
+ : N. Setback: N. Upcoming: Y. Confidence: low. Month estimate\; source Jap
+ ex release 20.04.2026. Source: https://www.japex.co.jp
+URL:https://www.japex.co.jp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP Q4 2026 results
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+DTSTAMP:20261026T090000Z
+UID:NO122-moonshot-norway
+CATEGORIES:Aker BP
+DESCRIPTION:Type: results. Operator: Aker BP. Partners: none. Licence/fiel
+ d: n/a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: h
+ ttps://akerbp.com/en/investor/calendar/
+URL:https://akerbp.com/en/investor/calendar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Aker BP annual report 2026
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+DTSTAMP:20261026T090000Z
+UID:NO123-moonshot-norway
+CATEGORIES:Aker BP
+DESCRIPTION:Type: results. Operator: Aker BP. Partners: none. Licence/fiel
+ d: n/a. Material: N. Setback: N. Upcoming: Y. Confidence: high.  Source: h
+ ttps://akerbp.com/en/investor/calendar/
+URL:https://akerbp.com/en/investor/calendar/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Aker BP: Yggdrasil and Valhall PWP-Fenris first oil targeted summe
+ r 2027
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270602
+DTSTAMP:20261026T090000Z
+UID:NO124-moonshot-norway
+CATEGORIES:Aker BP,ORLEN,Equinor
+DESCRIPTION:Estimated date\, month estimate. Type: first oil. Operator: Ak
+ er BP. Partners: ORLEN\, Equinor. Licence/field: HUGIN\, MUNIN\, FULLA\, F
+ ENRIS. Material: Y. Setback: N. Upcoming: Y. Confidence: medium. Month est
+ imate (summer 2027) per Aker BP Q2 2026. Source: https://www.ogj.com/membe
+ rs/news/55391292/aker-bp-increases-project-cost-estimates-to-protect-2027-
+ startups
+URL:https://www.ogj.com/members/news/55391292/aker-bp-increases-project-co
+ st-estimates-to-protect-2027-startups
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Johan Sverdrup Phase 3 first oil targeted Q4 2027
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+DTSTAMP:20261026T090000Z
+UID:NO125-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Petoro,TotalEnergies
+DESCRIPTION:Quarter estimate\, month estimate placement. Type: first oil. 
+ Operator: Equinor. Partners: Aker BP\, Petoro\, TotalEnergies. Licence/fie
+ ld: JOHAN SVERDRUP. Material: Y. Setback: N. Upcoming: Y. Confidence: high
+ . Quarter estimate placed on 1 Oct. Source: https://newsweb.oslobors.no/me
+ ssage/650425
+URL:https://newsweb.oslobors.no/message/650425
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Equinor: Wisting PDO submission planned Q4 2027
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+DTSTAMP:20261026T090000Z
+UID:NO126-moonshot-norway
+CATEGORIES:Equinor,Aker BP,Petoro,INPEX Idemitsu
+DESCRIPTION:Quarter estimate\, month estimate placement. Type: PDO submitt
+ ed. Operator: Equinor. Partners: Aker BP\, Petoro\, INPEX Idemitsu. Licenc
+ e/field: n/a. Material: Y. Setback: N. Upcoming: Y. Confidence: medium. Qu
+ arter estimate\; partners headline-level. Source: https://www.equinor.com/
+ news/20260625-wisting-proposal-environmental-impact-assessment-programme
+URL:https://www.equinor.com/news/20260625-wisting-proposal-environmental-i
+ mpact-assessment-programme
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ConocoPhillips: Ekofisk PPF and Johan Castberg Isflak first produc
+ tion targeted Q4 2028
+DTSTART;VALUE=DATE:20281001
+DTEND;VALUE=DATE:20281002
+DTSTAMP:20261026T090000Z
+UID:NO127-moonshot-norway
+CATEGORIES:ConocoPhillips,Vår Energi,ORLEN,Petoro,TotalEnergies,Equinor
+DESCRIPTION:Quarter estimate\, month estimate placement. Type: first oil. 
+ Operator: ConocoPhillips. Partners: Vår Energi\, ORLEN\, Petoro\, TotalEn
+ ergies\, Equinor. Licence/field: ALBUSKJELL\, VEST EKOFISK\, TOMMELITEN GA
+ MMA\, JOHAN CASTBERG. Material: Y. Setback: N. Upcoming: Y. Confidence: hi
+ gh. Quarter estimate placed on 1 Oct. Source: https://newsweb.oslobors.no/
+ message/661692
+URL:https://newsweb.oslobors.no/message/661692
+END:VEVENT
+END:VCALENDAR

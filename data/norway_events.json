@@ -1,0 +1,3148 @@
+[
+ {
+  "date": "2025-01-14",
+  "date_confidence": "exact",
+  "title": "24/12-8 S dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Concedo"
+  ],
+  "licence_field": "PL869",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-2412-8-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Concedo"
+  ],
+  "id": "NO001"
+ },
+ {
+  "date": "2025-01-14",
+  "date_confidence": "exact",
+  "title": "APA 2024 award: 53 production licences to 21 companies",
+  "type": "licence award",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi",
+   "DNO",
+   "Petoro",
+   "INPEX Idemitsu",
+   "OKEA",
+   "ORLEN",
+   "Sval",
+   "Petrolia NOCO",
+   "Harbour",
+   "OMV",
+   "Concedo",
+   "ConocoPhillips",
+   "Pandion",
+   "Wellesley",
+   "M Vest",
+   "TotalEnergies",
+   "Shell",
+   "Lime",
+   "Source Energy"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Counts per company (licences/operated): Equinor 27/7; Aker BP 19/16; Vår Energi 16/5; DNO 13/4; Petoro 13/0; INPEX Idemitsu 8/2; OKEA 8/2; ORLEN 8/0; Sval 7/2; Petrolia NOCO 5/3; Harbour 4/3; OMV 4/3; Concedo 3/0; ConocoPhillips 3/3; Pandion 3/0; Wellesley 3/2; M Vest 2/0; TotalEnergies 2/0; Shell 1/1; Lime 1/0; Source Energy 1/0. Material N: early-stage acreage. Sodir formal grant date 14.03.2025.",
+  "source_url": "https://newsweb.oslobors.no/message/636472",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi",
+   "DNO",
+   "Petoro",
+   "INPEX Idemitsu",
+   "OKEA",
+   "ORLEN",
+   "Sval",
+   "Petrolia NOCO",
+   "Harbour",
+   "OMV",
+   "Concedo",
+   "ConocoPhillips",
+   "Pandion",
+   "Wellesley",
+   "M Vest",
+   "TotalEnergies",
+   "Shell",
+   "Lime",
+   "Source Energy"
+  ],
+  "id": "NO002"
+ },
+ {
+  "date": "2025-01-17",
+  "date_confidence": "exact",
+  "title": "7122/9-2 Elgol gas discovery, not commercial",
+  "type": "discovery",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Petoro",
+   "Equinor",
+   "Aker BP"
+  ],
+  "licence_field": "PL1131",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/funn-av-gass-i-barentshavet-71229-2/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Equinor",
+   "Aker BP"
+  ],
+  "id": "NO003"
+ },
+ {
+  "date": "2025-01-22",
+  "date_confidence": "exact",
+  "title": "6305/10-1 Tomcat dry",
+  "type": "dry well",
+  "operator": "ORLEN",
+  "companies": [
+   "ORLEN",
+   "Shell"
+  ],
+  "licence_field": "PL1055",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-630510-1/",
+  "upcoming": "N",
+  "other_partners": [
+   "Shell"
+  ],
+  "id": "NO004"
+ },
+ {
+  "date": "2025-02-06",
+  "date_confidence": "exact",
+  "title": "35/6-5 S dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Harbour",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1110",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-5-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Harbour",
+   "Vår Energi"
+  ],
+  "id": "NO005"
+ },
+ {
+  "date": "2025-02-21",
+  "date_confidence": "exact",
+  "title": "6306/6-3 S dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Petoro",
+   "ConocoPhillips"
+  ],
+  "licence_field": "PL886",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-63066-3-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "ConocoPhillips"
+  ],
+  "id": "NO006"
+ },
+ {
+  "date": "2025-02-27",
+  "date_confidence": "exact",
+  "title": "7122/8-3 S Zagato oil discovery near Goliat",
+  "type": "discovery",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "PL229",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-barentshavet-71228-3-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO007"
+ },
+ {
+  "date": "2025-03-04",
+  "date_confidence": "exact",
+  "title": "7/1-4 S Kokopelli dry",
+  "type": "dry well",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor",
+   "Petoro",
+   "Aker BP"
+  ],
+  "licence_field": "PL1090",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-71-4-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Petoro",
+   "Aker BP"
+  ],
+  "id": "NO008"
+ },
+ {
+  "date": "2025-03-05",
+  "date_confidence": "exact",
+  "title": "6406/6-7 S Mistral Sør gas/condensate discovery (19-44 mmboe)",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Pandion",
+   "OKEA"
+  ],
+  "licence_field": "PL1119",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensat-funn-i-norskehavet-64066-7-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Pandion",
+   "OKEA"
+  ],
+  "id": "NO009"
+ },
+ {
+  "date": "2025-03-07",
+  "date_confidence": "exact",
+  "title": "DNO to acquire Sval Energi from HitecVision (EV about USD 1.6bn), quadruples North Sea output",
+  "type": "M and A",
+  "operator": "DNO",
+  "companies": [
+   "DNO",
+   "Sval"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Signed. Completion 12.06.2025 and Sodir merger 17.12.2025 not material.",
+  "source_url": "https://newsweb.oslobors.no/message/640686",
+  "upcoming": "N",
+  "other_partners": [
+   "Sval"
+  ],
+  "id": "NO010"
+ },
+ {
+  "date": "2025-03-14",
+  "date_confidence": "exact",
+  "title": "Halten Øst on stream",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "HALTEN ØST",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir status Producing from 14.03.2025; Vår release 17.03.2025.",
+  "source_url": "https://newsweb.oslobors.no/message/641396",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO011"
+ },
+ {
+  "date": "2025-03-14",
+  "date_confidence": "exact",
+  "title": "OKEA farms into Tverrdal (35% of southern PL1102/1102B) from Aker BP",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "OKEA",
+   "DNO",
+   "Equinor"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/641305",
+  "upcoming": "N",
+  "other_partners": [
+   "OKEA",
+   "DNO",
+   "Equinor"
+  ],
+  "id": "NO012"
+ },
+ {
+  "date": "2025-03-26",
+  "date_confidence": "exact",
+  "title": "35/6-6 Horatio dry",
+  "type": "dry well",
+  "operator": "OMV",
+  "companies": [
+   "OMV",
+   "Pandion",
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "PL1109",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-356-6/",
+  "upcoming": "N",
+  "other_partners": [
+   "Pandion",
+   "Aker BP",
+   "DNO"
+  ],
+  "id": "NO013"
+ },
+ {
+  "date": "2025-03-27",
+  "date_confidence": "exact",
+  "title": "6507/2-8 Kongeørn dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ORLEN",
+   "Equinor"
+  ],
+  "licence_field": "PL942",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-65072-8/",
+  "upcoming": "N",
+  "other_partners": [
+   "ORLEN",
+   "Equinor"
+  ],
+  "id": "NO014"
+ },
+ {
+  "date": "2025-03-28",
+  "date_confidence": "exact",
+  "title": "35/10-15 S Kjøttkake oil and gas discovery",
+  "type": "discovery",
+  "operator": "DNO",
+  "companies": [
+   "DNO",
+   "Japex",
+   "Concedo",
+   "Aker BP"
+  ],
+  "licence_field": "PL1182 S",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-i-nordsjoen-3510-15-s-og-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "Japex",
+   "Concedo",
+   "Aker BP"
+  ],
+  "id": "NO015"
+ },
+ {
+  "date": "2025-03-31",
+  "date_confidence": "exact",
+  "title": "Johan Castberg starts production",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "JOHAN CASTBERG",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/642634",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO016"
+ },
+ {
+  "date": "2025-05-20",
+  "date_confidence": "exact",
+  "title": "6507/5-13 S oil discovery near Skarv",
+  "type": "discovery",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "Harbour",
+   "ORLEN"
+  ],
+  "licence_field": "PL212",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-norskehavet-65075-13-s-og-65075-13-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Harbour",
+   "ORLEN"
+  ],
+  "id": "NO017"
+ },
+ {
+  "date": "2025-05-28",
+  "date_confidence": "exact",
+  "title": "31/4-A-23 F Prince Sør oil discovery and 31/4-A-23 G dry",
+  "type": "discovery",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "M Vest",
+   "Lime",
+   "Petrolia NOCO",
+   "DNO"
+  ],
+  "licence_field": "PL055",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-og-torr-bronn-i-nordsjoen-314-a-23-f-og-314-a-23-g/",
+  "upcoming": "N",
+  "other_partners": [
+   "M Vest",
+   "Lime",
+   "Petrolia NOCO",
+   "DNO"
+  ],
+  "id": "NO018"
+ },
+ {
+  "date": "2025-06-18",
+  "date_confidence": "exact",
+  "title": "Balder Phase VI FID",
+  "type": "FID",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "BALDER",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/649457",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO019"
+ },
+ {
+  "date": "2025-06-19",
+  "date_confidence": "exact",
+  "title": "6507/5-12 S Slagugle appraisal confirms",
+  "type": "appraisal",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "Pandion"
+  ],
+  "licence_field": "PL891",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgrensningsbronn-bekrefter-oljefunn-i-norskehavet-65075-12-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Pandion"
+  ],
+  "id": "NO020"
+ },
+ {
+  "date": "2025-06-23",
+  "date_confidence": "exact",
+  "title": "Balder X: first production through Jotun FPSO",
+  "type": "first oil",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "BALDER",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/649822",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO021"
+ },
+ {
+  "date": "2025-06-25",
+  "date_confidence": "exact",
+  "title": "6405/7-4 Rondeslottet dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Shell",
+   "Vår Energi"
+  ],
+  "licence_field": "PL1005",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-64057-4/",
+  "upcoming": "N",
+  "other_partners": [
+   "Shell",
+   "Vår Energi"
+  ],
+  "id": "NO022"
+ },
+ {
+  "date": "2025-06-26",
+  "date_confidence": "exact",
+  "title": "25/11-30 S Lit dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL169",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-2511-30-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO023"
+ },
+ {
+  "date": "2025-06-26",
+  "date_confidence": "exact",
+  "title": "Fram Sør PDO submitted",
+  "type": "PDO submitted",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "FRAM",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Partners taken from Fram field.",
+  "source_url": "https://newsweb.oslobors.no/message/650103",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO024"
+ },
+ {
+  "date": "2025-06-27",
+  "date_confidence": "exact",
+  "title": "Ormen Lange phase 3 (subsea compression) starts production",
+  "type": "first oil",
+  "operator": "Shell",
+  "companies": [
+   "Shell",
+   "Petoro",
+   "Equinor",
+   "ORLEN",
+   "Vår Energi"
+  ],
+  "licence_field": "ORMEN LANGE",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/650227",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Equinor",
+   "ORLEN",
+   "Vår Energi"
+  ],
+  "id": "NO025"
+ },
+ {
+  "date": "2025-06-27",
+  "date_confidence": "exact",
+  "title": "Brage Talisker PDO exemption granted",
+  "type": "PDO approved",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "Lime",
+   "DNO",
+   "Petrolia NOCO",
+   "M Vest"
+  ],
+  "licence_field": "BRAGE",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Lime",
+   "DNO",
+   "Petrolia NOCO",
+   "M Vest"
+  ],
+  "id": "NO026"
+ },
+ {
+  "date": "2025-06-30",
+  "date_confidence": "exact",
+  "title": "7220/7-CD-1 H Drivis oil discovery near Johan Castberg",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL532",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-ved-johan-castberg-feltet-i-barentshavet-72207-cd-1h/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO027"
+ },
+ {
+  "date": "2025-07-01",
+  "date_confidence": "exact",
+  "title": "Johan Sverdrup Phase 3 FID (40-50 mmboe, NOK 13bn, start Q4 2027)",
+  "type": "FID",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "JOHAN SVERDRUP",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/650425",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO028"
+ },
+ {
+  "date": "2025-07-01",
+  "date_confidence": "month",
+  "title": "Pandion sells Valhall/Hod and Slagugle/Mistral interests to INPEX Idemitsu",
+  "type": "M and A",
+  "operator": "Pandion",
+  "companies": [
+   "Pandion",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Month estimate; buyer inferred from Sodir transfers completed 31.10.2025.",
+  "source_url": "https://pandionenergy.no",
+  "upcoming": "N",
+  "other_partners": [
+   "INPEX Idemitsu"
+  ],
+  "id": "NO029"
+ },
+ {
+  "date": "2025-07-07",
+  "date_confidence": "exact",
+  "title": "Smørbukk Midt PDO exemption granted",
+  "type": "PDO approved",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Vår Energi",
+   "TotalEnergies"
+  ],
+  "licence_field": "ÅSGARD",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Vår Energi",
+   "TotalEnergies"
+  ],
+  "id": "NO030"
+ },
+ {
+  "date": "2025-07-10",
+  "date_confidence": "exact",
+  "title": "7220/5-4 Skred gas discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL532",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gassfunn-ved-johan-castberg-feltet-i-barentshavet-72205-4/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO031"
+ },
+ {
+  "date": "2025-07-16",
+  "date_confidence": "exact",
+  "title": "6606/4-1 S Hoffmann dry",
+  "type": "dry well",
+  "operator": "OMV",
+  "companies": [
+   "OMV",
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1194",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-norskehavet-66064-1-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO032"
+ },
+ {
+  "date": "2025-07-17",
+  "date_confidence": "exact",
+  "title": "34/6-8 S dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Aker BP"
+  ],
+  "licence_field": "PL554",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-346-8-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Aker BP"
+  ],
+  "id": "NO033"
+ },
+ {
+  "date": "2025-07-21",
+  "date_confidence": "exact",
+  "title": "6406/11-2 S Vidsyn gas/condensate discovery near Fenja (25-40 mmboe)",
+  "type": "discovery",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "DNO",
+   "Sval"
+  ],
+  "licence_field": "PL586",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensatfunn-i-norskehavet-640611-2-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO",
+   "Sval"
+  ],
+  "id": "NO034"
+ },
+ {
+  "date": "2025-07-28",
+  "date_confidence": "exact",
+  "title": "Aker BP and Japex swap: Aker BP gets Kjøttkake 15%, Kveikje 10%, PL1212S 20%; Japex gets Alve Nord 10%, Verdande 3.5%",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Japex"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/651807",
+  "upcoming": "N",
+  "other_partners": [
+   "Japex"
+  ],
+  "id": "NO035"
+ },
+ {
+  "date": "2025-08-22",
+  "date_confidence": "exact",
+  "title": "Omega Alfa (25/1-14 A-G) significant oil discovery in Yggdrasil area",
+  "type": "discovery",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "PL873 B",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-yggdrasil-omradet-251-14-251-14-a-b-c-d-e-f-og-g/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "ORLEN"
+  ],
+  "id": "NO036"
+ },
+ {
+  "date": "2025-08-25",
+  "date_confidence": "exact",
+  "title": "35/11-31 S F-Sør oil/gas discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "INPEX Idemitsu",
+   "Vår Energi"
+  ],
+  "licence_field": "PL090",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-nar-framfeltet-i-nordsjoen-3511-31-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "INPEX Idemitsu",
+   "Vår Energi"
+  ],
+  "id": "NO037"
+ },
+ {
+  "date": "2025-08-28",
+  "date_confidence": "exact",
+  "title": "OKEA farms into Alpehumle (PL1153, 20%) from Harbour",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "OKEA",
+   "Harbour",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/654042",
+  "upcoming": "N",
+  "other_partners": [
+   "OKEA",
+   "Harbour",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO038"
+ },
+ {
+  "date": "2025-08-29",
+  "date_confidence": "exact",
+  "title": "6506/12-PB-3 H Smørbukk Midt discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "TotalEnergies",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "licence_field": "PL094",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatfunn-i-norskehavet-650612-pb-3-h/",
+  "upcoming": "N",
+  "other_partners": [
+   "TotalEnergies",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "id": "NO039"
+ },
+ {
+  "date": "2025-08-29",
+  "date_confidence": "exact",
+  "title": "Fram Sør PDO approved",
+  "type": "PDO approved",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "FRAM",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO040"
+ },
+ {
+  "date": "2025-09-01",
+  "date_confidence": "exact",
+  "title": "7117/4-1 Deimos dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL1238",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-barentshavet-71174-1/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO041"
+ },
+ {
+  "date": "2025-09-11",
+  "date_confidence": "exact",
+  "title": "31/4-A-15 B Talisker oil discovery at Brage",
+  "type": "discovery",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "M Vest",
+   "Lime",
+   "Petrolia NOCO",
+   "DNO"
+  ],
+  "licence_field": "PL055",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/oljefunn-i-nordsjoen-314-a-15-b/",
+  "upcoming": "N",
+  "other_partners": [
+   "M Vest",
+   "Lime",
+   "Petrolia NOCO",
+   "DNO"
+  ],
+  "id": "NO042"
+ },
+ {
+  "date": "2025-09-19",
+  "date_confidence": "exact",
+  "title": "34/8-20 S dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi"
+  ],
+  "licence_field": "PL554 E",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-348-20-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP",
+   "Vår Energi"
+  ],
+  "id": "NO043"
+ },
+ {
+  "date": "2025-09-23",
+  "date_confidence": "exact",
+  "title": "Askeladd Vest starts gas production (Snøhvit plateau)",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "TotalEnergies",
+   "Vår Energi",
+   "Harbour"
+  ],
+  "licence_field": "SNØHVIT",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/655947",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "TotalEnergies",
+   "Vår Energi",
+   "Harbour"
+  ],
+  "id": "NO044"
+ },
+ {
+  "date": "2025-10-01",
+  "date_confidence": "exact",
+  "title": "Vår Energi acquires TotalEnergies interest in Ekofisk PPF (PL018F)",
+  "type": "M and A",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "TotalEnergies",
+   "ORLEN"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "ORLEN also took a share (Sodir transfer 18.12.2025).",
+  "source_url": "https://newsweb.oslobors.no/message/656463",
+  "upcoming": "N",
+  "other_partners": [
+   "TotalEnergies",
+   "ORLEN"
+  ],
+  "id": "NO045"
+ },
+ {
+  "date": "2025-10-07",
+  "date_confidence": "exact",
+  "title": "Gjøa low pressure project start-up raises production and reserves",
+  "type": "first oil",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Petoro",
+   "Harbour",
+   "OKEA"
+  ],
+  "licence_field": "GJØA",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/656737",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Harbour",
+   "OKEA"
+  ],
+  "id": "NO046"
+ },
+ {
+  "date": "2025-11-06",
+  "date_confidence": "exact",
+  "title": "Kjøttkake fast-track tie-back launched; operatorship to Aker BP",
+  "type": "FID",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Concedo",
+   "DNO"
+  ],
+  "licence_field": "PL1182 S",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Concept/fast-track launch, not formal PDO.",
+  "source_url": "https://newsweb.oslobors.no/message/658866",
+  "upcoming": "N",
+  "other_partners": [
+   "Concedo",
+   "DNO"
+  ],
+  "id": "NO047"
+ },
+ {
+  "date": "2025-11-06",
+  "date_confidence": "exact",
+  "title": "Aker BP and DNO asset swap: Aker BP takes Kjøttkake operatorship and more Vilje/Kveikje; sells Verdande to DNO",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/658877",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO"
+  ],
+  "id": "NO048"
+ },
+ {
+  "date": "2025-11-07",
+  "date_confidence": "exact",
+  "title": "30/11-16 S dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "PL873",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-3011-16-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "ORLEN"
+  ],
+  "id": "NO049"
+ },
+ {
+  "date": "2025-11-11",
+  "date_confidence": "exact",
+  "title": "34/6-9 S dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Aker BP"
+  ],
+  "licence_field": "PL554",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-34-6-9-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Aker BP"
+  ],
+  "id": "NO050"
+ },
+ {
+  "date": "2025-11-13",
+  "date_confidence": "exact",
+  "title": "7122/8-4 S Zagato North appraisal confirms oil",
+  "type": "appraisal",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "PL229",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/avgrensing-av-oljefunnet-zagato-i-barentshavet--71228-4-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO051"
+ },
+ {
+  "date": "2025-11-18",
+  "date_confidence": "exact",
+  "title": "2/6-8 S Page dry",
+  "type": "dry well",
+  "operator": "DNO",
+  "companies": [
+   "DNO",
+   "Petoro",
+   "Source Energy",
+   "Aker BP"
+  ],
+  "licence_field": "PL1086",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/torr-bronn-i-nordsjoen-26-8-s-og-26-8-st2/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Source Energy",
+   "Aker BP"
+  ],
+  "id": "NO052"
+ },
+ {
+  "date": "2025-11-18",
+  "date_confidence": "exact",
+  "title": "DNO sells 7.604% Ekofisk PPF to ORLEN; buys 20% PL1135 (Cassio) and 0.83% Verdande",
+  "type": "M and A",
+  "operator": "DNO",
+  "companies": [
+   "DNO",
+   "ORLEN"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/659899",
+  "upcoming": "N",
+  "other_partners": [
+   "ORLEN"
+  ],
+  "id": "NO053"
+ },
+ {
+  "date": "2025-12-01",
+  "date_confidence": "exact",
+  "title": "Verdande on stream",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Sval",
+   "Aker BP",
+   "Japex",
+   "ORLEN"
+  ],
+  "licence_field": "VERDANDE",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir field status Producing from 01.12.2025.",
+  "source_url": "https://factpages.sodir.no/en/field/PageView/All",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Sval",
+   "Aker BP",
+   "Japex",
+   "ORLEN"
+  ],
+  "id": "NO054"
+ },
+ {
+  "date": "2025-12-04",
+  "date_confidence": "exact",
+  "title": "7122/7-8 Goliat Nord oil/gas discovery",
+  "type": "discovery",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "PL229",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gassfunn-i-barentshavet-71227-8/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO055"
+ },
+ {
+  "date": "2025-12-05",
+  "date_confidence": "exact",
+  "title": "15/5-8 S and A Lofn/Langemann gas/condensate discovery (30-110 mmboe)",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP"
+  ],
+  "licence_field": "PL1140",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass-kondensatfunn-i-nordsjoen-155-8-s-og-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO056"
+ },
+ {
+  "date": "2025-12-11",
+  "date_confidence": "exact",
+  "title": "Johan Castberg Isflak FID (start Q4 2028)",
+  "type": "FID",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "JOHAN CASTBERG",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/661692",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO057"
+ },
+ {
+  "date": "2025-12-16",
+  "date_confidence": "exact",
+  "title": "Ekofisk PPF project sanctioned (Albuskjell, Vest Ekofisk, Tommeliten Gamma)",
+  "type": "FID",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "TotalEnergies",
+   "Vår Energi",
+   "Sval",
+   "Petoro",
+   "ORLEN"
+  ],
+  "licence_field": "EKOFISK, TOMMELITEN GAMMA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/662090",
+  "upcoming": "N",
+  "other_partners": [
+   "TotalEnergies",
+   "Vår Energi",
+   "Sval",
+   "Petoro",
+   "ORLEN"
+  ],
+  "id": "NO058"
+ },
+ {
+  "date": "2025-12-17",
+  "date_confidence": "exact",
+  "title": "Balder Phase V start-up; Åsgard LPP3 completion",
+  "type": "first oil",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos",
+   "Equinor",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "BALDER, ÅSGARD",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://varenergi.no/en/newsroom/stock-exchange-announcements/",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos",
+   "Equinor",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO059"
+ },
+ {
+  "date": "2025-12-19",
+  "date_confidence": "exact",
+  "title": "35/8-8 S and A Camilla Nord discovery",
+  "type": "discovery",
+  "operator": "Harbour",
+  "companies": [
+   "Harbour",
+   "Petoro"
+  ],
+  "licence_field": "PL248 LS",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/gass--og-kondensatfunn-i-nordsjoen-358-8-s-og-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro"
+  ],
+  "id": "NO060"
+ },
+ {
+  "date": "2025-12-22",
+  "date_confidence": "exact",
+  "title": "6407/1-B-2 H Tyrihans Øst discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "TotalEnergies",
+   "Petoro"
+  ],
+  "licence_field": "PL073",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2025/olje--og-gasskondensatfunn-nar-tyrihansfeltet-i-norskehavet-64071-b-2-h/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "TotalEnergies",
+   "Petoro"
+  ],
+  "id": "NO061"
+ },
+ {
+  "date": "2025-12-22",
+  "date_confidence": "exact",
+  "title": "Vår Energi cuts 2025 guidance to low end: Johan Castberg offloading hose issues and Jotun FPSO interruptions",
+  "type": "shutdown",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor",
+   "Petoro",
+   "Kistos"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/662606",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Petoro",
+   "Kistos"
+  ],
+  "id": "NO062"
+ },
+ {
+  "date": "2026-01-13",
+  "date_confidence": "exact",
+  "title": "APA 2025 award: 56 production licences to 19 companies",
+  "type": "licence award",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "DNO",
+   "Vår Energi",
+   "Harbour",
+   "INPEX Idemitsu",
+   "ORLEN",
+   "Wellesley",
+   "OMV",
+   "OKEA",
+   "Concedo",
+   "Japex",
+   "Source Energy",
+   "ConocoPhillips",
+   "Pandion",
+   "Petrolia NOCO",
+   "Repsol",
+   "TotalEnergies"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Counts per company (licences/operated): Equinor 35/16; Aker BP 22/12; Petoro 20/0; DNO 16/4; Vår Energi 14/7; Harbour 9/4; INPEX Idemitsu 5/1; ORLEN 5/0; Wellesley 5/5; OMV 4/2; OKEA 3/1; Concedo 2/1; Japex 2/0; Source Energy 2/0; ConocoPhillips 1/1; Pandion 1/0; Petrolia NOCO 1/1; Repsol 1/1; TotalEnergies 1/0. Material N: early-stage acreage. Sodir formal grant date 20.03.2026.",
+  "source_url": "https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awarded/id3145952/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "DNO",
+   "Vår Energi",
+   "Harbour",
+   "INPEX Idemitsu",
+   "ORLEN",
+   "Wellesley",
+   "OMV",
+   "OKEA",
+   "Concedo",
+   "Japex",
+   "Source Energy",
+   "ConocoPhillips",
+   "Pandion",
+   "Petrolia NOCO",
+   "Repsol",
+   "TotalEnergies"
+  ],
+  "id": "NO063"
+ },
+ {
+  "date": "2026-01-16",
+  "date_confidence": "exact",
+  "title": "7122/8-3 A Zagato appraisal with production tests",
+  "type": "appraisal",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "PL229",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgrensningsbronn-bekrefter-oljefunn-i-barentshavet-71228-3-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO064"
+ },
+ {
+  "date": "2026-01-19",
+  "date_confidence": "exact",
+  "title": "6507/8-12 S Othello Sør oil discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "ConocoPhillips",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL124 B",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-norskehavet-65078-12-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "ConocoPhillips",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO065"
+ },
+ {
+  "date": "2026-01-20",
+  "date_confidence": "exact",
+  "title": "15/8-3 S Sissel gas/condensate discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "PL1137",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass--og-kondensatfunn-i-nordsjoen-158--3-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "ORLEN"
+  ],
+  "id": "NO066"
+ },
+ {
+  "date": "2026-01-28",
+  "date_confidence": "exact",
+  "title": "31/4-A-15 D Knockando discovery at Brage",
+  "type": "discovery",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "Petrolia NOCO",
+   "Lime",
+   "M Vest"
+  ],
+  "licence_field": "PL055",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO",
+   "Petrolia NOCO",
+   "Lime",
+   "M Vest"
+  ],
+  "id": "NO067"
+ },
+ {
+  "date": "2026-02-02",
+  "date_confidence": "exact",
+  "title": "Solveig Phase 2 on stream",
+  "type": "first oil",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "OMV",
+   "Harbour"
+  ],
+  "licence_field": "SOLVEIG",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/664571",
+  "upcoming": "N",
+  "other_partners": [
+   "OMV",
+   "Harbour"
+  ],
+  "id": "NO068"
+ },
+ {
+  "date": "2026-02-12",
+  "date_confidence": "exact",
+  "title": "25/8-C-23 D dry",
+  "type": "dry well",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "PL027",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-258-c-23-d/",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO069"
+ },
+ {
+  "date": "2026-02-13",
+  "date_confidence": "exact",
+  "title": "PPF PDOs submitted (90-120 mmboe, first gas Q4 2028)",
+  "type": "PDO submitted",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "ALBUSKJELL, VEST EKOFISK, TOMMELITEN GAMMA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "",
+  "source_url": "https://www.conocophillips.no",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO070"
+ },
+ {
+  "date": "2026-02-16",
+  "date_confidence": "exact",
+  "title": "33/12-N-3 HH Granat oil/gas discovery and GH dry",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "OMV",
+   "Petoro"
+  ],
+  "licence_field": "PL037 B",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje--og-gassfunn-og-torr-bronn-i-nordsjoen-3312-n-3-hh-og-3312-n-3-gh/",
+  "upcoming": "N",
+  "other_partners": [
+   "OMV",
+   "Petoro"
+  ],
+  "id": "NO071"
+ },
+ {
+  "date": "2026-02-18",
+  "date_confidence": "exact",
+  "title": "7018/5-2 Vikingskipet dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL1236",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-barentshavet-70185-2/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO072"
+ },
+ {
+  "date": "2026-03-02",
+  "date_confidence": "exact",
+  "title": "34/4-19 S Omega Sør Alfa oil discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "INPEX Idemitsu",
+   "Vår Energi",
+   "Harbour",
+   "Petoro"
+  ],
+  "licence_field": "PL057",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/fant-mer-olje-ved-snorre-344-19-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "INPEX Idemitsu",
+   "Vår Energi",
+   "Harbour",
+   "Petoro"
+  ],
+  "id": "NO073"
+ },
+ {
+  "date": "2026-03-10",
+  "date_confidence": "exact",
+  "title": "35/11-32 S Byrding C oil discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL090 HS",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-nordsjoen-3511-32-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "INPEX Idemitsu"
+  ],
+  "id": "NO074"
+ },
+ {
+  "date": "2026-03-17",
+  "date_confidence": "exact",
+  "title": "Ringhorne fase 5 PDO exemption granted",
+  "type": "PDO approved",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "BALDER",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO075"
+ },
+ {
+  "date": "2026-03-18",
+  "date_confidence": "exact",
+  "title": "7220/7-5 Polynya oil discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL532",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-i-barentshavet-72207-5/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO076"
+ },
+ {
+  "date": "2026-03-23",
+  "date_confidence": "exact",
+  "title": "Fram F-Øst PDO exemption granted",
+  "type": "PDO approved",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "FRAM",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO077"
+ },
+ {
+  "date": "2026-03-25",
+  "date_confidence": "exact",
+  "title": "OKEA raises Talisker West resources to 23-44 mmboe; first oil 2027",
+  "type": "appraisal",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "Petrolia NOCO",
+   "Lime",
+   "M Vest"
+  ],
+  "licence_field": "PL055",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/669230",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO",
+   "Petrolia NOCO",
+   "Lime",
+   "M Vest"
+  ],
+  "id": "NO078"
+ },
+ {
+  "date": "2026-04-07",
+  "date_confidence": "exact",
+  "title": "Symra on stream, nine months early",
+  "type": "first oil",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "DNO"
+  ],
+  "licence_field": "SYMRA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir status Producing from 01.04.2026.",
+  "source_url": "https://newsweb.oslobors.no/message/670011",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "DNO"
+  ],
+  "id": "NO079"
+ },
+ {
+  "date": "2026-04-15",
+  "date_confidence": "exact",
+  "title": "Goliat Gas Export amended PDO submitted (112 mmboe gross 2P)",
+  "type": "PDO submitted",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "GOLIAT",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/670663",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO080"
+ },
+ {
+  "date": "2026-04-20",
+  "date_confidence": "exact",
+  "title": "OKEA sells 20% PL1119 (Mistral) to Japex for USD 30m plus contingent",
+  "type": "M and A",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "DNO",
+   "INPEX Idemitsu",
+   "OKEA",
+   "Japex"
+  ],
+  "licence_field": "PL1119",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Mistral Nord well planned early 2027 (Japex).",
+  "source_url": "https://newsweb.oslobors.no/message/670937",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO",
+   "INPEX Idemitsu",
+   "OKEA",
+   "Japex"
+  ],
+  "id": "NO081"
+ },
+ {
+  "date": "2026-04-22",
+  "date_confidence": "exact",
+  "title": "34/8-A-37 H dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Repsol",
+   "Petoro",
+   "ConocoPhillips"
+  ],
+  "licence_field": "PL120",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-348-a-37-h/",
+  "upcoming": "N",
+  "other_partners": [
+   "Repsol",
+   "Petoro",
+   "ConocoPhillips"
+  ],
+  "id": "NO082"
+ },
+ {
+  "date": "2026-05-05",
+  "date_confidence": "exact",
+  "title": "Eirin gas field in production",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "ORLEN"
+  ],
+  "licence_field": "EIRIN",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir status Producing from 03.05.2026.",
+  "source_url": "https://www.equinor.com/news/20260505-eirin-field-production",
+  "upcoming": "N",
+  "other_partners": [
+   "ORLEN"
+  ],
+  "id": "NO083"
+ },
+ {
+  "date": "2026-05-05",
+  "date_confidence": "exact",
+  "title": "PPF PDOs approved (Albuskjell, Vest Ekofisk, Tommeliten Gamma)",
+  "type": "PDO approved",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "ALBUSKJELL, VEST EKOFISK, TOMMELITEN GAMMA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO084"
+ },
+ {
+  "date": "2026-05-08",
+  "date_confidence": "exact",
+  "title": "Johan Castberg Isflak PDO exemption granted",
+  "type": "PDO approved",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "JOHAN CASTBERG",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://factpages.sodir.no/en/field/TableView/PDO",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO085"
+ },
+ {
+  "date": "2026-05-21",
+  "date_confidence": "exact",
+  "title": "Aker BP and Equinor strategic collaboration and transactions in Ringvei Vest, Yggdrasil and Wisting areas",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Completion 30.09.2026 (Sodir) not material.",
+  "source_url": "https://newsweb.oslobors.no/message/674060",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO086"
+ },
+ {
+  "date": "2026-06-15",
+  "date_confidence": "exact",
+  "title": "Johan Sverdrup phase 4 maturation: 20-30 mmboe found by appraisal, potential start 2029",
+  "type": "appraisal",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "JOHAN SVERDRUP",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/676144",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO087"
+ },
+ {
+  "date": "2026-06-16",
+  "date_confidence": "exact",
+  "title": "6507/8-D-4 CH dry",
+  "type": "dry well",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "ConocoPhillips",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "licence_field": "PL124",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-norskehavet-65078-d-4-ch/",
+  "upcoming": "N",
+  "other_partners": [
+   "ConocoPhillips",
+   "Petoro",
+   "Vår Energi"
+  ],
+  "id": "NO088"
+ },
+ {
+  "date": "2026-06-18",
+  "date_confidence": "exact",
+  "title": "Balder Next New Wells FID",
+  "type": "FID",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "BALDER",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/676445",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO089"
+ },
+ {
+  "date": "2026-06-18",
+  "date_confidence": "exact",
+  "title": "Ringvei Vest concept agreed (about 240 mmboe, tie-back to Troll B)",
+  "type": "concept select",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Concept select, not FID; partners beyond Equinor and Aker BP not resolved (8 licences).",
+  "source_url": "https://newsweb.oslobors.no/message/676465",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO090"
+ },
+ {
+  "date": "2026-06-18",
+  "date_confidence": "exact",
+  "title": "Vår Energi portfolio deals: buys Pandion portfolio (USD 110m), swap with DNO (Gjøa 5% for Nova 5% and Ringhorne Nord 15%), sells Goliat 20% and Fenja stakes; ORLEN buys 20% of five Vår licences incl Goliat",
+  "type": "M and A",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Pandion",
+   "DNO",
+   "ORLEN"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Completion of Pandion deal 30.09.2026 not material.",
+  "source_url": "https://newsweb.oslobors.no/message/676457",
+  "upcoming": "N",
+  "other_partners": [
+   "Pandion",
+   "DNO",
+   "ORLEN"
+  ],
+  "id": "NO091"
+ },
+ {
+  "date": "2026-06-22",
+  "date_confidence": "exact",
+  "title": "35/10-16 S Carmen appraisal (21-107 mmboe, tight reservoir)",
+  "type": "appraisal",
+  "operator": "Wellesley",
+  "companies": [
+   "Wellesley",
+   "Equinor",
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "PL1148",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/bekrefter-gass-kondensatfunn-i-nordsjoen-3510-16-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "Aker BP",
+   "DNO"
+  ],
+  "id": "NO092"
+ },
+ {
+  "date": "2026-06-25",
+  "date_confidence": "exact",
+  "title": "Gjøa Subsea Projects FID and PDO submitted (Ofelia, Gjøa Nord, Cerisa)",
+  "type": "FID",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Aker BP",
+   "DNO",
+   "Harbour",
+   "Pandion"
+  ],
+  "licence_field": "PL929",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/676966",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP",
+   "DNO",
+   "Harbour",
+   "Pandion"
+  ],
+  "id": "NO093"
+ },
+ {
+  "date": "2026-06-30",
+  "date_confidence": "exact",
+  "title": "Vår Energi and Equinor swap: Vår gets 32.5% and operatorship of Peon gas discovery; sells Fram 5% and Grosbeak 5%",
+  "type": "M and A",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/677309",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO094"
+ },
+ {
+  "date": "2026-07-01",
+  "date_confidence": "exact",
+  "title": "Dvalin North first gas",
+  "type": "first oil",
+  "operator": "Harbour",
+  "companies": [
+   "Harbour",
+   "Petoro",
+   "DNO"
+  ],
+  "licence_field": "DVALIN",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Headline level; partners from Dvalin field.",
+  "source_url": "https://www.harbourenergy.com/news-and-media/announcements-and-latest-news/first-gas-achieved-at-dvalin-north-norway/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "DNO"
+  ],
+  "id": "NO095"
+ },
+ {
+  "date": "2026-07-01",
+  "date_confidence": "month",
+  "title": "Aker BP shuts Tambar production in strike and lockout",
+  "type": "shutdown",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "DNO"
+  ],
+  "licence_field": "TAMBAR",
+  "material": "N",
+  "setback": "Y",
+  "confidence": "low",
+  "note": "Month estimate; headline level.",
+  "source_url": "https://energywatch.com/EnergyNews/Oil___Gas/article19444725.ece",
+  "upcoming": "N",
+  "other_partners": [
+   "DNO"
+  ],
+  "id": "NO096"
+ },
+ {
+  "date": "2026-07-15",
+  "date_confidence": "exact",
+  "title": "Aker BP raises cost estimates: Yggdrasil to USD 12.5-13.0bn, Valhall PWP-Fenris to USD 7.3-7.6bn (to protect 2027 start-ups)",
+  "type": "cost overrun",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ORLEN",
+   "Equinor"
+  ],
+  "licence_field": "HUGIN, MUNIN, FULLA, FENRIS",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "medium",
+  "note": "",
+  "source_url": "https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-report.pdf",
+  "upcoming": "N",
+  "other_partners": [
+   "ORLEN",
+   "Equinor"
+  ],
+  "id": "NO097"
+ },
+ {
+  "date": "2026-07-21",
+  "date_confidence": "exact",
+  "title": "Vår Energi to combine with BlueNord (Danish shelf assets)",
+  "type": "M and A",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Recommended combination; adds DCS assets, not NCS.",
+  "source_url": "https://newsweb.oslobors.no/message/678467",
+  "upcoming": "N",
+  "other_partners": [],
+  "id": "NO098"
+ },
+ {
+  "date": "2026-07-23",
+  "date_confidence": "exact",
+  "title": "7220/5-EC-2 H Skrugard Nord oil discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Vår Energi",
+   "Petoro"
+  ],
+  "licence_field": "PL532",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/oljefunn-ved-johan-castberg-feltet-72205-ec-2-h/",
+  "upcoming": "N",
+  "other_partners": [
+   "Vår Energi",
+   "Petoro"
+  ],
+  "id": "NO099"
+ },
+ {
+  "date": "2026-08-01",
+  "date_confidence": "month",
+  "title": "Troll phase 3 stage 2 starts production",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Shell",
+   "TotalEnergies",
+   "ConocoPhillips"
+  ],
+  "licence_field": "TROLL",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Month estimate (late August 2026); headline level.",
+  "source_url": "https://www.offshore-technology.com/news/equinor-production-troll-phase-3-stage-2/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "Shell",
+   "TotalEnergies",
+   "ConocoPhillips"
+  ],
+  "id": "NO100"
+ },
+ {
+  "date": "2026-08-11",
+  "date_confidence": "exact",
+  "title": "15/6-17 Svarteknippa dry",
+  "type": "dry well",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor"
+  ],
+  "licence_field": "PL979",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/torr-bronn-i-nordsjoen-156-17/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO101"
+ },
+ {
+  "date": "2026-08-19",
+  "date_confidence": "exact",
+  "title": "Aker BP signs for Losgann (UK, from Apache) and 51% operated Slagugle (PL891/891B/891C) from ConocoPhillips",
+  "type": "M and A",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ConocoPhillips",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "COP keeps 29%, INPEX 20%.",
+  "source_url": "https://akerbp.com",
+  "upcoming": "N",
+  "other_partners": [
+   "ConocoPhillips",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO102"
+ },
+ {
+  "date": "2026-08-24",
+  "date_confidence": "exact",
+  "title": "25/7-13 Linga gas/condensate discovery",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP"
+  ],
+  "licence_field": "PL782 S",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gasskondensat-funn-i-nordsjoen-257-13/",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP"
+  ],
+  "id": "NO103"
+ },
+ {
+  "date": "2026-08-24",
+  "date_confidence": "exact",
+  "title": "Equinor, Aker BP and Vår Energi form strategic exploration collaboration",
+  "type": "strategy",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/680584",
+  "upcoming": "N",
+  "other_partners": [
+   "Aker BP",
+   "Vår Energi"
+  ],
+  "id": "NO104"
+ },
+ {
+  "date": "2026-08-26",
+  "date_confidence": "exact",
+  "title": "Skarv Satellites (Alve Nord, Idun Nord, Ørn) start production, one year early",
+  "type": "first oil",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Harbour",
+   "ORLEN",
+   "Japex",
+   "Equinor"
+  ],
+  "licence_field": "ALVE NORD, IDUN NORD, ØRN",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/680777",
+  "upcoming": "N",
+  "other_partners": [
+   "Harbour",
+   "ORLEN",
+   "Japex",
+   "Equinor"
+  ],
+  "id": "NO105"
+ },
+ {
+  "date": "2026-09-01",
+  "date_confidence": "exact",
+  "title": "DNO recommended cash acquisition of Capricorn Energy plc (revised 17.09.2026)",
+  "type": "M and A",
+  "operator": "DNO",
+  "companies": [
+   "DNO"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Recommended takeover; Capricorn assets are outside NCS.",
+  "source_url": "https://newsweb.oslobors.no/message/681349",
+  "upcoming": "N",
+  "other_partners": [],
+  "id": "NO106"
+ },
+ {
+  "date": "2026-09-01",
+  "date_confidence": "month",
+  "title": "Aker BP puts Storjo tie-back to Skarv (about NOK 7bn) on hold",
+  "type": "delay",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "low",
+  "note": "Month estimate; headline level; partners not resolved.",
+  "source_url": "https://energiwatch.no/nyheter/olje_gass/article19607447.ece",
+  "upcoming": "N",
+  "other_partners": [],
+  "id": "NO107"
+ },
+ {
+  "date": "2026-09-16",
+  "date_confidence": "exact",
+  "title": "36/4-2 and A Alpehumle gas discovery (1-15 mmboe, small)",
+  "type": "discovery",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "OKEA",
+   "INPEX Idemitsu",
+   "Harbour"
+  ],
+  "licence_field": "PL1153",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/aker-bp-har-gjort-et-gassfunn-i-nordsjoen-364-2-og-364-2-a/",
+  "upcoming": "N",
+  "other_partners": [
+   "OKEA",
+   "INPEX Idemitsu",
+   "Harbour"
+  ],
+  "id": "NO108"
+ },
+ {
+  "date": "2026-09-25",
+  "date_confidence": "exact",
+  "title": "16/1-EA-4 H Verdandi/Lillefix appraisal increases estimate",
+  "type": "appraisal",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "Equinor",
+   "DNO"
+  ],
+  "licence_field": "PL167",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/avgrensningsbronn-i-nordsjoen-oker-anslaget-161-ea-4-h/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor",
+   "DNO"
+  ],
+  "id": "NO109"
+ },
+ {
+  "date": "2026-10-07",
+  "date_confidence": "exact",
+  "title": "Snøhvit Future cost estimate raised to NOK 26.5bn (timetable unchanged)",
+  "type": "cost overrun",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "TotalEnergies",
+   "Vår Energi",
+   "Harbour"
+  ],
+  "licence_field": "SNØHVIT",
+  "material": "Y",
+  "setback": "Y",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://www.equinor.com/news/20261007-updated-cost-estimate-snohvit-future",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "TotalEnergies",
+   "Vår Energi",
+   "Harbour"
+  ],
+  "id": "NO110"
+ },
+ {
+  "date": "2026-10-14",
+  "date_confidence": "exact",
+  "title": "30/8-7 S Grimsnes oil/gas discovery (19-50 mmboe)",
+  "type": "discovery",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "PL190",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/olje--og-gassfunn-i-nordsjoen-308-7-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO111"
+ },
+ {
+  "date": "2026-10-14",
+  "date_confidence": "exact",
+  "title": "Kistos signs for 10% of PL169E/956/956B from Vår Energi (USD 12.9m)",
+  "type": "M and A",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Kistos"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "low",
+  "note": "",
+  "source_url": "https://www.investegate.co.uk",
+  "upcoming": "N",
+  "other_partners": [
+   "Kistos"
+  ],
+  "id": "NO112"
+ },
+ {
+  "date": "2026-10-19",
+  "date_confidence": "exact",
+  "title": "6407/5-3 S Lakris gas/condensate discovery",
+  "type": "discovery",
+  "operator": "Vår Energi",
+  "companies": [
+   "Vår Energi",
+   "Equinor"
+  ],
+  "licence_field": "PL1002",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Sodir exploration result; event date is Sodir publication date. Partners = licensees on that date.",
+  "source_url": "https://www.sodir.no/aktuelt/nyheter/resultat-av-leteboring/2026/gass-og-kondensatfunn-i-norskehavet-64075-3-s/",
+  "upcoming": "N",
+  "other_partners": [
+   "Equinor"
+  ],
+  "id": "NO113"
+ },
+ {
+  "date": "2026-10-28",
+  "date_confidence": "exact",
+  "title": "Equinor Q3 2026 results",
+  "type": "results",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/message/654072",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO114"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "Aker BP Q3 2026 results",
+  "type": "results",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://akerbp.com/en/investor/calendar/",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO115"
+ },
+ {
+  "date": "2026-10-29",
+  "date_confidence": "exact",
+  "title": "DNO Q3 2026 results",
+  "type": "results",
+  "operator": "DNO",
+  "companies": [
+   "DNO"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/search?issuer=DNO",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO116"
+ },
+ {
+  "date": "2026-11-03",
+  "date_confidence": "exact",
+  "title": "OKEA Q3 2026 results",
+  "type": "results",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://newsweb.oslobors.no/search?issuer=OKEA",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO117"
+ },
+ {
+  "date": "2026-12-01",
+  "date_confidence": "quarter",
+  "title": "Irpa (Aasta Hansteen tie-back) first gas, targeted Q4 2026 / by year-end",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Petoro",
+   "Harbour",
+   "Shell"
+  ],
+  "licence_field": "IRPA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Quarter estimate placed on 1 Dec; source Equinor Irpa page and Harbour H1 2026.",
+  "source_url": "https://www.equinor.com/energy/irpa",
+  "upcoming": "Y",
+  "other_partners": [
+   "Petoro",
+   "Harbour",
+   "Shell"
+  ],
+  "id": "NO118"
+ },
+ {
+  "date": "2027-01-01",
+  "date_confidence": "estimated",
+  "title": "APA 2026 award expected (January, per prior rounds)",
+  "type": "licence award",
+  "operator": null,
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi",
+   "DNO"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Month estimate. Estimated from prior pattern (14.01.2025, 13.01.2026); not yet announced.",
+  "source_url": "https://www.regjeringen.no/en/whats-new/57-new-production-licenses-awarded/id3145952/",
+  "upcoming": "Y",
+  "other_partners": [
+   "Equinor",
+   "Aker BP",
+   "Vår Energi",
+   "DNO"
+  ],
+  "id": "NO119"
+ },
+ {
+  "date": "2027-01-01",
+  "date_confidence": "estimated",
+  "title": "Bestla first oil expected early 2027",
+  "type": "first oil",
+  "operator": "OKEA",
+  "companies": [
+   "OKEA",
+   "DNO",
+   "Lime",
+   "M Vest"
+  ],
+  "licence_field": "BESTLA",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Month estimate; source OKEA Q4 2025 presentation (early 2027).",
+  "source_url": "https://okea.no/wp-content/uploads/2026/02/Q4-2025-Quarterly-Results-Presentation.pdf",
+  "upcoming": "Y",
+  "other_partners": [
+   "DNO",
+   "Lime",
+   "M Vest"
+  ],
+  "id": "NO120"
+ },
+ {
+  "date": "2027-01-01",
+  "date_confidence": "estimated",
+  "title": "Mistral Nord well planned early 2027",
+  "type": "well result",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Japex",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "PL1119",
+  "material": "N",
+  "setback": "N",
+  "confidence": "low",
+  "note": "Month estimate; source Japex release 20.04.2026.",
+  "source_url": "https://www.japex.co.jp",
+  "upcoming": "Y",
+  "other_partners": [
+   "Japex",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO121"
+ },
+ {
+  "date": "2027-02-10",
+  "date_confidence": "exact",
+  "title": "Aker BP Q4 2026 results",
+  "type": "results",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://akerbp.com/en/investor/calendar/",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO122"
+ },
+ {
+  "date": "2027-03-19",
+  "date_confidence": "exact",
+  "title": "Aker BP annual report 2026",
+  "type": "results",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP"
+  ],
+  "licence_field": "",
+  "material": "N",
+  "setback": "N",
+  "confidence": "high",
+  "note": "",
+  "source_url": "https://akerbp.com/en/investor/calendar/",
+  "upcoming": "Y",
+  "other_partners": [],
+  "id": "NO123"
+ },
+ {
+  "date": "2027-06-01",
+  "date_confidence": "estimated",
+  "title": "Yggdrasil and Valhall PWP-Fenris first oil targeted summer 2027",
+  "type": "first oil",
+  "operator": "Aker BP",
+  "companies": [
+   "Aker BP",
+   "ORLEN",
+   "Equinor"
+  ],
+  "licence_field": "HUGIN, MUNIN, FULLA, FENRIS",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Month estimate (summer 2027) per Aker BP Q2 2026.",
+  "source_url": "https://www.ogj.com/members/news/55391292/aker-bp-increases-project-cost-estimates-to-protect-2027-startups",
+  "upcoming": "Y",
+  "other_partners": [
+   "ORLEN",
+   "Equinor"
+  ],
+  "id": "NO124"
+ },
+ {
+  "date": "2027-10-01",
+  "date_confidence": "quarter",
+  "title": "Johan Sverdrup Phase 3 first oil targeted Q4 2027",
+  "type": "first oil",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "licence_field": "JOHAN SVERDRUP",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Quarter estimate placed on 1 Oct.",
+  "source_url": "https://newsweb.oslobors.no/message/650425",
+  "upcoming": "Y",
+  "other_partners": [
+   "Aker BP",
+   "Petoro",
+   "TotalEnergies"
+  ],
+  "id": "NO125"
+ },
+ {
+  "date": "2027-10-01",
+  "date_confidence": "quarter",
+  "title": "Wisting PDO submission planned Q4 2027",
+  "type": "PDO submitted",
+  "operator": "Equinor",
+  "companies": [
+   "Equinor",
+   "Aker BP",
+   "Petoro",
+   "INPEX Idemitsu"
+  ],
+  "licence_field": "",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "medium",
+  "note": "Quarter estimate; partners headline-level.",
+  "source_url": "https://www.equinor.com/news/20260625-wisting-proposal-environmental-impact-assessment-programme",
+  "upcoming": "Y",
+  "other_partners": [
+   "Aker BP",
+   "Petoro",
+   "INPEX Idemitsu"
+  ],
+  "id": "NO126"
+ },
+ {
+  "date": "2028-10-01",
+  "date_confidence": "quarter",
+  "title": "Ekofisk PPF and Johan Castberg Isflak first production targeted Q4 2028",
+  "type": "first oil",
+  "operator": "ConocoPhillips",
+  "companies": [
+   "ConocoPhillips",
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies",
+   "Equinor"
+  ],
+  "licence_field": "ALBUSKJELL, VEST EKOFISK, TOMMELITEN GAMMA, JOHAN CASTBERG",
+  "material": "Y",
+  "setback": "N",
+  "confidence": "high",
+  "note": "Quarter estimate placed on 1 Oct.",
+  "source_url": "https://newsweb.oslobors.no/message/661692",
+  "upcoming": "Y",
+  "other_partners": [
+   "Vår Energi",
+   "ORLEN",
+   "Petoro",
+   "TotalEnergies",
+   "Equinor"
+  ],
+  "id": "NO127"
+ }
+]

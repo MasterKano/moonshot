@@ -14,6 +14,8 @@ const SORTS = [
   ["stage", "desc", "Stage, late to early"],
   ["cap", "desc", "Mkt cap, high to low"],
   ["cap", "asc", "Mkt cap, low to high"],
+  ["median", "desc", "Median daily, high to low"],
+  ["median", "asc", "Median daily, low to high"],
   ["events", "desc", "Material events, high to low"],
   ["events", "asc", "Material events, low to high"],
   ["latest", "desc", "Latest event, newest"],
@@ -29,6 +31,7 @@ const COLUMNS = [
   ["type", "Type"],
   ["stage", "Stage"],
   ["cap", "Mkt cap US$m"],
+  ["median", "Median daily"],
   ["events", "Material events 12m"],
   ["latest", "Latest material event"],
   ["setbacks", "Setbacks"],
@@ -87,6 +90,13 @@ function formatNum(value) {
   const number = asNumber(value);
   if (number == null) return "—";
   return new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 }).format(number);
+}
+
+function formatMedian(row) {
+  if (row.median == null) return "—";
+  const number = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 1 }).format(row.median);
+  const currency = showText(row.currency);
+  return currency === "—" ? `${number}k` : `${number}k ${currency}`;
 }
 
 function dateValue(value) {
@@ -148,6 +158,8 @@ function normalize(raw, index) {
     stage: row.stage,
     description: row.description,
     cap: asNumber(row.mkt_cap_usd_m),
+    median: asNumber(row.median_daily_value_k),
+    currency: row.currency,
     asOf: row.as_of,
     events12m: asNumber(row.material_events_12m),
     latestDate: row.latest_event_date,
@@ -163,7 +175,7 @@ function normalize(raw, index) {
 function searchBlob(row) {
   const parts = [
     row.name, row.code, row.exchange, row.band, row.type, row.stage, row.description,
-    row.cash, row.latestHeadline, row.latestType,
+    row.cash, row.currency, row.latestHeadline, row.latestType,
     ...row.events.flatMap((event) => [event.headline, event.type, event.date]),
   ];
   return parts.map((part) => showText(part) === "—" ? "" : showText(part)).join(" ").toLowerCase();
@@ -207,6 +219,7 @@ function compareRows(a, b) {
   } else {
     const value = (row) => {
       if (key === "cap") return row.cap;
+      if (key === "median") return row.median;
       if (key === "events") return row.events12m;
       if (key === "setbacks") return row.setbacks;
       return dateValue(row.latestDate);
@@ -332,6 +345,7 @@ function renderTable(rows) {
       el("td", { text: showText(row.type) }),
       el("td", {}, [stageNode(row.stage)]),
       el("td", { text: formatNum(row.cap) }),
+      el("td", { text: formatMedian(row) }),
       el("td", { text: formatNum(row.events12m) }),
       el("td", {}, [latestNode(row)]),
       el("td", { text: formatNum(row.setbacks) }),
@@ -374,6 +388,7 @@ function renderCards(rows) {
       el("span", { class: "cap-stage" }, [stageNode(row.stage)]),
       el("dl", { class: "cap-facts" }, [
         fact("Mkt cap US$m", formatNum(row.cap)),
+        fact("Median daily", formatMedian(row)),
         fact("Material events 12m", formatNum(row.events12m)),
         fact("Setbacks", formatNum(row.setbacks)),
         fact("Cash flag", showText(row.cash)),
@@ -417,7 +432,7 @@ function setSort(key) {
   if (capsState.sortKey === key) capsState.sortDir = capsState.sortDir === "asc" ? "desc" : "asc";
   else {
     capsState.sortKey = key;
-    capsState.sortDir = ["cap", "events", "latest", "setbacks"].includes(key) ? "desc" : "asc";
+    capsState.sortDir = ["cap", "median", "events", "latest", "setbacks"].includes(key) ? "desc" : "asc";
   }
   const sort = document.getElementById("smallcaps-sort");
   if (sort) sort.value = `${capsState.sortKey}:${capsState.sortDir}`;
@@ -446,6 +461,7 @@ function mountFilters() {
   document.getElementById("smallcaps-filters").replaceChildren(...filters.map(([key, label, values]) => {
     const select = el("select", { "data-cap-filter": key });
     select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
+    select.value = capsState[key] || "all";
     select.addEventListener("change", () => {
       capsState[key] = select.value;
       select.closest(".field").classList.toggle("active", select.value !== "all");
@@ -478,7 +494,7 @@ function applyTab(tab, persist) {
   const skip = document.querySelector(".skip");
   if (skip) {
     skip.href = next === "smallcaps" ? "#smallcaps" : "#timeline";
-    skip.textContent = next === "smallcaps" ? "Skip to small caps" : "Skip to timeline";
+    skip.textContent = next === "smallcaps" ? "Skip to screen" : "Skip to timeline";
   }
   if (persist) {
     try { localStorage.setItem(TAB_KEY, next); } catch (err) {}
@@ -511,7 +527,7 @@ function showCapsError() {
   if (loading) loading.hidden = true;
   const empty = document.getElementById("smallcaps-empty");
   empty.hidden = false;
-  empty.replaceChildren(el("p", { class: "error", text: "The small-cap list could not be loaded. Refresh the page to try again." }));
+  empty.replaceChildren(el("p", { class: "error", text: "The screen could not be loaded. Refresh the page to try again." }));
 }
 
 async function loadCaps() {

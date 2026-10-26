@@ -46,7 +46,7 @@
     <div class="view-bar">
       <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
         <button type="button" role="tab" id="tab-events" data-view="events" aria-controls="events-view" aria-selected="true">Events</button>
-        <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Small caps</button>
+        <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
       </div>
     </div>
     <div id="events-view">
@@ -142,10 +142,10 @@
     <section class="panel" id="smallcaps" aria-labelledby="smallcaps-title" hidden>
       <div class="panel-head">
         <div>
-          <h2 id="smallcaps-title">Small caps</h2>
+          <h2 id="smallcaps-title">Screen</h2>
         </div>
         <label class="sort-label narrow-only">Sort
-          <select id="smallcaps-sort" aria-label="Sort small caps"></select>
+          <select id="smallcaps-sort" aria-label="Sort the screen"></select>
         </label>
       </div>
       <div class="cap-tools">
@@ -155,8 +155,8 @@
         <div class="fields" id="smallcaps-filters"></div>
       </div>
       <p class="showing" id="smallcaps-showing" aria-live="polite"></p>
-      <p class="chart-note" id="smallcaps-note">Liquid resource small caps with at least one material de-risking event in the last 12 months. Screened from exchange data and announcement headlines; labels can be low confidence.</p>
-      <p class="loading" id="smallcaps-loading">Loading small caps…</p>
+      <p class="chart-note" id="smallcaps-note">Liquid resource companies (US$5M to 5B, ASX and London) with at least one material de-risking event in the last 12 months. Screened from exchange data and announcement headlines; labels can be low confidence.</p>
+      <p class="loading" id="smallcaps-loading">Loading the screen…</p>
       <div class="empty" id="smallcaps-empty" hidden></div>
       <div class="table-wrap wide-only cap-scroll" id="smallcaps-table"></div>
       <div class="cards narrow-only" id="smallcaps-cards"></div>
@@ -165,7 +165,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p class="source-events">Source: Moonshot Events Register, as of 25 Oct 2026</p>
-      <p class="source-caps">Source: ASX small-cap screen, as of 26 Oct 2026.</p>
+      <p class="source-caps">Source: ASX and London screen, as of 26 Oct 2026.</p>
     </div>
   </footer>
   <div class="scrim" id="scrim" hidden></div>

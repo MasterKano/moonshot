@@ -2864,5 +2864,3099 @@
   "currency": "AUD",
   "url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/equities/company/GHM",
   "median_daily_value_k": 148.0
+ },
+ {
+  "code": "ECO",
+  "name": "Eco (Atlantic) Oil and Gas Ltd",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 191.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-10-02",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Ministerial Approval - Namibia Licences Farm-down",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer in Guyana, Namibia and South Africa, with a North Falklands farm-in; farm-outs to BP and Navitas with ministerial approvals",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-02",
+    "type": "Funding",
+    "headline": "Ministerial Approval - Namibia Licences Farm-down",
+    "setback": false
+   },
+   {
+    "date": "2026-06-29",
+    "type": "Funding",
+    "headline": "Ministerial Approval for Namibia PEL 98 Farm-Out",
+    "setback": false
+   },
+   {
+    "date": "2026-05-18",
+    "type": "M and A",
+    "headline": "JHI Acquisition - Final Court Order Obtained",
+    "setback": false
+   },
+   {
+    "date": "2026-04-30",
+    "type": "M and A",
+    "headline": "JHI Acquisition - Interim Court Order Obtained",
+    "setback": false
+   },
+   {
+    "date": "2026-04-13",
+    "type": "Funding",
+    "headline": "Farm down of Namibian portfolio to BP",
+    "setback": false
+   },
+   {
+    "date": "2026-03-11",
+    "type": "M and A",
+    "headline": "Acquisition of JHI and Navitas Partnership",
+    "setback": false
+   },
+   {
+    "date": "2026-03-02",
+    "type": "Funding",
+    "headline": "Navitas Signs Farm-In for North Falklands Licence",
+    "setback": false
+   },
+   {
+    "date": "2025-12-04",
+    "type": "Funding",
+    "headline": "Strategic Partnership with Navitas Petroleum",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ECO",
+  "median_daily_value_k": 371.5
+ },
+ {
+  "code": "SQZ",
+  "name": "Serica Energy plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 1413.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-10-01",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Completion of acquisition of Spirit Energy assets",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "UK oil and gas producer; P2530 farm-in and new reserves based lending",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-01",
+    "type": "M and A",
+    "headline": "Completion of acquisition of Spirit Energy assets",
+    "setback": false
+   },
+   {
+    "date": "2026-08-13",
+    "type": "Setback",
+    "headline": "Termination of Serica Offer for Pharos Energy plc",
+    "setback": true
+   },
+   {
+    "date": "2026-07-27",
+    "type": "M and A",
+    "headline": "Recommended acquisition of Pharos Energy plc",
+    "setback": false
+   },
+   {
+    "date": "2026-07-23",
+    "type": "Funding",
+    "headline": "New Reserves Based Lending Facilities Completion",
+    "setback": false
+   },
+   {
+    "date": "2026-06-11",
+    "type": "M and A",
+    "headline": "Completion of acquisition of assets from ONE-Dyas",
+    "setback": false
+   },
+   {
+    "date": "2026-03-26",
+    "type": "M and A",
+    "headline": "Completion of acquisition of TotalEnergies assets",
+    "setback": false
+   },
+   {
+    "date": "2025-12-16",
+    "type": "M and A",
+    "headline": "Acquisition of assets from Spirit Energy",
+    "setback": false
+   },
+   {
+    "date": "2025-12-11",
+    "type": "M and A",
+    "headline": "Completion of acquisition of Prax Upstream Limited",
+    "setback": false
+   },
+   {
+    "date": "2025-11-04",
+    "type": "Funding",
+    "headline": "Farm-in to UK North Sea P2530 Licence",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SQZ",
+  "median_daily_value_k": 3344.1
+ },
+ {
+  "code": "RSG",
+  "name": "Resolute Mining Limited",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 1521.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-07-22",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Updated Mineral Resource Estimate at ABC Project",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Gold miner in West Africa; Doropo project (Cote d Ivoire) approved for FID in 2026, with the ABC project and La Debo resource growing behind it",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-22",
+    "type": "Resource",
+    "headline": "Updated Mineral Resource Estimate at ABC Project",
+    "setback": false
+   },
+   {
+    "date": "2026-05-14",
+    "type": "Setback",
+    "headline": "Retraction of ABC Project Scoping Study Release",
+    "setback": true
+   },
+   {
+    "date": "2026-05-13",
+    "type": "Study",
+    "headline": "ABC Project Scoping Study",
+    "setback": false
+   },
+   {
+    "date": "2026-03-31",
+    "type": "Funding",
+    "headline": "Strategic Partnership Signed in Guinea",
+    "setback": false
+   },
+   {
+    "date": "2026-03-12",
+    "type": "FID or construction decision",
+    "headline": "Doropo Final Investment Decision Approved",
+    "setback": false
+   },
+   {
+    "date": "2026-03-05",
+    "type": "Reserve",
+    "headline": "Ore Reserves and Mineral Resource Statement",
+    "setback": false
+   },
+   {
+    "date": "2026-02-05",
+    "type": "Permit or approval",
+    "headline": "Mining Permit Awarded for Doropo Gold Project",
+    "setback": false
+   },
+   {
+    "date": "2025-12-15",
+    "type": "Study",
+    "headline": "Updated Doropo DFS",
+    "setback": false
+   },
+   {
+    "date": "2025-11-18",
+    "type": "Resource",
+    "headline": "Initial Mineral Resource at La Debo",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/RSG",
+  "median_daily_value_k": 47.8
+ },
+ {
+  "code": "BRES",
+  "name": "Blencowe Resources plc",
+  "type": "Graphite",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 41.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 8,
+  "latest_event_date": "2026-05-29",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Orom Cross Graphite DFS NPV10 up 15% to US$1.254bn",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Orom Cross graphite project in Uganda; DFS completed and offtake agreements with European partners",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-29",
+    "type": "Study",
+    "headline": "Orom Cross Graphite DFS NPV10 up 15% to US$1.254bn",
+    "setback": false
+   },
+   {
+    "date": "2026-05-18",
+    "type": "Resource",
+    "headline": "Beehive Deposit Maiden JORC Resource",
+    "setback": false
+   },
+   {
+    "date": "2026-03-06",
+    "type": "Resource",
+    "headline": "Maiden 16.9 Mt JORC Resource for Iyan Deposit",
+    "setback": false
+   },
+   {
+    "date": "2026-01-23",
+    "type": "Funding",
+    "headline": "European Processing and Offtake with Alkeemia",
+    "setback": false
+   },
+   {
+    "date": "2025-12-23",
+    "type": "Discovery or drill result",
+    "headline": "Beehive Returns 92.55m @ 6.83% TGC from Surface",
+    "setback": false
+   },
+   {
+    "date": "2025-12-09",
+    "type": "Funding",
+    "headline": "Offtake MOU with Yunasko Ltd.",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "Study",
+    "headline": "DFS Results Confirms Outstanding Economics",
+    "setback": false
+   },
+   {
+    "date": "2025-11-27",
+    "type": "Resource",
+    "headline": "JORC Resource Upgrade",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/BRES",
+  "median_daily_value_k": 139.3
+ },
+ {
+  "code": "ORR",
+  "name": "Oriole Resources plc",
+  "type": "Gold",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 17.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 7,
+  "latest_event_date": "2026-10-07",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Substantial Maiden Resource Estimate at Wapouzé",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold and base metals explorer in Turkey, East Africa and West Africa; Bibemi PEA and ESIA approval, Mbe resource growth",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-07",
+    "type": "Resource",
+    "headline": "Substantial Maiden Resource Estimate at Wapouzé",
+    "setback": false
+   },
+   {
+    "date": "2026-09-18",
+    "type": "M and A",
+    "headline": "Sale of Muratdere Royalty",
+    "setback": false
+   },
+   {
+    "date": "2026-07-23",
+    "type": "Resource",
+    "headline": "Resources at Mbe increased to 1.66m oz gold",
+    "setback": false
+   },
+   {
+    "date": "2026-07-06",
+    "type": "M and A",
+    "headline": "Completion of Senala Joint Venture Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-04-13",
+    "type": "Resource",
+    "headline": "Total Resources at Mbe increased to 1.23m oz gold",
+    "setback": false
+   },
+   {
+    "date": "2025-12-16",
+    "type": "Study",
+    "headline": "Preliminary Economic Assessment for Bibemi Project",
+    "setback": false
+   },
+   {
+    "date": "2025-11-20",
+    "type": "Permit or approval",
+    "headline": "Approval of ESIA Study for Bibemi Gold Project",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ORR",
+  "median_daily_value_k": 25.9
+ },
+ {
+  "code": "AMRQ",
+  "name": "Amaroq Ltd.",
+  "type": "Gold",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 612.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 7,
+  "latest_event_date": "2026-07-29",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Updated Mineral Resource Estimate and publica...",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.4 qtrs runway (yfinance, low conf)",
+  "description": "Nalunaq gold mine and exploration portfolio in Greenland; expanded debt and credit facilities and updated resource",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-29",
+    "type": "Resource",
+    "headline": "Updated Mineral Resource Estimate and publica...",
+    "setback": false
+   },
+   {
+    "date": "2026-07-13",
+    "type": "M and A",
+    "headline": "Gardaq A/S exploration JV funding secured",
+    "setback": false
+   },
+   {
+    "date": "2026-04-30",
+    "type": "Funding",
+    "headline": "Amaroq Doubles Revolving Credit Facility to U...",
+    "setback": false
+   },
+   {
+    "date": "2025-12-23",
+    "type": "M and A",
+    "headline": "Closing of Strategic Acquisitions, Total Voti...",
+    "setback": false
+   },
+   {
+    "date": "2025-11-19",
+    "type": "Funding",
+    "headline": "Improved debt financing agreement",
+    "setback": false
+   },
+   {
+    "date": "2025-11-04",
+    "type": "Discovery or drill result",
+    "headline": "Discovery of Rare Earth Elements in South Gre...",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "Discovery or drill result",
+    "headline": "New Gold Discoveries Across Greenland with Gr...",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/AMRQ",
+  "median_daily_value_k": 868.0
+ },
+ {
+  "code": "CAML",
+  "name": "Central Asia Metals plc",
+  "type": "Copper",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 309.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-10-14",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Court approval for the Cygnus Transaction",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Base metals producer (Sasa zinc and lead in North Macedonia) with Kazakh copper expansion approval",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "M and A",
+    "headline": "Court approval for the Cygnus Transaction",
+    "setback": false
+   },
+   {
+    "date": "2026-10-13",
+    "type": "Permit or approval",
+    "headline": "Receipt of Kazakh regulatory approval",
+    "setback": false
+   },
+   {
+    "date": "2026-09-18",
+    "type": "M and A",
+    "headline": "Result of the Cygnus Scheme Meeting",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Reserve",
+    "headline": "Mineral Resource and Ore Reserve Update",
+    "setback": false
+   },
+   {
+    "date": "2026-06-02",
+    "type": "M and A",
+    "headline": "Proposed acquisition of Cygnus Metals Limited",
+    "setback": false
+   },
+   {
+    "date": "2026-03-03",
+    "type": "Reserve",
+    "headline": "Sasa Mineral Resource and Ore Reserve Statement",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/CAML",
+  "median_daily_value_k": 1469.1
+ },
+ {
+  "code": "KZG",
+  "name": "Kazera Global plc",
+  "type": "Diamonds and mineral sands",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 22.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-09-02",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "2A Mining Right Granted",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Alexander Bay diamonds and heavy mineral sands in South Africa; 2A mining right granted Sep 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-02",
+    "type": "Permit or approval",
+    "headline": "2A Mining Right Granted",
+    "setback": false
+   },
+   {
+    "date": "2026-08-24",
+    "type": "Study",
+    "headline": "2A Technical Report",
+    "setback": false
+   },
+   {
+    "date": "2026-07-20",
+    "type": "Funding",
+    "headline": "US$750,000 Strategic Partnership Payment Received",
+    "setback": false
+   },
+   {
+    "date": "2026-07-07",
+    "type": "M and A",
+    "headline": "Acquisition of additional interests in WHM and DBM",
+    "setback": false
+   },
+   {
+    "date": "2026-05-26",
+    "type": "Permit or approval",
+    "headline": "WHM Strategic Production Sharing Agreement",
+    "setback": false
+   },
+   {
+    "date": "2025-11-03",
+    "type": "Permit or approval",
+    "headline": "Withdrawal of 2A Mining Right Objection",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KZG",
+  "median_daily_value_k": 34.4
+ },
+ {
+  "code": "EST",
+  "name": "East Star Resources plc",
+  "type": "Gold",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 59.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-09-01",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "2nd Copper JV Agreement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold and copper explorer in the UK and Kazakhstan; strategic investment by Endeavour Mining",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-01",
+    "type": "M and A",
+    "headline": "2nd Copper JV Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-03-19",
+    "type": "M and A",
+    "headline": "Copper JV Agreement Signed with Xinhai Mining",
+    "setback": false
+   },
+   {
+    "date": "2025-12-11",
+    "type": "M and A",
+    "headline": "JV Agreement for Development of Verkhuba",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "Funding",
+    "headline": "£1.8M Strategic Investment by Endeavour Mining",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "M and A",
+    "headline": "Verkhuba Copper Deposit - Transaction Discussions",
+    "setback": false
+   },
+   {
+    "date": "2025-11-13",
+    "type": "M and A",
+    "headline": "$25M+ Strategic JV Agreement with Endeavour Mining",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/EST",
+  "median_daily_value_k": 167.6
+ },
+ {
+  "code": "GGP",
+  "name": "Greatland Resources Limited",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 4105.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 6,
+  "latest_event_date": "2026-06-29",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "March 2026 Group Ore Reserve Statement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold and copper miner in Western Australia; Havieron project has feasibility study, environmental approvals and debt facilities",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-06-29",
+    "type": "Reserve",
+    "headline": "March 2026 Group Ore Reserve Statement",
+    "setback": false
+   },
+   {
+    "date": "2026-06-01",
+    "type": "Funding",
+    "headline": "Execution of Debt Facilities and Havieron Approval",
+    "setback": false
+   },
+   {
+    "date": "2026-05-26",
+    "type": "Permit or approval",
+    "headline": "Havieron Environmental Approvals Received",
+    "setback": false
+   },
+   {
+    "date": "2026-03-30",
+    "type": "Resource",
+    "headline": "December 2025 Group Mineral Resource Stmt.",
+    "setback": false
+   },
+   {
+    "date": "2026-03-30",
+    "type": "Resource",
+    "headline": "December 2025 O'Callaghans Mineral Resource Stmt.",
+    "setback": false
+   },
+   {
+    "date": "2025-12-01",
+    "type": "Study",
+    "headline": "Havieron Project – Feasibility Study",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/GGP",
+  "median_daily_value_k": 9955.4
+ },
+ {
+  "code": "EOG",
+  "name": "Europa Oil and Gas (Holdings) plc",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 29.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-10-16",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "EG-08 PSC Phase 1 Further Extension",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer in the UK, Equatorial Guinea and Ireland; EG-08 farm-out and licence extensions",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-16",
+    "type": "Permit or approval",
+    "headline": "EG-08 PSC Phase 1 Further Extension",
+    "setback": false
+   },
+   {
+    "date": "2026-05-29",
+    "type": "Funding",
+    "headline": "MMHD Approval of Farm-out to Fuhai",
+    "setback": false
+   },
+   {
+    "date": "2026-03-27",
+    "type": "Permit or approval",
+    "headline": "FEL 4/19 Licence Extension Approval",
+    "setback": false
+   },
+   {
+    "date": "2026-02-12",
+    "type": "Permit or approval",
+    "headline": "EG-08 PSC Phase 1 Extension Finalised",
+    "setback": false
+   },
+   {
+    "date": "2025-12-30",
+    "type": "Funding",
+    "headline": "EG-08 Farm-out Agreement Signed",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/EOG",
+  "median_daily_value_k": 49.6
+ },
+ {
+  "code": "1SN",
+  "name": "First Tin plc",
+  "type": "Tin",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 97.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-10-09",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Statement regarding a possible offer",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Developer of the Taronga tin project (NSW, Australia); updated resource, maiden reserve and feasibility study in 2026",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-09",
+    "type": "M and A",
+    "headline": "Statement regarding a possible offer",
+    "setback": false
+   },
+   {
+    "date": "2026-08-17",
+    "type": "Study",
+    "headline": "Updated Feasibility Study Enhances Taronga Value",
+    "setback": false
+   },
+   {
+    "date": "2026-08-13",
+    "type": "Reserve",
+    "headline": "Updated Mineral Reserve Estimate",
+    "setback": false
+   },
+   {
+    "date": "2026-04-30",
+    "type": "Resource",
+    "headline": "Updated Mineral Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2025-11-05",
+    "type": "Funding",
+    "headline": "Letter of Interest from Export-Import Bank",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/1SN",
+  "median_daily_value_k": 26.4
+ },
+ {
+  "code": "BZT",
+  "name": "Bezant Resources plc",
+  "type": "Copper",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 33.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-10-02",
+  "latest_event_type": "First production",
+  "latest_event_headline": "Hope and Gorob: Commercial Production Commences",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.7 qtrs runway (yfinance, low conf)",
+  "description": "Base metals miner in Namibia; Hope and Gorob copper project financed with offtake and in commercial production from Oct 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-02",
+    "type": "First production",
+    "headline": "Hope and Gorob: Commercial Production Commences",
+    "setback": false
+   },
+   {
+    "date": "2026-06-11",
+    "type": "Funding",
+    "headline": "Hope and Gorob Project Financing and Offtake Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-04-08",
+    "type": "Resource",
+    "headline": "Hope and Gorob Project-New Mineral Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2025-12-17",
+    "type": "M and A",
+    "headline": "Completion of NLZM Processing Plant Acquisition",
+    "setback": false
+   },
+   {
+    "date": "2025-10-31",
+    "type": "Funding",
+    "headline": "Prepayment Facility and concentrate offtake agreed",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/BZT",
+  "median_daily_value_k": 190.9
+ },
+ {
+  "code": "PAF",
+  "name": "Pan African Resources plc",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 3000.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-09-11",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Pan African completes Definitive Feasibility ...",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "South African gold producer; feasibility studies completed for new projects in 2025 and 2026",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-11",
+    "type": "Study",
+    "headline": "Pan African completes Definitive Feasibility ...",
+    "setback": false
+   },
+   {
+    "date": "2026-07-01",
+    "type": "M and A",
+    "headline": "Implementation of the Emmerson Scheme",
+    "setback": false
+   },
+   {
+    "date": "2026-06-11",
+    "type": "M and A",
+    "headline": "Proposed Acquisition of Emmerson Resources - ...",
+    "setback": false
+   },
+   {
+    "date": "2026-03-09",
+    "type": "M and A",
+    "headline": "Pan African to acquire Emmerson Resources",
+    "setback": false
+   },
+   {
+    "date": "2025-11-27",
+    "type": "Study",
+    "headline": "Completion of Feasibility Study on Soweto Clu...",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/PAF",
+  "median_daily_value_k": 6509.2
+ },
+ {
+  "code": "SVML",
+  "name": "Sovereign Metals Limited",
+  "type": "Rutile and graphite",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 197.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-09-09",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Scoping Study Shows Strategic Rare Earth Potential",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Kasiya rutile and graphite project in Malawi; DFS results in 2026 and offtake MoUs with Mitsui and Traxys",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-09",
+    "type": "Study",
+    "headline": "Scoping Study Shows Strategic Rare Earth Potential",
+    "setback": false
+   },
+   {
+    "date": "2026-04-16",
+    "type": "Study",
+    "headline": "Kasiya Definitive Feasibility Study Results",
+    "setback": false
+   },
+   {
+    "date": "2026-03-18",
+    "type": "Resource",
+    "headline": "Kasiya MRE Significantly Upgraded Ahead of DFS",
+    "setback": false
+   },
+   {
+    "date": "2026-03-12",
+    "type": "Funding",
+    "headline": "Sovereign Signs Rutile Offtake MoU with Mitsui",
+    "setback": false
+   },
+   {
+    "date": "2026-02-17",
+    "type": "Funding",
+    "headline": "Project Vault Participant Traxys Signs Offtake MOU",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SVML",
+  "median_daily_value_k": 81.4
+ },
+ {
+  "code": "SNDA",
+  "name": "Sunda Energy plc",
+  "type": "Oil and gas",
+  "stage": "Resource defined (low confidence)",
+  "mkt_cap_usd_m": 16.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-09-03",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Philippines Prospect: Prospective Resources Update",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.6 qtrs runway (yfinance, low conf)",
+  "description": "Energy company with the Chuditch gas field PSC in Timor-Leste; Chuditch-2 environmental licence and a new NZ petroleum permit",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-03",
+    "type": "Resource",
+    "headline": "Philippines Prospect: Prospective Resources Update",
+    "setback": false
+   },
+   {
+    "date": "2026-08-13",
+    "type": "Permit or approval",
+    "headline": "Grant of Petroleum Mining Permit to Matahio NZ",
+    "setback": false
+   },
+   {
+    "date": "2026-04-14",
+    "type": "M and A",
+    "headline": "Acquisition Deposit and Change of Control",
+    "setback": false
+   },
+   {
+    "date": "2026-04-08",
+    "type": "M and A",
+    "headline": "Acquisition, funding and capital reorganisation",
+    "setback": false
+   },
+   {
+    "date": "2026-03-10",
+    "type": "Permit or approval",
+    "headline": "Award of Chuditch-2 Environmental Licence",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SNDA",
+  "median_daily_value_k": 49.7
+ },
+ {
+  "code": "EEE",
+  "name": "Empire Metals Limited",
+  "type": "Titanium",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 297.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-08-19",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "MRE Upgrade at Pitfield Titanium Project",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Pitfield titanium project in Western Australia; MRE upgrade in Aug 2026",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-19",
+    "type": "Resource",
+    "headline": "MRE Upgrade at Pitfield Titanium Project",
+    "setback": false
+   },
+   {
+    "date": "2026-06-24",
+    "type": "M and A",
+    "headline": "Completion of Sale of Eclipse Mining Lease",
+    "setback": false
+   },
+   {
+    "date": "2026-05-19",
+    "type": "M and A",
+    "headline": "Execution of SPA for Eclipse Mining Lease",
+    "setback": false
+   },
+   {
+    "date": "2026-03-31",
+    "type": "M and A",
+    "headline": "Eclipse Mining Licence Sale Extension",
+    "setback": false
+   },
+   {
+    "date": "2025-12-30",
+    "type": "M and A",
+    "headline": "Conditional Sale of 75% of Eclipse Gold Project",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/EEE",
+  "median_daily_value_k": 602.9
+ },
+ {
+  "code": "ENQ",
+  "name": "Enquest plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 793.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-06-10",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Significant Acquisition in Malaysia",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "UK North Sea and Malaysia oil and gas producer; new Malaysian PSC awards and an acquisition in Malaysia",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-06-10",
+    "type": "M and A",
+    "headline": "Significant Acquisition in Malaysia",
+    "setback": false
+   },
+   {
+    "date": "2026-04-02",
+    "type": "Permit or approval",
+    "headline": "PSC Signing in Peninsular Malaysia",
+    "setback": false
+   },
+   {
+    "date": "2026-02-11",
+    "type": "Permit or approval",
+    "headline": "EnQuest awarded PSC interest in Malaysia",
+    "setback": false
+   },
+   {
+    "date": "2026-02-09",
+    "type": "Permit or approval",
+    "headline": "EnQuest awarded PSC extension",
+    "setback": false
+   },
+   {
+    "date": "2025-11-10",
+    "type": "Funding",
+    "headline": "New senior secured debt facilities",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ENQ",
+  "median_daily_value_k": 1447.0
+ },
+ {
+  "code": "AAU",
+  "name": "Ariana Resources plc",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 48.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 5,
+  "latest_event_date": "2026-05-26",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Agreement for Strategic Investment - Tranche 2 CDI",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold producer in Turkey (Tavsan first pour Dec 2025) with the Dokwe project in Zimbabwe and a Xinhai strategic investment",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-26",
+    "type": "Study",
+    "headline": "Revised PFS for Optimised Dokwe Gold Project",
+    "setback": false
+   },
+   {
+    "date": "2026-05-26",
+    "type": "Funding",
+    "headline": "Agreement for Strategic Investment - Tranche 2 CDI",
+    "setback": false
+   },
+   {
+    "date": "2026-05-18",
+    "type": "M and A",
+    "headline": "Sale of 13.6% Interest in Zenit for US$19.5m Cash",
+    "setback": false
+   },
+   {
+    "date": "2026-01-23",
+    "type": "Funding",
+    "headline": "Xinhai Strategic Investment and Notice of GM",
+    "setback": false
+   },
+   {
+    "date": "2025-12-03",
+    "type": "First production",
+    "headline": "Tavsan First Pour",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/AAU",
+  "median_daily_value_k": 31.0
+ },
+ {
+  "code": "ACG",
+  "name": "ACG Metals Limited",
+  "type": "Copper",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 557.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-20",
+  "latest_event_type": "Study",
+  "latest_event_headline": "2026 Gediktepe Competent Person’s Report",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Copper, zinc and gold miner in Turkey; first copper concentrate at Gediktepe in Sep 2026 with a new CPR",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-20",
+    "type": "Study",
+    "headline": "2026 Gediktepe Competent Person’s Report",
+    "setback": false
+   },
+   {
+    "date": "2026-09-07",
+    "type": "M and A",
+    "headline": "ACG to Acquire Licence to Extend Gold Production",
+    "setback": false
+   },
+   {
+    "date": "2026-09-01",
+    "type": "First production",
+    "headline": "ACG Achieves First Copper Concentrate Production",
+    "setback": false
+   },
+   {
+    "date": "2025-11-26",
+    "type": "M and A",
+    "headline": "Possible Offer for Anglo Asian Mining Plc",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ACG",
+  "median_daily_value_k": 68.1
+ },
+ {
+  "code": "THS",
+  "name": "Tharisa plc",
+  "type": "Platinum group metals",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 440.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-15",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "PGM concentrate offtake agreement with Valterra",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "PGM and chrome producer in South Africa; Karo mining lease, PGM offtake and new debt facilities",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-15",
+    "type": "Funding",
+    "headline": "PGM concentrate offtake agreement with Valterra",
+    "setback": false
+   },
+   {
+    "date": "2026-08-24",
+    "type": "Permit or approval",
+    "headline": "Karo signs Special Mining Lease Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-06-25",
+    "type": "Funding",
+    "headline": "Nedbank ZAR750 million Asset Finance Facility",
+    "setback": false
+   },
+   {
+    "date": "2025-11-12",
+    "type": "Funding",
+    "headline": "Debt facilities with Absa Bank and Standard Bank",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/THS",
+  "median_daily_value_k": 193.8
+ },
+ {
+  "code": "KIST",
+  "name": "Kistos Holdings plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 339.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-14",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Acquisition of Ringhorne Production Licences",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas producer on the Norwegian continental shelf; Balder Next FID in Jun 2026",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-14",
+    "type": "M and A",
+    "headline": "Acquisition of Ringhorne Production Licences",
+    "setback": false
+   },
+   {
+    "date": "2026-09-15",
+    "type": "M and A",
+    "headline": "Completed Acquisition of Blocks 3 and 4",
+    "setback": false
+   },
+   {
+    "date": "2026-06-18",
+    "type": "FID or construction decision",
+    "headline": "Balder Next FID",
+    "setback": false
+   },
+   {
+    "date": "2025-12-09",
+    "type": "M and A",
+    "headline": "Acquisition - Block 9 and Block 3 and 4, Oman",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KIST",
+  "median_daily_value_k": 433.2
+ },
+ {
+  "code": "ALL",
+  "name": "Atlantic Lithium Limited",
+  "type": "Lithium",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 149.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-09-17",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Scheme Update - FIRB Approval received",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Ewoyaa lithium project in Ghana; mining lease ratified by parliament in Mar 2026",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-17",
+    "type": "M and A",
+    "headline": "Scheme Update - FIRB Approval received",
+    "setback": false
+   },
+   {
+    "date": "2026-05-07",
+    "type": "M and A",
+    "headline": "Binding Scheme Implementation Deed with Huayou",
+    "setback": false
+   },
+   {
+    "date": "2026-03-20",
+    "type": "Permit or approval",
+    "headline": "Parliamentary Ratification of Ewoyaa Mining Lease",
+    "setback": false
+   },
+   {
+    "date": "2025-12-22",
+    "type": "Permit or approval",
+    "headline": "Ratification Process - Ewoyaa Mining Lease",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ALL",
+  "median_daily_value_k": 133.7
+ },
+ {
+  "code": "OMI",
+  "name": "Orosur Mining Inc",
+  "type": "Gold",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 77.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-09-15",
+  "latest_event_type": "Discovery or drill result",
+  "latest_event_headline": "Orosur Mining Announces Discovery at El Cedro",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer in Colombia; maiden MRE at Pepas in Feb 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-15",
+    "type": "Discovery or drill result",
+    "headline": "Orosur Mining Announces Discovery at El Cedro",
+    "setback": false
+   },
+   {
+    "date": "2026-06-09",
+    "type": "Discovery or drill result",
+    "headline": "New mineralised zones discovered at APTA",
+    "setback": false
+   },
+   {
+    "date": "2026-04-14",
+    "type": "Discovery or drill result",
+    "headline": "New mineralised zone discovered near Pepas",
+    "setback": false
+   },
+   {
+    "date": "2026-02-10",
+    "type": "Resource",
+    "headline": "Maiden Mineral Resource Estimate at Pepas",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/OMI",
+  "median_daily_value_k": 421.8
+ },
+ {
+  "code": "CMCL",
+  "name": "Caledonia Mining Corporation plc",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 415.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-08-28",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Blanket Mine M and I Resources Increases by 22%",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Blanket gold mine in Zimbabwe; Bilboes feasibility study and convertible notes funding",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-28",
+    "type": "Resource",
+    "headline": "Maiden Mineral Resource Estimate at Motapa",
+    "setback": false
+   },
+   {
+    "date": "2026-08-28",
+    "type": "Resource",
+    "headline": "Blanket Mine M and I Resources Increases by 22%",
+    "setback": false
+   },
+   {
+    "date": "2026-01-15",
+    "type": "Funding",
+    "headline": "Pricing of Upsized $125M Convertible Notes",
+    "setback": false
+   },
+   {
+    "date": "2025-11-25",
+    "type": "Study",
+    "headline": "Feasibility Study for Bilboes Gold Project",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/CMCL",
+  "median_daily_value_k": 48.3
+ },
+ {
+  "code": "SAV",
+  "name": "Savannah Resources plc",
+  "type": "Lithium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 208.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-07-15",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Barroso Li Project: Definitive Feasibility Study",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Barroso lithium project in Portugal; DFS and first JORC reserve in 2026, backed by an up to EUR 110m state grant",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-15",
+    "type": "Reserve",
+    "headline": "First JORC Reserve declared, JORC Resource updated",
+    "setback": false
+   },
+   {
+    "date": "2026-07-15",
+    "type": "Study",
+    "headline": "Barroso Li Project: Definitive Feasibility Study",
+    "setback": false
+   },
+   {
+    "date": "2026-05-06",
+    "type": "Permit or approval",
+    "headline": "Second temporary land access granted",
+    "setback": false
+   },
+   {
+    "date": "2026-01-09",
+    "type": "Funding",
+    "headline": "Approval of up to €110m Portuguese State Grant",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SAV",
+  "median_daily_value_k": 76.7
+ },
+ {
+  "code": "GMET",
+  "name": "Guardian Metal Resources plc",
+  "type": "Tungsten",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 204.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-07-08",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Tungsten Mining and Processing Strategic Partnership",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Pilot Mountain tungsten project in Nevada; PFS results and a strategic partnership in 2026",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-08",
+    "type": "Funding",
+    "headline": "Tungsten Mining and Processing Strategic Partnership",
+    "setback": false
+   },
+   {
+    "date": "2026-06-30",
+    "type": "Study",
+    "headline": "Pilot Mountain Pre-Feasibility Study Results",
+    "setback": false
+   },
+   {
+    "date": "2026-06-17",
+    "type": "M and A",
+    "headline": "Acquisition of Lincoln Estates and Water Rights",
+    "setback": false
+   },
+   {
+    "date": "2026-06-04",
+    "type": "Discovery or drill result",
+    "headline": "Discovery of Tremor Zone at Pilot Mountain",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/GMET",
+  "median_daily_value_k": 340.5
+ },
+ {
+  "code": "PRE",
+  "name": "Pensana plc",
+  "type": "Rare earths",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 173.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-04-17",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "US$165 million Strategic Investment to suppor...",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Longonjo rare earths project in Angola; US EXIM debt and up to US$165 million strategic equity",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-17",
+    "type": "Funding",
+    "headline": "US$165 million Strategic Investment to suppor...",
+    "setback": false
+   },
+   {
+    "date": "2026-02-10",
+    "type": "Funding",
+    "headline": "US$ 160 million Strategic Equity Investment",
+    "setback": false
+   },
+   {
+    "date": "2025-12-09",
+    "type": "Funding",
+    "headline": "US$100 million Strategic Equity Investment",
+    "setback": false
+   },
+   {
+    "date": "2025-10-28",
+    "type": "Funding",
+    "headline": "U.S. EXIM debt funding to accelerate U.S. min...",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/PRE",
+  "median_daily_value_k": 309.0
+ },
+ {
+  "code": "KMR",
+  "name": "Kenmare Resources plc",
+  "type": "Mineral sands",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 266.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-16",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Irish Takeover Panel - Kenmare Resources plc",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Moma titanium mineral sands mine in Mozambique; revolving credit facility upsized",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-16",
+    "type": "M and A",
+    "headline": "Irish Takeover Panel - Kenmare Resources plc",
+    "setback": false
+   },
+   {
+    "date": "2026-10-06",
+    "type": "M and A",
+    "headline": "Statement regarding possible offer",
+    "setback": false
+   },
+   {
+    "date": "2026-06-24",
+    "type": "Funding",
+    "headline": "Upsizing of Revolving Credit Facility to $230...",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KMR",
+  "median_daily_value_k": 116.7
+ },
+ {
+  "code": "HREE",
+  "name": "Harena Rare Earths plc",
+  "type": "Rare earths",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 25.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-10-12",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Ampasindava Exploitation Permit Formalised",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.8 qtrs runway (yfinance, low conf)",
+  "description": "Ampasindava rare earths project in Madagascar; PFS completed and exploitation permit formalised",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-12",
+    "type": "Permit or approval",
+    "headline": "Ampasindava Exploitation Permit Formalised",
+    "setback": false
+   },
+   {
+    "date": "2026-03-16",
+    "type": "M and A",
+    "headline": "Exclusivity Agreement to Acquire U.S. Permits",
+    "setback": false
+   },
+   {
+    "date": "2026-01-26",
+    "type": "Study",
+    "headline": "Completion of Pre-Feasibility Study",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/HREE",
+  "median_daily_value_k": 37.5
+ },
+ {
+  "code": "MNO",
+  "name": "Meridian Mining plc",
+  "type": "Copper",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 639.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-22",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Cabacal copper and gold project in Brazil; DFS delivered in Sep 2026",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-22",
+    "type": "Study",
+    "headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+    "setback": false
+   },
+   {
+    "date": "2026-06-17",
+    "type": "Discovery or drill result",
+    "headline": "Meridian Discovers 2nd VMS Layer at Santa Helena",
+    "setback": false
+   },
+   {
+    "date": "2026-05-14",
+    "type": "Discovery or drill result",
+    "headline": "Meridian Announces Álamo Discovery and High Grades",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/MNO",
+  "median_daily_value_k": 258.1
+ },
+ {
+  "code": "AXL",
+  "name": "Arrow Exploration Corp.",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 162.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-17",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "Arrow Provides Mid Year 2026 Reserves Update",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas producer in Colombia; year end and mid year reserves updates",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-17",
+    "type": "Reserve",
+    "headline": "Arrow Provides Mid Year 2026 Reserves Update",
+    "setback": false
+   },
+   {
+    "date": "2026-08-14",
+    "type": "M and A",
+    "headline": "Arrow Announces Alberta Property Acquisition",
+    "setback": false
+   },
+   {
+    "date": "2026-03-20",
+    "type": "Reserve",
+    "headline": "Operational Update and 2025 Year-End Reserves",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/AXL",
+  "median_daily_value_k": 209.9
+ },
+ {
+  "code": "SEI",
+  "name": "Sintana Energy Inc.",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 148.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-10",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "KON-16: Definitive Transaction Documents Executed",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer with interests offshore Namibia; PEL 87 extension granted",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-10",
+    "type": "M and A",
+    "headline": "KON-16: Definitive Transaction Documents Executed",
+    "setback": false
+   },
+   {
+    "date": "2026-08-20",
+    "type": "Funding",
+    "headline": "Portfolio Update – Strategic Investment",
+    "setback": false
+   },
+   {
+    "date": "2026-03-18",
+    "type": "Permit or approval",
+    "headline": "PEL87 Extension Granted",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SEI",
+  "median_daily_value_k": 27.5
+ },
+ {
+  "code": "JSE",
+  "name": "Jadestone Energy plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 323.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-02",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Prima Energy acquires 28.3% in Jadestone Energy",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas producer in Australia, Malaysia, Indonesia and Vietnam; Vietnam field development plan approved and reserves updated",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-02",
+    "type": "M and A",
+    "headline": "Prima Energy acquires 28.3% in Jadestone Energy",
+    "setback": false
+   },
+   {
+    "date": "2026-03-18",
+    "type": "Permit or approval",
+    "headline": "Vietnam Field Development Plan Approved",
+    "setback": false
+   },
+   {
+    "date": "2026-02-26",
+    "type": "Reserve",
+    "headline": "Guidance and Reserves Update",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/JSE",
+  "median_daily_value_k": 361.9
+ },
+ {
+  "code": "MKA",
+  "name": "Mkango Magnetic Materials Limited",
+  "type": "Rare earths",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 133.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-09-01",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "MKANGO COMPLETES ACQUISITION OF REMLOY",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Songwe Hill rare earths project in Malawi; feasibility study and Pulawy separation plant PFS",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-01",
+    "type": "M and A",
+    "headline": "MKANGO COMPLETES ACQUISITION OF REMLOY",
+    "setback": false
+   },
+   {
+    "date": "2026-05-20",
+    "type": "M and A",
+    "headline": "AGREEMENT WITH HERAEUS TO ACQUIRE HERAEUS REMLOY",
+    "setback": false
+   },
+   {
+    "date": "2026-03-19",
+    "type": "Study",
+    "headline": "FEASIBILITY STUDY: SONGWE and PFS RESULTS: PUŁAWY",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/MKA",
+  "median_daily_value_k": 453.5
+ },
+ {
+  "code": "RKH",
+  "name": "Rockhopper Exploration plc",
+  "type": "Oil and gas",
+  "stage": "Developer",
+  "mkt_cap_usd_m": 865.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-26",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "Sea Lion Reserves Evaluation",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Operator of the Sea Lion oil development in the North Falkland Basin; FID taken Dec 2025",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-26",
+    "type": "Reserve",
+    "headline": "Sea Lion Reserves Evaluation",
+    "setback": false
+   },
+   {
+    "date": "2026-04-02",
+    "type": "Reserve",
+    "headline": "Sea Lion Reserves Evaluation",
+    "setback": false
+   },
+   {
+    "date": "2025-12-10",
+    "type": "FID or construction decision",
+    "headline": "Final Investment Decision on Sea Lion",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/RKH",
+  "median_daily_value_k": 1102.8
+ },
+ {
+  "code": "ATM",
+  "name": "Andrada Mining Limited",
+  "type": "Tin",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 191.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-17",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Financial Close and Execution of Strategic Funding",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uis tin mine in Namibia; strategic funding closed and Brandberg West earn-in approved",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-17",
+    "type": "Funding",
+    "headline": "Financial Close and Execution of Strategic Funding",
+    "setback": false
+   },
+   {
+    "date": "2026-08-05",
+    "type": "Permit or approval",
+    "headline": "NaCC Approval for Brandberg West earn-in agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-04-20",
+    "type": "Funding",
+    "headline": "Strategic Equity Placement To Accelerate Growth",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ATM",
+  "median_daily_value_k": 365.2
+ },
+ {
+  "code": "JLP",
+  "name": "Jubilee Metals Group plc",
+  "type": "Copper",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 97.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-08-10",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Strategic Transaction to Accelerate Copper Growth",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Metals processing and tailings company with copper growth in Zambia; strategic investment in May 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-10",
+    "type": "M and A",
+    "headline": "Strategic Transaction to Accelerate Copper Growth",
+    "setback": false
+   },
+   {
+    "date": "2026-05-28",
+    "type": "Funding",
+    "headline": "Strategic Investment to Support Copper Growth",
+    "setback": false
+   },
+   {
+    "date": "2026-03-24",
+    "type": "Setback",
+    "headline": "Molefe Mine Phase 1 Drilling Results delayed",
+    "setback": true
+   },
+   {
+    "date": "2026-01-02",
+    "type": "M and A",
+    "headline": "Closing of Sale of South African Operations",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/JLP",
+  "median_daily_value_k": 88.9
+ },
+ {
+  "code": "TERA",
+  "name": "Neoterra Group plc",
+  "type": "Rare earths",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 8.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-07-16",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Updated MRE Incorporates Heavy Rare Earth Elements",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.8 qtrs runway (yfinance, low conf)",
+  "description": "Monte Muambe rare earths and fluorspar project in Mozambique; updated MRE and growth capital facility",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-16",
+    "type": "Resource",
+    "headline": "Updated MRE Incorporates Heavy Rare Earth Elements",
+    "setback": false
+   },
+   {
+    "date": "2026-05-06",
+    "type": "Funding",
+    "headline": "Growth Capital Facility",
+    "setback": false
+   },
+   {
+    "date": "2026-05-05",
+    "type": "Resource",
+    "headline": "Monte Muambe MRE Results - Fluorspar and Gallium",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/TERA",
+  "median_daily_value_k": 57.7
+ },
+ {
+  "code": "HE1",
+  "name": "Helium One Global Ltd",
+  "type": "Helium",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 39.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-07-14",
+  "latest_event_type": "First production",
+  "latest_event_headline": "First Helium Sold from Pinon Canyon Plant",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.5 qtrs runway (yfinance, low conf)",
+  "description": "Helium developer in the USA; first gas at the Galactica plant and first helium sold under offtake",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-14",
+    "type": "First production",
+    "headline": "First Helium Sold from Pinon Canyon Plant",
+    "setback": false
+   },
+   {
+    "date": "2026-06-04",
+    "type": "Funding",
+    "headline": "Helium Offtake Agreement for Galactica Project",
+    "setback": false
+   },
+   {
+    "date": "2025-12-22",
+    "type": "First production",
+    "headline": "Successful First Gas at Galactica Helium Plant",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/HE1",
+  "median_daily_value_k": 100.8
+ },
+ {
+  "code": "XTR",
+  "name": "Xtract Resources plc",
+  "type": "Gold (low confidence)",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 16.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-07-09",
+  "latest_event_type": "First production",
+  "latest_event_headline": "Commencement of production at Silverking",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.4 qtrs runway (yfinance, low conf)",
+  "description": "Mining company with gold and copper assets; production commenced at Silverking and a new Amghas mining licence",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-09",
+    "type": "First production",
+    "headline": "Commencement of production at Silverking",
+    "setback": false
+   },
+   {
+    "date": "2026-06-02",
+    "type": "Permit or approval",
+    "headline": "Amghas mining licence grant and plant build-out",
+    "setback": false
+   },
+   {
+    "date": "2026-02-03",
+    "type": "Permit or approval",
+    "headline": "Silverking Mining Licence Joint Venture",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/XTR",
+  "median_daily_value_k": 38.4
+ },
+ {
+  "code": "AET",
+  "name": "Afentra plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 262.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-05-27",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Award of KON4 Licence Onshore Angola",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas producer focused on Angola; contingent resource upgrade and KON4 licence award",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-27",
+    "type": "Permit or approval",
+    "headline": "Award of KON4 Licence Onshore Angola",
+    "setback": false
+   },
+   {
+    "date": "2026-01-13",
+    "type": "Resource",
+    "headline": "Contingent Resource Upgrade",
+    "setback": false
+   },
+   {
+    "date": "2025-12-18",
+    "type": "M and A",
+    "headline": "Afentra Completes Somaliland Divestment",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/AET",
+  "median_daily_value_k": 438.8
+ },
+ {
+  "code": "TLW",
+  "name": "Tullow Oil plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 215.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-04-27",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Refinancing Transaction successfully completed",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil producer focused on Ghana; refinancing completed Apr 2026 and SPA to acquire the TEN FPSO",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-27",
+    "type": "Funding",
+    "headline": "Refinancing Transaction successfully completed",
+    "setback": false
+   },
+   {
+    "date": "2026-02-20",
+    "type": "Funding",
+    "headline": "Refinancing Transaction and Lock-Up Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-02-20",
+    "type": "M and A",
+    "headline": "Tullow signs SPA to acquire TEN FPSO in Ghana",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/TLW",
+  "median_daily_value_k": 2219.7
+ },
+ {
+  "code": "PXEN",
+  "name": "Prospex Energy plc",
+  "type": "Oil and gas",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 34.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-04-22",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Dunajec Licence Award, Poland",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 1.0 qtrs runway (yfinance, low conf)",
+  "description": "Oil and gas investment company with producing assets in Italy, Spain and Poland; new licence awards in Poland and a production concession in Italy",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-22",
+    "type": "Permit or approval",
+    "headline": "Dunajec Licence Award, Poland",
+    "setback": false
+   },
+   {
+    "date": "2026-04-01",
+    "type": "Permit or approval",
+    "headline": "San Licence Award, Poland",
+    "setback": false
+   },
+   {
+    "date": "2026-01-28",
+    "type": "Permit or approval",
+    "headline": "Italy: Selva Malvezzi Production Concession",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/PXEN",
+  "median_daily_value_k": 32.1
+ },
+ {
+  "code": "QHE",
+  "name": "Quantum Helium Limited",
+  "type": "Helium",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 10.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 3,
+  "latest_event_date": "2026-04-01",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Sagebrush Operatorship Approved",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Helium, oil and gas explorer in the USA; Sagebrush resource update and BIA approvals",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-01",
+    "type": "Permit or approval",
+    "headline": "Sagebrush Operatorship Approved",
+    "setback": false
+   },
+   {
+    "date": "2026-02-26",
+    "type": "Permit or approval",
+    "headline": "Coyote Wash receives formal BIA Approval",
+    "setback": false
+   },
+   {
+    "date": "2025-12-15",
+    "type": "Resource",
+    "headline": "Sagebrush Resource Update",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/QHE",
+  "median_daily_value_k": 44.1
+ },
+ {
+  "code": "GKP",
+  "name": "Gulf Keystone Petroleum Ltd",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 618.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-10-20",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "Gulf Keystone to combine with ShaMaran Petrol...",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil producer operating the Shaikan field in the Kurdistan Region of Iraq; pipeline exports resumed (low confidence)",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-20",
+    "type": "M and A",
+    "headline": "Gulf Keystone to combine with ShaMaran Petrol...",
+    "setback": false
+   },
+   {
+    "date": "2025-11-17",
+    "type": "First production",
+    "headline": "First lifting of IOC pipeline exports",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/GKP",
+  "median_daily_value_k": 796.4
+ },
+ {
+  "code": "TUN",
+  "name": "Tungsten West plc",
+  "type": "Tungsten",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 733.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-09-23",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Strategic Tungsten Supply and Offtake Agreement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Hemerdon tungsten mine in Devon; UK National Wealth Fund strategic investment and offtake",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-23",
+    "type": "Funding",
+    "headline": "Strategic Tungsten Supply and Offtake Agreement",
+    "setback": false
+   },
+   {
+    "date": "2026-08-25",
+    "type": "Funding",
+    "headline": "Strategic Investment by the UK Government NWF",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/TUN",
+  "median_daily_value_k": 879.0
+ },
+ {
+  "code": "FXPO",
+  "name": "Ferrexpo plc",
+  "type": "Iron ore",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 456.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-09-08",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "US$15 Million Loan Facility from Fevamotinico",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Iron ore pellet producer in Ukraine; production restarted Sep 2026 with new loan and equity funding",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-08",
+    "type": "Funding",
+    "headline": "US$15 Million Loan Facility from Fevamotinico",
+    "setback": false
+   },
+   {
+    "date": "2026-09-07",
+    "type": "First production",
+    "headline": "Restart of production at Ukrainian operations",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/FXPO",
+  "median_daily_value_k": 131.9
+ },
+ {
+  "code": "VAST",
+  "name": "Vast Resources plc",
+  "type": "Polymetallic (low confidence)",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 83.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-08-24",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Vast Admitted to DIBC and Cornerstone Consortium",
+  "setbacks_12m": 0,
+  "cash_flag": "no data",
+  "description": "Mining company with projects in Romania and Tajikistan; admitted to DIBC and cornerstone consortium (low confidence)",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-24",
+    "type": "Funding",
+    "headline": "Vast Admitted to DIBC and Cornerstone Consortium",
+    "setback": false
+   },
+   {
+    "date": "2025-12-22",
+    "type": "M and A",
+    "headline": "Proposed Acquisition: Gulf International Minerals",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/VAST",
+  "median_daily_value_k": 32.0
+ },
+ {
+  "code": "ORCP",
+  "name": "Oracle Power plc",
+  "type": "Gold (low confidence)",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 6.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-07-02",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Mining Lease Granted - Northern Zone Gold Project",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Mining company with Kalgoorlie gold interests; Northern Zone mining lease granted Jul 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-07-02",
+    "type": "Permit or approval",
+    "headline": "Mining Lease Granted - Northern Zone Gold Project",
+    "setback": false
+   },
+   {
+    "date": "2025-12-23",
+    "type": "Permit or approval",
+    "headline": "Kalgoorlie Gold - Native Title Agreements Signed",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ORCP",
+  "median_daily_value_k": 30.5
+ },
+ {
+  "code": "TIN",
+  "name": "Cornish Metals plc",
+  "type": "Tin",
+  "stage": "Developer",
+  "mkt_cap_usd_m": 125.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-05-15",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
+  "description": "South Crofty tin mine in Cornwall; GBP 52 million credit facility and US EXIM letter of interest",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-15",
+    "type": "Funding",
+    "headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
+    "setback": false
+   },
+   {
+    "date": "2026-02-05",
+    "type": "Funding",
+    "headline": "LOI FROM EXPORT-IMPORT BANK OF THE UNITED STATES",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/TIN",
+  "median_daily_value_k": 96.4
+ },
+ {
+  "code": "KDNC",
+  "name": "Cadence Minerals plc",
+  "type": "Iron ore",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 28.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-05-05",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Amapá – Installation Licence Granted",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.2 qtrs runway (yfinance, low conf)",
+  "description": "Amapa iron ore project in Brazil; preliminary and installation licences granted in 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-05",
+    "type": "Permit or approval",
+    "headline": "Amapá – Installation Licence Granted",
+    "setback": false
+   },
+   {
+    "date": "2026-01-06",
+    "type": "Permit or approval",
+    "headline": "Grant of Preliminary Environmental Licence - Amapá",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KDNC",
+  "median_daily_value_k": 38.2
+ },
+ {
+  "code": "CTL",
+  "name": "Cleantech Lithium plc",
+  "type": "Lithium",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 35.4,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-03-31",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "Positive Pre-Feasibility Study and Reserves Declared",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Laguna Verde lithium brine project in Chile; resource increase, PFS and reserve declaration",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-03-31",
+    "type": "Reserve",
+    "headline": "Positive Pre-Feasibility Study and Reserves Declared",
+    "setback": false
+   },
+   {
+    "date": "2025-11-10",
+    "type": "Resource",
+    "headline": "Laguna Verde Resource Increase",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/CTL",
+  "median_daily_value_k": 28.8
+ },
+ {
+  "code": "SML",
+  "name": "Strategic Minerals plc",
+  "type": "Tin and tungsten (low confidence)",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 180.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-03-26",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Redmoor - 2026 Mineral Resource Estimate",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Redmoor tin and tungsten project in Cornwall plus magnetite sales; 2026 MRE",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-03-26",
+    "type": "Resource",
+    "headline": "Redmoor - 2026 Mineral Resource Estimate",
+    "setback": false
+   },
+   {
+    "date": "2026-02-26",
+    "type": "Discovery or drill result",
+    "headline": "Redmoor - Discovery of New Tin Zone",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SML",
+  "median_daily_value_k": 504.6
+ },
+ {
+  "code": "RBW",
+  "name": "Rainbow Rare Earths Limited",
+  "type": "Rare earths",
+  "stage": "Study stage",
+  "mkt_cap_usd_m": 191.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-03-11",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Mosaic Agreement and Uberaba Economic Assessment",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Rare earths developer at Phalaborwa (South Africa) and Uberaba (Brazil); resource update and economic assessment",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-03-11",
+    "type": "Study",
+    "headline": "Mosaic Agreement and Uberaba Economic Assessment",
+    "setback": false
+   },
+   {
+    "date": "2025-11-10",
+    "type": "Resource",
+    "headline": "Phalaborwa Resource Update to include Yttrium",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/RBW",
+  "median_daily_value_k": 94.4
+ },
+ {
+  "code": "GEX",
+  "name": "Georgina Energy plc",
+  "type": "Helium",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 36.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 2,
+  "latest_event_date": "2025-11-11",
+  "latest_event_type": "M and A",
+  "latest_event_headline": "ACQUISITION OF ADDITIONAL RE-ENTRY TARGETS",
+  "setbacks_12m": 1,
+  "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
+  "description": "Helium, hydrogen and gas explorer in Australia (Mt Winter, Northern Territory); placing and debt facility in Nov 2025",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-05-06",
+    "type": "Setback",
+    "headline": "Termination of share purchase agreement",
+    "setback": true
+   },
+   {
+    "date": "2025-11-11",
+    "type": "M and A",
+    "headline": "ACQUISITION OF ADDITIONAL RE-ENTRY TARGETS",
+    "setback": false
+   },
+   {
+    "date": "2025-11-04",
+    "type": "Funding",
+    "headline": "Placing and Debt Facility",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/GEX",
+  "median_daily_value_k": 673.5
+ },
+ {
+  "code": "SEA",
+  "name": "Seascape Energy Asia plc",
+  "type": "Oil and gas",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 102.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-10-15",
+  "latest_event_type": "Permit or approval",
+  "latest_event_headline": "Acreage Expansion Around Temaris Cluster PSC",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas company acquiring assets in Malaysia; Temaris cluster PSC acreage expanded",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-10-15",
+    "type": "Permit or approval",
+    "headline": "Acreage Expansion Around Temaris Cluster PSC",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SEA",
+  "median_daily_value_k": 178.3
+ },
+ {
+  "code": "NTVO",
+  "name": "Nativo Resources plc",
+  "type": "Gold",
+  "stage": "Producer (low confidence)",
+  "mkt_cap_usd_m": 5.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-09-18",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Project Finance and Equity Subscription Agreement",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.4 qtrs runway (yfinance, low conf)",
+  "description": "Gold company; project finance and equity subscription agreement in Sep 2026",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-18",
+    "type": "Funding",
+    "headline": "Project Finance and Equity Subscription Agreement",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/NTVO",
+  "median_daily_value_k": 31.2
+ },
+ {
+  "code": "RMR",
+  "name": "Rome Resources plc",
+  "type": "Tin",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 21.2,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-09-02",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Updated MRE – 45% increase in contained tin",
+  "setbacks_12m": 0,
+  "cash_flag": "Cash risk: about 0.8 qtrs runway (yfinance, low conf)",
+  "description": "Tin explorer in the DRC (Kalayi); updated MRE with 45 percent more contained tin",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-09-02",
+    "type": "Resource",
+    "headline": "Updated MRE – 45% increase in contained tin",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/RMR",
+  "median_daily_value_k": 26.9
+ },
+ {
+  "code": "KEFI",
+  "name": "Kefi Gold and Copper plc",
+  "type": "Gold",
+  "stage": "Developer (low confidence)",
+  "mkt_cap_usd_m": 121.6,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-08-27",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Tulu Kapi Underground Mine PEA and Development Plan",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Tulu Kapi gold project in Ethiopia; underground PEA and development plan",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-27",
+    "type": "Study",
+    "headline": "Tulu Kapi Underground Mine PEA and Development Plan",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KEFI",
+  "median_daily_value_k": 491.8
+ },
+ {
+  "code": "MILA",
+  "name": "Mila Resources plc",
+  "type": "Gold",
+  "stage": "Resource defined",
+  "mkt_cap_usd_m": 11.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-08-26",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Upgraded JORC Resource at Kathleen Valley",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Gold explorer in Western Australia; upgraded JORC resource at Kathleen Valley",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-08-26",
+    "type": "Resource",
+    "headline": "Upgraded JORC Resource at Kathleen Valley",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/MILA",
+  "median_daily_value_k": 32.2
+ },
+ {
+  "code": "TRP",
+  "name": "Tower Resources plc",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 8.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-06-25",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Letter of Approval for PEL96 Farm-out",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer in Namibia; PEL 96 farm-out approved",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-06-25",
+    "type": "Funding",
+    "headline": "Letter of Approval for PEL96 Farm-out",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/TRP",
+  "median_daily_value_k": 37.6
+ },
+ {
+  "code": "SRB",
+  "name": "Serabi Gold plc",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 182.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-04-28",
+  "latest_event_type": "Resource",
+  "latest_event_headline": "Results of Updated Mineral Resource and Reser...",
+  "setbacks_12m": 2,
+  "cash_flag": null,
+  "description": "Palito gold mining complex in Brazil; updated mineral resource and reserve",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-28",
+    "type": "Resource",
+    "headline": "Results of Updated Mineral Resource and Reser...",
+    "setback": false
+   },
+   {
+    "date": "2026-01-31",
+    "type": "Setback",
+    "headline": "Fatality at Palito Complex",
+    "setback": true
+   },
+   {
+    "date": "2026-01-26",
+    "type": "Setback",
+    "headline": "Fatality at Coringa Mine",
+    "setback": true
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/SRB",
+  "median_daily_value_k": 636.6
+ },
+ {
+  "code": "GFM",
+  "name": "Griffin Mining Limited",
+  "type": "Zinc",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 742.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-04-21",
+  "latest_event_type": "First production",
+  "latest_event_headline": "Zone II Production Commenced",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Caijiaying zinc and lead mine in China; Zone II production commenced Apr 2026",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-21",
+    "type": "First production",
+    "headline": "Zone II Production Commenced",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/GFM",
+  "median_daily_value_k": 57.1
+ },
+ {
+  "code": "ENOG",
+  "name": "Energean plc",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 1816.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-04-09",
+  "latest_event_type": "First production",
+  "latest_event_headline": "Restart of Production from the Energean Power FPSO",
+  "setbacks_12m": 1,
+  "cash_flag": null,
+  "description": "Oil and gas producer focused on Israel (Karish); production restarted from the Energean Power FPSO in Apr 2026",
+  "exchange": "Main Market",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-04-09",
+    "type": "First production",
+    "headline": "Restart of Production from the Energean Power FPSO",
+    "setback": false
+   },
+   {
+    "date": "2026-03-02",
+    "type": "Setback",
+    "headline": "Temporary Suspension of Production from FPSO",
+    "setback": true
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ENOG",
+  "median_daily_value_k": 2276.8
+ },
+ {
+  "code": "UPL",
+  "name": "Upland Resources Limited",
+  "type": "Oil and gas",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 64.1,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-03-17",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Strategic Investment by US investor group",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas explorer; strategic investment by a US investor group (low confidence)",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-03-17",
+    "type": "Funding",
+    "headline": "Strategic Investment by US investor group",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/UPL",
+  "median_daily_value_k": 65.9
+ },
+ {
+  "code": "PRD",
+  "name": "Predator Oil and Gas Holdings plc",
+  "type": "Oil and gas",
+  "stage": "Explorer (low confidence)",
+  "mkt_cap_usd_m": 15.9,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-03-05",
+  "latest_event_type": "Study",
+  "latest_event_headline": "Technical Report for Cory Moruga onshore Trinidad",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil and gas company with onshore Trinidad assets; technical report on Cory Moruga",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-03-05",
+    "type": "Study",
+    "headline": "Technical Report for Cory Moruga onshore Trinidad",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/PRD",
+  "median_daily_value_k": 69.1
+ },
+ {
+  "code": "PTAL",
+  "name": "Petrotal Corporation",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 384.8,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-02-25",
+  "latest_event_type": "Reserve",
+  "latest_event_headline": "2025 Year-End Oil Reserves",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Oil producer in Peru; 2025 year end reserves",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-02-25",
+    "type": "Reserve",
+    "headline": "2025 Year-End Oil Reserves",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/PTAL",
+  "median_daily_value_k": 98.9
+ },
+ {
+  "code": "ZIOC",
+  "name": "Zanaga Iron Ore Company Limited",
+  "type": "Iron ore",
+  "stage": "Study stage (low confidence)",
+  "mkt_cap_usd_m": 42.3,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-02-10",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "Proposed Strategic Investment in Zanaga Project",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Zanaga iron ore project in the Republic of Congo; proposed strategic investment",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-02-10",
+    "type": "Funding",
+    "headline": "Proposed Strategic Investment in Zanaga Project",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/ZIOC",
+  "median_daily_value_k": 28.9
+ },
+ {
+  "code": "THX",
+  "name": "Thor Explorations Ltd",
+  "type": "Gold",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 441.5,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-01-26",
+  "latest_event_type": "Study",
+  "latest_event_headline": "POSITIVE PRE-FEASIBILITY STUDY FOR DOUTA PROJECT",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Segilola gold mine in Nigeria; positive PFS for the Douta project",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-01-26",
+    "type": "Study",
+    "headline": "POSITIVE PRE-FEASIBILITY STUDY FOR DOUTA PROJECT",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/THX",
+  "median_daily_value_k": 262.2
+ },
+ {
+  "code": "NEO",
+  "name": "Neo Energy Metals plc",
+  "type": "Uranium",
+  "stage": "Explorer",
+  "mkt_cap_usd_m": 19.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2026-01-19",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "£8 Million Strategic Investment and Placement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Uranium explorer; GBP 8 million strategic investment and placement",
+  "exchange": "Main Market",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2026-01-19",
+    "type": "Funding",
+    "headline": "£8 Million Strategic Investment and Placement",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/NEO",
+  "median_daily_value_k": 74.8
+ },
+ {
+  "code": "BOR",
+  "name": "Borders and Southern Petroleum plc",
+  "type": "Oil and gas",
+  "stage": "Developer",
+  "mkt_cap_usd_m": 123.7,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2025-12-10",
+  "latest_event_type": "FID or construction decision",
+  "latest_event_headline": "Sea Lion FID Announcement",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Partner in the Sea Lion oil development in the North Falkland Basin; FID Dec 2025",
+  "exchange": "AIM",
+  "band": "Main (US$100M-5B)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2025-12-10",
+    "type": "FID or construction decision",
+    "headline": "Sea Lion FID Announcement",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/BOR",
+  "median_daily_value_k": 108.6
+ },
+ {
+  "code": "KOD",
+  "name": "Kodal Minerals plc",
+  "type": "Lithium",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 75.0,
+  "as_of": "2026-10-26",
+  "material_events_12m": 1,
+  "latest_event_date": "2025-12-01",
+  "latest_event_type": "First production",
+  "latest_event_headline": "First Shipment of Spodumene Concentrates",
+  "setbacks_12m": 0,
+  "cash_flag": null,
+  "description": "Bougouni lithium mine in Mali; first spodumene concentrate shipment Dec 2025",
+  "exchange": "AIM",
+  "band": "Micro (US$5-100M)",
+  "currency": "GBP",
+  "events": [
+   {
+    "date": "2025-12-01",
+    "type": "First production",
+    "headline": "First Shipment of Spodumene Concentrates",
+    "setback": false
+   }
+  ],
+  "url": "https://www.investegate.co.uk/company/KOD",
+  "median_daily_value_k": 67.6
  }
 ]

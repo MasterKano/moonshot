@@ -81,6 +81,7 @@ const capsState = {
   sortKey: "name",
   sortDir: "asc",
   open: new Set(),
+  columns: [],
 };
 
 let caps = [];
@@ -767,6 +768,49 @@ function latestNode(row) {
   ]);
 }
 
+const COLUMN_STORE = "moonshot-screen-columns";
+const DEFAULT_COLUMN_KEYS = ["name", "exchange", "type", "latest", "next", "cash"];
+
+function storedColumns() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(COLUMN_STORE) || "");
+    const known = new Set(COLUMNS.map(([key]) => key));
+    if (Array.isArray(parsed)) {
+      const keys = parsed.filter((key) => known.has(key));
+      if (!keys.includes("name")) keys.unshift("name");
+      if (keys.length) return keys;
+    }
+  } catch (err) { /* keep the compact set */ }
+  return DEFAULT_COLUMN_KEYS.slice();
+}
+
+function saveColumns(keys) {
+  capsState.columns = keys;
+  try { localStorage.setItem(COLUMN_STORE, JSON.stringify(keys)); } catch (err) { /* ignore */ }
+}
+
+function activeColumns() {
+  const chosen = new Set(capsState.columns.length ? capsState.columns : DEFAULT_COLUMN_KEYS);
+  chosen.add("name");
+  return COLUMNS.filter(([key]) => chosen.has(key));
+}
+
+function cellFor(row, key) {
+  if (key === "name") return companyNode(row);
+  if (key === "exchange") return showText(row.exchange);
+  if (key === "type") return showText(row.type);
+  if (key === "stage") return stageNode(row.stage);
+  if (key === "cap") return formatNum(row.cap);
+  if (key === "median") return formatMedian(row);
+  if (key === "latest") return latestNode(row);
+  if (key === "next") return nextNode(row);
+  if (key === "events") return formatNum(row.events12m);
+  if (key === "upcoming") return row.upcomingCount == null ? "—" : formatNum(row.upcomingCount);
+  if (key === "setbacks") return formatNum(row.setbacks);
+  if (key === "cash") return showText(row.cash);
+  return "—";
+}
+
 function companyNode(row) {
   const name = el("span", {}, [
     el("span", { class: "cap-name", title: showText(row.name), text: showText(row.name) }),
@@ -1014,10 +1058,11 @@ function toggle(id) {
 }
 
 function renderTable(rows) {
+  const columns = activeColumns();
   const table = el("table", { class: "register caps" });
   const head = el("thead");
   const headRow = el("tr");
-  COLUMNS.forEach(([key, label]) => {
+  columns.forEach(([key, label]) => {
     const active = capsState.sortKey === key;
     const th = el("th", { scope: "col", title: COLUMN_TIPS[key] || "", "aria-sort": active ? (capsState.sortDir === "asc" ? "ascending" : "descending") : "none" });
     th.append(el("button", {
@@ -1045,24 +1090,11 @@ function renderTable(rows) {
       onClick: () => toggle(row.id),
       onKeydown: (event) => onRowKey(event, row.id),
     });
-    main.append(
-      el("td", {}, [companyNode(row)]),
-      el("td", { text: showText(row.exchange) }),
-      el("td", { text: showText(row.type) }),
-      el("td", {}, [stageNode(row.stage)]),
-      el("td", { text: formatNum(row.cap) }),
-      el("td", { text: formatMedian(row) }),
-      el("td", { text: formatNum(row.events12m) }),
-      el("td", {}, [latestNode(row)]),
-      el("td", {}, [nextNode(row)]),
-      el("td", { text: row.upcomingCount == null ? "" : formatNum(row.upcomingCount) }),
-      el("td", { text: formatNum(row.setbacks) }),
-      el("td", { text: showText(row.cash) }),
-    );
+    columns.forEach(([key]) => main.append(el("td", {}, [cellFor(row, key)])));
     body.append(main);
     if (open) {
       const detail = el("tr", { class: "cap-detail" });
-      detail.append(el("td", { colspan: String(COLUMNS.length) }, [expandBody(row)]));
+      detail.append(el("td", { colspan: String(columns.length) }, [expandBody(row)]));
       body.append(detail);
     }
     table.append(body);
@@ -1094,17 +1126,7 @@ function renderCards(rows) {
       ]),
       el("span", { class: "card-meta", text: [showText(row.exchange), showText(row.band), showText(row.type)].join(" · ") }),
       el("span", { class: "cap-stage" }, [stageNode(row.stage)]),
-      el("dl", { class: "cap-facts" }, [
-        fact("Mkt cap US$m", formatNum(row.cap)),
-        fact("Median daily", formatMedian(row)),
-        fact("Material events 12m", formatNum(row.events12m)),
-        ...(row.upcomingCount == null && blank(row.nextDate) ? [] : [
-          fact("Next", nextNode(row)),
-          fact("Upcoming", row.upcomingCount == null ? "" : formatNum(row.upcomingCount)),
-        ]),
-        fact("Setbacks", formatNum(row.setbacks)),
-        fact("Cash flag", showText(row.cash)),
-      ]),
+      el("dl", { class: "cap-facts" }, activeColumns().filter(([key]) => key !== "name" && key !== "latest").map(([key, label]) => fact(label, cellFor(row, key)))),
       el("span", { class: "cap-latest" }, [
         el("span", { class: "eyebrow", text: "Latest material event" }),
         latestNode(row),
@@ -1171,71 +1193,89 @@ function mountSort() {
   });
 }
 
-function mountFilters() {
-  const filters = [
-    ["market", "Market", MARKET_OPTIONS],
-    ["sector", "Sector", SECTOR_OPTIONS],
-    ["category", "Category", CATEGORY_OPTIONS],
-    ["country", "Country", countryOptions],
-    ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER)],
-    ["band", "Market-cap band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER), "Size group from market value."],
-    ["type", "Commodity", choiceList(caps.map((row) => showText(row.type)), []), "The commodity this company works in."],
-    ["stage", "Stage", choiceList(caps.map((row) => stageKey(row.stage)), STAGE_ORDER)],
-  ];
-  document.getElementById("smallcaps-filters").replaceChildren(...filters.map(([key, label, values, tip]) => {
-    const select = el("select", { "data-cap-filter": key });
-    select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
-    select.value = capsState[key] || "all";
-    select.addEventListener("change", () => {
-      capsState[key] = select.value;
-      select.closest(".field").classList.toggle("active", select.value !== "all");
+function filterField(key, label, values, tip) {
+  const select = el("select", { "data-cap-filter": key });
+  select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
+  select.value = capsState[key] || "all";
+  select.addEventListener("change", () => {
+    capsState[key] = select.value;
+    select.closest(".field").classList.toggle("active", select.value !== "all");
+    renderLists();
+  });
+  const field = el("label", { class: "field", title: tip || "" }, [label, select]);
+  field.classList.toggle("active", (capsState[key] || "all") !== "all");
+  return field;
+}
+
+function toggleField(id, label, key, text) {
+  return el("label", { class: capsState[key] ? "field active" : "field" }, [
+    label,
+    el("button", {
+      type: "button",
+      class: "toggle-btn",
+      id,
+      "aria-pressed": capsState[key] ? "true" : "false",
+      onClick: (event) => {
+        capsState[key] = !capsState[key];
+        event.currentTarget.setAttribute("aria-pressed", capsState[key] ? "true" : "false");
+        event.currentTarget.closest(".field").classList.toggle("active", capsState[key]);
+        renderLists();
+      },
+      text,
+    }),
+  ]);
+}
+
+function mountColumns() {
+  const host = document.getElementById("smallcaps-columns");
+  if (!host) return;
+  const menu = el("div", { class: "columns-menu" });
+  COLUMNS.forEach(([key, label]) => {
+    const input = el("input", { type: "checkbox", value: key });
+    input.checked = activeColumns().some(([column]) => column === key);
+    input.disabled = key === "name";
+    input.addEventListener("change", () => {
+      const keys = [...menu.querySelectorAll("input:checked")].map((box) => box.value);
+      if (!keys.includes("name")) keys.unshift("name");
+      saveColumns(keys);
       renderLists();
     });
-    return el("label", { class: "field", title: tip || "" }, [label, select]);
-  }), el("label", { class: "field" }, [
-    "Upcoming",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-upcoming",
-      "aria-pressed": capsState.hasUpcoming ? "true" : "false",
-      onClick: (event) => {
-        capsState.hasUpcoming = !capsState.hasUpcoming;
-        event.currentTarget.setAttribute("aria-pressed", capsState.hasUpcoming ? "true" : "false");
-        renderLists();
-      },
-      text: "Has upcoming",
-    }),
-  ]), el("label", { class: "field" }, [
-    "Background",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-background",
-      "aria-pressed": capsState.showBackground ? "true" : "false",
-      onClick: (event) => {
-        capsState.showBackground = !capsState.showBackground;
-        event.currentTarget.setAttribute("aria-pressed", capsState.showBackground ? "true" : "false");
-        renderLists();
-      },
-      text: "Show background",
-    }),
-  ]), el("label", { class: capsState.watchOnly ? "field active" : "field" }, [
-    "Watchlist",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-watch",
-      "aria-pressed": capsState.watchOnly ? "true" : "false",
-      onClick: (event) => {
-        capsState.watchOnly = !capsState.watchOnly;
-        event.currentTarget.setAttribute("aria-pressed", capsState.watchOnly ? "true" : "false");
-        event.currentTarget.closest(".field").classList.toggle("active", capsState.watchOnly);
-        renderLists();
-      },
-      text: "Watchlist",
-    }),
+    menu.append(el("label", {}, [input, label]));
+  });
+  host.replaceChildren(el("details", { class: "columns-picker" }, [
+    el("summary", { text: "Columns" }),
+    menu,
   ]));
+}
+
+function mountFilters() {
+  const keyFilters = [
+    ["sector", "Sector", SECTOR_OPTIONS, "Oil and gas, mining, or another sector."],
+    ["market", "Market", MARKET_OPTIONS, "Where the shares trade."],
+    ["country", "Country", countryOptions, "Country of the project."],
+  ];
+  const moreFilters = [
+    ["category", "Category", CATEGORY_OPTIONS, "Operational, capital and deals, or corporate."],
+    ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER), "The listing venue."],
+    ["band", "Market-cap band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER), "Size group from market value."],
+    ["type", "Commodity", choiceList(caps.map((row) => showText(row.type)), []), "The commodity this company works in."],
+    ["stage", "Stage", choiceList(caps.map((row) => stageKey(row.stage)), STAGE_ORDER), "How far the project has got."],
+  ];
+  document.getElementById("smallcaps-filters").replaceChildren(
+    ...keyFilters.map((entry) => filterField(...entry)),
+    toggleField("smallcaps-watch", "Watchlist", "watchOnly", "Watchlist"),
+  );
+  const more = document.getElementById("smallcaps-more");
+  if (more) {
+    more.replaceChildren(el("details", { class: "more-filters" }, [
+      el("summary", { text: "More filters" }),
+      el("div", { class: "fields" }, [
+        ...moreFilters.map((entry) => filterField(...entry)),
+        toggleField("smallcaps-upcoming", "Upcoming", "hasUpcoming", "Has upcoming"),
+        toggleField("smallcaps-background", "Background", "showBackground", "Show background"),
+      ]),
+    ]));
+  }
 }
 
 function bindSearch() {
@@ -1406,7 +1446,9 @@ async function loadCaps() {
   assignCountries(caps);
   document.getElementById("smallcaps-loading").hidden = true;
   renderReactions(summary);
+  capsState.columns = storedColumns();
   mountFilters();
+  mountColumns();
   mountSort();
   bindSearch();
   renderLists();
@@ -1439,7 +1481,7 @@ function resetScreenFilters() {
     search.value = "";
     search.closest(".field").classList.toggle("active", false);
   }
-  document.querySelectorAll("#smallcaps-filters select").forEach((select) => {
+  document.querySelectorAll("#smallcaps-filters select, #smallcaps-more select").forEach((select) => {
     select.value = "all";
     select.closest(".field").classList.toggle("active", false);
   });

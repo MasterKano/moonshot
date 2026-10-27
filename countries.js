@@ -92,8 +92,9 @@ function watchStar(code, name) {
 }
 
 function nameNode(row) {
-  const label = el("span", {}, [
-    el("span", { class: "cap-name", text: showText(row.name) }),
+  const fullName = showText(row.name);
+  const label = el("span", { class: "name-clip", title: fullName }, [
+    el("span", { class: "cap-name", title: fullName, text: fullName }),
     row.code ? el("span", { class: "cap-code", text: showText(row.code) }) : null,
     row.sector === "Oil and gas" && showText(row.basin) !== "—" ? el("span", { class: "place-label", text: showText(row.basin) }) : null,
   ]);

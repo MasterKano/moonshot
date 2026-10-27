@@ -208,7 +208,7 @@ main {
   box-shadow: var(--shadow), inset 0 2px 0 color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
-.panel { padding: 12px 14px 12px; }
+.panel { padding: 12px 14px 12px; min-width: 0; max-width: 100%; }
 
 .stats {
   display: grid;
@@ -855,10 +855,42 @@ table.norway tr.band th {
 
 .cap-tools {
   display: grid;
-  grid-template-columns: minmax(180px, 0.9fr) minmax(0, 2.4fr);
+  grid-template-columns: minmax(180px, 0.9fr) minmax(0, 2.4fr) auto;
   gap: 12px;
   align-items: end;
   margin-top: 4px;
+  min-width: 0;
+}
+
+.more-filters { margin-top: 10px; }
+.more-filters summary,
+.columns-picker summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+.columns-picker {
+  position: relative;
+  min-width: 110px;
+}
+.columns-menu {
+  position: absolute;
+  right: 0;
+  z-index: 6;
+  display: grid;
+  gap: 4px;
+  min-width: 210px;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.columns-menu label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
 }
 
 .cap-tools .fields { margin-top: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -866,23 +898,10 @@ table.norway tr.band th {
 .cap-scroll { overflow-x: auto; }
 
 table.caps {
-  table-layout: fixed;
-  width: 100%;
-  min-width: 1360px;
+  table-layout: auto;
+  width: max-content;
+  min-width: 100%;
 }
-
-table.caps th:nth-child(1) { width: 14%; }
-table.caps th:nth-child(2) { width: 7%; }
-table.caps th:nth-child(3) { width: 8%; }
-table.caps th:nth-child(4) { width: 10%; }
-table.caps th:nth-child(5) { width: 7%; }
-table.caps th:nth-child(6) { width: 9%; }
-table.caps th:nth-child(7) { width: 7%; }
-table.caps th:nth-child(8) { width: 13%; }
-table.caps th:nth-child(9) { width: 8%; }
-table.caps th:nth-child(10) { width: 6%; }
-table.caps th:nth-child(11) { width: 6%; }
-table.caps th:nth-child(12) { width: 5%; }
 
 table.caps thead button { white-space: normal; text-align: left; }
 
@@ -1030,7 +1049,20 @@ table.caps thead th:first-child { z-index: 4; }
 .affected-list { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
 .affected-plain { font-size: 13px; }
 .affected-link { font-size: 13px; }
-table.countries, table.catalysts { table-layout: auto; min-width: 980px; }
+table.countries, table.catalysts { table-layout: fixed; width: 100%; min-width: 640px; }
+
+table.countries td:first-child,
+table.countries th:first-child { width: 24%; }
+
+table.countries .name-clip,
+table.countries .cap-name,
+table.countries .co-link {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 table.countries thead th, table.catalysts thead th {
   font-size: 11px;
   font-weight: 700;
@@ -1717,7 +1749,13 @@ table.countries thead th, table.catalysts thead th {
   color: var(--ink);
 }
 
-.table-wrap { overflow: visible; }
+.table-wrap { overflow: visible; min-width: 0; max-width: 100%; }
+
+.table-wrap.cap-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
 
 table.register {
   width: 100%;

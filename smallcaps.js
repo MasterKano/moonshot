@@ -1,8 +1,8 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
-const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
-const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Euronext Paris", "Euronext Amsterdam", "Euronext Milan", "Frankfurt (Scale)", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
+const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "Paris", "Frankfurt", "Milan", "Amsterdam", "TSX"];
 const PILOT_CODES = ["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"];
 const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const CATEGORY_OPTIONS = ["Operational", "Capital and deals", "Corporate"];
@@ -35,6 +35,8 @@ const SORTS = [
   ["setbacks", "asc", "Setbacks, low to high"],
   ["cash", "asc", "Cash flag A to Z"],
   ["cash", "desc", "Cash flag Z to A"],
+  ["runway", "asc", "Runway A to Z"],
+  ["runway", "desc", "Runway Z to A"],
 ];
 const COLUMN_TIPS = {
   name: "Company name and ticker.",
@@ -49,6 +51,7 @@ const COLUMN_TIPS = {
   upcoming: "How many guided items are ahead.",
   setbacks: "Setbacks in the last 12 months.",
   cash: "Funding note. Unknown means the figure was not found.",
+  runway: "A rough check from public filings. Not advice.",
 };
 const COLUMNS = [
   ["name", "Company"],
@@ -63,6 +66,7 @@ const COLUMNS = [
   ["upcoming", "Upcoming"],
   ["setbacks", "Setbacks"],
   ["cash", "Cash flag"],
+  ["runway", "Runway"],
 ];
 
 const capsState = {
@@ -211,6 +215,10 @@ function listingMarket(exchange) {
   if (exchange === "ASX") return "ASX";
   if (isNordicExchange(exchange)) return "Nordic";
   if (text.includes("tel aviv")) return "Tel Aviv";
+  if (text.includes("euronext paris") || text.includes("euronext growth paris")) return "Paris";
+  if (text.includes("frankfurt") || text.includes("xetra")) return "Frankfurt";
+  if (text.includes("euronext milan") || text.includes("borsa italiana")) return "Milan";
+  if (text.includes("euronext amsterdam")) return "Amsterdam";
   return "London";
 }
 
@@ -406,6 +414,7 @@ function normalize(raw, index) {
     upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object").sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date))),
     upcomingCount: asNumber(row.upcoming_count),
     nextDate: row.next_event_date,
+    funding: row.funding && typeof row.funding === "object" ? row.funding : null,
     sector: sectorOf(row.type),
     markets: [listingMarket(row.exchange)],
     shelf: false,
@@ -563,6 +572,10 @@ function pilotMarkets(exchange) {
   if (text.includes("tsx") || text.includes("toronto")) markets.push("TSX");
   if (text.includes("asx")) markets.push("ASX");
   if (text.includes("london") || /\baim\b/.test(text)) markets.push("London");
+  if (text.includes("paris")) markets.push("Paris");
+  if (text.includes("frankfurt") || text.includes("xetra")) markets.push("Frankfurt");
+  if (text.includes("milan") || text.includes("borsa italiana")) markets.push("Milan");
+  if (text.includes("amsterdam")) markets.push("Amsterdam");
   return markets.length ? markets : ["TSX"];
 }
 
@@ -719,6 +732,8 @@ function compareRows(a, b) {
   } else if (key === "cash") {
     const miss = compareMissing(blank(a.cash), blank(b.cash));
     cmp = miss == null ? directed(showText(a.cash).localeCompare(showText(b.cash), "en", { sensitivity: "base" })) : miss;
+  } else if (key === "runway") {
+    cmp = directed(runwayLabel(a).localeCompare(runwayLabel(b), "en", { sensitivity: "base" }));
   } else {
     const value = (row) => {
       if (key === "cap") return row.cap;
@@ -760,13 +775,107 @@ function stageNode(stage) {
   ]);
 }
 
+const RUNWAY_LABELS = {
+  "appears funded to next catalyst": ["Appears funded to next catalyst", "positive"],
+  "funding needed before next catalyst": ["Funding needed before next catalyst", "setback"],
+  unclear: ["Unclear", "neutral"],
+  "not covered": ["Not covered", "background"],
+};
+
+function runwayLabel(row) {
+  const key = String(row.funding && row.funding.runway_check || "not covered").trim().toLowerCase();
+  return (RUNWAY_LABELS[key] || RUNWAY_LABELS["not covered"])[0];
+}
+
+function runwayChip(check) {
+  const key = String(check || "not covered").trim().toLowerCase();
+  const pair = RUNWAY_LABELS[key] || RUNWAY_LABELS["not covered"];
+  return el("span", {
+    class: `chip chip-${pair[1]} chip-runway`,
+    title: "A rough check from public filings. Not advice.",
+    text: pair[0],
+  });
+}
+
+function catalystRunwayChip(row, item) {
+  const block = row.funding;
+  if (!block || !item || !item.id || String(block.next_catalyst_id || "") !== String(item.id)) return null;
+  return runwayChip(block.runway_check);
+}
+
+function plainValue(value) {
+  if (value == null) return "";
+  const text = showText(value);
+  if (!text || text === "—" || text === "-") return "";
+  return text;
+}
+
+function moneyText(amount, currency, unit) {
+  const number = asNumber(amount);
+  if (number == null) return "";
+  const parts = [];
+  const cur = plainValue(currency);
+  if (cur) parts.push(cur);
+  parts.push(formatNum(number));
+  const unitText = unit === "million" ? "million" : plainValue(unit);
+  if (unitText) parts.push(unitText);
+  return parts.join(" ");
+}
+
+function runwayBlock(row) {
+  const block = row.funding;
+  const lines = [
+    el("p", { class: "eyebrow", text: "Funding runway" }),
+    el("p", { class: "label-notes", text: "A rough check from public filings. Not advice." }),
+    runwayChip(block && block.runway_check),
+  ];
+  if (!block) return el("div", { class: "runway-block" }, lines);
+  const reason = plainValue(block.runway_reason);
+  if (reason) lines.push(el("p", { text: reason }));
+  const cash = moneyText(block.cash, block.cash_currency, block.amount_unit);
+  const cashDate = formatDate(block.cash_date);
+  const href = safeUrl(block.cash_source_url);
+  if (cash) {
+    lines.push(el("p", {}, [
+      el("span", { class: "k", text: "Cash. " }),
+      `${cash}${cashDate !== "—" ? ` as of ${cashDate}` : ""}.`,
+      href ? " " : null,
+      href ? el("a", {
+        href,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        onClick: (event) => event.stopPropagation(),
+        text: "Source",
+      }) : null,
+    ]));
+  }
+  const burn = moneyText(block.quarterly_burn, block.cash_currency, block.amount_unit);
+  const basis = plainValue(block.burn_basis);
+  if (burn || basis) {
+    lines.push(el("p", {}, [
+      el("span", { class: "k", text: "Burn. " }),
+      burn ? `${burn} a quarter.` : "",
+      basis ? ` ${basis}` : "",
+    ]));
+  }
+  const debt = plainValue(block.debt_or_facilities_note);
+  if (debt) lines.push(el("p", {}, [el("span", { class: "k", text: "Debt or facilities. " }), debt]));
+  const checked = formatDate(block.last_checked);
+  if (checked !== "—") lines.push(el("p", { class: "label-notes", text: `Checked ${checked}.` }));
+  return el("div", { class: "runway-block" }, lines);
+}
+
 function nextNode(row) {
   const item = (row.upcoming || [])[0];
   if (!item && blank(row.nextDate)) return "—";
   const text = item && item.sort_date_is_proxy && item.date_window_text
     ? showText(item.date_window_text)
     : formatDate(item && (item.sort_date || item.date) || row.nextDate);
-  return el("span", { class: "date-stack" }, [el("span", { text }), basisTag(item && item.date_basis)]);
+  return el("span", { class: "date-stack" }, [
+    el("span", { text }),
+    basisTag(item && item.date_basis),
+    catalystRunwayChip(row, item),
+  ]);
 }
 
 function latestNode(row) {
@@ -854,6 +963,7 @@ function cellFor(row, key) {
   if (key === "upcoming") return row.upcomingCount == null ? emptyGap(row, "guidance") : formatNum(row.upcomingCount);
   if (key === "setbacks") return formatNum(row.setbacks);
   if (key === "cash") return cashNode(row);
+  if (key === "runway") return runwayChip(row.funding && row.funding.runway_check);
   return emptyGap(row, key);
 }
 
@@ -1054,6 +1164,7 @@ function expandBody(row) {
         el("span", { class: "chip-row" }, [
           screenChips(item),
           slipTag(row.code, item),
+          catalystRunwayChip(row, item),
         ]),
         guidanceLines(item),
       ]))),
@@ -1097,6 +1208,7 @@ function expandBody(row) {
     : el("span", { text: "—" });
   return el("div", { class: "cap-expand" }, [
     el("p", { class: "cap-desc", text: showText(row.description) }),
+    runwayBlock(row),
     el("p", { class: "eyebrow", text: "Events" }),
     events,
     ...upcoming,

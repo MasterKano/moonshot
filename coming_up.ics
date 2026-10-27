@@ -6,7 +6,7 @@ BEGIN:VEVENT
 SUMMARY:Equinor Energy AS (EQNR): Equinor Q3 2026 results
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO206@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -18,7 +18,7 @@ BEGIN:VEVENT
 SUMMARY:BW Energy Limited (BWE.OL): BW Energy Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BWE.OL-2026-10-29-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Corporate. Type:
@@ -30,7 +30,7 @@ BEGIN:VEVENT
 SUMMARY:A/S Norske Shell (SHEL): Shell Q3 2026 results and interim dividend
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO212@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -46,7 +46,7 @@ BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO207@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -58,7 +58,7 @@ BEGIN:VEVENT
 SUMMARY:DNO Norge AS (DNO): DNO Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO208@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -70,7 +70,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO209@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -82,7 +82,7 @@ BEGIN:VEVENT
 SUMMARY:Repsol Norge AS (REP): Repsol Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO211@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -93,22 +93,36 @@ URL:https://www.repsol.com/en/shareholders-and-investors/calendar/third-qua
  rter-2026-financial-results-presentation/index.cshtml
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q3 2026 results
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO210@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Results. Company: TotalEnergies EP Norge AS (TTE). Material: No. Band: Ti
- ght. Source: https://totalenergies.com/news/calendar
+  Results. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Band: Tig
+ ht. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eramet S.A. (ERA.PA): Q3 2026 turnover
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+DTSTAMP:20261027T231639Z
+UID:U-ERA.PA-2026-10-29-0@moonshot
+CATEGORIES:Paris,Corporate
+DESCRIPTION:Market: Paris. Sector: Mining. Category: Corporate. Type: Resul
+ ts due. Company: Eramet S.A. (ERA.PA). Material: No. Band: Tight. Source: 
+ https://www.eramet.com/wp-content/uploads/2026/10/2026-12-10-Eramet-PR-Cap
+ ital-increase-EN.pdf
+URL:https://www.eramet.com/wp-content/uploads/2026/10/2026-12-10-Eramet-PR-
+ Capital-increase-EN.pdf
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Afentra plc (AET): Afentra trading update (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AET-2026-11-30-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -122,7 +136,7 @@ BEGIN:VEVENT
 SUMMARY:Arrow Exploration Corp. (AXL): Arrow Q3 2026 results (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-CO-AXL-2026-11-30-11@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -137,7 +151,7 @@ SUMMARY:Arrow Exploration Corp. (AXL): Q3 2026 interim results due by end o
  f November 2026 (Q2 results were released on 27 August) (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AXL-2026-11-30-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -152,7 +166,7 @@ SUMMARY:Atlantic Lithium Limited (ALL): Scheme meeting to approve Huayou ta
  keover expected November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ALL-2026-11-30-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -167,7 +181,7 @@ SUMMARY:Bezant Resources plc (BZT): First Hope and Gorob concentrate shipme
  nt in early November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-BZT-2026-11-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -182,7 +196,7 @@ SUMMARY:Pensana plc (PRE): Cascade tranche to Pensana due within 14 days of
   26 Oct (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRE-2026-11-30-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -197,7 +211,7 @@ SUMMARY:Quantum Helium Limited (QHE): Sagebrush-1 larger-volume propped fra
  cture stimulation targeted November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-QHE-2026-11-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Dr
@@ -212,7 +226,7 @@ SUMMARY:Tharisa plc (THS): Project debt drawdowns expected to commence from
   November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-THS-2026-11-30-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -228,7 +242,7 @@ SUMMARY:Nordic Mining ASA (NOM.OL): Seeking USD 10-15 million to fund Engeb
  y (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-NOM.OL-2026-11-30-0@moonshot
 CATEGORIES:Nordic,Capital and deals
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Capital and deals. Ty
@@ -240,7 +254,7 @@ BEGIN:VEVENT
 SUMMARY:OKEA ASA (OKEA): OKEA Q3 2026 results
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO214@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -253,7 +267,7 @@ SUMMARY:Gruvaktiebolaget Viscaria (VISC.ST): Q3 2026 report due 5 November
  2026
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-VISC.ST-2026-11-05-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Resu
@@ -267,7 +281,7 @@ SUMMARY:ConocoPhillips Skandinavia AS (COP): ConocoPhillips Q3 2026 results
   and call
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO216@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -280,7 +294,7 @@ SUMMARY:Harbour Energy Norge AS (HBR): Harbour Energy trading and operation
  s update
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO215@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -293,7 +307,7 @@ SUMMARY:ORLEN Upstream Norway AS (PKN): ORLEN Q3 2026 consolidated report (
  moved forward from 19 Nov)
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO217@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -308,7 +322,7 @@ SUMMARY:Petrotal Corporation (PTAL): Q3 2026 results webcast on 9 November
  2026
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PTAL-2026-11-09-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -322,7 +336,7 @@ BEGIN:VEVENT
 SUMMARY:Vår Energi ASA (VAR): Vår Energi extraordinary general meeting
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO218@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -335,7 +349,7 @@ SUMMARY:INPEX Idemitsu Norge AS (INPEX Idemitsu): INPEX results for nine mo
  nths to 30 Sep 2026 (investor meeting 13 Nov)
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO219@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -347,7 +361,7 @@ BEGIN:VEVENT
 SUMMARY:Japex Norge AS (1662): JAPEX results for 2Q FY2027/3
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO220@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -359,7 +373,7 @@ BEGIN:VEVENT
 SUMMARY:Orosur Mining Inc (OMI): Orosur AGM\, Toronto
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-OMI-2026-11-16-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -370,10 +384,24 @@ URL:https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/n
  otice-of-annual-and-special-meeting/9825993
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Deutsche Rohstoff AG (DR0.DE): Q3 2026 quarterly report
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+DTSTAMP:20261027T231639Z
+UID:U-DR0.DE-2026-11-17-0@moonshot
+CATEGORIES:Frankfurt,Corporate
+DESCRIPTION:Market: Frankfurt. Sector: Oil and gas. Category: Corporate. Ty
+ pe: Results due. Company: Deutsche Rohstoff AG (DR0.DE). Material: No. Ban
+ d: Tight. Source: https://www.eqs-news.com/de/company/deutsche-rohstoff-ag
+ /termine/5b796712-ea7c-11e8-902f-2c44fd856d8c
+URL:https://www.eqs-news.com/de/company/deutsche-rohstoff-ag/termine/5b7967
+ 12-ea7c-11e8-902f-2c44fd856d8c
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Panoro Energy ASA (PEN.OL): Panoro Q3 2026 trading update
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-PEN.OL-2026-11-18-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Corporate. Type:
@@ -385,7 +413,7 @@ BEGIN:VEVENT
 SUMMARY:Pan African Resources plc (PAF): AGM on 19 November 2026
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PAF-2026-11-19-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -401,7 +429,7 @@ SUMMARY:Zanaga Iron Ore Company Limited (ZIOC): Red Arc Minerals strategic
  nancing)
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZIOC-2026-11-30-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -417,7 +445,7 @@ SUMMARY:Atlantic Lithium Limited (ALL): Scheme implementation expected Dece
  mber 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ALL-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -434,7 +462,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): Navitas option to farm in to
  due by early December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2026-12-04-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -451,7 +479,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): First half-year results (six
  ue by end of December 2026 under the AIM three-month deadline (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2026-12-31-2@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -469,7 +497,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): Falkland Islands Government t
  uisition (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2026-12-31-3@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -486,7 +514,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): Completion of the JHI Associa
  is issued\; Navitas 65% farm-in approved on 21 September 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2026-12-31-4@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -501,7 +529,7 @@ SUMMARY:Hochschild Mining plc (HOC): Monte Do Carmo FID in December 2026 (m
  onth)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-HOC-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -516,7 +544,7 @@ SUMMARY:Kistos Holdings plc (KIST): Balder Phase VI first oil scheduled for
   December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KIST-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -531,7 +559,7 @@ SUMMARY:Pan African Resources plc (PAF): FID on new tailings retreatment pr
  oject (DFS done\, US$216m capex) expected December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PAF-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -549,7 +577,7 @@ SUMMARY:Rockhopper Exploration plc (RKH): Falkland Islands Government to fo
  e Sea Lion licences PL032 and PL033 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RKH-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -564,7 +592,7 @@ SUMMARY:Zanaga Iron Ore Company Limited (ZIOC): AGM in December 2026 (month
  )
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZIOC-2026-12-31-1@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -580,7 +608,7 @@ SUMMARY:Zephyr Energy plc (ZPHR): FIBT term loan maturity expected to be ex
  tended by one year on or before December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZPHR-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -595,7 +623,7 @@ SUMMARY:Aker BP ASA (AKRBP): Hugin A platform sailaway planned December 202
  6 (Yggdrasil) (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO221@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -606,12 +634,28 @@ URL:https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-presentat
  ion.pdf
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Etablissements Maurel et Prom (MAU.PA): Completion of the Gran Tier
+ ra Colombia and Ecuador acquisition targeted by 31 December 2026\, subject
+  to approvals (month)
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+DTSTAMP:20261027T231639Z
+UID:U-MAU.PA-2026-12-31-0@moonshot
+CATEGORIES:Paris,Capital and deals
+DESCRIPTION:Market: Paris. Sector: Oil and gas. Category: Capital and deals
+ . Type: MnA. Company: Etablissements Maurel et Prom (MAU.PA). Material: No
+ . Band: Tight. Source: https://www.grantierra.com/news/gran-tierra-energy-
+ inc-stockholders-approve-sale-of-colombian-and-ecuadorian-businesses/
+URL:https://www.grantierra.com/news/gran-tierra-energy-inc-stockholders-app
+ rove-sale-of-colombian-and-ecuadorian-businesses/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Navitas Petroleum LP (NVPT): Navitas option to farm in to 80% of Or
  induik (US$2.5m payment\, carry up to US$55m gross) lapses about 4 Dec 202
  6 unless exercised (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-GY-NVPT-2026-12-04-0@moonshot
 CATEGORIES:Tel Aviv,Capital and deals
 DESCRIPTION:Market: Tel Aviv. Sector: Oil and gas. Category: Capital and de
@@ -629,7 +673,7 @@ SUMMARY:Navitas Petroleum LP (NVPT): Falkland Islands Government to formall
  n (PL032\, PL033) and PL001 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:T-NVPT-2026-12-31-0@moonshot
 CATEGORIES:Tel Aviv,Operational
 DESCRIPTION:Market: Tel Aviv. Sector: Oil and gas. Category: Operational. T
@@ -644,7 +688,7 @@ SUMMARY:Neo Energy Metals plc (NEO): Ministerial consent for Beatrix Mining
   Right transfer required on or before 6 December 2026
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-NEO-2026-12-06-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Pe
@@ -655,11 +699,44 @@ URL:https://www.investegate.co.uk/announcement/rns/neo-energy-metals--neo/o
  perational-update-for-period-ended-30-june-2026/9642985
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:La Francaise de l'Energie (FDE.PA): Revised targets and growth traj
+ ectory to FY2032 to be presented
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+DTSTAMP:20261027T231639Z
+UID:U-FDE.PA-2026-12-10-0@moonshot
+CATEGORIES:Paris,Corporate
+DESCRIPTION:Market: Paris. Sector: Oil and gas. Category: Corporate. Type: 
+ Investor event. Company: La Francaise de l'Energie (FDE.PA). Material: No.
+  Band: Tight. Source: https://www.actusnews.com/fr/telechargement/la-franc
+ aise-de-l-energie/2026/10/06/100690-cp-06102026-vexec.pdf
+URL:https://www.actusnews.com/fr/telechargement/la-francaise-de-l-energie/2
+ 026/10/06/100690-cp-06102026-vexec.pdf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Deutsche Rohstoff AG (DR0.DE): Six additional 2026 wells expected o
+ nline in Q4 2026 (approx.\, Q4 2026)
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261027T231639Z
+UID:U-DR0.DE-2026-12-31-1@moonshot
+CATEGORIES:Frankfurt,Operational
+DESCRIPTION:Market: Frankfurt. Sector: Oil and gas. Category: Operational. 
+ Type: First production. Company: Deutsche Rohstoff AG (DR0.DE). Material: 
+ Yes. Band: Loose. Source: https://www.eqs-news.com/news/ad-hoc/deutsche-ro
+ hstoff-ag-increase-of-2026-and-2027-guidance-and-expansion-of-drilling-pro
+ gram-2026-ebitda-increases-to-up-to-eur-400-million/70677379-194d-48d4-b9a
+ 8-dd8fe7f48035_en
+URL:https://www.eqs-news.com/news/ad-hoc/deutsche-rohstoff-ag-increase-of-2
+ 026-and-2027-guidance-and-expansion-of-drilling-program-2026-ebitda-increa
+ ses-to-up-to-eur-400-million/70677379-194d-48d4-b9a8-dd8fe7f48035_en
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ACG Metals Limited (ACG): Gediktepe full commercial production incl
  uding zinc concentrate by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ACG-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -674,7 +751,7 @@ SUMMARY:Amaroq Ltd. (AMRQ): Further update on Maarrmorilik development plan
  s during Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AMRQ-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -690,7 +767,7 @@ SUMMARY:Arrow Exploration Corp. (AXL): Test results from Icaco HZ9\, the fi
  led 13 to 20 October 2026\, about 950 ft of oil pay) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AXL-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -705,7 +782,7 @@ SUMMARY:Borders and Southern Petroleum plc (BOR): Falklands licence extensi
  ons expected to be signed before year end (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-BOR-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -721,7 +798,7 @@ SUMMARY:Caledonia Mining Corporation plc (CMCL): Firm 2027 production and c
  ost guidance after budgeting at end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-CMCL-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -737,7 +814,7 @@ SUMMARY:Chariot Limited (CHAR): Completion of Etu purchase of Azule Block 1
  4 and 14K interests (Chariot financing) (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-AO-CHAR-2026-12-31-19@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -752,7 +829,7 @@ SUMMARY:Chariot Limited (CHAR): First Angolan oil transaction expected to c
  lose H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-CHAR-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -767,7 +844,7 @@ SUMMARY:Cleantech Lithium plc (CTL): ASX dual listing targeted Q4 2026 (app
  rox.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-CTL-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -782,7 +859,7 @@ SUMMARY:Cornish Metals plc (TIN): Overall engineering completion expected b
  y end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TIN-2026-12-31-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -797,7 +874,7 @@ SUMMARY:East Star Resources plc (EST): Drill Rulikha Target 1 prospect in Q
  4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-EST-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Dr
@@ -814,7 +891,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): Completion of the BP farm-dow
  4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -830,7 +907,7 @@ SUMMARY:Empire Metals Limited (EEE): ASX dual listing on track for H2 2026
  (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-EEE-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -845,7 +922,7 @@ SUMMARY:Enquest plc (ENQ): Malaysian acquisitions to complete on 31 Decembe
  r 2026 (Group above 100\,000 boepd)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ENQ-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -860,7 +937,7 @@ SUMMARY:Genel Energy plc (GENL): New 3D seismic acquisition in H2 2026 (app
  rox.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GENL-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -875,7 +952,7 @@ SUMMARY:Jadestone Energy plc (JSE): Nam Du/U Minh FID and farm-out by end o
  f 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-JSE-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -890,7 +967,7 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Tulu Kapi project debt drawdown on
   track for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KEFI-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -905,7 +982,7 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Jibal Qutman Stage 1 FID targeted
  H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KEFI-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -920,7 +997,7 @@ SUMMARY:Kenmare Resources plc (KMR): SMO 2 mining upgrade equipment on site
  \, commissioning expected Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KMR-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Ot
@@ -935,7 +1012,7 @@ SUMMARY:Kistos Holdings plc (KIST): Oman Block 9 acquisition completion exp
  ected H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KIST-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -950,7 +1027,7 @@ SUMMARY:Kodal Minerals plc (KOD): Target to increase Bougouni lithium MRE f
  rom 31Mt to 50Mt by end 2026 (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KOD-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -965,7 +1042,7 @@ SUMMARY:Meridian Mining plc (MNO): Cabacal Definitive Feasibility Study tar
  geted for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-MNO-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -980,7 +1057,7 @@ SUMMARY:Mila Resources plc (MILA): Initial Yarrol MRE scheduled for 2026 (a
  pprox.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-MILA-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -995,7 +1072,7 @@ SUMMARY:Oriole Resources plc (ORR): Maiden MRE and/or JORC Exploration Targ
  et for Wapouze in 2026 (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ORR-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -1010,7 +1087,7 @@ SUMMARY:Oriole Resources plc (ORR): Exploitation Licence application for Wa
  pouze to be submitted later in the year (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ORR-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Pe
@@ -1025,7 +1102,7 @@ SUMMARY:Orosur Mining Inc (OMI): Potential APTA resource estimate later thi
  s year (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-OMI-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -1040,7 +1117,7 @@ SUMMARY:Pharos Energy plc (PHAR): El Fayum six-well programme scheduled to
  complete by end of year (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PHAR-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1055,7 +1132,7 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Licence extension to 5 Feb
  ruary 2027 expected before end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRD-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1071,7 +1148,7 @@ SUMMARY:Prospex Energy plc (PXEN): ST3 water injection test starting Q4 202
  6 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PXEN-2026-12-31-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -1086,7 +1163,7 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Phalaborwa Pre-Feasibility Study
   targeted Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RBW-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -1102,7 +1179,7 @@ SUMMARY:Rome Resources plc (RMR): 2027 exploration programme to be finalise
  d and announced by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RMR-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Ot
@@ -1117,7 +1194,7 @@ SUMMARY:Savannah Resources plc (SAV): RECAPE submission in Q4 2026 (approx.
  \, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SAV-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Pe
@@ -1132,7 +1209,7 @@ SUMMARY:Savannah Resources plc (SAV): Post due diligence conditional projec
  t finance offers by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SAV-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -1147,7 +1224,7 @@ SUMMARY:Seascape Energy Asia plc (SEA): Temaris Cluster Field Development a
  nd Abandonment Plan submission Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEA-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1162,7 +1239,7 @@ SUMMARY:Seascape Energy Asia plc (SEA): Block 2A rig award anticipated mid-
  Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEA-2026-12-31-1@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -1177,7 +1254,7 @@ SUMMARY:Seascape Energy Asia plc (SEA): DEWA Cluster sanction targeted arou
  nd end of 2026 (operator EnQuest) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEA-2026-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1193,7 +1270,7 @@ SUMMARY:Serabi Gold plc (SRB): Coringa transition to mechanised sublevel st
  oping on track for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SRB-2026-12-31-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -1209,7 +1286,7 @@ SUMMARY:Sintana Energy Inc. (SEI): Mopane three-well exploration and apprai
  ct 2026) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-NA-SEI-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1225,7 +1302,7 @@ SUMMARY:Sintana Energy Inc. (SEI): Chevron Nabba-1X exploration well on PEL
  6)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-NA-SEI-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1240,7 +1317,7 @@ SUMMARY:Sintana Energy Inc. (SEI): Fast-track seismic results from first se
  ason expected Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEI-2026-12-31-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -1255,7 +1332,7 @@ SUMMARY:Sintana Energy Inc. (SEI): PEL 37 (Maravilla) acquisition completio
  n expected within 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEI-2026-12-31-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1270,7 +1347,7 @@ SUMMARY:Sintana Energy Inc. (SEI): Completion of Sintana KON-16 entry (appr
  ox.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEI-2026-12-31-2@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1285,7 +1362,7 @@ SUMMARY:Sunda Energy plc (SNDA): Completion of NZ acquisition (Matahio) to
  follow government consent (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SNDA-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1300,7 +1377,7 @@ SUMMARY:Thor Explorations Ltd (THX): Updated Douta MRE targeted by end of t
  he year (for optimised PFS) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-THX-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -1315,7 +1392,7 @@ SUMMARY:Thungela Resources Limited (TGA): Goedehoop North sale expected to
  complete in H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TGA-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -1330,7 +1407,7 @@ SUMMARY:Upland Resources Limited (UPL): Three wells to be connected to pipe
  line with production before year-end (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-UPL-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1345,7 +1422,7 @@ SUMMARY:Vast Resources plc (VAST): Soviet Tailings pilot flotation plant co
  mmissioning Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-VAST-2026-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -1360,7 +1437,7 @@ SUMMARY:Vast Resources plc (VAST): Assaying for maiden Soviet Tailings MRE
  scheduled Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-VAST-2026-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -1376,7 +1453,7 @@ SUMMARY:Zephyr Energy plc (ZPHR): Binding Commodity Purchase Agreement with
  , guided to close in Q3 or early Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZPHR-2026-12-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1392,7 +1469,7 @@ SUMMARY:Zephyr Energy plc (ZPHR): Paradox project farm-out resolution and r
  for H2 2026\, ahead of first gas export (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZPHR-2026-12-31-2@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1407,7 +1484,7 @@ SUMMARY:BlueNord ASA (BNOR.OL): Tyra expected to reach steady-state perform
  ance in H2 2026\, with unit opex back to target (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BNOR.OL-2026-12-31-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Corporate. Type:
@@ -1421,7 +1498,7 @@ SUMMARY:International Petroleum Corporation (IPCO.ST): Blackrod Phase 1: mo
   Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-IPCO.ST-2026-12-31-0@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1435,7 +1512,7 @@ SUMMARY:Lucara Diamond Corp. (LUC.ST): Karowe open pit mining on track to c
  onclude in Q4 2026\; mill switches to stockpiles (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-LUC.ST-2026-12-31-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Othe
@@ -1449,7 +1526,7 @@ SUMMARY:Meren Energy Inc. (MER.ST): Venus (PEL 56) final investment decisio
  a (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-NA-MER.ST-2026-12-31-2@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1462,7 +1539,7 @@ SUMMARY:Meren Energy Inc. (MER.ST): Nigeria deepwater drilling campaign (Ag
  bami\, Akpo\, Egina) expected to start in Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-MER.ST-2026-12-31-0@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1476,7 +1553,7 @@ SUMMARY:Meren Energy Inc. (MER.ST): Ikija appraisal well on schedule to com
  mence in Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-MER.ST-2026-12-31-1@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1490,7 +1567,7 @@ SUMMARY:Equinor Energy AS (EQNR): Irpa (Aasta Hansteen tie-back) first gas
  targeted Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO222@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -1499,11 +1576,56 @@ DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
 URL:https://www.equinor.com/energy/irpa
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Arverne Group (ARVEN.PA): Lithium de France definitive feasibility 
+ study results expected by end 2026 (approx.\, Q4 2026)
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261027T231639Z
+UID:U-ARVEN.PA-2026-12-31-0@moonshot
+CATEGORIES:Paris,Operational
+DESCRIPTION:Market: Paris. Sector: Mining. Category: Operational. Type: Stu
+ dy. Company: Arverne Group (ARVEN.PA). Material: Yes. Band: Loose. Source:
+  https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultats-S1_23.
+ 09.26_VF.pdf
+URL:https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultats-S1_2
+ 3.09.26_VF.pdf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Arverne Group (ARVEN.PA): Second Lithium de France financing tranch
+ e expected in H2 2026 (approx.\, H2 2026)
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261027T231639Z
+UID:U-ARVEN.PA-2026-12-31-1@moonshot
+CATEGORIES:Paris,Capital and deals
+DESCRIPTION:Market: Paris. Sector: Mining. Category: Capital and deals. Typ
+ e: Funding. Company: Arverne Group (ARVEN.PA). Material: Yes. Band: Loose.
+  Source: https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultat
+ s-S1_23.09.26_VF.pdf
+URL:https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultats-S1_2
+ 3.09.26_VF.pdf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eramet S.A. (ERA.PA): EUR 500M rights issue after Q3 turnover and b
+ efore year end\, subject to market conditions (approx.\, Q4 2026)
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+DTSTAMP:20261027T231639Z
+UID:U-ERA.PA-2026-12-31-1@moonshot
+CATEGORIES:Paris,Capital and deals
+DESCRIPTION:Market: Paris. Sector: Mining. Category: Capital and deals. Typ
+ e: Funding. Company: Eramet S.A. (ERA.PA). Material: Yes. Band: Loose. Sou
+ rce: https://www.eramet.com/wp-content/uploads/2026/10/2026-12-10-Eramet-P
+ R-Capital-increase-EN.pdf
+URL:https://www.eramet.com/wp-content/uploads/2026/10/2026-12-10-Eramet-PR-
+ Capital-increase-EN.pdf
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Afentra plc (AET): Impala-2 first oil expected January 2027 (about 
  4\,000 bopd gross) (month)
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AET-2027-01-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1517,7 +1639,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q4 2026 trading statement
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO226@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1532,7 +1654,7 @@ SUMMARY:Serica Energy plc (SQZ): 2027 guidance to be given in Trading and O
  perations Update on 20 January 2027
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SQZ-2027-01-20-0@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -1547,7 +1669,7 @@ SUMMARY:Sintana Energy Inc. (SEI): PEL 87 extended first renewal period end
  s 22 Jan 2027\; EIA\, 3D reprocessing and an exploration well committed
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-NA-SEI-2027-01-22-3@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1561,7 +1683,7 @@ BEGIN:VEVENT
 SUMMARY:Vår Energi ASA (VAR): Vår Energi Q4 2026 trading update
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO227@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1574,7 +1696,7 @@ SUMMARY:Jubilee Metals Group plc (JLP): Project G development targeted to c
  ommence from February 2027 (month)
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-JLP-2027-02-28-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -1590,7 +1712,7 @@ SUMMARY:Pan African Resources plc (PAF): First power from Tennant Mines 6.3
  MW solar PV facility by February 2027 (month)
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PAF-2027-02-28-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -1604,7 +1726,7 @@ BEGIN:VEVENT
 SUMMARY:Equinor Energy AS (EQNR): Equinor Q4 and full year 2026 results
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO228@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1616,7 +1738,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q4 and full year 2026 results
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO229@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1631,7 +1753,7 @@ SUMMARY:Vår Energi ASA (VAR): Vår Energi Q4 2026 results and Capital Mark
  ets Update
 DTSTART;VALUE=DATE:20270209
 DTEND;VALUE=DATE:20270210
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO230@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1643,7 +1765,7 @@ BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP Q4 2026 results
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO231@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1652,16 +1774,16 @@ DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q4 and full year 202
- 6 results
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Q4 and full year 2026
+  results
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO232@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Results. Company: TotalEnergies EP Norge AS (TTE). Material: No. Band: Ti
- ght. Source: https://totalenergies.com/news/calendar
+  Results. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Band: Tig
+ ht. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -1669,7 +1791,7 @@ SUMMARY:Gruvaktiebolaget Viscaria (VISC.ST): Updated Viscaria Mineral Resou
  rce Estimate to be presented with the year-end report on 12 February 2027
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270213
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-VISC.ST-2027-02-12-1@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Operational. Type: Re
@@ -1682,7 +1804,7 @@ BEGIN:VEVENT
 SUMMARY:Sotkamo Silver AB (SOSI1.HE): Q4 2026 report due 18 February 2027
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-SOSI1.HE-2027-02-18-0@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Resu
@@ -1695,7 +1817,7 @@ SUMMARY:Tullow Oil plc (TLW): TEN FPSO acquisition completion expected Marc
  h 2027 (month)
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270302
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TLW-2027-03-31-0@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1709,7 +1831,7 @@ BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP annual report 2026
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO233@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -1718,16 +1840,16 @@ DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Sustainability and C
- limate investor workshop
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Sustainability and Cl
+ imate investor workshop
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO234@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Investor event. Company: TotalEnergies EP Norge AS (TTE). Material: No. B
- and: Tight. Source: https://totalenergies.com/news/calendar
+  Investor event. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Ba
+ nd: Tight. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -1735,7 +1857,7 @@ SUMMARY:Afentra plc (AET): Pacassa SW sidetrack first oil anticipated Q1 20
  27 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AET-2027-03-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1750,7 +1872,7 @@ SUMMARY:Cornish Metals plc (TIN): South Crofty process plant construction t
  o begin Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TIN-2027-03-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -1767,7 +1889,7 @@ SUMMARY:Eco (Atlantic) Oil and Gas Ltd (ECO): Navitas plans to drill a mult
  part of the Sea Lion drilling campaign (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ECO-2027-03-31-5@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1783,7 +1905,7 @@ SUMMARY:Gulf Keystone Petroleum Ltd (GKP): PF-2 water handling start-up tar
  geted Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GKP-2027-03-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1799,7 +1921,7 @@ SUMMARY:Petrotal Corporation (PTAL): Bretana production back to about 20\,0
  00 bopd by end of Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PTAL-2027-03-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1814,7 +1936,7 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Snowcap-3 first oil sales
  targeted Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRD-2027-03-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1830,7 +1952,7 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): MOU-6 partial divestment t
  argeted early Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRD-2027-03-31-2@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -1845,7 +1967,7 @@ SUMMARY:Rockhopper Exploration plc (RKH): Sea Lion development drilling exp
  ected to commence early 2027 (first oil Q1 2028) (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RKH-2027-03-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -1860,7 +1982,7 @@ SUMMARY:Savannah Resources plc (SAV): Environmental licence\, project finan
  ce and offtake finalised in Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SAV-2027-03-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Pe
@@ -1875,7 +1997,7 @@ SUMMARY:Tharisa plc (THS): Mechanical installation planned to start Q1 2027
   (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-THS-2027-03-31-1@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -1890,7 +2012,7 @@ SUMMARY:Tungsten West plc (TUN): Hemerdon restart construction and full com
  missioning complete by end of Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TUN-2027-03-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -1901,12 +2023,26 @@ URL:https://www.investegate.co.uk/announcement/rns/tungsten-west--tun/finan
  cial-results-for-the-year-ended-31-march-2026/9752872
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Gas Plus S.p.A. (GSP.MI): Longanesi production stop to switch from 
+ test plant to permanent plant\, end 2026 or early 2027 (approx.\, Q1 2027)
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+DTSTAMP:20261027T231639Z
+UID:U-GSP.MI-2027-03-31-0@moonshot
+CATEGORIES:Milan,Operational
+DESCRIPTION:Market: Milan. Sector: Oil and gas. Category: Operational. Type
+ : Milestone. Company: Gas Plus S.p.A. (GSP.MI). Material: Yes. Band: Loose
+ . Source: https://ir.gasplus.it/file_upload/GasPlusCOSsettembre202614.09.2
+ 026.pdf
+URL:https://ir.gasplus.it/file_upload/GasPlusCOSsettembre202614.09.2026.pdf
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:BW Energy Limited (BWE.OL): MaBoMo Phase 2 (four development wells\
  , Dussafu) first oil expected early 2027\; at risk after 25 Oct rig loss (
  approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BWE.OL-2027-03-31-1@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1919,7 +2055,7 @@ SUMMARY:BW Energy Limited (BWE.OL): Golfinho Boost ESP skids to be installe
  d in early 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BWE.OL-2027-03-31-2@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Corporate. Type:
@@ -1932,7 +2068,7 @@ SUMMARY:Botnia Gold AB (publ) (BOTX.ST): Fäbodtjärn Mineral Resource and
  Reserve update planned with the Q4 2026 report (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BOTX.ST-2027-03-31-0@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Operational. Type: Re
@@ -1948,7 +2084,7 @@ SUMMARY:Endomines Finland Oyj (PAMPALO.HE): Maiden Mineral Resource Estimat
  )
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-PAMPALO.HE-2027-03-31-0@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Operational. Type: Re
@@ -1963,7 +2099,7 @@ SUMMARY:Panoro Energy ASA (PEN.OL): MaBoMo Phase 2 first oil (four infill w
  .\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-GA-PEN.OL-2027-03-31-9@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1977,7 +2113,7 @@ SUMMARY:Panoro Energy ASA (PEN.OL): Dussafu MaBoMo Phase 2 development well
  , Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-PEN.OL-2027-03-31-1@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -1990,7 +2126,7 @@ SUMMARY:Equinor Energy AS (EQNR): APA 2026 award planned start of 2027 (app
  rox.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO223@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -2005,7 +2141,7 @@ SUMMARY:Equinor Energy AS (EQNR): Mistral Nord well planned early 2027 (app
  rox.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO225@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -2018,7 +2154,7 @@ SUMMARY:OKEA ASA (OKEA): Bestla first oil expected early 2027 (approx.\, Q1
   2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO224@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -2029,12 +2165,42 @@ URL:https://okea.no/wp-content/uploads/2026/09/2026-09-16-Pareto-Energy-Con
  ference.pdf
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Arverne Group (ARVEN.PA): Lithium de France reserve certification e
+ xpected in Q1 2027 (approx.\, Q1 2027)
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+DTSTAMP:20261027T231639Z
+UID:U-ARVEN.PA-2027-03-31-2@moonshot
+CATEGORIES:Paris,Operational
+DESCRIPTION:Market: Paris. Sector: Mining. Category: Operational. Type: Res
+ erve. Company: Arverne Group (ARVEN.PA). Material: Yes. Band: Loose. Sourc
+ e: https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultats-S1_2
+ 3.09.26_VF.pdf
+URL:https://arverne.earth/wp-content/uploads/2026/09/Arverne-Resultats-S1_2
+ 3.09.26_VF.pdf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Etablissements Maurel et Prom (MAU.PA): Pacassa South West first pr
+ oduction expected Q1 2027 (approx.\, Q1 2027)
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+DTSTAMP:20261027T231639Z
+UID:U-MAU.PA-2027-03-31-1@moonshot
+CATEGORIES:Paris,Operational
+DESCRIPTION:Market: Paris. Sector: Oil and gas. Category: Operational. Type
+ : First production. Company: Etablissements Maurel et Prom (MAU.PA). Mater
+ ial: Yes. Band: Loose. Source: https://www.maureletprom.fr/en/documents/do
+ wnload/1931/activity-for-the-first-nine-months-of-2026
+URL:https://www.maureletprom.fr/en/documents/download/1931/activity-for-the
+ -first-nine-months-of-2026
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Navitas Petroleum LP (NVPT): Sea Lion NDA Phase 1 development drill
  ing to start in early 2027 once the rig arrives in the Falklands\; first o
  il targeted Q1 2028 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:T-NVPT-2027-03-31-1@moonshot
 CATEGORIES:Tel Aviv,Operational
 DESCRIPTION:Market: Tel Aviv. Sector: Oil and gas. Category: Operational. T
@@ -2050,7 +2216,7 @@ SUMMARY:Navitas Petroleum LP (NVPT): Multi-target PL001 exploration well (f
  n\, early 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:T-NVPT-2027-03-31-2@moonshot
 CATEGORIES:Tel Aviv,Operational
 DESCRIPTION:Market: Tel Aviv. Sector: Oil and gas. Category: Operational. T
@@ -2064,7 +2230,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q1 2027 trading statement
 DTSTART;VALUE=DATE:20270412
 DTEND;VALUE=DATE:20270413
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO235@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -2079,7 +2245,7 @@ SUMMARY:Aker BP ASA (AKRBP): Aker BP calendar entry (unlabelled\; likely AG
  M)
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO236@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -2092,7 +2258,7 @@ SUMMARY:Sotkamo Silver AB (SOSI1.HE): Annual General Meeting scheduled for
  22 April 2027 in Stockholm
 DTSTART;VALUE=DATE:20270422
 DTEND;VALUE=DATE:20270423
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-SOSI1.HE-2027-04-22-1@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Othe
@@ -2101,22 +2267,22 @@ URL:https://view.news.eu.nasdaq.com/view?id=b620fec17ca4c6b74cfa83f0d87919c
  c0&lang=en&src=listed
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q1 2027 results
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Q1 2027 results
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270424
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO237@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Results. Company: TotalEnergies EP Norge AS (TTE). Material: No. Band: Ti
- ght. Source: https://totalenergies.com/news/calendar
+  Results. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Band: Tig
+ ht. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q1 2027 results
 DTSTART;VALUE=DATE:20270429
 DTEND;VALUE=DATE:20270430
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO238@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -2130,7 +2296,7 @@ BEGIN:VEVENT
 SUMMARY:Sotkamo Silver AB (SOSI1.HE): Q1 2027 report due 30 April 2027
 DTSTART;VALUE=DATE:20270430
 DTEND;VALUE=DATE:20270501
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-SOSI1.HE-2027-04-30-2@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Resu
@@ -2144,7 +2310,7 @@ SUMMARY:Borders and Southern Petroleum plc (BOR): Full-year 2026 results du
  released on 29 May 2026) (month)
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-BOR-2027-06-30-1@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2160,7 +2326,7 @@ SUMMARY:Rockhopper Exploration plc (RKH): Full-year 2026 results due by end
   on 3 June 2026) (month)
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RKH-2027-06-30-2@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2175,7 +2341,7 @@ SUMMARY:Zephyr Energy plc (ZPHR): Final results for 2026 due by end of June
   2027 (AIM six-month deadline) (month)
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ZPHR-2027-06-30-3@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2190,7 +2356,7 @@ SUMMARY:Aker BP ASA (AKRBP): Kjøttkake drilling and pipeline installation
  planned to start June 2027 (month)
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO240@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -2203,7 +2369,7 @@ SUMMARY:80 Mile plc (80M): Greenland drilling expected in winter 2027\, sub
  ject to permitting (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-80M-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Dr
@@ -2217,7 +2383,7 @@ BEGIN:VEVENT
 SUMMARY:Afentra plc (AET): KON4 focused seismic (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-AO-AET-2027-06-30-25@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2232,7 +2398,7 @@ SUMMARY:Afentra plc (AET): Focused seismic programme considered for KON4 in
   H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AET-2027-06-30-3@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2247,7 +2413,7 @@ SUMMARY:Afentra plc (AET): Block 3/05 hydraulic workover programme\, early
  2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-AET-2027-06-30-4@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2262,7 +2428,7 @@ SUMMARY:Chariot Limited (CHAR): Completion of Etu purchase of Chevron Block
   14 and 14K interests (BW and Chariot exposure) (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-AO-CHAR-2027-06-30-24@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -2277,7 +2443,7 @@ SUMMARY:Chariot Limited (CHAR): Second Angolan transaction to follow early
  2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-CHAR-2027-06-30-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -2292,7 +2458,7 @@ SUMMARY:Cornish Metals plc (TIN): Dewatering to 400-level and shaft refurbi
  shment in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TIN-2027-06-30-2@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -2307,7 +2473,7 @@ SUMMARY:Energean plc (ENOG): Katlan first gas on track for H1 2027 (approx.
  \, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ENOG-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2322,7 +2488,7 @@ SUMMARY:Enquest plc (ENQ): First oil from second well in programme expected
   early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ENQ-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2337,7 +2503,7 @@ SUMMARY:Europa Oil and Gas (Holdings) plc (EOG): Barracuda exploration well
   (EG-08) targeted to spud in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-EOG-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2352,7 +2518,7 @@ SUMMARY:Genel Energy plc (GENL): First MWO exploration well on the licence
  in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GENL-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2367,7 +2533,7 @@ SUMMARY:Griffin Mining Limited (GFM): TSF4 approval and return to full capa
  city expected early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GFM-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Pe
@@ -2382,7 +2548,7 @@ SUMMARY:Guardian Metal Resources plc (GMET): Pilot Mountain Definitive Feas
  ibility Study in period to June 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GMET-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -2398,7 +2564,7 @@ SUMMARY:Guardian Metal Resources plc (GMET): Maiden resource at Tempiute in
   period to June 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GMET-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -2414,7 +2580,7 @@ SUMMARY:Jadestone Energy plc (JSE): Stag production restart expected Q2 202
  7 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-JSE-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2429,7 +2595,7 @@ SUMMARY:Kenmare Resources plc (KMR): SMO 3 construction and commissioning e
  xpected H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KMR-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Ot
@@ -2444,7 +2610,7 @@ SUMMARY:Mila Resources plc (MILA): Further resource drilling scheduled H1 2
  027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-MILA-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Dr
@@ -2459,7 +2625,7 @@ SUMMARY:Nativo Resources plc (NTVO): La Patona gold plant commissioning exp
  ected Q2 2027 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-NTVO-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -2474,7 +2640,7 @@ SUMMARY:Pan African Resources plc (PAF): First blast at new mine developmen
  t scheduled for early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PAF-2027-06-30-3@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -2489,7 +2655,7 @@ SUMMARY:Pensana plc (PRE): Mining and stockpiling at Longonjo planned to st
  art early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRE-2027-06-30-1@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Mining. Category: Corporate. Type: Othe
@@ -2504,7 +2670,7 @@ SUMMARY:Pharos Energy plc (PHAR): Scheme expected to become effective in 1H
   2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PHAR-2027-06-30-1@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -2519,7 +2685,7 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Placings needed in Q2 2027
   to meet commitments (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRD-2027-06-30-3@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Capital and deal
@@ -2534,7 +2700,7 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Phalaborwa DFS expected H1 2027
  (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RBW-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -2550,7 +2716,7 @@ SUMMARY:Savannah Resources plc (SAV): Barroso lithium FID targeted early 20
  27 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SAV-2027-06-30-3@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: FI
@@ -2565,7 +2731,7 @@ SUMMARY:Sintana Energy Inc. (SEI): Full PSDM seismic results expected Q2 20
  27 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEI-2027-06-30-3@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2580,7 +2746,7 @@ SUMMARY:Strategic Minerals plc (SML): 22\,500m Redmoor drilling completion
  targeted Q2 2027 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SML-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -2595,7 +2761,7 @@ SUMMARY:Sunda Energy plc (SNDA): Oru-2 exploration well expected to spud ea
  rly 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SNDA-2027-06-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2610,7 +2776,7 @@ SUMMARY:Tower Resources plc (TRP): NJOM-3 well spud expected early Q2 2027
  (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TRP-2027-06-30-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2625,7 +2791,7 @@ SUMMARY:BW Energy Limited (BWE.OL): Completion of Etu purchase of Chevron B
  lock 14 and 14K interests (BW and Chariot exposure) (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:C-AO-BWE.OL-2027-06-30-24@moonshot
 CATEGORIES:Nordic,Capital and deals
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Capital and deal
@@ -2640,7 +2806,7 @@ SUMMARY:BW Energy Limited (BWE.OL): Maromba drilling expected to start in Q
  2 2027 (USD 25 million payment due at spud) (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-BWE.OL-2027-06-30-3@moonshot
 CATEGORIES:Nordic,Operational
 DESCRIPTION:Market: Nordic. Sector: Oil and gas. Category: Operational. Typ
@@ -2653,7 +2819,7 @@ SUMMARY:Aker BP ASA (AKRBP): Yggdrasil and Valhall PWP-Fenris first oil tar
  geted 2027 (summer per Aker BP Q2 2026) (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO239@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -2667,7 +2833,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q2 2027 trading statement
 DTSTART;VALUE=DATE:20270712
 DTEND;VALUE=DATE:20270713
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO241@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -2678,22 +2844,22 @@ URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q2 2027 results
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Q2 2027 results
 DTSTART;VALUE=DATE:20270723
 DTEND;VALUE=DATE:20270724
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO242@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Results. Company: TotalEnergies EP Norge AS (TTE). Material: No. Band: Lo
- ose. Source: https://totalenergies.com/news/calendar
+  Results. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Band: Loo
+ se. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sotkamo Silver AB (SOSI1.HE): Q2 2027 report due 30 July 2027
 DTSTART;VALUE=DATE:20270730
 DTEND;VALUE=DATE:20270731
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:D-SOSI1.HE-2027-07-30-3@moonshot
 CATEGORIES:Nordic,Corporate
 DESCRIPTION:Market: Nordic. Sector: Mining. Category: Corporate. Type: Resu
@@ -2705,7 +2871,7 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q2 2027 results
 DTSTART;VALUE=DATE:20270730
 DTEND;VALUE=DATE:20270731
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO243@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
@@ -2716,15 +2882,15 @@ URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Investor Day 2027
+SUMMARY:TotalEnergies EP Gabon (EC.PA): TotalEnergies Investor Day 2027
 DTSTART;VALUE=DATE:20270928
 DTEND;VALUE=DATE:20270929
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO244@moonshot
 CATEGORIES:Norway,Corporate
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Corporate. Type:
-  Investor event. Company: TotalEnergies EP Norge AS (TTE). Material: No. B
- and: Loose. Source: https://totalenergies.com/news/calendar
+  Investor event. Company: TotalEnergies EP Gabon (EC.PA). Material: No. Ba
+ nd: Loose. Source: https://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -2732,7 +2898,7 @@ SUMMARY:Empire Metals Limited (EEE): Further Pitfield MRE upgrade in mid-20
  27 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-EEE-2027-09-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Re
@@ -2747,7 +2913,7 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Additional funding expected to b
  e required in Q3 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-RBW-2027-09-30-2@moonshot
 CATEGORIES:London,Capital and deals
 DESCRIPTION:Market: London. Sector: Mining. Category: Capital and deals. Ty
@@ -2763,7 +2929,7 @@ SUMMARY:Seascape Energy Asia plc (SEA): Kertang well spud scheduled for sum
  mer 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEA-2027-09-30-3@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2778,7 +2944,7 @@ SUMMARY:Serica Energy plc (SQZ): Bruce drilling campaign (SCE and SCW wells
  ) to begin in Q3 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SQZ-2027-09-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2793,7 +2959,7 @@ SUMMARY:Tullow Oil plc (TLW): Rig for 2027-28 Ghana Campaign 2 (up to 10 we
  lls) arriving around mid-year (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-TLW-2027-09-30-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2808,7 +2974,7 @@ SUMMARY:Bezant Resources plc (BZT): Drilling expected to commence during 20
  27 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-BZT-2027-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Dr
@@ -2823,7 +2989,7 @@ SUMMARY:Blencowe Resources plc (BRES): Close about US$45m project financing
   to commence Orom-Cross P1 production in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-BRES-2027-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -2838,7 +3004,7 @@ SUMMARY:Cadence Minerals plc (KDNC): DFS planned to commence in 2027 (appro
  x.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KDNC-2027-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -2853,7 +3019,7 @@ SUMMARY:Enquest plc (ENQ): Ninian Bypass Project scheduled to complete in 2
  027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-ENQ-2027-12-31-2@moonshot
 CATEGORIES:London,Corporate
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Corporate. Type:
@@ -2868,7 +3034,7 @@ SUMMARY:Genel Energy plc (GENL): Two commitment wells on Oman Block 54 in 2
  027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GENL-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2883,7 +3049,7 @@ SUMMARY:Gulf Keystone Petroleum Ltd (GKP): Potential return to Shaikan fiel
  d development and drilling in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-GKP-2027-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2899,7 +3065,7 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Tulu Kapi commissioning targeted t
  o commence late 2027 (approx.\, H2 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KEFI-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -2914,7 +3080,7 @@ SUMMARY:Kistos Holdings plc (KIST): Balder Next start-up expected by end of
   2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-KIST-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2929,7 +3095,7 @@ SUMMARY:Metals One plc (MET1): Evolution targets first Chilalo graphite con
  centrate in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-MET1-2027-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -2944,7 +3110,7 @@ SUMMARY:Prospex Energy plc (PXEN): Potential development well in 2027 (appr
  ox.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PXEN-2027-12-31-1@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2959,7 +3125,7 @@ SUMMARY:Serica Energy plc (SQZ): Exploration at Skerryvore next year (appro
  x.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SQZ-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2974,7 +3140,7 @@ SUMMARY:Sintana Energy Inc. (SEI): KON-16 pre-salt exploration well (approx
  .\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SEI-2027-12-31-4@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -2989,7 +3155,7 @@ SUMMARY:Sovereign Metals Limited (SVML): Pre-Feasibility Study integrating
  rare earths into Kasiya\, completion targeted 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SVML-2027-12-31-0@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: St
@@ -3004,7 +3170,7 @@ SUMMARY:Sunda Energy plc (SNDA): KTJ (Chuditch PSC) wells expected to be dr
  illed in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-SNDA-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Oil and gas. Category: Operational. Typ
@@ -3019,7 +3185,7 @@ SUMMARY:Tharisa plc (THS): First ore to mill targeted Q4 calendar 2027 (com
  missioning July to October 2027) (approx.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-THS-2027-12-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi
@@ -3034,7 +3200,7 @@ SUMMARY:Equinor Energy AS (EQNR): Johan Sverdrup Phase 3 first oil targeted
   Q4 2027 (approx.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO245@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -3047,7 +3213,7 @@ SUMMARY:Equinor Energy AS (EQNR): Wisting PDO submission planned Q4 2027 (a
  pprox.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:N-NO246@moonshot
 CATEGORIES:Norway,Operational
 DESCRIPTION:Market: Norway. Sector: Oil and gas. Category: Operational. Typ
@@ -3062,7 +3228,7 @@ SUMMARY:Pensana plc (PRE): Longonjo commissioning early 2028\, full product
  ion late 2028 (approx.\, Q1 2028)
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
-DTSTAMP:20261027T131732Z
+DTSTAMP:20261027T231639Z
 UID:L-PRE-2028-03-31-2@moonshot
 CATEGORIES:London,Operational
 DESCRIPTION:Market: London. Sector: Mining. Category: Operational. Type: Fi

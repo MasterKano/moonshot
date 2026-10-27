@@ -1698,7 +1698,7 @@ table.countries thead th, table.catalysts thead th {
 
 .tick {
   flex: none;
-  max-width: 92px;
+  max-width: 118px;
   min-width: 0;
   padding: 2px 5px;
   border-radius: 4px;
@@ -2406,6 +2406,34 @@ td .source { font-weight: 700; white-space: nowrap; }
 .event-bar .field.search {
   flex: 1 1 220px;
   max-width: none;
+}
+
+.event-bar .more-filters {
+  flex: 1 1 100%;
+  max-width: none;
+  margin-top: 2px;
+}
+
+.event-more-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-top: 8px;
+}
+
+.filter-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
 }
 
 .event-meta {

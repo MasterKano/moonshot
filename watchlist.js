@@ -468,7 +468,7 @@ function parseCsv(text) {
 }
 
 function addPilots(companiesText, eventsText) {
-  const wanted = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON"]);
+  const wanted = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"]);
   const table = parseCsv(companiesText);
   if (table.length < 2) return;
   const headers = table[0].map((header) => header.trim());

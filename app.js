@@ -9,7 +9,7 @@ const BANDS = [
   ["private", "Private"],
 ];
 const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
-const SCREEN_PILOTS = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON"]);
+const SCREEN_PILOTS = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"]);
 const CATEGORIES = ["Operational", "Capital and deals", "Corporate"];
 const SECTOR_ORDER = ["Oil and gas", "Mining", "Royalty and stream", "Renewables"];
 const RISK_LABELS = {
@@ -779,7 +779,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const catalyst = new Map();
   forward.forEach((item) => {
     item.companies.forEach((company) => {
-      const key = company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+      const key = companyKey(company);
       const prev = catalyst.get(key);
       if (!prev || item.sort < prev) catalyst.set(key, item.sort);
     });
@@ -789,7 +789,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     const material = item.significance === "material" || item.material || item.setback || item.direction === "negative";
     if (!material) return;
     item.companies.forEach((company) => {
-      const key = company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+      const key = companyKey(company);
       const prev = materialDates.get(key);
       if (!prev || item.sort > prev) materialDates.set(key, item.sort);
     });
@@ -954,6 +954,7 @@ function selectField(key, label, choices, current, tip) {
     select.closest(".field").classList.toggle("active", select.value !== fieldDefault(key));
     writeUrl();
     render();
+    paintMoreBadge();
   });
   const field = el("label", { class: "field", title: tip || "" }, [label, select]);
   field.classList.toggle("active", current !== fieldDefault(key));
@@ -999,6 +1000,7 @@ function mountFilters() {
       state.shown = PAGE;
       writeUrl();
       render();
+      paintMoreBadge();
     });
     menu.append(el("label", {}, [input, type]));
   });
@@ -1036,24 +1038,19 @@ function mountFilters() {
       state.shown = PAGE;
       writeUrl();
       render();
+      paintMoreBadge();
     },
     text: "Show background",
   });
 
+  const moreCount = hiddenFilterCount();
   document.getElementById("event-bar").replaceChildren(
     searchField,
     selectField("significance", "Significance", [["material", "Material"], ["all", "All"], ["background", "Background"]], state.significance, "Material events, or the routine background ones."),
     selectField("direction", "Direction", [["all", "All"], ["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]], state.direction, "Whether the event helped, was neutral, or was a setback."),
-    selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status, "Where a guided item stands."),
-    selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence, "How firmly the date is known. High, medium, or low."),
     selectField("range", "Date", RANGES, state.range, "How far back, or the coming window."),
-    selectField("band", "Market-cap band", BANDS, state.band, "Size group from market value."),
-    typeField,
     selectField("sector", "Sector", [["all", "All"], ...sectorOptions.map((value) => [value, value])], state.sector),
-    selectField("market", "Market", [["all", "All"], ...MARKETS.map((value) => [value, value])], state.market),
-    selectField("category", "Category", [["all", "All"], ...CATEGORIES.map((value) => [value, value])], state.category),
     selectField("country", "Country", [["all", "All"], ...countryOptions.map((value) => [value, value])], state.country),
-    el("label", { class: state.background ? "field active" : "field" }, ["Background", background]),
     el("label", { class: state.watchOnly ? "field active" : "field" }, [
       "Watchlist",
       el("button", {
@@ -1072,7 +1069,42 @@ function mountFilters() {
         text: "Watchlist",
       }),
     ]),
+    el("details", { class: "more-filters", id: "events-more", open: moreCount ? true : undefined }, [
+      el("summary", {}, [
+        "More filters",
+        moreCount ? el("span", { class: "filter-count", text: String(moreCount) }) : null,
+      ]),
+      el("div", { class: "fields event-more-fields" }, [
+        selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status, "Where a guided item stands."),
+        selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence, "How firmly the date is known. High, medium, or low."),
+        selectField("band", "Market-cap band", BANDS, state.band, "Size group from market value."),
+        typeField,
+        selectField("market", "Market", [["all", "All"], ...MARKETS.map((value) => [value, value])], state.market),
+        selectField("category", "Category", [["all", "All"], ...CATEGORIES.map((value) => [value, value])], state.category),
+        el("label", { class: state.background ? "field active" : "field" }, ["Background", background]),
+      ]),
+    ]),
   );
+}
+
+function hiddenFilterCount() {
+  let count = 0;
+  if (state.status !== "all") count += 1;
+  if (state.confidence !== "all") count += 1;
+  if (state.band !== "all") count += 1;
+  if (state.types.length) count += 1;
+  if (state.market !== "all") count += 1;
+  if (state.category !== "all") count += 1;
+  if (state.background) count += 1;
+  return count;
+}
+
+function paintMoreBadge() {
+  const summary = document.querySelector("#events-more summary");
+  if (!summary) return;
+  const count = hiddenFilterCount();
+  summary.replaceChildren(document.createTextNode("More filters"));
+  if (count) summary.append(el("span", { class: "filter-count", text: String(count) }));
 }
 
 function clearFilters() {
@@ -1592,8 +1624,26 @@ function todayMs() {
   return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
+function parentTicker(company) {
+  const ticker = company && company.parentListed && String(company.parentListed.ticker || "").trim();
+  if (!ticker || ticker === "—") return "";
+  return ticker;
+}
+
+function subsidiaryOfListed(company) {
+  return String(company && company.listingStatus || "").toLowerCase() === "subsidiary of listed" && !!parentTicker(company);
+}
+
+function parentShortLabel(company) {
+  const short = String(company.shortName || "").trim();
+  if (/^inpex\b/i.test(short)) return "INPEX";
+  return short || company.name || "Company";
+}
+
 function companyKey(company) {
-  return company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+  if (subsidiaryOfListed(company)) return `c:${parentTicker(company)}`;
+  if (company.code) return `c:${company.code}`;
+  return `n:${showText(company.label || company.name)}`;
 }
 
 function chartBounds(rows) {
@@ -1628,17 +1678,31 @@ function buildLanes(rows) {
         if (!company.code || !window.moonshotWatch || !window.moonshotWatch.has(company.code)) return;
       }
       const key = companyKey(company);
+      const subsidiary = subsidiaryOfListed(company);
+      const chip = subsidiary ? parentTicker(company) : (company.code || "");
+      const name = subsidiary ? parentShortLabel(company) : (company.label || company.name || company.code || "Company");
+      const full = subsidiary ? (company.label || company.name || name) : "";
       let lane = map.get(key);
       if (!lane) {
         lane = {
           key,
-          code: company.code || "",
-          name: company.label || company.name || company.code || "Company",
-          onScreen: !!(company.code && (company.onScreen || linkCodes.has(company.code))),
+          code: chip,
+          name,
+          title: full || (chip ? `${showText(name)} (${showText(chip)})` : showText(name)),
+          screenCode: company.code || chip,
+          onScreen: !!(company.onScreen || (company.code && linkCodes.has(company.code))),
           count: 0,
+          subsidiary,
         };
         map.set(key, lane);
+      } else if (subsidiary) {
+        lane.name = name;
+        lane.code = chip || lane.code;
+        if (full && !String(lane.title).includes(full)) lane.title = lane.subsidiary && lane.title ? `${lane.title}. ${full}` : full;
+        lane.subsidiary = true;
+        if (company.code && (company.onScreen || linkCodes.has(company.code))) lane.screenCode = company.code;
       }
+      if (company.onScreen || (company.code && linkCodes.has(company.code))) lane.onScreen = true;
       lane.count += 1;
     });
   });
@@ -2185,7 +2249,8 @@ function renderChart(rows) {
   const bounds = chartBounds(rows);
   const narrow = window.matchMedia("(max-width: 820px)").matches;
   const laneNodes = lanes.map((lane, index) => {
-    const full = lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name);
+    const full = lane.title || (lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name));
+    const openCode = lane.screenCode || lane.code;
     return el("div", {
       class: index % 2 ? "lane alt" : "lane",
       title: full,
@@ -2197,7 +2262,7 @@ function renderChart(rows) {
           class: "name lane-link",
           title: full,
           onClick: () => {
-            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(lane.code);
+            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(openCode);
           },
           text: showText(lane.name),
         })

@@ -3,7 +3,7 @@ const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
 const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
 const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
-const PILOT_CODES = ["LUN", "MAU", "FDY", "LUNR", "ORRON"];
+const PILOT_CODES = ["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"];
 const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const CATEGORY_OPTIONS = ["Operational", "Capital and deals", "Corporate"];
 const BAND_ORDER = ["Micro (US$5-100M)", "Main (US$100M-5B)"];
@@ -631,7 +631,9 @@ function foldPilots(rows, companies, events) {
       setbacks: 0,
       cash: null,
       cashDisplay: "",
-      missing: { cash_flag: "unknown", guidance: "not covered", next_event_date: "not covered" },
+      missing: ["FWZ", "LUG", "NGEX"].includes(code)
+        ? { cash_flag: "not covered", median_daily_value_k: "not covered", guidance: "not covered", next_event_date: "not covered" }
+        : { cash_flag: "unknown", guidance: "not covered", next_event_date: "not covered" },
       checked: "",
       url: "",
       events: own.map(mapPilotEvent),

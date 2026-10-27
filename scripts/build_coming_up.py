@@ -95,6 +95,14 @@ def screen_market(exchange):
     venues = ("stockholm", "first north", "helsinki", "oslo børs", "oslo bors", "euronext growth oslo")
     if any(venue in text for venue in venues):
         return "Nordic"
+    if "euronext paris" in text or "euronext growth paris" in text:
+        return "Paris"
+    if "frankfurt" in text or "xetra" in text:
+        return "Frankfurt"
+    if "euronext milan" in text or "borsa italiana" in text:
+        return "Milan"
+    if "euronext amsterdam" in text:
+        return "Amsterdam"
     return "London"
 
 
@@ -183,6 +191,96 @@ def item_record(**fields):
     return record
 
 
+CARRY_KEYS = (
+    "event_type",
+    "direction",
+    "significance",
+    "significance_reason",
+    "status",
+    "date_confidence_level",
+    "date_window_text",
+    "date_basis",
+    "date_basis_reason",
+    "sort_date",
+    "guidance_trend",
+    "source_status",
+    "source_link_level",
+    "last_checked",
+)
+
+
+def carry_history(entries):
+    if not isinstance(entries, list):
+        return []
+    cleaned = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        item = {}
+        seen = clean(entry.get("date_seen"))
+        window = clean(entry.get("window_text"))
+        url = clean_url(entry.get("source_url_if_any"))
+        if seen:
+            item["date_seen"] = seen
+        if window:
+            item["window_text"] = window
+        if url:
+            item["source_url_if_any"] = url
+        if item:
+            cleaned.append(item)
+    return cleaned
+
+
+def carry_sources(value):
+    if not isinstance(value, list):
+        return []
+    urls = []
+    for entry in value:
+        if isinstance(entry, str):
+            url = clean_url(entry)
+        elif isinstance(entry, dict):
+            url = clean_url(entry.get("url") or entry.get("href"))
+        else:
+            url = ""
+        if url and url not in urls:
+            urls.append(url)
+    return urls
+
+
+def carried(raw):
+    """Keep guidance, status, and date-basis fields that the page already shows."""
+    if not isinstance(raw, dict):
+        return {}
+    extra = {}
+    for key in CARRY_KEYS:
+        value = raw.get(key)
+        if value is None or value == "":
+            continue
+        if isinstance(value, str):
+            text = clean(value)
+            if text:
+                extra[key] = text
+        else:
+            extra[key] = value
+    if isinstance(raw.get("sort_date_is_proxy"), bool):
+        extra["sort_date_is_proxy"] = raw["sort_date_is_proxy"]
+    history = carry_history(raw.get("guidance_history"))
+    if history:
+        extra["guidance_history"] = history
+    sources = carry_sources(raw.get("sources"))
+    if sources:
+        extra["sources"] = sources
+    confidence = clean(raw.get("date_confidence")).lower()
+    if confidence in ("high", "medium", "low"):
+        extra["date_confidence"] = confidence
+    return extra
+
+
+def with_source(record, raw):
+    record.update(carried(raw))
+    return record
+
+
 def clean_url(value):
     if value is None:
         return ""
@@ -197,13 +295,14 @@ def london_items(rows, seen):
             continue
         code = clean(row.get("code"))
         name = clean(row.get("name"))
-        prefix = {"Nordic": "D", "Tel Aviv": "T"}.get(market, "L")
+        prefix = {"Nordic": "D", "Tel Aviv": "T", "Paris": "U", "Frankfurt": "U", "Milan": "U", "Amsterdam": "U"}.get(market, "L")
         for index, raw in enumerate(row.get("upcoming") or []):
             if not isinstance(raw, dict) or not raw.get("date"):
                 continue
             anchor, label, approx, suffix = place(raw.get("date"), raw.get("date_precision") or "exact")
-            items.append(item_record(
-                id=f"{prefix}-{code}-{raw.get('date')}-{index}",
+            source_id = clean(raw.get("id"))
+            items.append(with_source(item_record(
+                id=source_id or f"{prefix}-{code}-{raw.get('date')}-{index}",
                 anchor=anchor.isoformat(),
                 precision=raw.get("date_precision") or "exact",
                 date_label=label,
@@ -220,7 +319,7 @@ def london_items(rows, seen):
                 band=band_value(raw.get("net")),
                 material="Y" if raw.get("material_if_delivered") == "Y" else "N",
                 source_url=clean_url(raw.get("source_url")),
-            ))
+            ), raw))
             remember(seen, code, raw.get("date"), raw.get("headline"))
     return items
 
@@ -269,8 +368,8 @@ def country_items(screen, seen):
                     continue
                 remember(seen, code, catalyst.get("date"), headline)
                 market = screen_market(row.get("exchange"))
-                items.append(item_record(
-                    id=f"C-{slug}-{code}-{catalyst.get('date')}-{index}",
+                items.append(with_source(item_record(
+                    id=clean(catalyst.get("id")) or f"C-{slug}-{code}-{catalyst.get('date')}-{index}",
                     anchor=anchor.isoformat(),
                     precision=catalyst.get("date_precision") or "exact",
                     date_label=label,
@@ -287,7 +386,7 @@ def country_items(screen, seen):
                     band=band_value(catalyst.get("net")),
                     material="N",
                     source_url=clean_url(catalyst.get("source_url")),
-                ))
+                ), catalyst))
     return items
 
 
@@ -311,7 +410,7 @@ def norway_items(events, companies, screen, seen):
         else:
             code = ticker_code(company) if company else short
             name = clean(company.get("name")) or short
-        items.append(item_record(
+        items.append(with_source(item_record(
             id=f"N-{clean(event.get('id')) or event.get('date')}",
             anchor=anchor.isoformat(),
             precision=confidence,
@@ -329,7 +428,7 @@ def norway_items(events, companies, screen, seen):
             band=band_value(event.get("net")),
             material="Y" if event.get("material") == "Y" else "N",
             source_url=clean_url(event.get("source_url")),
-        ))
+        ), event))
         remember(seen, code, event.get("date"), event.get("title"))
     return items
 
@@ -420,7 +519,20 @@ def main():
     )
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     (ROOT / "coming_up.ics").write_bytes(ics_document(forward, stamp))
-    visible = json.dumps([{key: value for key, value in item.items() if key != "source_url"} for item in forward])
+    def without_urls(value):
+        if isinstance(value, dict):
+            return {
+                key: without_urls(item)
+                for key, item in value.items()
+                if key not in ("source_url", "source_url_if_any", "href", "url") and not str(key).endswith("_url")
+            }
+        if isinstance(value, list):
+            return [without_urls(item) for item in value]
+        if isinstance(value, str) and (value.startswith("http://") or value.startswith("https://")):
+            return ""
+        return value
+
+    visible = json.dumps(without_urls(forward), ensure_ascii=False)
     ics_lines = []
     skipping_url = False
     for line in (ROOT / "coming_up.ics").read_bytes().decode("utf-8").split("\r\n"):
@@ -434,10 +546,12 @@ def main():
     if "&" in visible or "&" in "\n".join(ics_lines):
         raise SystemExit("ampersand leaked into coming up output")
     print(f"as_of {today.isoformat()}")
-    counts = {name: sum(1 for item in forward if item["market"] == name) for name in ("London", "Norway", "Nordic", "Tel Aviv", "ASX")}
+    names = ("London", "Norway", "Nordic", "Tel Aviv", "ASX", "Paris", "Frankfurt", "Milan", "Amsterdam")
+    counts = {name: sum(1 for item in forward if item["market"] == name) for name in names}
     print(
         f"items {len(forward)} london {counts['London']} norway {counts['Norway']} "
-        f"nordic {counts['Nordic']} telaviv {counts['Tel Aviv']} asx {counts['ASX']}"
+        f"nordic {counts['Nordic']} telaviv {counts['Tel Aviv']} asx {counts['ASX']} "
+        f"paris {counts['Paris']} frankfurt {counts['Frankfurt']} milan {counts['Milan']} amsterdam {counts['Amsterdam']}"
     )
     for label, end in (
         ("30", today + timedelta(days=30)),

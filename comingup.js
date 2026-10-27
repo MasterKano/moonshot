@@ -13,6 +13,7 @@ const state = {
 };
 let items = [];
 let slipped = [];
+let fundingByCode = new Map();
 
 function el(tag, props, children) {
   const node = document.createElement(tag);
@@ -121,6 +122,25 @@ function basisTag(basis) {
   return null;
 }
 
+const RUNWAY_LABELS = {
+  "appears funded to next catalyst": ["Appears funded to next catalyst", "positive"],
+  "funding needed before next catalyst": ["Funding needed before next catalyst", "setback"],
+  unclear: ["Unclear", "neutral"],
+  "not covered": ["Not covered", "background"],
+};
+
+function runwayChipFor(item) {
+  const block = fundingByCode.get(item.company_code);
+  if (!block || String(block.next_catalyst_id || "") !== String(item.id || "")) return null;
+  const key = String(block.runway_check || "not covered").trim().toLowerCase();
+  const pair = RUNWAY_LABELS[key] || RUNWAY_LABELS["not covered"];
+  return el("span", {
+    class: `chip chip-${pair[1]} chip-runway`,
+    title: "A rough check from public filings. Not advice.",
+    text: pair[0],
+  });
+}
+
 function dateCell(item) {
   const proxy = item.sort_date_is_proxy === true;
   const text = proxy && item.date_window_text ? item.date_window_text : item.date_label;
@@ -128,6 +148,7 @@ function dateCell(item) {
     el("span", { class: "cap-name", text: showText(text) }),
     basisTag(item.date_basis),
     !proxy && item.approx ? el("span", { class: "no-conf", text: "approx." }) : null,
+    runwayChipFor(item),
   ]);
 }
 
@@ -392,7 +413,7 @@ function filterSelect(key, label, options) {
 
 function mountFilters() {
   document.getElementById("coming-filters").replaceChildren(
-    filterSelect("market", "Market", ["London", "Norway", "Nordic", "Tel Aviv"]),
+    filterSelect("market", "Market", ["London", "Norway", "Nordic", "Tel Aviv", "Paris", "Frankfurt", "Milan", "Amsterdam"]),
     filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
     filterSelect("category", "Category", ["Operational", "Capital and deals", "Corporate"]),
     filterSelect("significance", "Significance", [["material", "Material"], ["background", "Background"]]),
@@ -453,15 +474,21 @@ function showError() {
 }
 
 async function load() {
-  const [response, slipResponse] = await Promise.all([
+  const [response, slipResponse, screenResponse] = await Promise.all([
     fetch("data/coming_up.json", { cache: "no-cache" }),
     fetch("data/slipped.json", { cache: "no-cache" }),
+    fetch("data/smallcaps.json", { cache: "no-cache" }),
   ]);
-  if (!response.ok || !slipResponse.ok) throw new Error("coming");
+  if (!response.ok || !slipResponse.ok || !screenResponse.ok) throw new Error("coming");
   const data = await response.json();
   const slipData = await slipResponse.json();
+  const screen = await screenResponse.json();
   items = Array.isArray(data.items) ? data.items : [];
   slipped = Array.isArray(slipData) ? slipData : [];
+  fundingByCode = new Map();
+  (Array.isArray(screen) ? screen : []).forEach((row) => {
+    if (row && row.code && row.funding && typeof row.funding === "object") fundingByCode.set(row.code, row.funding);
+  });
   document.getElementById("coming-loading").hidden = true;
   mountFilters();
   bindHorizon();

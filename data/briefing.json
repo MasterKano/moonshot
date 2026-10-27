@@ -16,13 +16,22 @@
   ]
  },
  "counts": {
-  "material_7d": 14,
-  "material_30d": 65,
-  "setbacks_30d": 12,
-  "catalysts_30d": 21,
+  "material_7d": 16,
+  "material_30d": 72,
+  "setbacks_30d": 13,
+  "catalysts_30d": 23,
   "overdue": 8
  },
  "material_7d": [
+  {
+   "company": "Deutsche Rohstoff AG",
+   "headline": "2026 guidance raised again: EBITDA EUR 420-440M, production above 19,000 BOEPD",
+   "date": "2026-10-27",
+   "id": "E-DR0.DE-2026-10-27-7ed4b3",
+   "event_type": "Milestone",
+   "direction": "positive",
+   "significance": "material"
+  },
   {
    "company": "White Cliff Minerals Limited",
    "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
@@ -84,6 +93,15 @@
    "id": "E-MET1-2026-10-22-d3b9ee",
    "event_type": "MnA",
    "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Etablissements Maurel et Prom",
+   "headline": "Nine-month activity: 39,126 boepd; Pacassa South West well finds oil in Angola, first production expected Q1 2027",
+   "date": "2026-10-22",
+   "id": "E-MAU.PA-2026-10-22-a92a3f",
+   "event_type": "Drill result",
+   "direction": "positive",
    "significance": "material"
   },
   {
@@ -152,6 +170,15 @@
  ],
  "material_30d": [
   {
+   "company": "Deutsche Rohstoff AG",
+   "headline": "2026 guidance raised again: EBITDA EUR 420-440M, production above 19,000 BOEPD",
+   "date": "2026-10-27",
+   "id": "E-DR0.DE-2026-10-27-7ed4b3",
+   "event_type": "Milestone",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
    "company": "White Cliff Minerals Limited",
    "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
    "date": "2026-10-26",
@@ -212,6 +239,15 @@
    "id": "E-MET1-2026-10-22-d3b9ee",
    "event_type": "MnA",
    "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Etablissements Maurel et Prom",
+   "headline": "Nine-month activity: 39,126 boepd; Pacassa South West well finds oil in Angola, first production expected Q1 2027",
+   "date": "2026-10-22",
+   "id": "E-MAU.PA-2026-10-22-a92a3f",
+   "event_type": "Drill result",
+   "direction": "positive",
    "significance": "material"
   },
   {
@@ -440,6 +476,15 @@
    "significance": "material"
   },
   {
+   "company": "Etablissements Maurel et Prom",
+   "headline": "Gran Tierra Energy stockholders approve the sale of its Colombia and Ecuador assets to M and P",
+   "date": "2026-10-13",
+   "id": "E-MAU.PA-2026-10-13-5f49e9",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
    "company": "Central Asia Metals plc",
    "headline": "Receipt of Kazakh regulatory approval",
    "date": "2026-10-13",
@@ -503,6 +548,15 @@
    "significance": "material"
   },
   {
+   "company": "Eramet S.A.",
+   "headline": "EUR 500M rights issue confirmed for Q4 2026, backed by reference shareholders; French State (APE) to become largest shareholder",
+   "date": "2026-10-12",
+   "id": "E-ERA.PA-2026-10-12-6583ef",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
    "company": "Critica Limited",
    "headline": "Jupiter Delivers First 160Mt Indicated Rare Earth Resource",
    "date": "2026-10-12",
@@ -554,6 +608,24 @@
    "id": "E-PAMPALO.HE-2026-10-09-9ffc5e",
    "event_type": "Setback",
    "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Arverne Group",
+   "headline": "European Commission designates Lithium de France a strategic project",
+   "date": "2026-10-09",
+   "id": "E-ARVEN.PA-2026-10-09-b7fa2c",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "AMG Critical Materials N.V.",
+   "headline": "AMG lithium projects recognised by the European Commission",
+   "date": "2026-10-09",
+   "id": "E-AMG.AS-2026-10-09-0b933b",
+   "event_type": "Permit or approval",
+   "direction": "positive",
    "significance": "material"
   },
   {
@@ -626,6 +698,15 @@
    "id": "E-WCN-2026-10-06-721b8e",
    "event_type": "Drill result",
    "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "La Francaise de l'Energie",
+   "headline": "Gas portfolio over-hedging incident: EUR 25.8M latent loss at 30 Sep and EUR 7.6M realised; growth trajectory to be adjusted",
+   "date": "2026-10-06",
+   "id": "E-FDE.PA-2026-10-06-3447ac",
+   "event_type": "Setback",
+   "direction": "negative",
    "significance": "material"
   },
   {
@@ -820,6 +901,15 @@
    "significance": "material"
   },
   {
+   "company": "La Francaise de l'Energie",
+   "headline": "Gas portfolio over-hedging incident: EUR 25.8M latent loss at 30 Sep and EUR 7.6M realised; growth trajectory to be adjusted",
+   "date": "2026-10-06",
+   "id": "E-FDE.PA-2026-10-06-3447ac",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
    "company": "Rockhopper Exploration plc",
    "headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
    "date": "2026-10-05",
@@ -924,6 +1014,16 @@
    "date": "2026-10-29",
    "id": "N-NO212",
    "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Eramet S.A.",
+   "headline": "Q3 2026 turnover",
+   "date": "2026-10-29",
+   "id": "U-ERA.PA-2026-10-29-0",
+   "date_window_text": "Q3 2026",
    "sort_date_is_proxy": false,
    "date_basis": "confirmed",
    "significance": "background"
@@ -1034,6 +1134,16 @@
    "date": "2026-11-16",
    "id": "L-OMI-2026-11-16-0",
    "date_window_text": "16 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Deutsche Rohstoff AG",
+   "headline": "Q3 2026 quarterly report",
+   "date": "2026-11-17",
+   "id": "U-DR0.DE-2026-11-17-0",
+   "date_window_text": "17 Nov 2026",
    "sort_date_is_proxy": false,
    "date_basis": "confirmed",
    "significance": "background"

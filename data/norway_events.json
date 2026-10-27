@@ -3489,7 +3489,8 @@
       "before": "Earlier step on 2025-07-28: Aker BP and Japex swap: Aker BP gets Kjøttkake 15%, Kveikje 10%, PL1212S 20%; Japex gets Alve Nord 10%, Verdan.",
       "evidence": "Company or exchange announcement dated 2025-11-06: Kjøttkake fast-track tie-back launched; operatorship to Aker BP.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO213"
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO064"
     }
   },
   {
@@ -3530,7 +3531,8 @@
       "before": "Earlier step on 2025-10-09: Licence swap completed between Aker BP and Japex (PL1182 S, PL1212 S, PL127, PL127 C and 3 more).",
       "evidence": "Company or exchange announcement dated 2025-11-06: Aker BP and DNO asset swap: Aker BP takes Kjøttkake operatorship and more Vilje/Kveikje; sells Verdande to DNO.",
       "risk_effect": "mixed",
-      "next_milestone": "N-NO213"
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO088"
     }
   },
   {
@@ -3573,7 +3575,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-11-07: 30/11-16 S dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": null
     }
   },
   {
@@ -3616,7 +3619,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-11-11: 34/6-9 S dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": null
     }
   },
   {
@@ -3657,7 +3661,8 @@
       "before": "Earlier step on 2025-02-27: 7122/8-3 S Zagato oil discovery near Goliat.",
       "evidence": "Company or exchange announcement dated 2025-11-13: 7122/8-4 S Zagato North appraisal confirms oil.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO017"
     }
   },
   {
@@ -3702,7 +3707,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-11-18: 2/6-8 S Page dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO208",
+      "before_ref": null
     }
   },
   {
@@ -3743,7 +3749,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-11-18: DNO sells 7.604% Ekofisk PPF to ORLEN; buys 20% PL1135 (Cassio) and 0.83% Verdande.",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO208",
+      "before_ref": null
     }
   },
   {
@@ -3935,7 +3942,8 @@
       "before": "Earlier step on 2025-03-14: Halten Øst on stream.",
       "evidence": "Company or exchange announcement dated 2025-12-01: Verdande on stream.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO026"
     }
   },
   {
@@ -3976,7 +3984,8 @@
       "before": "Earlier step on 2025-11-13: 7122/8-4 S Zagato North appraisal confirms oil.",
       "evidence": "Company or exchange announcement dated 2025-12-04: 7122/7-8 Goliat Nord oil/gas discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO096"
     }
   },
   {
@@ -4017,7 +4026,8 @@
       "before": "Earlier step on 2025-07-01: Johan Sverdrup Phase 3 FID (40-50 mmboe, NOK 13bn, start Q4 2027).",
       "evidence": "Company or exchange announcement dated 2025-12-05: 15/5-8 S and A Lofn/Langemann gas/condensate discovery (30-110 mmboe).",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO056"
     }
   },
   {
@@ -4060,7 +4070,8 @@
       "before": "Earlier step on 2025-07-01: Johan Sverdrup Phase 3 FID (40-50 mmboe, NOK 13bn, start Q4 2027).",
       "evidence": "Company or exchange announcement dated 2025-12-11: Johan Castberg Isflak FID (start Q4 2028).",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO223"
+      "next_milestone": "N-NO223",
+      "before_ref": "N-NO056"
     }
   },
   {
@@ -4150,7 +4161,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-12-16: Ekofisk PPF project sanctioned (Albuskjell, Vest Ekofisk, Tommeliten Gamma).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO216",
+      "before_ref": null
     }
   },
   {
@@ -4197,7 +4209,8 @@
       "before": "Earlier step on 2025-10-07: Gjøa low pressure project start-up raises production and reserves.",
       "evidence": "Company or exchange announcement (listing page link) dated 2025-12-17: Balder Phase V start-up; Åsgard LPP3 completion.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO087"
     }
   },
   {
@@ -4310,7 +4323,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2025-12-19: 35/8-8 S and A Camilla Nord discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO215",
+      "before_ref": null
     }
   },
   {
@@ -4388,10 +4402,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous discovery step on 2025-12-05: 15/5-8 S and A Lofn/Langemann gas/condensate discovery (30-110 mmboe).",
       "evidence": "Company or exchange announcement dated 2025-12-22: 6407/1-B-2 H Tyrihans Øst discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO105"
     }
   },
   {
@@ -4436,7 +4451,8 @@
       "before": "Earlier step on 2025-06-23: Balder X: first production through Jotun FPSO.",
       "evidence": "Company or exchange announcement dated 2025-12-22: Vår Energi cuts 2025 guidance to low end: Johan Castberg offloading hose issues and Jotun FPSO interruptions.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO045"
     }
   },
   {
@@ -4697,7 +4713,8 @@
       "before": "Earlier step on 2025-12-04: 7122/7-8 Goliat Nord oil/gas discovery.",
       "evidence": "Company or exchange announcement dated 2026-01-16: 7122/8-3 A Zagato appraisal with production tests.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO104"
     }
   },
   {
@@ -4739,10 +4756,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous discovery step on 2025-12-22: 6407/1-B-2 H Tyrihans Øst discovery.",
       "evidence": "Company or exchange announcement dated 2026-01-19: 6507/8-12 S Othello Sør oil discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO114"
     }
   },
   {
@@ -4783,7 +4801,8 @@
       "before": "Earlier step on 2025-12-05: 15/5-8 S and A Lofn/Langemann gas/condensate discovery (30-110 mmboe).",
       "evidence": "Company or exchange announcement dated 2026-01-20: 15/8-3 S Sissel gas/condensate discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO105"
     }
   },
   {
@@ -4830,7 +4849,8 @@
       "before": "Earlier step on 2025-09-11: 31/4-A-15 B Talisker oil discovery at Brage.",
       "evidence": "Company or exchange announcement dated 2026-01-28: 31/4-A-15 D Knockando discovery at Brage.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO224",
+      "before_ref": "N-NO079"
     }
   },
   {
@@ -4870,10 +4890,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous investment decision step on 2025-11-06: Kjøttkake fast-track tie-back launched; operatorship to Aker BP.",
       "evidence": "Company or exchange announcement dated 2026-02-02: Solveig Phase 2 on stream.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO092"
     }
   },
   {
@@ -4914,7 +4935,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-02-12: 25/8-C-23 D dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": null
     }
   },
   {
@@ -4964,7 +4986,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-02-13: PPF PDOs submitted (90-120 mmboe, first gas Q4 2028).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO216",
+      "before_ref": null
     }
   },
   {
@@ -5082,10 +5105,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous discovery step on 2026-01-20: 15/8-3 S Sissel gas/condensate discovery.",
       "evidence": "Company or exchange announcement dated 2026-02-16: 33/12-N-3 HH Granat oil/gas discovery and GH dry.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO123"
     }
   },
   {
@@ -5242,7 +5266,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-02-18: 7018/5-2 Vikingskipet dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": null
     }
   },
   {
@@ -5367,10 +5392,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous discovery step on 2026-02-16: 33/12-N-3 HH Granat oil/gas discovery and GH dry.",
       "evidence": "Company or exchange announcement dated 2026-03-02: 34/4-19 S Omega Sør Alfa oil discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO130"
     }
   },
   {
@@ -5445,10 +5471,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous discovery step on 2026-03-02: 34/4-19 S Omega Sør Alfa oil discovery.",
       "evidence": "Company or exchange announcement dated 2026-03-10: 35/11-32 S Byrding C oil discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO137"
     }
   },
   {
@@ -5665,7 +5692,8 @@
       "before": null,
       "evidence": "Company or exchange announcement (listing page link) dated 2026-03-17: Ringhorne fase 5 PDO exemption granted.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": null
     }
   },
   {
@@ -5708,7 +5736,8 @@
       "before": "Earlier step on 2025-07-10: 7220/5-4 Skred gas discovery.",
       "evidence": "Company or exchange announcement dated 2026-03-18: 7220/7-5 Polynya oil discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO060"
     }
   },
   {
@@ -5751,7 +5780,8 @@
       "before": "Earlier step on 2025-08-29: Fram Sør PDO approved.",
       "evidence": "Company or exchange announcement (listing page link) dated 2026-03-23: Fram F-Øst PDO exemption granted.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO222"
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO073"
     }
   },
   {
@@ -5798,7 +5828,8 @@
       "before": "Earlier step on 2025-09-11: 31/4-A-15 B Talisker oil discovery at Brage.",
       "evidence": "Company or exchange announcement dated 2026-03-25: OKEA raises Talisker West resources to 23-44 mmboe; first oil 2027.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO224",
+      "before_ref": "N-NO079"
     }
   },
   {
@@ -5981,7 +6012,8 @@
       "before": "Earlier step on 2026-02-02: Solveig Phase 2 on stream.",
       "evidence": "Company or exchange announcement dated 2026-04-07: Symra on stream, nine months early.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO125"
     }
   },
   {
@@ -6063,7 +6095,8 @@
       "before": "Earlier step on 2025-12-04: 7122/7-8 Goliat Nord oil/gas discovery.",
       "evidence": "Company or exchange announcement dated 2026-04-15: Goliat Gas Export amended PDO submitted (112 mmboe gross 2P).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO104"
     }
   },
   {
@@ -6110,7 +6143,8 @@
       "before": "Earlier step on 2025-12-23: Equinor takes interest from OKEA in PL1186.",
       "evidence": "Company or exchange announcement dated 2026-04-20: OKEA sells 20% PL1119 (Mistral) to Japex for USD 30m plus contingent.",
       "risk_effect": "mixed",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO117"
     }
   },
   {
@@ -6155,7 +6189,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-04-22: 34/8-A-37 H dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": null
     }
   },
   {
@@ -6193,10 +6228,11 @@
     "significance_reason": "source file marks it material",
     "date_confidence_level": "high",
     "what_changed": {
-      "before": null,
+      "before": "Previous investment decision step on 2025-12-11: Johan Castberg Isflak FID (start Q4 2028).",
       "evidence": "Company or exchange announcement dated 2026-05-05: Eirin gas field in production.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO106"
     }
   },
   {
@@ -6243,7 +6279,8 @@
       "before": "Earlier step on 2026-02-13: PPF PDOs submitted (90-120 mmboe, first gas Q4 2028).",
       "evidence": "Company or exchange announcement (listing page link) dated 2026-05-05: PPF PDOs approved (Albuskjell, Vest Ekofisk, Tommeliten Gamma).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO216",
+      "before_ref": "N-NO127"
     }
   },
   {
@@ -6286,7 +6323,8 @@
       "before": "Earlier step on 2026-03-23: Fram F-Øst PDO exemption granted.",
       "evidence": "Company or exchange announcement (listing page link) dated 2026-05-08: Johan Castberg Isflak PDO exemption granted.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO245"
+      "next_milestone": "N-NO245",
+      "before_ref": "N-NO146"
     }
   },
   {
@@ -6401,7 +6439,8 @@
       "before": "Earlier step on 2026-03-27: Aker BP takes interest from Equinor in PL1139, PL1177.",
       "evidence": "Company or exchange announcement dated 2026-05-21: Aker BP and Equinor strategic collaboration and transactions in Ringvei Vest, Yggdrasil and Wisting areas.",
       "risk_effect": "mixed",
-      "next_milestone": "N-NO221"
+      "next_milestone": "N-NO221",
+      "before_ref": "N-NO151"
     }
   },
   {
@@ -6596,7 +6635,8 @@
       "before": "Earlier step on 2026-05-08: Johan Castberg Isflak PDO exemption granted.",
       "evidence": "Company or exchange announcement dated 2026-06-15: Johan Sverdrup phase 4 maturation: 20-30 mmboe found by appraisal, potential start 2029.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO223"
+      "next_milestone": "N-NO223",
+      "before_ref": "N-NO159"
     }
   },
   {
@@ -6641,7 +6681,8 @@
       "before": "Earlier step on 2026-01-19: 6507/8-12 S Othello Sør oil discovery.",
       "evidence": "Company or exchange announcement dated 2026-06-16: 6507/8-D-4 CH dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO122"
     }
   },
   {
@@ -6683,7 +6724,8 @@
       "before": "Earlier step on 2025-12-17: Balder Phase V start-up; Åsgard LPP3 completion.",
       "evidence": "Company or exchange announcement dated 2026-06-18: Balder Next New Wells FID.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO109"
     }
   },
   {
@@ -6763,7 +6805,8 @@
       "before": "Earlier step on 2026-04-15: Goliat Gas Export amended PDO submitted (112 mmboe gross 2P).",
       "evidence": "Company or exchange announcement dated 2026-06-18: Vår Energi portfolio deals: buys Pandion portfolio (USD 110m), swap with DNO (Gjøa 5% for Nova 5% and Ringhorne Nord 15%.",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO154"
     }
   },
   {
@@ -6808,7 +6851,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-06-22: 35/10-16 S Carmen appraisal (21-107 mmboe, tight reservoir).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": null,
+      "before_ref": null
     }
   },
   {
@@ -6855,7 +6899,8 @@
       "before": "Earlier step on 2026-06-18: Vår Energi portfolio deals: buys Pandion portfolio (USD 110m), swap with DNO (Gjøa 5% for Nova 5% and Ringhorn.",
       "evidence": "Company or exchange announcement dated 2026-06-25: Gjøa Subsea Projects FID and PDO submitted (Ofelia, Gjøa Nord, Cerisa).",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO171"
     }
   },
   {
@@ -6896,7 +6941,8 @@
       "before": "Earlier step on 2026-06-18: Vår Energi portfolio deals: buys Pandion portfolio (USD 110m), swap with DNO (Gjøa 5% for Nova 5% and Ringhorn.",
       "evidence": "Company or exchange announcement dated 2026-06-30: Vår Energi and Equinor swap: Vår gets 32.5% and operatorship of Peon gas discovery; sells Fram 5% and Grosbeak 5%.",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO171"
     }
   },
   {
@@ -7084,7 +7130,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-07-01: Dvalin North first gas.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO215",
+      "before_ref": null
     }
   },
   {
@@ -7162,7 +7209,8 @@
       "before": "Earlier step on 2026-05-21: Aker BP and Equinor strategic collaboration and transactions in Ringvei Vest, Yggdrasil and Wisting areas.",
       "evidence": "Company or exchange announcement dated 2026-07-15: Aker BP raises cost estimates: Yggdrasil to USD 12.5-13.0bn, Valhall PWP-Fenris to USD 7.3-7.6bn (to protect 2027 start-.",
       "risk_effect": "risk increased",
-      "next_milestone": "N-NO221"
+      "next_milestone": "N-NO221",
+      "before_ref": "N-NO162"
     }
   },
   {
@@ -7200,7 +7248,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-07-21: Vår Energi to combine with BlueNord (Danish shelf assets).",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": null
     }
   },
   {
@@ -7243,7 +7292,8 @@
       "before": "Earlier step on 2026-03-18: 7220/7-5 Polynya oil discovery.",
       "evidence": "Company or exchange announcement dated 2026-07-23: 7220/5-EC-2 H Skrugard Nord oil discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO145"
     }
   },
   {
@@ -7291,7 +7341,8 @@
       "before": "Earlier step on 2026-06-18: Ringvei Vest concept agreed (about 240 mmboe, tie-back to Troll B).",
       "evidence": "Company or exchange announcement dated 2026-08-01: Troll phase 3 stage 2 starts production.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO170"
     }
   },
   {
@@ -7332,7 +7383,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-08-11: 15/6-17 Svarteknippa dry.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": null
     }
   },
   {
@@ -7420,7 +7472,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-08-19: Aker BP signs for Losgann (UK, from Apache) and 51% operated Slagugle (PL891/891B/891C) from ConocoPhillips.",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": null
     }
   },
   {
@@ -7461,7 +7514,8 @@
       "before": "Earlier step on 2026-01-20: 15/8-3 S Sissel gas/condensate discovery.",
       "evidence": "Company or exchange announcement dated 2026-08-24: 25/7-13 Linga gas/condensate discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO123"
     }
   },
   {
@@ -7545,7 +7599,8 @@
       "before": "Earlier step on 2026-07-15: Aker BP raises cost estimates: Yggdrasil to USD 12.5-13.0bn, Valhall PWP-Fenris to USD 7.3-7.6bn (to protect 2.",
       "evidence": "Company or exchange announcement dated 2026-08-26: Skarv Satellites (Alve Nord, Idun Nord, Ørn) start production, one year early.",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO240"
+      "next_milestone": "N-NO240",
+      "before_ref": "N-NO181"
     }
   },
   {
@@ -7583,7 +7638,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-09-01: DNO recommended cash acquisition of Capricorn Energy plc (revised 17.09.2026).",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO208",
+      "before_ref": null
     }
   },
   {
@@ -7621,7 +7677,8 @@
       "before": "Earlier step on 2026-08-26: Skarv Satellites (Alve Nord, Idun Nord, Ørn) start production, one year early.",
       "evidence": "News report dated 2026-09-01: Aker BP puts Storjo tie-back to Skarv (about NOK 7bn) on hold.",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO190"
     }
   },
   {
@@ -7701,7 +7758,8 @@
       "before": "Earlier step on 2025-08-28: OKEA farms into Alpehumle (PL1153, 20%) from Harbour.",
       "evidence": "Company or exchange announcement dated 2026-09-16: 36/4-2 and A Alpehumle gas discovery (1-15 mmboe, small).",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": "N-NO071"
     }
   },
   {
@@ -7744,7 +7802,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-09-25: 16/1-EA-4 H Verdandi/Lillefix appraisal increases estimate.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO213",
+      "before_ref": null
     }
   },
   {
@@ -7973,7 +8032,8 @@
       "before": "Earlier step on 2025-09-23: Askeladd Vest starts gas production (Snøhvit plateau).",
       "evidence": "Company or exchange announcement dated 2026-10-07: Snøhvit Future cost estimate raised to NOK 26.5bn (timetable unchanged).",
       "risk_effect": "risk increased",
-      "next_milestone": null
+      "next_milestone": "N-NO222",
+      "before_ref": "N-NO082"
     }
   },
   {
@@ -8016,7 +8076,8 @@
       "before": "Earlier step on 2026-06-18: Ringvei Vest concept agreed (about 240 mmboe, tie-back to Troll B).",
       "evidence": "Company or exchange announcement dated 2026-10-14: 30/8-7 S Grimsnes oil/gas discovery (19-50 mmboe).",
       "risk_effect": "risk reduced",
-      "next_milestone": "N-NO225"
+      "next_milestone": "N-NO225",
+      "before_ref": "N-NO170"
     }
   },
   {
@@ -8060,7 +8121,8 @@
       "before": null,
       "evidence": "Company or exchange announcement dated 2026-10-14: Kistos signs for 10% of PL169E/956/956B from Vår Energi (USD 12.9m).",
       "risk_effect": "mixed",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": null
     }
   },
   {
@@ -8101,7 +8163,8 @@
       "before": "Earlier step on 2025-07-21: 6406/11-2 S Vidsyn gas/condensate discovery near Fenja (25-40 mmboe).",
       "evidence": "Company or exchange announcement dated 2026-10-19: 6407/5-3 S Lakris gas/condensate discovery.",
       "risk_effect": "risk reduced",
-      "next_milestone": null
+      "next_milestone": "N-NO218",
+      "before_ref": "N-NO063"
     }
   },
   {

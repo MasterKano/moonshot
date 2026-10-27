@@ -8,7 +8,7 @@ const BANDS = [
   ["large", "Large"],
   ["private", "Private"],
 ];
-const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "Paris", "Frankfurt", "Milan", "Amsterdam", "TSX"];
 const SCREEN_PILOTS = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"]);
 const CATEGORIES = ["Operational", "Capital and deals", "Corporate"];
 const SECTOR_ORDER = ["Oil and gas", "Mining", "Royalty and stream", "Renewables"];
@@ -54,6 +54,8 @@ const state = {
 
 let events = [];
 let upcoming = [];
+let fundingByCode = new Map();
+let screenProfiles = [];
 let typeOptions = [];
 let sectorOptions = [];
 let countryOptions = [];
@@ -213,6 +215,10 @@ function listingMarket(exchange) {
   if (exchange === "ASX") return "ASX";
   if (text.includes("tel aviv")) return "Tel Aviv";
   if (["stockholm", "first north", "helsinki", "oslo børs", "oslo bors", "euronext growth oslo"].some((venue) => text.includes(venue))) return "Nordic";
+  if (text.includes("euronext paris") || text.includes("euronext growth paris")) return "Paris";
+  if (text.includes("frankfurt") || text.includes("xetra")) return "Frankfurt";
+  if (text.includes("euronext milan") || text.includes("borsa italiana")) return "Milan";
+  if (text.includes("euronext amsterdam")) return "Amsterdam";
   return "London";
 }
 
@@ -726,6 +732,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   });
 
   rememberSplitRoots(profiles);
+  screenProfiles = profiles.filter((profile) => profile.onScreen || (profile.code && screenCodes.has(profile.code)));
   rows.forEach((item) => {
     item.affects = affectsFor(readAcross, item.companies, item.sort, item.precision, item.headline);
   });
@@ -1414,12 +1421,25 @@ function riskChip(value) {
   return null;
 }
 
+function filledLine(value) {
+  if (value == null) return "";
+  const text = showText(value);
+  if (!text || text === "—" || text === "-") return "";
+  return text;
+}
+
 function nextMilestone(id) {
-  const target = upcoming.find((item) => item.rawId === id || item.id === `u:${id}`);
-  const label = target
-    ? `${target.label || formatSort(target.sort, target.precision)}. ${showText(target.headline)}`
-    : "";
-  if (!target || !label) return null;
+  const key = String(id || "").trim();
+  if (!key) return null;
+  const bare = key.startsWith("N-") ? key.slice(2) : key;
+  const target = upcoming.find((item) => item.rawId === key || item.id === `u:${key}`)
+    || events.find((item) => item.rawId === key || item.rawId === bare || item.id === `n:${bare}` || item.id === `u:${key}`);
+  if (!target) return null;
+  const when = target.label || formatSort(target.sort, target.precision);
+  const headline = showText(target.headline);
+  const label = [when, headline].filter((part) => part && part !== "—").join(". ");
+  if (!label) return null;
+  const inUpcoming = upcoming.some((item) => item.id === target.id);
   return el("p", {}, [
     el("span", { class: "k", text: "Next milestone. " }),
     el("button", {
@@ -1427,7 +1447,7 @@ function nextMilestone(id) {
       class: "co-link",
       onClick: (event) => {
         event.stopPropagation();
-        state.range = "upcoming";
+        state.range = inUpcoming ? "upcoming" : "all";
         state.briefIds = null;
         state.briefKey = "";
         state.significance = "all";
@@ -1451,13 +1471,17 @@ function whatChangedCard(item) {
   const block = item.whatChanged;
   const material = item.significance === "material" || (item.material && item.significance !== "background");
   if (!material || !block || typeof block !== "object") return null;
-  const before = block.before ? el("p", {}, [el("span", { class: "k", text: "Before. " }), showText(block.before)]) : null;
+  const beforeText = filledLine(block.before);
+  const before = beforeText ? el("p", {}, [el("span", { class: "k", text: "Before. " }), beforeText]) : null;
   const evidenceText = block.evidence ? showText(block.evidence) : "";
   const evidence = evidenceText && evidenceText !== "—"
     ? el("p", {}, [el("span", { class: "k", text: "Evidence. " }), evidenceText, " ", sourceBadge(item)])
     : null;
   const risk = riskChip(block.risk_effect);
-  const next = block.next_milestone ? nextMilestone(block.next_milestone) : null;
+  const milestone = typeof block.next_milestone === "string"
+    ? block.next_milestone
+    : (block.next_milestone && block.next_milestone.id);
+  const next = milestone ? nextMilestone(milestone) : null;
   if (!before && !evidence && !risk && !next) return null;
   return el("div", { class: "changed-card" }, [
     el("p", { class: "eyebrow", text: "What changed" }),
@@ -1569,12 +1593,35 @@ function basisTag(basis) {
   return null;
 }
 
+const RUNWAY_LABELS = {
+  "appears funded to next catalyst": ["Appears funded to next catalyst", "positive"],
+  "funding needed before next catalyst": ["Funding needed before next catalyst", "setback"],
+  unclear: ["Unclear", "neutral"],
+  "not covered": ["Not covered", "background"],
+};
+
+function runwayChip(check) {
+  const key = String(check || "not covered").trim().toLowerCase();
+  const pair = RUNWAY_LABELS[key] || RUNWAY_LABELS["not covered"];
+  return chip(pair[0], `${pair[1]} chip-runway`, "A rough check from public filings. Not advice.");
+}
+
+function runwayChipFor(id, companies) {
+  const key = String(id || "");
+  if (!key) return null;
+  const company = (companies || []).find((item) => fundingByCode.has(item.code));
+  const block = company ? fundingByCode.get(company.code) : null;
+  if (!block || String(block.next_catalyst_id || "") !== key) return null;
+  return runwayChip(block.runway_check);
+}
+
 function dateNode(item) {
   const text = item.label || formatSort(item.sort, item.precision);
   return el("span", { class: "date-stack" }, [
     el("span", { text }),
     basisTag(item.dateBasis),
     item.precision === "month" && !item.proxy ? el("span", { class: "precision", text: "Month" }) : null,
+    runwayChipFor(item.rawId, item.companies),
   ]);
 }
 
@@ -1616,7 +1663,10 @@ function renderCards(rows) {
       "data-event-id": item.id,
       onClick: (event) => rowClick(event, item.id),
     }, [
-      el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) })]),
+      el("div", { class: "card-top" }, [
+        el("time", { text: item.label || formatSort(item.sort, item.precision) }),
+        runwayChipFor(item.rawId, item.companies),
+      ]),
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
       el("div", { class: "chip-row" }, tagNodes(item)),
@@ -1709,6 +1759,18 @@ function chartBounds(rows) {
   return { start: start - pad, end: end + pad };
 }
 
+function companyVisible(company) {
+  if (state.watchOnly && !(company.code && window.moonshotWatch && window.moonshotWatch.has(company.code))) return false;
+  if (state.band !== "all" && company.band !== state.band) return false;
+  if (state.sector !== "all" && company.sector !== state.sector) return false;
+  if (state.market !== "all" && !(company.markets || []).includes(state.market)) return false;
+  if (state.country !== "all" && !(company.countries || []).includes(state.country)) return false;
+  const query = state.q.trim().toLowerCase();
+  if (!query) return true;
+  const blob = [company.label, company.name, company.code, company.shortName].join(" ").replaceAll("&", "and").toLowerCase();
+  return blob.includes(query);
+}
+
 function buildLanes(rows) {
   const map = new Map();
   rows.forEach((item) => {
@@ -1745,8 +1807,32 @@ function buildLanes(rows) {
       lane.count += 1;
     });
   });
+  // Companies with no event in this filter still belong to the same list as the Screen.
+  if (!state.briefIds || !state.briefIds.size) {
+    screenProfiles.forEach((company) => {
+      if (!companyVisible(company)) return;
+      const key = companyKey(company);
+      if (map.has(key)) return;
+      const subsidiary = subsidiaryOfListed(company);
+      const chip = subsidiary ? parentTicker(company) : (company.code || "");
+      const name = subsidiary ? parentShortLabel(company) : (company.label || company.name || company.code || "Company");
+      const full = subsidiary ? (company.label || company.name || name) : "";
+      map.set(key, {
+        key,
+        code: chip,
+        name,
+        title: full || (chip ? `${showText(name)} (${showText(chip)})` : showText(name)),
+        screenCode: company.code || chip,
+        onScreen: true,
+        count: 0,
+        subsidiary,
+      });
+    });
+  }
   const pinned = (lane) => !!(lane.code && window.moonshotWatch && window.moonshotWatch.has(lane.code));
   return [...map.values()].sort((a, b) => {
+    const presence = Number(b.count > 0) - Number(a.count > 0);
+    if (presence) return presence;
     if (state.chartSort === "count") return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
     if (state.chartSort === "watch") {
       const pin = Number(pinned(b)) - Number(pinned(a));
@@ -2610,6 +2696,10 @@ async function main() {
       loadJson("data/coming_up.json"),
       loadJson("data/briefing.json").catch(() => null),
     ]);
+    fundingByCode = new Map();
+    screen.forEach((row) => {
+      if (row && row.code && row.funding && typeof row.funding === "object") fundingByCode.set(row.code, row.funding);
+    });
     screenCodes = new Set(screen.map((row) => row.code).filter(Boolean));
     SCREEN_PILOTS.forEach((code) => screenCodes.add(code));
     linkCodes = new Set(screenCodes);

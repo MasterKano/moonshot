@@ -1597,9 +1597,12 @@ table.countries thead th, table.catalysts thead th {
 
 .chip-positive, .chip-material { color: var(--text); }
 .chip-setback, .chip-overdue, .chip-slipped { color: var(--amber-ink); border-color: var(--amber); background: color-mix(in srgb, var(--amber) 16%, transparent); }
+.chip.chip-runway { white-space: normal; max-width: 32ch; }
+.chip-runway.chip-neutral { color: var(--text); border-style: dashed; }
 .chip-conf-low, .chip-trend-none { border-style: dashed; }
 
-.guidance-block { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.guidance-block, .runway-block { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; max-width: 72ch; }
+.runway-block .k { font-weight: 700; }
 .guidance-list {
   list-style: none;
   margin: 0;

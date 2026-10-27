@@ -188,7 +188,7 @@ function guidanceBlock(item) {
   if (!history.length && !item.guidance_trend) return el("p", { class: "label-notes", text: "No guidance history on file." });
   return el("div", { class: "guidance-block" }, [
     el("p", { class: "eyebrow", text: "Guidance history" }),
-    trendChip(item.guidance_trend),
+    trendChip(item.guidance_trend, item.status),
     history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
       const href = safeUrl(entry.source_url_if_any);
       return el("li", {}, [
@@ -239,7 +239,7 @@ function categoryTag(value) {
 }
 
 function badges(item) {
-  return el("span", { class: "chip-row" }, [statusFlag(item), trendChip(item.guidance_trend), ...labelChips(item), slipTag(item)]);
+  return el("span", { class: "chip-row" }, [statusFlag(item), trendChip(item.guidance_trend, item.status), ...labelChips(item), slipTag(item)]);
 }
 
 function headlineNode(item) {

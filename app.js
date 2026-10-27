@@ -1308,9 +1308,11 @@ function partnerBlock(entries) {
   ]);
 }
 
-function trendChip(trend) {
+function trendChip(trend, status) {
   const key = String(trend || "").toLowerCase();
   if (key === "no update found") return chip("No update found", "trend-none", "The guided window has not moved in the notes on file.");
+  const state = String(status || "").toLowerCase();
+  if (state === "slipped" || state === "overdue") return null;
   if (key.includes("slipped")) return chip("Slipped", "slipped", "The guided window moved later.");
   if (!key) return null;
   return chip(showText(trend), "type", "");
@@ -1321,7 +1323,7 @@ function guidanceBlock(item) {
   if (!history.length && !item.guidanceTrend) return null;
   return el("div", { class: "guidance-block" }, [
     el("p", { class: "eyebrow", text: "Guidance history" }),
-    trendChip(item.guidanceTrend),
+    trendChip(item.guidanceTrend, item.status),
     history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
       const seen = parseDate(entry.date_seen, "exact");
       const link = sourceLink(entry.source_url_if_any, "Source");

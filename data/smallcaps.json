@@ -5472,9 +5472,50 @@
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ECO",
   "median_daily_value_k": 371.5,
-  "upcoming": [],
-  "upcoming_count": 0,
-  "next_event_date": null
+  "upcoming": [
+   {
+    "date": "2026-12-04",
+    "date_precision": "month",
+    "type": "MnA",
+    "headline": "Navitas option to farm in to 80% of the Orinduik Block, Guyana (US$2.5m payment, up to US$55m carry) is exercisable within twelve months of 4 December 2025, so a decision is due by early December 2026",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989",
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "MnA",
+    "headline": "Completion of the BP farm-down of PEL 97, 99 and 100 offshore Namibia (US$2.7m cash, BP carry) expected shortly after final Ministerial approval on 2 October 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/ministerial-approval-namibia-licences-farm-down/9803008",
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Results due",
+    "headline": "First half-year results (six months to 30 September 2026) after the switch to semi-annual reporting, due by end of December 2026 under the AIM three-month deadline",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989",
+    "category": "Corporate"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Navitas plans to drill a multi-target exploration well on PL001, North Falkland Basin (about 640 MMbbl gross target, about 225 MMbbl net to Eco on success) in early 2027, as part of the Sea Lion drilling campaign",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/navitas-update-on-pl001-block-1-cbk-/9737676",
+    "category": "Operational"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-12-04"
  },
  {
   "code": "KZG",
@@ -6530,9 +6571,50 @@
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/ZPHR",
   "median_daily_value_k": 54.8,
-  "upcoming": [],
-  "upcoming_count": 0,
-  "next_event_date": null
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Funding",
+    "headline": "Binding Commodity Purchase Agreement with Atlas Oil for up to US$15m non-dilutive Paradox pre-production financing, guided to close in Q3 or early Q4 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zephyr-energy--zphr/loi-for-non-dilutive-pre-production-financing/9687616",
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Funding",
+    "headline": "FIBT term loan maturity expected to be extended by one year on or before December 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zephyr-energy--zphr/half-year-report/9792657",
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "MnA",
+    "headline": "Paradox project farm-out resolution and regulatory approval for Enbridge pipeline uprating, with news flow guided for H2 2026, ahead of first gas export",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zephyr-energy--zphr/half-year-report/9792657",
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "month",
+    "type": "Results due",
+    "headline": "Final results for 2026 due by end of June 2027 (AIM six-month deadline)",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/zephyr-energy--zphr/final-results/9642999",
+    "category": "Corporate"
+   }
+  ],
+  "upcoming_count": 4,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "KIST",
@@ -7716,9 +7798,30 @@
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/AXL",
   "median_daily_value_k": 209.9,
-  "upcoming": [],
-  "upcoming_count": 0,
-  "next_event_date": null
+  "upcoming": [
+   {
+    "date": "2026-11-30",
+    "date_precision": "month",
+    "type": "Results due",
+    "headline": "Q3 2026 interim results due by end of November 2026 (Q2 results were released on 27 August)",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126",
+    "category": "Corporate"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "Test results from Icaco HZ9, the first horizontal well in the Carbonera C7 reservoir on the Tapir Block (drilled 13 to 20 October 2026, about 950 ft of oil pay)",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-ic-8-ic-7-well-results-/9835252",
+    "category": "Operational"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-11-30"
  },
  {
   "code": "SEI",

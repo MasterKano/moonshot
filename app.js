@@ -409,7 +409,39 @@ function classify(material, setback, isUpcoming) {
   return flags;
 }
 
+function sourceFields(raw) {
+  const record = raw && typeof raw === "object" ? raw : {};
+  const list = [];
+  const add = (url) => {
+    const text = String(url || "").trim();
+    if (text && !list.includes(text)) list.push(text);
+  };
+  if (Array.isArray(record.sources)) {
+    record.sources.forEach((entry) => {
+      if (typeof entry === "string") add(entry);
+      else if (entry && typeof entry === "object") add(entry.url || entry.href);
+    });
+  }
+  add(record.source_url);
+  add(record.sourceUrl);
+  const revisions = Array.isArray(record.revisions)
+    ? record.revisions.filter((entry) => entry && typeof entry === "object")
+    : [];
+  const status = String(record.source_status || record.sourceStatus || "").trim().toLowerCase();
+  const level = String(record.source_link_level || record.sourceLevel || "").trim().toLowerCase();
+  return {
+    sourceUrl: list[0] || "",
+    sources: list,
+    sourceStatus: status || (list.length ? "primary" : "missing"),
+    sourceLevel: level || (list.length ? "document" : "none"),
+    lastChecked: record.last_checked || record.lastChecked || "",
+    revisions,
+    rawId: record.id || record.rawId || "",
+  };
+}
+
 function rowShell(id, when, companies, fields) {
+  const packed = sourceFields(fields);
   return {
     id,
     sort: when.sort,
@@ -418,7 +450,13 @@ function rowShell(id, when, companies, fields) {
     type: fields.type || "",
     category: fields.category || "",
     headline: fields.headline || "",
-    sourceUrl: fields.sourceUrl || "",
+    sourceUrl: fields.sourceUrl || packed.sourceUrl,
+    sources: fields.sources || packed.sources,
+    sourceStatus: fields.sourceStatus || packed.sourceStatus,
+    sourceLevel: fields.sourceLevel || packed.sourceLevel,
+    lastChecked: fields.lastChecked || packed.lastChecked,
+    revisions: fields.revisions || packed.revisions,
+    rawId: fields.rawId || packed.rawId,
     affects: [],
     pilots: [],
     reaction: fields.reaction || "",
@@ -470,6 +508,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
         setback,
         reaction: reactionText(event, profile.markets[0]),
         moves: moveSet(event),
+        ...sourceFields(event),
       }));
     });
   });
@@ -490,11 +529,11 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       type: displayType(event.type),
       category: event.category || "",
       headline: event.title || "",
-      sourceUrl: event.source_url || "",
       material: event.material === "Y",
       setback: event.setback === "Y",
       upcoming: upcomingFlag,
       note: event.note || "",
+      ...sourceFields(event),
     }));
   });
 
@@ -547,14 +586,15 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     if (host) {
       host.pilots.push(pilot);
       if (!host.sourceUrl && pilot.sourceUrl) host.sourceUrl = pilot.sourceUrl;
+      if ((!host.sources || !host.sources.length) && row.source_url) Object.assign(host, sourceFields(row));
       return;
     }
     const made = rowShell(`p:${row.ticker}:${row.date}:${index}`, when, [profile], {
       type: pilot.risk,
       headline: row.what_happened || "",
-      sourceUrl: pilot.sourceUrl,
       material: row.material === "Y",
       setback: false,
+      ...sourceFields(row),
     });
     made.pilots.push(pilot);
     rows.push(made);
@@ -583,10 +623,10 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       type: displayType(item.type),
       category: item.category || "",
       headline: item.headline || "",
-      sourceUrl: item.source_url || "",
       material: item.material === "Y",
       setback: false,
       upcoming: true,
+      ...sourceFields(item),
     });
     row.affects = affectsFor(readAcross, row.companies, row.sort, row.precision, row.headline);
     row.slip = slipTitle(slipped, row.companies, row.headline, row.sort, item.precision || row.precision);
@@ -882,22 +922,73 @@ function sourceLink(url, label) {
   });
 }
 
-function sourceIcon(url) {
-  const href = safeUrl(url);
-  if (!href) return null;
-  const icon = svgEl("svg", { viewBox: "0 0 16 16", width: "16", height: "16", "aria-hidden": "true" });
-  icon.append(
-    svgEl("path", { d: "M3.2 6.2V12.8h6.6", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
-    svgEl("path", { d: "M8 3.2h4.8V8M12.8 3.2 7 9", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
-  );
+function checkedLine(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  const parsed = parseDate(text, "exact");
+  return parsed ? `Checked ${formatSort(parsed.sort, "day")}` : `Checked ${showText(text)}`;
+}
+
+function sourceBadgeLabel(item) {
+  const status = String(item.sourceStatus || "").toLowerCase();
+  const level = String(item.sourceLevel || "").toLowerCase();
+  const href = safeUrl(item.sourceUrl);
+  if (status === "missing" || !href) return { label: "Missing", kind: "missing", href: "" };
+  if (level === "listing page") return { label: "Listing page", kind: "listing", href };
+  if (status === "secondary") return { label: "Secondary", kind: "secondary", href };
+  return { label: "Primary", kind: "primary", href };
+}
+
+function sourceBadge(item) {
+  const badge = sourceBadgeLabel(item);
+  const checked = checkedLine(item.lastChecked);
+  const title = checked || (badge.kind === "missing" ? "No source on file" : badge.label);
+  if (!badge.href) {
+    return el("span", { class: `src-badge src-${badge.kind}`, title, text: badge.label });
+  }
   return el("a", {
-    class: "source-icon",
-    href,
+    class: `src-badge src-${badge.kind}`,
+    href: badge.href,
     target: "_blank",
     rel: "noopener noreferrer",
-    "aria-label": "Source. Opens in a new tab.",
+    title,
+    "aria-label": checked ? `${badge.label}. ${checked}. Opens in a new tab.` : `${badge.label}. Opens in a new tab.`,
     onClick: (event) => event.stopPropagation(),
-  }, [icon]);
+    text: badge.label,
+  });
+}
+
+function sourceList(item) {
+  const urls = item.sources && item.sources.length ? item.sources : (item.sourceUrl ? [item.sourceUrl] : []);
+  const parts = [];
+  const checked = checkedLine(item.lastChecked);
+  if (checked) parts.push(el("p", { class: "label-notes", text: checked }));
+  if (urls.length) {
+    parts.push(el("p", { class: "eyebrow", text: urls.length > 1 ? "Sources" : "Source" }));
+    parts.push(el("ul", { class: "source-list" }, urls.map((url) => {
+      const link = sourceLink(url, showText(url).replace(/^https?:\/\//, ""));
+      return el("li", {}, [link || el("span", { class: "muted-gap", text: "Missing" })]);
+    })));
+  } else {
+    parts.push(el("p", { class: "label-notes", text: "No source on file." }));
+  }
+  if (item.revisions && item.revisions.length) {
+    parts.push(el("p", { class: "eyebrow", text: "Merged revisions" }));
+    parts.push(el("ul", { class: "source-list" }, item.revisions.map((revision) => {
+      const when = parseDate(revision.date, "exact");
+      const bits = [
+        when ? formatSort(when.sort, "day") : "",
+        showText(revision.type),
+        showText(revision.headline),
+      ].filter((bit) => bit && bit !== "—");
+      const link = sourceLink(revision.source_url, "Source");
+      return el("li", {}, [
+        el("span", { text: bits.join(". ") }),
+        link ? el("span", {}, [" ", link]) : null,
+      ]);
+    })));
+  }
+  return parts;
 }
 
 function fact(key, value, extra) {
@@ -988,8 +1079,7 @@ function detailNode(item) {
     parts.push(el("p", { class: "moves", text: `r5 ${moveLabel(item.moves.r5)} · r20 ${moveLabel(item.moves.r20)} · r60 ${moveLabel(item.moves.r60)}` }));
     parts.push(el("p", { class: "label-notes", text: "Share-price change after the event. Context only." }));
   }
-  const source = sourceLink(item.sourceUrl, "Source");
-  if (source) parts.push(el("p", {}, [source]));
+  parts.push(...sourceList(item));
   const partners = partnerLines(item);
   if (partners.length) parts.push(partnerBlock(partners));
   item.pilots.forEach((pilot) => parts.push(pilotBlock(pilot)));
@@ -1055,7 +1145,7 @@ function renderTable(rows) {
       el("td", {}, [el("span", { class: "tl-cos" }, item.companies.map(companyNode))]),
       el("td", {}, [el("span", { class: "tl-tags" }, [item.type ? showText(item.type) : "—", item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null])]),
       el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "tl-tags" }, tagNodes(item).slice(1))])]),
-      el("td", {}, [sourceIcon(item.sourceUrl)]),
+      el("td", {}, [sourceBadge(item)]),
     );
     body.append(main);
     if (open) {
@@ -1083,7 +1173,7 @@ function renderCards(rows) {
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
       el("div", { class: "tl-tags" }, tagNodes(item)),
-      el("div", { class: "card-meta" }, [sourceIcon(item.sourceUrl)]),
+      el("div", { class: "card-meta" }, [sourceBadge(item)]),
       open ? detailNode(item) : null,
     ]);
   });

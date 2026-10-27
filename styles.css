@@ -1425,17 +1425,38 @@ table.countries thead th, table.catalysts thead th {
 
 .lane-link:hover { color: var(--accent); }
 
-.source-icon {
+.src-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  color: var(--accent);
+  min-height: 22px;
+  padding: 1px 7px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--panel-deep);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.source-icon:hover { background: var(--accent-soft); }
+.src-primary { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); }
+.src-secondary { color: var(--muted); }
+.src-listing { color: var(--text); }
+.src-missing { color: var(--muted); border-style: dashed; }
+.src-badge:hover { background: var(--accent-soft); }
+
+.source-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.source-list a { word-break: break-all; }
 
 .moves { margin: 2px 0 0; font-variant-numeric: tabular-nums; }
 
@@ -2328,7 +2349,7 @@ table.timeline tbody tr.is-open td { background: var(--accent-soft); }
   .chart-axis { position: static; }
   .plot-col, .plot-canvas { min-width: 0 !important; }
   table.timeline thead { display: table-header-group; }
-  a.source-icon::after { content: " (" attr(href) ")"; font-size: 10px; word-break: break-all; }
+  a.src-badge::after { content: " (" attr(href) ")"; font-size: 10px; word-break: break-all; }
   .wide-only { display: block !important; }
   .narrow-only { display: none !important; }
 }

@@ -1,0 +1,1148 @@
+{
+ "as_of": "2026-10-27",
+ "note": "Built from the enriched data by review/build_briefing.py. Facts only; no trade calls. Dates are event dates, except overdue items from the slipped list, whose date is the date checked.",
+ "windows": {
+  "last_7_days": [
+   "2026-10-20",
+   "2026-10-27"
+  ],
+  "last_30_days": [
+   "2026-09-27",
+   "2026-10-27"
+  ],
+  "next_30_days": [
+   "2026-10-27",
+   "2026-11-26"
+  ]
+ },
+ "counts": {
+  "material_7d": 14,
+  "material_30d": 65,
+  "setbacks_30d": 12,
+  "catalysts_30d": 21,
+  "overdue": 8
+ },
+ "material_7d": [
+  {
+   "company": "White Cliff Minerals Limited",
+   "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
+   "date": "2026-10-26",
+   "id": "E-WCN-2026-10-26-2bdc07",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Pensana plc",
+   "headline": "Longonjo commissioning moved to early 2028 (was 2027); US$75m to US$90m equity sought",
+   "date": "2026-10-26",
+   "id": "E-PRE-2026-10-26-7c9921",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA is placed in Recovery Box",
+   "date": "2026-10-26",
+   "id": "E-NOM.OL-2026-10-26-e5d0d8",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Panoro Energy ASA",
+   "headline": "Panoro Energy - Drilling Rig Incident on Dussafu",
+   "date": "2026-10-25",
+   "id": "E-PEN.OL-2026-10-25-039587",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy: Drilling rig incident on the Dussafu licence",
+   "date": "2026-10-25",
+   "id": "E-BWE.OL-2026-10-25-f97508",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Elixir Energy Limited",
+   "headline": "Strategic Portfolio Farmout to Beach Energy",
+   "date": "2026-10-23",
+   "id": "E-EXR-2026-10-23-0426f2",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Metals One plc",
+   "headline": "Proposed Acquisition of Lions Bay Resources",
+   "date": "2026-10-22",
+   "id": "E-MET1-2026-10-22-d3b9ee",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Arrow Exploration Corp.",
+   "headline": "Icaco-8 and Icaco-7 on production; Arrow output record above 6,500 boe/d; first horizontal Carbonera well IC-HZ9 drilling",
+   "date": "2026-10-22",
+   "id": "E-AXL-2026-10-22-f8c065",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "West Coast Silver Limited",
+   "headline": "WCE-Falcon JV Reports 12m @ 2.8g/t Gold at Errabiddy",
+   "date": "2026-10-21",
+   "id": "E-WCE-2026-10-21-adcdf0",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ShaMaran Petroleum Ltd.",
+   "headline": "ShaMaran Announces Successful Pricing of Bond Issuance",
+   "date": "2026-10-21",
+   "id": "E-SNM.OL-2026-10-21-76d9e1",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ShaMaran Petroleum Ltd.",
+   "headline": "ShaMaran Announces combination with Gulf Keystone",
+   "date": "2026-10-20",
+   "id": "E-SNM.OL-2026-10-20-c17a41",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Gulf Keystone Petroleum Ltd",
+   "headline": "Gulf Keystone to combine with ShaMaran Petrol...",
+   "date": "2026-10-20",
+   "id": "E-GKP-2026-10-20-713836",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Critica Limited",
+   "headline": "Jupiter Scoping Study Defines Pathway to Development",
+   "date": "2026-10-20",
+   "id": "E-CRI-2026-10-20-a35b41",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ACG Metals Limited",
+   "headline": "2026 Gediktepe Competent Person’s Report",
+   "date": "2026-10-20",
+   "id": "E-ACG-2026-10-20-9522ea",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  }
+ ],
+ "material_30d": [
+  {
+   "company": "White Cliff Minerals Limited",
+   "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
+   "date": "2026-10-26",
+   "id": "E-WCN-2026-10-26-2bdc07",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Pensana plc",
+   "headline": "Longonjo commissioning moved to early 2028 (was 2027); US$75m to US$90m equity sought",
+   "date": "2026-10-26",
+   "id": "E-PRE-2026-10-26-7c9921",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA is placed in Recovery Box",
+   "date": "2026-10-26",
+   "id": "E-NOM.OL-2026-10-26-e5d0d8",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Panoro Energy ASA",
+   "headline": "Panoro Energy - Drilling Rig Incident on Dussafu",
+   "date": "2026-10-25",
+   "id": "E-PEN.OL-2026-10-25-039587",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy: Drilling rig incident on the Dussafu licence",
+   "date": "2026-10-25",
+   "id": "E-BWE.OL-2026-10-25-f97508",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Elixir Energy Limited",
+   "headline": "Strategic Portfolio Farmout to Beach Energy",
+   "date": "2026-10-23",
+   "id": "E-EXR-2026-10-23-0426f2",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Metals One plc",
+   "headline": "Proposed Acquisition of Lions Bay Resources",
+   "date": "2026-10-22",
+   "id": "E-MET1-2026-10-22-d3b9ee",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Arrow Exploration Corp.",
+   "headline": "Icaco-8 and Icaco-7 on production; Arrow output record above 6,500 boe/d; first horizontal Carbonera well IC-HZ9 drilling",
+   "date": "2026-10-22",
+   "id": "E-AXL-2026-10-22-f8c065",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "West Coast Silver Limited",
+   "headline": "WCE-Falcon JV Reports 12m @ 2.8g/t Gold at Errabiddy",
+   "date": "2026-10-21",
+   "id": "E-WCE-2026-10-21-adcdf0",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ShaMaran Petroleum Ltd.",
+   "headline": "ShaMaran Announces Successful Pricing of Bond Issuance",
+   "date": "2026-10-21",
+   "id": "E-SNM.OL-2026-10-21-76d9e1",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ShaMaran Petroleum Ltd.",
+   "headline": "ShaMaran Announces combination with Gulf Keystone",
+   "date": "2026-10-20",
+   "id": "E-SNM.OL-2026-10-20-c17a41",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Gulf Keystone Petroleum Ltd",
+   "headline": "Gulf Keystone to combine with ShaMaran Petrol...",
+   "date": "2026-10-20",
+   "id": "E-GKP-2026-10-20-713836",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Critica Limited",
+   "headline": "Jupiter Scoping Study Defines Pathway to Development",
+   "date": "2026-10-20",
+   "id": "E-CRI-2026-10-20-a35b41",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "ACG Metals Limited",
+   "headline": "2026 Gediktepe Competent Person’s Report",
+   "date": "2026-10-20",
+   "id": "E-ACG-2026-10-20-9522ea",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Vår Energi, Equinor",
+   "headline": "6407/5-3 S Lakris gas/condensate discovery",
+   "date": "2026-10-19",
+   "id": "N-NO204",
+   "event_type": "Discovery",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Falcon Metals Ltd",
+   "headline": "First Hole at Errabiddy Hits 12m @ 2.8g/t Gold from Surface",
+   "date": "2026-10-19",
+   "id": "E-FAL-2026-10-19-941b7f",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Arika Resources Limited",
+   "headline": "High-Grade Gold Lode discovered at Cosmopolitan Gold Mine",
+   "date": "2026-10-19",
+   "id": "E-ARI-2026-10-19-2388e6",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Europa Oil and Gas (Holdings) plc",
+   "headline": "EG-08 PSC Phase 1 Further Extension",
+   "date": "2026-10-16",
+   "id": "E-EOG-2026-10-16-c53d69",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Aura Energy Limited",
+   "headline": "Tiris BFS Confirms Low-Cost, Near-Term Uranium Project",
+   "date": "2026-10-16",
+   "id": "E-AEE-2026-10-16-d0d177",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Tharisa plc",
+   "headline": "PGM concentrate offtake agreement with Valterra",
+   "date": "2026-10-15",
+   "id": "E-THS-2026-10-15-9c902c",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Seascape Energy Asia plc",
+   "headline": "Acreage Expansion Around Temaris Cluster PSC",
+   "date": "2026-10-15",
+   "id": "E-SEA-2026-10-15-5c3e64",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Panoro Energy ASA",
+   "headline": "Panoro Energy - Successful Dussafu Appraisal Wells",
+   "date": "2026-10-15",
+   "id": "E-PEN.OL-2026-10-15-8958ce",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy Q3 operational update: 2026 production guidance cut to about 23,000 bopd net after Dussafu ESP and Golfinho issues",
+   "date": "2026-10-15",
+   "id": "E-BWE.OL-2026-10-15-afc62d",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy: Positive appraisal results at Dussafu set to fast-track new production well",
+   "date": "2026-10-15",
+   "id": "E-BWE.OL-2026-10-15-84f329",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Equinor, Petoro, TotalEnergies",
+   "headline": "30/8-7 S Grimsnes oil/gas discovery (19-50 mmboe)",
+   "date": "2026-10-14",
+   "id": "N-NO202",
+   "event_type": "Discovery",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Zephyr Energy plc",
+   "headline": "Acquisition of further Paradox Basin acreage",
+   "date": "2026-10-14",
+   "id": "E-ZPHR-2026-10-14-25fd8b",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Pilbara Gold Limited",
+   "headline": "Mt York PFS and Extensional Drilling Results",
+   "date": "2026-10-14",
+   "id": "E-PGL-2026-10-14-79e757",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Kistos Holdings plc",
+   "headline": "Acquisition of Ringhorne Production Licences",
+   "date": "2026-10-14",
+   "id": "E-KIST-2026-10-14-a97f2f",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Grange Resources Limited",
+   "headline": "FID to deliver the Savage River Underground",
+   "date": "2026-10-14",
+   "id": "E-GRR-2026-10-14-bf296c",
+   "event_type": "FID",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "White Cliff Minerals Limited",
+   "headline": "New Cu Discovery on 2.8km Structure Parallel to Danvers 1",
+   "date": "2026-10-13",
+   "id": "E-WCN-2026-10-13-f628f1",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Sunstone Metals Ltd",
+   "headline": "Bramaderos resource up 72% to 6.2Moz AuEq",
+   "date": "2026-10-13",
+   "id": "E-STM-2026-10-13-a3d294",
+   "event_type": "Resource",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Maronan Metals Limited",
+   "headline": "Strategic $20M Placement with Strong Institutional Support",
+   "date": "2026-10-13",
+   "id": "E-MMA-2026-10-13-546fbe",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Central Asia Metals plc",
+   "headline": "Receipt of Kazakh regulatory approval",
+   "date": "2026-10-13",
+   "id": "E-CAML-2026-10-13-89ef53",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy: Strengthens financing with long-term Bourdon WHP lease and RCF extension",
+   "date": "2026-10-13",
+   "id": "E-BWE.OL-2026-10-13-1e0995",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Auking Mining Limited",
+   "headline": "AKN to Acquire High Grade Greenland Niobium Project",
+   "date": "2026-10-13",
+   "id": "E-AKN-2026-10-13-c73093",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Qmines Limited",
+   "headline": "Copper Discovery at Mt Chalmers",
+   "date": "2026-10-12",
+   "id": "E-QML-2026-10-12-d68689",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Native Mineral Resources Holdings Limited",
+   "headline": "NMR secures refinancing to support gold production growth",
+   "date": "2026-10-12",
+   "id": "E-NMR-2026-10-12-f9e684",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Kaoko Metals Limited",
+   "headline": "First Chalkos holes return Cu-Ag grades at Otniel discovery",
+   "date": "2026-10-12",
+   "id": "E-KAO-2026-10-12-3231b2",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Harena Rare Earths plc",
+   "headline": "Ampasindava Exploitation Permit Formalised",
+   "date": "2026-10-12",
+   "id": "E-HREE-2026-10-12-9ba721",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Critica Limited",
+   "headline": "Jupiter Delivers First 160Mt Indicated Rare Earth Resource",
+   "date": "2026-10-12",
+   "id": "E-CRI-2026-10-12-6047cd",
+   "event_type": "Resource",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Caspin Resources Limited",
+   "headline": "45% Increase to MRE at Kelpie Tin Deposit",
+   "date": "2026-10-12",
+   "id": "E-CPN-2026-10-12-e82ff4",
+   "event_type": "Resource",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Borders and Southern Petroleum plc",
+   "headline": "2 million GBP direct placing at a 42% premium to a single investor; company funded to mid-2028 while the Darwin farm-out continues",
+   "date": "2026-10-12",
+   "id": "E-BOR-2026-10-12-1c68ac",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Afentra plc",
+   "headline": "Pacassa SW needs a sidetrack after operational problems; Impala-2 spudded",
+   "date": "2026-10-12",
+   "id": "E-AET-2026-10-12-b60628",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Gruvaktiebolaget Viscaria",
+   "headline": "Viscaria mine granted strategic status by the EU",
+   "date": "2026-10-09",
+   "id": "E-VISC.ST-2026-10-09-b412ec",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Endomines Finland Oyj",
+   "headline": "Endomines continues development of the Southern Gold Line tungsten and molybdenum project without EU strategic project status",
+   "date": "2026-10-09",
+   "id": "E-PAMPALO.HE-2026-10-09-9ffc5e",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Torque Metals Limited",
+   "headline": "Torque Completes A$25 million Placement",
+   "date": "2026-10-08",
+   "id": "E-TOR-2026-10-08-56dd0f",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Lotus Resources Limited",
+   "headline": "Inventory Prepayment Facility and Export Permitting",
+   "date": "2026-10-08",
+   "id": "E-LOT-2026-10-08-e939ab",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "G50 Corp Limited",
+   "headline": "White Caps drilling restarts, follows 13.5m @ 7.67 g/t gold",
+   "date": "2026-10-08",
+   "id": "E-G50-2026-10-08-d8f03e",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Equinor, Petoro, TotalEnergies and others",
+   "headline": "Snøhvit Future cost estimate raised to NOK 26.5bn (timetable unchanged)",
+   "date": "2026-10-07",
+   "id": "N-NO201",
+   "event_type": "Cost overrun",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Sotkamo Silver AB",
+   "headline": "Exploration drilling of the western mineralisation intersected mineralisation in all holes analysed to date",
+   "date": "2026-10-07",
+   "id": "E-SOSI1.HE-2026-10-07-c22f9a",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Oriole Resources plc",
+   "headline": "Substantial Maiden Resource Estimate at Wapouzé",
+   "date": "2026-10-07",
+   "id": "E-ORR-2026-10-07-803050",
+   "event_type": "Resource",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Anson Resources Limited",
+   "headline": "Incentives Increase Green River Post-Tax NPV8 to US$1.05B",
+   "date": "2026-10-07",
+   "id": "E-ASN-2026-10-07-6a8970",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "White Cliff Minerals Limited",
+   "headline": "76.5m @ 2.01% Cu Expands Copper Envelope at Danvers 1",
+   "date": "2026-10-06",
+   "id": "E-WCN-2026-10-06-721b8e",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Afentra plc",
+   "headline": "Decree for Block 3/05 part of Etu acquisition published; 3/05A decree awaited",
+   "date": "2026-10-06",
+   "id": "E-AET-2026-10-06-374255",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Vanadium Resources Limited",
+   "headline": "V-Iron Plant Scoping Study Supports Progression to DFS",
+   "date": "2026-10-05",
+   "id": "E-VR8-2026-10-05-75bad4",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Brazilian Critical Minerals Limited",
+   "headline": "BCM Acquires MAGSUL process plant",
+   "date": "2026-10-05",
+   "id": "E-BCM-2026-10-05-be4e37",
+   "event_type": "MnA",
+   "direction": "neutral",
+   "significance": "material"
+  },
+  {
+   "company": "Eco (Atlantic) Oil and Gas Ltd",
+   "headline": "Ministerial Approval - Namibia Licences Farm-down",
+   "date": "2026-10-02",
+   "id": "E-ECO-2026-10-02-75dbf6",
+   "event_type": "Funding",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Bezant Resources plc",
+   "headline": "Hope and Gorob: Commercial Production Commences",
+   "date": "2026-10-02",
+   "id": "E-BZT-2026-10-02-1538f6",
+   "event_type": "First production",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Manuka Resources Ltd",
+   "headline": "First Gold Revenues from Wonawinta",
+   "date": "2026-10-01",
+   "id": "E-MKR-2026-10-01-384b5b",
+   "event_type": "First production",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "True North Copper Limited",
+   "headline": "High-Grade Results at Cloncurry with 11m at 4.23% CuEq",
+   "date": "2026-09-30",
+   "id": "E-TNC-2026-09-30-09b3e6",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA: Approval of temporary discharge permit",
+   "date": "2026-09-30",
+   "id": "E-NOM.OL-2026-09-30-e94036",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA: Barton has terminated the Offtake Agreement with ERG",
+   "date": "2026-09-30",
+   "id": "E-NOM.OL-2026-09-30-4c2e8d",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Lake Resources N.L.",
+   "headline": "Lake Resources Granted Environmental Impact Declaration",
+   "date": "2026-09-29",
+   "id": "E-LKE-2026-09-29-7e9180",
+   "event_type": "Permit or approval",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Kalamazoo Resources Limited",
+   "headline": "50m @ 4.9g/t Au Leads Final Mt Olympus Results",
+   "date": "2026-09-29",
+   "id": "E-KZR-2026-09-29-d79f91",
+   "event_type": "Drill result",
+   "direction": "positive",
+   "significance": "material"
+  },
+  {
+   "company": "Critica Limited",
+   "headline": "Mt Lindsay Study Delivers Strong Tungsten and Tin Economics",
+   "date": "2026-09-29",
+   "id": "E-CRI-2026-09-29-a78a26",
+   "event_type": "Study",
+   "direction": "positive",
+   "significance": "material"
+  }
+ ],
+ "setbacks_30d": [
+  {
+   "company": "Pensana plc",
+   "headline": "Longonjo commissioning moved to early 2028 (was 2027); US$75m to US$90m equity sought",
+   "date": "2026-10-26",
+   "id": "E-PRE-2026-10-26-7c9921",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA is placed in Recovery Box",
+   "date": "2026-10-26",
+   "id": "E-NOM.OL-2026-10-26-e5d0d8",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Panoro Energy ASA",
+   "headline": "Panoro Energy - Drilling Rig Incident on Dussafu",
+   "date": "2026-10-25",
+   "id": "E-PEN.OL-2026-10-25-039587",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy: Drilling rig incident on the Dussafu licence",
+   "date": "2026-10-25",
+   "id": "E-BWE.OL-2026-10-25-f97508",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy Q3 operational update: 2026 production guidance cut to about 23,000 bopd net after Dussafu ESP and Golfinho issues",
+   "date": "2026-10-15",
+   "id": "E-BWE.OL-2026-10-15-afc62d",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Afentra plc",
+   "headline": "Pacassa SW needs a sidetrack after operational problems; Impala-2 spudded",
+   "date": "2026-10-12",
+   "id": "E-AET-2026-10-12-b60628",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Botnia Gold AB (publ)",
+   "headline": "Brand i förrådstält vid Fäbodtjärnsgruvan",
+   "date": "2026-10-10",
+   "id": "E-BOTX.ST-2026-10-10-a328fb",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "background"
+  },
+  {
+   "company": "Endomines Finland Oyj",
+   "headline": "Endomines continues development of the Southern Gold Line tungsten and molybdenum project without EU strategic project status",
+   "date": "2026-10-09",
+   "id": "E-PAMPALO.HE-2026-10-09-9ffc5e",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Equinor, Petoro, TotalEnergies and others",
+   "headline": "Snøhvit Future cost estimate raised to NOK 26.5bn (timetable unchanged)",
+   "date": "2026-10-07",
+   "id": "N-NO201",
+   "event_type": "Cost overrun",
+   "direction": "negative",
+   "significance": "material"
+  },
+  {
+   "company": "Rockhopper Exploration plc",
+   "headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+   "date": "2026-10-05",
+   "id": "E-RKH-2026-10-05-ba5b94",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "background"
+  },
+  {
+   "company": "Navitas Petroleum LP",
+   "headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+   "date": "2026-10-05",
+   "id": "E-NVPT-2026-10-05-ba5b94",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "background"
+  },
+  {
+   "company": "Nordic Mining ASA",
+   "headline": "Nordic Mining ASA: Barton has terminated the Offtake Agreement with ERG",
+   "date": "2026-09-30",
+   "id": "E-NOM.OL-2026-09-30-4c2e8d",
+   "event_type": "Setback",
+   "direction": "negative",
+   "significance": "material"
+  }
+ ],
+ "catalysts_30d": [
+  {
+   "company": "Equinor Energy AS",
+   "headline": "Equinor Q3 2026 results",
+   "date": "2026-10-28",
+   "id": "N-NO206",
+   "date_window_text": "28 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "BW Energy Limited",
+   "headline": "BW Energy Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "D-BWE.OL-2026-10-29-0",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Aker BP ASA",
+   "headline": "Aker BP Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "N-NO207",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "DNO Norge AS",
+   "headline": "DNO Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "N-NO208",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "OMV Norge AS",
+   "headline": "OMV Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "N-NO209",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "TotalEnergies EP Norge AS",
+   "headline": "TotalEnergies Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "N-NO210",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Repsol Norge AS",
+   "headline": "Repsol Q3 2026 results",
+   "date": "2026-10-29",
+   "id": "N-NO211",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "A/S Norske Shell",
+   "headline": "Shell Q3 2026 results and interim dividend",
+   "date": "2026-10-29",
+   "id": "N-NO212",
+   "date_window_text": "29 Oct 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Star Energy Group plc",
+   "headline": "Licence sale expected to complete by end of October 2026",
+   "date": "2026-10-31",
+   "id": "L-STAR-2026-10-31-0",
+   "date_window_text": "By end of October 2026",
+   "sort_date_is_proxy": true,
+   "date_basis": "company target",
+   "significance": "background"
+  },
+  {
+   "company": "OKEA ASA",
+   "headline": "OKEA Q3 2026 results",
+   "date": "2026-11-03",
+   "id": "N-NO214",
+   "date_window_text": "3 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Gruvaktiebolaget Viscaria",
+   "headline": "Q3 2026 report due 5 November 2026",
+   "date": "2026-11-05",
+   "id": "D-VISC.ST-2026-11-05-0",
+   "date_window_text": "5 November 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Harbour Energy Norge AS",
+   "headline": "Harbour Energy trading and operations update",
+   "date": "2026-11-05",
+   "id": "N-NO215",
+   "date_window_text": "5 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "ConocoPhillips Skandinavia AS",
+   "headline": "ConocoPhillips Q3 2026 results and call",
+   "date": "2026-11-05",
+   "id": "N-NO216",
+   "date_window_text": "5 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "ORLEN Upstream Norway AS",
+   "headline": "ORLEN Q3 2026 consolidated report (moved forward from 19 Nov)",
+   "date": "2026-11-05",
+   "id": "N-NO217",
+   "date_window_text": "Q3 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Petrotal Corporation",
+   "headline": "Q3 2026 results webcast on 9 November 2026",
+   "date": "2026-11-09",
+   "id": "L-PTAL-2026-11-09-0",
+   "date_window_text": "On 9 November 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Vår Energi ASA",
+   "headline": "Vår Energi extraordinary general meeting",
+   "date": "2026-11-11",
+   "id": "N-NO218",
+   "date_window_text": "11 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "INPEX Idemitsu Norge AS",
+   "headline": "INPEX results for nine months to 30 Sep 2026 (investor meeting 13 Nov)",
+   "date": "2026-11-12",
+   "id": "N-NO219",
+   "date_window_text": "30 Sep 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Japex Norge AS",
+   "headline": "JAPEX results for 2Q FY2027/3",
+   "date": "2026-11-12",
+   "id": "N-NO220",
+   "date_window_text": "12 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Orosur Mining Inc",
+   "headline": "Orosur AGM, Toronto",
+   "date": "2026-11-16",
+   "id": "L-OMI-2026-11-16-0",
+   "date_window_text": "16 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Panoro Energy ASA",
+   "headline": "Panoro Q3 2026 trading update",
+   "date": "2026-11-18",
+   "id": "D-PEN.OL-2026-11-18-0",
+   "date_window_text": "18 Nov 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  },
+  {
+   "company": "Pan African Resources plc",
+   "headline": "AGM on 19 November 2026",
+   "date": "2026-11-19",
+   "id": "L-PAF-2026-11-19-0",
+   "date_window_text": "On 19 November 2026",
+   "sort_date_is_proxy": false,
+   "date_basis": "confirmed",
+   "significance": "background"
+  }
+ ],
+ "overdue": [
+  {
+   "company": "Afentra plc",
+   "headline": "KON15 300 km 2D seismic start",
+   "date": "2026-10-27",
+   "id": "S-AET-b2c1c9",
+   "status": "overdue",
+   "date_window_text": "September 2026",
+   "note": "Low materiality; not mentioned in 12 Oct 2026 operational update",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Afentra plc",
+   "headline": "Completion of Etu acquisition (Blocks 3/05 and 3/05A)",
+   "date": "2026-10-27",
+   "id": "S-AET-e91677",
+   "status": "overdue",
+   "date_window_text": "Q3 2026",
+   "note": "Block 3/05 decree published 6 Oct 2026; 3/05A decree still awaited (https://www.investegate.co.uk/announcement/rns/afentra--aet/etu-acquisition-update-/9809496)",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-and-financial-update-/9654881",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Eco (Atlantic) Oil and Gas Ltd",
+   "headline": "New Orinduik Block licence (PSA) with Navitas, Guyana",
+   "date": "2026-10-27",
+   "id": "S-ECO-2a91d4",
+   "status": "overdue",
+   "date_window_text": "Q3 2026",
+   "note": "Minister confirmed no PSA issued (Kaieteur News, 1 Oct 2026); ECO RNS through 13 Oct 2026 has none",
+   "source_url": "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/eco-atlantic-oil-and-gas-ltd.-announces-2026-operational-and-business-update-1178879",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Grangex AB",
+   "headline": "Sydvaranger final investment decision",
+   "date": "2026-10-27",
+   "id": "S-GRANGX.ST-2ac6b4",
+   "status": "overdue",
+   "date_window_text": "Q3 2026 (H1 report warned it could slip)",
+   "note": "Nordic sweep: no FID by 27 Oct 2026; Orion loan longstop 30 Nov 2026; about US$300m financing still to be secured",
+   "source_url": "https://www.grangex.se/en/grangex-secures-additional-liquidity-and-confirms-revised-timing-for-the-sydvaranger-final-investment-decision/",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Lucara Diamond Corp.",
+   "headline": "Group R to start underground lateral development at Karowe",
+   "date": "2026-10-27",
+   "id": "S-LUC.ST-88b0da",
+   "status": "overdue",
+   "date_window_text": "August 2026 / Q3 2026 (after about six weeks of headframe delay)",
+   "note": "Low materiality; a stand-alone release is unlikely, so expect confirmation in the Q3 report",
+   "source_url": "https://view.news.eu.nasdaq.com/view?id=be90d88d1ff883c9cf2f4607aeb227d6d&lang=en&src=listed",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Zenith Energy Ltd.",
+   "headline": "Green project financing for the Italian biogas acquisition",
+   "date": "2026-10-27",
+   "id": "S-ZENA.OL-52a4b3",
+   "status": "overdue",
+   "date_window_text": "End of Q3 2026 (acquisition completion Q4 2026)",
+   "note": "No financing RNS through the 2026-10 PV and advisor announcements",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/zenith-energy-ltd-com-shs-npv-di---zen/acquisition-of-italian-biogas-plant/9676574",
+   "date_is": "date checked, not the guided date"
+  },
+  {
+   "company": "Zephyr Energy plc",
+   "headline": "Binding Commodity Purchase Agreement with Atlas Oil for up to US$15m non-dilutive Paradox pre-production financing, guided to close in Q3 or early Q4 2026",
+   "date": "2026-12-31",
+   "id": "L-ZPHR-2026-12-31-0",
+   "status": "overdue",
+   "date_window_text": "Early Q4 2026",
+   "guidance_trend": "no update found"
+  },
+  {
+   "company": "Pensana plc",
+   "headline": "Longonjo commissioning early 2028, full production late 2028",
+   "date": "2028-03-31",
+   "id": "L-PRE-2028-03-31-2",
+   "status": "slipped",
+   "date_window_text": "Early 2028",
+   "guidance_trend": "slipped once"
+  }
+ ]
+}

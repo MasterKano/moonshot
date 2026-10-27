@@ -152,10 +152,31 @@ function bareCode(code) {
   return String(code || "").replace(/\.(OL|ST|HE)$/i, "");
 }
 
+let splitRoots = new Set();
+
+function rememberSplitRoots(profiles) {
+  const forms = new Map();
+  profiles.forEach((profile) => {
+    const full = String(profile.code || "").trim();
+    const root = bareCode(full).toUpperCase();
+    if (!root) return;
+    if (!forms.has(root)) forms.set(root, new Set());
+    forms.get(root).add(full.toUpperCase());
+  });
+  splitRoots = new Set();
+  forms.forEach((fulls, root) => {
+    if (fulls.size > 1) splitRoots.add(root);
+  });
+}
+
 function codesMatch(a, b) {
   if (!a || !b) return false;
   if (a === b) return true;
-  return bareCode(a) === bareCode(b);
+  const left = bareCode(a);
+  const right = bareCode(b);
+  if (!left || left !== right) return false;
+  if (splitRoots.has(left.toUpperCase())) return false;
+  return true;
 }
 
 function normHead(value) {
@@ -352,9 +373,21 @@ function indexCountries(files) {
   return map;
 }
 
-function profileByCode(profiles, code) {
-  if (!code) return null;
-  return profiles.find((profile) => codesMatch(profile.code, code)) || null;
+function profileNamed(profile, name) {
+  if (!name) return false;
+  return [profile.shortName, profile.name, profile.label].some((value) => namesClose(value, name));
+}
+
+function profileByCode(profiles, code, name) {
+  const wanted = String(code || "").trim();
+  if (!wanted) return null;
+  const root = bareCode(wanted).toUpperCase();
+  const family = profiles.filter((profile) => bareCode(profile.code).toUpperCase() === root);
+  if (!family.length) return null;
+  if (family.length === 1) return family[0];
+  const named = name ? family.find((profile) => profileNamed(profile, name)) : null;
+  if (named) return named;
+  return family.find((profile) => profile.code === wanted) || null;
 }
 
 function findProfile(profiles, name) {
@@ -423,7 +456,7 @@ function buildProfiles(screen, norwayCompanies, countryIndex) {
   norwayCompanies.forEach((company) => {
     const listedCode = tickerFromListing(company.listing_ticker);
     const code = listedCode || String(company.short_name || "").trim();
-    const existing = profileByCode(profiles, listedCode)
+    const existing = (listedCode && (profileByCode(profiles, listedCode, company.short_name) || profileByCode(profiles, listedCode, company.name)))
       || (!listedCode && (findProfile(profiles, company.short_name) || findProfile(profiles, company.name)));
     if (existing) {
       if (!existing.markets.includes("Norway")) existing.markets.push("Norway");
@@ -448,6 +481,7 @@ function buildProfiles(screen, norwayCompanies, countryIndex) {
     profiles.push(withIdentity(profile, company.listing_status, company.parent_listed, company.name));
   });
   assignCountries(profiles, countryIndex);
+  rememberSplitRoots(profiles);
   return profiles;
 }
 
@@ -569,7 +603,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const rows = [];
 
   screen.forEach((company) => {
-    const profile = profileByCode(profiles, company.code) || (!company.code && findProfile(profiles, company.name)) || blankProfile(company.name);
+    const profile = profileByCode(profiles, company.code, company.name) || (!company.code && findProfile(profiles, company.name)) || blankProfile(company.name);
     (company.events || []).forEach((event, index) => {
       const when = parseDate(event.date, "exact");
       if (!when) return;
@@ -619,7 +653,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     const when = parseDate(row.date, row.date && /^\d{4}-\d{2}$/.test(row.date) ? "month" : "exact");
     if (!when) return;
     const meta = byTicker.get(row.ticker);
-    let profile = profileByCode(profiles, row.ticker) || (!row.ticker && findProfile(profiles, row.company));
+    let profile = profileByCode(profiles, row.ticker, row.company) || (!row.ticker && findProfile(profiles, row.company));
     if (!profile) {
       const exchange = meta && meta.exchange;
       const markets = [];
@@ -666,7 +700,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     let host = null;
     let best = 0;
     rows.forEach((item) => {
-      const sameCompany = item.companies.some((company) => codesMatch(company.code, row.ticker) || (!row.ticker && (namesClose(company.label, row.company) || namesClose(company.name, row.company) || namesClose(company.shortName, row.company))));
+      const sameCompany = item.companies.includes(profile);
       if (!sameCompany || !datesClose(item.sort, item.precision, row.date)) return;
       const score = headlineScore(item.headline, row.what_happened);
       if (score > best) { host = item; best = score; }
@@ -689,6 +723,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     rows.push(made);
   });
 
+  rememberSplitRoots(profiles);
   rows.forEach((item) => {
     item.affects = affectsFor(readAcross, item.companies, item.sort, item.precision, item.headline);
   });
@@ -698,7 +733,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     const sortRaw = item.sort_date || item.anchor;
     const when = parseDate(sortRaw, item.precision || "exact");
     if (!when) return null;
-    const profile = profiles.find((company) => codesMatch(company.code, item.company_code)) || findProfile(profiles, item.company_name) || {
+    const profile = profileByCode(profiles, item.company_code, item.company_name) || findProfile(profiles, item.company_name) || {
       ...blankProfile(item.company_name || item.company_code || "Company"),
       code: item.company_code || "",
       markets: item.market ? [item.market] : [],

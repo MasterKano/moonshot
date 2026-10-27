@@ -1284,7 +1284,7 @@ table.countries thead th, table.catalysts thead th {
   z-index: 6;
   display: grid;
   grid-template-columns: var(--label) minmax(0, 1fr);
-  height: 30px;
+  height: 36px;
   background: var(--panel);
   border-bottom: 1px solid var(--line-strong);
   border-radius: 10px 10px 0 0;
@@ -1312,32 +1312,39 @@ table.countries thead th, table.catalysts thead th {
 
 .chart-axis-track { position: relative; height: 100%; }
 
-.chart-axis-label {
+.chart-axis-label,
+.chart-axis-year {
   position: absolute;
-  top: 7px;
-  font-size: 11px;
   line-height: 1;
-  color: var(--muted);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
-.chart-axis-label.is-year {
+.chart-axis-label {
+  top: 20px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.chart-axis-year {
+  top: 3px;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--text);
 }
 
 .today-pill {
   position: absolute;
-  top: 5px;
-  height: 18px;
-  border-radius: 9px;
+  top: 1px;
+  height: 14px;
+  border-radius: 7px;
   border: 1px solid var(--border-strong);
   background: var(--panel);
   color: var(--navy);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 12px;
   text-align: center;
   z-index: 1;
 }

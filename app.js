@@ -1201,14 +1201,14 @@ function monthTicks(width, bounds) {
     const opening = first;
     const yearEdge = monthDate.getUTCMonth() === 0;
     const align = opening && !show ? "start" : "middle";
-    const label = opening ? `${name} ${year}` : yearEdge ? (show ? `${name} ${year}` : String(year)) : name;
     ticks.push({
       line: cursor >= bounds.start && cursor <= bounds.end ? xFor(cursor, width, bounds) : null,
-      labelX: align === "start" ? xFor(visibleStart, width, bounds) + 6 : xFor((visibleStart + visibleEnd) / 2, width, bounds),
+      labelX: align === "start" ? xFor(visibleStart, width, bounds) + 4 : xFor((visibleStart + visibleEnd) / 2, width, bounds),
       show: show || yearEdge || opening,
       yearEdge,
+      year,
       align,
-      text: label,
+      text: name,
     });
     if (show || opening) first = false;
   }
@@ -1542,6 +1542,102 @@ function renderChartDetail(rows) {
   ]));
 }
 
+function axisBox(node, origin) {
+  const box = node.getBoundingClientRect();
+  return { node, left: box.left - origin, right: box.right - origin, top: box.top, bottom: box.bottom };
+}
+
+function pinAxisLeft(node, left) {
+  node.style.left = `${Math.round(left)}px`;
+  node.style.transform = "none";
+}
+
+function axisOverlap(a, b, gap) {
+  return a.left < b.right + gap && a.right + gap > b.left;
+}
+
+function settleAxisLabels(monthNodes, yearNodes, pill, width) {
+  const track = monthNodes[0]?.parentElement || yearNodes[0]?.parentElement || pill?.parentElement;
+  if (!track) return;
+  const origin = track.getBoundingClientRect().left;
+  const gap = 6;
+  const kept = [];
+  monthNodes.forEach((node) => {
+    if (!node.isConnected) return;
+    let box = axisBox(node, origin);
+    const span = box.right - box.left;
+    if (box.left < 2) {
+      pinAxisLeft(node, 2);
+      box = axisBox(node, origin);
+    }
+    if (box.right > width - 2) {
+      pinAxisLeft(node, Math.max(2, width - 2 - span));
+      box = axisBox(node, origin);
+    }
+    const prev = kept[kept.length - 1];
+    if (prev && axisOverlap(prev, box, gap)) {
+      const prefer = node.dataset.yearEdge === "true" || node.dataset.last === "true";
+      if (prefer && prev.node.dataset.yearEdge !== "true") {
+        prev.node.remove();
+        kept.pop();
+        const earlier = kept[kept.length - 1];
+        if (earlier && axisOverlap(earlier, box, gap)) {
+          node.remove();
+          return;
+        }
+      } else {
+        node.remove();
+        return;
+      }
+    }
+    kept.push(box);
+  });
+  const years = [];
+  yearNodes.forEach((node) => {
+    if (!node.isConnected) return;
+    let box = axisBox(node, origin);
+    if (box.left < 2) {
+      pinAxisLeft(node, 2);
+      box = axisBox(node, origin);
+    }
+    const prev = years[years.length - 1];
+    if (prev && axisOverlap(prev, box, gap)) {
+      pinAxisLeft(node, prev.right + gap);
+      box = axisBox(node, origin);
+      if (box.right > width - 2) {
+        node.remove();
+        return;
+      }
+    }
+    years.push(box);
+  });
+  if (!pill) return;
+  let pillBox = axisBox(pill, origin);
+  years.forEach((year) => {
+    if (!year.node.isConnected) return;
+    const box = axisBox(year.node, origin);
+    if (!axisOverlap(pillBox, box, gap)) return;
+    const pillW = pillBox.right - pillBox.left;
+    const yearW = box.right - box.left;
+    const yearOnRight = box.left >= pillBox.left;
+    if (yearOnRight && pillBox.right + gap + yearW <= width - 2) {
+      pinAxisLeft(year.node, pillBox.right + gap);
+      return;
+    }
+    const pillLeft = box.left - gap - pillW;
+    if (pillLeft >= 2) {
+      pinAxisLeft(pill, pillLeft);
+      pillBox = axisBox(pill, origin);
+      return;
+    }
+    const pillRight = box.right + gap;
+    if (pillRight + pillW <= width - 2) {
+      pinAxisLeft(pill, pillRight);
+      pillBox = axisBox(pill, origin);
+    }
+  });
+}
+
 function renderChart(rows) {
   const scroll = document.getElementById("chartScroll");
   const empty = document.getElementById("chartEmpty");
@@ -1632,24 +1728,42 @@ function renderChart(rows) {
   const built = buildSvg(lanes, rows, width, bounds);
   canvas.append(built.root);
   track.style.width = `${width}px`;
-  monthTicks(width, bounds).forEach((tick) => {
-    if (!tick.show) return;
+  const ticks = monthTicks(width, bounds).filter((tick) => tick.show);
+  const monthNodes = ticks.map((tick, index) => {
     const alignStart = tick.align === "start";
-    track.append(el("span", {
-      class: tick.yearEdge || tick.text.includes(" ") ? "chart-axis-label is-year" : "chart-axis-label",
+    return el("span", {
+      class: "chart-axis-label",
       style: `left:${Math.round(tick.labelX)}px;transform:translateX(${alignStart ? "0" : "-50%"})`,
+      "data-year-edge": tick.yearEdge ? "true" : "false",
+      "data-last": index === ticks.length - 1 ? "true" : "false",
       text: tick.text,
+    });
+  });
+  const seenYears = new Set();
+  const yearNodes = [];
+  ticks.forEach((tick) => {
+    if (seenYears.has(tick.year)) return;
+    seenYears.add(tick.year);
+    const anchor = tick.yearEdge && tick.line != null ? tick.line + 4 : tick.align === "start" ? tick.labelX : Math.max(4, (tick.line != null ? tick.line : tick.labelX) + 2);
+    yearNodes.push(el("span", {
+      class: "chart-axis-year",
+      style: `left:${Math.round(anchor)}px`,
+      text: String(tick.year),
     }));
   });
+  track.append(...monthNodes, ...yearNodes);
+  let pill = null;
   if (built.todayX != null) {
     const pillW = 52;
-    const pillLeft = Math.max(4, Math.min(built.todayX - pillW / 2, width - pillW - 4));
-    track.append(el("span", {
+    const pillLeft = Math.max(2, Math.min(built.todayX - pillW / 2, width - pillW - 2));
+    pill = el("span", {
       class: "today-pill",
       style: `left:${Math.round(pillLeft)}px;width:${pillW}px`,
       text: "Today",
-    }));
+    });
+    track.append(pill);
   }
+  settleAxisLabels(monthNodes, yearNodes, pill, width);
   const syncAxis = () => { track.style.transform = `translateX(${-plot.scrollLeft}px)`; };
   plot.addEventListener("scroll", () => {
     syncAxis();

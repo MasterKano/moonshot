@@ -1,0 +1,349 @@
+{
+ "country": "Gabon",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "BWE.OL",
+   "name": "BW Energy Limited",
+   "in_dataset": true,
+   "exchange": "Oslo Bors",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Dussafu Marin",
+     "working_interest": "73.5%",
+     "operator": "BW Energy",
+     "stage": "Production (Tortue, Hibiscus, Hibiscus South via MaBoMo and BW Adolo); licence extended to 2053; MaBoMo Phase 2 first oil Q1 2027; Bourdon Phase 1 FID, first oil Q1 2028",
+     "basin": "South Gabon Basin",
+     "source_url": "https://newsweb.oslobors.no/message/684106"
+    },
+    {
+     "licence": "Niosi Marin, Guduma Marin",
+     "working_interest": "Operated (percentage not restated in latest releases)",
+     "operator": "BW Energy",
+     "stage": "Exploration",
+     "basin": "South Gabon Basin",
+     "source_url": "https://newsweb.oslobors.no/message/684751"
+    }
+   ]
+  },
+  {
+   "code": "PEN.OL",
+   "name": "Panoro Energy ASA",
+   "in_dataset": true,
+   "exchange": "Oslo Bors",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Dussafu Marin",
+     "working_interest": "17.5%",
+     "operator": "BW Energy",
+     "stage": "Production; see BW Energy",
+     "basin": "South Gabon Basin",
+     "source_url": "https://newsweb.oslobors.no/message/684111"
+    },
+    {
+     "licence": "Niosi Marin, Guduma Marin",
+     "working_interest": "Non-operated (percentage not restated in latest releases)",
+     "operator": "BW Energy",
+     "stage": "Exploration",
+     "basin": "South Gabon Basin",
+     "source_url": "https://newsweb.oslobors.no/message/684752"
+    }
+   ]
+  }
+ ],
+ "context": [
+  "Gabon Oil Company (9% Dussafu)",
+  "Borr Drilling (owner of the lost Borr Prospector 5 jack-up)",
+  "VAALCO and Maurel et Prom also produce in Gabon but are not in the screen"
+ ],
+ "catalysts": [
+  {
+   "date": "2026-04-07",
+   "date_precision": "exact",
+   "net": null,
+   "type": "permit or approval",
+   "headline": "Dussafu licence extended by 25 years to 2053",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/670015",
+   "status": "past",
+   "note": "Panoro release: https://newsweb.oslobors.no/message/670012"
+  },
+  {
+   "date": "2026-05-20",
+   "date_precision": "exact",
+   "net": null,
+   "type": "fid",
+   "headline": "FID on Bourdon Phase 1, Dussafu (about 25 mmboe gross 2P, first oil Q1 2028)",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/673908",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-13",
+   "date_precision": "exact",
+   "net": null,
+   "type": "funding",
+   "headline": "BW Energy leases Bourdon wellhead platform and extends RCF",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL"
+   ],
+   "other_partners": [],
+   "source_url": "https://newsweb.oslobors.no/message/683967",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-15",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "Dussafu appraisal wells find oil (8 to 9 mmbbl gross); fifth MaBoMo Phase 2 well added",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/684106",
+   "status": "past",
+   "note": "Panoro release: https://newsweb.oslobors.no/message/684111"
+  },
+  {
+   "date": "2026-10-15",
+   "date_precision": "exact",
+   "net": null,
+   "type": "setback",
+   "headline": "BW Energy Q3 operational update: 2026 production guidance cut to about 23,000 bopd net after Dussafu ESP and Golfinho issues",
+   "category": "Operational",
+   "tier": "setback",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL"
+   ],
+   "other_partners": [],
+   "source_url": "https://newsweb.oslobors.no/message/684105",
+   "status": "past",
+   "note": "Group guidance; Dussafu downtime also hits Panoro volumes"
+  },
+  {
+   "date": "2026-10-25",
+   "date_precision": "exact",
+   "net": null,
+   "type": "shutdown",
+   "headline": "Borr Prospector 5 jack-up lost while jacking at Dussafu; MaBoMo production shut in",
+   "category": "Operational",
+   "tier": "setback",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)",
+    "Borr Drilling (rig owner)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/684751",
+   "status": "past",
+   "note": "Panoro release: https://newsweb.oslobors.no/message/684752. Puts MaBoMo Phase 2 timing at risk; no revised schedule yet"
+  },
+  {
+   "date": "2026-10-29",
+   "date_precision": "exact",
+   "net": "tight",
+   "type": "results due",
+   "headline": "BW Energy Q3 2026 results",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL"
+   ],
+   "other_partners": [],
+   "source_url": "https://newsweb.oslobors.no/message/668607",
+   "status": "upcoming",
+   "note": "First results since the rig loss"
+  },
+  {
+   "date": "2026-11-18",
+   "date_precision": "exact",
+   "net": "tight",
+   "type": "results due",
+   "headline": "Panoro Q3 2026 trading update",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PEN.OL",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PEN.OL"
+   ],
+   "other_partners": [],
+   "source_url": "https://newsweb.oslobors.no/message/661353",
+   "status": "upcoming"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "production",
+   "headline": "MaBoMo production restart and revised drilling plan after rig loss",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/684751",
+   "status": "upcoming",
+   "note": "No restart date given"
+  },
+  {
+   "date": "2027-03-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "first production",
+   "headline": "MaBoMo Phase 2 first oil (four infill wells, plus fifth well at 10P2; about 5,000 bopd gross per well)",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "South Gabon Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "73.5% (operator)",
+     "in_dataset": true
+    },
+    {
+     "code": "PEN.OL",
+     "interest": "17.5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "PEN.OL"
+   ],
+   "other_partners": [
+    "Gabon Oil Company (9%)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/684106",
+   "status": "upcoming",
+   "note": "Guided Q1 2027 on 15 Oct (Panoro: early 2027, https://newsweb.oslobors.no/message/680244); the drilling rig was lost on 25 Oct, so timing is at risk"
+  }
+ ]
+}

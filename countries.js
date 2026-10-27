@@ -1,4 +1,12 @@
-const FILES = ["data/falklands.json", "data/namibia.json", "data/guyana.json", "data/south_africa.json"];
+const FILES = [
+  "data/falklands.json",
+  "data/namibia.json",
+  "data/guyana.json",
+  "data/south_africa.json",
+  "data/gabon.json",
+  "data/angola.json",
+  "data/colombia.json",
+];
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function el(tag, props, children) {
@@ -78,20 +86,29 @@ function companyLines(company) {
   }));
 }
 
+function watchStar(code, name) {
+  if (!code || !window.moonshotWatch) return null;
+  return window.moonshotWatch.star(code, name);
+}
+
 function nameNode(row) {
   const label = el("span", {}, [
     el("span", { class: "cap-name", text: showText(row.name) }),
     row.code ? el("span", { class: "cap-code", text: showText(row.code) }) : null,
     row.sector === "Oil and gas" && showText(row.basin) !== "—" ? el("span", { class: "place-label", text: showText(row.basin) }) : null,
   ]);
-  if (!row.listed) return label;
-  return el("button", {
-    type: "button",
-    class: "co-link",
-    onClick: () => {
-      if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(row.code);
-    },
-  }, [label]);
+  const main = row.listed
+    ? el("button", {
+      type: "button",
+      class: "co-link",
+      onClick: () => {
+        if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(row.code);
+      },
+    }, [label])
+    : label;
+  const star = watchStar(row.code, row.name);
+  if (!star) return main;
+  return el("span", { class: "co-with-star" }, [star, main]);
 }
 
 function affectedNodes(catalyst) {
@@ -167,6 +184,25 @@ function companyCards(rows) {
   ])));
 }
 
+function tierTag(tier) {
+  if (tier === "material") return el("span", { class: "cat-tag", text: "Material" });
+  if (tier === "setback") return el("span", { class: "no-badge setback", text: "Setback" });
+  if (tier === "background") return el("span", { class: "place-label", text: "Background" });
+  return null;
+}
+
+function statusTag(status) {
+  if (status === "upcoming") return el("span", { class: "no-badge upcoming", text: "Upcoming" });
+  if (status === "past") return el("span", { class: "place-label", text: "Past" });
+  return null;
+}
+
+function basinLabel(basin) {
+  const text = showText(basin);
+  if (text === "—") return null;
+  return el("span", { class: "place-label", text });
+}
+
 function catalystRows(catalysts) {
   return catalysts.map((catalyst) => ({
     sort: catalyst.date || "9999-99-99",
@@ -176,6 +212,9 @@ function catalystRows(catalysts) {
     type: catalyst.type,
     category: catalyst.category,
     net: catalyst.net,
+    tier: catalyst.tier,
+    status: catalyst.status,
+    basin: catalyst.basin,
     affected: catalyst,
   }));
 }
@@ -194,7 +233,14 @@ function catalystTable(rows) {
         el("span", { class: "cap-line" }, [
           sourceLink(row.url) ? el("a", { href: safeUrl(row.url), target: "_blank", rel: "noopener noreferrer", text: showText(row.headline) }) : el("span", { text: showText(row.headline) }),
         ]),
-        el("span", { class: "cap-kind" }, [showText(row.type) === "—" ? null : el("span", { text: showText(row.type) }), categoryTag(row.category), netBadge(row.net)]),
+        el("span", { class: "cap-kind" }, [
+          showText(row.type) === "—" ? null : el("span", { text: showText(row.type) }),
+          categoryTag(row.category),
+          tierTag(row.tier),
+          statusTag(row.status),
+          basinLabel(row.basin),
+          netBadge(row.net),
+        ]),
       ]),
       el("td", {}, [affectedNodes(row.affected)]),
     );
@@ -212,17 +258,24 @@ function catalystCards(rows) {
         ? el("a", { href: safeUrl(row.url), target: "_blank", rel: "noopener noreferrer", text: showText(row.headline) })
         : showText(row.headline),
     ]),
-    el("p", { class: "cap-kind" }, [categoryTag(row.category), netBadge(row.net)]),
+    el("p", { class: "cap-kind" }, [categoryTag(row.category), tierTag(row.tier), statusTag(row.status), basinLabel(row.basin), netBadge(row.net)]),
     affectedNodes(row.affected),
   ])));
 }
 
+function alsoActive(file) {
+  const items = (Array.isArray(file.context) ? file.context : []).map((item) => showText(item)).filter((item) => item !== "—");
+  if (!items.length) return null;
+  return el("p", { class: "also-active", text: `Also active: ${items.join(", ")}` });
+}
+
 function section(file) {
   const companies = (file.companies || []).flatMap(companyLines);
-  const catalysts = catalystRows(file.catalysts || []).sort((a, b) => a.sort.localeCompare(b.sort) || a.headline.localeCompare(b.headline));
+  const catalysts = catalystRows(file.catalysts || []).sort((a, b) => a.sort.localeCompare(b.sort) || String(a.headline).localeCompare(String(b.headline)));
   const later = catalystRows(file.beyond_window || []).sort((a, b) => a.sort.localeCompare(b.sort));
   return el("section", { class: "country-block", "data-country": file.country }, [
     el("h3", { text: showText(file.country) }),
+    alsoActive(file),
     el("p", { class: "eyebrow", text: "Companies" }),
     el("div", { class: "table-wrap wide-only cap-scroll" }, [companyTable(companies)]),
     el("div", { class: "narrow-only" }, [companyCards(companies)]),

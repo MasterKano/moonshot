@@ -1,4 +1,4 @@
-const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false };
+const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false, watchOnly: false };
 let items = [];
 let slipped = [];
 
@@ -70,6 +70,7 @@ function inView(item, today, end) {
   if (state.market !== "all" && item.market !== state.market) return false;
   if (state.sector !== "all" && item.sector !== state.sector) return false;
   if (state.category !== "all" && item.category !== state.category) return false;
+  if (state.watchOnly && !(window.moonshotWatch && window.moonshotWatch.has(item.company_code))) return false;
   return true;
 }
 
@@ -225,10 +226,14 @@ function render() {
     document.getElementById("coming-table").replaceChildren();
     document.getElementById("coming-cards").replaceChildren();
     empty.hidden = false;
-    empty.replaceChildren(
-      el("strong", { text: "No events in this window" }),
-      el("p", { text: "Widen the range, or set the filters back to All." }),
-    );
+    const pinned = window.moonshotWatch ? window.moonshotWatch.codes().length : 0;
+    const title = state.watchOnly && !pinned ? "No companies pinned" : state.watchOnly ? "No pinned companies" : "No events in this window";
+    const detail = state.watchOnly && !pinned
+      ? "Star a company to build a watchlist."
+      : state.watchOnly
+        ? "No pinned companies in this window."
+        : "Widen the range, or set the filters back to All.";
+    empty.replaceChildren(el("strong", { text: title }), el("p", { text: detail }));
   } else {
     empty.hidden = true;
     renderTable(rows);
@@ -271,6 +276,22 @@ function mountFilters() {
         text: "Material only",
       }),
     ]),
+    el("label", { class: state.watchOnly ? "field active" : "field" }, [
+      "Watchlist",
+      el("button", {
+        type: "button",
+        class: "toggle-btn",
+        id: "coming-watch",
+        "aria-pressed": state.watchOnly ? "true" : "false",
+        onClick: (event) => {
+          state.watchOnly = !state.watchOnly;
+          event.currentTarget.setAttribute("aria-pressed", state.watchOnly ? "true" : "false");
+          event.currentTarget.closest(".field").classList.toggle("active", state.watchOnly);
+          render();
+        },
+        text: "Watchlist",
+      }),
+    ]),
   );
 }
 
@@ -311,6 +332,12 @@ async function load() {
 }
 
 function boot() {
+  if (window.moonshotWatch) {
+    window.moonshotWatch.subscribe(() => {
+      if (!document.body.dataset.coming) return;
+      render();
+    });
+  }
   load().catch(showError);
 }
 

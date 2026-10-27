@@ -1,0 +1,430 @@
+{
+ "country": "Colombia",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "AXL",
+   "name": "Arrow Exploration Corp.",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Tapir (Icaco, Mateguafa, Carrizales Norte, Rio Cravo Este, Alberta Llanos)",
+     "working_interest": "50% beneficial via private contract with Petrolco; assignment subject to Ecopetrol consent",
+     "operator": "Arrow (de facto); Petrolco named operator",
+     "stage": "Production and drilling; Tapir extension under discussion",
+     "basin": "Llanos Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126"
+    },
+    {
+     "licence": "Oso Pardo (Santa Isabel)",
+     "working_interest": "100%",
+     "operator": "Arrow",
+     "stage": "Production",
+     "basin": "Middle Magdalena Valley Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126"
+    },
+    {
+     "licence": "Ombu (Capella)",
+     "working_interest": "10%",
+     "operator": "Non-operated",
+     "stage": "Production",
+     "basin": "Caguan Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126"
+    },
+    {
+     "licence": "COR-39",
+     "working_interest": "100%",
+     "operator": "Arrow",
+     "stage": "Exploration",
+     "basin": "Llanos Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126"
+    }
+   ]
+  },
+  {
+   "code": "OMI",
+   "name": "Orosur Mining Inc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Mining",
+   "commodity": "Gold",
+   "project": "Anza (Pepas, APTA, El Cedro), Antioquia",
+   "note": "Pepas maiden resource 219,000 oz; APTA resource estimate possible later in 2026"
+  }
+ ],
+ "context": [
+  "Ecopetrol",
+  "Petrolco",
+  "Gran Tierra, Parex, GeoPark and Canacol operate in Colombia but are not in the screen"
+ ],
+ "catalysts": [
+  {
+   "date": "2026-02-10",
+   "date_precision": "exact",
+   "net": null,
+   "type": "resource",
+   "headline": "Orosur maiden resource at Pepas, 219,000 oz gold",
+   "category": "Operational",
+   "tier": "material",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Anza project (Minera Anza)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/maiden-mineral-resource-estimate-at-pepas/9422356",
+   "status": "past"
+  },
+  {
+   "date": "2026-03-20",
+   "date_precision": "exact",
+   "net": null,
+   "type": "reserve",
+   "headline": "Arrow year-end 2025 reserves",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/operational-update-and-2025-year-end-reserves-/9483473",
+   "status": "past"
+  },
+  {
+   "date": "2026-05-26",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "Icaco-1 exploration well finds oil in three zones, Tapir Block",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-exploration-well-ic-1-results-/9583996",
+   "status": "past"
+  },
+  {
+   "date": "2026-06-09",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "Orosur finds new mineralised zones at APTA",
+   "category": "Operational",
+   "tier": "material",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Anza project (Minera Anza)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/results-for-first-quarter-ended-august-31-2026/9839917",
+   "status": "past"
+  },
+  {
+   "date": "2026-07-14",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "APTA hole MAP 107: 135 m at 1.91 g/t gold",
+   "category": "Operational",
+   "tier": "material",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Anza project (Minera Anza)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/results-for-first-quarter-ended-august-31-2026/9839917",
+   "status": "past"
+  },
+  {
+   "date": "2026-08-11",
+   "date_precision": "exact",
+   "net": null,
+   "type": "other",
+   "headline": "Colombian earthquake: minor impact at Anza, no delays expected",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Anza project (Minera Anza)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/colombian-earthquake/9715828",
+   "status": "past"
+  },
+  {
+   "date": "2026-08-27",
+   "date_precision": "exact",
+   "net": null,
+   "type": "results",
+   "headline": "Arrow Q2 2026 results",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126",
+   "status": "past"
+  },
+  {
+   "date": "2026-09-17",
+   "date_precision": "exact",
+   "net": null,
+   "type": "reserve",
+   "headline": "Arrow mid-year reserves: 2P up 82% to 21.4 MMboe, helped by the Icaco discovery",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-provides-mid-year-2026-reserves-update/9776239",
+   "status": "past",
+   "note": "Includes Canadian assets (Thorsby)"
+  },
+  {
+   "date": "2026-10-06",
+   "date_precision": "exact",
+   "net": null,
+   "type": "funding",
+   "headline": "Orosur closes C$16m placement",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/results-for-first-quarter-ended-august-31-2026/9839917",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-22",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "Icaco-8 and Icaco-7 on production; Arrow output record above 6,500 boe/d; first horizontal Carbonera well IC-HZ9 drilling",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-ic-8-ic-7-well-results-/9835252",
+   "status": "past"
+  },
+  {
+   "date": "2026-11-16",
+   "date_precision": "exact",
+   "net": "tight",
+   "type": "shareholder meeting",
+   "headline": "Orosur AGM, Toronto",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/notice-of-annual-and-special-meeting/9825993",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-11-30",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "results due",
+   "headline": "Arrow Q3 2026 results",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126",
+   "status": "upcoming",
+   "note": "Statutory filing deadline"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "discovery or drill result",
+   "headline": "IC-HZ9 horizontal well test results, Carbonera C7",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-ic-8-ic-7-well-results-/9835252",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "year",
+   "net": "loose",
+   "type": "resource",
+   "headline": "Orosur APTA resource estimate (potential, later in 2026)",
+   "category": "Operational",
+   "tier": "material",
+   "basin": null,
+   "affected": [
+    {
+     "code": "OMI",
+     "interest": "Anza project (Minera Anza)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "OMI"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/orosur-mining-inc-full-year-2026-results-/9792643",
+   "status": "upcoming"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "permit or approval",
+   "headline": "Tapir Block contract extension",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Llanos Basin",
+   "affected": [
+    {
+     "code": "AXL",
+     "interest": "50% beneficial (de facto operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AXL"
+   ],
+   "other_partners": [
+    "Petrolco (named operator)",
+    "Ecopetrol (contract holder)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-ic-8-ic-7-well-results-/9835252",
+   "status": "upcoming",
+   "note": "Arrow reports constructive talks with regulators; no date guided"
+  }
+ ]
+}

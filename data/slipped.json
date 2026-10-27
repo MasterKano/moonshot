@@ -43,5 +43,32 @@
   "status": "past guided date, no announcement",
   "checked_date": "2026-10-27",
   "note": "Low materiality; a stand-alone release is unlikely, so expect confirmation in the Q3 report"
+ },
+ {
+  "code": "AET",
+  "item_headline": "Completion of Etu acquisition (Blocks 3/05 and 3/05A)",
+  "originally_guided": "Q3 2026",
+  "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-and-financial-update-/9654881",
+  "status": "past guided date, no announcement",
+  "checked_date": "2026-10-27",
+  "note": "Block 3/05 decree published 6 Oct 2026; 3/05A decree still awaited (https://www.investegate.co.uk/announcement/rns/afentra--aet/etu-acquisition-update-/9809496)"
+ },
+ {
+  "code": "AET",
+  "item_headline": "KON15 300 km 2D seismic start",
+  "originally_guided": "September 2026",
+  "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538",
+  "status": "past guided date, no announcement",
+  "checked_date": "2026-10-27",
+  "note": "Low materiality; not mentioned in 12 Oct 2026 operational update"
+ },
+ {
+  "code": "PRE",
+  "item_headline": "Longonjo first production",
+  "originally_guided": "2027",
+  "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/construction-on-track-for-2027-first-producti-/9454960",
+  "status": "guidance moved later",
+  "checked_date": "2026-10-27",
+  "note": "26 Oct 2026: commissioning early 2028, full production late 2028 (https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296)"
  }
 ]

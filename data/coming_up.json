@@ -22,6 +22,25 @@
       "source_url": "https://www.equinor.com/investors/events-and-presentations"
     },
     {
+      "id": "D-BWE.OL-2026-10-29-0",
+      "anchor": "2026-10-29",
+      "precision": "exact",
+      "date_label": "29 Oct 2026",
+      "approx": false,
+      "suffix": "",
+      "market": "Nordic",
+      "sector": "Oil and gas",
+      "category": "Corporate",
+      "company_name": "BW Energy Limited",
+      "company_code": "BWE.OL",
+      "link_key": "BWE.OL",
+      "type": "Results due",
+      "headline": "BW Energy Q3 2026 results",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://newsweb.oslobors.no/message/668607"
+    },
+    {
       "id": "N-NO212",
       "anchor": "2026-10-29",
       "precision": "exact",
@@ -136,6 +155,44 @@
       "source_url": "https://totalenergies.com/news/calendar"
     },
     {
+      "id": "L-AET-2026-11-30-0",
+      "anchor": "2026-11-01",
+      "precision": "month",
+      "date_label": "Nov 2026",
+      "approx": false,
+      "suffix": " (month)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Corporate",
+      "company_name": "Afentra plc",
+      "company_code": "AET",
+      "link_key": "AET",
+      "type": "Results due",
+      "headline": "Afentra trading update",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781"
+    },
+    {
+      "id": "C-CO-AXL-2026-11-30-11",
+      "anchor": "2026-11-01",
+      "precision": "month",
+      "date_label": "Nov 2026",
+      "approx": false,
+      "suffix": " (month)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Corporate",
+      "company_name": "Arrow Exploration Corp.",
+      "company_code": "AXL",
+      "link_key": "AXL",
+      "type": "Results due",
+      "headline": "Arrow Q3 2026 results",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/arrow-exploration-corp-cdi---axl/arrow-announces-q2-2026-interim-results-/9742126"
+    },
+    {
       "id": "L-AXL-2026-11-30-0",
       "anchor": "2026-11-01",
       "precision": "month",
@@ -191,6 +248,25 @@
       "band": "tight",
       "material": "Y",
       "source_url": "https://www.investegate.co.uk/announcement/rns/bezant-resources--bzt/interim-results-for-the-six-months-to-30-june-2026/9797671"
+    },
+    {
+      "id": "L-PRE-2026-11-30-0",
+      "anchor": "2026-11-01",
+      "precision": "month",
+      "date_label": "Nov 2026",
+      "approx": false,
+      "suffix": " (month)",
+      "market": "London",
+      "sector": "Mining",
+      "category": "Capital and deals",
+      "company_name": "Pensana plc",
+      "company_code": "PRE",
+      "link_key": "PRE",
+      "type": "Funding",
+      "headline": "Cascade tranche to Pensana due within 14 days of 26 Oct",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296"
     },
     {
       "id": "L-QHE-2026-11-30-0",
@@ -419,6 +495,44 @@
       "band": "tight",
       "material": "N",
       "source_url": "https://www.japex.co.jp/en/ir/"
+    },
+    {
+      "id": "L-OMI-2026-11-16-0",
+      "anchor": "2026-11-16",
+      "precision": "exact",
+      "date_label": "16 Nov 2026",
+      "approx": false,
+      "suffix": "",
+      "market": "London",
+      "sector": "Mining",
+      "category": "Corporate",
+      "company_name": "Orosur Mining Inc",
+      "company_code": "OMI",
+      "link_key": "OMI",
+      "type": "Other",
+      "headline": "Orosur AGM, Toronto",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/notice-of-annual-and-special-meeting/9825993"
+    },
+    {
+      "id": "D-PEN.OL-2026-11-18-0",
+      "anchor": "2026-11-18",
+      "precision": "exact",
+      "date_label": "18 Nov 2026",
+      "approx": false,
+      "suffix": "",
+      "market": "Nordic",
+      "sector": "Oil and gas",
+      "category": "Corporate",
+      "company_name": "Panoro Energy ASA",
+      "company_code": "PEN.OL",
+      "link_key": "PEN.OL",
+      "type": "Results due",
+      "headline": "Panoro Q3 2026 trading update",
+      "band": "tight",
+      "material": "N",
+      "source_url": "https://newsweb.oslobors.no/message/661353"
     },
     {
       "id": "L-PAF-2026-11-19-0",
@@ -839,6 +953,25 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/caledonia-mining-corporation-di---cmcl/results-for-q2-and-half-year-ended-june-30-2026/9711895"
     },
     {
+      "id": "C-AO-CHAR-2026-12-31-19",
+      "anchor": "2026-12-31",
+      "precision": "half",
+      "date_label": "H2 2026",
+      "approx": true,
+      "suffix": " (approx., H2 2026)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Capital and deals",
+      "company_name": "Chariot Limited",
+      "company_code": "CHAR",
+      "link_key": "CHAR",
+      "type": "Mna",
+      "headline": "Completion of Etu purchase of Azule Block 14 and 14K interests (Chariot financing)",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622"
+    },
+    {
       "id": "L-CHAR-2026-12-31-0",
       "anchor": "2026-12-31",
       "precision": "half",
@@ -951,25 +1084,6 @@
       "band": "loose",
       "material": "N",
       "source_url": "https://www.investegate.co.uk/announcement/rns/empire-metals-limited-npv-di---eee/interim-results/9742112"
-    },
-    {
-      "id": "L-ENOG-2026-12-31-0",
-      "anchor": "2026-12-31",
-      "precision": "quarter",
-      "date_label": "Q4 2026",
-      "approx": true,
-      "suffix": " (approx., Q4 2026)",
-      "market": "London",
-      "sector": "Oil and gas",
-      "category": "Capital and deals",
-      "company_name": "Energean plc",
-      "company_code": "ENOG",
-      "link_key": "ENOG",
-      "type": "MnA",
-      "headline": "Angola entry completion by year-end 2026",
-      "band": "tight",
-      "material": "Y",
-      "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/trading-statement-operational-update/9576511"
     },
     {
       "id": "L-ENQ-2026-12-31-0",
@@ -1200,7 +1314,7 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/oriole-resources--orr/interim-results-/9783191"
     },
     {
-      "id": "L-OMI-2026-12-31-0",
+      "id": "L-OMI-2026-12-31-1",
       "anchor": "2026-12-31",
       "precision": "year",
       "date_label": "2026",
@@ -1498,10 +1612,29 @@
       "company_code": "SEI",
       "link_key": "SEI",
       "type": "MnA",
-      "headline": "Acquisition completion expected H2 2026 (within 2026)",
+      "headline": "PEL 37 (Maravilla) acquisition completion expected within 2026",
       "band": "loose",
       "material": "Y",
       "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-to-30-june-2026-/9742130"
+    },
+    {
+      "id": "L-SEI-2026-12-31-2",
+      "anchor": "2026-12-31",
+      "precision": "half",
+      "date_label": "H2 2026",
+      "approx": true,
+      "suffix": " (approx., H2 2026)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Capital and deals",
+      "company_name": "Sintana Energy Inc.",
+      "company_code": "SEI",
+      "link_key": "SEI",
+      "type": "MnA",
+      "headline": "Completion of Sintana KON-16 entry",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626"
     },
     {
       "id": "L-SNDA-2026-12-31-0",
@@ -1789,7 +1922,7 @@
       "source_url": "https://www.equinor.com/energy/irpa"
     },
     {
-      "id": "L-AET-2027-01-31-0",
+      "id": "L-AET-2027-01-31-1",
       "anchor": "2027-01-01",
       "precision": "month",
       "date_label": "Jan 2027",
@@ -2112,7 +2245,7 @@
       "source_url": "https://totalenergies.com/news/calendar"
     },
     {
-      "id": "L-AET-2027-03-31-1",
+      "id": "L-AET-2027-03-31-2",
       "anchor": "2027-03-31",
       "precision": "quarter",
       "date_label": "Q1 2027",
@@ -2321,7 +2454,7 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/tungsten-west--tun/financial-results-for-the-year-ended-31-march-2026/9752872"
     },
     {
-      "id": "D-BWE.OL-2027-03-31-0",
+      "id": "D-BWE.OL-2027-03-31-1",
       "anchor": "2027-03-31",
       "precision": "quarter",
       "date_label": "Q1 2027",
@@ -2334,13 +2467,13 @@
       "company_code": "BWE.OL",
       "link_key": "BWE.OL",
       "type": "First production",
-      "headline": "MaBoMo Phase 2 (four development wells, Dussafu) first oil expected early 2027",
+      "headline": "MaBoMo Phase 2 (four development wells, Dussafu) first oil expected early 2027; at risk after 25 Oct rig loss",
       "band": "tight",
       "material": "Y",
       "source_url": "https://newsweb.oslobors.no/message/678796"
     },
     {
-      "id": "D-BWE.OL-2027-03-31-1",
+      "id": "D-BWE.OL-2027-03-31-2",
       "anchor": "2027-03-31",
       "precision": "quarter",
       "date_label": "Q1 2027",
@@ -2397,7 +2530,7 @@
       "source_url": "https://view.news.eu.nasdaq.com/view?id=bc86d6b095e6b668e4a6104a3dfd7d768&lang=en&src=listed"
     },
     {
-      "id": "D-PEN.OL-2027-03-31-0",
+      "id": "C-GA-PEN.OL-2027-03-31-9",
       "anchor": "2027-03-31",
       "precision": "quarter",
       "date_label": "Q1 2027",
@@ -2410,7 +2543,26 @@
       "company_code": "PEN.OL",
       "link_key": "PEN.OL",
       "type": "First production",
-      "headline": "Dussafu MaBoMo Phase 2 development wells: first oil expected early 2027",
+      "headline": "MaBoMo Phase 2 first oil (four infill wells, plus fifth well at 10P2; about 5,000 bopd gross per well)",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://newsweb.oslobors.no/message/684106"
+    },
+    {
+      "id": "D-PEN.OL-2027-03-31-1",
+      "anchor": "2027-03-31",
+      "precision": "quarter",
+      "date_label": "Q1 2027",
+      "approx": true,
+      "suffix": " (approx., Q1 2027)",
+      "market": "Nordic",
+      "sector": "Oil and gas",
+      "category": "Operational",
+      "company_name": "Panoro Energy ASA",
+      "company_code": "PEN.OL",
+      "link_key": "PEN.OL",
+      "type": "First production",
+      "headline": "Dussafu MaBoMo Phase 2 development wells: first oil expected early 2027; at risk after 25 Oct rig loss",
       "band": "tight",
       "material": "Y",
       "source_url": "https://newsweb.oslobors.no/message/680244"
@@ -2720,7 +2872,26 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/80-mile--80m/interim-results-/9773913"
     },
     {
-      "id": "L-AET-2027-06-30-2",
+      "id": "C-AO-AET-2027-06-30-25",
+      "anchor": "2027-06-30",
+      "precision": "half",
+      "date_label": "H1 2027",
+      "approx": true,
+      "suffix": " (approx., H1 2027)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Operational",
+      "company_name": "Afentra plc",
+      "company_code": "AET",
+      "link_key": "AET",
+      "type": "Study",
+      "headline": "KON4 focused seismic",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538"
+    },
+    {
+      "id": "L-AET-2027-06-30-3",
       "anchor": "2027-06-30",
       "precision": "half",
       "date_label": "H1 2027",
@@ -2737,6 +2908,44 @@
       "band": "loose",
       "material": "N",
       "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538"
+    },
+    {
+      "id": "L-AET-2027-06-30-4",
+      "anchor": "2027-06-30",
+      "precision": "half",
+      "date_label": "H1 2027",
+      "approx": true,
+      "suffix": " (approx., H1 2027)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Operational",
+      "company_name": "Afentra plc",
+      "company_code": "AET",
+      "link_key": "AET",
+      "type": "Drilling start",
+      "headline": "Block 3/05 hydraulic workover programme, early 2027",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781"
+    },
+    {
+      "id": "C-AO-CHAR-2027-06-30-24",
+      "anchor": "2027-06-30",
+      "precision": "half",
+      "date_label": "H1 2027",
+      "approx": true,
+      "suffix": " (approx., H1 2027)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Capital and deals",
+      "company_name": "Chariot Limited",
+      "company_code": "CHAR",
+      "link_key": "CHAR",
+      "type": "Mna",
+      "headline": "Completion of Etu purchase of Chevron Block 14 and 14K interests (BW and Chariot exposure)",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622"
     },
     {
       "id": "L-CHAR-2027-06-30-1",
@@ -2777,7 +2986,7 @@
       "source_url": "https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-months-/9788241"
     },
     {
-      "id": "L-ENOG-2027-06-30-1",
+      "id": "L-ENOG-2027-06-30-0",
       "anchor": "2027-06-30",
       "precision": "half",
       "date_label": "H1 2027",
@@ -3005,7 +3214,7 @@
       "source_url": "https://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-results-for-the-year-ended-/9774204"
     },
     {
-      "id": "L-PRE-2027-06-30-0",
+      "id": "L-PRE-2027-06-30-1",
       "anchor": "2027-06-30",
       "precision": "half",
       "date_label": "H1 2027",
@@ -3100,7 +3309,7 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514"
     },
     {
-      "id": "L-SEI-2027-06-30-2",
+      "id": "L-SEI-2027-06-30-3",
       "anchor": "2027-06-30",
       "precision": "quarter",
       "date_label": "Q2 2027",
@@ -3176,7 +3385,26 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-results-to-30-june-2026-/9792645"
     },
     {
-      "id": "D-BWE.OL-2027-06-30-2",
+      "id": "C-AO-BWE.OL-2027-06-30-24",
+      "anchor": "2027-06-30",
+      "precision": "half",
+      "date_label": "H1 2027",
+      "approx": true,
+      "suffix": " (approx., H1 2027)",
+      "market": "Nordic",
+      "sector": "Oil and gas",
+      "category": "Capital and deals",
+      "company_name": "BW Energy Limited",
+      "company_code": "BWE.OL",
+      "link_key": "BWE.OL",
+      "type": "Mna",
+      "headline": "Completion of Etu purchase of Chevron Block 14 and 14K interests (BW and Chariot exposure)",
+      "band": "loose",
+      "material": "N",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622"
+    },
+    {
+      "id": "D-BWE.OL-2027-06-30-3",
       "anchor": "2027-06-30",
       "precision": "quarter",
       "date_label": "Q2 2027",
@@ -3575,25 +3803,6 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/metals-one--met1/half-year-financial-report/9799196"
     },
     {
-      "id": "L-PRE-2027-12-31-1",
-      "anchor": "2027-12-31",
-      "precision": "year",
-      "date_label": "2027",
-      "approx": true,
-      "suffix": " (approx., 2027)",
-      "market": "London",
-      "sector": "Mining",
-      "category": "Operational",
-      "company_name": "Pensana plc",
-      "company_code": "PRE",
-      "link_key": "PRE",
-      "type": "First production",
-      "headline": "Longonjo first production and commissioning scheduled for 2027",
-      "band": "loose",
-      "material": "Y",
-      "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/unaudited-interim-results-for-the-six-months-/9495809"
-    },
-    {
       "id": "L-PXEN-2027-12-31-1",
       "anchor": "2027-12-31",
       "precision": "year",
@@ -3630,6 +3839,25 @@
       "band": "loose",
       "material": "Y",
       "source_url": "https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249"
+    },
+    {
+      "id": "L-SEI-2027-12-31-4",
+      "anchor": "2027-12-31",
+      "precision": "year",
+      "date_label": "2027",
+      "approx": true,
+      "suffix": " (approx., 2027)",
+      "market": "London",
+      "sector": "Oil and gas",
+      "category": "Operational",
+      "company_name": "Sintana Energy Inc.",
+      "company_code": "SEI",
+      "link_key": "SEI",
+      "type": "Drilling start",
+      "headline": "KON-16 pre-salt exploration well",
+      "band": "loose",
+      "material": "Y",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626"
     },
     {
       "id": "L-SVML-2027-12-31-0",
@@ -3725,6 +3953,25 @@
       "band": "loose",
       "material": "Y",
       "source_url": "https://www.equinor.com/news/20260625-wisting-proposal-environmental-impact-assessment-programme"
+    },
+    {
+      "id": "L-PRE-2028-03-31-2",
+      "anchor": "2028-03-31",
+      "precision": "quarter",
+      "date_label": "Q1 2028",
+      "approx": true,
+      "suffix": " (approx., Q1 2028)",
+      "market": "London",
+      "sector": "Mining",
+      "category": "Operational",
+      "company_name": "Pensana plc",
+      "company_code": "PRE",
+      "link_key": "PRE",
+      "type": "First production",
+      "headline": "Longonjo commissioning early 2028, full production late 2028",
+      "band": "loose",
+      "material": "Y",
+      "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296"
     }
   ]
 }

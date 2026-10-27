@@ -319,5 +319,57 @@
   ],
   "relation": "counterparty",
   "note": "Vår is the seller"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-02-06",
+  "headline": "JV partner to pre-empt BW Energy Block 14 deal with Azule",
+  "affected_codes": [
+   "CHAR"
+  ],
+  "relation": "counterparty",
+  "note": "Pre-empting buyer Etu is part-financed by Chariot"
+ },
+ {
+  "source_code": "ENOG",
+  "date": "2026-06-03",
+  "headline": "Etu moves to pre-empt Energean purchase of Chevron Block 14 interests",
+  "affected_codes": [
+   "BWE.OL",
+   "CHAR"
+  ],
+  "relation": "counterparty",
+  "note": "BW and Chariot later backed Etu on the same interests; setback for Energean"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-08-28",
+  "headline": "BW Energy and Chariot back Etu purchase of Chevron Block 14 and 14K interests",
+  "affected_codes": [
+   "CHAR",
+   "ENOG"
+  ],
+  "relation": "partner",
+  "note": "Chariot same structure (1 Sep 2026); Energean is the displaced buyer"
+ },
+ {
+  "source_code": "CHAR",
+  "date": "2027-06-30",
+  "headline": "Completion of Etu purchase of Chevron Block 14 interests (upcoming)",
+  "affected_codes": [
+   "BWE.OL"
+  ],
+  "relation": "partner",
+  "note": "Same transaction"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-10-15",
+  "headline": "BW Energy cuts 2026 production guidance after Dussafu ESP and Golfinho issues",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "Dussafu downtime also hits Panoro; setback"
  }
 ]

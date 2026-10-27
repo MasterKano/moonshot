@@ -971,6 +971,23 @@ function unmatchedSlipped(row) {
   return slipped.filter((item) => codesMatch(item.code, row.code) && !row.upcoming.some((upcoming) => headlinesClose(item.item_headline, upcoming.headline)));
 }
 
+function upcomingTrend(item) {
+  const key = String(item.guidance_trend || "").toLowerCase();
+  if (item.status === "overdue") return el("span", { class: "slip-tag", text: "Overdue" });
+  if (item.status === "slipped" || key.includes("slipped")) return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  if (key === "no update found") return el("span", { class: "chip chip-trend-none", title: "The guided window has not moved in the notes on file.", text: "No update found" });
+  return null;
+}
+
+function guidanceLines(item) {
+  const history = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+  if (!history.length) return null;
+  return el("ul", { class: "guidance-list" }, history.map((entry) => el("li", {}, [
+    el("span", { class: "cap-date", text: showText(entry.date_seen) }),
+    el("span", { text: showText(entry.window_text) }),
+  ])));
+}
+
 function eventIsBackground(event) {
   if (event.significance) return event.significance === "background";
   return !!event.background;
@@ -1029,13 +1046,14 @@ function expandBody(row) {
     ? [
       el("p", { class: "eyebrow", text: "Upcoming" }),
       el("ul", { class: "cap-events" }, upcomingItems.map((item) => el("li", { class: "cap-event" }, [
-        el("span", { class: "cap-date date-stack" }, [el("span", { text: formatUpcomingDate(item) }), basisTag(item.date_basis)]),
+        el("span", { class: "cap-date date-stack" }, [el("span", { text: formatUpcomingDate(item) }), basisTag(item.date_basis), upcomingTrend(item)]),
         el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)]),
         el("span", { class: "cap-line" }, [headlineLink(item), alsoAffects(row, item)]),
         el("span", { class: "chip-row" }, [
           screenChips(item),
           slipTag(row.code, item),
         ]),
+        guidanceLines(item),
       ]))),
     ]
     : [];

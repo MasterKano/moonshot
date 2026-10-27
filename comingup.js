@@ -1,3 +1,4 @@
+const openIds = new Set();
 const state = {
   horizon: "30",
   market: "all",
@@ -102,7 +103,10 @@ function companyButton(item) {
   return el("button", {
     type: "button",
     class: "co-link",
-    onClick: () => openItem(item),
+    onClick: (event) => {
+      event.stopPropagation();
+      openItem(item);
+    },
   }, [
     el("span", { class: "cap-name", text: showText(item.company_name) }),
     el("span", { class: "cap-code", text: showText(item.company_code) }),
@@ -165,6 +169,37 @@ function slippedRecord(item) {
   return slipped.find((entry) => codesMatch(entry.code, item.company_code) && headlinesClose(entry.item_headline, item.headline)) || null;
 }
 
+function trendChip(trend, status) {
+  const key = String(trend || "").toLowerCase();
+  if (key === "no update found") return el("span", { class: "chip chip-trend-none", title: "The guided window has not moved in the notes on file.", text: "No update found" });
+  if (status === "slipped" || status === "overdue") return null;
+  if (key.includes("slipped")) return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  return null;
+}
+
+function statusFlag(item) {
+  if (item.status === "overdue") return el("span", { class: "slip-tag", title: "The guided window has ended.", text: "Overdue" });
+  if (item.status === "slipped") return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  return null;
+}
+
+function guidanceBlock(item) {
+  const history = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+  if (!history.length && !item.guidance_trend) return el("p", { class: "label-notes", text: "No guidance history on file." });
+  return el("div", { class: "guidance-block" }, [
+    el("p", { class: "eyebrow", text: "Guidance history" }),
+    trendChip(item.guidance_trend),
+    history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
+      const href = safeUrl(entry.source_url_if_any);
+      return el("li", {}, [
+        el("span", { class: "cap-date", text: showText(entry.date_seen) }),
+        el("span", { text: showText(entry.window_text) }),
+        href ? el("a", { href, target: "_blank", rel: "noopener noreferrer", text: "Source" }) : null,
+      ]);
+    })) : null,
+  ]);
+}
+
 function slipTag(item) {
   const record = slippedRecord(item);
   if (!record && !dateHasPassed(item)) return null;
@@ -204,7 +239,7 @@ function categoryTag(value) {
 }
 
 function badges(item) {
-  return el("span", { class: "chip-row" }, [...labelChips(item), slipTag(item)]);
+  return el("span", { class: "chip-row" }, [statusFlag(item), trendChip(item.guidance_trend), ...labelChips(item), slipTag(item)]);
 }
 
 function headlineNode(item) {
@@ -225,16 +260,35 @@ function renderTable(rows) {
   table.append(head);
   const body = el("tbody");
   rows.forEach((item) => {
-    const row = el("tr");
+    const open = openIds.has(item.id);
+    const row = el("tr", {
+      class: open ? "is-open" : "",
+      tabindex: "0",
+      role: "button",
+      "aria-expanded": open ? "true" : "false",
+      onClick: () => {
+        if (openIds.has(item.id)) openIds.delete(item.id);
+        else openIds.add(item.id);
+        render();
+      },
+      onKeydown: (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        if (openIds.has(item.id)) openIds.delete(item.id);
+        else openIds.add(item.id);
+        render();
+      },
+    });
     row.append(
-      el("td", {}, [dateCell(item), slipTag(item)]),
+      el("td", {}, [dateCell(item), statusFlag(item), slipTag(item)]),
       el("td", {}, [companyButton(item)]),
       el("td", { text: showText(item.market) }),
-      el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)])]),
+      el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.event_type || item.type), categoryTag(item.category)])]),
       el("td", {}, [headlineNode(item)]),
       el("td", {}, [badges(item)]),
     );
     body.append(row);
+    if (open) body.append(el("tr", { class: "tl-detail" }, [el("td", { colspan: "6" }, [guidanceBlock(item)])]));
   });
   table.append(body);
   document.getElementById("coming-table").replaceChildren(rows.length ? table : []);
@@ -243,7 +297,11 @@ function renderTable(rows) {
 function renderCards(rows) {
   const root = document.getElementById("coming-cards");
   root.replaceChildren(...rows.map((item) => el("article", { class: "card" }, [
-    el("span", { class: "card-top" }, [dateCell(item), badges(item)]),
+    el("span", { class: "card-top" }, [dateCell(item), statusFlag(item), badges(item)]),
+    el("details", { class: "guidance-block", onClick: (event) => event.stopPropagation() }, [
+      el("summary", { text: "Guidance history" }),
+      guidanceBlock(item),
+    ]),
     companyButton(item),
     el("p", { class: "card-meta" }, [`${showText(item.market)} · ${showText(item.type)} `, categoryTag(item.category)]),
     el("p", { class: "card-what" }, [headlineNode(item)]),

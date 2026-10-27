@@ -721,6 +721,8 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     row.affects = affectsFor(readAcross, row.companies, row.sort, row.precision, row.headline);
     row.slip = slipTitle(slipped, row.companies, row.headline, row.sort, item.precision || row.precision);
     row.label = row.proxy && row.windowText ? row.windowText : (item.date_label || formatSort(row.sort, row.precision));
+    row.guidanceHistory = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+    row.guidanceTrend = item.guidance_trend || "";
     return row;
   }).filter(Boolean);
   forward.sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
@@ -1301,6 +1303,32 @@ function partnerBlock(entries) {
   ]);
 }
 
+function trendChip(trend) {
+  const key = String(trend || "").toLowerCase();
+  if (key === "no update found") return chip("No update found", "trend-none", "The guided window has not moved in the notes on file.");
+  if (key.includes("slipped")) return chip("Slipped", "slipped", "The guided window moved later.");
+  if (!key) return null;
+  return chip(showText(trend), "type", "");
+}
+
+function guidanceBlock(item) {
+  const history = Array.isArray(item.guidanceHistory) ? item.guidanceHistory : [];
+  if (!history.length && !item.guidanceTrend) return null;
+  return el("div", { class: "guidance-block" }, [
+    el("p", { class: "eyebrow", text: "Guidance history" }),
+    trendChip(item.guidanceTrend),
+    history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
+      const seen = parseDate(entry.date_seen, "exact");
+      const link = sourceLink(entry.source_url_if_any, "Source");
+      return el("li", {}, [
+        el("span", { class: "cap-date", text: seen ? formatSort(seen.sort, "day") : "Date not set" }),
+        el("span", { text: showText(entry.window_text) }),
+        link,
+      ]);
+    })) : null,
+  ]);
+}
+
 function detailNode(item) {
   const parts = [];
   if (item.moves) {
@@ -1309,6 +1337,8 @@ function detailNode(item) {
     parts.push(el("p", { class: "label-notes", text: "Share-price change after the event. Context only." }));
   }
   parts.push(...sourceList(item));
+  const guidance = guidanceBlock(item);
+  if (guidance) parts.push(guidance);
   const partners = partnerLines(item);
   if (partners.length) parts.push(partnerBlock(partners));
   item.pilots.forEach((pilot) => parts.push(pilotBlock(pilot)));

@@ -1085,6 +1085,7 @@ function mountFilters() {
       ]),
     ]),
   );
+  wireDisclosures(document.getElementById("event-bar"));
 }
 
 function hiddenFilterCount() {
@@ -1162,23 +1163,23 @@ function companyNode(company) {
   }, body);
 }
 
-function chip(text, kind, title) {
-  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+function chip(text, kind, title, label) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", "aria-label": label || text, text });
 }
 
 function directionChip(item) {
   const key = item.direction || (item.setback ? "negative" : "");
-  if (key === "positive") return chip("Positive", "positive", "The event moved the asset forward.");
-  if (key === "neutral") return chip("Neutral", "neutral", "The event does not clearly help or hurt.");
-  if (key === "negative") return chip("Setback", "setback", "A dry hole, a delay, or another step backward.");
+  if (key === "positive") return chip("Positive", "positive", "The event moved the asset forward.", "Direction: Positive");
+  if (key === "neutral") return chip("Neutral", "neutral", "The event does not clearly help or hurt.", "Direction: Neutral");
+  if (key === "negative") return chip("Setback", "setback", "A dry hole, a delay, or another step backward.", "Direction: Setback");
   return null;
 }
 
 function significanceChip(item) {
   const key = item.significance || (item.background ? "background" : (item.material ? "material" : ""));
   const reason = item.significanceReason ? showText(item.significanceReason) : "";
-  if (key === "material") return chip("Material", "material", reason || "Large enough to matter for the company.");
-  if (key === "background") return chip("Background", "background", reason || "A routine item, or too small to change the story.");
+  if (key === "material") return chip("Material", "material", reason || "Large enough to matter for the company.", "Significance: Material");
+  if (key === "background") return chip("Background", "background", reason || "A routine item, or too small to change the story.", "Significance: Background");
   return null;
 }
 
@@ -1186,14 +1187,14 @@ function statusChip(status) {
   const key = String(status || "").toLowerCase();
   const labels = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" };
   if (!labels[key]) return null;
-  return chip(labels[key], key, "Where this guided item stands.");
+  return chip(labels[key], key, "Where this guided item stands.", `Status: ${labels[key]}`);
 }
 
 function confidenceChip(level) {
   const key = String(level || "").toLowerCase();
   const labels = { high: "High", medium: "Medium", low: "Low" };
   if (!labels[key]) return null;
-  return chip(labels[key], `conf-${key}`, "How firmly the date is known.");
+  return chip(labels[key], `conf-${key}`, "How firmly the date is known.", `Date confidence: ${labels[key]}`);
 }
 
 function typeChip(item) {
@@ -1493,26 +1494,71 @@ function visibleEventNode(id) {
   return nodes.find((node) => node.getClientRects().length) || null;
 }
 
+let focusAfterRender = null;
+
+function detailDomId(id, slot) {
+  return `detail-${slot}-${String(id).replace(/[^A-Za-z0-9_-]/g, "_")}`;
+}
+
+function detailToggle(id, open, slot) {
+  return el("button", {
+    type: "button",
+    class: "detail-toggle",
+    "data-detail-for": id,
+    "aria-expanded": open ? "true" : "false",
+    "aria-controls": detailDomId(id, slot),
+    onClick: (event) => {
+      event.stopPropagation();
+      toggle(id, slot === "chart");
+    },
+    text: open ? "Close" : "Details",
+  });
+}
+
+function detailPanel(id, node, slot) {
+  if (!node) return null;
+  return el("div", { class: "detail-panel", id: detailDomId(id, slot), "data-detail-panel": id }, [node]);
+}
+
+function rowClick(event, id) {
+  if (event.target.closest("a, button, summary, input, select, label")) return;
+  toggle(id);
+}
+
 function toggle(id, fromChart) {
-  if (state.open.has(id)) state.open.delete(id);
-  else state.open.add(id);
-  if (fromChart) state.chartFocus = state.open.has(id) ? id : "";
-  else if (state.chartFocus === id && !state.open.has(id)) state.chartFocus = "";
+  const opening = !state.open.has(id);
+  if (opening) state.open.add(id);
+  else state.open.delete(id);
+  if (fromChart) state.chartFocus = opening ? id : "";
+  else if (state.chartFocus === id && !opening) state.chartFocus = "";
+  focusAfterRender = { id, fromChart: !!fromChart, opening };
   render();
-  if (fromChart && state.open.has(id)) {
+  if (fromChart && opening) {
     requestAnimationFrame(() => {
       const row = visibleEventNode(id);
       const detail = document.getElementById("chartDetail");
-      if (row) row.scrollIntoView({ block: "nearest" });
-      else if (detail && !detail.hidden) detail.scrollIntoView({ block: "nearest" });
+      if (row) row.scrollIntoView({ block: "nearest", behavior: "auto" });
+      else if (detail && !detail.hidden) detail.scrollIntoView({ block: "nearest", behavior: "auto" });
     });
   }
 }
 
-function onRowKey(event, id) {
-  if (event.key !== "Enter" && event.key !== " ") return;
-  event.preventDefault();
-  toggle(id);
+function finishRender() {
+  if (!focusAfterRender) return;
+  const pending = focusAfterRender;
+  focusAfterRender = null;
+  const { id, fromChart, opening } = pending;
+  const chartSlot = document.getElementById("chartDetail");
+  const chartClose = chartSlot && !chartSlot.hidden
+    ? chartSlot.querySelector(`[data-detail-for="${CSS.escape(id)}"]`)
+    : null;
+  const btn = [...document.querySelectorAll(`[data-detail-for="${CSS.escape(id)}"]`)].find((node) => node.getClientRects().length);
+  const dot = document.querySelector(`#chartScroll .dot[data-id="${CSS.escape(id)}"]`);
+  if (opening) {
+    if (fromChart && chartClose) chartClose.focus();
+    else if (btn) btn.focus();
+  } else if (fromChart && dot) dot.focus();
+  else if (btn) btn.focus();
 }
 
 function basisTag(basis) {
@@ -1542,23 +1588,19 @@ function renderTable(rows) {
     const open = state.open.has(item.id);
     const main = el("tr", {
       class: open ? "is-open" : "",
-      tabindex: "0",
-      role: "button",
       "data-event-id": item.id,
-      "aria-expanded": open ? "true" : "false",
-      onClick: () => toggle(item.id),
-      onKeydown: (event) => onRowKey(event, item.id),
+      onClick: (event) => rowClick(event, item.id),
     });
     main.append(
       el("td", { class: "date" }, [dateNode(item)]),
       el("td", {}, [el("span", { class: "tl-cos" }, item.companies.map(companyNode))]),
       el("td", {}, [el("span", { class: "chip-row" }, tagNodes(item).slice(0, 2))]),
-      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "chip-row" }, tagNodes(item).slice(2))])]),
+      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "chip-row" }, tagNodes(item).slice(2)), detailToggle(item.id, open, "table")])]),
       el("td", {}, [sourceBadge(item)]),
     );
     body.append(main);
     if (open) {
-      const extra = detailNode(item);
+      const extra = detailPanel(item.id, detailNode(item), "table");
       if (extra) body.append(el("tr", { class: "tl-detail" }, [el("td", { colspan: "5" }, [extra])]));
     }
   });
@@ -1571,19 +1613,15 @@ function renderCards(rows) {
     const open = state.open.has(item.id);
     return el("article", {
       class: open ? "card is-selected" : "card",
-      tabindex: "0",
-      role: "button",
       "data-event-id": item.id,
-      "aria-expanded": open ? "true" : "false",
-      onClick: () => toggle(item.id),
-      onKeydown: (event) => onRowKey(event, item.id),
+      onClick: (event) => rowClick(event, item.id),
     }, [
       el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) })]),
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
       el("div", { class: "chip-row" }, tagNodes(item)),
-      el("div", { class: "card-meta" }, [sourceBadge(item)]),
-      open ? detailNode(item) : null,
+      el("div", { class: "card-meta" }, [sourceBadge(item), detailToggle(item.id, open, "card")]),
+      open ? detailPanel(item.id, detailNode(item), "card") : null,
     ]);
   });
 }
@@ -1596,6 +1634,7 @@ const MARK_R = 4.25;
 const BIN_PX = 18;
 let popTimer = 0;
 let popPinned = false;
+let clusterReturn = "";
 
 function svgEl(tag, attrs) {
   const node = document.createElementNS(SVG_NS, tag);
@@ -1763,8 +1802,13 @@ function monthTicks(width, bounds) {
   return ticks;
 }
 
-function countWidth(count) {
-  return Math.max(18, String(count).length * 6.4 + 12);
+function countBox(count) {
+  const coarse = window.matchMedia("(max-width: 820px)").matches;
+  const label = `+${count}`;
+  return {
+    w: Math.max(coarse ? 40 : 28, label.length * (coarse ? 8 : 7) + (coarse ? 16 : 12)),
+    h: coarse ? 40 : 20,
+  };
 }
 
 function clusterLane(dots) {
@@ -1783,13 +1827,17 @@ function layoutGroup(group, y, width) {
   const shownCount = dots.length <= 3 ? dots.length : 2;
   const shown = dots.slice(0, shownCount);
   const hidden = dots.slice(shownCount);
-  const gap = 11;
+  const coarse = window.matchMedia("(max-width: 820px)").matches;
+  const gap = coarse ? 42 : 11;
   const centers = shown.map((_, index) => index * gap);
   let countW = 0;
+  let countH = 20;
   if (hidden.length) {
-    countW = countWidth(hidden.length);
+    const box = countBox(hidden.length);
+    countW = box.w;
+    countH = box.h;
     const last = centers.length ? centers[centers.length - 1] : 0;
-    centers.push(last + MARK_R + countW / 2 + 3);
+    centers.push(last + (coarse ? 20 : MARK_R) + countW / 2 + 4);
   }
   const span = centers.length ? centers[centers.length - 1] : 0;
   const mid = dots.reduce((sum, dot) => sum + dot.x, 0) / dots.length;
@@ -1798,7 +1846,7 @@ function layoutGroup(group, y, width) {
   if (origin < edge) origin = edge;
   if (origin + span > width - edge) origin = Math.max(edge, width - edge - span);
   const placed = shown.map((dot, index) => ({ kind: "event", dot, x: origin + centers[index], y }));
-  if (hidden.length) placed.push({ kind: "count", hidden, x: origin + centers[centers.length - 1], y, width: countW });
+  if (hidden.length) placed.push({ kind: "count", hidden, x: origin + centers[centers.length - 1], y, width: countW, height: countH });
   return placed;
 }
 
@@ -1847,8 +1895,11 @@ function showCluster(anchor, dots, pin) {
   const pop = document.getElementById("chartPopover");
   if (!pop) return;
   if (pin) popPinned = true;
+  clusterReturn = anchor.getAttribute("data-ids") || "";
   const noun = dots.length === 1 ? "event" : "events";
   pop.hidden = false;
+  pop.setAttribute("role", "region");
+  pop.setAttribute("aria-label", `${dots.length} more ${noun}`);
   pop.replaceChildren(
     el("p", { class: "eyebrow", text: `${dots.length} more ${noun}` }),
     el("ul", { class: "cluster-list" }, dots.map((dot) => {
@@ -1865,6 +1916,7 @@ function showCluster(anchor, dots, pin) {
         }, [
           el("span", { class: "cap-date", text: item.label || formatSort(item.sort, item.precision) }),
           el("span", { class: "cluster-line", text: showText(item.headline) }),
+          (item.setback || item.direction === "negative") ? el("span", { class: "chip chip-setback", text: "Setback", "aria-label": "Direction: Setback" }) : null,
         ]),
       ]);
     })),
@@ -1883,14 +1935,21 @@ function drawDot(placed) {
   const color = markerColor(item);
   const cx = placed.x;
   const cy = placed.y;
+  const setback = item.setback || item.direction === "negative";
   const group = svgEl("g", {
     class: state.open.has(item.id) ? "dot is-open" : "dot",
     tabindex: "0",
     role: "button",
     "data-id": item.id,
-    "aria-label": `${item.label || formatSort(item.sort, item.precision)}. ${showText(dot.company.label || dot.company.name)}. ${showText(item.headline)}.`,
+    "aria-label": [
+      setback ? "Setback" : "",
+      item.label || formatSort(item.sort, item.precision),
+      showText(dot.company.label || dot.company.name),
+      showText(item.headline),
+    ].filter(Boolean).join(". "),
   });
-  group.append(svgEl("circle", { cx, cy, r: 8, fill: "transparent" }));
+  const hit = window.matchMedia("(max-width: 820px)").matches ? 20 : 8;
+  group.append(svgEl("circle", { cx, cy, r: hit, fill: "transparent" }));
   group.append(svgEl("circle", { class: "halo", cx, cy, r: 6.4 }));
   const gate = item.pilots.some((pilot) => pilot.gate === "Y");
   const exit = item.pilots.some((pilot) => pilot.exit === "Y");
@@ -1913,7 +1972,7 @@ function drawDot(placed) {
     stroke: color,
     "stroke-width": item.setback ? 2 : 1.6,
   };
-  const mark = item.setback || item.direction === "negative"
+  const mark = setback
     ? svgEl("polygon", { ...paint, points: starPoints(cx, cy, 5.2) })
     : exit
       ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
@@ -1938,7 +1997,7 @@ function drawCount(placed) {
   const hidden = placed.hidden;
   const label = `+${hidden.length}`;
   const w = placed.width;
-  const h = 14;
+  const h = placed.height || 20;
   const open = hidden.some((dot) => state.open.has(dot.item.id));
   const group = svgEl("g", {
     class: open ? "dot count-dot is-open" : "dot count-dot",
@@ -1990,7 +2049,13 @@ function drawCount(placed) {
 
 function buildSvg(lanes, rows, width, bounds) {
   const height = lanes.length * LANE;
-  const root = svgEl("svg", { width, height, viewBox: `0 0 ${width} ${height}` });
+  const root = svgEl("svg", {
+    width,
+    height,
+    viewBox: `0 0 ${width} ${height}`,
+    role: "group",
+    "aria-label": "Timeline markers. The events list under the chart is the text version.",
+  });
   const defs = svgEl("defs");
   const laneIndex = new Map(lanes.map((lane, index) => [lane.key, index]));
   lanes.forEach((lane, index) => {
@@ -2098,11 +2163,12 @@ function renderChartDetail(rows) {
     return;
   }
   slot.hidden = false;
-  slot.replaceChildren(el("div", {}, [
+  slot.replaceChildren(el("div", { "data-detail-panel": item.id }, [
+    detailToggle(item.id, true, "chart"),
     el("p", { class: "cap-date", text: item.label || formatSort(item.sort, item.precision) }),
     el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
     el("p", { class: "card-what", text: showText(item.headline) }),
-    detailNode(item),
+    detailPanel(item.id, detailNode(item), "chart"),
   ]));
 }
 
@@ -2251,23 +2317,23 @@ function renderChart(rows) {
   const laneNodes = lanes.map((lane, index) => {
     const full = lane.title || (lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name));
     const openCode = lane.screenCode || lane.code;
+    const tick = lane.code ? el("span", { class: "tick", title: showText(lane.code), text: showText(lane.code) }) : null;
+    const name = el("span", { class: "name", title: full, text: showText(lane.name) });
+    const body = lane.onScreen
+      ? el("button", {
+        type: "button",
+        class: "lane-link",
+        title: full,
+        "aria-label": `Open ${showText(lane.name)} on the Screen`,
+        onClick: () => {
+          if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(openCode);
+        },
+      }, [tick, name])
+      : el("span", { class: "lane-static" }, [tick, name]);
     return el("div", {
       class: index % 2 ? "lane alt" : "lane",
       title: full,
-    }, [
-      lane.code ? el("span", { class: "tick", title: showText(lane.code), text: showText(lane.code) }) : null,
-      lane.onScreen
-        ? el("button", {
-          type: "button",
-          class: "name lane-link",
-          title: full,
-          onClick: () => {
-            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(openCode);
-          },
-          text: showText(lane.name),
-        })
-        : el("span", { class: "name", title: full, text: showText(lane.name) }),
-    ]);
+    }, [body]);
   });
   const labels = el("div", { class: "label-col" }, laneNodes);
   const plot = el("div", { class: "plot-col" });
@@ -2339,9 +2405,11 @@ function renderChart(rows) {
   }
   syncAxis();
   const rangeText = `${formatSort(new Date(bounds.start).toISOString().slice(0, 10), "day")} to ${formatSort(new Date(bounds.end).toISOString().slice(0, 10), "day")}`;
-  scroll.setAttribute("aria-label", narrow
-    ? `Company timeline from ${rangeText}. Scroll sideways for other months.`
-    : `Company timeline from ${rangeText}.`);
+  const summary = document.getElementById("chartSummary");
+  const scrollHint = narrow ? " Scroll sideways inside the chart for other months." : "";
+  if (summary) {
+    summary.textContent = `Company timeline from ${rangeText}. ${companyText}, ${rows.length.toLocaleString("en-GB")} ${eventNoun}. Each marker is a button. A star marks a setback, and the marker name includes the word Setback.${scrollHint} The events list under the chart is the same information in text.`;
+  }
 }
 
 function scheduleChart(rows) {
@@ -2402,6 +2470,7 @@ function render() {
     more.hidden = true;
     renderChartDetail(rows);
     scheduleChart(rows);
+    finishRender();
     return;
   }
   empty.hidden = true;
@@ -2410,6 +2479,7 @@ function render() {
   more.hidden = visible.length >= rows.length;
   renderChartDetail(rows);
   scheduleChart(rows);
+  finishRender();
 }
 
 function showError() {
@@ -2581,6 +2651,20 @@ async function main() {
   }
 }
 
+function wireDisclosures(root) {
+  (root || document).querySelectorAll("details").forEach((details) => {
+    if (details.dataset.wired === "1") return;
+    const summary = details.querySelector("summary");
+    if (!summary) return;
+    details.dataset.wired = "1";
+    const paint = () => summary.setAttribute("aria-expanded", details.open ? "true" : "false");
+    paint();
+    details.addEventListener("toggle", paint);
+  });
+}
+
+window.moonshotWireDisclosures = wireDisclosures;
+
 function paintThemeButton() {
   const theme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
   const button = document.getElementById("themeButton");
@@ -2597,7 +2681,9 @@ function bindChrome() {
   const chartToggle = document.getElementById("chartToggle");
   const chartSort = document.getElementById("chartSort");
   try {
-    state.chartOpen = localStorage.getItem("moonshot-chart-open") !== "0";
+    const savedChart = localStorage.getItem("moonshot-chart-open");
+    if (savedChart === "0" || savedChart === "1") state.chartOpen = savedChart === "1";
+    else state.chartOpen = !window.matchMedia("(max-width: 820px)").matches;
     const savedSort = localStorage.getItem("moonshot-chart-sort");
     if (savedSort === "next" || savedSort === "latest" || savedSort === "watch" || savedSort === "count") state.chartSort = savedSort;
   } catch (err) { /* keep defaults */ }
@@ -2662,8 +2748,33 @@ function bindChrome() {
     hideCluster(true);
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") hideCluster(true);
+    if (event.key !== "Escape") return;
+    const pop = document.getElementById("chartPopover");
+    if (pop && !pop.hidden) {
+      const ids = clusterReturn;
+      hideCluster(true);
+      const dot = ids ? document.querySelector(`#chartScroll .count-dot[data-ids="${CSS.escape(ids)}"]`) : null;
+      if (dot) dot.focus();
+      event.preventDefault();
+      return;
+    }
+    const active = document.activeElement;
+    if (!active || !active.closest) return;
+    const dot = active.closest("#chartScroll .dot[data-id]");
+    const panel = active.closest("[data-detail-panel], #chartDetail, [data-event-id].is-selected");
+    const toggleBtn = active.closest("[data-detail-for]");
+    const id = (dot && dot.getAttribute("data-id"))
+      || (panel && panel.getAttribute("data-detail-panel"))
+      || (panel && panel.getAttribute("data-event-id"))
+      || (toggleBtn && toggleBtn.getAttribute("data-detail-for"));
+    if (!id || !state.open.has(id)) return;
+    if (!dot && !panel && !toggleBtn) return;
+    if (panel && !panel.closest("#events-view, #timeline, #chartDetail") && !toggleBtn) return;
+    event.preventDefault();
+    const fromChart = !!(dot || active.closest("#chartDetail"));
+    toggle(id, fromChart);
   });
+  wireDisclosures(document);
   new MutationObserver(() => {
     if (document.documentElement.dataset.view === "events" && chartDirty) scheduleChart(chartRows);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-view"] });

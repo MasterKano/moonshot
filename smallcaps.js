@@ -1117,7 +1117,7 @@ function toggle(id) {
   else capsState.open.add(id);
   renderLists();
   const nodes = [...document.querySelectorAll(`[data-cap-id="${CSS.escape(id)}"]`)];
-  const visible = nodes.find((node) => node.getClientRects().length > 0);
+  const visible = nodes.find((node) => node.tagName === "BUTTON" && node.getClientRects().length > 0);
   if (visible) visible.focus();
 }
 
@@ -1147,14 +1147,29 @@ function renderTable(rows) {
     const body = el("tbody", { class: open ? "is-open" : "" });
     const main = el("tr", {
       class: "cap-main",
-      tabindex: "0",
-      role: "button",
-      "aria-expanded": open ? "true" : "false",
       "data-cap-id": row.id,
-      onClick: () => toggle(row.id),
-      onKeydown: (event) => onRowKey(event, row.id),
+      onClick: (event) => {
+        if (event.target.closest("a, button, summary, input, select, label")) return;
+        toggle(row.id);
+      },
     });
-    columns.forEach(([key]) => main.append(el("td", {}, [cellFor(row, key)])));
+    columns.forEach(([key], index) => {
+      const cell = el("td", {}, [cellFor(row, key)]);
+      if (index === 0) {
+        cell.append(el("button", {
+          type: "button",
+          class: "detail-toggle",
+          "data-cap-id": row.id,
+          "aria-expanded": open ? "true" : "false",
+          onClick: (event) => {
+            event.stopPropagation();
+            toggle(row.id);
+          },
+          text: open ? "Close" : "Details",
+        }));
+      }
+      main.append(cell);
+    });
     body.append(main);
     if (open) {
       const detail = el("tr", { class: "cap-detail" });
@@ -1197,7 +1212,7 @@ function renderCards(rows) {
       ]),
     ]);
     const star = window.moonshotWatch ? window.moonshotWatch.star(row.code, row.name) : null;
-    const card = el("article", { class: open ? "card cap-card is-open" : "card cap-card" }, [
+    const card = el("article", { class: open ? "card cap-card is-open" : "card cap-card", "data-cap-id": row.id }, [
       star ? el("div", { class: "card-star" }, [star]) : null,
       button,
     ]);
@@ -1514,6 +1529,7 @@ async function loadCaps() {
   mountFilters();
   mountColumns();
   mountSort();
+  if (window.moonshotWireDisclosures) window.moonshotWireDisclosures(document.getElementById("smallcaps"));
   bindSearch();
   renderLists();
   document.body.dataset.caps = String(caps.length);
@@ -1593,6 +1609,17 @@ function boot() {
       renderLists();
     });
   }
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const active = document.activeElement;
+    if (!active || !active.closest || !active.closest("#smallcaps")) return;
+    const host = active.closest("[data-cap-id]");
+    if (!host) return;
+    const id = host.getAttribute("data-cap-id");
+    if (!id || !capsState.open.has(id)) return;
+    event.preventDefault();
+    toggle(id);
+  });
   loadCaps().catch(showCapsError);
 }
 

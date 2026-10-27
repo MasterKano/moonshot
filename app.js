@@ -534,6 +534,9 @@ function rowShell(id, when, companies, fields) {
     significanceReason: fields.significanceReason || "",
     status: fields.status || "",
     dateConfidence: fields.dateConfidence || "",
+    whatChanged: fields.whatChanged || null,
+    guidanceHistory: fields.guidanceHistory || [],
+    guidanceTrend: fields.guidanceTrend || "",
     ...classify(fields.material, fields.setback, fields.upcoming),
   };
 }
@@ -581,6 +584,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
         moves: moveSet(event),
         ...sourceFields(event),
         ...labelFields(event),
+        whatChanged: event.what_changed || null,
       }));
     });
   });
@@ -607,6 +611,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       note: event.note || "",
       ...sourceFields(event),
       ...labelFields(event),
+      whatChanged: event.what_changed || null,
     }));
   });
 
@@ -1329,6 +1334,69 @@ function guidanceBlock(item) {
   ]);
 }
 
+function riskChip(value) {
+  const key = String(value || "").toLowerCase();
+  if (key === "risk reduced") return chip("Risk reduced", "positive", "How the notes describe the risk. Factual context, not a recommendation.");
+  if (key === "risk increased") return chip("Risk increased", "setback", "How the notes describe the risk. Factual context, not a recommendation.");
+  if (key === "mixed") return chip("Mixed", "neutral", "How the notes describe the risk. Factual context, not a recommendation.");
+  return null;
+}
+
+function nextMilestone(id) {
+  const target = upcoming.find((item) => item.rawId === id || item.id === `u:${id}`);
+  const label = target
+    ? `${target.label || formatSort(target.sort, target.precision)}. ${showText(target.headline)}`
+    : "";
+  if (!target || !label) return null;
+  return el("p", {}, [
+    el("span", { class: "k", text: "Next milestone. " }),
+    el("button", {
+      type: "button",
+      class: "co-link",
+      onClick: (event) => {
+        event.stopPropagation();
+        state.range = "upcoming";
+        state.briefIds = null;
+        state.briefKey = "";
+        state.significance = "all";
+        state.background = true;
+        state.open.add(target.id);
+        state.shown = Math.max(state.shown, PAGE);
+        mountFilters();
+        writeUrl();
+        render();
+        requestAnimationFrame(() => {
+          const node = visibleEventNode(target.id);
+          if (node) node.scrollIntoView({ block: "nearest" });
+        });
+      },
+      text: label,
+    }),
+  ]);
+}
+
+function whatChangedCard(item) {
+  const block = item.whatChanged;
+  const material = item.significance === "material" || (item.material && item.significance !== "background");
+  if (!material || !block || typeof block !== "object") return null;
+  const before = block.before ? el("p", {}, [el("span", { class: "k", text: "Before. " }), showText(block.before)]) : null;
+  const evidenceText = block.evidence ? showText(block.evidence) : "";
+  const evidence = evidenceText && evidenceText !== "—"
+    ? el("p", {}, [el("span", { class: "k", text: "Evidence. " }), evidenceText, " ", sourceBadge(item)])
+    : null;
+  const risk = riskChip(block.risk_effect);
+  const next = block.next_milestone ? nextMilestone(block.next_milestone) : null;
+  if (!before && !evidence && !risk && !next) return null;
+  return el("div", { class: "changed-card" }, [
+    el("p", { class: "eyebrow", text: "What changed" }),
+    el("p", { class: "label-notes", text: "Factual context from the sources. Not a recommendation." }),
+    before,
+    evidence,
+    risk ? el("p", {}, [el("span", { class: "k", text: "Risk effect. " }), risk]) : null,
+    next,
+  ]);
+}
+
 function detailNode(item) {
   const parts = [];
   if (item.moves) {
@@ -1339,6 +1407,8 @@ function detailNode(item) {
   parts.push(...sourceList(item));
   const guidance = guidanceBlock(item);
   if (guidance) parts.push(guidance);
+  const changed = whatChangedCard(item);
+  if (changed) parts.push(changed);
   const partners = partnerLines(item);
   if (partners.length) parts.push(partnerBlock(partners));
   item.pilots.forEach((pilot) => parts.push(pilotBlock(pilot)));

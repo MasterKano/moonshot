@@ -1597,6 +1597,19 @@ table.countries thead th, table.catalysts thead th {
 }
 .guidance-list li { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
 
+.changed-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  max-width: 72ch;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.changed-card .k { font-weight: 700; }
+
 .src-badge {
   display: inline-flex;
   align-items: center;

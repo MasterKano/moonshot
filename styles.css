@@ -1265,14 +1265,137 @@ table.countries thead th, table.catalysts thead th {
 .chart-head .show-more { min-height: 32px; padding: 4px 12px; font-size: 13px; flex: none; }
 
 .chart-scroll {
-  overflow-x: auto;
+  overflow: visible;
   max-width: 100%;
   min-width: 0;
+  background: transparent;
+}
+
+.chart-frame {
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--panel);
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-strong) transparent;
+  min-width: 0;
+}
+
+.chart-axis {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: var(--label) minmax(0, 1fr);
+  height: 30px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 10px 10px 0 0;
+}
+
+.chart-axis-gutter {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10px 5px 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--panel);
+  box-shadow: 1px 0 0 var(--border);
+}
+
+.chart-axis-window {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  height: 100%;
+}
+
+.chart-axis-track { position: relative; height: 100%; }
+
+.chart-axis-label {
+  position: absolute;
+  top: 7px;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-axis-label.is-year {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.today-pill {
+  position: absolute;
+  top: 5px;
+  height: 18px;
+  border-radius: 9px;
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+.chart-popover {
+  position: fixed;
+  z-index: 40;
+  width: min(320px, calc(100vw - 16px));
+  max-height: min(280px, 50vh);
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.chart-popover .eyebrow { margin: 2px 4px 6px; }
+
+.cluster-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cluster-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  width: 100%;
+  margin: 0;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cluster-item:hover,
+.cluster-item:focus-visible { background: var(--accent-soft); }
+
+.cluster-item.is-setback { box-shadow: inset 2px 0 0 var(--amber); }
+
+.cluster-item .cap-date { color: var(--muted); font-size: 12px; }
+
+.cluster-item .cluster-line {
+  font-size: 13px;
+  line-height: 1.3;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chart-detail {
@@ -1362,7 +1485,8 @@ table.countries thead th, table.catalysts thead th {
 
 .tick {
   flex: none;
-  min-width: 48px;
+  max-width: 92px;
+  min-width: 0;
   padding: 2px 5px;
   border-radius: 4px;
   background: var(--navy-soft);
@@ -1372,21 +1496,36 @@ table.countries thead th, table.catalysts thead th {
   letter-spacing: 0.03em;
   text-align: center;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lane .name {
+  flex: 1;
   min-width: 0;
   font-size: 13px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.01em;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: block;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.plot-col { min-width: 0; }
+.plot-col {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+.plot-col::-webkit-scrollbar { height: 8px; }
+.plot-col::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 99px;
+}
+.plot-canvas { min-width: 100%; }
 .plot-col svg { display: block; }
 
 .month-label { font-size: 11px; fill: var(--muted); font-family: var(--sans); }
@@ -1404,7 +1543,10 @@ table.countries thead th, table.catalysts thead th {
 .dot.is-open .mark,
 .dot:hover .gate-ring,
 .dot:focus-visible .gate-ring,
-.dot.is-open .gate-ring { transform: scale(1.28); }
+.dot.is-open .gate-ring { transform: scale(1.16); }
+
+.count-mark { fill: var(--panel); stroke: var(--border-strong); }
+.count-label { font-size: 9px; font-weight: 700; fill: var(--text); font-family: var(--sans); }
 
 .empty {
   margin: 8px 0 4px;
@@ -1997,7 +2139,8 @@ td .source { font-weight: 700; white-space: nowrap; }
   .wide-only { display: none !important; }
   .narrow-only { display: revert; }
   .lane .name { display: none; }
-  .tick { min-width: 0; }
+  .tick { max-width: 64px; min-width: 0; }
+  .plot-col { min-width: 0; }
   .panel-head { flex-direction: column; align-items: stretch; }
   .panel-meta { text-align: left; }
   .segment { grid-template-columns: 1fr 1fr; }
@@ -2008,7 +2151,7 @@ td .source { font-weight: 700; white-space: nowrap; }
   .segment.coming-horizon { grid-template-columns: 1fr 1fr; max-width: none; }
   .segment.view-tabs { max-width: none; }
   .cap-event { grid-template-columns: 1fr; gap: 2px; }
-  .plot-col { min-width: 680px; }
+  .plot-canvas { min-width: 680px; }
   .cards.narrow-only { display: flex; }
   .sort-label.narrow-only { display: flex; }
   .popover {
@@ -2174,8 +2317,9 @@ table.timeline tbody tr.is-open td { background: var(--accent-soft); }
   .more-row,
   .watch-share { display: none !important; }
   body, .site-header, .panel, .chart-scroll { background: #fff !important; color: #111 !important; }
-  .chart-scroll { overflow: visible; border: 0; }
-  .plot-col { min-width: 0 !important; }
+  .chart-scroll, .plot-col { overflow: visible; border: 0; }
+  .chart-axis { position: static; }
+  .plot-col, .plot-canvas { min-width: 0 !important; }
   table.timeline thead { display: table-header-group; }
   a.source-icon::after { content: " (" attr(href) ")"; font-size: 10px; word-break: break-all; }
   .wide-only { display: block !important; }

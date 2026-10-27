@@ -79,7 +79,7 @@
               <dt>Pilot detail</dt>
               <dd>Open a pilot row for the risk removed, the stage reached, and the other register labels.</dd>
               <dt>Chart</dt>
-              <dd>One lane per company. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. The chart scrolls sideways inside its own box.</dd>
+              <dd>One lane per company. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. A crowded week shows up to three markers, then a count for the rest. Months sit on the top axis. The chart scrolls sideways inside its own box.</dd>
               <dt>Historical context</dt>
               <dd>r5, r20, and r60 are the share-price change after the event. They are context, not a signal.</dd>
               <dt>Source</dt>
@@ -106,6 +106,7 @@
             <button type="button" class="show-more" id="chartMore" hidden>Show all companies</button>
           </div>
           <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline"></div>
+          <div class="chart-popover" id="chartPopover" hidden></div>
           <div class="empty" id="chartEmpty" hidden></div>
           <div class="chart-detail" id="chartDetail" hidden></div>
         </div>

@@ -656,7 +656,8 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   rows.sort((a, b) => b.sort.localeCompare(a.sort) || showText(a.companies[0] && a.companies[0].label).localeCompare(showText(b.companies[0] && b.companies[0].label)) || a.id.localeCompare(b.id));
 
   const forward = (coming.items || []).map((item) => {
-    const when = parseDate(item.anchor, item.precision || "exact");
+    const sortRaw = item.sort_date || item.anchor;
+    const when = parseDate(sortRaw, item.precision || "exact");
     if (!when) return null;
     const profile = profiles.find((company) => codesMatch(company.code, item.company_code)) || findProfile(profiles, item.company_name) || {
       ...blankProfile(item.company_name || item.company_code || "Company"),
@@ -678,9 +679,13 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       upcoming: true,
       ...sourceFields(item),
     });
+    if (/^\d{4}-\d{2}-\d{2}$/.test(String(item.sort_date || ""))) row.sort = item.sort_date;
+    row.dateBasis = item.date_basis || "";
+    row.proxy = item.sort_date_is_proxy === true;
+    row.windowText = item.date_window_text || "";
     row.affects = affectsFor(readAcross, row.companies, row.sort, row.precision, row.headline);
     row.slip = slipTitle(slipped, row.companies, row.headline, row.sort, item.precision || row.precision);
-    row.label = item.date_label || formatSort(row.sort, row.precision);
+    row.label = row.proxy && row.windowText ? row.windowText : (item.date_label || formatSort(row.sort, row.precision));
     return row;
   }).filter(Boolean);
   forward.sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
@@ -1172,11 +1177,20 @@ function onRowKey(event, id) {
   toggle(id);
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function dateNode(item) {
   const text = item.label || formatSort(item.sort, item.precision);
-  return el("span", {}, [
-    text,
-    item.precision === "month" ? el("span", { class: "precision", text: "Month" }) : null,
+  return el("span", { class: "date-stack" }, [
+    el("span", { text }),
+    basisTag(item.dateBasis),
+    item.precision === "month" && !item.proxy ? el("span", { class: "precision", text: "Month" }) : null,
   ]);
 }
 

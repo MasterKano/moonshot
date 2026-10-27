@@ -93,10 +93,21 @@ function companyButton(item) {
   ]);
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function dateCell(item) {
-  return el("span", {}, [
-    el("span", { class: "cap-name", text: showText(item.date_label) }),
-    item.approx ? el("span", { class: "no-conf", text: "approx." }) : null,
+  const proxy = item.sort_date_is_proxy === true;
+  const text = proxy && item.date_window_text ? item.date_window_text : item.date_label;
+  return el("span", { class: "date-stack" }, [
+    el("span", { class: "cap-name", text: showText(text) }),
+    basisTag(item.date_basis),
+    !proxy && item.approx ? el("span", { class: "no-conf", text: "approx." }) : null,
   ]);
 }
 
@@ -215,7 +226,9 @@ function render() {
   const today = isoFromLocal(new Date());
   const end = horizonEnd(today);
   const scoped = items.filter((item) => inView(item, today, end));
-  const rows = state.materialOnly ? scoped.filter((item) => item.material === "Y") : scoped;
+  const rows = (state.materialOnly ? scoped.filter((item) => item.material === "Y") : scoped)
+    .slice()
+    .sort((a, b) => String(a.sort_date || a.anchor).localeCompare(String(b.sort_date || b.anchor)) || String(a.id).localeCompare(String(b.id)));
   const label = horizonLabel();
   const showing = rows.length === scoped.length
     ? `Showing ${rows.length} ${noun(rows.length)}. Next ${label}.`

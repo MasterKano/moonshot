@@ -142,7 +142,16 @@ function formatDate(value) {
   return `${Number(match[3])} ${month} ${match[1]}`;
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function formatUpcomingDate(item) {
+  if (item && item.sort_date_is_proxy && item.date_window_text) return showText(item.date_window_text);
   const text = String(item?.date ?? "").trim();
   const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!match) return showText(text);
@@ -376,7 +385,7 @@ function normalize(raw, index) {
     cash: row.cash_flag,
     url: row.url,
     events: events.map((event) => (event && typeof event === "object" ? event : {})),
-    upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object"),
+    upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object").sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date))),
     upcomingCount: asNumber(row.upcoming_count),
     nextDate: row.next_event_date,
     sector: sectorOf(row.type),
@@ -421,7 +430,7 @@ function norwayPack(shortName, events, range) {
     else past.push(mapped);
   });
   past.sort((a, b) => String(b.date).localeCompare(String(a.date)) || showText(a.headline).localeCompare(showText(b.headline)));
-  upcoming.sort((a, b) => String(a.date).localeCompare(String(b.date)) || showText(a.headline).localeCompare(showText(b.headline)));
+  upcoming.sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date)) || showText(a.headline).localeCompare(showText(b.headline)));
   return { past, upcoming };
 }
 
@@ -439,7 +448,7 @@ function applyNorwayStats(row, pack, today) {
   row.events = [...row.events, ...pack.past].sort((a, b) => String(b.date).localeCompare(String(a.date)));
   row.upcoming = [...row.upcoming, ...pack.upcoming].sort((a, b) => String(a.date).localeCompare(String(b.date)));
   row.upcomingCount = row.upcoming.length;
-  row.nextDate = row.upcoming.length ? row.upcoming[0].date : null;
+  row.nextDate = row.upcoming.length ? (row.upcoming[0].sort_date || row.upcoming[0].date) : null;
   if (!row.markets.includes("Norway")) row.markets.push("Norway");
   row.shelf = true;
 }
@@ -471,7 +480,7 @@ function norwayRow(company, pack, range) {
     events: pack.past,
     upcoming: pack.upcoming,
     upcomingCount: pack.upcoming.length,
-    nextDate: pack.upcoming.length ? pack.upcoming[0].date : null,
+    nextDate: pack.upcoming.length ? (pack.upcoming[0].sort_date || pack.upcoming[0].date) : null,
     sector: "Oil and gas",
     markets: ["Norway"],
     shelf: true,
@@ -720,6 +729,15 @@ function stageNode(stage) {
   ]);
 }
 
+function nextNode(row) {
+  const item = (row.upcoming || [])[0];
+  if (!item && blank(row.nextDate)) return "—";
+  const text = item && item.sort_date_is_proxy && item.date_window_text
+    ? showText(item.date_window_text)
+    : formatDate(item && (item.sort_date || item.date) || row.nextDate);
+  return el("span", { class: "date-stack" }, [el("span", { text }), basisTag(item && item.date_basis)]);
+}
+
 function latestNode(row) {
   const headline = showText(row.latestHeadline);
   const date = formatDate(row.latestDate);
@@ -867,7 +885,7 @@ function expandBody(row) {
     ? [
       el("p", { class: "eyebrow", text: "Upcoming" }),
       el("ul", { class: "cap-events" }, upcomingItems.map((item) => el("li", { class: "cap-event" }, [
-        el("span", { class: "cap-date", text: formatUpcomingDate(item) }),
+        el("span", { class: "cap-date date-stack" }, [el("span", { text: formatUpcomingDate(item) }), basisTag(item.date_basis)]),
         el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)]),
         el("span", { class: "cap-line" }, [headlineLink(item), alsoAffects(row, item)]),
         el("span", {}, [
@@ -980,7 +998,7 @@ function renderTable(rows) {
       el("td", { text: formatMedian(row) }),
       el("td", { text: formatNum(row.events12m) }),
       el("td", {}, [latestNode(row)]),
-      el("td", { text: blank(row.nextDate) ? "" : formatDate(row.nextDate) }),
+      el("td", {}, [nextNode(row)]),
       el("td", { text: row.upcomingCount == null ? "" : formatNum(row.upcomingCount) }),
       el("td", { text: formatNum(row.setbacks) }),
       el("td", { text: showText(row.cash) }),
@@ -1025,7 +1043,7 @@ function renderCards(rows) {
         fact("Median daily", formatMedian(row)),
         fact("Material events 12m", formatNum(row.events12m)),
         ...(row.upcomingCount == null && blank(row.nextDate) ? [] : [
-          fact("Next", blank(row.nextDate) ? "" : formatDate(row.nextDate)),
+          fact("Next", nextNode(row)),
           fact("Upcoming", row.upcomingCount == null ? "" : formatNum(row.upcomingCount)),
         ]),
         fact("Setbacks", formatNum(row.setbacks)),

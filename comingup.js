@@ -1,4 +1,4 @@
-const state = { horizon: "30", market: "all", sector: "all", materialOnly: false };
+const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false };
 let items = [];
 
 function el(tag, props, children) {
@@ -68,6 +68,7 @@ function inView(item, today, end) {
   if (item.anchor < today || item.anchor > end) return false;
   if (state.market !== "all" && item.market !== state.market) return false;
   if (state.sector !== "all" && item.sector !== state.sector) return false;
+  if (state.category !== "all" && item.category !== state.category) return false;
   return true;
 }
 
@@ -107,8 +108,14 @@ function materialNode(item) {
   return item.material === "Y" ? el("span", { class: "no-badge", text: "Material" }) : null;
 }
 
+function categoryTag(value) {
+  const text = showText(value);
+  if (text === "—") return null;
+  return el("span", { class: "cat-tag", text });
+}
+
 function badges(item) {
-  return el("span", { class: "no-chips" }, [bandNode(item), materialNode(item)]);
+  return el("span", { class: "no-chips" }, [categoryTag(item.category), bandNode(item), materialNode(item)]);
 }
 
 function headlineNode(item) {
@@ -134,7 +141,7 @@ function renderTable(rows) {
       el("td", {}, [dateCell(item)]),
       el("td", {}, [companyButton(item)]),
       el("td", { text: showText(item.market) }),
-      el("td", { text: showText(item.type) }),
+      el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)])]),
       el("td", {}, [headlineNode(item)]),
       el("td", {}, [bandNode(item)]),
       el("td", {}, [materialNode(item)]),
@@ -150,7 +157,7 @@ function renderCards(rows) {
   root.replaceChildren(...rows.map((item) => el("article", { class: "card" }, [
     el("span", { class: "card-top" }, [dateCell(item), badges(item)]),
     companyButton(item),
-    el("p", { class: "card-meta", text: `${showText(item.market)} · ${showText(item.type)}` }),
+    el("p", { class: "card-meta" }, [`${showText(item.market)} · ${showText(item.type)} `, categoryTag(item.category)]),
     el("p", { class: "card-what" }, [headlineNode(item)]),
   ])));
 }
@@ -199,8 +206,9 @@ function filterSelect(key, label, options) {
 
 function mountFilters() {
   document.getElementById("coming-filters").replaceChildren(
-    filterSelect("market", "Market", ["London", "Norway"]),
+    filterSelect("market", "Market", ["London", "Norway", "Nordic"]),
     filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
+    filterSelect("category", "Category", ["Operational", "Capital and deals", "Corporate"]),
     el("label", { class: "field" }, [
       "Material",
       el("button", {

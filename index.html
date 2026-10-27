@@ -131,7 +131,8 @@
             <p class="panel-meta" id="chartMeta"></p>
             <button type="button" class="show-more" id="chartMore" hidden>Show all companies</button>
           </div>
-          <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline"></div>
+          <p id="chartSummary" class="sr-only">Company timeline. Each marker is a button. A star marks a setback, and the marker name includes the word Setback. The events list under the chart is the same information in text.</p>
+          <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-labelledby="chartSummary" aria-describedby="chartMeta"></div>
           <div class="chart-popover" id="chartPopover" hidden></div>
           <div class="empty" id="chartEmpty" hidden></div>
           <div class="chart-detail" id="chartDetail" hidden></div>

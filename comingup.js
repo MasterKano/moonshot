@@ -263,20 +263,13 @@ function renderTable(rows) {
     const open = openIds.has(item.id);
     const row = el("tr", {
       class: open ? "is-open" : "",
-      tabindex: "0",
-      role: "button",
-      "aria-expanded": open ? "true" : "false",
-      onClick: () => {
+      "data-coming-id": item.id,
+      onClick: (event) => {
+        if (event.target.closest("a, button, summary, input, select, label")) return;
         if (openIds.has(item.id)) openIds.delete(item.id);
         else openIds.add(item.id);
         render();
-      },
-      onKeydown: (event) => {
-        if (event.key !== "Enter" && event.key !== " ") return;
-        event.preventDefault();
-        if (openIds.has(item.id)) openIds.delete(item.id);
-        else openIds.add(item.id);
-        render();
+        focusComing(item.id);
       },
     });
     row.append(
@@ -285,10 +278,26 @@ function renderTable(rows) {
       el("td", { text: showText(item.market) }),
       el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.event_type || item.type), categoryTag(item.category)])]),
       el("td", {}, [headlineNode(item)]),
-      el("td", {}, [badges(item)]),
+      el("td", {}, [
+        badges(item),
+        el("button", {
+          type: "button",
+          class: "detail-toggle",
+          "data-coming-id": item.id,
+          "aria-expanded": open ? "true" : "false",
+          onClick: (event) => {
+            event.stopPropagation();
+            if (openIds.has(item.id)) openIds.delete(item.id);
+            else openIds.add(item.id);
+            render();
+            focusComing(item.id);
+          },
+          text: open ? "Close" : "Details",
+        }),
+      ]),
     );
     body.append(row);
-    if (open) body.append(el("tr", { class: "tl-detail" }, [el("td", { colspan: "6" }, [guidanceBlock(item)])]));
+    if (open) body.append(el("tr", { class: "tl-detail", "data-coming-id": item.id }, [el("td", { colspan: "6" }, [el("div", { class: "detail-panel", "data-detail-panel": item.id }, [guidanceBlock(item)])])]));
   });
   table.append(body);
   document.getElementById("coming-table").replaceChildren(rows.length ? table : []);
@@ -298,7 +307,7 @@ function renderCards(rows) {
   const root = document.getElementById("coming-cards");
   root.replaceChildren(...rows.map((item) => el("article", { class: "card" }, [
     el("span", { class: "card-top" }, [dateCell(item), statusFlag(item), badges(item)]),
-    el("details", { class: "guidance-block", onClick: (event) => event.stopPropagation() }, [
+    el("details", { class: "guidance-block", "data-coming-id": item.id, onClick: (event) => event.stopPropagation() }, [
       el("summary", { text: "Guidance history" }),
       guidanceBlock(item),
     ]),
@@ -306,6 +315,16 @@ function renderCards(rows) {
     el("p", { class: "card-meta" }, [`${showText(item.market)} · ${showText(item.type)} `, categoryTag(item.category)]),
     el("p", { class: "card-what" }, [headlineNode(item)]),
   ])));
+}
+
+function focusComing(id) {
+  requestAnimationFrame(() => {
+    const nodes = [...document.querySelectorAll(`[data-coming-id="${CSS.escape(id)}"]`)];
+    const btn = nodes.find((node) => node.tagName === "BUTTON" && node.getClientRects().length);
+    const summary = nodes.find((node) => node.tagName === "DETAILS" && node.getClientRects().length)?.querySelector("summary");
+    const target = btn || summary;
+    if (target) target.focus();
+  });
 }
 
 function render() {
@@ -340,6 +359,7 @@ function render() {
   }
   const material = document.getElementById("coming-material");
   if (material) material.setAttribute("aria-pressed", state.materialOnly ? "true" : "false");
+  if (window.moonshotWireDisclosures) window.moonshotWireDisclosures(document.getElementById("coming"));
   document.body.dataset.coming = String(items.length);
   document.body.dataset.comingShown = String(rows.length);
   document.body.dataset.comingEnd = end;
@@ -449,6 +469,27 @@ async function load() {
 }
 
 function boot() {
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const active = document.activeElement;
+    if (!active || !active.closest || !active.closest("#coming")) return;
+    const details = active.closest("details[open]");
+    if (details) {
+      event.preventDefault();
+      details.open = false;
+      const summary = details.querySelector("summary");
+      if (summary) summary.focus();
+      return;
+    }
+    const host = active.closest("[data-coming-id]");
+    if (!host) return;
+    const id = host.getAttribute("data-coming-id");
+    if (!id || !openIds.has(id)) return;
+    event.preventDefault();
+    openIds.delete(id);
+    render();
+    focusComing(id);
+  });
   if (window.moonshotWatch) {
     window.moonshotWatch.subscribe(() => {
       if (!document.body.dataset.coming) return;

@@ -15,8 +15,8 @@ const SORTS = [
   ["name", "desc", "Company Z to A"],
   ["exchange", "asc", "Exchange A to Z"],
   ["exchange", "desc", "Exchange Z to A"],
-  ["type", "asc", "Type A to Z"],
-  ["type", "desc", "Type Z to A"],
+  ["type", "asc", "Commodity A to Z"],
+  ["type", "desc", "Commodity Z to A"],
   ["stage", "asc", "Stage, early to late"],
   ["stage", "desc", "Stage, late to early"],
   ["cap", "desc", "Mkt cap, high to low"],
@@ -36,10 +36,24 @@ const SORTS = [
   ["cash", "asc", "Cash flag A to Z"],
   ["cash", "desc", "Cash flag Z to A"],
 ];
+const COLUMN_TIPS = {
+  name: "Company name and ticker.",
+  exchange: "Where the shares trade.",
+  type: "The commodity this company works in.",
+  stage: "How far the project has got.",
+  cap: "Market value in millions of US dollars.",
+  median: "Typical daily trading value.",
+  events: "Material events in the last 12 months.",
+  latest: "The newest material event.",
+  next: "The next guided date. A wide window stays in words.",
+  upcoming: "How many guided items are ahead.",
+  setbacks: "Setbacks in the last 12 months.",
+  cash: "Funding note. Unknown means the figure was not found.",
+};
 const COLUMNS = [
   ["name", "Company"],
   ["exchange", "Exchange"],
-  ["type", "Type"],
+  ["type", "Commodity"],
   ["stage", "Stage"],
   ["cap", "Mkt cap US$m"],
   ["median", "Median daily"],
@@ -167,8 +181,8 @@ function formatUpcomingDate(item) {
 }
 
 function netBadge(net) {
-  if (net === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (net === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
+  if (net === "tight") return el("span", { class: "chip chip-conf-high", title: "How firmly the date is known. A narrow window.", text: "High" });
+  if (net === "loose") return el("span", { class: "chip chip-conf-low", title: "How firmly the date is known. A wide window.", text: "Low" });
   return null;
 }
 
@@ -1005,9 +1019,10 @@ function renderTable(rows) {
   const headRow = el("tr");
   COLUMNS.forEach(([key, label]) => {
     const active = capsState.sortKey === key;
-    const th = el("th", { scope: "col", "aria-sort": active ? (capsState.sortDir === "asc" ? "ascending" : "descending") : "none" });
+    const th = el("th", { scope: "col", title: COLUMN_TIPS[key] || "", "aria-sort": active ? (capsState.sortDir === "asc" ? "ascending" : "descending") : "none" });
     th.append(el("button", {
       type: "button",
+      title: COLUMN_TIPS[key] || "",
       "data-active": active ? "true" : "false",
       onClick: () => setSort(key),
     }, [
@@ -1163,11 +1178,11 @@ function mountFilters() {
     ["category", "Category", CATEGORY_OPTIONS],
     ["country", "Country", countryOptions],
     ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER)],
-    ["band", "Band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER)],
-    ["type", "Type", choiceList(caps.map((row) => showText(row.type)), [])],
+    ["band", "Market-cap band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER), "Size group from market value."],
+    ["type", "Commodity", choiceList(caps.map((row) => showText(row.type)), []), "The commodity this company works in."],
     ["stage", "Stage", choiceList(caps.map((row) => stageKey(row.stage)), STAGE_ORDER)],
   ];
-  document.getElementById("smallcaps-filters").replaceChildren(...filters.map(([key, label, values]) => {
+  document.getElementById("smallcaps-filters").replaceChildren(...filters.map(([key, label, values, tip]) => {
     const select = el("select", { "data-cap-filter": key });
     select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
     select.value = capsState[key] || "all";
@@ -1176,7 +1191,7 @@ function mountFilters() {
       select.closest(".field").classList.toggle("active", select.value !== "all");
       renderLists();
     });
-    return el("label", { class: "field" }, [label, select]);
+    return el("label", { class: "field", title: tip || "" }, [label, select]);
   }), el("label", { class: "field" }, [
     "Upcoming",
     el("button", {

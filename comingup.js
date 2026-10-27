@@ -218,8 +218,8 @@ function renderTable(rows) {
   const table = el("table", { class: "register coming" });
   const head = el("thead");
   const headRow = el("tr");
-  ["Date", "Company", "Market", "Type", "Headline", "Labels"].forEach((label) => {
-    headRow.append(el("th", { scope: "col", text: label }));
+  [["Date", "The guided window. A proxy day stays in words."], ["Company", "The company this item belongs to."], ["Market", "Where the shares trade."], ["Event type", "The kind of event."], ["Headline", "What is expected."], ["Labels", "Direction, significance, status, and date confidence."]].forEach(([label, tip]) => {
+    headRow.append(el("th", { scope: "col", title: tip, text: label }));
   });
   head.append(headRow);
   table.append(head);
@@ -300,7 +300,16 @@ function filterSelect(key, label, options) {
     select.closest(".field").classList.toggle("active", select.value !== "all");
     render();
   });
-  return el("label", { class: "field" }, [label, select]);
+  const tips = {
+    Market: "Where the shares trade.",
+    Sector: "Oil and gas, mining, or another sector.",
+    Category: "Operational, capital and deals, or corporate.",
+    Significance: "Material events, or the routine background ones.",
+    Direction: "Whether the event helped, was neutral, or was a setback.",
+    Status: "Where a guided item stands.",
+    "Date confidence": "How firmly the date is known. High, medium, or low.",
+  };
+  return el("label", { class: "field", title: tips[label] || "" }, [label, select]);
 }
 
 function mountFilters() {

@@ -861,8 +861,8 @@ function fieldDefault(key) {
   return "all";
 }
 
-function selectField(key, label, choices, current) {
-  const select = el("select", { "data-filter": key, "aria-label": label });
+function selectField(key, label, choices, current, tip) {
+  const select = el("select", { "data-filter": key, "aria-label": label, title: tip || "" });
   choices.forEach(([value, text]) => select.append(el("option", { value, text })));
   select.value = current;
   select.addEventListener("change", () => {
@@ -882,7 +882,7 @@ function selectField(key, label, choices, current) {
     writeUrl();
     render();
   });
-  const field = el("label", { class: "field" }, [label, select]);
+  const field = el("label", { class: "field", title: tip || "" }, [label, select]);
   field.classList.toggle("active", current !== fieldDefault(key));
   return field;
 }
@@ -939,7 +939,7 @@ function mountFilters() {
     const next = boxes[(index + shift + boxes.length) % boxes.length];
     next.focus();
   });
-  const typeField = el("div", { class: state.types.length ? "field type active" : "field type" }, [
+  const typeField = el("div", { class: state.types.length ? "field type active" : "field type", title: "The kind of event." }, [
     "Event type",
     el("details", { class: "multi" }, [summary, menu]),
   ]);
@@ -969,12 +969,12 @@ function mountFilters() {
 
   document.getElementById("event-bar").replaceChildren(
     searchField,
-    selectField("significance", "Significance", [["material", "Material"], ["all", "All"], ["background", "Background"]], state.significance),
-    selectField("direction", "Direction", [["all", "All"], ["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]], state.direction),
-    selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status),
-    selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence),
-    selectField("range", "Date", RANGES, state.range),
-    selectField("band", "Size band", BANDS, state.band),
+    selectField("significance", "Significance", [["material", "Material"], ["all", "All"], ["background", "Background"]], state.significance, "Material events, or the routine background ones."),
+    selectField("direction", "Direction", [["all", "All"], ["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]], state.direction, "Whether the event helped, was neutral, or was a setback."),
+    selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status, "Where a guided item stands."),
+    selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence, "How firmly the date is known. High, medium, or low."),
+    selectField("range", "Date", RANGES, state.range, "How far back, or the coming window."),
+    selectField("band", "Market-cap band", BANDS, state.band, "Size group from market value."),
     typeField,
     selectField("sector", "Sector", [["all", "All"], ...sectorOptions.map((value) => [value, value])], state.sector),
     selectField("market", "Market", [["all", "All"], ...MARKETS.map((value) => [value, value])], state.market),
@@ -1327,7 +1327,7 @@ function dateNode(item) {
 function renderTable(rows) {
   const table = el("table", { class: "register timeline" });
   const head = el("tr");
-  ["Date", "Company", "Type", "Headline", "Source"].forEach((label) => head.append(el("th", { scope: "col", text: label })));
+  [["Date", "When it happened, or the guided window."], ["Company", "The company the event belongs to."], ["Event type", "The kind of event."], ["Headline", "What was announced."], ["Source", "Primary, secondary, a listing page, or missing."]].forEach(([label, tip]) => head.append(el("th", { scope: "col", title: tip, text: label })));
   table.append(el("thead", {}, [head]));
   const body = el("tbody");
   rows.forEach((item) => {

@@ -140,8 +140,8 @@ function sourceLink(url) {
 }
 
 function netBadge(net) {
-  if (net === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (net === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
+  if (net === "tight") return el("span", { class: "chip chip-conf-high", title: "How firmly the date is known. A narrow window.", text: "High" });
+  if (net === "loose") return el("span", { class: "chip chip-conf-low", title: "How firmly the date is known. A wide window.", text: "Low" });
   return null;
 }
 

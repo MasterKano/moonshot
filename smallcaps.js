@@ -558,11 +558,11 @@ function bindSearch() {
 }
 
 function applyTab(tab, persist) {
-  const allowed = ["events", "smallcaps", "norway"];
+  const allowed = ["events", "smallcaps", "norway", "coming"];
   const next = allowed.includes(tab) ? tab : "events";
   document.documentElement.dataset.view = next;
   document.body.dataset.view = next;
-  ["smallcaps", "norway"].forEach((id) => {
+  ["smallcaps", "norway", "coming"].forEach((id) => {
     const panel = document.getElementById(id);
     if (panel) panel.hidden = next !== id;
   });
@@ -573,7 +573,7 @@ function applyTab(tab, persist) {
   });
   const skip = document.querySelector(".skip");
   if (skip) {
-    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "norway" ? ["#norway", "Skip to Norway"] : ["#timeline", "Skip to timeline"];
+    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "norway" ? ["#norway", "Skip to Norway"] : next === "coming" ? ["#coming", "Skip to coming up"] : ["#timeline", "Skip to timeline"];
     skip.href = target[0];
     skip.textContent = target[1];
   }
@@ -623,12 +623,60 @@ async function loadCaps() {
   bindSearch();
   renderLists();
   document.body.dataset.caps = String(caps.length);
+  if (pendingScreen) {
+    const code = pendingScreen;
+    pendingScreen = "";
+    revealScreen(code);
+  }
+}
+
+let pendingScreen = "";
+
+function resetScreenFilters() {
+  capsState.q = "";
+  capsState.exchange = "all";
+  capsState.band = "all";
+  capsState.type = "all";
+  capsState.stage = "all";
+  capsState.hasUpcoming = false;
+  const search = document.getElementById("smallcaps-search");
+  if (search) {
+    search.value = "";
+    search.closest(".field").classList.toggle("active", false);
+  }
+  document.querySelectorAll("#smallcaps-filters select").forEach((select) => {
+    select.value = "all";
+    select.closest(".field").classList.toggle("active", false);
+  });
+  const upcoming = document.getElementById("smallcaps-upcoming");
+  if (upcoming) upcoming.setAttribute("aria-pressed", "false");
+}
+
+function revealScreen(code) {
+  const row = caps.find((item) => String(item.code) === String(code));
+  if (!row) return;
+  resetScreenFilters();
+  capsState.open = new Set([row.id]);
+  renderLists();
+  const node = document.querySelector(`#smallcaps [data-cap-id="${CSS.escape(row.id)}"]`);
+  if (node) node.scrollIntoView({ block: "center" });
+}
+
+function openScreenCompany(code) {
+  applyTab("smallcaps", true);
+  if (!caps.length) {
+    pendingScreen = code;
+    return;
+  }
+  revealScreen(code);
 }
 
 function boot() {
   bindTabs();
+  window.moonshotApplyTab = applyTab;
+  window.moonshotOpenScreen = openScreenCompany;
   const view = document.documentElement.dataset.view;
-  const initial = view === "smallcaps" || view === "norway" ? view : "events";
+  const initial = view === "smallcaps" || view === "norway" || view === "coming" ? view : "events";
   applyTab(initial, false);
   loadCaps().catch(showCapsError);
 }

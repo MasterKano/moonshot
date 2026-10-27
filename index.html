@@ -23,7 +23,7 @@
       var tab = "events";
       try {
         var savedTab = localStorage.getItem("moonshot-tab");
-        if (savedTab === "smallcaps" || savedTab === "norway") tab = savedTab;
+        if (savedTab === "smallcaps" || savedTab === "norway" || savedTab === "coming") tab = savedTab;
       } catch (err) {}
       root.setAttribute("data-view", tab);
     })();
@@ -47,6 +47,7 @@
     <div class="view-bar">
       <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
         <button type="button" role="tab" id="tab-events" data-view="events" aria-controls="events-view" aria-selected="true">Events</button>
+        <button type="button" role="tab" id="tab-coming" data-view="coming" aria-controls="coming" aria-selected="false" tabindex="-1">Coming up</button>
         <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
         <button type="button" role="tab" id="tab-norway" data-view="norway" aria-controls="norway" aria-selected="false" tabindex="-1">Norway</button>
       </div>
@@ -141,6 +142,31 @@
       </section>
     </div>
     </div>
+    <section class="panel" id="coming" aria-labelledby="coming-title" hidden>
+      <div class="panel-head">
+        <div>
+          <h2 id="coming-title">Coming up</h2>
+          <p class="panel-sub">Dated and guided events in the months ahead. Dates come from company guidance and regulators and can slip.</p>
+        </div>
+        <div class="subscribe-row">
+          <a class="subscribe" href="https://masterkano.github.io/moonshot/coming_up.ics">Subscribe</a>
+          <a class="subscribe" href="https://masterkano.github.io/moonshot/norway_events.ics">Norway feed</a>
+        </div>
+      </div>
+      <p class="chart-note">Add to Google Calendar: Other calendars, From URL, paste this link.</p>
+      <div class="segment coming-horizon" id="coming-horizon" role="radiogroup" aria-label="How far ahead">
+        <button type="button" role="radio" data-horizon="30" aria-checked="true">30 days</button>
+        <button type="button" role="radio" data-horizon="90" aria-checked="false">90 days</button>
+        <button type="button" role="radio" data-horizon="180" aria-checked="false">180 days</button>
+        <button type="button" role="radio" data-horizon="12m" aria-checked="false">12 months</button>
+      </div>
+      <div class="fields" id="coming-filters"></div>
+      <p class="showing" id="coming-showing" aria-live="polite"></p>
+      <div class="empty" id="coming-empty" hidden></div>
+      <div class="table-wrap wide-only cap-scroll" id="coming-table"></div>
+      <div class="cards narrow-only" id="coming-cards"></div>
+      <p class="loading" id="coming-loading">Loading coming events…</p>
+    </section>
     <section class="panel" id="smallcaps" aria-labelledby="smallcaps-title" hidden>
       <div class="panel-head">
         <div>
@@ -199,6 +225,7 @@
       <p class="source-events">Source: Moonshot Events Register, as of 25 Oct 2026</p>
       <p class="source-caps">Source: ASX and London screen, as of 26 Oct 2026.</p>
       <p class="source-norway">Source: Sodir FactPages, as of 26 Oct 2026.</p>
+      <p class="source-coming">Source: company guidance and Sodir FactPages.</p>
     </div>
   </footer>
   <div class="scrim" id="scrim" hidden></div>
@@ -206,5 +233,6 @@
   <script type="module" src="app.js"></script>
   <script type="module" src="smallcaps.js"></script>
   <script type="module" src="norway.js"></script>
+  <script type="module" src="comingup.js"></script>
 </body>
 </html>

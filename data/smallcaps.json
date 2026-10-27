@@ -3815,7 +3815,7 @@
   "material_events_12m": 7,
   "latest_event_date": "2026-10-07",
   "latest_event_type": "Resource",
-  "latest_event_headline": "Substantial Maiden Resource Estimate at Wapouzé",
+  "latest_event_headline": "Substantial Maiden Resource Estimate at Wapouz\u00e9",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Gold and base metals explorer in Turkey, East Africa and West Africa; Bibemi PEA and ESIA approval, Mbe resource growth",
@@ -3823,7 +3823,7 @@
    {
     "date": "2026-10-07",
     "type": "Resource",
-    "headline": "Substantial Maiden Resource Estimate at Wapouzé",
+    "headline": "Substantial Maiden Resource Estimate at Wapouz\u00e9",
     "setback": false
    },
    {
@@ -4138,7 +4138,7 @@
    {
     "date": "2025-12-01",
     "type": "Study",
-    "headline": "Havieron Project – Feasibility Study",
+    "headline": "Havieron Project \u2013 Feasibility Study",
     "setback": false
    }
   ],
@@ -4483,7 +4483,7 @@
    {
     "date": "2025-12-01",
     "type": "Funding",
-    "headline": "£1.8M Strategic Investment by Endeavour Mining",
+    "headline": "\u00a31.8M Strategic Investment by Endeavour Mining",
     "setback": false
    },
    {
@@ -5358,7 +5358,7 @@
    {
     "date": "2026-01-09",
     "type": "Funding",
-    "headline": "Approval of up to €110m Portuguese State Grant",
+    "headline": "Approval of up to \u20ac110m Portuguese State Grant",
     "setback": false
    }
   ],
@@ -5554,7 +5554,7 @@
   "material_events_12m": 3,
   "latest_event_date": "2026-10-20",
   "latest_event_type": "Study",
-  "latest_event_headline": "2026 Gediktepe Competent Person’s Report",
+  "latest_event_headline": "2026 Gediktepe Competent Person\u2019s Report",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Copper, zinc and gold miner in Turkey; first copper concentrate at Gediktepe in Sep 2026 with a new CPR",
@@ -5562,7 +5562,7 @@
    {
     "date": "2026-10-20",
     "type": "Study",
-    "headline": "2026 Gediktepe Competent Person’s Report",
+    "headline": "2026 Gediktepe Competent Person\u2019s Report",
     "setback": false
    },
    {
@@ -5684,7 +5684,7 @@
   "material_events_12m": 3,
   "latest_event_date": "2026-09-22",
   "latest_event_type": "Study",
-  "latest_event_headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+  "latest_event_headline": "Meridian\u2019s DFS Delivers NPV5 USD 2.09B and 108% IRR",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Cabacal copper and gold project in Brazil; DFS delivered in Sep 2026",
@@ -5692,7 +5692,7 @@
    {
     "date": "2026-09-22",
     "type": "Study",
-    "headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+    "headline": "Meridian\u2019s DFS Delivers NPV5 USD 2.09B and 108% IRR",
     "setback": false
    },
    {
@@ -5704,7 +5704,7 @@
    {
     "date": "2026-05-14",
     "type": "Discovery or drill result",
-    "headline": "Meridian Announces Álamo Discovery and High Grades",
+    "headline": "Meridian Announces \u00c1lamo Discovery and High Grades",
     "setback": false
    }
   ],
@@ -5794,7 +5794,7 @@
    {
     "date": "2026-08-20",
     "type": "Funding",
-    "headline": "Portfolio Update – Strategic Investment",
+    "headline": "Portfolio Update \u2013 Strategic Investment",
     "setback": false
    },
    {
@@ -5914,7 +5914,7 @@
    {
     "date": "2026-03-19",
     "type": "Study",
-    "headline": "FEASIBILITY STUDY: SONGWE and PFS RESULTS: PUŁAWY",
+    "headline": "FEASIBILITY STUDY: SONGWE and PFS RESULTS: PU\u0141AWY",
     "setback": false
    }
   ],
@@ -6843,7 +6843,7 @@
    {
     "date": "2025-11-06",
     "type": "MnA",
-    "headline": "Sale of Asiamet’s Interest in the KSK Project",
+    "headline": "Sale of Asiamet\u2019s Interest in the KSK Project",
     "setback": false
    }
   ],
@@ -6996,7 +6996,7 @@
   "material_events_12m": 2,
   "latest_event_date": "2026-05-15",
   "latest_event_type": "Funding",
-  "latest_event_headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
+  "latest_event_headline": "CORNISH METALS ANNOUNCES \u00a352 MILLION CREDIT F...",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
   "description": "South Crofty tin mine in Cornwall; GBP 52 million credit facility and US EXIM letter of interest",
@@ -7004,7 +7004,7 @@
    {
     "date": "2026-05-15",
     "type": "Funding",
-    "headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
+    "headline": "CORNISH METALS ANNOUNCES \u00a352 MILLION CREDIT F...",
     "setback": false
    },
    {
@@ -7061,7 +7061,7 @@
   "material_events_12m": 2,
   "latest_event_date": "2026-05-05",
   "latest_event_type": "Permit or approval",
-  "latest_event_headline": "Amapá – Installation Licence Granted",
+  "latest_event_headline": "Amap\u00e1 \u2013 Installation Licence Granted",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.2 qtrs runway (yfinance, low conf)",
   "description": "Amapa iron ore project in Brazil; preliminary and installation licences granted in 2026",
@@ -7069,13 +7069,13 @@
    {
     "date": "2026-05-05",
     "type": "Permit or approval",
-    "headline": "Amapá – Installation Licence Granted",
+    "headline": "Amap\u00e1 \u2013 Installation Licence Granted",
     "setback": false
    },
    {
     "date": "2026-01-06",
     "type": "Permit or approval",
-    "headline": "Grant of Preliminary Environmental Licence - Amapá",
+    "headline": "Grant of Preliminary Environmental Licence - Amap\u00e1",
     "setback": false
    }
   ],
@@ -7578,7 +7578,7 @@
   "material_events_12m": 1,
   "latest_event_date": "2026-09-02",
   "latest_event_type": "Resource",
-  "latest_event_headline": "Updated MRE – 45% increase in contained tin",
+  "latest_event_headline": "Updated MRE \u2013 45% increase in contained tin",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.8 qtrs runway (yfinance, low conf)",
   "description": "Tin explorer in the DRC (Kalayi); updated MRE with 45 percent more contained tin",
@@ -7586,7 +7586,7 @@
    {
     "date": "2026-09-02",
     "type": "Resource",
-    "headline": "Updated MRE – 45% increase in contained tin",
+    "headline": "Updated MRE \u2013 45% increase in contained tin",
     "setback": false
    }
   ],
@@ -7786,9 +7786,28 @@
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KMR",
   "median_daily_value_k": 116.7,
-  "upcoming": [],
-  "upcoming_count": 0,
-  "next_event_date": null
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "quarter",
+    "type": "Other",
+    "headline": "SMO 2 mining upgrade equipment on site, commissioning expected Q4 2026",
+    "net": "tight",
+    "material_if_delivered": "N",
+    "source_url": "https://wp-kenmare-2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Production-Update.pdf"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "half",
+    "type": "Other",
+    "headline": "SMO 3 construction and commissioning expected H1 2027",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://wp-kenmare-2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Production-Update.pdf"
+   }
+  ],
+  "upcoming_count": 2,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "SRB",
@@ -8231,7 +8250,7 @@
   "material_events_12m": 1,
   "latest_event_date": "2026-01-19",
   "latest_event_type": "Funding",
-  "latest_event_headline": "£8 Million Strategic Investment and Placement",
+  "latest_event_headline": "\u00a38 Million Strategic Investment and Placement",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Uranium explorer; GBP 8 million strategic investment and placement",
@@ -8239,7 +8258,7 @@
    {
     "date": "2026-01-19",
     "type": "Funding",
-    "headline": "£8 Million Strategic Investment and Placement",
+    "headline": "\u00a38 Million Strategic Investment and Placement",
     "setback": false
    }
   ],
@@ -8412,8 +8431,18 @@
   "currency": "GBP",
   "url": "https://www.investegate.co.uk/company/KOD",
   "median_daily_value_k": 67.6,
-  "upcoming": [],
-  "upcoming_count": 0,
-  "next_event_date": null
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "year",
+    "type": "Resource",
+    "headline": "Target to increase Bougouni lithium MRE from 31Mt to 50Mt by end 2026",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://kodalminerals.com/wp-content/uploads/2026/06/Kodal-AGM-Presentation-24-June-2026-FINAL.pdf"
+   }
+  ],
+  "upcoming_count": 1,
+  "next_event_date": "2026-12-31"
  }
 ]

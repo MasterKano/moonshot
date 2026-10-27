@@ -534,8 +534,25 @@ async function load() {
   document.body.dataset.norwayWindow = `${windowRange.start}:${windowRange.tightEnd}:${windowRange.end}`;
 }
 
+let pendingNorway = "";
+
+function openNorwayCompany(name) {
+  if (typeof window.moonshotApplyTab === "function") window.moonshotApplyTab("norway", true);
+  if (!companies.length) {
+    pendingNorway = name;
+    return;
+  }
+  focusCompany(name);
+}
+
 function boot() {
-  load().catch(showError);
+  window.moonshotOpenNorway = openNorwayCompany;
+  load().then(() => {
+    if (!pendingNorway) return;
+    const name = pendingNorway;
+    pendingNorway = "";
+    focusCompany(name);
+  }).catch(showError);
 }
 
 if (typeof document !== "undefined") boot();

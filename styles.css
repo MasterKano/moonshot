@@ -1247,14 +1247,71 @@ table.countries thead th, table.catalysts thead th {
 
 .chart-note { margin: 2px 0 12px; }
 
+.chart-block {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 8px;
+}
+
+.chart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.chart-head .panel-meta { margin: 0; }
+.chart-head .show-more { min-height: 32px; padding: 4px 12px; font-size: 13px; flex: none; }
+
 .chart-scroll {
   overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--panel);
   scrollbar-width: thin;
   scrollbar-color: var(--border-strong) transparent;
 }
+
+.chart-detail {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.lane-link {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lane-link:hover { color: var(--accent); }
+
+.source-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--accent);
+}
+
+.source-icon:hover { background: var(--accent-soft); }
+
+.moves { margin: 2px 0 0; font-variant-numeric: tabular-nums; }
+
+#cards .card-meta:empty { display: none; }
+
+#tableWrap { overflow: visible; }
 
 .chart-scroll::-webkit-scrollbar { height: 8px; }
 .chart-scroll::-webkit-scrollbar-thumb {
@@ -2107,6 +2164,22 @@ table.timeline tbody tr.is-open td { background: var(--accent-soft); }
   .event-bar .field.type { flex-basis: 100%; }
   .multi summary,
   .event-bar .toggle-btn { min-height: 40px; }
+}
+
+@media print {
+  .theme-toggle,
+  .skip,
+  .view-bar,
+  #chartMore,
+  .more-row,
+  .watch-share { display: none !important; }
+  body, .site-header, .panel, .chart-scroll { background: #fff !important; color: #111 !important; }
+  .chart-scroll { overflow: visible; border: 0; }
+  .plot-col { min-width: 0 !important; }
+  table.timeline thead { display: table-header-group; }
+  a.source-icon::after { content: " (" attr(href) ")"; font-size: 10px; word-break: break-all; }
+  .wide-only { display: block !important; }
+  .narrow-only { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

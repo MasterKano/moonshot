@@ -116,6 +116,40 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .skip:focus { top: 12px; }
 
+.briefing { margin: 8px 0 14px; }
+.briefing summary { font-weight: 700; cursor: pointer; }
+.briefing-asof, .briefing-note { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+.briefing-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.brief-tile {
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.brief-label { margin: 0 0 6px; font-size: 12px; font-weight: 700; }
+.brief-hit {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.brief-hit.is-on { text-decoration: underline; }
+.briefing-list { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.brief-row { display: grid; grid-template-columns: minmax(90px, 140px) minmax(100px, 200px) minmax(0, 1fr); gap: 8px; font-size: 13px; }
+
 .wrap {
   width: min(1160px, calc(100% - 48px));
   margin: 0 auto;
@@ -2296,6 +2330,8 @@ td .source { font-weight: 700; white-space: nowrap; }
   .toggle-btn,
   .sort-label select,
   .segment button { min-height: 40px; }
+  .briefing-tiles { grid-template-columns: 1fr 1fr; }
+  .brief-row { grid-template-columns: 1fr; }
   .wide-only { display: none !important; }
   .narrow-only { display: revert; }
   .lane .name { display: none; }

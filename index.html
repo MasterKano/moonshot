@@ -47,6 +47,15 @@
     </div>
   </header>
   <main class="wrap" id="main">
+    <section class="briefing" id="briefing" hidden>
+      <details id="briefingDetails">
+        <summary>This week</summary>
+        <p class="briefing-asof" id="briefingAsof"></p>
+        <div class="briefing-tiles" id="briefingTiles"></div>
+        <div class="briefing-list" id="briefingList" hidden></div>
+        <p class="briefing-note" id="briefingNote"></p>
+      </details>
+    </section>
     <div class="view-bar">
       <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
         <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>

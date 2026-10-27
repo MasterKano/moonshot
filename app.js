@@ -46,6 +46,8 @@ const state = {
   chartFocus: "",
   chartOpen: true,
   chartSort: "next",
+  briefKey: "",
+  briefIds: null,
   shown: PAGE,
   open: new Set(),
 };
@@ -799,6 +801,9 @@ function confidenceOk(item) {
 function filtered() {
   const today = todayIso();
   const query = state.q.trim().toLowerCase();
+  if (state.briefIds && state.briefIds.size) {
+    return events.concat(upcoming).filter((item) => state.briefIds.has(item.rawId));
+  }
   const source = state.range === "upcoming" ? upcoming : events;
   return source.filter((item) => {
     if (!significanceOk(item)) return false;
@@ -823,7 +828,7 @@ function filtered() {
 }
 
 function isDefault() {
-  return !state.q.trim() && state.significance === "material" && state.direction === "all" && state.status === "all" && state.confidence === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
+  return !state.q.trim() && !state.briefIds && state.significance === "material" && state.direction === "all" && state.status === "all" && state.confidence === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
 }
 
 function readUrl() {
@@ -1028,6 +1033,14 @@ function mountFilters() {
 
 function clearFilters() {
   state.q = "";
+  state.briefKey = "";
+  state.briefIds = null;
+  const briefList = document.getElementById("briefingList");
+  if (briefList) {
+    briefList.hidden = true;
+    briefList.replaceChildren();
+  }
+  document.querySelectorAll(".brief-hit").forEach((node) => node.classList.remove("is-on"));
   state.significance = "material";
   state.direction = "all";
   state.status = "all";
@@ -2201,6 +2214,102 @@ function showError() {
   document.getElementById("main").prepend(el("p", { class: "error", text: "The register could not be loaded. Refresh the page to try again." }));
 }
 
+function briefDate(item) {
+  if (item.date_window_text) return showText(item.date_window_text);
+  const parsed = parseDate(item.date, "exact");
+  return parsed ? formatSort(parsed.sort, "day") : showText(item.date);
+}
+
+function renderBriefing(data) {
+  const section = document.getElementById("briefing");
+  const tiles = document.getElementById("briefingTiles");
+  const note = document.getElementById("briefingNote");
+  const asof = document.getElementById("briefingAsof");
+  const details = document.getElementById("briefingDetails");
+  if (!section || !tiles || !data || !data.counts) return;
+  section.hidden = false;
+  const parsed = parseDate(data.as_of, "exact");
+  if (asof) asof.textContent = parsed ? `As of ${formatSort(parsed.sort, "day")}.` : "";
+  if (note) note.textContent = "Facts only. Dates are event dates, except guidance windows passed, which use the date they were checked.";
+  if (details) {
+    let open = true;
+    try { open = localStorage.getItem("moonshot-briefing") !== "0"; } catch (err) { open = true; }
+    details.open = open;
+    details.addEventListener("toggle", () => {
+      try { localStorage.setItem("moonshot-briefing", details.open ? "1" : "0"); } catch (err) { /* ignore */ }
+    });
+  }
+  const counts = data.counts;
+  const groups = [
+    {
+      label: "New material events",
+      hits: [
+        ["material_7d", `${counts.material_7d} in 7 days`, data.material_7d || []],
+        ["material_30d", `${counts.material_30d} in 30 days`, data.material_30d || []],
+      ],
+    },
+    { label: "New setbacks", hits: [["setbacks_30d", `${counts.setbacks_30d} in 30 days`, data.setbacks_30d || []]] },
+    { label: "Catalysts in the next 30 days", hits: [["catalysts_30d", String(counts.catalysts_30d), data.catalysts_30d || []]] },
+    { label: "Guidance windows passed", hits: [["overdue", String(counts.overdue), data.overdue || []]] },
+  ];
+  const openList = (key, items) => {
+    state.briefKey = state.briefKey === key ? "" : key;
+    document.querySelectorAll(".brief-hit").forEach((node) => node.classList.toggle("is-on", node.dataset.brief === state.briefKey));
+    const list = document.getElementById("briefingList");
+    if (!list) return;
+    if (!state.briefKey) {
+      state.briefIds = null;
+      list.hidden = true;
+      list.replaceChildren();
+      render();
+      return;
+    }
+    const shown = items.slice(0, 8);
+    list.hidden = false;
+    list.replaceChildren(
+      ...shown.map((item) => el("p", { class: "brief-row" }, [
+        el("span", { class: "cap-date", text: briefDate(item) }),
+        el("span", { class: "cap-name", text: showText(item.company) }),
+        el("span", { text: showText(item.headline) }),
+      ])),
+      items.length > shown.length ? el("p", { class: "label-notes", text: `${items.length - shown.length} more in this list.` }) : null,
+    );
+    const ids = new Set(items.map((item) => item.id).filter(Boolean));
+    if (key === "catalysts_30d") {
+      state.briefIds = null;
+      if (typeof window.moonshotApplyTab === "function") window.moonshotApplyTab("coming", true);
+      const horizon = document.querySelector("#coming-horizon [data-horizon='30']");
+      if (horizon) horizon.click();
+      return;
+    }
+    if (key === "overdue") {
+      state.briefIds = null;
+      return;
+    }
+    state.briefIds = ids;
+    state.range = "all";
+    state.significance = "all";
+    state.background = true;
+    state.direction = "all";
+    state.status = "all";
+    state.shown = PAGE;
+    if (typeof window.moonshotApplyTab === "function") window.moonshotApplyTab("events", true);
+    mountFilters();
+    writeUrl();
+    render();
+  };
+  tiles.replaceChildren(...groups.map((group) => el("article", { class: "brief-tile" }, [
+    el("p", { class: "brief-label", text: group.label }),
+    ...group.hits.map(([key, text, items]) => el("button", {
+      type: "button",
+      class: "brief-hit",
+      "data-brief": key,
+      onClick: () => openList(key, items),
+      text,
+    })),
+  ])));
+}
+
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-cache" });
   if (!response.ok) throw new Error(path);
@@ -2209,7 +2318,7 @@ async function loadJson(path) {
 
 async function main() {
   try {
-    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, gabon, angola, colombia, readAcross, slipped, coming] = await Promise.all([
+    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, gabon, angola, colombia, readAcross, slipped, coming, briefing] = await Promise.all([
       fetch("data/events.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("events"); return response.text(); }),
       fetch("data/companies.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("companies"); return response.text(); }),
       loadJson("data/smallcaps.json"),
@@ -2225,6 +2334,7 @@ async function main() {
       loadJson("data/read_across.json"),
       loadJson("data/slipped.json"),
       loadJson("data/coming_up.json"),
+      loadJson("data/briefing.json").catch(() => null),
     ]);
     screenCodes = new Set(screen.map((row) => row.code).filter(Boolean));
     SCREEN_PILOTS.forEach((code) => screenCodes.add(code));
@@ -2254,6 +2364,7 @@ async function main() {
     sectorOptions = built.sectors;
     countryOptions = built.countries;
     readUrl();
+    renderBriefing(briefing);
     document.getElementById("loading").hidden = true;
     document.getElementById("app").hidden = false;
     mountFilters();

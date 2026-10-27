@@ -203,6 +203,20 @@ function norm(value) {
   return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+function parentPhrase(parent) {
+  if (!parent || typeof parent !== "object") return "";
+  const name = showText(parent.name).replace(/\s+(ASA|AB|plc|SE|AG|S\.A\.|SA)$/i, "").trim();
+  const ticker = showText(parent.ticker);
+  if (!name || name === "—") return "";
+  return ticker && ticker !== "—" ? `${name} (${ticker})` : name;
+}
+
+function shelfLabel(company) {
+  const phrase = parentPhrase(company.parent_listed);
+  if (company.listing_status === "subsidiary of listed" && phrase) return `${company.name}, part of ${phrase}`;
+  return company.name || company.short_name || "";
+}
+
 function ensure(code, name, onScreen) {
   const text = String(code || "").trim();
   if (!text) return null;
@@ -279,9 +293,10 @@ function build(screen, coming, norwayEvents, norwayCompanies, countries) {
     const symbol = tickerSymbol(company);
     const code = symbol || shortName;
     if (!code) return;
-    let profile = findProfile(symbol, shortName) || findProfile("", company.name);
-    if (!profile) profile = ensure(code, company.name, true);
+    let profile = (symbol && findProfile(symbol, "")) || (!symbol && (findProfile("", shortName) || findProfile("", company.name)));
+    if (!profile) profile = ensure(code, shelfLabel(company), true);
     else profile.onScreen = true;
+    profile.listingStatus = company.listing_status || profile.listingStatus || "";
     norwayEvents.forEach((event) => {
       const names = Array.isArray(event.companies) ? event.companies : [];
       if (shortName && !names.includes(shortName) && event.operator !== shortName) return;
@@ -344,6 +359,9 @@ function nameControl(profile) {
   const label = el("span", {}, [
     el("span", { class: "cap-name", text: showText(profile.name) }),
     el("span", { class: "cap-code", text: showText(profile.code) }),
+    (profile.listingStatus === "private" || profile.listingStatus === "state")
+      ? el("span", { class: "not-listed", title: "Private or state entity, with no stock-exchange listing.", text: "Not listed" })
+      : null,
   ]);
   if (!profile.onScreen) return label;
   return el("button", {
@@ -427,13 +445,71 @@ async function loadJson(path) {
   return response.json();
 }
 
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+  const src = String(text).replace(/^\uFEFF/, "");
+  for (let i = 0; i < src.length; i++) {
+    const c = src[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (src[i + 1] === '"') { field += '"'; i += 1; }
+        else inQuotes = false;
+      } else field += c;
+    } else if (c === '"') inQuotes = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+    else if (c !== "\r") field += c;
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((cells) => cells.some((cell) => cell.trim() !== ""));
+}
+
+function addPilots(companiesText, eventsText) {
+  const wanted = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"]);
+  const table = parseCsv(companiesText);
+  if (table.length < 2) return;
+  const headers = table[0].map((header) => header.trim());
+  const companies = table.slice(1).map((cells) => {
+    const obj = {};
+    headers.forEach((header, i) => { obj[header] = (cells[i] ?? "").trim(); });
+    return obj;
+  });
+  const events = parseCsv(eventsText);
+  const eventHeaders = events[0] ? events[0].map((header) => header.trim()) : [];
+  const eventRows = events.slice(1).map((cells) => {
+    const obj = {};
+    eventHeaders.forEach((header, i) => { obj[header] = (cells[i] ?? "").trim(); });
+    return obj;
+  });
+  companies.forEach((company) => {
+    const code = String(company.ticker || "").toUpperCase();
+    if (!wanted.has(code) || profiles.has(code)) return;
+    const profile = ensure(code, company.company, true);
+    profile.listingStatus = "listed";
+    eventRows.filter((event) => String(event.ticker || "").toUpperCase() === code).forEach((event) => {
+      if (event.date && event.what_happened) profile.events.push({ date: event.date, headline: event.what_happened });
+    });
+  });
+}
+
+async function loadText(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(path);
+  return response.text();
+}
+
 async function load() {
   try {
-    const [screen, coming, norwayEvents, norwayCompanies, ...countries] = await Promise.all([
+    const [screen, coming, norwayEvents, norwayCompanies, pilotCompanies, pilotEvents, ...countries] = await Promise.all([
       loadJson("data/smallcaps.json"),
       loadJson("data/coming_up.json"),
       loadJson("data/norway_events.json"),
       loadJson("data/norway_companies.json"),
+      loadText("data/companies.csv"),
+      loadText("data/events.csv"),
       loadJson("data/falklands.json"),
       loadJson("data/namibia.json"),
       loadJson("data/guyana.json"),
@@ -449,6 +525,7 @@ async function load() {
       Array.isArray(norwayCompanies) ? norwayCompanies : [],
       countries,
     );
+    addPilots(pilotCompanies, pilotEvents);
     ready = true;
     const loading = document.getElementById("watch-loading");
     if (loading) loading.hidden = true;

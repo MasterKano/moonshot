@@ -47,6 +47,15 @@
     </div>
   </header>
   <main class="wrap" id="main">
+    <section class="briefing" id="briefing" hidden>
+      <details id="briefingDetails">
+        <summary>This week</summary>
+        <p class="briefing-asof" id="briefingAsof"></p>
+        <div class="briefing-tiles" id="briefingTiles"></div>
+        <div class="briefing-list" id="briefingList" hidden></div>
+        <p class="briefing-note" id="briefingNote"></p>
+      </details>
+    </section>
     <div class="view-bar">
       <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
         <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
@@ -64,7 +73,7 @@
         <details>
           <summary>How to read the timeline</summary>
           <div class="howto-body">
-            <p>Pilot events, screen events, and the Norwegian shelf, newest first. The page opens on the last 12 months, with material events and setbacks. Background shelf items stay behind Show background. Upcoming switches to the coming up list, soonest first. The chart above the list uses the same filters. It shows up to 25 companies, the ones with the most events in the view. Watchlist shows every pinned name. A Today line marks the current day.</p>
+            <p>Pilot events, screen events, and the Norwegian shelf, newest first. The page opens on the last 12 months, with material events and setbacks. Background items stay behind Show background, which is the same as Significance: All. Upcoming switches to the coming up list, soonest first. The chart above the list uses the same filters. It shows up to 25 companies. The Sort lanes by control sets the order. Next catalyst is the default. Watchlist shows every pinned name. A Today line marks the current day.</p>
             <dl>
               <dt>Material</dt>
               <dd>Large enough to matter for the company.</dd>
@@ -79,11 +88,11 @@
               <dt>Pilot detail</dt>
               <dd>Open a pilot row for the risk removed, the stage reached, and the other register labels.</dd>
               <dt>Chart</dt>
-              <dd>One lane per company. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. A crowded week shows up to three markers, then a count for the rest. Months sit on the top axis. The chart scrolls sideways inside its own box.</dd>
+              <dd>One lane per company. Hide timeline collapses it and remembers that choice. Sort lanes by next catalyst, latest material change, watchlist first, or most events. It shows up to 25 companies. Watchlist shows every pinned name. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. Colour follows direction or significance. A star is a setback. A crowded week shows up to three markers, then a count for the rest. Months sit on the top axis. The chart scrolls sideways inside its own box.</dd>
               <dt>Historical context</dt>
               <dd>r5, r20, and r60 are the share-price change after the event. They are context, not a signal.</dd>
               <dt>Source</dt>
-              <dd>A link icon opens the filing or release. The cell stays empty when none is on file.</dd>
+              <dd>A badge reads Primary, Secondary, Listing page, or Missing. Hover shows the date it was checked. Open a row for every source and any merged revision.</dd>
             </dl>
           </div>
         </details>
@@ -101,6 +110,23 @@
           <button type="button" class="clear-link" id="clearFilters" hidden>Clear filters</button>
         </div>
         <div class="chart-block" id="chartBlock">
+          <div class="chart-tools">
+            <button type="button" class="toggle-btn" id="chartToggle" aria-expanded="true" aria-controls="chartScroll">Hide timeline</button>
+            <label class="sort-label">Sort lanes by
+              <select id="chartSort" aria-label="Sort lanes by">
+                <option value="next">Next catalyst</option>
+                <option value="latest">Latest material change</option>
+                <option value="watch">Watchlist first</option>
+                <option value="count">Most events</option>
+              </select>
+            </label>
+          </div>
+          <p class="chart-legend" id="chartLegend">
+            <span><i class="legend-swatch legend-positive"></i> Positive or material</span>
+            <span><i class="legend-swatch legend-neutral"></i> Neutral or background</span>
+            <span><i class="legend-star" aria-hidden="true">★</i> Setback</span>
+            <span><i class="legend-count">+N</i> More events that week</span>
+          </p>
           <div class="chart-head">
             <p class="panel-meta" id="chartMeta"></p>
             <button type="button" class="show-more" id="chartMore" hidden>Show all companies</button>
@@ -126,7 +152,7 @@
           <p class="panel-sub">Dated and guided events in the months ahead. Dates come from company guidance and regulators and can slip.</p>
         </div>
         <div class="subscribe-row">
-          <a class="subscribe" href="https://masterkano.github.io/moonshot/coming_up.ics">Subscribe</a>
+          <a class="subscribe" href="https://masterkano.github.io/moonshot/coming_up.ics">Subscribe to calendar</a>
           <a class="subscribe" href="https://masterkano.github.io/moonshot/norway_events.ics">Norway feed</a>
         </div>
       </div>
@@ -158,7 +184,9 @@
           <input id="smallcaps-search" type="search" placeholder="Name, code, or headline" autocomplete="off" enterkeyhint="search">
         </label>
         <div class="fields" id="smallcaps-filters"></div>
+        <div class="screen-columns" id="smallcaps-columns"></div>
       </div>
+      <div id="smallcaps-more"></div>
       <p class="showing" id="smallcaps-showing" aria-live="polite"></p>
       <p class="chart-note" id="smallcaps-note">Liquid resource companies (US$5M to 5B, ASX and London) with at least one material de-risking event in the last 12 months, plus Nordic small caps, one Tel Aviv name, and Norwegian shelf companies. Screened from exchange data, announcement headlines, and Sodir FactPages. Labels can be low confidence.</p>
       <details class="react-panel" id="react-panel" hidden>

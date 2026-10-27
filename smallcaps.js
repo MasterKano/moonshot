@@ -2,7 +2,8 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
 const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
-const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv"];
+const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const PILOT_CODES = ["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"];
 const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const CATEGORY_OPTIONS = ["Operational", "Capital and deals", "Corporate"];
 const BAND_ORDER = ["Micro (US$5-100M)", "Main (US$100M-5B)"];
@@ -14,8 +15,8 @@ const SORTS = [
   ["name", "desc", "Company Z to A"],
   ["exchange", "asc", "Exchange A to Z"],
   ["exchange", "desc", "Exchange Z to A"],
-  ["type", "asc", "Type A to Z"],
-  ["type", "desc", "Type Z to A"],
+  ["type", "asc", "Commodity A to Z"],
+  ["type", "desc", "Commodity Z to A"],
   ["stage", "asc", "Stage, early to late"],
   ["stage", "desc", "Stage, late to early"],
   ["cap", "desc", "Mkt cap, high to low"],
@@ -35,10 +36,24 @@ const SORTS = [
   ["cash", "asc", "Cash flag A to Z"],
   ["cash", "desc", "Cash flag Z to A"],
 ];
+const COLUMN_TIPS = {
+  name: "Company name and ticker.",
+  exchange: "Where the shares trade.",
+  type: "The commodity this company works in.",
+  stage: "How far the project has got.",
+  cap: "Market value in millions of US dollars.",
+  median: "Typical daily trading value.",
+  events: "Material events in the last 12 months.",
+  latest: "The newest material event.",
+  next: "The next guided date. A wide window stays in words.",
+  upcoming: "How many guided items are ahead.",
+  setbacks: "Setbacks in the last 12 months.",
+  cash: "Funding note. Unknown means the figure was not found.",
+};
 const COLUMNS = [
   ["name", "Company"],
   ["exchange", "Exchange"],
-  ["type", "Type"],
+  ["type", "Commodity"],
   ["stage", "Stage"],
   ["cap", "Mkt cap US$m"],
   ["median", "Median daily"],
@@ -66,6 +81,7 @@ const capsState = {
   sortKey: "name",
   sortDir: "asc",
   open: new Set(),
+  columns: [],
 };
 
 let caps = [];
@@ -141,7 +157,16 @@ function formatDate(value) {
   return `${Number(match[3])} ${month} ${match[1]}`;
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function formatUpcomingDate(item) {
+  if (item && item.sort_date_is_proxy && item.date_window_text) return showText(item.date_window_text);
   const text = String(item?.date ?? "").trim();
   const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!match) return showText(text);
@@ -157,8 +182,8 @@ function formatUpcomingDate(item) {
 }
 
 function netBadge(net) {
-  if (net === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (net === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
+  if (net === "tight") return el("span", { class: "chip chip-conf-high", title: "How firmly the date is known. A narrow window.", text: "High" });
+  if (net === "loose") return el("span", { class: "chip chip-conf-low", title: "How firmly the date is known. A wide window.", text: "Low" });
   return null;
 }
 
@@ -284,6 +309,27 @@ function screenCode(company) {
   return tickerSymbol(company) || String(company.short_name || "").trim();
 }
 
+function parentPhrase(parent) {
+  if (!parent || typeof parent !== "object") return "";
+  const name = showText(parent.name).replace(/\s+(ASA|AB|plc|SE|AG|S\.A\.|SA)$/i, "").trim();
+  const ticker = showText(parent.ticker);
+  if (!name || name === "—") return "";
+  return ticker && ticker !== "—" ? `${name} (${ticker})` : name;
+}
+
+function identityName(company) {
+  const legal = company.name || company.short_name || "";
+  const phrase = parentPhrase(company.parent_listed);
+  if (company.listing_status === "subsidiary of listed" && phrase) return `${legal}, part of ${phrase}`;
+  return legal;
+}
+
+function notListedTag(row) {
+  const status = String(row.listingStatus || "").toLowerCase();
+  if (status !== "private" && status !== "state") return null;
+  return el("span", { class: "not-listed", title: "Private or state entity, with no stock-exchange listing.", text: "Not listed" });
+}
+
 function nameMatches(shortName, companyName) {
   const short = String(shortName || "").trim().toLowerCase();
   const name = String(companyName || "").trim().toLowerCase();
@@ -352,14 +398,19 @@ function normalize(raw, index) {
     latestHeadline: row.latest_event_headline,
     setbacks: asNumber(row.setbacks_12m),
     cash: row.cash_flag,
+    cashDisplay: row.cash_flag_display || "",
+    missing: row.missing_fields && typeof row.missing_fields === "object" ? row.missing_fields : {},
+    checked: row.last_checked || "",
     url: row.url,
     events: events.map((event) => (event && typeof event === "object" ? event : {})),
-    upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object"),
+    upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object").sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date))),
     upcomingCount: asNumber(row.upcoming_count),
     nextDate: row.next_event_date,
     sector: sectorOf(row.type),
     markets: [listingMarket(row.exchange)],
     shelf: false,
+    listingStatus: "listed",
+    parentListed: null,
   };
 }
 
@@ -377,6 +428,11 @@ function mapNorwayEvent(event) {
     net: event.net === "tight" || event.net === "loose" ? event.net : "",
     category: event.category,
     material_if_delivered: material ? "Y" : "N",
+    event_type: event.event_type || "",
+    direction: event.direction || "",
+    significance: event.significance || "",
+    status: event.status || "",
+    date_confidence_level: event.date_confidence_level || "",
     r5: null,
     r20: null,
     r60: null,
@@ -397,7 +453,7 @@ function norwayPack(shortName, events, range) {
     else past.push(mapped);
   });
   past.sort((a, b) => String(b.date).localeCompare(String(a.date)) || showText(a.headline).localeCompare(showText(b.headline)));
-  upcoming.sort((a, b) => String(a.date).localeCompare(String(b.date)) || showText(a.headline).localeCompare(showText(b.headline)));
+  upcoming.sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date)) || showText(a.headline).localeCompare(showText(b.headline)));
   return { past, upcoming };
 }
 
@@ -415,7 +471,7 @@ function applyNorwayStats(row, pack, today) {
   row.events = [...row.events, ...pack.past].sort((a, b) => String(b.date).localeCompare(String(a.date)));
   row.upcoming = [...row.upcoming, ...pack.upcoming].sort((a, b) => String(a.date).localeCompare(String(b.date)));
   row.upcomingCount = row.upcoming.length;
-  row.nextDate = row.upcoming.length ? row.upcoming[0].date : null;
+  row.nextDate = row.upcoming.length ? (row.upcoming[0].sort_date || row.upcoming[0].date) : null;
   if (!row.markets.includes("Norway")) row.markets.push("Norway");
   row.shelf = true;
 }
@@ -427,7 +483,7 @@ function norwayRow(company, pack, range) {
   return {
     id: `no:${code}`,
     code,
-    name: company.name,
+    name: identityName(company),
     exchange: venueOf(company.listing_ticker),
     band: null,
     type: "Oil and gas",
@@ -443,15 +499,155 @@ function norwayRow(company, pack, range) {
     latestHeadline: latest ? latest.headline : null,
     setbacks: pack.past.filter((event) => event.setback && event.date <= range.today).length,
     cash: null,
+    cashDisplay: "",
+    missing: {},
+    checked: "",
     url: "",
     events: pack.past,
     upcoming: pack.upcoming,
     upcomingCount: pack.upcoming.length,
-    nextDate: pack.upcoming.length ? pack.upcoming[0].date : null,
+    nextDate: pack.upcoming.length ? (pack.upcoming[0].sort_date || pack.upcoming[0].date) : null,
     sector: "Oil and gas",
     markets: ["Norway"],
     shelf: true,
+    listingStatus: company.listing_status || "",
+    parentListed: company.parent_listed || null,
   };
+}
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+  const src = String(text).replace(/^\uFEFF/, "");
+  for (let i = 0; i < src.length; i++) {
+    const c = src[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (src[i + 1] === '"') { field += '"'; i += 1; }
+        else inQuotes = false;
+      } else field += c;
+    } else if (c === '"') inQuotes = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+    else if (c !== "\r") field += c;
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((cells) => cells.some((cell) => cell.trim() !== ""));
+}
+
+function rowsToObjects(text) {
+  const table = parseCsv(text);
+  if (!table.length) return [];
+  const headers = table[0].map((header) => header.trim());
+  return table.slice(1).map((cells) => {
+    const obj = {};
+    headers.forEach((header, i) => { obj[header] = (cells[i] ?? "").trim(); });
+    return obj;
+  });
+}
+
+function pilotSector(sector) {
+  const text = String(sector || "").toLowerCase();
+  if (text.includes("oil")) return "Oil and gas";
+  if (text.includes("renew")) return "Renewables";
+  if (text.includes("royalty")) return "Royalty and stream";
+  return "Mining";
+}
+
+function pilotMarkets(exchange) {
+  const text = String(exchange || "").toLowerCase();
+  const markets = [];
+  if (text.includes("stockholm") || text.includes("helsinki") || text.includes("oslo")) markets.push("Nordic");
+  if (text.includes("tsx") || text.includes("toronto")) markets.push("TSX");
+  if (text.includes("asx")) markets.push("ASX");
+  if (text.includes("london") || /\baim\b/.test(text)) markets.push("London");
+  return markets.length ? markets : ["TSX"];
+}
+
+function pilotBand(cap) {
+  const number = asNumber(cap);
+  if (number == null) return null;
+  if (number >= 5000) return "Large";
+  if (number >= 100) return "Main (US$100M-5B)";
+  if (number >= 5) return "Micro (US$5-100M)";
+  return null;
+}
+
+function mapPilotEvent(event) {
+  const monthOnly = /^\d{4}-\d{2}$/.test(String(event.date || ""));
+  return {
+    date: event.date,
+    date_precision: monthOnly ? "month" : "exact",
+    type: displayType(event.event_type || event.risk_removed),
+    headline: event.what_happened,
+    setback: false,
+    source_url: event.source_url,
+    source_status: event.source_status,
+    source_link_level: event.source_link_level,
+    last_checked: event.last_checked,
+    sources: event.source_url ? [event.source_url] : [],
+    category: "",
+    material_if_delivered: event.material === "Y" ? "Y" : "N",
+    r5: null,
+    r20: null,
+    r60: null,
+    significance: event.significance || "",
+    direction: event.direction || "",
+    event_type: event.event_type || "",
+  };
+}
+
+function foldPilots(rows, companies, events) {
+  const wanted = new Set(PILOT_CODES);
+  companies.forEach((company) => {
+    const code = String(company.ticker || "").trim().toUpperCase();
+    if (!wanted.has(code)) return;
+    if (rows.some((row) => String(row.code).toUpperCase() === code)) return;
+    const own = events.filter((event) => String(event.ticker || "").toUpperCase() === code);
+    own.sort((a, b) => String(b.date).localeCompare(String(a.date)) || showText(a.what_happened).localeCompare(showText(b.what_happened)));
+    const material = own.filter((event) => event.material === "Y");
+    const latest = material[0] || own[0];
+    const cap = asNumber(company.market_cap_usd_m);
+    const commodity = showText(company.commodity);
+    rows.push({
+      id: `pilot:${code}`,
+      code,
+      name: company.company,
+      exchange: showText(company.exchange).replaceAll(";", ","),
+      band: pilotBand(cap),
+      type: commodity === "—" ? commodity : commodity.charAt(0).toUpperCase() + commodity.slice(1),
+      stage: displayType(company.stage),
+      description: company.notes,
+      cap,
+      median: null,
+      currency: company.market_cap_currency,
+      asOf: company.mktcap_as_of,
+      events12m: material.length,
+      latestDate: latest ? latest.date : null,
+      latestType: latest ? (latest.event_type || latest.risk_removed) : null,
+      latestHeadline: latest ? latest.what_happened : null,
+      setbacks: 0,
+      cash: null,
+      cashDisplay: "",
+      missing: ["FWZ", "LUG", "NGEX"].includes(code)
+        ? { cash_flag: "not covered", median_daily_value_k: "not covered", guidance: "not covered", next_event_date: "not covered" }
+        : { cash_flag: "unknown", guidance: "not covered", next_event_date: "not covered" },
+      checked: "",
+      url: "",
+      events: own.map(mapPilotEvent),
+      upcoming: [],
+      upcomingCount: 0,
+      nextDate: null,
+      sector: pilotSector(company.sector),
+      markets: pilotMarkets(company.exchange),
+      shelf: false,
+      listingStatus: "listed",
+      parentListed: null,
+    });
+  });
+  return rows;
 }
 
 function foldNorway(rows, companies, events) {
@@ -564,6 +760,15 @@ function stageNode(stage) {
   ]);
 }
 
+function nextNode(row) {
+  const item = (row.upcoming || [])[0];
+  if (!item && blank(row.nextDate)) return "—";
+  const text = item && item.sort_date_is_proxy && item.date_window_text
+    ? showText(item.date_window_text)
+    : formatDate(item && (item.sort_date || item.date) || row.nextDate);
+  return el("span", { class: "date-stack" }, [el("span", { text }), basisTag(item && item.date_basis)]);
+}
+
 function latestNode(row) {
   const headline = showText(row.latestHeadline);
   const date = formatDate(row.latestDate);
@@ -574,10 +779,89 @@ function latestNode(row) {
   ]);
 }
 
+const COLUMN_STORE = "moonshot-screen-columns";
+const DEFAULT_COLUMN_KEYS = ["name", "exchange", "type", "latest", "next", "cash"];
+
+function storedColumns() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(COLUMN_STORE) || "");
+    const known = new Set(COLUMNS.map(([key]) => key));
+    if (Array.isArray(parsed)) {
+      const keys = parsed.filter((key) => known.has(key));
+      if (!keys.includes("name")) keys.unshift("name");
+      if (keys.length) return keys;
+    }
+  } catch (err) { /* keep the compact set */ }
+  return DEFAULT_COLUMN_KEYS.slice();
+}
+
+function saveColumns(keys) {
+  capsState.columns = keys;
+  try { localStorage.setItem(COLUMN_STORE, JSON.stringify(keys)); } catch (err) { /* ignore */ }
+}
+
+function activeColumns() {
+  const chosen = new Set(capsState.columns.length ? capsState.columns : DEFAULT_COLUMN_KEYS);
+  chosen.add("name");
+  return COLUMNS.filter(([key]) => chosen.has(key));
+}
+
+function gapNode(kind) {
+  const key = String(kind || "unknown").toLowerCase();
+  const text = key === "not applicable" ? "n/a" : key === "not covered" ? "Not covered" : "Unknown";
+  const tip = key === "not applicable"
+    ? "This field does not apply."
+    : key === "not covered"
+      ? "This field is not tracked for this group."
+      : "Covered, but the value was not found.";
+  return el("span", { class: "missing-value", title: tip, text });
+}
+
+function emptyGap(row, field) {
+  const kind = row.missing && row.missing[field];
+  if (kind) return gapNode(kind);
+  if (row.shelf || String(row.listingStatus || "").toLowerCase() === "private" || String(row.listingStatus || "").toLowerCase() === "state") {
+    if (field === "cash_flag" || field === "mkt_cap_usd_m" || field === "median_daily_value_k" || field === "stage" || field === "guidance" || field === "next_event_date") return gapNode("not covered");
+  }
+  return gapNode("unknown");
+}
+
+function cashNode(row) {
+  const display = String(row.cashDisplay || row.cash || "").trim();
+  const lowered = display.toLowerCase();
+  if (!display || lowered === "unknown" || lowered === "no data" || lowered === "—") {
+    return emptyGap(row, "cash_flag");
+  }
+  return el("span", { class: "cash-note", title: row.checked ? `Checked ${formatDate(row.checked)}` : "", text: showText(display) });
+}
+
+function cellFor(row, key) {
+  if (key === "name") return companyNode(row);
+  if (key === "exchange") return showText(row.exchange);
+  if (key === "type") return showText(row.type);
+  if (key === "stage") return stageNode(row.stage) === "—" ? emptyGap(row, "stage") : stageNode(row.stage);
+  if (key === "cap") return formatNum(row.cap) === "—" ? emptyGap(row, "mkt_cap_usd_m") : formatNum(row.cap);
+  if (key === "median") return formatMedian(row) === "—" ? emptyGap(row, "median_daily_value_k") : formatMedian(row);
+  if (key === "latest") {
+    const node = latestNode(row);
+    return node === "—" ? emptyGap(row, "latest_event") : node;
+  }
+  if (key === "next") {
+    const node = nextNode(row);
+    return node === "—" ? emptyGap(row, "next_event_date") : node;
+  }
+  if (key === "events") return formatNum(row.events12m);
+  if (key === "upcoming") return row.upcomingCount == null ? emptyGap(row, "guidance") : formatNum(row.upcomingCount);
+  if (key === "setbacks") return formatNum(row.setbacks);
+  if (key === "cash") return cashNode(row);
+  return emptyGap(row, key);
+}
+
 function companyNode(row) {
   const name = el("span", {}, [
-    el("span", { class: "cap-name", text: showText(row.name) }),
+    el("span", { class: "cap-name", title: showText(row.name), text: showText(row.name) }),
     el("span", { class: "cap-code", text: showText(row.code) }),
+    notListedTag(row),
   ]);
   const star = window.moonshotWatch ? window.moonshotWatch.star(row.code, row.name) : null;
   if (!star) return name;
@@ -618,7 +902,7 @@ function sameCategory(event) {
 
 function categoryHits(row) {
   if (capsState.category === "all") return true;
-  const events = row.events.some((event) => (capsState.showBackground || !event.background) && sameCategory(event));
+  const events = row.events.some((event) => (capsState.showBackground || !eventIsBackground(event)) && sameCategory(event));
   const upcoming = row.upcoming.some((item) => sameCategory(item));
   return events || upcoming;
 }
@@ -689,8 +973,63 @@ function unmatchedSlipped(row) {
   return slipped.filter((item) => codesMatch(item.code, row.code) && !row.upcoming.some((upcoming) => headlinesClose(item.item_headline, upcoming.headline)));
 }
 
+function upcomingTrend(item) {
+  const key = String(item.guidance_trend || "").toLowerCase();
+  if (item.status === "overdue") return el("span", { class: "slip-tag", text: "Overdue" });
+  if (item.status === "slipped" || key.includes("slipped")) return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  if (key === "no update found") return el("span", { class: "chip chip-trend-none", title: "The guided window has not moved in the notes on file.", text: "No update found" });
+  return null;
+}
+
+function guidanceLines(item) {
+  const history = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+  if (!history.length) return null;
+  return el("ul", { class: "guidance-list" }, history.map((entry) => el("li", {}, [
+    el("span", { class: "cap-date", text: showText(entry.date_seen) }),
+    el("span", { text: showText(entry.window_text) }),
+  ])));
+}
+
+function eventIsBackground(event) {
+  if (event.significance) return event.significance === "background";
+  return !!event.background;
+}
+
+function screenChips(event) {
+  const direction = event.direction || (event.setback ? "negative" : "");
+  const significance = event.significance || (eventIsBackground(event) ? "background" : "material");
+  const confidence = event.date_confidence_level || (["high", "medium", "low"].includes(String(event.date_confidence || "")) ? event.date_confidence : "");
+  return el("span", { class: "chip-row" }, [
+    direction === "positive" ? chip("Positive", "positive", "The event moved the asset forward.") : null,
+    direction === "neutral" ? chip("Neutral", "neutral", "The event does not clearly help or hurt.") : null,
+    direction === "negative" ? chip("Setback", "setback", "A dry hole, a delay, or another step backward.") : null,
+    significance === "material" ? chip("Material", "material", "Large enough to matter for the company.") : null,
+    significance === "background" ? chip("Background", "background", "A routine item, or too small to change the story.") : null,
+    statusChip(event.status),
+    confidenceChip(confidence),
+  ]);
+}
+
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function statusChip(status) {
+  const labels = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" };
+  const key = String(status || "").toLowerCase();
+  if (!labels[key]) return null;
+  return chip(labels[key], key, "Where this guided item stands.");
+}
+
+function confidenceChip(level) {
+  const labels = { high: "High", medium: "Medium", low: "Low" };
+  const key = String(level || "").toLowerCase();
+  if (!labels[key]) return null;
+  return chip(labels[key], `conf-${key}`, "How firmly the date is known.");
+}
+
 function visibleEvents(row) {
-  return row.events.filter((event) => (capsState.showBackground || !event.background) && sameCategory(event));
+  return row.events.filter((event) => (capsState.showBackground || !eventIsBackground(event)) && sameCategory(event));
 }
 
 function expandBody(row) {
@@ -700,8 +1039,7 @@ function expandBody(row) {
     ? el("ul", { class: "cap-events" }, listed.map((event) => el("li", { class: "cap-event" }, [
       el("span", { class: "cap-date", text: eventDate(event) }),
       el("span", { class: "cap-kind" }, [showText(event.type), categoryTag(event.category)]),
-      el("span", { class: "cap-line" }, [showText(event.headline), alsoAffects(row, event)]),
-      el("span", { text: `Setback: ${setbackLabel(event.setback)}` }),
+      el("span", { class: "cap-line" }, [showText(event.headline), alsoAffects(row, event), screenChips(event)]),
       reactionNode(event, row),
     ])))
     : el("p", { class: "cap-desc", text: hidden ? "Background events are hidden." : "No events listed." });
@@ -710,14 +1048,14 @@ function expandBody(row) {
     ? [
       el("p", { class: "eyebrow", text: "Upcoming" }),
       el("ul", { class: "cap-events" }, upcomingItems.map((item) => el("li", { class: "cap-event" }, [
-        el("span", { class: "cap-date", text: formatUpcomingDate(item) }),
+        el("span", { class: "cap-date date-stack" }, [el("span", { text: formatUpcomingDate(item) }), basisTag(item.date_basis), upcomingTrend(item)]),
         el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)]),
         el("span", { class: "cap-line" }, [headlineLink(item), alsoAffects(row, item)]),
-        el("span", {}, [
-          netBadge(item.net),
+        el("span", { class: "chip-row" }, [
+          screenChips(item),
           slipTag(row.code, item),
-          item.material_if_delivered === "Y" ? el("span", { class: "no-badge", text: "Material" }) : null,
         ]),
+        guidanceLines(item),
       ]))),
     ]
     : [];
@@ -784,14 +1122,16 @@ function toggle(id) {
 }
 
 function renderTable(rows) {
+  const columns = activeColumns();
   const table = el("table", { class: "register caps" });
   const head = el("thead");
   const headRow = el("tr");
-  COLUMNS.forEach(([key, label]) => {
+  columns.forEach(([key, label]) => {
     const active = capsState.sortKey === key;
-    const th = el("th", { scope: "col", "aria-sort": active ? (capsState.sortDir === "asc" ? "ascending" : "descending") : "none" });
+    const th = el("th", { scope: "col", title: COLUMN_TIPS[key] || "", "aria-sort": active ? (capsState.sortDir === "asc" ? "ascending" : "descending") : "none" });
     th.append(el("button", {
       type: "button",
+      title: COLUMN_TIPS[key] || "",
       "data-active": active ? "true" : "false",
       onClick: () => setSort(key),
     }, [
@@ -814,24 +1154,11 @@ function renderTable(rows) {
       onClick: () => toggle(row.id),
       onKeydown: (event) => onRowKey(event, row.id),
     });
-    main.append(
-      el("td", {}, [companyNode(row)]),
-      el("td", { text: showText(row.exchange) }),
-      el("td", { text: showText(row.type) }),
-      el("td", {}, [stageNode(row.stage)]),
-      el("td", { text: formatNum(row.cap) }),
-      el("td", { text: formatMedian(row) }),
-      el("td", { text: formatNum(row.events12m) }),
-      el("td", {}, [latestNode(row)]),
-      el("td", { text: blank(row.nextDate) ? "" : formatDate(row.nextDate) }),
-      el("td", { text: row.upcomingCount == null ? "" : formatNum(row.upcomingCount) }),
-      el("td", { text: formatNum(row.setbacks) }),
-      el("td", { text: showText(row.cash) }),
-    );
+    columns.forEach(([key]) => main.append(el("td", {}, [cellFor(row, key)])));
     body.append(main);
     if (open) {
       const detail = el("tr", { class: "cap-detail" });
-      detail.append(el("td", { colspan: String(COLUMNS.length) }, [expandBody(row)]));
+      detail.append(el("td", { colspan: String(columns.length) }, [expandBody(row)]));
       body.append(detail);
     }
     table.append(body);
@@ -863,17 +1190,7 @@ function renderCards(rows) {
       ]),
       el("span", { class: "card-meta", text: [showText(row.exchange), showText(row.band), showText(row.type)].join(" · ") }),
       el("span", { class: "cap-stage" }, [stageNode(row.stage)]),
-      el("dl", { class: "cap-facts" }, [
-        fact("Mkt cap US$m", formatNum(row.cap)),
-        fact("Median daily", formatMedian(row)),
-        fact("Material events 12m", formatNum(row.events12m)),
-        ...(row.upcomingCount == null && blank(row.nextDate) ? [] : [
-          fact("Next", blank(row.nextDate) ? "" : formatDate(row.nextDate)),
-          fact("Upcoming", row.upcomingCount == null ? "" : formatNum(row.upcomingCount)),
-        ]),
-        fact("Setbacks", formatNum(row.setbacks)),
-        fact("Cash flag", showText(row.cash)),
-      ]),
+      el("dl", { class: "cap-facts" }, activeColumns().filter(([key]) => key !== "name" && key !== "latest").map(([key, label]) => fact(label, cellFor(row, key)))),
       el("span", { class: "cap-latest" }, [
         el("span", { class: "eyebrow", text: "Latest material event" }),
         latestNode(row),
@@ -940,71 +1257,89 @@ function mountSort() {
   });
 }
 
-function mountFilters() {
-  const filters = [
-    ["market", "Market", MARKET_OPTIONS],
-    ["sector", "Sector", SECTOR_OPTIONS],
-    ["category", "Category", CATEGORY_OPTIONS],
-    ["country", "Country", countryOptions],
-    ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER)],
-    ["band", "Band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER)],
-    ["type", "Type", choiceList(caps.map((row) => showText(row.type)), [])],
-    ["stage", "Stage", choiceList(caps.map((row) => stageKey(row.stage)), STAGE_ORDER)],
-  ];
-  document.getElementById("smallcaps-filters").replaceChildren(...filters.map(([key, label, values]) => {
-    const select = el("select", { "data-cap-filter": key });
-    select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
-    select.value = capsState[key] || "all";
-    select.addEventListener("change", () => {
-      capsState[key] = select.value;
-      select.closest(".field").classList.toggle("active", select.value !== "all");
+function filterField(key, label, values, tip) {
+  const select = el("select", { "data-cap-filter": key });
+  select.append(el("option", { value: "all", text: "All" }), ...values.map((value) => el("option", { value, text: value })));
+  select.value = capsState[key] || "all";
+  select.addEventListener("change", () => {
+    capsState[key] = select.value;
+    select.closest(".field").classList.toggle("active", select.value !== "all");
+    renderLists();
+  });
+  const field = el("label", { class: "field", title: tip || "" }, [label, select]);
+  field.classList.toggle("active", (capsState[key] || "all") !== "all");
+  return field;
+}
+
+function toggleField(id, label, key, text) {
+  return el("label", { class: capsState[key] ? "field active" : "field" }, [
+    label,
+    el("button", {
+      type: "button",
+      class: "toggle-btn",
+      id,
+      "aria-pressed": capsState[key] ? "true" : "false",
+      onClick: (event) => {
+        capsState[key] = !capsState[key];
+        event.currentTarget.setAttribute("aria-pressed", capsState[key] ? "true" : "false");
+        event.currentTarget.closest(".field").classList.toggle("active", capsState[key]);
+        renderLists();
+      },
+      text,
+    }),
+  ]);
+}
+
+function mountColumns() {
+  const host = document.getElementById("smallcaps-columns");
+  if (!host) return;
+  const menu = el("div", { class: "columns-menu" });
+  COLUMNS.forEach(([key, label]) => {
+    const input = el("input", { type: "checkbox", value: key });
+    input.checked = activeColumns().some(([column]) => column === key);
+    input.disabled = key === "name";
+    input.addEventListener("change", () => {
+      const keys = [...menu.querySelectorAll("input:checked")].map((box) => box.value);
+      if (!keys.includes("name")) keys.unshift("name");
+      saveColumns(keys);
       renderLists();
     });
-    return el("label", { class: "field" }, [label, select]);
-  }), el("label", { class: "field" }, [
-    "Upcoming",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-upcoming",
-      "aria-pressed": capsState.hasUpcoming ? "true" : "false",
-      onClick: (event) => {
-        capsState.hasUpcoming = !capsState.hasUpcoming;
-        event.currentTarget.setAttribute("aria-pressed", capsState.hasUpcoming ? "true" : "false");
-        renderLists();
-      },
-      text: "Has upcoming",
-    }),
-  ]), el("label", { class: "field" }, [
-    "Background",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-background",
-      "aria-pressed": capsState.showBackground ? "true" : "false",
-      onClick: (event) => {
-        capsState.showBackground = !capsState.showBackground;
-        event.currentTarget.setAttribute("aria-pressed", capsState.showBackground ? "true" : "false");
-        renderLists();
-      },
-      text: "Show background",
-    }),
-  ]), el("label", { class: capsState.watchOnly ? "field active" : "field" }, [
-    "Watchlist",
-    el("button", {
-      type: "button",
-      class: "toggle-btn",
-      id: "smallcaps-watch",
-      "aria-pressed": capsState.watchOnly ? "true" : "false",
-      onClick: (event) => {
-        capsState.watchOnly = !capsState.watchOnly;
-        event.currentTarget.setAttribute("aria-pressed", capsState.watchOnly ? "true" : "false");
-        event.currentTarget.closest(".field").classList.toggle("active", capsState.watchOnly);
-        renderLists();
-      },
-      text: "Watchlist",
-    }),
+    menu.append(el("label", {}, [input, label]));
+  });
+  host.replaceChildren(el("details", { class: "columns-picker" }, [
+    el("summary", { text: "Columns" }),
+    menu,
   ]));
+}
+
+function mountFilters() {
+  const keyFilters = [
+    ["sector", "Sector", SECTOR_OPTIONS, "Oil and gas, mining, or another sector."],
+    ["market", "Market", MARKET_OPTIONS, "Where the shares trade."],
+    ["country", "Country", countryOptions, "Country of the project."],
+  ];
+  const moreFilters = [
+    ["category", "Category", CATEGORY_OPTIONS, "Operational, capital and deals, or corporate."],
+    ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER), "The listing venue."],
+    ["band", "Market-cap band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER), "Size group from market value."],
+    ["type", "Commodity", choiceList(caps.map((row) => showText(row.type)), []), "The commodity this company works in."],
+    ["stage", "Stage", choiceList(caps.map((row) => stageKey(row.stage)), STAGE_ORDER), "How far the project has got."],
+  ];
+  document.getElementById("smallcaps-filters").replaceChildren(
+    ...keyFilters.map((entry) => filterField(...entry)),
+    toggleField("smallcaps-watch", "Watchlist", "watchOnly", "Watchlist"),
+  );
+  const more = document.getElementById("smallcaps-more");
+  if (more) {
+    more.replaceChildren(el("details", { class: "more-filters" }, [
+      el("summary", { text: "More filters" }),
+      el("div", { class: "fields" }, [
+        ...moreFilters.map((entry) => filterField(...entry)),
+        toggleField("smallcaps-upcoming", "Upcoming", "hasUpcoming", "Has upcoming"),
+        toggleField("smallcaps-background", "Background", "showBackground", "Show background"),
+      ]),
+    ]));
+  }
 }
 
 function bindSearch() {
@@ -1143,14 +1478,22 @@ async function loadJson(path) {
   return response.json();
 }
 
+async function loadText(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(path);
+  return response.text();
+}
+
 async function loadCaps() {
-  const [data, companies, events, summary, across, slippedRows, falklands, namibia, guyana, southAfrica, gabon, angola, colombia] = await Promise.all([
+  const [data, companies, events, summary, across, slippedRows, pilotCompanies, pilotEvents, falklands, namibia, guyana, southAfrica, gabon, angola, colombia] = await Promise.all([
     loadJson("data/smallcaps.json"),
     loadJson("data/norway_companies.json"),
     loadJson("data/norway_events.json"),
     loadJson("data/smallcaps_reaction_summary.json"),
     loadJson("data/read_across.json"),
     loadJson("data/slipped.json"),
+    loadText("data/companies.csv"),
+    loadText("data/events.csv"),
     loadJson("data/falklands.json"),
     loadJson("data/namibia.json"),
     loadJson("data/guyana.json"),
@@ -1163,11 +1506,13 @@ async function loadCaps() {
   readAcross = Array.isArray(across) ? across : [];
   slipped = Array.isArray(slippedRows) ? slippedRows : [];
   indexCountries([falklands, namibia, guyana, southAfrica, gabon, angola, colombia]);
-  caps = foldNorway(data.map(normalize), companies, events);
+  caps = foldPilots(foldNorway(data.map(normalize), companies, events), rowsToObjects(pilotCompanies), rowsToObjects(pilotEvents));
   assignCountries(caps);
   document.getElementById("smallcaps-loading").hidden = true;
   renderReactions(summary);
+  capsState.columns = storedColumns();
   mountFilters();
+  mountColumns();
   mountSort();
   bindSearch();
   renderLists();
@@ -1200,7 +1545,7 @@ function resetScreenFilters() {
     search.value = "";
     search.closest(".field").classList.toggle("active", false);
   }
-  document.querySelectorAll("#smallcaps-filters select").forEach((select) => {
+  document.querySelectorAll("#smallcaps-filters select, #smallcaps-more select").forEach((select) => {
     select.value = "all";
     select.closest(".field").classList.toggle("active", false);
   });

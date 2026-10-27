@@ -1,6 +1,5 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const PAGE = 100;
-const TIERS = [["all", "All"], ["material", "Material"], ["setback", "Setback"], ["background", "Background"]];
 const RANGES = [["30", "Last 30 days"], ["90", "Last 90 days"], ["12m", "Last 12 months"], ["all", "All"], ["upcoming", "Upcoming"]];
 const BANDS = [
   ["all", "All"],
@@ -9,7 +8,8 @@ const BANDS = [
   ["large", "Large"],
   ["private", "Private"],
 ];
-const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv"];
+const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const SCREEN_PILOTS = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON", "FWZ", "LUG", "NGEX"]);
 const CATEGORIES = ["Operational", "Capital and deals", "Corporate"];
 const SECTOR_ORDER = ["Oil and gas", "Mining", "Royalty and stream", "Renewables"];
 const RISK_LABELS = {
@@ -29,7 +29,10 @@ const PILOT_SECTORS = {
 
 const state = {
   q: "",
-  tier: "all",
+  significance: "material",
+  direction: "all",
+  status: "all",
+  confidence: "all",
   range: "12m",
   band: "all",
   types: [],
@@ -41,6 +44,10 @@ const state = {
   watchOnly: false,
   chartAll: false,
   chartFocus: "",
+  chartOpen: true,
+  chartSort: "next",
+  briefKey: "",
+  briefIds: null,
   shown: PAGE,
   open: new Set(),
 };
@@ -54,6 +61,8 @@ let screenCodes = new Set();
 let linkCodes = new Set();
 let across = [];
 let chartRows = [];
+let nextCatalyst = new Map();
+let latestMaterial = new Map();
 let chartTimer = 0;
 let chartDirty = false;
 let chartStamp = "";
@@ -133,18 +142,41 @@ function namesClose(a, b) {
   const right = nameKey(b);
   if (!left || !right) return false;
   if (left === right) return true;
-  if (left.length >= 6 && right.length >= 6 && (left.includes(right) || right.includes(left))) return true;
-  return false;
+  const shorter = left.length <= right.length ? left : right;
+  const longer = left.length <= right.length ? right : left;
+  if (shorter.length < 6) return false;
+  return ` ${longer} `.includes(` ${shorter} `);
 }
 
 function bareCode(code) {
   return String(code || "").replace(/\.(OL|ST|HE)$/i, "");
 }
 
+let splitRoots = new Set();
+
+function rememberSplitRoots(profiles) {
+  const forms = new Map();
+  profiles.forEach((profile) => {
+    const full = String(profile.code || "").trim();
+    const root = bareCode(full).toUpperCase();
+    if (!root) return;
+    if (!forms.has(root)) forms.set(root, new Set());
+    forms.get(root).add(full.toUpperCase());
+  });
+  splitRoots = new Set();
+  forms.forEach((fulls, root) => {
+    if (fulls.size > 1) splitRoots.add(root);
+  });
+}
+
 function codesMatch(a, b) {
   if (!a || !b) return false;
   if (a === b) return true;
-  return bareCode(a) === bareCode(b);
+  const left = bareCode(a);
+  const right = bareCode(b);
+  if (!left || left !== right) return false;
+  if (splitRoots.has(left.toUpperCase())) return false;
+  return true;
 }
 
 function normHead(value) {
@@ -208,10 +240,12 @@ function norwayBand(company) {
 }
 
 function tickerFromListing(listing) {
-  const text = String(listing || "");
-  if (/unlisted/i.test(text)) return "";
-  const match = text.match(/:\s*([A-Za-z0-9]{1,8})\b/);
-  return match ? match[1].toUpperCase() : "";
+  const text = String(listing || "").trim();
+  if (!text || /unlisted/i.test(text) || !text.includes(":")) return "";
+  const symbol = text.split(":").pop().trim();
+  if (!symbol || symbol.includes(",") || symbol.includes("(") || symbol.length > 8) return "";
+  if (!/^[A-Za-z0-9.]+$/.test(symbol)) return "";
+  return symbol.toUpperCase();
 }
 
 function precisionOf(raw, confidence) {
@@ -341,11 +375,50 @@ function indexCountries(files) {
   return map;
 }
 
+function profileNamed(profile, name) {
+  if (!name) return false;
+  return [profile.shortName, profile.name, profile.label].some((value) => namesClose(value, name));
+}
+
+function profileByCode(profiles, code, name) {
+  const wanted = String(code || "").trim();
+  if (!wanted) return null;
+  const root = bareCode(wanted).toUpperCase();
+  const family = profiles.filter((profile) => bareCode(profile.code).toUpperCase() === root);
+  if (!family.length) return null;
+  if (family.length === 1) return family[0];
+  const named = name ? family.find((profile) => profileNamed(profile, name)) : null;
+  if (named) return named;
+  return family.find((profile) => profile.code === wanted) || null;
+}
+
 function findProfile(profiles, name) {
+  const key = nameKey(name);
+  if (!key) return null;
+  const exact = profiles.find((profile) => [profile.shortName, profile.name, profile.label].some((value) => nameKey(value) === key));
+  if (exact) return exact;
   for (const profile of profiles) {
-    if (namesClose(profile.name, name) || namesClose(profile.label, name)) return profile;
+    if (namesClose(profile.name, name) || namesClose(profile.label, name) || namesClose(profile.shortName, name)) return profile;
   }
   return null;
+}
+
+function parentPhrase(parent) {
+  if (!parent || typeof parent !== "object") return "";
+  const name = showText(parent.name).replace(/\s+(ASA|AB|plc|SE|AG|S\.A\.|SA)$/i, "").trim();
+  const ticker = showText(parent.ticker);
+  if (!name || name === "—") return "";
+  return ticker && ticker !== "—" ? `${name} (${ticker})` : name;
+}
+
+function withIdentity(profile, listingStatus, parentListed, legalName) {
+  profile.listingStatus = listingStatus || profile.listingStatus || "";
+  profile.parentListed = parentListed || profile.parentListed || null;
+  const phrase = parentPhrase(profile.parentListed);
+  if (String(profile.listingStatus).toLowerCase() === "subsidiary of listed" && phrase && legalName) {
+    profile.label = `${legalName}, part of ${phrase}`;
+  }
+  return profile;
 }
 
 function blankProfile(name) {
@@ -371,6 +444,7 @@ function assignCountries(profiles, countryIndex) {
 function buildProfiles(screen, norwayCompanies, countryIndex) {
   const profiles = screen.map((row) => ({
     name: row.name,
+    shortName: row.name,
     label: row.name,
     code: row.code || "",
     band: bandKeyFromLabel(row.band),
@@ -378,28 +452,38 @@ function buildProfiles(screen, norwayCompanies, countryIndex) {
     sector: sectorOfType(row.type),
     countries: [],
     onScreen: true,
+    listingStatus: "listed",
+    parentListed: null,
   }));
   norwayCompanies.forEach((company) => {
-    const existing = findProfile(profiles, company.short_name) || findProfile(profiles, company.name);
+    const listedCode = tickerFromListing(company.listing_ticker);
+    const code = listedCode || String(company.short_name || "").trim();
+    const existing = (listedCode && (profileByCode(profiles, listedCode, company.short_name) || profileByCode(profiles, listedCode, company.name)))
+      || (!listedCode && (findProfile(profiles, company.short_name) || findProfile(profiles, company.name)));
     if (existing) {
       if (!existing.markets.includes("Norway")) existing.markets.push("Norway");
       if (!existing.band) existing.band = norwayBand(company);
-      if (!existing.code) existing.code = tickerFromListing(company.listing_ticker);
+      if (!existing.code) existing.code = code;
+      if (!existing.shortName) existing.shortName = company.short_name || "";
       return;
     }
-    const code = tickerFromListing(company.listing_ticker);
-    profiles.push({
+    const profile = {
       name: company.name,
+      shortName: company.short_name || company.name,
       label: company.short_name || company.name,
       code,
       band: norwayBand(company),
       markets: ["Norway"],
       sector: "Oil and gas",
       countries: [],
-      onScreen: !!code,
-    });
+      onScreen: true,
+      listingStatus: company.listing_status || "",
+      parentListed: company.parent_listed || null,
+    };
+    profiles.push(withIdentity(profile, company.listing_status, company.parent_listed, company.name));
   });
   assignCountries(profiles, countryIndex);
+  rememberSplitRoots(profiles);
   return profiles;
 }
 
@@ -409,7 +493,56 @@ function classify(material, setback, isUpcoming) {
   return flags;
 }
 
+function labelFields(raw) {
+  const record = raw && typeof raw === "object" ? raw : {};
+  const level = String(record.date_confidence_level || record.dateConfidence || "").toLowerCase();
+  const rawConfidence = String(record.date_confidence || "").toLowerCase();
+  const confidence = ["high", "medium", "low"].includes(level)
+    ? level
+    : (["high", "medium", "low"].includes(rawConfidence) ? rawConfidence : "");
+  return {
+    eventType: record.event_type || record.eventType || "",
+    direction: String(record.direction || "").toLowerCase(),
+    significance: String(record.significance || "").toLowerCase(),
+    significanceReason: record.significance_reason || record.significanceReason || "",
+    status: String(record.status || "").toLowerCase(),
+    dateConfidence: confidence,
+  };
+}
+
+function sourceFields(raw) {
+  const record = raw && typeof raw === "object" ? raw : {};
+  const list = [];
+  const add = (url) => {
+    const text = String(url || "").trim();
+    if (text && !list.includes(text)) list.push(text);
+  };
+  if (Array.isArray(record.sources)) {
+    record.sources.forEach((entry) => {
+      if (typeof entry === "string") add(entry);
+      else if (entry && typeof entry === "object") add(entry.url || entry.href);
+    });
+  }
+  add(record.source_url);
+  add(record.sourceUrl);
+  const revisions = Array.isArray(record.revisions)
+    ? record.revisions.filter((entry) => entry && typeof entry === "object")
+    : [];
+  const status = String(record.source_status || record.sourceStatus || "").trim().toLowerCase();
+  const level = String(record.source_link_level || record.sourceLevel || "").trim().toLowerCase();
+  return {
+    sourceUrl: list[0] || "",
+    sources: list,
+    sourceStatus: status || (list.length ? "primary" : "missing"),
+    sourceLevel: level || (list.length ? "document" : "none"),
+    lastChecked: record.last_checked || record.lastChecked || "",
+    revisions,
+    rawId: record.id || record.rawId || "",
+  };
+}
+
 function rowShell(id, when, companies, fields) {
+  const packed = sourceFields(fields);
   return {
     id,
     sort: when.sort,
@@ -418,13 +551,28 @@ function rowShell(id, when, companies, fields) {
     type: fields.type || "",
     category: fields.category || "",
     headline: fields.headline || "",
-    sourceUrl: fields.sourceUrl || "",
+    sourceUrl: fields.sourceUrl || packed.sourceUrl,
+    sources: fields.sources || packed.sources,
+    sourceStatus: fields.sourceStatus || packed.sourceStatus,
+    sourceLevel: fields.sourceLevel || packed.sourceLevel,
+    lastChecked: fields.lastChecked || packed.lastChecked,
+    revisions: fields.revisions || packed.revisions,
+    rawId: fields.rawId || packed.rawId,
     affects: [],
     pilots: [],
     reaction: fields.reaction || "",
     moves: fields.moves || null,
     note: fields.note || "",
     slip: "",
+    eventType: fields.eventType || "",
+    direction: fields.direction || "",
+    significance: fields.significance || "",
+    significanceReason: fields.significanceReason || "",
+    status: fields.status || "",
+    dateConfidence: fields.dateConfidence || "",
+    whatChanged: fields.whatChanged || null,
+    guidanceHistory: fields.guidanceHistory || [],
+    guidanceTrend: fields.guidanceTrend || "",
     ...classify(fields.material, fields.setback, fields.upcoming),
   };
 }
@@ -457,7 +605,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const rows = [];
 
   screen.forEach((company) => {
-    const profile = findProfile(profiles, company.name) || blankProfile(company.name);
+    const profile = profileByCode(profiles, company.code, company.name) || (!company.code && findProfile(profiles, company.name)) || blankProfile(company.name);
     (company.events || []).forEach((event, index) => {
       const when = parseDate(event.date, "exact");
       if (!when) return;
@@ -470,6 +618,9 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
         setback,
         reaction: reactionText(event, profile.markets[0]),
         moves: moveSet(event),
+        ...sourceFields(event),
+        ...labelFields(event),
+        whatChanged: event.what_changed || null,
       }));
     });
   });
@@ -490,11 +641,13 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       type: displayType(event.type),
       category: event.category || "",
       headline: event.title || "",
-      sourceUrl: event.source_url || "",
       material: event.material === "Y",
       setback: event.setback === "Y",
       upcoming: upcomingFlag,
       note: event.note || "",
+      ...sourceFields(event),
+      ...labelFields(event),
+      whatChanged: event.what_changed || null,
     }));
   });
 
@@ -502,17 +655,27 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     const when = parseDate(row.date, row.date && /^\d{4}-\d{2}$/.test(row.date) ? "month" : "exact");
     if (!when) return;
     const meta = byTicker.get(row.ticker);
-    let profile = findProfile(profiles, row.company);
+    let profile = profileByCode(profiles, row.ticker, row.company) || (!row.ticker && findProfile(profiles, row.company));
     if (!profile) {
+      const exchange = meta && meta.exchange;
+      const markets = [];
+      const venue = String(exchange || "").toLowerCase();
+      if (venue.includes("stockholm") || venue.includes("oslo") || venue.includes("helsinki")) markets.push("Nordic");
+      if (venue.includes("tsx") || venue.includes("toronto")) markets.push("TSX");
+      if (venue.includes("london") || venue.includes("aim")) markets.push("London");
+      if (venue.includes("asx")) markets.push("ASX");
       profile = {
         name: row.company,
+        shortName: row.company,
         label: row.company,
         code: row.ticker,
         band: bandFromCap(meta && meta.market_cap_usd_m),
-        markets: [],
+        markets,
         sector: PILOT_SECTORS[meta && meta.sector] || "",
         countries: [],
-        onScreen: false,
+        onScreen: SCREEN_PILOTS.has(row.ticker),
+        listingStatus: "listed",
+        parentListed: null,
       };
       profiles.push(profile);
     }
@@ -539,7 +702,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     let host = null;
     let best = 0;
     rows.forEach((item) => {
-      const sameCompany = item.companies.some((company) => namesClose(company.label, row.company) || namesClose(company.name, row.company));
+      const sameCompany = item.companies.includes(profile);
       if (!sameCompany || !datesClose(item.sort, item.precision, row.date)) return;
       const score = headlineScore(item.headline, row.what_happened);
       if (score > best) { host = item; best = score; }
@@ -547,28 +710,32 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     if (host) {
       host.pilots.push(pilot);
       if (!host.sourceUrl && pilot.sourceUrl) host.sourceUrl = pilot.sourceUrl;
+      if ((!host.sources || !host.sources.length) && row.source_url) Object.assign(host, sourceFields(row));
       return;
     }
     const made = rowShell(`p:${row.ticker}:${row.date}:${index}`, when, [profile], {
       type: pilot.risk,
       headline: row.what_happened || "",
-      sourceUrl: pilot.sourceUrl,
       material: row.material === "Y",
-      setback: false,
+      setback: String(row.direction || "").toLowerCase() === "negative",
+      ...sourceFields(row),
+      ...labelFields(row),
     });
     made.pilots.push(pilot);
     rows.push(made);
   });
 
+  rememberSplitRoots(profiles);
   rows.forEach((item) => {
     item.affects = affectsFor(readAcross, item.companies, item.sort, item.precision, item.headline);
   });
   rows.sort((a, b) => b.sort.localeCompare(a.sort) || showText(a.companies[0] && a.companies[0].label).localeCompare(showText(b.companies[0] && b.companies[0].label)) || a.id.localeCompare(b.id));
 
   const forward = (coming.items || []).map((item) => {
-    const when = parseDate(item.anchor, item.precision || "exact");
+    const sortRaw = item.sort_date || item.anchor;
+    const when = parseDate(sortRaw, item.precision || "exact");
     if (!when) return null;
-    const profile = profiles.find((company) => codesMatch(company.code, item.company_code)) || findProfile(profiles, item.company_name) || {
+    const profile = profileByCode(profiles, item.company_code, item.company_name) || findProfile(profiles, item.company_name) || {
       ...blankProfile(item.company_name || item.company_code || "Company"),
       code: item.company_code || "",
       markets: item.market ? [item.market] : [],
@@ -583,14 +750,21 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       type: displayType(item.type),
       category: item.category || "",
       headline: item.headline || "",
-      sourceUrl: item.source_url || "",
       material: item.material === "Y",
       setback: false,
       upcoming: true,
+      ...sourceFields(item),
+      ...labelFields(item),
     });
+    if (/^\d{4}-\d{2}-\d{2}$/.test(String(item.sort_date || ""))) row.sort = item.sort_date;
+    row.dateBasis = item.date_basis || "";
+    row.proxy = item.sort_date_is_proxy === true;
+    row.windowText = item.date_window_text || "";
     row.affects = affectsFor(readAcross, row.companies, row.sort, row.precision, row.headline);
     row.slip = slipTitle(slipped, row.companies, row.headline, row.sort, item.precision || row.precision);
-    row.label = item.date_label || formatSort(row.sort, row.precision);
+    row.label = row.proxy && row.windowText ? row.windowText : (item.date_label || formatSort(row.sort, row.precision));
+    row.guidanceHistory = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+    row.guidanceTrend = item.guidance_trend || "";
     return row;
   }).filter(Boolean);
   forward.sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
@@ -598,9 +772,30 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const types = new Set();
   const sectors = new Set();
   rows.concat(forward).forEach((item) => {
-    if (item.type) types.add(item.type);
+    const kind = item.eventType || item.type;
+    if (kind) types.add(kind);
     item.companies.forEach((company) => { if (company.sector) sectors.add(company.sector); });
   });
+  const catalyst = new Map();
+  forward.forEach((item) => {
+    item.companies.forEach((company) => {
+      const key = companyKey(company);
+      const prev = catalyst.get(key);
+      if (!prev || item.sort < prev) catalyst.set(key, item.sort);
+    });
+  });
+  const materialDates = new Map();
+  rows.forEach((item) => {
+    const material = item.significance === "material" || item.material || item.setback || item.direction === "negative";
+    if (!material) return;
+    item.companies.forEach((company) => {
+      const key = companyKey(company);
+      const prev = materialDates.get(key);
+      if (!prev || item.sort > prev) materialDates.set(key, item.sort);
+    });
+  });
+  nextCatalyst = catalyst;
+  latestMaterial = materialDates;
   return {
     events: rows,
     upcoming: forward,
@@ -623,23 +818,46 @@ function dateOk(item, today) {
   return item.sort >= shiftMonths(today, -12);
 }
 
-function tierOk(item) {
-  if (state.tier === "material") return item.material;
-  if (state.tier === "setback") return item.setback;
-  if (state.tier === "background") return item.background;
-  if (item.background) return state.background;
-  return true;
+function significanceOk(item) {
+  const significance = item.significance || (item.background ? "background" : "material");
+  const setback = item.direction === "negative" || item.setback;
+  if (state.significance === "background") return significance === "background";
+  if (state.significance === "all" || state.background) return true;
+  return significance === "material" || setback;
+}
+
+function directionOk(item) {
+  if (state.direction === "all") return true;
+  const direction = item.direction || (item.setback ? "negative" : "");
+  return direction === state.direction;
+}
+
+function statusOk(item) {
+  if (state.status === "all") return true;
+  return item.status === state.status;
+}
+
+function confidenceOk(item) {
+  if (state.confidence === "all") return true;
+  return item.dateConfidence === state.confidence;
 }
 
 function filtered() {
   const today = todayIso();
   const query = state.q.trim().toLowerCase();
+  if (state.briefIds && state.briefIds.size) {
+    return events.concat(upcoming).filter((item) => state.briefIds.has(item.rawId));
+  }
   const source = state.range === "upcoming" ? upcoming : events;
   return source.filter((item) => {
-    if (!tierOk(item)) return false;
+    if (!significanceOk(item)) return false;
+    if (!directionOk(item)) return false;
+    if (!statusOk(item)) return false;
+    if (!confidenceOk(item)) return false;
     if (state.range !== "upcoming" && !dateOk(item, today)) return false;
     if (state.band !== "all" && !item.companies.some((company) => company.band === state.band)) return false;
-    if (state.types.length && !state.types.includes(item.type)) return false;
+    const kind = item.eventType || item.type;
+    if (state.types.length && !state.types.includes(kind)) return false;
     if (state.sector !== "all" && !item.companies.some((company) => company.sector === state.sector)) return false;
     if (state.market !== "all" && !item.companies.some((company) => company.markets.includes(state.market))) return false;
     if (state.category !== "all" && item.category !== state.category) return false;
@@ -654,14 +872,25 @@ function filtered() {
 }
 
 function isDefault() {
-  return !state.q.trim() && state.tier === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
+  return !state.q.trim() && !state.briefIds && state.significance === "material" && state.direction === "all" && state.status === "all" && state.confidence === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
 }
 
 function readUrl() {
   const params = new URLSearchParams(window.location.search);
   state.q = params.get("q") || "";
+  const significance = params.get("sig");
   const tier = params.get("tier");
-  state.tier = TIERS.some(([value]) => value === tier) ? tier : "all";
+  if (significance === "material" || significance === "background" || significance === "all") state.significance = significance;
+  else if (tier === "background") state.significance = "background";
+  else if (params.get("bg") === "1") state.significance = "all";
+  else state.significance = "material";
+  const direction = params.get("dir");
+  state.direction = direction === "positive" || direction === "neutral" || direction === "negative" ? direction : (tier === "setback" ? "negative" : "all");
+  const status = params.get("status");
+  state.status = ["upcoming", "overdue", "slipped", "done"].includes(status) ? status : "all";
+  const confidence = params.get("confidence");
+  state.confidence = confidence === "high" || confidence === "medium" || confidence === "low" ? confidence : "all";
+  state.background = state.significance === "all";
   const range = params.get("range");
   state.range = RANGES.some(([value]) => value === range) ? range : "12m";
   const band = params.get("band");
@@ -675,14 +904,16 @@ function readUrl() {
   state.category = CATEGORIES.includes(category) ? category : "all";
   const country = params.get("country");
   state.country = countryOptions.includes(country) ? country : "all";
-  state.background = params.get("bg") === "1";
   state.shown = PAGE;
 }
 
 function writeUrl() {
   const params = new URLSearchParams();
   if (state.q.trim()) params.set("q", state.q.trim());
-  if (state.tier !== "all") params.set("tier", state.tier);
+  if (state.significance !== "material") params.set("sig", state.significance);
+  if (state.direction !== "all") params.set("dir", state.direction);
+  if (state.status !== "all") params.set("status", state.status);
+  if (state.confidence !== "all") params.set("confidence", state.confidence);
   if (state.range !== "12m") params.set("range", state.range);
   if (state.band !== "all") params.set("band", state.band);
   state.types.forEach((type) => params.append("type", type));
@@ -698,22 +929,34 @@ function writeUrl() {
 }
 
 function fieldDefault(key) {
-  return key === "range" ? "12m" : "all";
+  if (key === "range") return "12m";
+  if (key === "significance") return "material";
+  return "all";
 }
 
-function selectField(key, label, choices, current) {
-  const select = el("select", { "data-filter": key, "aria-label": label });
+function selectField(key, label, choices, current, tip) {
+  const select = el("select", { "data-filter": key, "aria-label": label, title: tip || "" });
   choices.forEach(([value, text]) => select.append(el("option", { value, text })));
   select.value = current;
   select.addEventListener("change", () => {
     state[key] = select.value;
+    if (key === "significance") {
+      state.background = state.significance === "all";
+      const button = document.getElementById("events-background");
+      if (button) {
+        button.setAttribute("aria-pressed", state.background ? "true" : "false");
+        const field = button.closest(".field");
+        if (field) field.classList.toggle("active", state.background);
+      }
+    }
     state.shown = PAGE;
     state.chartAll = false;
     select.closest(".field").classList.toggle("active", select.value !== fieldDefault(key));
     writeUrl();
     render();
+    paintMoreBadge();
   });
-  const field = el("label", { class: "field" }, [label, select]);
+  const field = el("label", { class: "field", title: tip || "" }, [label, select]);
   field.classList.toggle("active", current !== fieldDefault(key));
   return field;
 }
@@ -757,6 +1000,7 @@ function mountFilters() {
       state.shown = PAGE;
       writeUrl();
       render();
+      paintMoreBadge();
     });
     menu.append(el("label", {}, [input, type]));
   });
@@ -770,7 +1014,7 @@ function mountFilters() {
     const next = boxes[(index + shift + boxes.length) % boxes.length];
     next.focus();
   });
-  const typeField = el("div", { class: state.types.length ? "field type active" : "field type" }, [
+  const typeField = el("div", { class: state.types.length ? "field type active" : "field type", title: "The kind of event." }, [
     "Event type",
     el("details", { class: "multi" }, [summary, menu]),
   ]);
@@ -782,27 +1026,31 @@ function mountFilters() {
     "aria-pressed": state.background ? "true" : "false",
     onClick: (event) => {
       state.background = !state.background;
+      state.significance = state.background ? "all" : "material";
       state.chartAll = false;
+      const significance = document.querySelector("[data-filter='significance']");
+      if (significance) {
+        significance.value = state.significance;
+        significance.closest(".field").classList.toggle("active", state.significance !== "material");
+      }
       event.currentTarget.setAttribute("aria-pressed", state.background ? "true" : "false");
       event.currentTarget.closest(".field").classList.toggle("active", state.background);
       state.shown = PAGE;
       writeUrl();
       render();
+      paintMoreBadge();
     },
     text: "Show background",
   });
 
+  const moreCount = hiddenFilterCount();
   document.getElementById("event-bar").replaceChildren(
     searchField,
-    selectField("tier", "Tier", TIERS, state.tier),
-    selectField("range", "Date", RANGES, state.range),
-    selectField("band", "Size band", BANDS, state.band),
-    typeField,
+    selectField("significance", "Significance", [["material", "Material"], ["all", "All"], ["background", "Background"]], state.significance, "Material events, or the routine background ones."),
+    selectField("direction", "Direction", [["all", "All"], ["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]], state.direction, "Whether the event helped, was neutral, or was a setback."),
+    selectField("range", "Date", RANGES, state.range, "How far back, or the coming window."),
     selectField("sector", "Sector", [["all", "All"], ...sectorOptions.map((value) => [value, value])], state.sector),
-    selectField("market", "Market", [["all", "All"], ...MARKETS.map((value) => [value, value])], state.market),
-    selectField("category", "Category", [["all", "All"], ...CATEGORIES.map((value) => [value, value])], state.category),
     selectField("country", "Country", [["all", "All"], ...countryOptions.map((value) => [value, value])], state.country),
-    el("label", { class: state.background ? "field active" : "field" }, ["Background", background]),
     el("label", { class: state.watchOnly ? "field active" : "field" }, [
       "Watchlist",
       el("button", {
@@ -821,12 +1069,58 @@ function mountFilters() {
         text: "Watchlist",
       }),
     ]),
+    el("details", { class: "more-filters", id: "events-more", open: moreCount ? true : undefined }, [
+      el("summary", {}, [
+        "More filters",
+        moreCount ? el("span", { class: "filter-count", text: String(moreCount) }) : null,
+      ]),
+      el("div", { class: "fields event-more-fields" }, [
+        selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status, "Where a guided item stands."),
+        selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence, "How firmly the date is known. High, medium, or low."),
+        selectField("band", "Market-cap band", BANDS, state.band, "Size group from market value."),
+        typeField,
+        selectField("market", "Market", [["all", "All"], ...MARKETS.map((value) => [value, value])], state.market),
+        selectField("category", "Category", [["all", "All"], ...CATEGORIES.map((value) => [value, value])], state.category),
+        el("label", { class: state.background ? "field active" : "field" }, ["Background", background]),
+      ]),
+    ]),
   );
+}
+
+function hiddenFilterCount() {
+  let count = 0;
+  if (state.status !== "all") count += 1;
+  if (state.confidence !== "all") count += 1;
+  if (state.band !== "all") count += 1;
+  if (state.types.length) count += 1;
+  if (state.market !== "all") count += 1;
+  if (state.category !== "all") count += 1;
+  if (state.background) count += 1;
+  return count;
+}
+
+function paintMoreBadge() {
+  const summary = document.querySelector("#events-more summary");
+  if (!summary) return;
+  const count = hiddenFilterCount();
+  summary.replaceChildren(document.createTextNode("More filters"));
+  if (count) summary.append(el("span", { class: "filter-count", text: String(count) }));
 }
 
 function clearFilters() {
   state.q = "";
-  state.tier = "all";
+  state.briefKey = "";
+  state.briefIds = null;
+  const briefList = document.getElementById("briefingList");
+  if (briefList) {
+    briefList.hidden = true;
+    briefList.replaceChildren();
+  }
+  document.querySelectorAll(".brief-hit").forEach((node) => node.classList.remove("is-on"));
+  state.significance = "material";
+  state.direction = "all";
+  state.status = "all";
+  state.confidence = "all";
   state.range = "12m";
   state.band = "all";
   state.types = [];
@@ -845,10 +1139,17 @@ function clearFilters() {
   render();
 }
 
+function notListedTag(company) {
+  const status = String(company.listingStatus || "").toLowerCase();
+  if (status !== "private" && status !== "state") return null;
+  return el("span", { class: "not-listed", title: "Private or state entity, with no stock-exchange listing.", text: "Not listed" });
+}
+
 function companyNode(company) {
   const body = [
     el("span", { class: "cap-name", text: showText(company.label || company.name) }),
     company.code ? el("span", { class: "co-ticker", text: showText(company.code) }) : null,
+    notListedTag(company),
   ];
   if (!company.code || !(company.onScreen || linkCodes.has(company.code))) return el("span", { class: "tl-plain" }, body);
   return el("button", {
@@ -861,10 +1162,54 @@ function companyNode(company) {
   }, body);
 }
 
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function directionChip(item) {
+  const key = item.direction || (item.setback ? "negative" : "");
+  if (key === "positive") return chip("Positive", "positive", "The event moved the asset forward.");
+  if (key === "neutral") return chip("Neutral", "neutral", "The event does not clearly help or hurt.");
+  if (key === "negative") return chip("Setback", "setback", "A dry hole, a delay, or another step backward.");
+  return null;
+}
+
+function significanceChip(item) {
+  const key = item.significance || (item.background ? "background" : (item.material ? "material" : ""));
+  const reason = item.significanceReason ? showText(item.significanceReason) : "";
+  if (key === "material") return chip("Material", "material", reason || "Large enough to matter for the company.");
+  if (key === "background") return chip("Background", "background", reason || "A routine item, or too small to change the story.");
+  return null;
+}
+
+function statusChip(status) {
+  const key = String(status || "").toLowerCase();
+  const labels = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" };
+  if (!labels[key]) return null;
+  return chip(labels[key], key, "Where this guided item stands.");
+}
+
+function confidenceChip(level) {
+  const key = String(level || "").toLowerCase();
+  const labels = { high: "High", medium: "Medium", low: "Low" };
+  if (!labels[key]) return null;
+  return chip(labels[key], `conf-${key}`, "How firmly the date is known.");
+}
+
+function typeChip(item) {
+  const text = showText(item.eventType || item.type);
+  if (!text || text === "—") return null;
+  return chip(text, "type", "The kind of event.");
+}
+
 function tagNodes(item) {
   return [
-    item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null,
-    item.setback ? el("span", { class: "no-badge setback", text: "Setback" }) : null,
+    typeChip(item),
+    item.category ? el("span", { class: "cat-tag", title: "Operational, capital and deals, or corporate.", text: showText(item.category) }) : null,
+    directionChip(item),
+    significanceChip(item),
+    statusChip(item.status),
+    confidenceChip(item.dateConfidence),
     item.affects.length ? el("span", { class: "also-tag", text: `Also affects: ${item.affects.join(", ")}` }) : null,
     item.slip ? el("span", { class: "slip-tag", title: item.slip, text: "Past guided date" }) : null,
   ];
@@ -882,22 +1227,73 @@ function sourceLink(url, label) {
   });
 }
 
-function sourceIcon(url) {
-  const href = safeUrl(url);
-  if (!href) return null;
-  const icon = svgEl("svg", { viewBox: "0 0 16 16", width: "16", height: "16", "aria-hidden": "true" });
-  icon.append(
-    svgEl("path", { d: "M3.2 6.2V12.8h6.6", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
-    svgEl("path", { d: "M8 3.2h4.8V8M12.8 3.2 7 9", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
-  );
+function checkedLine(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  const parsed = parseDate(text, "exact");
+  return parsed ? `Checked ${formatSort(parsed.sort, "day")}` : `Checked ${showText(text)}`;
+}
+
+function sourceBadgeLabel(item) {
+  const status = String(item.sourceStatus || "").toLowerCase();
+  const level = String(item.sourceLevel || "").toLowerCase();
+  const href = safeUrl(item.sourceUrl);
+  if (status === "missing" || !href) return { label: "Missing", kind: "missing", href: "" };
+  if (level === "listing page") return { label: "Listing page", kind: "listing", href };
+  if (status === "secondary") return { label: "Secondary", kind: "secondary", href };
+  return { label: "Primary", kind: "primary", href };
+}
+
+function sourceBadge(item) {
+  const badge = sourceBadgeLabel(item);
+  const checked = checkedLine(item.lastChecked);
+  const title = checked || (badge.kind === "missing" ? "No source on file" : badge.label);
+  if (!badge.href) {
+    return el("span", { class: `src-badge src-${badge.kind}`, title, text: badge.label });
+  }
   return el("a", {
-    class: "source-icon",
-    href,
+    class: `src-badge src-${badge.kind}`,
+    href: badge.href,
     target: "_blank",
     rel: "noopener noreferrer",
-    "aria-label": "Source. Opens in a new tab.",
+    title,
+    "aria-label": checked ? `${badge.label}. ${checked}. Opens in a new tab.` : `${badge.label}. Opens in a new tab.`,
     onClick: (event) => event.stopPropagation(),
-  }, [icon]);
+    text: badge.label,
+  });
+}
+
+function sourceList(item) {
+  const urls = item.sources && item.sources.length ? item.sources : (item.sourceUrl ? [item.sourceUrl] : []);
+  const parts = [];
+  const checked = checkedLine(item.lastChecked);
+  if (checked) parts.push(el("p", { class: "label-notes", text: checked }));
+  if (urls.length) {
+    parts.push(el("p", { class: "eyebrow", text: urls.length > 1 ? "Sources" : "Source" }));
+    parts.push(el("ul", { class: "source-list" }, urls.map((url) => {
+      const link = sourceLink(url, showText(url).replace(/^https?:\/\//, ""));
+      return el("li", {}, [link || el("span", { class: "muted-gap", text: "Missing" })]);
+    })));
+  } else {
+    parts.push(el("p", { class: "label-notes", text: "No source on file." }));
+  }
+  if (item.revisions && item.revisions.length) {
+    parts.push(el("p", { class: "eyebrow", text: "Merged revisions" }));
+    parts.push(el("ul", { class: "source-list" }, item.revisions.map((revision) => {
+      const when = parseDate(revision.date, "exact");
+      const bits = [
+        when ? formatSort(when.sort, "day") : "",
+        showText(revision.type),
+        showText(revision.headline),
+      ].filter((bit) => bit && bit !== "—");
+      const link = sourceLink(revision.source_url, "Source");
+      return el("li", {}, [
+        el("span", { text: bits.join(". ") }),
+        link ? el("span", {}, [" ", link]) : null,
+      ]);
+    })));
+  }
+  return parts;
 }
 
 function fact(key, value, extra) {
@@ -981,6 +1377,97 @@ function partnerBlock(entries) {
   ]);
 }
 
+function trendChip(trend, status) {
+  const key = String(trend || "").toLowerCase();
+  if (key === "no update found") return chip("No update found", "trend-none", "The guided window has not moved in the notes on file.");
+  const state = String(status || "").toLowerCase();
+  if (state === "slipped" || state === "overdue") return null;
+  if (key.includes("slipped")) return chip("Slipped", "slipped", "The guided window moved later.");
+  if (!key) return null;
+  return chip(showText(trend), "type", "");
+}
+
+function guidanceBlock(item) {
+  const history = Array.isArray(item.guidanceHistory) ? item.guidanceHistory : [];
+  if (!history.length && !item.guidanceTrend) return null;
+  return el("div", { class: "guidance-block" }, [
+    el("p", { class: "eyebrow", text: "Guidance history" }),
+    trendChip(item.guidanceTrend, item.status),
+    history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
+      const seen = parseDate(entry.date_seen, "exact");
+      const link = sourceLink(entry.source_url_if_any, "Source");
+      return el("li", {}, [
+        el("span", { class: "cap-date", text: seen ? formatSort(seen.sort, "day") : "Date not set" }),
+        el("span", { text: showText(entry.window_text) }),
+        link,
+      ]);
+    })) : null,
+  ]);
+}
+
+function riskChip(value) {
+  const key = String(value || "").toLowerCase();
+  if (key === "risk reduced") return chip("Risk reduced", "positive", "How the notes describe the risk. Factual context, not a recommendation.");
+  if (key === "risk increased") return chip("Risk increased", "setback", "How the notes describe the risk. Factual context, not a recommendation.");
+  if (key === "mixed") return chip("Mixed", "neutral", "How the notes describe the risk. Factual context, not a recommendation.");
+  return null;
+}
+
+function nextMilestone(id) {
+  const target = upcoming.find((item) => item.rawId === id || item.id === `u:${id}`);
+  const label = target
+    ? `${target.label || formatSort(target.sort, target.precision)}. ${showText(target.headline)}`
+    : "";
+  if (!target || !label) return null;
+  return el("p", {}, [
+    el("span", { class: "k", text: "Next milestone. " }),
+    el("button", {
+      type: "button",
+      class: "co-link",
+      onClick: (event) => {
+        event.stopPropagation();
+        state.range = "upcoming";
+        state.briefIds = null;
+        state.briefKey = "";
+        state.significance = "all";
+        state.background = true;
+        state.open.add(target.id);
+        state.shown = Math.max(state.shown, PAGE);
+        mountFilters();
+        writeUrl();
+        render();
+        requestAnimationFrame(() => {
+          const node = visibleEventNode(target.id);
+          if (node) node.scrollIntoView({ block: "nearest" });
+        });
+      },
+      text: label,
+    }),
+  ]);
+}
+
+function whatChangedCard(item) {
+  const block = item.whatChanged;
+  const material = item.significance === "material" || (item.material && item.significance !== "background");
+  if (!material || !block || typeof block !== "object") return null;
+  const before = block.before ? el("p", {}, [el("span", { class: "k", text: "Before. " }), showText(block.before)]) : null;
+  const evidenceText = block.evidence ? showText(block.evidence) : "";
+  const evidence = evidenceText && evidenceText !== "—"
+    ? el("p", {}, [el("span", { class: "k", text: "Evidence. " }), evidenceText, " ", sourceBadge(item)])
+    : null;
+  const risk = riskChip(block.risk_effect);
+  const next = block.next_milestone ? nextMilestone(block.next_milestone) : null;
+  if (!before && !evidence && !risk && !next) return null;
+  return el("div", { class: "changed-card" }, [
+    el("p", { class: "eyebrow", text: "What changed" }),
+    el("p", { class: "label-notes", text: "Factual context from the sources. Not a recommendation." }),
+    before,
+    evidence,
+    risk ? el("p", {}, [el("span", { class: "k", text: "Risk effect. " }), risk]) : null,
+    next,
+  ]);
+}
+
 function detailNode(item) {
   const parts = [];
   if (item.moves) {
@@ -988,8 +1475,11 @@ function detailNode(item) {
     parts.push(el("p", { class: "moves", text: `r5 ${moveLabel(item.moves.r5)} · r20 ${moveLabel(item.moves.r20)} · r60 ${moveLabel(item.moves.r60)}` }));
     parts.push(el("p", { class: "label-notes", text: "Share-price change after the event. Context only." }));
   }
-  const source = sourceLink(item.sourceUrl, "Source");
-  if (source) parts.push(el("p", {}, [source]));
+  parts.push(...sourceList(item));
+  const guidance = guidanceBlock(item);
+  if (guidance) parts.push(guidance);
+  const changed = whatChangedCard(item);
+  if (changed) parts.push(changed);
   const partners = partnerLines(item);
   if (partners.length) parts.push(partnerBlock(partners));
   item.pilots.forEach((pilot) => parts.push(pilotBlock(pilot)));
@@ -1025,18 +1515,27 @@ function onRowKey(event, id) {
   toggle(id);
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function dateNode(item) {
   const text = item.label || formatSort(item.sort, item.precision);
-  return el("span", {}, [
-    text,
-    item.precision === "month" ? el("span", { class: "precision", text: "Month" }) : null,
+  return el("span", { class: "date-stack" }, [
+    el("span", { text }),
+    basisTag(item.dateBasis),
+    item.precision === "month" && !item.proxy ? el("span", { class: "precision", text: "Month" }) : null,
   ]);
 }
 
 function renderTable(rows) {
   const table = el("table", { class: "register timeline" });
   const head = el("tr");
-  ["Date", "Company", "Type", "Headline", "Source"].forEach((label) => head.append(el("th", { scope: "col", text: label })));
+  [["Date", "When it happened, or the guided window."], ["Company", "The company the event belongs to."], ["Event type", "The kind of event."], ["Headline", "What was announced."], ["Source", "Primary, secondary, a listing page, or missing."]].forEach(([label, tip]) => head.append(el("th", { scope: "col", title: tip, text: label })));
   table.append(el("thead", {}, [head]));
   const body = el("tbody");
   rows.forEach((item) => {
@@ -1053,9 +1552,9 @@ function renderTable(rows) {
     main.append(
       el("td", { class: "date" }, [dateNode(item)]),
       el("td", {}, [el("span", { class: "tl-cos" }, item.companies.map(companyNode))]),
-      el("td", {}, [el("span", { class: "tl-tags" }, [item.type ? showText(item.type) : "—", item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null])]),
-      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "tl-tags" }, tagNodes(item).slice(1))])]),
-      el("td", {}, [sourceIcon(item.sourceUrl)]),
+      el("td", {}, [el("span", { class: "chip-row" }, tagNodes(item).slice(0, 2))]),
+      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "chip-row" }, tagNodes(item).slice(2))])]),
+      el("td", {}, [sourceBadge(item)]),
     );
     body.append(main);
     if (open) {
@@ -1079,11 +1578,11 @@ function renderCards(rows) {
       onClick: () => toggle(item.id),
       onKeydown: (event) => onRowKey(event, item.id),
     }, [
-      el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) }), item.type ? el("span", { text: showText(item.type) }) : null]),
+      el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) })]),
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
-      el("div", { class: "tl-tags" }, tagNodes(item)),
-      el("div", { class: "card-meta" }, [sourceIcon(item.sourceUrl)]),
+      el("div", { class: "chip-row" }, tagNodes(item)),
+      el("div", { class: "card-meta" }, [sourceBadge(item)]),
       open ? detailNode(item) : null,
     ]);
   });
@@ -1125,8 +1624,26 @@ function todayMs() {
   return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
 }
 
+function parentTicker(company) {
+  const ticker = company && company.parentListed && String(company.parentListed.ticker || "").trim();
+  if (!ticker || ticker === "—") return "";
+  return ticker;
+}
+
+function subsidiaryOfListed(company) {
+  return String(company && company.listingStatus || "").toLowerCase() === "subsidiary of listed" && !!parentTicker(company);
+}
+
+function parentShortLabel(company) {
+  const short = String(company.shortName || "").trim();
+  if (/^inpex\b/i.test(short)) return "INPEX";
+  return short || company.name || "Company";
+}
+
 function companyKey(company) {
-  return company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+  if (subsidiaryOfListed(company)) return `c:${parentTicker(company)}`;
+  if (company.code) return `c:${company.code}`;
+  return `n:${showText(company.label || company.name)}`;
 }
 
 function chartBounds(rows) {
@@ -1161,21 +1678,52 @@ function buildLanes(rows) {
         if (!company.code || !window.moonshotWatch || !window.moonshotWatch.has(company.code)) return;
       }
       const key = companyKey(company);
+      const subsidiary = subsidiaryOfListed(company);
+      const chip = subsidiary ? parentTicker(company) : (company.code || "");
+      const name = subsidiary ? parentShortLabel(company) : (company.label || company.name || company.code || "Company");
+      const full = subsidiary ? (company.label || company.name || name) : "";
       let lane = map.get(key);
       if (!lane) {
         lane = {
           key,
-          code: company.code || "",
-          name: company.label || company.name || company.code || "Company",
-          onScreen: !!(company.code && (company.onScreen || linkCodes.has(company.code))),
+          code: chip,
+          name,
+          title: full || (chip ? `${showText(name)} (${showText(chip)})` : showText(name)),
+          screenCode: company.code || chip,
+          onScreen: !!(company.onScreen || (company.code && linkCodes.has(company.code))),
           count: 0,
+          subsidiary,
         };
         map.set(key, lane);
+      } else if (subsidiary) {
+        lane.name = name;
+        lane.code = chip || lane.code;
+        if (full && !String(lane.title).includes(full)) lane.title = lane.subsidiary && lane.title ? `${lane.title}. ${full}` : full;
+        lane.subsidiary = true;
+        if (company.code && (company.onScreen || linkCodes.has(company.code))) lane.screenCode = company.code;
       }
+      if (company.onScreen || (company.code && linkCodes.has(company.code))) lane.onScreen = true;
       lane.count += 1;
     });
   });
-  return [...map.values()].sort((a, b) => b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" }));
+  const pinned = (lane) => !!(lane.code && window.moonshotWatch && window.moonshotWatch.has(lane.code));
+  return [...map.values()].sort((a, b) => {
+    if (state.chartSort === "count") return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+    if (state.chartSort === "watch") {
+      const pin = Number(pinned(b)) - Number(pinned(a));
+      if (pin) return pin;
+    }
+    if (state.chartSort === "latest") {
+      const left = latestMaterial.get(a.key) || "";
+      const right = latestMaterial.get(b.key) || "";
+      if (left !== right) return right.localeCompare(left);
+      return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+    }
+    const left = nextCatalyst.get(a.key) || "9999-99-99";
+    const right = nextCatalyst.get(b.key) || "9999-99-99";
+    if (left !== right) return left.localeCompare(right);
+    return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+  });
 }
 
 function xFor(time, width, bounds) {
@@ -1255,9 +1803,19 @@ function layoutGroup(group, y, width) {
 }
 
 function markerColor(item) {
-  if (item.setback) return cssVar("--amber", "#f0b429");
-  if (item.background) return cssVar("--muted", "#8b97a8");
+  if (item.setback || item.direction === "negative") return cssVar("--amber", "#f0b429");
+  if (item.direction === "neutral" || item.background || item.significance === "background") return cssVar("--muted", "#8b97a8");
   return cssVar("--accent", "#4f7cff");
+}
+
+function starPoints(cx, cy, radius) {
+  const points = [];
+  for (let i = 0; i < 10; i += 1) {
+    const arm = i % 2 ? radius * 0.42 : radius;
+    const angle = -Math.PI / 2 + (i * Math.PI) / 5;
+    points.push(`${(cx + Math.cos(angle) * arm).toFixed(2)},${(cy + Math.sin(angle) * arm).toFixed(2)}`);
+  }
+  return points.join(" ");
 }
 
 function hideCluster(force) {
@@ -1355,9 +1913,11 @@ function drawDot(placed) {
     stroke: color,
     "stroke-width": item.setback ? 2 : 1.6,
   };
-  const mark = exit
-    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
-    : svgEl("circle", { ...paint, cx, cy, r: MARK_R });
+  const mark = item.setback || item.direction === "negative"
+    ? svgEl("polygon", { ...paint, points: starPoints(cx, cy, 5.2) })
+    : exit
+      ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
+      : svgEl("circle", { ...paint, cx, cy, r: MARK_R });
   if (item.precision !== "day" && item.precision !== "exact") mark.setAttribute("stroke-dasharray", "1.6 1.3");
   group.append(mark);
   group.addEventListener("click", (event) => {
@@ -1505,7 +2065,10 @@ function buildSvg(lanes, rows, width, bounds) {
 function chartStampFor(rows) {
   return JSON.stringify({
     range: state.range,
-    tier: state.tier,
+    significance: state.significance,
+    direction: state.direction,
+    status: state.status,
+    confidence: state.confidence,
     band: state.band,
     types: state.types,
     sector: state.sector,
@@ -1516,6 +2079,7 @@ function chartStampFor(rows) {
     watchOnly: state.watchOnly,
     q: state.q,
     chartAll: state.chartAll,
+    chartSort: state.chartSort,
     n: rows.length,
     a: rows[0] && rows[0].id,
     b: rows.length ? rows[rows.length - 1].id : "",
@@ -1685,7 +2249,8 @@ function renderChart(rows) {
   const bounds = chartBounds(rows);
   const narrow = window.matchMedia("(max-width: 820px)").matches;
   const laneNodes = lanes.map((lane, index) => {
-    const full = lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name);
+    const full = lane.title || (lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name));
+    const openCode = lane.screenCode || lane.code;
     return el("div", {
       class: index % 2 ? "lane alt" : "lane",
       title: full,
@@ -1697,7 +2262,7 @@ function renderChart(rows) {
           class: "name lane-link",
           title: full,
           onClick: () => {
-            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(lane.code);
+            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(openCode);
           },
           text: showText(lane.name),
         })
@@ -1803,11 +2368,13 @@ function scheduleChart(rows) {
 
 function subtitle() {
   if (state.range === "upcoming") return "Coming up, soonest first.";
-  const tier = state.tier === "all"
-    ? (state.background ? "All tiers" : "Material and setbacks")
-    : TIERS.find(([value]) => value === state.tier)[1];
+  const significance = state.significance === "material"
+    ? "Material and setbacks"
+    : state.significance === "background"
+      ? "Background"
+      : "All significance";
   const range = state.range === "all" ? "all dates" : RANGES.find(([value]) => value === state.range)[1].toLowerCase();
-  return `${tier}, ${range}. Newest first.`;
+  return `${significance}, ${range}. Newest first.`;
 }
 
 function render() {
@@ -1851,6 +2418,102 @@ function showError() {
   document.getElementById("main").prepend(el("p", { class: "error", text: "The register could not be loaded. Refresh the page to try again." }));
 }
 
+function briefDate(item) {
+  if (item.date_window_text) return showText(item.date_window_text);
+  const parsed = parseDate(item.date, "exact");
+  return parsed ? formatSort(parsed.sort, "day") : showText(item.date);
+}
+
+function renderBriefing(data) {
+  const section = document.getElementById("briefing");
+  const tiles = document.getElementById("briefingTiles");
+  const note = document.getElementById("briefingNote");
+  const asof = document.getElementById("briefingAsof");
+  const details = document.getElementById("briefingDetails");
+  if (!section || !tiles || !data || !data.counts) return;
+  section.hidden = false;
+  const parsed = parseDate(data.as_of, "exact");
+  if (asof) asof.textContent = parsed ? `As of ${formatSort(parsed.sort, "day")}.` : "";
+  if (note) note.textContent = "Facts only. Dates are event dates, except guidance windows passed, which use the date they were checked.";
+  if (details) {
+    let open = true;
+    try { open = localStorage.getItem("moonshot-briefing") !== "0"; } catch (err) { open = true; }
+    details.open = open;
+    details.addEventListener("toggle", () => {
+      try { localStorage.setItem("moonshot-briefing", details.open ? "1" : "0"); } catch (err) { /* ignore */ }
+    });
+  }
+  const counts = data.counts;
+  const groups = [
+    {
+      label: "New material events",
+      hits: [
+        ["material_7d", `${counts.material_7d} in 7 days`, data.material_7d || []],
+        ["material_30d", `${counts.material_30d} in 30 days`, data.material_30d || []],
+      ],
+    },
+    { label: "New setbacks", hits: [["setbacks_30d", `${counts.setbacks_30d} in 30 days`, data.setbacks_30d || []]] },
+    { label: "Catalysts in the next 30 days", hits: [["catalysts_30d", String(counts.catalysts_30d), data.catalysts_30d || []]] },
+    { label: "Guidance windows passed", hits: [["overdue", String(counts.overdue), data.overdue || []]] },
+  ];
+  const openList = (key, items) => {
+    state.briefKey = state.briefKey === key ? "" : key;
+    document.querySelectorAll(".brief-hit").forEach((node) => node.classList.toggle("is-on", node.dataset.brief === state.briefKey));
+    const list = document.getElementById("briefingList");
+    if (!list) return;
+    if (!state.briefKey) {
+      state.briefIds = null;
+      list.hidden = true;
+      list.replaceChildren();
+      render();
+      return;
+    }
+    const shown = items.slice(0, 8);
+    list.hidden = false;
+    list.replaceChildren(
+      ...shown.map((item) => el("p", { class: "brief-row" }, [
+        el("span", { class: "cap-date", text: briefDate(item) }),
+        el("span", { class: "cap-name", text: showText(item.company) }),
+        el("span", { text: showText(item.headline) }),
+      ])),
+      items.length > shown.length ? el("p", { class: "label-notes", text: `${items.length - shown.length} more in this list.` }) : null,
+    );
+    const ids = new Set(items.map((item) => item.id).filter(Boolean));
+    if (key === "catalysts_30d") {
+      state.briefIds = null;
+      if (typeof window.moonshotApplyTab === "function") window.moonshotApplyTab("coming", true);
+      const horizon = document.querySelector("#coming-horizon [data-horizon='30']");
+      if (horizon) horizon.click();
+      return;
+    }
+    if (key === "overdue") {
+      state.briefIds = null;
+      return;
+    }
+    state.briefIds = ids;
+    state.range = "all";
+    state.significance = "all";
+    state.background = true;
+    state.direction = "all";
+    state.status = "all";
+    state.shown = PAGE;
+    if (typeof window.moonshotApplyTab === "function") window.moonshotApplyTab("events", true);
+    mountFilters();
+    writeUrl();
+    render();
+  };
+  tiles.replaceChildren(...groups.map((group) => el("article", { class: "brief-tile" }, [
+    el("p", { class: "brief-label", text: group.label }),
+    ...group.hits.map(([key, text, items]) => el("button", {
+      type: "button",
+      class: "brief-hit",
+      "data-brief": key,
+      onClick: () => openList(key, items),
+      text,
+    })),
+  ])));
+}
+
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-cache" });
   if (!response.ok) throw new Error(path);
@@ -1859,7 +2522,7 @@ async function loadJson(path) {
 
 async function main() {
   try {
-    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, gabon, angola, colombia, readAcross, slipped, coming] = await Promise.all([
+    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, gabon, angola, colombia, readAcross, slipped, coming, briefing] = await Promise.all([
       fetch("data/events.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("events"); return response.text(); }),
       fetch("data/companies.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("companies"); return response.text(); }),
       loadJson("data/smallcaps.json"),
@@ -1875,11 +2538,13 @@ async function main() {
       loadJson("data/read_across.json"),
       loadJson("data/slipped.json"),
       loadJson("data/coming_up.json"),
+      loadJson("data/briefing.json").catch(() => null),
     ]);
     screenCodes = new Set(screen.map((row) => row.code).filter(Boolean));
+    SCREEN_PILOTS.forEach((code) => screenCodes.add(code));
     linkCodes = new Set(screenCodes);
     norwayCompanies.forEach((company) => {
-      const code = tickerFromListing(company.listing_ticker);
+      const code = tickerFromListing(company.listing_ticker) || String(company.short_name || "").trim();
       if (code) linkCodes.add(code);
     });
     across = Array.isArray(readAcross) ? readAcross : [];
@@ -1896,10 +2561,14 @@ async function main() {
     );
     events = built.events;
     upcoming = built.upcoming;
+    const companyKeys = new Set();
+    events.forEach((item) => item.companies.forEach((company) => companyKeys.add(company.code || company.label || company.name)));
+    document.body.dataset.chartCompanies = String(companyKeys.size);
     typeOptions = built.types;
     sectorOptions = built.sectors;
     countryOptions = built.countries;
     readUrl();
+    renderBriefing(briefing);
     document.getElementById("loading").hidden = true;
     document.getElementById("app").hidden = false;
     mountFilters();
@@ -1925,6 +2594,42 @@ function bindChrome() {
   paintThemeButton();
   const showMore = document.getElementById("showMore");
   if (showMore) showMore.addEventListener("click", () => { state.shown += PAGE; render(); });
+  const chartToggle = document.getElementById("chartToggle");
+  const chartSort = document.getElementById("chartSort");
+  try {
+    state.chartOpen = localStorage.getItem("moonshot-chart-open") !== "0";
+    const savedSort = localStorage.getItem("moonshot-chart-sort");
+    if (savedSort === "next" || savedSort === "latest" || savedSort === "watch" || savedSort === "count") state.chartSort = savedSort;
+  } catch (err) { /* keep defaults */ }
+  const paintChartChrome = () => {
+    const block = document.getElementById("chartBlock");
+    if (block) block.classList.toggle("is-collapsed", !state.chartOpen);
+    if (chartToggle) {
+      chartToggle.textContent = state.chartOpen ? "Hide timeline" : "Show timeline";
+      chartToggle.setAttribute("aria-expanded", state.chartOpen ? "true" : "false");
+    }
+    if (chartSort) chartSort.value = state.chartSort;
+  };
+  paintChartChrome();
+  if (chartToggle) {
+    chartToggle.addEventListener("click", () => {
+      state.chartOpen = !state.chartOpen;
+      try { localStorage.setItem("moonshot-chart-open", state.chartOpen ? "1" : "0"); } catch (err) { /* ignore */ }
+      paintChartChrome();
+      if (state.chartOpen) {
+        chartStamp = "";
+        scheduleChart(chartRows);
+      }
+    });
+  }
+  if (chartSort) {
+    chartSort.addEventListener("change", () => {
+      state.chartSort = chartSort.value;
+      try { localStorage.setItem("moonshot-chart-sort", state.chartSort); } catch (err) { /* ignore */ }
+      chartStamp = "";
+      scheduleChart(chartRows);
+    });
+  }
   const chartMore = document.getElementById("chartMore");
   if (chartMore) {
     chartMore.addEventListener("click", () => {

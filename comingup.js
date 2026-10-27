@@ -1,4 +1,16 @@
-const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false, watchOnly: false };
+const openIds = new Set();
+const state = {
+  horizon: "30",
+  market: "all",
+  sector: "all",
+  category: "all",
+  materialOnly: false,
+  watchOnly: false,
+  significance: "all",
+  direction: "all",
+  status: "all",
+  confidence: "all",
+};
 let items = [];
 let slipped = [];
 
@@ -70,6 +82,11 @@ function inView(item, today, end) {
   if (state.market !== "all" && item.market !== state.market) return false;
   if (state.sector !== "all" && item.sector !== state.sector) return false;
   if (state.category !== "all" && item.category !== state.category) return false;
+  if (state.significance === "material" && item.significance && item.significance !== "material" && item.direction !== "negative") return false;
+  if (state.significance === "background" && item.significance !== "background") return false;
+  if (state.direction !== "all" && item.direction !== state.direction) return false;
+  if (state.status !== "all" && item.status !== state.status) return false;
+  if (state.confidence !== "all" && item.date_confidence_level !== state.confidence) return false;
   if (state.watchOnly && !(window.moonshotWatch && window.moonshotWatch.has(item.company_code))) return false;
   return true;
 }
@@ -86,17 +103,31 @@ function companyButton(item) {
   return el("button", {
     type: "button",
     class: "co-link",
-    onClick: () => openItem(item),
+    onClick: (event) => {
+      event.stopPropagation();
+      openItem(item);
+    },
   }, [
     el("span", { class: "cap-name", text: showText(item.company_name) }),
     el("span", { class: "cap-code", text: showText(item.company_code) }),
   ]);
 }
 
+function basisTag(basis) {
+  const key = String(basis || "").toLowerCase();
+  if (key === "confirmed") return el("span", { class: "basis-tag", title: "The date is fixed on a calendar or in a contract.", text: "Confirmed" });
+  if (key === "company target") return el("span", { class: "basis-tag", title: "The company or operator gave this window.", text: "Company target" });
+  if (key === "estimate") return el("span", { class: "basis-tag", title: "The date is inferred. No company window is on file.", text: "Estimate" });
+  return null;
+}
+
 function dateCell(item) {
-  return el("span", {}, [
-    el("span", { class: "cap-name", text: showText(item.date_label) }),
-    item.approx ? el("span", { class: "no-conf", text: "approx." }) : null,
+  const proxy = item.sort_date_is_proxy === true;
+  const text = proxy && item.date_window_text ? item.date_window_text : item.date_label;
+  return el("span", { class: "date-stack" }, [
+    el("span", { class: "cap-name", text: showText(text) }),
+    basisTag(item.date_basis),
+    !proxy && item.approx ? el("span", { class: "no-conf", text: "approx." }) : null,
   ]);
 }
 
@@ -138,6 +169,37 @@ function slippedRecord(item) {
   return slipped.find((entry) => codesMatch(entry.code, item.company_code) && headlinesClose(entry.item_headline, item.headline)) || null;
 }
 
+function trendChip(trend, status) {
+  const key = String(trend || "").toLowerCase();
+  if (key === "no update found") return el("span", { class: "chip chip-trend-none", title: "The guided window has not moved in the notes on file.", text: "No update found" });
+  if (status === "slipped" || status === "overdue") return null;
+  if (key.includes("slipped")) return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  return null;
+}
+
+function statusFlag(item) {
+  if (item.status === "overdue") return el("span", { class: "slip-tag", title: "The guided window has ended.", text: "Overdue" });
+  if (item.status === "slipped") return el("span", { class: "slip-tag", title: "The guided window moved later.", text: "Slipped" });
+  return null;
+}
+
+function guidanceBlock(item) {
+  const history = Array.isArray(item.guidance_history) ? item.guidance_history : [];
+  if (!history.length && !item.guidance_trend) return el("p", { class: "label-notes", text: "No guidance history on file." });
+  return el("div", { class: "guidance-block" }, [
+    el("p", { class: "eyebrow", text: "Guidance history" }),
+    trendChip(item.guidance_trend, item.status),
+    history.length ? el("ul", { class: "guidance-list" }, history.map((entry) => {
+      const href = safeUrl(entry.source_url_if_any);
+      return el("li", {}, [
+        el("span", { class: "cap-date", text: showText(entry.date_seen) }),
+        el("span", { text: showText(entry.window_text) }),
+        href ? el("a", { href, target: "_blank", rel: "noopener noreferrer", text: "Source" }) : null,
+      ]);
+    })) : null,
+  ]);
+}
+
 function slipTag(item) {
   const record = slippedRecord(item);
   if (!record && !dateHasPassed(item)) return null;
@@ -147,10 +209,23 @@ function slipTag(item) {
   return el("span", { class: "slip-tag", title, text: "Past guided date" });
 }
 
-function bandNode(item) {
-  if (item.band === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (item.band === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
-  return null;
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function labelChips(item) {
+  const confidence = item.date_confidence_level || "";
+  const confidenceLabel = confidence === "high" ? "High" : confidence === "medium" ? "Medium" : confidence === "low" ? "Low" : "";
+  const statusLabel = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" }[item.status] || "";
+  return [
+    item.direction === "positive" ? chip("Positive", "positive", "The event moved the asset forward.") : null,
+    item.direction === "neutral" ? chip("Neutral", "neutral", "The event does not clearly help or hurt.") : null,
+    item.direction === "negative" ? chip("Setback", "setback", "A dry hole, a delay, or another step backward.") : null,
+    item.significance === "material" ? chip("Material", "material", "Large enough to matter for the company.") : null,
+    item.significance === "background" ? chip("Background", "background", "A routine item, or too small to change the story.") : null,
+    statusLabel ? chip(statusLabel, item.status, "Where this guided item stands.") : null,
+    confidenceLabel ? chip(confidenceLabel, `conf-${confidence}`, "How firmly the date is known.") : null,
+  ];
 }
 
 function materialNode(item) {
@@ -164,7 +239,7 @@ function categoryTag(value) {
 }
 
 function badges(item) {
-  return el("span", { class: "no-chips" }, [categoryTag(item.category), bandNode(item), slipTag(item), materialNode(item)]);
+  return el("span", { class: "chip-row" }, [statusFlag(item), trendChip(item.guidance_trend, item.status), ...labelChips(item), slipTag(item)]);
 }
 
 function headlineNode(item) {
@@ -178,24 +253,42 @@ function renderTable(rows) {
   const table = el("table", { class: "register coming" });
   const head = el("thead");
   const headRow = el("tr");
-  ["Date", "Company", "Market", "Type", "Headline", "Band", "Material"].forEach((label) => {
-    headRow.append(el("th", { scope: "col", text: label }));
+  [["Date", "The guided window. A proxy day stays in words."], ["Company", "The company this item belongs to."], ["Market", "Where the shares trade."], ["Event type", "The kind of event."], ["Headline", "What is expected."], ["Labels", "Direction, significance, status, and date confidence."]].forEach(([label, tip]) => {
+    headRow.append(el("th", { scope: "col", title: tip, text: label }));
   });
   head.append(headRow);
   table.append(head);
   const body = el("tbody");
   rows.forEach((item) => {
-    const row = el("tr");
+    const open = openIds.has(item.id);
+    const row = el("tr", {
+      class: open ? "is-open" : "",
+      tabindex: "0",
+      role: "button",
+      "aria-expanded": open ? "true" : "false",
+      onClick: () => {
+        if (openIds.has(item.id)) openIds.delete(item.id);
+        else openIds.add(item.id);
+        render();
+      },
+      onKeydown: (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        if (openIds.has(item.id)) openIds.delete(item.id);
+        else openIds.add(item.id);
+        render();
+      },
+    });
     row.append(
-      el("td", {}, [dateCell(item), slipTag(item)]),
+      el("td", {}, [dateCell(item), statusFlag(item), slipTag(item)]),
       el("td", {}, [companyButton(item)]),
       el("td", { text: showText(item.market) }),
-      el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)])]),
+      el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.event_type || item.type), categoryTag(item.category)])]),
       el("td", {}, [headlineNode(item)]),
-      el("td", {}, [bandNode(item)]),
-      el("td", {}, [materialNode(item)]),
+      el("td", {}, [badges(item)]),
     );
     body.append(row);
+    if (open) body.append(el("tr", { class: "tl-detail" }, [el("td", { colspan: "6" }, [guidanceBlock(item)])]));
   });
   table.append(body);
   document.getElementById("coming-table").replaceChildren(rows.length ? table : []);
@@ -204,7 +297,11 @@ function renderTable(rows) {
 function renderCards(rows) {
   const root = document.getElementById("coming-cards");
   root.replaceChildren(...rows.map((item) => el("article", { class: "card" }, [
-    el("span", { class: "card-top" }, [dateCell(item), badges(item)]),
+    el("span", { class: "card-top" }, [dateCell(item), statusFlag(item), badges(item)]),
+    el("details", { class: "guidance-block", onClick: (event) => event.stopPropagation() }, [
+      el("summary", { text: "Guidance history" }),
+      guidanceBlock(item),
+    ]),
     companyButton(item),
     el("p", { class: "card-meta" }, [`${showText(item.market)} · ${showText(item.type)} `, categoryTag(item.category)]),
     el("p", { class: "card-what" }, [headlineNode(item)]),
@@ -215,7 +312,9 @@ function render() {
   const today = isoFromLocal(new Date());
   const end = horizonEnd(today);
   const scoped = items.filter((item) => inView(item, today, end));
-  const rows = state.materialOnly ? scoped.filter((item) => item.material === "Y") : scoped;
+  const rows = (state.materialOnly ? scoped.filter((item) => item.material === "Y") : scoped)
+    .slice()
+    .sort((a, b) => String(a.sort_date || a.anchor).localeCompare(String(b.sort_date || b.anchor)) || String(a.id).localeCompare(String(b.id)));
   const label = horizonLabel();
   const showing = rows.length === scoped.length
     ? `Showing ${rows.length} ${noun(rows.length)}. Next ${label}.`
@@ -248,13 +347,27 @@ function render() {
 
 function filterSelect(key, label, options) {
   const select = el("select", { [`data-coming-${key}`]: "1" });
-  select.append(el("option", { value: "all", text: "All" }), ...options.map((value) => el("option", { value, text: value })));
+  select.append(el("option", { value: "all", text: "All" }));
+  options.forEach((option) => {
+    const value = Array.isArray(option) ? option[0] : option;
+    const text = Array.isArray(option) ? option[1] : option;
+    select.append(el("option", { value, text }));
+  });
   select.addEventListener("change", () => {
     state[key] = select.value;
     select.closest(".field").classList.toggle("active", select.value !== "all");
     render();
   });
-  return el("label", { class: "field" }, [label, select]);
+  const tips = {
+    Market: "Where the shares trade.",
+    Sector: "Oil and gas, mining, or another sector.",
+    Category: "Operational, capital and deals, or corporate.",
+    Significance: "Material events, or the routine background ones.",
+    Direction: "Whether the event helped, was neutral, or was a setback.",
+    Status: "Where a guided item stands.",
+    "Date confidence": "How firmly the date is known. High, medium, or low.",
+  };
+  return el("label", { class: "field", title: tips[label] || "" }, [label, select]);
 }
 
 function mountFilters() {
@@ -262,6 +375,10 @@ function mountFilters() {
     filterSelect("market", "Market", ["London", "Norway", "Nordic", "Tel Aviv"]),
     filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
     filterSelect("category", "Category", ["Operational", "Capital and deals", "Corporate"]),
+    filterSelect("significance", "Significance", [["material", "Material"], ["background", "Background"]]),
+    filterSelect("direction", "Direction", [["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]]),
+    filterSelect("status", "Status", [["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]]),
+    filterSelect("confidence", "Date confidence", [["high", "High"], ["medium", "Medium"], ["low", "Low"]]),
     el("label", { class: "field" }, [
       "Material",
       el("button", {

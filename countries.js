@@ -92,8 +92,9 @@ function watchStar(code, name) {
 }
 
 function nameNode(row) {
-  const label = el("span", {}, [
-    el("span", { class: "cap-name", text: showText(row.name) }),
+  const fullName = showText(row.name);
+  const label = el("span", { class: "name-clip", title: fullName }, [
+    el("span", { class: "cap-name", title: fullName, text: fullName }),
     row.code ? el("span", { class: "cap-code", text: showText(row.code) }) : null,
     row.sector === "Oil and gas" && showText(row.basin) !== "—" ? el("span", { class: "place-label", text: showText(row.basin) }) : null,
   ]);
@@ -140,8 +141,8 @@ function sourceLink(url) {
 }
 
 function netBadge(net) {
-  if (net === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (net === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
+  if (net === "tight") return el("span", { class: "chip chip-conf-high", title: "How firmly the date is known. A narrow window.", text: "High" });
+  if (net === "loose") return el("span", { class: "chip chip-conf-low", title: "How firmly the date is known. A wide window.", text: "Low" });
   return null;
 }
 

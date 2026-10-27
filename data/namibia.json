@@ -1,0 +1,378 @@
+{
+ "country": "Namibia",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "SEI",
+   "name": "Sintana Energy Inc.",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "PEL 83 (Mopane)",
+     "working_interest": "4.9% effective (49% of Custos, which holds 10%)",
+     "operator": "TotalEnergies (40%, from 3 Sep 2026)",
+     "stage": "Appraisal; three-well exploration and appraisal campaign from Q4 2026, Mopane FID targeted 2028",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/totalenergies-becomes-operator-of-pel-83/9754159"
+    },
+    {
+     "licence": "PEL 90 (Block 2813B)",
+     "working_interest": "4.9% effective (Trago 10%); exchange of Trago interest to Chevron for US$11m plus contingent payments agreed 1 Oct 2026, pending approvals",
+     "operator": "Chevron",
+     "stage": "Exploration; Nabba-1X well Q4 2026",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/pel90-participating-interest-exchange-with-chevron/9802907"
+    },
+    {
+     "licence": "PEL 87 (Block 2713)",
+     "working_interest": "7.35% effective, carried",
+     "operator": "Pancontinental",
+     "stage": "Exploration; renewal period extended to 22 Jan 2027 with a well commitment",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    },
+    {
+     "licence": "PEL 79 (Blocks 2815/2915)",
+     "working_interest": "16.17% effective, carried",
+     "operator": "NAMCOR-led (no operator change reported)",
+     "stage": "Exploration",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    },
+    {
+     "licence": "PEL 82 (Blocks 2112B/2212A)",
+     "working_interest": "4.9% effective, carried",
+     "operator": "Chevron (80%)",
+     "stage": "Exploration; drilling possibly 2027",
+     "basin": "Walvis Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    },
+    {
+     "licence": "PEL 37",
+     "working_interest": "35% indirect on completion (Maravilla deal signed 20 Aug 2026)",
+     "operator": "Paragon Oil and Gas",
+     "stage": "Acquisition pending, completion H2 2026",
+     "basin": "Walvis Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    },
+    {
+     "licence": "PEL 103 (onshore)",
+     "working_interest": "about 13% effective",
+     "operator": "Inter Oil subsidiary",
+     "stage": "Exploration",
+     "basin": "Waterberg Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    }
+   ]
+  },
+  {
+   "code": "ECO",
+   "name": "Eco (Atlantic) Oil and Gas Ltd",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "PELs 97, 99, 100",
+     "working_interest": "85% operated now; 25% carried after BP completion (option to pass 10% more to BP)",
+     "operator": "Eco now; BP Namibia on completion (60%)",
+     "stage": "Exploration; Ministerial approval 2 Oct 2026, completion pending",
+     "basin": "Walvis Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/ministerial-approval-namibia-licences-farm-down/9803008"
+    },
+    {
+     "licence": "PEL 98 (Sharon Block)",
+     "working_interest": "0% (entire interest farmed out to Lamda Energy, approved)",
+     "operator": "Lamda Energy",
+     "stage": "Exited",
+     "basin": "Walvis Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989"
+    }
+   ]
+  },
+  {
+   "code": "TRP",
+   "name": "Tower Resources plc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "PEL 96",
+     "working_interest": "about 55% after farm-out of 25% to Prime (pre-deal 80%); further 5% from ZM still pending",
+     "operator": "Tower",
+     "stage": "Exploration; farm-out approved 25 Jun 2026, deed of assignment awaiting Minister signature (28 Sep 2026); new seismic possibly H1 2027",
+     "basin": "Walvis Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-results/9792645",
+     "note": "Post-farm-out percentage derived (80% less 25%); not stated in the interims"
+    }
+   ]
+  },
+  {
+   "code": "MER.ST",
+   "name": "Meren Energy Inc.",
+   "in_dataset": true,
+   "exchange": "Nasdaq Stockholm",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "PEL 56 (Block 2913B, Venus)",
+     "working_interest": "about 3.8% effective via Impact Oil and Gas",
+     "operator": "TotalEnergies",
+     "stage": "Pre-FID; technically ready, fiscal terms with Government unresolved; FID targeted 2026",
+     "basin": "Orange Basin",
+     "source_url": "https://view.news.eu.nasdaq.com/view?id=b16e8159aa6997e41dfd847836c9a0f8c&lang=en&src=listed"
+    },
+    {
+     "licence": "Block 2912 (PEL 91)",
+     "working_interest": "effective interest via Impact",
+     "operator": "TotalEnergies",
+     "stage": "Exploration",
+     "basin": "Orange Basin",
+     "source_url": "https://view.news.eu.nasdaq.com/view?id=b16e8159aa6997e41dfd847836c9a0f8c&lang=en&src=listed"
+    }
+   ]
+  },
+  {
+   "code": "BWE.OL",
+   "name": "BW Energy Limited",
+   "in_dataset": true,
+   "exchange": "Oslo Bors",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Kudu gas field licence",
+     "working_interest": "95%",
+     "operator": "BW Energy (NAMCOR 5%)",
+     "stage": "Pre-development; Kharas-1 appraisal done, partner search under way, FID not taken",
+     "basin": "Orange Basin",
+     "source_url": "https://www.bwenergy.no/en/bw-energy-provides-second-update-on-kudu-appraisal-well/",
+     "note": "Interest from BW Energy public material; confirm against latest report"
+    }
+   ]
+  },
+  {
+   "code": "PCL",
+   "name": "Pancontinental Energy NL",
+   "in_dataset": false,
+   "exchange": "ASX",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "PEL 87",
+     "working_interest": "75% (implied: Inter Oil 15%, NAMCOR 10%)",
+     "operator": "Pancontinental",
+     "stage": "Exploration; seeking partner after Woodside declined option",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130"
+    }
+   ]
+  },
+  {
+   "code": "BZT",
+   "name": "Bezant Resources plc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Mining",
+   "commodity": "Copper",
+   "project": "Hope and Gorob",
+   "note": "In commercial production from Oct 2026; first concentrate shipment early Nov 2026"
+  },
+  {
+   "code": "ATM",
+   "name": "Andrada Mining Limited",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Mining",
+   "commodity": "Tin",
+   "project": "Uis tin mine; Brandberg West earn-in"
+  },
+  {
+   "code": "EL8",
+   "name": "Elevate Uranium Ltd",
+   "in_dataset": true,
+   "exchange": "ASX",
+   "sector": "Mining",
+   "commodity": "Uranium",
+   "project": "Koppies, Namib Desert"
+  },
+  {
+   "code": "KAO",
+   "name": "Kaoko Metals Limited",
+   "in_dataset": true,
+   "exchange": "ASX",
+   "sector": "Mining",
+   "commodity": "Copper",
+   "project": "Chalkos (Otniel discovery)"
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "2026-12-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "Drilling start",
+   "headline": "Mopane three-well exploration and appraisal campaign on PEL 83 to start in Q4 2026 (Mopane-4X; rig en route mid-Oct 2026)",
+   "category": "Operational",
+   "basin": "Orange Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "4.9% effective",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "TotalEnergies 40% (operator)",
+    "Galp 40%",
+    "NAMCOR 10%",
+    "Custos 10%"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/totalenergies-becomes-operator-of-pel-83/9754159",
+   "status": "upcoming",
+   "note": "Press reports put the spud in late Oct 2026"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "Well spud",
+   "headline": "Chevron Nabba-1X exploration well on PEL 90 expected to spud in Q4 2026 (Stena Forth mobilising)",
+   "category": "Operational",
+   "basin": "Orange Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "4.9% effective; moves to contingent consideration on completion of the Chevron exchange",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "Chevron (operator)",
+    "QatarEnergy 27.5%",
+    "Equinor 17.4% (pending)",
+    "NAMCOR 10%"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/pel90-participating-interest-exchange-with-chevron/9802907",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "year",
+   "net": "loose",
+   "type": "FID",
+   "headline": "Venus (PEL 56) final investment decision targeted in 2026, subject to fiscal terms with the Government of Namibia",
+   "category": "Operational",
+   "basin": "Orange Basin",
+   "affected": [
+    {
+     "code": "MER.ST",
+     "interest": "about 3.8% effective via Impact",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "MER.ST"
+   ],
+   "other_partners": [
+    "TotalEnergies (operator)",
+    "QatarEnergy",
+    "Galp 10%",
+    "Impact Oil and Gas",
+    "NAMCOR"
+   ],
+   "source_url": "https://view.news.eu.nasdaq.com/view?id=b16e8159aa6997e41dfd847836c9a0f8c&lang=en&src=listed",
+   "status": "upcoming",
+   "note": "Oct 2026 press: terms still unresolved; may slip into 2027"
+  },
+  {
+   "date": "2027-01-22",
+   "date_precision": "exact",
+   "net": "tight",
+   "type": "Permit or approval",
+   "headline": "PEL 87 extended first renewal period ends 22 Jan 2027; EIA, 3D reprocessing and an exploration well committed",
+   "category": "Operational",
+   "basin": "Orange Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "7.35% effective",
+     "in_dataset": true
+    },
+    {
+     "code": "PCL",
+     "interest": "75%, operator",
+     "in_dataset": false
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "NAMCOR 10%"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results/9742130",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "MnA",
+   "headline": "Completion of BP farm-in to PELs 97, 99 and 100 (60% and operatorship; US$2.7m cash and carry) after 2 Oct 2026 Ministerial approval",
+   "category": "Capital and deals",
+   "basin": "Walvis Basin",
+   "affected": [
+    {
+     "code": "ECO",
+     "interest": "25% carried on completion",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ECO"
+   ],
+   "other_partners": [
+    "BP Namibia 60% (operator on completion)",
+    "NAMCOR and local partners"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/ministerial-approval-namibia-licences-farm-down/9803008",
+   "status": "upcoming"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "MnA",
+   "headline": "Completion of PEL 96 farm-out to Prime (25%); deed of assignment with the Minister for signature",
+   "category": "Capital and deals",
+   "basin": "Walvis Basin",
+   "affected": [
+    {
+     "code": "TRP",
+     "interest": "about 55%, operator",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "TRP"
+   ],
+   "other_partners": [
+    "Prime Global Energies 25%",
+    "NAMCOR",
+    "ZM Fourteen"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-results/9792645",
+   "status": "upcoming",
+   "note": "Completion guided as \"shortly\" since 25 Jun 2026"
+  }
+ ]
+}

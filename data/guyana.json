@@ -1,0 +1,108 @@
+{
+ "country": "Guyana",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "ECO",
+   "name": "Eco (Atlantic) Oil and Gas Ltd",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Orinduik Block (new PSA applied for)",
+     "working_interest": "100% now; 20% carried (to US$11m) under new PSA if Navitas takes 80%",
+     "operator": "Eco now; Navitas under the new PSA",
+     "stage": "Licence expired 14 Jan 2026; Jethro-1 and Joe-1 discovery rights retained; new PSA guided Q3 2026, not issued at 1 Oct 2026",
+     "basin": "Guyana-Suriname",
+     "source_url": "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/eco-atlantic-oil-and-gas-ltd.-announces-2026-operational-and-business-update-1178879"
+    },
+    {
+     "licence": "Canje Block (via JHI, acquisition pending)",
+     "working_interest": "indirect via JHI",
+     "operator": "ExxonMobil (historic)",
+     "stage": "Licence expired 4 Mar 2026; extension or reissue sought",
+     "basin": "Guyana-Suriname",
+     "source_url": "https://kaieteurnewsonline.com/2026/05/22/no-extension-granted-for-canje-orinduik-blocks-min-bharrat/"
+    }
+   ]
+  },
+  {
+   "code": "NVPT",
+   "name": "Navitas Petroleum LP",
+   "in_dataset": true,
+   "exchange": "Tel Aviv Stock Exchange",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Orinduik Block",
+     "working_interest": "option to 80% and operatorship (US$2.5m; carry up to US$55m gross)",
+     "operator": "Navitas on exercise",
+     "stage": "Option exercisable to about 4 Dec 2026; PSA negotiation jointly with Eco",
+     "basin": "Guyana-Suriname",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989"
+    }
+   ]
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "2026-12-04",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "MnA",
+   "headline": "Navitas option to farm in to 80% of Orinduik (US$2.5m payment, carry up to US$55m gross) lapses about 4 Dec 2026 unless exercised",
+   "category": "Capital and deals",
+   "basin": "Guyana-Suriname",
+   "affected": [
+    {
+     "code": "ECO",
+     "interest": "100% now, 20% carried after",
+     "in_dataset": true
+    },
+    {
+     "code": "NVPT",
+     "interest": "80% and operator on exercise",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ECO",
+    "NVPT"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989",
+   "status": "upcoming"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "Permit or approval",
+   "headline": "New Orinduik Production Sharing Agreement from the Ministry of Natural Resources (guided Q3 2026; not issued at 1 Oct 2026)",
+   "category": "Operational",
+   "basin": "Guyana-Suriname",
+   "affected": [
+    {
+     "code": "ECO",
+     "interest": "20% carried",
+     "in_dataset": true
+    },
+    {
+     "code": "NVPT",
+     "interest": "80%, operator",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ECO",
+    "NVPT"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/eco-atlantic-oil-and-gas-ltd.-announces-2026-operational-and-business-update-1178879",
+   "status": "upcoming",
+   "note": "Past guided date; see slipped.json"
+  }
+ ],
+ "note": "Suriname not added: no dataset names hold Suriname acreage."
+}

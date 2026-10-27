@@ -5398,7 +5398,7 @@
   "stage": "Explorer",
   "mkt_cap_usd_m": 191.9,
   "as_of": "2026-10-26",
-  "material_events_12m": 6,
+  "material_events_12m": 8,
   "latest_event_date": "2026-10-02",
   "latest_event_type": "Funding",
   "latest_event_headline": "Ministerial Approval - Namibia Licences Farm-down",
@@ -5415,6 +5415,26 @@
     "r20": null,
     "r60": null,
     "category": "Capital and deals"
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government approves Navitas 65% farm-in to PL001 and five-year extensions of all offshore licences, clearing the main condition for the JHI acquisition",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
+   },
+   {
+    "date": "2026-08-25",
+    "type": "Resource",
+    "headline": "Navitas estimates 640 MMbbl gross 2U prospective resource for the first PL001 drilling target (about 225 MMbbl net to Eco after the JHI deal)",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
    },
    {
     "date": "2026-06-29",
@@ -5504,6 +5524,26 @@
     "category": "Corporate"
    },
    {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government to formally issue the five-year PL001 licence extension before the licence expires on 31 December 2026, the last Falklands condition for the JHI acquisition",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/jhi-acquisition-final-court-order-obtained/9572058",
+    "category": "Operational"
+   },
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "MnA",
+    "headline": "Completion of the JHI Associates acquisition (35% of PL001, North Falklands) once the PL001 extension is issued; Navitas 65% farm-in approved on 21 September 2026",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/navitas-update-on-pl001-block-1-cbk-/9737676",
+    "category": "Capital and deals"
+   },
+   {
     "date": "2027-03-31",
     "date_precision": "quarter",
     "type": "Drilling start",
@@ -5514,7 +5554,7 @@
     "category": "Operational"
    }
   ],
-  "upcoming_count": 4,
+  "upcoming_count": 6,
   "next_event_date": "2026-12-04"
  },
  {
@@ -8026,14 +8066,54 @@
   "stage": "Developer",
   "mkt_cap_usd_m": 865.7,
   "as_of": "2026-10-26",
-  "material_events_12m": 3,
-  "latest_event_date": "2026-08-26",
-  "latest_event_type": "Reserve",
-  "latest_event_headline": "Sea Lion Reserves Evaluation",
-  "setbacks_12m": 0,
+  "material_events_12m": 6,
+  "latest_event_date": "2026-10-05",
+  "latest_event_type": "Setback",
+  "latest_event_headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+  "setbacks_12m": 2,
   "cash_flag": null,
-  "description": "Operator of the Sea Lion oil development in the North Falkland Basin; FID taken Dec 2025",
+  "description": "Partner with a 35% working interest in the Sea Lion oil development in the North Falkland Basin, operated by Navitas Petroleum (65%); FID Dec 2025, first oil targeted Q1 2028; also holds East Falklands licences via Falkland Oil and Gas",
   "events": [
+   {
+    "date": "2026-10-05",
+    "type": "Setback",
+    "headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+    "setback": true,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government extends all offshore production licences by five years (plus two optional), with UK Government support, including the Sea Lion licences",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
+   },
+   {
+    "date": "2026-09-04",
+    "type": "Setback",
+    "headline": "Argentine government threatens sanctions on Sea Lion participants; operator says licences valid and timetable unaffected",
+    "setback": true,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Corporate"
+   },
+   {
+    "date": "2026-08-27",
+    "type": "Funding",
+    "headline": "Placing and open offer raise about US$180m, leaving Rockhopper fully funded to Sea Lion first oil",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
+   },
    {
     "date": "2026-08-26",
     "type": "Reserve",
@@ -8043,6 +8123,16 @@
     "r20": -5.8,
     "r60": null,
     "category": "Operational"
+   },
+   {
+    "date": "2026-08-24",
+    "type": "MnA",
+    "headline": "Navitas exercises option to acquire second FPSO (OSX-1, about 125,000 bopd) to accelerate the Sea Lion Central Development Area",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
    },
    {
     "date": "2026-04-02",
@@ -8072,18 +8162,38 @@
   "median_daily_value_k": 1102.8,
   "upcoming": [
    {
-    "date": "2027-06-30",
-    "date_precision": "half",
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government to formally issue the five-year licence extensions announced on 21 September 2026, before current licence terms expire on 31 December 2026, covering the Sea Lion licences PL032 and PL033",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
+    "category": "Operational"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
     "type": "Drilling start",
     "headline": "Sea Lion development drilling expected to commence early 2027 (first oil Q1 2028)",
     "net": "loose",
     "material_if_delivered": "Y",
     "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
     "category": "Operational"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "month",
+    "type": "Results due",
+    "headline": "Full-year 2026 results due by end of June 2027 under the AIM six-month deadline (2025 results were released on 3 June 2026)",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
+    "category": "Corporate"
    }
   ],
-  "upcoming_count": 1,
-  "next_event_date": "2027-06-30"
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  },
  {
   "code": "ATM",
@@ -10870,25 +10980,35 @@
   "code": "BOR",
   "name": "Borders and Southern Petroleum plc",
   "type": "Oil and gas",
-  "stage": "Developer",
+  "stage": "Explorer",
   "mkt_cap_usd_m": 123.7,
   "as_of": "2026-10-26",
-  "material_events_12m": 1,
-  "latest_event_date": "2025-12-10",
-  "latest_event_type": "FID or construction decision",
-  "latest_event_headline": "Sea Lion FID Announcement",
+  "material_events_12m": 2,
+  "latest_event_date": "2026-10-12",
+  "latest_event_type": "Funding",
+  "latest_event_headline": "2 million GBP direct placing at a 42% premium to a single investor; company funded to mid-2028 while the Darwin farm-out continues",
   "setbacks_12m": 0,
   "cash_flag": null,
-  "description": "Partner in the Sea Lion oil development in the North Falkland Basin; FID Dec 2025",
+  "description": "Operator with 100% of three South Falkland Basin licences (PL018, PL019, PL020) holding the Darwin gas condensate discovery; running a farm-out to fund appraisal",
   "events": [
    {
-    "date": "2025-12-10",
-    "type": "FID or construction decision",
-    "headline": "Sea Lion FID Announcement",
+    "date": "2026-10-12",
+    "type": "Funding",
+    "headline": "2 million GBP direct placing at a 42% premium to a single investor; company funded to mid-2028 while the Darwin farm-out continues",
     "setback": false,
-    "r5": -14.0,
-    "r20": -23.0,
-    "r60": -15.3,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government extends all offshore production licences by five years (plus two optional), with UK Government support, including PL018, PL019 and PL020 (Darwin)",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
     "category": "Operational"
    }
   ],
@@ -10907,9 +11027,19 @@
     "material_if_delivered": "Y",
     "source_url": "https://www.investegate.co.uk/announcement/rns/borders-southern-petroleum--bor/half-year-financial-report/9780712",
     "category": "Operational"
+   },
+   {
+    "date": "2027-06-30",
+    "date_precision": "month",
+    "type": "Results due",
+    "headline": "Full-year 2026 results due by end of June 2027 under the AIM six-month deadline (2025 results were released on 29 May 2026)",
+    "net": "loose",
+    "material_if_delivered": "N",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/borders-southern-petroleum--bor/final-results/9590858",
+    "category": "Corporate"
    }
   ],
-  "upcoming_count": 1,
+  "upcoming_count": 2,
   "next_event_date": "2026-12-31"
  },
  {
@@ -12354,5 +12484,121 @@
   "upcoming": [],
   "upcoming_count": 0,
   "next_event_date": null
+ },
+ {
+  "code": "NVPT",
+  "name": "Navitas Petroleum LP",
+  "type": "Oil and gas",
+  "stage": "Producer",
+  "mkt_cap_usd_m": 4884.2,
+  "as_of": "2026-10-27",
+  "material_events_12m": 4,
+  "latest_event_date": "2026-10-05",
+  "latest_event_type": "Setback",
+  "latest_event_headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+  "setbacks_12m": 2,
+  "cash_flag": null,
+  "description": "Operator with 65% of the Sea Lion oil development in the North Falkland Basin (FID Dec 2025, first oil targeted Q1 2028) and incoming 65% operator of PL001; also producing in the US Gulf of Mexico",
+  "events": [
+   {
+    "date": "2026-10-05",
+    "type": "Setback",
+    "headline": "Two contractors withdraw from Sea Lion under Argentine sanctions pressure; Navitas replacing them, no material adverse effect expected at this stage",
+    "setback": true,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-09-21",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government approves Navitas 65% farm-in to PL001 and extends all offshore licences by five years",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
+   },
+   {
+    "date": "2026-09-04",
+    "type": "Setback",
+    "headline": "Argentine government threatens sanctions on Sea Lion participants; operator says licences valid and timetable unaffected",
+    "setback": true,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Corporate"
+   },
+   {
+    "date": "2026-08-24",
+    "type": "MnA",
+    "headline": "Navitas exercises option to acquire second FPSO (OSX-1, about 125,000 bopd) to accelerate the Sea Lion Central Development Area",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Capital and deals"
+   },
+   {
+    "date": "2026-08-24",
+    "type": "Resource",
+    "headline": "First PL001 exploration target estimated at 640 MMbbl gross 2U prospective resource",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
+   },
+   {
+    "date": "2025-12-10",
+    "type": "FID or construction decision",
+    "headline": "Final investment decision on Sea Lion Phase 1 (NDA 1, 11 wells, about 170 MMbbl), North Falkland Basin",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null,
+    "category": "Operational"
+   }
+  ],
+  "exchange": "Tel Aviv Stock Exchange",
+  "band": "Main (US$100M-5B)",
+  "currency": "ILS",
+  "url": "https://www.navitaspet.com/",
+  "median_daily_value_k": 4905.6,
+  "upcoming": [
+   {
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "type": "Permit or approval",
+    "headline": "Falkland Islands Government to formally issue the five-year licence extensions announced on 21 September 2026, before current licence terms expire on 31 December 2026, covering Sea Lion (PL032, PL033) and PL001",
+    "net": "tight",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
+    "category": "Operational"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Sea Lion NDA Phase 1 development drilling to start in early 2027 once the rig arrives in the Falklands; first oil targeted Q1 2028",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/sea-lion-update-potential-capital-raise/9736066",
+    "category": "Operational"
+   },
+   {
+    "date": "2027-03-31",
+    "date_precision": "quarter",
+    "type": "Drilling start",
+    "headline": "Multi-target PL001 exploration well (first target about 640 MMbbl gross 2U) during the Sea Lion drilling campaign, early 2027",
+    "net": "loose",
+    "material_if_delivered": "Y",
+    "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/navitas-update-on-pl001-block-1-cbk-/9737676",
+    "category": "Operational"
+   }
+  ],
+  "upcoming_count": 3,
+  "next_event_date": "2026-12-31"
  }
 ]

@@ -1,8 +1,8 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
-const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
-const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic"];
+const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
+const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv"];
 const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const CATEGORY_OPTIONS = ["Operational", "Capital and deals", "Corporate"];
 const BAND_ORDER = ["Micro (US$5-100M)", "Main (US$100M-5B)"];
@@ -55,6 +55,7 @@ const capsState = {
   market: "all",
   sector: "all",
   category: "all",
+  country: "all",
   exchange: "all",
   band: "all",
   type: "all",
@@ -67,6 +68,10 @@ const capsState = {
 };
 
 let caps = [];
+let readAcross = [];
+let slipped = [];
+let countryOptions = [];
+const countryByCode = new Map();
 
 function el(tag, props, children) {
   const node = document.createElement(tag);
@@ -176,9 +181,67 @@ function isNordicExchange(exchange) {
 }
 
 function listingMarket(exchange) {
+  const text = String(exchange || "").toLowerCase();
   if (exchange === "ASX") return "ASX";
   if (isNordicExchange(exchange)) return "Nordic";
+  if (text.includes("tel aviv")) return "Tel Aviv";
   return "London";
+}
+
+function bareCode(code) {
+  return String(code || "").replace(/\.(OL|ST|HE)$/i, "");
+}
+
+function codesMatch(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  return bareCode(a) === bareCode(b);
+}
+
+function normHead(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function headlinesClose(a, b) {
+  const left = normHead(a);
+  const right = normHead(b);
+  if (!left || !right) return false;
+  if (left === right || left.includes(right) || right.includes(left)) return true;
+  const words = (text) => new Set(text.split(" ").filter((word) => word.length > 4));
+  const leftWords = words(left);
+  const rightWords = words(right);
+  let shared = 0;
+  leftWords.forEach((word) => { if (rightWords.has(word)) shared += 1; });
+  return shared >= 3;
+}
+
+function isListed(value) {
+  return value === true || value === "Y";
+}
+
+function indexCountries(files) {
+  countryByCode.clear();
+  countryOptions = [];
+  files.forEach((file) => {
+    const name = String(file?.country || "").trim();
+    if (!name) return;
+    if (!countryOptions.includes(name)) countryOptions.push(name);
+    (file.companies || []).forEach((company) => {
+      if (!isListed(company.in_dataset) || !company.code) return;
+      [company.code, bareCode(company.code)].forEach((code) => {
+        if (!code) return;
+        if (!countryByCode.has(code)) countryByCode.set(code, new Set());
+        countryByCode.get(code).add(name);
+      });
+    });
+  });
+}
+
+function assignCountries(rows) {
+  rows.forEach((row) => {
+    const names = new Set([...(countryByCode.get(row.code) || [])]);
+    row.countries = [...names];
+  });
 }
 
 function isoFromLocal(date) {
@@ -422,6 +485,7 @@ function searchBlob(row) {
 function matches(row) {
   if (capsState.market !== "all" && !row.markets.includes(capsState.market)) return false;
   if (capsState.sector !== "all" && row.sector !== capsState.sector) return false;
+  if (capsState.country !== "all" && !(row.countries || []).includes(capsState.country)) return false;
   if (!categoryHits(row)) return false;
   if (capsState.exchange !== "all" && showText(row.exchange) !== capsState.exchange) return false;
   if (capsState.band !== "all" && showText(row.band) !== capsState.band) return false;
@@ -565,6 +629,62 @@ function reactionNode(event, row) {
   }));
 }
 
+function linksFor(row, event) {
+  const dated = readAcross.filter((item) => codesMatch(item.source_code, row.code) && item.date === event.date);
+  const close = dated.filter((item) => headlinesClose(item.headline, event.headline));
+  if (close.length) return close;
+  const sameDay = [...row.events, ...row.upcoming].filter((item) => item.date === event.date);
+  return dated.length && sameDay.length === 1 ? dated : [];
+}
+
+function screenCodeFor(code) {
+  if (caps.some((row) => row.code === code)) return code;
+  const bare = bareCode(code);
+  const hit = caps.find((row) => row.code === bare);
+  return hit ? hit.code : code;
+}
+
+function alsoAffects(row, event) {
+  const hits = linksFor(row, event);
+  if (!hits.length) return null;
+  const codes = [...new Set(hits.flatMap((item) => (item.affected_codes || []).map((code) => screenCodeFor(code))))];
+  if (!codes.length) return null;
+  return el("span", { class: "also-tag", text: `Also affects: ${codes.join(", ")}` });
+}
+
+function partnerEvents(row) {
+  return readAcross.filter((item) => (item.affected_codes || []).some((code) => codesMatch(code, row.code)));
+}
+
+function dateHasPassed(item) {
+  const date = String(item?.date || "");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
+  const precision = item.date_precision || "exact";
+  if (precision === "quarter" || precision === "half" || precision === "year" || precision === "undated") return false;
+  const today = isoFromLocal(new Date());
+  if (precision === "month") return date.slice(0, 7) < today.slice(0, 7);
+  return date < today;
+}
+
+function slippedRecord(code, headline) {
+  return slipped.find((item) => codesMatch(item.code, code) && headlinesClose(item.item_headline, headline)) || null;
+}
+
+function slipTitle(record) {
+  if (!record) return "This guided date has passed.";
+  return `Originally guided: ${showText(record.originally_guided)}. Checked ${formatDate(record.checked_date)}.`;
+}
+
+function slipTag(code, item) {
+  const record = slippedRecord(code, item.headline);
+  if (!record && !dateHasPassed(item)) return null;
+  return el("span", { class: "slip-tag", title: slipTitle(record), text: "Past guided date" });
+}
+
+function unmatchedSlipped(row) {
+  return slipped.filter((item) => codesMatch(item.code, row.code) && !row.upcoming.some((upcoming) => headlinesClose(item.item_headline, upcoming.headline)));
+}
+
 function visibleEvents(row) {
   return row.events.filter((event) => (capsState.showBackground || !event.background) && sameCategory(event));
 }
@@ -576,7 +696,7 @@ function expandBody(row) {
     ? el("ul", { class: "cap-events" }, listed.map((event) => el("li", { class: "cap-event" }, [
       el("span", { class: "cap-date", text: eventDate(event) }),
       el("span", { class: "cap-kind" }, [showText(event.type), categoryTag(event.category)]),
-      el("span", { text: showText(event.headline) }),
+      el("span", { class: "cap-line" }, [showText(event.headline), alsoAffects(row, event)]),
       el("span", { text: `Setback: ${setbackLabel(event.setback)}` }),
       reactionNode(event, row),
     ])))
@@ -588,12 +708,45 @@ function expandBody(row) {
       el("ul", { class: "cap-events" }, upcomingItems.map((item) => el("li", { class: "cap-event" }, [
         el("span", { class: "cap-date", text: formatUpcomingDate(item) }),
         el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)]),
-        headlineLink(item),
+        el("span", { class: "cap-line" }, [headlineLink(item), alsoAffects(row, item)]),
         el("span", {}, [
           netBadge(item.net),
+          slipTag(row.code, item),
           item.material_if_delivered === "Y" ? el("span", { class: "no-badge", text: "Material" }) : null,
         ]),
       ]))),
+    ]
+    : [];
+  const extraSlipped = unmatchedSlipped(row);
+  const slippedBlock = extraSlipped.length
+    ? [
+      el("p", { class: "eyebrow", text: "Past guided date" }),
+      el("ul", { class: "cap-events" }, extraSlipped.map((item) => el("li", { class: "cap-event" }, [
+        el("span", { class: "cap-date", text: showText(item.originally_guided) }),
+        el("span", { text: showText(item.item_headline) }),
+        el("span", { class: "slip-tag", title: slipTitle(item), text: "Past guided date" }),
+      ]))),
+    ]
+    : [];
+  const partners = partnerEvents(row);
+  const partnerBlock = partners.length
+    ? [
+      el("p", { class: "eyebrow", text: "Related events from partners" }),
+      el("ul", { class: "cap-events" }, partners.map((item) => {
+        const source = screenCodeFor(item.source_code);
+        return el("li", { class: "cap-event" }, [
+          el("span", { class: "cap-date", text: formatDate(item.date) }),
+          el("button", {
+            type: "button",
+            class: "co-link",
+            onClick: () => openScreenCompany(source),
+            text: source,
+          }),
+          el("span", { text: showText(item.headline) }),
+          el("span", { class: "place-label", text: showText(item.relation) }),
+          item.note ? el("span", { class: "cap-date", text: showText(item.note) }) : null,
+        ]);
+      })),
     ]
     : [];
   const href = safeUrl(row.url);
@@ -605,6 +758,8 @@ function expandBody(row) {
     el("p", { class: "eyebrow", text: "Events" }),
     events,
     ...upcoming,
+    ...slippedBlock,
+    ...partnerBlock,
     el("p", {}, [el("span", { class: "eyebrow", text: "Exchange" }), " ", link]),
   ]);
 }
@@ -778,6 +933,7 @@ function mountFilters() {
     ["market", "Market", MARKET_OPTIONS],
     ["sector", "Sector", SECTOR_OPTIONS],
     ["category", "Category", CATEGORY_OPTIONS],
+    ["country", "Country", countryOptions],
     ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER)],
     ["band", "Band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER)],
     ["type", "Type", choiceList(caps.map((row) => showText(row.type)), [])],
@@ -835,11 +991,11 @@ function bindSearch() {
 
 function applyTab(tab, persist) {
   const mapped = tab === "norway" ? "smallcaps" : tab;
-  const allowed = ["events", "smallcaps", "coming"];
+  const allowed = ["events", "smallcaps", "coming", "countries"];
   const next = allowed.includes(mapped) ? mapped : "events";
   document.documentElement.dataset.view = next;
   document.body.dataset.view = next;
-  ["smallcaps", "coming"].forEach((id) => {
+  ["smallcaps", "coming", "countries"].forEach((id) => {
     const panel = document.getElementById(id);
     if (panel) panel.hidden = next !== id;
   });
@@ -850,7 +1006,7 @@ function applyTab(tab, persist) {
   });
   const skip = document.querySelector(".skip");
   if (skip) {
-    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "coming" ? ["#coming", "Skip to coming up"] : ["#timeline", "Skip to timeline"];
+    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "coming" ? ["#coming", "Skip to coming up"] : next === "countries" ? ["#countries", "Skip to countries"] : ["#timeline", "Skip to timeline"];
     skip.href = target[0];
     skip.textContent = target[1];
   }
@@ -961,14 +1117,24 @@ async function loadJson(path) {
 }
 
 async function loadCaps() {
-  const [data, companies, events, summary] = await Promise.all([
+  const [data, companies, events, summary, across, slippedRows, falklands, namibia, guyana, southAfrica] = await Promise.all([
     loadJson("data/smallcaps.json"),
     loadJson("data/norway_companies.json"),
     loadJson("data/norway_events.json"),
     loadJson("data/smallcaps_reaction_summary.json"),
+    loadJson("data/read_across.json"),
+    loadJson("data/slipped.json"),
+    loadJson("data/falklands.json"),
+    loadJson("data/namibia.json"),
+    loadJson("data/guyana.json"),
+    loadJson("data/south_africa.json"),
   ]);
   if (!Array.isArray(data) || !Array.isArray(companies) || !Array.isArray(events)) throw new Error("smallcaps");
+  readAcross = Array.isArray(across) ? across : [];
+  slipped = Array.isArray(slippedRows) ? slippedRows : [];
+  indexCountries([falklands, namibia, guyana, southAfrica]);
   caps = foldNorway(data.map(normalize), companies, events);
+  assignCountries(caps);
   document.getElementById("smallcaps-loading").hidden = true;
   renderReactions(summary);
   mountFilters();
@@ -991,6 +1157,7 @@ function resetScreenFilters() {
   capsState.market = "all";
   capsState.sector = "all";
   capsState.category = "all";
+  capsState.country = "all";
   capsState.exchange = "all";
   capsState.band = "all";
   capsState.type = "all";
@@ -1037,7 +1204,7 @@ function boot() {
   window.moonshotOpenScreen = openScreenCompany;
   const view = document.documentElement.dataset.view;
   const initial = view === "norway" ? "smallcaps" : view;
-  applyTab(initial === "smallcaps" || initial === "coming" ? initial : "events", false);
+  applyTab(initial === "smallcaps" || initial === "coming" || initial === "countries" ? initial : "events", false);
   loadCaps().catch(showCapsError);
 }
 

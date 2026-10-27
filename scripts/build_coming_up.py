@@ -90,10 +90,54 @@ def screen_market(exchange):
     text = clean(exchange).lower()
     if text == "asx":
         return "ASX"
+    if "tel aviv" in text:
+        return "Tel Aviv"
     venues = ("stockholm", "first north", "helsinki", "oslo børs", "oslo bors", "euronext growth oslo")
     if any(venue in text for venue in venues):
         return "Nordic"
     return "London"
+
+
+def norm_head(value):
+    return re.sub(r"[^a-z0-9]+", " ", clean(value).lower()).strip()
+
+
+def content_tokens(value):
+    return {word for word in norm_head(value).split() if len(word) > 2}
+
+
+def headlines_close(left, right):
+    """Same story: equal, one headline contains the other, or the wording overlaps."""
+    a = norm_head(left)
+    b = norm_head(right)
+    if not a or not b:
+        return False
+    if a == b or a in b or b in a:
+        return True
+    shared = content_tokens(left) & content_tokens(right)
+    if not shared:
+        return False
+    shorter = min(len(content_tokens(left)), len(content_tokens(right)))
+    if "licence" in shared and ("extension" in shared or "extensions" in shared):
+        return True
+    return len(shared) >= 6 or (len(shared) >= 4 and shorter and len(shared) / shorter >= 0.55)
+
+
+def remember(seen, code, date, headline):
+    seen.add((clean(code), clean(date), norm_head(headline)))
+
+
+def is_duplicate(seen, code, date, headline):
+    code = clean(code)
+    date = clean(date)
+    if not code or not date or not norm_head(headline):
+        return True
+    for seen_code, seen_date, seen_head in seen:
+        if seen_code != code or seen_date != date or not seen_head:
+            continue
+        if headlines_close(headline, seen_head):
+            return True
+    return False
 
 
 def sector_of(type_value):
@@ -145,7 +189,7 @@ def clean_url(value):
     return str(value).replace("\r", " ").replace("\n", " ").strip()
 
 
-def london_items(rows):
+def london_items(rows, seen):
     items = []
     for row in rows:
         market = screen_market(row.get("exchange"))
@@ -153,7 +197,7 @@ def london_items(rows):
             continue
         code = clean(row.get("code"))
         name = clean(row.get("name"))
-        prefix = "D" if market == "Nordic" else "L"
+        prefix = {"Nordic": "D", "Tel Aviv": "T"}.get(market, "L")
         for index, raw in enumerate(row.get("upcoming") or []):
             if not isinstance(raw, dict) or not raw.get("date"):
                 continue
@@ -177,10 +221,74 @@ def london_items(rows):
                 material="Y" if raw.get("material_if_delivered") == "Y" else "N",
                 source_url=clean_url(raw.get("source_url")),
             ))
+            remember(seen, code, raw.get("date"), raw.get("headline"))
     return items
 
 
-def norway_items(events, companies, screen):
+def affected_codes(catalyst):
+    affected = catalyst.get("affected") or []
+    if affected:
+        for entry in affected:
+            if isinstance(entry, dict) and clean(entry.get("code")):
+                yield clean(entry.get("code"))
+        return
+    for code in catalyst.get("affected_codes") or []:
+        if clean(code):
+            yield clean(code)
+
+
+def country_items(screen, seen):
+    """Catalysts whose code, date, and headline are not already on the screen or the shelf."""
+    by_code = {clean(row.get("code")): row for row in screen}
+    names = {
+        "falklands.json": "FK",
+        "namibia.json": "NA",
+        "guyana.json": "GY",
+        "south_africa.json": "ZA",
+    }
+    items = []
+    for filename, slug in names.items():
+        path = ROOT / "data" / filename
+        if not path.exists():
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for index, catalyst in enumerate(data.get("catalysts") or []):
+            if not catalyst.get("date"):
+                continue
+            try:
+                anchor, label, approx, suffix = place(catalyst.get("date"), catalyst.get("date_precision") or "exact")
+            except (TypeError, ValueError):
+                continue
+            headline = clean(catalyst.get("headline"))
+            for code in affected_codes(catalyst):
+                row = by_code.get(code)
+                if not row or is_duplicate(seen, code, catalyst.get("date"), headline):
+                    continue
+                remember(seen, code, catalyst.get("date"), headline)
+                market = screen_market(row.get("exchange"))
+                items.append(item_record(
+                    id=f"C-{slug}-{code}-{catalyst.get('date')}-{index}",
+                    anchor=anchor.isoformat(),
+                    precision=catalyst.get("date_precision") or "exact",
+                    date_label=label,
+                    approx=approx,
+                    suffix=suffix,
+                    market=market,
+                    sector=sector_of(row.get("type")),
+                    category=clean(catalyst.get("category")),
+                    company_name=clean(row.get("name")),
+                    company_code=code,
+                    link_key=code,
+                    type=display_type(catalyst.get("type")),
+                    headline=headline,
+                    band=band_value(catalyst.get("net")),
+                    material="N",
+                    source_url=clean_url(catalyst.get("source_url")),
+                ))
+    return items
+
+
+def norway_items(events, companies, screen, seen):
     """Shelf events stay market Norway. A name already on the London screen, such as Kistos, keeps that screen code."""
     by_short = {clean(company.get("short_name")): company for company in companies}
     items = []
@@ -219,6 +327,7 @@ def norway_items(events, companies, screen):
             material="Y" if event.get("material") == "Y" else "N",
             source_url=clean_url(event.get("source_url")),
         ))
+        remember(seen, code, event.get("date"), event.get("title"))
     return items
 
 
@@ -291,7 +400,9 @@ def main():
     screen = json.loads((ROOT / "data" / "smallcaps.json").read_text(encoding="utf-8"))
     norway = json.loads((ROOT / "data" / "norway_events.json").read_text(encoding="utf-8"))
     companies = json.loads((ROOT / "data" / "norway_companies.json").read_text(encoding="utf-8"))
-    items = london_items(screen) + norway_items(norway, companies, screen)
+    seen = set()
+    items = london_items(screen, seen) + norway_items(norway, companies, screen, seen)
+    items += country_items(screen, seen)
     forward = [item for item in items if item["anchor"] >= today.isoformat()]
     forward.sort(key=lambda item: (item["anchor"], item["market"], item["company_name"], item["id"]))
     payload = {
@@ -320,8 +431,11 @@ def main():
     if "&" in visible or "&" in "\n".join(ics_lines):
         raise SystemExit("ampersand leaked into coming up output")
     print(f"as_of {today.isoformat()}")
-    counts = {name: sum(1 for item in forward if item["market"] == name) for name in ("London", "Norway", "Nordic")}
-    print(f"items {len(forward)} london {counts['London']} norway {counts['Norway']} nordic {counts['Nordic']}")
+    counts = {name: sum(1 for item in forward if item["market"] == name) for name in ("London", "Norway", "Nordic", "Tel Aviv", "ASX")}
+    print(
+        f"items {len(forward)} london {counts['London']} norway {counts['Norway']} "
+        f"nordic {counts['Nordic']} telaviv {counts['Tel Aviv']} asx {counts['ASX']}"
+    )
     for label, end in (
         ("30", today + timedelta(days=30)),
         ("90", today + timedelta(days=90)),

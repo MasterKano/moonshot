@@ -1,0 +1,323 @@
+[
+ {
+  "source_code": "SQZ",
+  "date": "2026-07-27",
+  "headline": "Recommended acquisition of Pharos Energy plc",
+  "affected_codes": [
+   "PHAR"
+  ],
+  "relation": "target",
+  "note": "Serica bid for Pharos"
+ },
+ {
+  "source_code": "SQZ",
+  "date": "2026-08-07",
+  "headline": "Increased terms for Pharos Energy plc",
+  "affected_codes": [
+   "PHAR"
+  ],
+  "relation": "target",
+  "note": "Increased Serica offer"
+ },
+ {
+  "source_code": "SQZ",
+  "date": "2026-08-13",
+  "headline": "Termination of Serica Offer for Pharos Energy plc",
+  "affected_codes": [
+   "PHAR"
+  ],
+  "relation": "target",
+  "note": "Offer lapsed; setback for Pharos holders"
+ },
+ {
+  "source_code": "GENL",
+  "date": "2026-07-02",
+  "headline": "Recommended cash acquisition of Capricorn by Genel",
+  "affected_codes": [
+   "CNE"
+  ],
+  "relation": "target",
+  "note": "Genel bid for Capricorn"
+ },
+ {
+  "source_code": "GENL",
+  "date": "2026-09-25",
+  "headline": "Increased recommended cash offer for Capricorn by Genel",
+  "affected_codes": [
+   "CNE"
+  ],
+  "relation": "target",
+  "note": "Competing with DNO offers of 1 and 17 Sep 2026"
+ },
+ {
+  "source_code": "CNE",
+  "date": "2026-09-01",
+  "headline": "Recommended cash acquisition of Capricorn by DNO",
+  "affected_codes": [
+   "GENL"
+  ],
+  "relation": "counterparty",
+  "note": "Rival bid competes with the Genel offer"
+ },
+ {
+  "source_code": "GKP",
+  "date": "2026-10-20",
+  "headline": "Gulf Keystone to combine with ShaMaran Petroleum",
+  "affected_codes": [
+   "SNM.OL"
+  ],
+  "relation": "target",
+  "note": "Kurdistan combination"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-04-07",
+  "headline": "25-year extension of the Dussafu licence, Gabon",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "BW operator; Panoro partner"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-05-20",
+  "headline": "FID on Bourdon (Dussafu) and Golfinho wells",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "Bourdon is on Dussafu; Golfinho (Brazil) is BW only"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-10-15",
+  "headline": "Positive Dussafu appraisal results to fast-track a new production well",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "Same wells"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2026-10-25",
+  "headline": "Drilling rig incident on the Dussafu licence",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "Same rig and licence; setback"
+ },
+ {
+  "source_code": "BWE.OL",
+  "date": "2027-03-31",
+  "headline": "MaBoMo Phase 2 first oil expected early 2027 (upcoming)",
+  "affected_codes": [
+   "PEN.OL"
+  ],
+  "relation": "operator",
+  "note": "Same project in both upcoming lists"
+ },
+ {
+  "source_code": "SEA",
+  "date": "2026-12-31",
+  "headline": "DEWA Cluster sanction targeted around end 2026 (upcoming)",
+  "affected_codes": [
+   "ENQ"
+  ],
+  "relation": "operator",
+  "note": "EnQuest is DEWA operator"
+ },
+ {
+  "source_code": "RKH",
+  "date": "2025-12-10",
+  "headline": "Final Investment Decision on Sea Lion",
+  "affected_codes": [
+   "NVPT"
+  ],
+  "relation": "operator",
+  "note": "Navitas 65% operator, Rockhopper 35%"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2026-08-24",
+  "headline": "Navitas exercises option on second FPSO (OSX-1) for Sea Lion",
+  "affected_codes": [
+   "RKH"
+  ],
+  "relation": "operator",
+  "note": "Same development"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2026-09-04",
+  "headline": "Argentine sanctions threat to Sea Lion participants",
+  "affected_codes": [
+   "RKH"
+  ],
+  "relation": "operator",
+  "note": "Setback affects both licensees"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2026-09-21",
+  "headline": "Falkland Islands Government five-year licence extensions incl. Sea Lion; PL001 farm-in approved",
+  "affected_codes": [
+   "RKH",
+   "ECO"
+  ],
+  "relation": "operator",
+  "note": "Sea Lion licences (RKH) and PL001 (ECO) both in the approval"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2026-10-05",
+  "headline": "Two contractors withdraw from Sea Lion; Navitas replacing them",
+  "affected_codes": [
+   "RKH"
+  ],
+  "relation": "operator",
+  "note": "Setback, no material effect guided"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2027-03-31",
+  "headline": "Sea Lion development drilling from early 2027 (upcoming)",
+  "affected_codes": [
+   "RKH"
+  ],
+  "relation": "operator",
+  "note": "Same campaign"
+ },
+ {
+  "source_code": "ECO",
+  "date": "2025-12-04",
+  "headline": "Strategic partnership with Navitas (Orinduik and Block 1 CBK options)",
+  "affected_codes": [
+   "NVPT"
+  ],
+  "relation": "partner",
+  "note": "Option holder"
+ },
+ {
+  "source_code": "ECO",
+  "date": "2026-03-11",
+  "headline": "Acquisition of JHI and Navitas PL001 partnership",
+  "affected_codes": [
+   "NVPT"
+  ],
+  "relation": "partner",
+  "note": "Navitas 65% farm-in to PL001"
+ },
+ {
+  "source_code": "ECO",
+  "date": "2026-09-22",
+  "headline": "Completion of Block 1 CBK farm-down to Navitas (37.5% and operatorship)",
+  "affected_codes": [
+   "NVPT"
+  ],
+  "relation": "counterparty",
+  "note": "South Africa"
+ },
+ {
+  "source_code": "ECO",
+  "date": "2026-12-04",
+  "headline": "Navitas Orinduik 80% option deadline (upcoming)",
+  "affected_codes": [
+   "NVPT"
+  ],
+  "relation": "counterparty",
+  "note": "Guyana"
+ },
+ {
+  "source_code": "NVPT",
+  "date": "2027-03-31",
+  "headline": "PL001 exploration well during the Sea Lion campaign (upcoming)",
+  "affected_codes": [
+   "ECO"
+  ],
+  "relation": "operator",
+  "note": "Eco 35% via JHI on completion"
+ },
+ {
+  "source_code": "80M",
+  "date": "2025-12-23",
+  "headline": "Government approves sale of Kangerluarsuk to Amaroq",
+  "affected_codes": [
+   "AMRQ"
+  ],
+  "relation": "acquirer",
+  "note": "Same asset deal"
+ },
+ {
+  "source_code": "MET1",
+  "date": "2026-03-16",
+  "headline": "Partial sale of interest in CleanTech Lithium plc",
+  "affected_codes": [
+   "CTL"
+  ],
+  "relation": "counterparty",
+  "note": "Metals One sold part of its CTL shareholding"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2025-06-23",
+  "headline": "Balder X first production through Jotun FPSO (norway_events.json)",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "operator",
+  "note": "Vår operator, Kistos partner; Vår not in dataset"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2025-12-17",
+  "headline": "Balder Phase V start-up (norway_events.json)",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "operator",
+  "note": "Same field"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2025-12-22",
+  "headline": "Vår cuts 2025 guidance, citing Jotun FPSO interruptions (norway_events.json)",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "operator",
+  "note": "Jotun/Balder is shared; setback"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2026-02-12",
+  "headline": "25/8-C-23 D dry well, PL027 (norway_events.json)",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "operator",
+  "note": "Kistos is PL027 partner; setback"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2026-03-17",
+  "headline": "Ringhorne fase 5 PDO exemption granted (norway_events.json)",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "operator",
+  "note": "Balder area"
+ },
+ {
+  "source_code": "VAR.OL",
+  "date": "2026-10-14",
+  "headline": "Kistos buys 10% of PL169E/956/956B (Ringhorne) from Vår for USD 12.9m",
+  "affected_codes": [
+   "KIST"
+  ],
+  "relation": "counterparty",
+  "note": "Vår is the seller"
+ }
+]

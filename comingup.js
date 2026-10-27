@@ -1,5 +1,6 @@
 const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false };
 let items = [];
+let slipped = [];
 
 function el(tag, props, children) {
   const node = document.createElement(tag);
@@ -98,6 +99,53 @@ function dateCell(item) {
   ]);
 }
 
+function normHead(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function headlinesClose(a, b) {
+  const left = normHead(a);
+  const right = normHead(b);
+  if (!left || !right) return false;
+  if (left === right || left.includes(right) || right.includes(left)) return true;
+  const words = (text) => new Set(text.split(" ").filter((word) => word.length > 4));
+  const leftWords = words(left);
+  const rightWords = words(right);
+  let shared = 0;
+  leftWords.forEach((word) => { if (rightWords.has(word)) shared += 1; });
+  return shared >= 3;
+}
+
+function codesMatch(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  const bare = (value) => String(value).replace(/\.(OL|ST|HE)$/i, "");
+  return bare(a) === bare(b);
+}
+
+function dateHasPassed(item) {
+  const date = String(item?.anchor || "");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
+  const precision = item.precision || "exact";
+  if (precision === "quarter" || precision === "half" || precision === "year" || precision === "undated") return false;
+  const today = isoFromLocal(new Date());
+  if (precision === "month") return date.slice(0, 7) < today.slice(0, 7);
+  return date < today;
+}
+
+function slippedRecord(item) {
+  return slipped.find((entry) => codesMatch(entry.code, item.company_code) && headlinesClose(entry.item_headline, item.headline)) || null;
+}
+
+function slipTag(item) {
+  const record = slippedRecord(item);
+  if (!record && !dateHasPassed(item)) return null;
+  const title = record
+    ? `Originally guided: ${showText(record.originally_guided)}. Checked ${showText(record.checked_date)}.`
+    : "This guided date has passed.";
+  return el("span", { class: "slip-tag", title, text: "Past guided date" });
+}
+
 function bandNode(item) {
   if (item.band === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
   if (item.band === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
@@ -115,7 +163,7 @@ function categoryTag(value) {
 }
 
 function badges(item) {
-  return el("span", { class: "no-chips" }, [categoryTag(item.category), bandNode(item), materialNode(item)]);
+  return el("span", { class: "no-chips" }, [categoryTag(item.category), bandNode(item), slipTag(item), materialNode(item)]);
 }
 
 function headlineNode(item) {
@@ -138,7 +186,7 @@ function renderTable(rows) {
   rows.forEach((item) => {
     const row = el("tr");
     row.append(
-      el("td", {}, [dateCell(item)]),
+      el("td", {}, [dateCell(item), slipTag(item)]),
       el("td", {}, [companyButton(item)]),
       el("td", { text: showText(item.market) }),
       el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)])]),
@@ -206,7 +254,7 @@ function filterSelect(key, label, options) {
 
 function mountFilters() {
   document.getElementById("coming-filters").replaceChildren(
-    filterSelect("market", "Market", ["London", "Norway", "Nordic"]),
+    filterSelect("market", "Market", ["London", "Norway", "Nordic", "Tel Aviv"]),
     filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
     filterSelect("category", "Category", ["Operational", "Capital and deals", "Corporate"]),
     el("label", { class: "field" }, [
@@ -247,10 +295,15 @@ function showError() {
 }
 
 async function load() {
-  const response = await fetch("data/coming_up.json", { cache: "no-cache" });
-  if (!response.ok) throw new Error("coming");
+  const [response, slipResponse] = await Promise.all([
+    fetch("data/coming_up.json", { cache: "no-cache" }),
+    fetch("data/slipped.json", { cache: "no-cache" }),
+  ]);
+  if (!response.ok || !slipResponse.ok) throw new Error("coming");
   const data = await response.json();
+  const slipData = await slipResponse.json();
   items = Array.isArray(data.items) ? data.items : [];
+  slipped = Array.isArray(slipData) ? slipData : [];
   document.getElementById("coming-loading").hidden = true;
   mountFilters();
   bindHorizon();

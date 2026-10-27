@@ -25,6 +25,7 @@
         var savedTab = localStorage.getItem("moonshot-tab");
         if (savedTab === "norway" || savedTab === "smallcaps") tab = "smallcaps";
         else if (savedTab === "coming") tab = "coming";
+        else if (savedTab === "countries") tab = "countries";
       } catch (err) {}
       root.setAttribute("data-view", tab);
     })();
@@ -40,7 +41,7 @@
         <p class="eyebrow">Events register</p>
         <h1>Moonshot</h1>
       </div>
-      <p class="lede" id="lede">De-risking events for listed resource companies. Every event is logged.</p>
+      <p class="lede" id="lede">De-risking events for listed resource companies, on one timeline.</p>
       <button class="theme-toggle" id="themeButton" type="button" title="Switch light / dark theme" aria-pressed="false">Light</button>
     </div>
   </header>
@@ -50,95 +51,53 @@
         <button type="button" role="tab" id="tab-events" data-view="events" aria-controls="events-view" aria-selected="true">Events</button>
         <button type="button" role="tab" id="tab-coming" data-view="coming" aria-controls="coming" aria-selected="false" tabindex="-1">Coming up</button>
         <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
+        <button type="button" role="tab" id="tab-countries" data-view="countries" aria-controls="countries" aria-selected="false" tabindex="-1">Countries</button>
       </div>
     </div>
     <div id="events-view">
     <p class="loading" id="loading">Loading the register…</p>
     <noscript><p class="error">This page needs JavaScript to load the events register.</p></noscript>
     <div id="app" hidden>
-      <section class="stats" id="stats" aria-label="Summary"></section>
-
-      <section class="panel filters" aria-label="Filters">
-        <div class="filter-head">
-          <p class="eyebrow" id="filter-label">Filters</p>
-          <button type="button" class="reset" id="reset" disabled>Reset</button>
-        </div>
-        <div class="segment scope" id="scope" role="radiogroup" aria-label="Which events to show">
-          <button type="button" role="radio" data-scope="focus" aria-checked="false">Material, no trap</button>
-          <button type="button" role="radio" data-scope="all" aria-checked="false">All events</button>
-        </div>
-        <div class="segment" id="window" role="radiogroup" aria-label="Time window"></div>
-        <p class="window-hint" id="windowHint"></p>
-        <div class="fields" id="fields"></div>
-        <div class="chips" id="chips" aria-label="Active filters"></div>
-        <p class="showing" id="showing" aria-live="polite"></p>
-      </section>
-
-      <section class="howto" aria-label="How to read the labels">
+      <section class="howto" aria-label="How to read the timeline">
         <details>
-          <summary>How to read the labels</summary>
+          <summary>How to read the timeline</summary>
           <div class="howto-body">
-            <p>Every event is logged. The page opens on material events that are not traps. Choose All events to see the full register. Labels describe each event.</p>
+            <p>Pilot events, screen events, and the Norwegian shelf, newest first. The page opens on the last 12 months, with material events and setbacks. Background shelf items stay behind Show background. Upcoming switches to the coming up list, soonest first.</p>
             <dl>
-              <dt>Gate pass</dt>
-              <dd>Yes when the event cleared the screen for whether it still deserves attention. A thin ring on the timeline marks a yes.</dd>
-              <dt>Market status</dt>
-              <dd>Upcoming has not occurred. New is a fresh print, still inside the first reaction window. Unreacted has occurred and is not treated as already priced. Recognized has already been taken in by the market. Orphan has no clean read on the reaction.</dd>
               <dt>Material</dt>
-              <dd>Yes when the event is large enough to matter for the company.</dd>
-              <dt>Trap</dt>
-              <dd>Yes when there is a reason not to take the headline at face value. The reason is shown with the flag.</dd>
-              <dt>Stage</dt>
-              <dd>A fixed ladder: Discovery, Resource, Study, Permits, Funded, Construction, Production, Sold. n/a means the event is not a project stage.</dd>
-              <dt>60-day run-up</dt>
-              <dd>Share-price move over the 60 days before the event, in percent. A dash means the figure is not in the register.</dd>
-              <dt>20-day excess</dt>
-              <dd>Price move after the event, beyond the sector, over about 20 days, in percent. A dash means it is not in the register yet.</dd>
-              <dt>3-month excess</dt>
-              <dd>The same comparison over about three months, in percent. A dash means it is not in the register yet.</dd>
-              <dt>Size estimate</dt>
-              <dd>A rough scale for the event, in percent. A dash means none is given.</dd>
-              <dt>Confidence</dt>
-              <dd>How firmly the labels are held. Low confidence is flagged in amber.</dd>
-              <dt>Exit</dt>
-              <dd>A sale or other way out of the position. Exits are diamonds on the timeline.</dd>
-              <dt>Announced date</dt>
-              <dd>Shown only when it differs from the event date. A month and a full date count as different.</dd>
-              <dt>Label notes</dt>
-              <dd>Short notes from the register on that row.</dd>
+              <dd>Large enough to matter for the company.</dd>
+              <dt>Setback</dt>
+              <dd>A dry hole, a delay, or another step backward.</dd>
+              <dt>Background</dt>
+              <dd>A shelf change that is neither material nor a setback.</dd>
+              <dt>Also affects</dt>
+              <dd>The same event touches other companies in the screen. Context only.</dd>
+              <dt>Past guided date</dt>
+              <dd>On Upcoming, a guided date with no announcement. The original guidance is in the tooltip.</dd>
+              <dt>Pilot detail</dt>
+              <dd>Open a pilot row for the risk removed, the stage reached, and the other register labels.</dd>
             </dl>
           </div>
         </details>
       </section>
-
       <section class="panel" id="timeline" aria-labelledby="timeline-title">
         <div class="panel-head">
           <div>
-            <h2 id="timeline-title">Timeline</h2>
-            <p class="panel-sub" id="timelineSub">One row per company.</p>
+            <h2 id="timeline-title">Events</h2>
+            <p class="panel-sub" id="timelineSub">Material and setbacks, last 12 months. Newest first.</p>
           </div>
-          <p class="panel-meta" id="chartMeta"></p>
         </div>
-        <div class="legend" id="legend"></div>
-        <p class="chart-note">Filled means happened. Hollow means expected. A dashed outline is a month-only date, placed on the 15th. A thin ring marks a gate pass. A diamond marks an exit. The vertical dashed line is today. Scroll sideways for later months.</p>
-        <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline"></div>
-        <div class="empty" id="chartEmpty" hidden></div>
-        <div id="undated"></div>
-      </section>
-
-      <section class="panel" id="register" aria-labelledby="register-title">
-        <div class="panel-head">
-          <div>
-            <h2 id="register-title">Register</h2>
-            <p class="panel-sub" id="sortCaption">Grouped by company, events in date order.</p>
-          </div>
-          <label class="sort-label narrow-only">Sort
-            <select id="sortSelect" aria-label="Sort the register"></select>
-          </label>
+        <div class="event-bar" id="event-bar" aria-label="Event filters"></div>
+        <div class="event-meta">
+          <p class="showing" id="showing" aria-live="polite"></p>
+          <button type="button" class="clear-link" id="clearFilters" hidden>Clear filters</button>
         </div>
         <div class="empty" id="tableEmpty" hidden></div>
-        <div class="table-wrap wide-only" id="tableWrap"></div>
+        <div class="table-wrap wide-only cap-scroll" id="tableWrap"></div>
         <div class="cards narrow-only" id="cards"></div>
+        <p class="more-row" id="moreRow" hidden>
+          <button type="button" class="show-more" id="showMore">Show more</button>
+        </p>
       </section>
     </div>
     </div>
@@ -183,7 +142,7 @@
         <div class="fields" id="smallcaps-filters"></div>
       </div>
       <p class="showing" id="smallcaps-showing" aria-live="polite"></p>
-      <p class="chart-note" id="smallcaps-note">Liquid resource companies (US$5M to 5B, ASX and London) with at least one material de-risking event in the last 12 months, plus Nordic small caps and Norwegian shelf companies. Screened from exchange data, announcement headlines, and Sodir FactPages. Labels can be low confidence.</p>
+      <p class="chart-note" id="smallcaps-note">Liquid resource companies (US$5M to 5B, ASX and London) with at least one material de-risking event in the last 12 months, plus Nordic small caps, one Tel Aviv name, and Norwegian shelf companies. Screened from exchange data, announcement headlines, and Sodir FactPages. Labels can be low confidence.</p>
       <details class="react-panel" id="react-panel" hidden>
         <summary>How the market reacted</summary>
         <p class="react-caption" id="react-caption"></p>
@@ -194,13 +153,24 @@
       <div class="table-wrap wide-only cap-scroll" id="smallcaps-table"></div>
       <div class="cards narrow-only" id="smallcaps-cards"></div>
     </section>
+    <section class="panel" id="countries" aria-labelledby="countries-title" hidden>
+      <div class="panel-head">
+        <div>
+          <h2 id="countries-title">Countries</h2>
+          <p class="panel-sub">Companies and dated catalysts in the Falkland Islands, Namibia, Guyana, and South Africa. A name in the screen opens that row.</p>
+        </div>
+      </div>
+      <div id="countries-body"></div>
+      <p class="loading" id="countries-loading">Loading countries…</p>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p class="source-events">Source: Moonshot Events Register, as of 25 Oct 2026</p>
+      <p class="source-events">Source: pilot register, company screen, and Norwegian shelf, as of 27 Oct 2026.</p>
       <p class="source-caps">Source: ASX and London screen, Nordic small caps, and Norwegian shelf, as of 27 Oct 2026.</p>
       <p class="source-norway">Source: Sodir FactPages, as of 26 Oct 2026.</p>
       <p class="source-coming">Source: company guidance and Sodir FactPages.</p>
+      <p class="source-countries">Source: company guidance and licence registers, as of 27 Oct 2026.</p>
     </div>
   </footer>
   <div class="scrim" id="scrim" hidden></div>
@@ -208,5 +178,6 @@
   <script type="module" src="app.js"></script>
   <script type="module" src="smallcaps.js"></script>
   <script type="module" src="comingup.js"></script>
+  <script type="module" src="countries.js"></script>
 </body>
 </html>

@@ -240,10 +240,12 @@ function norwayBand(company) {
 }
 
 function tickerFromListing(listing) {
-  const text = String(listing || "");
-  if (/unlisted/i.test(text)) return "";
-  const match = text.match(/:\s*([A-Za-z0-9]{1,8})\b/);
-  return match ? match[1].toUpperCase() : "";
+  const text = String(listing || "").trim();
+  if (!text || /unlisted/i.test(text) || !text.includes(":")) return "";
+  const symbol = text.split(":").pop().trim();
+  if (!symbol || symbol.includes(",") || symbol.includes("(") || symbol.length > 8) return "";
+  if (!/^[A-Za-z0-9.]+$/.test(symbol)) return "";
+  return symbol.toUpperCase();
 }
 
 function precisionOf(raw, confidence) {

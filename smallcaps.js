@@ -398,6 +398,9 @@ function normalize(raw, index) {
     latestHeadline: row.latest_event_headline,
     setbacks: asNumber(row.setbacks_12m),
     cash: row.cash_flag,
+    cashDisplay: row.cash_flag_display || "",
+    missing: row.missing_fields && typeof row.missing_fields === "object" ? row.missing_fields : {},
+    checked: row.last_checked || "",
     url: row.url,
     events: events.map((event) => (event && typeof event === "object" ? event : {})),
     upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object").sort((a, b) => String(a.sort_date || a.date).localeCompare(String(b.sort_date || b.date))),
@@ -496,6 +499,9 @@ function norwayRow(company, pack, range) {
     latestHeadline: latest ? latest.headline : null,
     setbacks: pack.past.filter((event) => event.setback && event.date <= range.today).length,
     cash: null,
+    cashDisplay: "",
+    missing: { cash_flag: "unknown", guidance: "not covered", next_event_date: "not covered" },
+    checked: "",
     url: "",
     events: pack.past,
     upcoming: pack.upcoming,
@@ -795,20 +801,55 @@ function activeColumns() {
   return COLUMNS.filter(([key]) => chosen.has(key));
 }
 
+function gapNode(kind) {
+  const key = String(kind || "unknown").toLowerCase();
+  const text = key === "not applicable" ? "n/a" : key === "not covered" ? "Not covered" : "Unknown";
+  const tip = key === "not applicable"
+    ? "This field does not apply."
+    : key === "not covered"
+      ? "This field is not tracked for this group."
+      : "Covered, but the value was not found.";
+  return el("span", { class: "missing-value", title: tip, text });
+}
+
+function emptyGap(row, field) {
+  const kind = row.missing && row.missing[field];
+  if (kind) return gapNode(kind);
+  if (row.shelf || String(row.listingStatus || "").toLowerCase() === "private" || String(row.listingStatus || "").toLowerCase() === "state") {
+    if (field === "cash_flag" || field === "mkt_cap_usd_m" || field === "median_daily_value_k" || field === "stage" || field === "guidance" || field === "next_event_date") return gapNode("not covered");
+  }
+  return gapNode("unknown");
+}
+
+function cashNode(row) {
+  const display = String(row.cashDisplay || row.cash || "").trim();
+  const lowered = display.toLowerCase();
+  if (!display || lowered === "unknown" || lowered === "no data" || lowered === "—") {
+    return emptyGap(row, "cash_flag");
+  }
+  return el("span", { class: "cash-note", title: row.checked ? `Checked ${formatDate(row.checked)}` : "", text: showText(display) });
+}
+
 function cellFor(row, key) {
   if (key === "name") return companyNode(row);
   if (key === "exchange") return showText(row.exchange);
   if (key === "type") return showText(row.type);
-  if (key === "stage") return stageNode(row.stage);
-  if (key === "cap") return formatNum(row.cap);
-  if (key === "median") return formatMedian(row);
-  if (key === "latest") return latestNode(row);
-  if (key === "next") return nextNode(row);
+  if (key === "stage") return stageNode(row.stage) === "—" ? emptyGap(row, "stage") : stageNode(row.stage);
+  if (key === "cap") return formatNum(row.cap) === "—" ? emptyGap(row, "mkt_cap_usd_m") : formatNum(row.cap);
+  if (key === "median") return formatMedian(row) === "—" ? emptyGap(row, "median_daily_value_k") : formatMedian(row);
+  if (key === "latest") {
+    const node = latestNode(row);
+    return node === "—" ? emptyGap(row, "latest_event") : node;
+  }
+  if (key === "next") {
+    const node = nextNode(row);
+    return node === "—" ? emptyGap(row, "next_event_date") : node;
+  }
   if (key === "events") return formatNum(row.events12m);
-  if (key === "upcoming") return row.upcomingCount == null ? "—" : formatNum(row.upcomingCount);
+  if (key === "upcoming") return row.upcomingCount == null ? emptyGap(row, "guidance") : formatNum(row.upcomingCount);
   if (key === "setbacks") return formatNum(row.setbacks);
-  if (key === "cash") return showText(row.cash);
-  return "—";
+  if (key === "cash") return cashNode(row);
+  return emptyGap(row, key);
 }
 
 function companyNode(row) {

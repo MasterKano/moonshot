@@ -937,6 +937,10 @@ table.caps thead th:first-child { z-index: 4; }
 
 .cap-name { display: block; font-weight: 700; }
 
+.missing-value { color: var(--muted); font-style: italic; }
+
+.cash-note { color: var(--amber-ink); }
+
 .date-stack { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
 
 .basis-tag {

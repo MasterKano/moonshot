@@ -410,6 +410,11 @@ function mapNorwayEvent(event) {
     net: event.net === "tight" || event.net === "loose" ? event.net : "",
     category: event.category,
     material_if_delivered: material ? "Y" : "N",
+    event_type: event.event_type || "",
+    direction: event.direction || "",
+    significance: event.significance || "",
+    status: event.status || "",
+    date_confidence_level: event.date_confidence_level || "",
     r5: null,
     r20: null,
     r60: null,
@@ -793,7 +798,7 @@ function sameCategory(event) {
 
 function categoryHits(row) {
   if (capsState.category === "all") return true;
-  const events = row.events.some((event) => (capsState.showBackground || !event.background) && sameCategory(event));
+  const events = row.events.some((event) => (capsState.showBackground || !eventIsBackground(event)) && sameCategory(event));
   const upcoming = row.upcoming.some((item) => sameCategory(item));
   return events || upcoming;
 }
@@ -864,8 +869,46 @@ function unmatchedSlipped(row) {
   return slipped.filter((item) => codesMatch(item.code, row.code) && !row.upcoming.some((upcoming) => headlinesClose(item.item_headline, upcoming.headline)));
 }
 
+function eventIsBackground(event) {
+  if (event.significance) return event.significance === "background";
+  return !!event.background;
+}
+
+function screenChips(event) {
+  const direction = event.direction || (event.setback ? "negative" : "");
+  const significance = event.significance || (eventIsBackground(event) ? "background" : "material");
+  const confidence = event.date_confidence_level || (["high", "medium", "low"].includes(String(event.date_confidence || "")) ? event.date_confidence : "");
+  return el("span", { class: "chip-row" }, [
+    direction === "positive" ? chip("Positive", "positive", "The event moved the asset forward.") : null,
+    direction === "neutral" ? chip("Neutral", "neutral", "The event does not clearly help or hurt.") : null,
+    direction === "negative" ? chip("Setback", "setback", "A dry hole, a delay, or another step backward.") : null,
+    significance === "material" ? chip("Material", "material", "Large enough to matter for the company.") : null,
+    significance === "background" ? chip("Background", "background", "A routine item, or too small to change the story.") : null,
+    statusChip(event.status),
+    confidenceChip(confidence),
+  ]);
+}
+
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function statusChip(status) {
+  const labels = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" };
+  const key = String(status || "").toLowerCase();
+  if (!labels[key]) return null;
+  return chip(labels[key], key, "Where this guided item stands.");
+}
+
+function confidenceChip(level) {
+  const labels = { high: "High", medium: "Medium", low: "Low" };
+  const key = String(level || "").toLowerCase();
+  if (!labels[key]) return null;
+  return chip(labels[key], `conf-${key}`, "How firmly the date is known.");
+}
+
 function visibleEvents(row) {
-  return row.events.filter((event) => (capsState.showBackground || !event.background) && sameCategory(event));
+  return row.events.filter((event) => (capsState.showBackground || !eventIsBackground(event)) && sameCategory(event));
 }
 
 function expandBody(row) {
@@ -875,8 +918,7 @@ function expandBody(row) {
     ? el("ul", { class: "cap-events" }, listed.map((event) => el("li", { class: "cap-event" }, [
       el("span", { class: "cap-date", text: eventDate(event) }),
       el("span", { class: "cap-kind" }, [showText(event.type), categoryTag(event.category)]),
-      el("span", { class: "cap-line" }, [showText(event.headline), alsoAffects(row, event)]),
-      el("span", { text: `Setback: ${setbackLabel(event.setback)}` }),
+      el("span", { class: "cap-line" }, [showText(event.headline), alsoAffects(row, event), screenChips(event)]),
       reactionNode(event, row),
     ])))
     : el("p", { class: "cap-desc", text: hidden ? "Background events are hidden." : "No events listed." });
@@ -888,10 +930,9 @@ function expandBody(row) {
         el("span", { class: "cap-date date-stack" }, [el("span", { text: formatUpcomingDate(item) }), basisTag(item.date_basis)]),
         el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)]),
         el("span", { class: "cap-line" }, [headlineLink(item), alsoAffects(row, item)]),
-        el("span", {}, [
-          netBadge(item.net),
+        el("span", { class: "chip-row" }, [
+          screenChips(item),
           slipTag(row.code, item),
-          item.material_if_delivered === "Y" ? el("span", { class: "no-badge", text: "Material" }) : null,
         ]),
       ]))),
     ]

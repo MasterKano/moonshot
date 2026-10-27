@@ -1,4 +1,15 @@
-const state = { horizon: "30", market: "all", sector: "all", category: "all", materialOnly: false, watchOnly: false };
+const state = {
+  horizon: "30",
+  market: "all",
+  sector: "all",
+  category: "all",
+  materialOnly: false,
+  watchOnly: false,
+  significance: "all",
+  direction: "all",
+  status: "all",
+  confidence: "all",
+};
 let items = [];
 let slipped = [];
 
@@ -70,6 +81,11 @@ function inView(item, today, end) {
   if (state.market !== "all" && item.market !== state.market) return false;
   if (state.sector !== "all" && item.sector !== state.sector) return false;
   if (state.category !== "all" && item.category !== state.category) return false;
+  if (state.significance === "material" && item.significance && item.significance !== "material" && item.direction !== "negative") return false;
+  if (state.significance === "background" && item.significance !== "background") return false;
+  if (state.direction !== "all" && item.direction !== state.direction) return false;
+  if (state.status !== "all" && item.status !== state.status) return false;
+  if (state.confidence !== "all" && item.date_confidence_level !== state.confidence) return false;
   if (state.watchOnly && !(window.moonshotWatch && window.moonshotWatch.has(item.company_code))) return false;
   return true;
 }
@@ -158,10 +174,23 @@ function slipTag(item) {
   return el("span", { class: "slip-tag", title, text: "Past guided date" });
 }
 
-function bandNode(item) {
-  if (item.band === "tight") return el("span", { class: "no-badge tight", text: "Tight" });
-  if (item.band === "loose") return el("span", { class: "no-badge loose", text: "Loose" });
-  return null;
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function labelChips(item) {
+  const confidence = item.date_confidence_level || "";
+  const confidenceLabel = confidence === "high" ? "High" : confidence === "medium" ? "Medium" : confidence === "low" ? "Low" : "";
+  const statusLabel = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" }[item.status] || "";
+  return [
+    item.direction === "positive" ? chip("Positive", "positive", "The event moved the asset forward.") : null,
+    item.direction === "neutral" ? chip("Neutral", "neutral", "The event does not clearly help or hurt.") : null,
+    item.direction === "negative" ? chip("Setback", "setback", "A dry hole, a delay, or another step backward.") : null,
+    item.significance === "material" ? chip("Material", "material", "Large enough to matter for the company.") : null,
+    item.significance === "background" ? chip("Background", "background", "A routine item, or too small to change the story.") : null,
+    statusLabel ? chip(statusLabel, item.status, "Where this guided item stands.") : null,
+    confidenceLabel ? chip(confidenceLabel, `conf-${confidence}`, "How firmly the date is known.") : null,
+  ];
 }
 
 function materialNode(item) {
@@ -175,7 +204,7 @@ function categoryTag(value) {
 }
 
 function badges(item) {
-  return el("span", { class: "no-chips" }, [categoryTag(item.category), bandNode(item), slipTag(item), materialNode(item)]);
+  return el("span", { class: "chip-row" }, [...labelChips(item), slipTag(item)]);
 }
 
 function headlineNode(item) {
@@ -189,7 +218,7 @@ function renderTable(rows) {
   const table = el("table", { class: "register coming" });
   const head = el("thead");
   const headRow = el("tr");
-  ["Date", "Company", "Market", "Type", "Headline", "Band", "Material"].forEach((label) => {
+  ["Date", "Company", "Market", "Type", "Headline", "Labels"].forEach((label) => {
     headRow.append(el("th", { scope: "col", text: label }));
   });
   head.append(headRow);
@@ -203,8 +232,7 @@ function renderTable(rows) {
       el("td", { text: showText(item.market) }),
       el("td", {}, [el("span", { class: "cap-kind" }, [showText(item.type), categoryTag(item.category)])]),
       el("td", {}, [headlineNode(item)]),
-      el("td", {}, [bandNode(item)]),
-      el("td", {}, [materialNode(item)]),
+      el("td", {}, [badges(item)]),
     );
     body.append(row);
   });
@@ -261,7 +289,12 @@ function render() {
 
 function filterSelect(key, label, options) {
   const select = el("select", { [`data-coming-${key}`]: "1" });
-  select.append(el("option", { value: "all", text: "All" }), ...options.map((value) => el("option", { value, text: value })));
+  select.append(el("option", { value: "all", text: "All" }));
+  options.forEach((option) => {
+    const value = Array.isArray(option) ? option[0] : option;
+    const text = Array.isArray(option) ? option[1] : option;
+    select.append(el("option", { value, text }));
+  });
   select.addEventListener("change", () => {
     state[key] = select.value;
     select.closest(".field").classList.toggle("active", select.value !== "all");
@@ -275,6 +308,10 @@ function mountFilters() {
     filterSelect("market", "Market", ["London", "Norway", "Nordic", "Tel Aviv"]),
     filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
     filterSelect("category", "Category", ["Operational", "Capital and deals", "Corporate"]),
+    filterSelect("significance", "Significance", [["material", "Material"], ["background", "Background"]]),
+    filterSelect("direction", "Direction", [["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]]),
+    filterSelect("status", "Status", [["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]]),
+    filterSelect("confidence", "Date confidence", [["high", "High"], ["medium", "Medium"], ["low", "Low"]]),
     el("label", { class: "field" }, [
       "Material",
       el("button", {

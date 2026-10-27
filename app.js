@@ -1,6 +1,5 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const PAGE = 100;
-const TIERS = [["all", "All"], ["material", "Material"], ["setback", "Setback"], ["background", "Background"]];
 const RANGES = [["30", "Last 30 days"], ["90", "Last 90 days"], ["12m", "Last 12 months"], ["all", "All"], ["upcoming", "Upcoming"]];
 const BANDS = [
   ["all", "All"],
@@ -30,7 +29,10 @@ const PILOT_SECTORS = {
 
 const state = {
   q: "",
-  tier: "all",
+  significance: "material",
+  direction: "all",
+  status: "all",
+  confidence: "all",
   range: "12m",
   band: "all",
   types: [],
@@ -449,6 +451,23 @@ function classify(material, setback, isUpcoming) {
   return flags;
 }
 
+function labelFields(raw) {
+  const record = raw && typeof raw === "object" ? raw : {};
+  const level = String(record.date_confidence_level || record.dateConfidence || "").toLowerCase();
+  const rawConfidence = String(record.date_confidence || "").toLowerCase();
+  const confidence = ["high", "medium", "low"].includes(level)
+    ? level
+    : (["high", "medium", "low"].includes(rawConfidence) ? rawConfidence : "");
+  return {
+    eventType: record.event_type || record.eventType || "",
+    direction: String(record.direction || "").toLowerCase(),
+    significance: String(record.significance || "").toLowerCase(),
+    significanceReason: record.significance_reason || record.significanceReason || "",
+    status: String(record.status || "").toLowerCase(),
+    dateConfidence: confidence,
+  };
+}
+
 function sourceFields(raw) {
   const record = raw && typeof raw === "object" ? raw : {};
   const list = [];
@@ -503,6 +522,12 @@ function rowShell(id, when, companies, fields) {
     moves: fields.moves || null,
     note: fields.note || "",
     slip: "",
+    eventType: fields.eventType || "",
+    direction: fields.direction || "",
+    significance: fields.significance || "",
+    significanceReason: fields.significanceReason || "",
+    status: fields.status || "",
+    dateConfidence: fields.dateConfidence || "",
     ...classify(fields.material, fields.setback, fields.upcoming),
   };
 }
@@ -549,6 +574,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
         reaction: reactionText(event, profile.markets[0]),
         moves: moveSet(event),
         ...sourceFields(event),
+        ...labelFields(event),
       }));
     });
   });
@@ -574,6 +600,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       upcoming: upcomingFlag,
       note: event.note || "",
       ...sourceFields(event),
+      ...labelFields(event),
     }));
   });
 
@@ -643,8 +670,9 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       type: pilot.risk,
       headline: row.what_happened || "",
       material: row.material === "Y",
-      setback: false,
+      setback: String(row.direction || "").toLowerCase() === "negative",
       ...sourceFields(row),
+      ...labelFields(row),
     });
     made.pilots.push(pilot);
     rows.push(made);
@@ -678,6 +706,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       setback: false,
       upcoming: true,
       ...sourceFields(item),
+      ...labelFields(item),
     });
     if (/^\d{4}-\d{2}-\d{2}$/.test(String(item.sort_date || ""))) row.sort = item.sort_date;
     row.dateBasis = item.date_basis || "";
@@ -693,7 +722,8 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const types = new Set();
   const sectors = new Set();
   rows.concat(forward).forEach((item) => {
-    if (item.type) types.add(item.type);
+    const kind = item.eventType || item.type;
+    if (kind) types.add(kind);
     item.companies.forEach((company) => { if (company.sector) sectors.add(company.sector); });
   });
   return {
@@ -718,12 +748,28 @@ function dateOk(item, today) {
   return item.sort >= shiftMonths(today, -12);
 }
 
-function tierOk(item) {
-  if (state.tier === "material") return item.material;
-  if (state.tier === "setback") return item.setback;
-  if (state.tier === "background") return item.background;
-  if (item.background) return state.background;
-  return true;
+function significanceOk(item) {
+  const significance = item.significance || (item.background ? "background" : "material");
+  const setback = item.direction === "negative" || item.setback;
+  if (state.significance === "background") return significance === "background";
+  if (state.significance === "all" || state.background) return true;
+  return significance === "material" || setback;
+}
+
+function directionOk(item) {
+  if (state.direction === "all") return true;
+  const direction = item.direction || (item.setback ? "negative" : "");
+  return direction === state.direction;
+}
+
+function statusOk(item) {
+  if (state.status === "all") return true;
+  return item.status === state.status;
+}
+
+function confidenceOk(item) {
+  if (state.confidence === "all") return true;
+  return item.dateConfidence === state.confidence;
 }
 
 function filtered() {
@@ -731,10 +777,14 @@ function filtered() {
   const query = state.q.trim().toLowerCase();
   const source = state.range === "upcoming" ? upcoming : events;
   return source.filter((item) => {
-    if (!tierOk(item)) return false;
+    if (!significanceOk(item)) return false;
+    if (!directionOk(item)) return false;
+    if (!statusOk(item)) return false;
+    if (!confidenceOk(item)) return false;
     if (state.range !== "upcoming" && !dateOk(item, today)) return false;
     if (state.band !== "all" && !item.companies.some((company) => company.band === state.band)) return false;
-    if (state.types.length && !state.types.includes(item.type)) return false;
+    const kind = item.eventType || item.type;
+    if (state.types.length && !state.types.includes(kind)) return false;
     if (state.sector !== "all" && !item.companies.some((company) => company.sector === state.sector)) return false;
     if (state.market !== "all" && !item.companies.some((company) => company.markets.includes(state.market))) return false;
     if (state.category !== "all" && item.category !== state.category) return false;
@@ -749,14 +799,25 @@ function filtered() {
 }
 
 function isDefault() {
-  return !state.q.trim() && state.tier === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
+  return !state.q.trim() && state.significance === "material" && state.direction === "all" && state.status === "all" && state.confidence === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
 }
 
 function readUrl() {
   const params = new URLSearchParams(window.location.search);
   state.q = params.get("q") || "";
+  const significance = params.get("sig");
   const tier = params.get("tier");
-  state.tier = TIERS.some(([value]) => value === tier) ? tier : "all";
+  if (significance === "material" || significance === "background" || significance === "all") state.significance = significance;
+  else if (tier === "background") state.significance = "background";
+  else if (params.get("bg") === "1") state.significance = "all";
+  else state.significance = "material";
+  const direction = params.get("dir");
+  state.direction = direction === "positive" || direction === "neutral" || direction === "negative" ? direction : (tier === "setback" ? "negative" : "all");
+  const status = params.get("status");
+  state.status = ["upcoming", "overdue", "slipped", "done"].includes(status) ? status : "all";
+  const confidence = params.get("confidence");
+  state.confidence = confidence === "high" || confidence === "medium" || confidence === "low" ? confidence : "all";
+  state.background = state.significance === "all";
   const range = params.get("range");
   state.range = RANGES.some(([value]) => value === range) ? range : "12m";
   const band = params.get("band");
@@ -770,14 +831,16 @@ function readUrl() {
   state.category = CATEGORIES.includes(category) ? category : "all";
   const country = params.get("country");
   state.country = countryOptions.includes(country) ? country : "all";
-  state.background = params.get("bg") === "1";
   state.shown = PAGE;
 }
 
 function writeUrl() {
   const params = new URLSearchParams();
   if (state.q.trim()) params.set("q", state.q.trim());
-  if (state.tier !== "all") params.set("tier", state.tier);
+  if (state.significance !== "material") params.set("sig", state.significance);
+  if (state.direction !== "all") params.set("dir", state.direction);
+  if (state.status !== "all") params.set("status", state.status);
+  if (state.confidence !== "all") params.set("confidence", state.confidence);
   if (state.range !== "12m") params.set("range", state.range);
   if (state.band !== "all") params.set("band", state.band);
   state.types.forEach((type) => params.append("type", type));
@@ -793,7 +856,9 @@ function writeUrl() {
 }
 
 function fieldDefault(key) {
-  return key === "range" ? "12m" : "all";
+  if (key === "range") return "12m";
+  if (key === "significance") return "material";
+  return "all";
 }
 
 function selectField(key, label, choices, current) {
@@ -802,6 +867,15 @@ function selectField(key, label, choices, current) {
   select.value = current;
   select.addEventListener("change", () => {
     state[key] = select.value;
+    if (key === "significance") {
+      state.background = state.significance === "all";
+      const button = document.getElementById("events-background");
+      if (button) {
+        button.setAttribute("aria-pressed", state.background ? "true" : "false");
+        const field = button.closest(".field");
+        if (field) field.classList.toggle("active", state.background);
+      }
+    }
     state.shown = PAGE;
     state.chartAll = false;
     select.closest(".field").classList.toggle("active", select.value !== fieldDefault(key));
@@ -877,7 +951,13 @@ function mountFilters() {
     "aria-pressed": state.background ? "true" : "false",
     onClick: (event) => {
       state.background = !state.background;
+      state.significance = state.background ? "all" : "material";
       state.chartAll = false;
+      const significance = document.querySelector("[data-filter='significance']");
+      if (significance) {
+        significance.value = state.significance;
+        significance.closest(".field").classList.toggle("active", state.significance !== "material");
+      }
       event.currentTarget.setAttribute("aria-pressed", state.background ? "true" : "false");
       event.currentTarget.closest(".field").classList.toggle("active", state.background);
       state.shown = PAGE;
@@ -889,7 +969,10 @@ function mountFilters() {
 
   document.getElementById("event-bar").replaceChildren(
     searchField,
-    selectField("tier", "Tier", TIERS, state.tier),
+    selectField("significance", "Significance", [["material", "Material"], ["all", "All"], ["background", "Background"]], state.significance),
+    selectField("direction", "Direction", [["all", "All"], ["positive", "Positive"], ["neutral", "Neutral"], ["negative", "Setback"]], state.direction),
+    selectField("status", "Status", [["all", "All"], ["upcoming", "Upcoming"], ["overdue", "Overdue"], ["slipped", "Slipped"], ["done", "Done"]], state.status),
+    selectField("confidence", "Date confidence", [["all", "All"], ["high", "High"], ["medium", "Medium"], ["low", "Low"]], state.confidence),
     selectField("range", "Date", RANGES, state.range),
     selectField("band", "Size band", BANDS, state.band),
     typeField,
@@ -921,7 +1004,10 @@ function mountFilters() {
 
 function clearFilters() {
   state.q = "";
-  state.tier = "all";
+  state.significance = "material";
+  state.direction = "all";
+  state.status = "all";
+  state.confidence = "all";
   state.range = "12m";
   state.band = "all";
   state.types = [];
@@ -963,10 +1049,54 @@ function companyNode(company) {
   }, body);
 }
 
+function chip(text, kind, title) {
+  return el("span", { class: `chip chip-${kind}`, title: title || "", text });
+}
+
+function directionChip(item) {
+  const key = item.direction || (item.setback ? "negative" : "");
+  if (key === "positive") return chip("Positive", "positive", "The event moved the asset forward.");
+  if (key === "neutral") return chip("Neutral", "neutral", "The event does not clearly help or hurt.");
+  if (key === "negative") return chip("Setback", "setback", "A dry hole, a delay, or another step backward.");
+  return null;
+}
+
+function significanceChip(item) {
+  const key = item.significance || (item.background ? "background" : (item.material ? "material" : ""));
+  const reason = item.significanceReason ? showText(item.significanceReason) : "";
+  if (key === "material") return chip("Material", "material", reason || "Large enough to matter for the company.");
+  if (key === "background") return chip("Background", "background", reason || "A routine item, or too small to change the story.");
+  return null;
+}
+
+function statusChip(status) {
+  const key = String(status || "").toLowerCase();
+  const labels = { upcoming: "Upcoming", overdue: "Overdue", slipped: "Slipped", done: "Done" };
+  if (!labels[key]) return null;
+  return chip(labels[key], key, "Where this guided item stands.");
+}
+
+function confidenceChip(level) {
+  const key = String(level || "").toLowerCase();
+  const labels = { high: "High", medium: "Medium", low: "Low" };
+  if (!labels[key]) return null;
+  return chip(labels[key], `conf-${key}`, "How firmly the date is known.");
+}
+
+function typeChip(item) {
+  const text = showText(item.eventType || item.type);
+  if (!text || text === "—") return null;
+  return chip(text, "type", "The kind of event.");
+}
+
 function tagNodes(item) {
   return [
-    item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null,
-    item.setback ? el("span", { class: "no-badge setback", text: "Setback" }) : null,
+    typeChip(item),
+    item.category ? el("span", { class: "cat-tag", title: "Operational, capital and deals, or corporate.", text: showText(item.category) }) : null,
+    directionChip(item),
+    significanceChip(item),
+    statusChip(item.status),
+    confidenceChip(item.dateConfidence),
     item.affects.length ? el("span", { class: "also-tag", text: `Also affects: ${item.affects.join(", ")}` }) : null,
     item.slip ? el("span", { class: "slip-tag", title: item.slip, text: "Past guided date" }) : null,
   ];
@@ -1214,8 +1344,8 @@ function renderTable(rows) {
     main.append(
       el("td", { class: "date" }, [dateNode(item)]),
       el("td", {}, [el("span", { class: "tl-cos" }, item.companies.map(companyNode))]),
-      el("td", {}, [el("span", { class: "tl-tags" }, [item.type ? showText(item.type) : "—", item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null])]),
-      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "tl-tags" }, tagNodes(item).slice(1))])]),
+      el("td", {}, [el("span", { class: "chip-row" }, tagNodes(item).slice(0, 2))]),
+      el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "chip-row" }, tagNodes(item).slice(2))])]),
       el("td", {}, [sourceBadge(item)]),
     );
     body.append(main);
@@ -1240,10 +1370,10 @@ function renderCards(rows) {
       onClick: () => toggle(item.id),
       onKeydown: (event) => onRowKey(event, item.id),
     }, [
-      el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) }), item.type ? el("span", { text: showText(item.type) }) : null]),
+      el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) })]),
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
-      el("div", { class: "tl-tags" }, tagNodes(item)),
+      el("div", { class: "chip-row" }, tagNodes(item)),
       el("div", { class: "card-meta" }, [sourceBadge(item)]),
       open ? detailNode(item) : null,
     ]);
@@ -1666,7 +1796,10 @@ function buildSvg(lanes, rows, width, bounds) {
 function chartStampFor(rows) {
   return JSON.stringify({
     range: state.range,
-    tier: state.tier,
+    significance: state.significance,
+    direction: state.direction,
+    status: state.status,
+    confidence: state.confidence,
     band: state.band,
     types: state.types,
     sector: state.sector,
@@ -1964,11 +2097,13 @@ function scheduleChart(rows) {
 
 function subtitle() {
   if (state.range === "upcoming") return "Coming up, soonest first.";
-  const tier = state.tier === "all"
-    ? (state.background ? "All tiers" : "Material and setbacks")
-    : TIERS.find(([value]) => value === state.tier)[1];
+  const significance = state.significance === "material"
+    ? "Material and setbacks"
+    : state.significance === "background"
+      ? "Background"
+      : "All significance";
   const range = state.range === "all" ? "all dates" : RANGES.find(([value]) => value === state.range)[1].toLowerCase();
-  return `${tier}, ${range}. Newest first.`;
+  return `${significance}, ${range}. Newest first.`;
 }
 
 function render() {

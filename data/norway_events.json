@@ -21,7 +21,8 @@
    "Equinor",
    "Petoro"
   ],
-  "id": "NO001"
+  "id": "NO001",
+  "category": "Operational"
  },
  {
   "date": "2025-01-01",
@@ -55,7 +56,8 @@
    "ORLEN",
    "Wellesley"
   ],
-  "id": "NO002"
+  "id": "NO002",
+  "category": "Operational"
  },
  {
   "date": "2025-01-02",
@@ -79,7 +81,8 @@
    "Concedo",
    "Japex"
   ],
-  "id": "NO003"
+  "id": "NO003",
+  "category": "Operational"
  },
  {
   "date": "2025-01-14",
@@ -102,7 +105,8 @@
   "other_partners": [
    "Concedo"
   ],
-  "id": "NO004"
+  "id": "NO004",
+  "category": "Operational"
  },
  {
   "date": "2025-01-14",
@@ -164,7 +168,8 @@
    "Lime",
    "Source Energy"
   ],
-  "id": "NO005"
+  "id": "NO005",
+  "category": "Operational"
  },
  {
   "date": "2025-01-17",
@@ -191,7 +196,8 @@
    "Equinor",
    "Aker BP"
   ],
-  "id": "NO006"
+  "id": "NO006",
+  "category": "Operational"
  },
  {
   "date": "2025-01-22",
@@ -214,7 +220,8 @@
   "other_partners": [
    "Shell"
   ],
-  "id": "NO007"
+  "id": "NO007",
+  "category": "Operational"
  },
  {
   "date": "2025-02-06",
@@ -239,7 +246,8 @@
    "Harbour",
    "Vår Energi"
   ],
-  "id": "NO008"
+  "id": "NO008",
+  "category": "Operational"
  },
  {
   "date": "2025-02-13",
@@ -262,7 +270,8 @@
   "other_partners": [
    "Concedo"
   ],
-  "id": "NO009"
+  "id": "NO009",
+  "category": "Operational"
  },
  {
   "date": "2025-02-14",
@@ -285,7 +294,8 @@
   "other_partners": [
    "Vår Energi"
   ],
-  "id": "NO010"
+  "id": "NO010",
+  "category": "Operational"
  },
  {
   "date": "2025-02-16",
@@ -317,7 +327,8 @@
    "Harbour",
    "Equinor"
   ],
-  "id": "NO011"
+  "id": "NO011",
+  "category": "Operational"
  },
  {
   "date": "2025-02-17",
@@ -345,7 +356,8 @@
    "Petrolia NOCO",
    "Harbour"
   ],
-  "id": "NO012"
+  "id": "NO012",
+  "category": "Operational"
  },
  {
   "date": "2025-02-18",
@@ -375,7 +387,8 @@
    "Equinor",
    "DNO"
   ],
-  "id": "NO013"
+  "id": "NO013",
+  "category": "Operational"
  },
  {
   "date": "2025-02-19",
@@ -411,7 +424,8 @@
    "ORLEN",
    "INPEX Idemitsu"
   ],
-  "id": "NO014"
+  "id": "NO014",
+  "category": "Operational"
  },
  {
   "date": "2025-02-21",
@@ -436,7 +450,8 @@
    "Petoro",
    "ConocoPhillips"
   ],
-  "id": "NO015"
+  "id": "NO015",
+  "category": "Operational"
  },
  {
   "date": "2025-02-25",
@@ -459,7 +474,8 @@
   "other_partners": [
    "DNO"
   ],
-  "id": "NO016"
+  "id": "NO016",
+  "category": "Operational"
  },
  {
   "date": "2025-02-27",
@@ -482,7 +498,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO017"
+  "id": "NO017",
+  "category": "Operational"
  },
  {
   "date": "2025-02-28",
@@ -506,7 +523,8 @@
    "Harbour",
    "Vår Energi"
   ],
-  "id": "NO018"
+  "id": "NO018",
+  "category": "Operational"
  },
  {
   "date": "2025-02-28",
@@ -531,7 +549,8 @@
    "Petrolia NOCO",
    "ORLEN"
   ],
-  "id": "NO019"
+  "id": "NO019",
+  "category": "Operational"
  },
  {
   "date": "2025-03-01",
@@ -556,7 +575,8 @@
    "Japex",
    "INPEX Idemitsu"
   ],
-  "id": "NO020"
+  "id": "NO020",
+  "category": "Operational"
  },
  {
   "date": "2025-03-04",
@@ -583,7 +603,8 @@
    "Petoro",
    "Aker BP"
   ],
-  "id": "NO021"
+  "id": "NO021",
+  "category": "Operational"
  },
  {
   "date": "2025-03-05",
@@ -608,7 +629,8 @@
    "Pandion",
    "OKEA"
   ],
-  "id": "NO022"
+  "id": "NO022",
+  "category": "Operational"
  },
  {
   "date": "2025-03-07",
@@ -631,7 +653,8 @@
   "other_partners": [
    "Sval"
   ],
-  "id": "NO023"
+  "id": "NO023",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-03-10",
@@ -665,7 +688,8 @@
    "Vår Energi",
    "ConocoPhillips"
   ],
-  "id": "NO024"
+  "id": "NO024",
+  "category": "Operational"
  },
  {
   "date": "2025-03-11",
@@ -695,7 +719,8 @@
    "Petoro",
    "Equinor"
   ],
-  "id": "NO025"
+  "id": "NO025",
+  "category": "Operational"
  },
  {
   "date": "2025-03-14",
@@ -720,7 +745,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO026"
+  "id": "NO026",
+  "category": "Operational"
  },
  {
   "date": "2025-03-14",
@@ -747,7 +773,8 @@
    "DNO",
    "Equinor"
   ],
-  "id": "NO027"
+  "id": "NO027",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-03-14",
@@ -772,7 +799,8 @@
    "Aker BP",
    "Petoro"
   ],
-  "id": "NO028"
+  "id": "NO028",
+  "category": "Operational"
  },
  {
   "date": "2025-03-16",
@@ -799,7 +827,8 @@
    "Petoro",
    "INPEX Idemitsu"
   ],
-  "id": "NO029"
+  "id": "NO029",
+  "category": "Operational"
  },
  {
   "date": "2025-03-26",
@@ -826,7 +855,8 @@
    "Aker BP",
    "DNO"
   ],
-  "id": "NO030"
+  "id": "NO030",
+  "category": "Operational"
  },
  {
   "date": "2025-03-27",
@@ -851,7 +881,8 @@
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO031"
+  "id": "NO031",
+  "category": "Operational"
  },
  {
   "date": "2025-03-28",
@@ -878,7 +909,8 @@
    "Concedo",
    "Aker BP"
   ],
-  "id": "NO032"
+  "id": "NO032",
+  "category": "Operational"
  },
  {
   "date": "2025-03-31",
@@ -903,7 +935,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO033"
+  "id": "NO033",
+  "category": "Operational"
  },
  {
   "date": "2025-03-31",
@@ -927,7 +960,8 @@
    "DNO",
    "OKEA"
   ],
-  "id": "NO034"
+  "id": "NO034",
+  "category": "Operational"
  },
  {
   "date": "2025-03-31",
@@ -951,7 +985,8 @@
    "Pandion",
    "Vår Energi"
   ],
-  "id": "NO035"
+  "id": "NO035",
+  "category": "Operational"
  },
  {
   "date": "2025-04-30",
@@ -975,7 +1010,8 @@
    "Equinor",
    "Sval"
   ],
-  "id": "NO036"
+  "id": "NO036",
+  "category": "Operational"
  },
  {
   "date": "2025-05-01",
@@ -1000,7 +1036,8 @@
    "INPEX Idemitsu",
    "Vår Energi"
   ],
-  "id": "NO037"
+  "id": "NO037",
+  "category": "Operational"
  },
  {
   "date": "2025-05-14",
@@ -1023,7 +1060,8 @@
   "other_partners": [
    "OMV"
   ],
-  "id": "NO038"
+  "id": "NO038",
+  "category": "Operational"
  },
  {
   "date": "2025-05-20",
@@ -1050,7 +1088,8 @@
    "Harbour",
    "ORLEN"
   ],
-  "id": "NO039"
+  "id": "NO039",
+  "category": "Operational"
  },
  {
   "date": "2025-05-28",
@@ -1079,7 +1118,8 @@
    "Petrolia NOCO",
    "DNO"
   ],
-  "id": "NO040"
+  "id": "NO040",
+  "category": "Operational"
  },
  {
   "date": "2025-05-31",
@@ -1102,7 +1142,8 @@
   "other_partners": [
    "Harbour"
   ],
-  "id": "NO041"
+  "id": "NO041",
+  "category": "Operational"
  },
  {
   "date": "2025-06-10",
@@ -1125,7 +1166,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO042"
+  "id": "NO042",
+  "category": "Operational"
  },
  {
   "date": "2025-06-18",
@@ -1148,7 +1190,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO043"
+  "id": "NO043",
+  "category": "Operational"
  },
  {
   "date": "2025-06-19",
@@ -1171,7 +1214,8 @@
   "other_partners": [
    "Pandion"
   ],
-  "id": "NO044"
+  "id": "NO044",
+  "category": "Operational"
  },
  {
   "date": "2025-06-23",
@@ -1194,7 +1238,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO045"
+  "id": "NO045",
+  "category": "Operational"
  },
  {
   "date": "2025-06-25",
@@ -1219,7 +1264,8 @@
    "Shell",
    "Vår Energi"
   ],
-  "id": "NO046"
+  "id": "NO046",
+  "category": "Operational"
  },
  {
   "date": "2025-06-26",
@@ -1244,7 +1290,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO047"
+  "id": "NO047",
+  "category": "Operational"
  },
  {
   "date": "2025-06-26",
@@ -1269,7 +1316,8 @@
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO048"
+  "id": "NO048",
+  "category": "Operational"
  },
  {
   "date": "2025-06-27",
@@ -1298,7 +1346,8 @@
    "ORLEN",
    "Vår Energi"
   ],
-  "id": "NO049"
+  "id": "NO049",
+  "category": "Operational"
  },
  {
   "date": "2025-06-27",
@@ -1327,7 +1376,8 @@
    "Petrolia NOCO",
    "M Vest"
   ],
-  "id": "NO050"
+  "id": "NO050",
+  "category": "Operational"
  },
  {
   "date": "2025-06-30",
@@ -1352,7 +1402,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO051"
+  "id": "NO051",
+  "category": "Operational"
  },
  {
   "date": "2025-06-30",
@@ -1377,7 +1428,8 @@
    "Aker BP",
    "Vår Energi"
   ],
-  "id": "NO052"
+  "id": "NO052",
+  "category": "Operational"
  },
  {
   "date": "2025-06-30",
@@ -1400,7 +1452,8 @@
   "other_partners": [
    "Wellesley"
   ],
-  "id": "NO053"
+  "id": "NO053",
+  "category": "Operational"
  },
  {
   "date": "2025-06-30",
@@ -1424,7 +1477,8 @@
    "Equinor",
    "Wellesley"
   ],
-  "id": "NO054"
+  "id": "NO054",
+  "category": "Operational"
  },
  {
   "date": "2025-06-30",
@@ -1448,7 +1502,8 @@
    "Harbour",
    "Lime"
   ],
-  "id": "NO055"
+  "id": "NO055",
+  "category": "Operational"
  },
  {
   "date": "2025-07-01",
@@ -1475,7 +1530,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO056"
+  "id": "NO056",
+  "category": "Operational"
  },
  {
   "date": "2025-07-01",
@@ -1498,7 +1554,8 @@
   "other_partners": [
    "INPEX Idemitsu"
   ],
-  "id": "NO057"
+  "id": "NO057",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-07-01",
@@ -1521,7 +1578,8 @@
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO058"
+  "id": "NO058",
+  "category": "Operational"
  },
  {
   "date": "2025-07-07",
@@ -1548,7 +1606,8 @@
    "Vår Energi",
    "TotalEnergies"
   ],
-  "id": "NO059"
+  "id": "NO059",
+  "category": "Operational"
  },
  {
   "date": "2025-07-10",
@@ -1573,7 +1632,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO060"
+  "id": "NO060",
+  "category": "Operational"
  },
  {
   "date": "2025-07-16",
@@ -1598,7 +1658,8 @@
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO061"
+  "id": "NO061",
+  "category": "Operational"
  },
  {
   "date": "2025-07-17",
@@ -1623,7 +1684,8 @@
    "Vår Energi",
    "Aker BP"
   ],
-  "id": "NO062"
+  "id": "NO062",
+  "category": "Operational"
  },
  {
   "date": "2025-07-21",
@@ -1648,7 +1710,8 @@
    "DNO",
    "Sval"
   ],
-  "id": "NO063"
+  "id": "NO063",
+  "category": "Operational"
  },
  {
   "date": "2025-07-28",
@@ -1671,7 +1734,8 @@
   "other_partners": [
    "Japex"
   ],
-  "id": "NO064"
+  "id": "NO064",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-08-04",
@@ -1694,7 +1758,8 @@
   "other_partners": [
    "Source Energy"
   ],
-  "id": "NO065"
+  "id": "NO065",
+  "category": "Operational"
  },
  {
   "date": "2025-08-12",
@@ -1721,7 +1786,8 @@
    "Petoro",
    "Aker BP"
   ],
-  "id": "NO066"
+  "id": "NO066",
+  "category": "Operational"
  },
  {
   "date": "2025-08-13",
@@ -1744,7 +1810,8 @@
   "other_partners": [
    "Shell"
   ],
-  "id": "NO067"
+  "id": "NO067",
+  "category": "Operational"
  },
  {
   "date": "2025-08-16",
@@ -1771,7 +1838,8 @@
    "DNO",
    "M Vest"
   ],
-  "id": "NO068"
+  "id": "NO068",
+  "category": "Operational"
  },
  {
   "date": "2025-08-22",
@@ -1796,7 +1864,8 @@
    "Equinor",
    "ORLEN"
   ],
-  "id": "NO069"
+  "id": "NO069",
+  "category": "Operational"
  },
  {
   "date": "2025-08-25",
@@ -1821,7 +1890,8 @@
    "INPEX Idemitsu",
    "Vår Energi"
   ],
-  "id": "NO070"
+  "id": "NO070",
+  "category": "Operational"
  },
  {
   "date": "2025-08-28",
@@ -1848,7 +1918,8 @@
    "Harbour",
    "INPEX Idemitsu"
   ],
-  "id": "NO071"
+  "id": "NO071",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-08-29",
@@ -1875,7 +1946,8 @@
    "Petoro",
    "Vår Energi"
   ],
-  "id": "NO072"
+  "id": "NO072",
+  "category": "Operational"
  },
  {
   "date": "2025-08-29",
@@ -1900,7 +1972,8 @@
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO073"
+  "id": "NO073",
+  "category": "Operational"
  },
  {
   "date": "2025-08-29",
@@ -1923,7 +1996,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO074"
+  "id": "NO074",
+  "category": "Operational"
  },
  {
   "date": "2025-08-29",
@@ -1947,7 +2021,8 @@
    "Aker BP",
    "OKEA"
   ],
-  "id": "NO075"
+  "id": "NO075",
+  "category": "Operational"
  },
  {
   "date": "2025-09-01",
@@ -1972,7 +2047,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO076"
+  "id": "NO076",
+  "category": "Operational"
  },
  {
   "date": "2025-09-01",
@@ -1995,7 +2071,8 @@
   "other_partners": [
    "Petoro"
   ],
-  "id": "NO077"
+  "id": "NO077",
+  "category": "Operational"
  },
  {
   "date": "2025-09-10",
@@ -2018,7 +2095,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO078"
+  "id": "NO078",
+  "category": "Operational"
  },
  {
   "date": "2025-09-11",
@@ -2047,7 +2125,8 @@
    "Petrolia NOCO",
    "DNO"
   ],
-  "id": "NO079"
+  "id": "NO079",
+  "category": "Operational"
  },
  {
   "date": "2025-09-14",
@@ -2074,7 +2153,8 @@
    "ORLEN",
    "Harbour"
   ],
-  "id": "NO080"
+  "id": "NO080",
+  "category": "Operational"
  },
  {
   "date": "2025-09-19",
@@ -2099,7 +2179,8 @@
    "Aker BP",
    "Vår Energi"
   ],
-  "id": "NO081"
+  "id": "NO081",
+  "category": "Operational"
  },
  {
   "date": "2025-09-23",
@@ -2128,7 +2209,8 @@
    "Vår Energi",
    "Harbour"
   ],
-  "id": "NO082"
+  "id": "NO082",
+  "category": "Operational"
  },
  {
   "date": "2025-09-30",
@@ -2151,7 +2233,8 @@
   "other_partners": [
    "Source Energy"
   ],
-  "id": "NO083"
+  "id": "NO083",
+  "category": "Operational"
  },
  {
   "date": "2025-10-01",
@@ -2176,7 +2259,8 @@
    "TotalEnergies",
    "ORLEN"
   ],
-  "id": "NO084"
+  "id": "NO084",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-10-02",
@@ -2199,7 +2283,8 @@
   "other_partners": [
    "TotalEnergies"
   ],
-  "id": "NO085"
+  "id": "NO085",
+  "category": "Operational"
  },
  {
   "date": "2025-10-06",
@@ -2226,7 +2311,8 @@
    "Aker BP",
    "Equinor"
   ],
-  "id": "NO086"
+  "id": "NO086",
+  "category": "Operational"
  },
  {
   "date": "2025-10-07",
@@ -2253,7 +2339,8 @@
    "Harbour",
    "OKEA"
   ],
-  "id": "NO087"
+  "id": "NO087",
+  "category": "Operational"
  },
  {
   "date": "2025-10-09",
@@ -2277,7 +2364,8 @@
    "Aker BP",
    "Japex"
   ],
-  "id": "NO088"
+  "id": "NO088",
+  "category": "Operational"
  },
  {
   "date": "2025-10-29",
@@ -2304,7 +2392,8 @@
    "Equinor",
    "Petoro"
   ],
-  "id": "NO089"
+  "id": "NO089",
+  "category": "Operational"
  },
  {
   "date": "2025-10-31",
@@ -2328,7 +2417,8 @@
    "INPEX Idemitsu",
    "Pandion"
   ],
-  "id": "NO090"
+  "id": "NO090",
+  "category": "Operational"
  },
  {
   "date": "2025-11-04",
@@ -2352,7 +2442,8 @@
    "DNO",
    "Equinor"
   ],
-  "id": "NO091"
+  "id": "NO091",
+  "category": "Operational"
  },
  {
   "date": "2025-11-06",
@@ -2377,7 +2468,8 @@
    "Concedo",
    "DNO"
   ],
-  "id": "NO092"
+  "id": "NO092",
+  "category": "Operational"
  },
  {
   "date": "2025-11-06",
@@ -2400,7 +2492,8 @@
   "other_partners": [
    "DNO"
   ],
-  "id": "NO093"
+  "id": "NO093",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-11-07",
@@ -2425,7 +2518,8 @@
    "Equinor",
    "ORLEN"
   ],
-  "id": "NO094"
+  "id": "NO094",
+  "category": "Operational"
  },
  {
   "date": "2025-11-11",
@@ -2450,7 +2544,8 @@
    "Vår Energi",
    "Aker BP"
   ],
-  "id": "NO095"
+  "id": "NO095",
+  "category": "Operational"
  },
  {
   "date": "2025-11-13",
@@ -2473,7 +2568,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO096"
+  "id": "NO096",
+  "category": "Operational"
  },
  {
   "date": "2025-11-18",
@@ -2500,7 +2596,8 @@
    "Source Energy",
    "Aker BP"
   ],
-  "id": "NO097"
+  "id": "NO097",
+  "category": "Operational"
  },
  {
   "date": "2025-11-18",
@@ -2523,7 +2620,8 @@
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO098"
+  "id": "NO098",
+  "category": "Capital and deals"
  },
  {
   "date": "2025-11-18",
@@ -2548,7 +2646,8 @@
    "OKEA",
    "Pandion"
   ],
-  "id": "NO099"
+  "id": "NO099",
+  "category": "Operational"
  },
  {
   "date": "2025-11-20",
@@ -2571,7 +2670,8 @@
   "other_partners": [
    "Sval"
   ],
-  "id": "NO100"
+  "id": "NO100",
+  "category": "Operational"
  },
  {
   "date": "2025-11-28",
@@ -2594,7 +2694,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO101"
+  "id": "NO101",
+  "category": "Operational"
  },
  {
   "date": "2025-11-30",
@@ -2618,7 +2719,8 @@
    "Harbour",
    "OKEA"
   ],
-  "id": "NO102"
+  "id": "NO102",
+  "category": "Operational"
  },
  {
   "date": "2025-12-01",
@@ -2649,7 +2751,8 @@
    "Japex",
    "ORLEN"
   ],
-  "id": "NO103"
+  "id": "NO103",
+  "category": "Operational"
  },
  {
   "date": "2025-12-04",
@@ -2672,7 +2775,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO104"
+  "id": "NO104",
+  "category": "Operational"
  },
  {
   "date": "2025-12-05",
@@ -2695,7 +2799,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO105"
+  "id": "NO105",
+  "category": "Operational"
  },
  {
   "date": "2025-12-11",
@@ -2720,7 +2825,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO106"
+  "id": "NO106",
+  "category": "Operational"
  },
  {
   "date": "2025-12-11",
@@ -2749,7 +2855,8 @@
    "Shell",
    "Vår Energi"
   ],
-  "id": "NO107"
+  "id": "NO107",
+  "category": "Operational"
  },
  {
   "date": "2025-12-16",
@@ -2780,7 +2887,8 @@
    "Petoro",
    "ORLEN"
   ],
-  "id": "NO108"
+  "id": "NO108",
+  "category": "Operational"
  },
  {
   "date": "2025-12-17",
@@ -2809,7 +2917,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO109"
+  "id": "NO109",
+  "category": "Operational"
  },
  {
   "date": "2025-12-18",
@@ -2833,7 +2942,8 @@
    "ORLEN",
    "TotalEnergies"
   ],
-  "id": "NO110"
+  "id": "NO110",
+  "category": "Operational"
  },
  {
   "date": "2025-12-18",
@@ -2857,7 +2967,8 @@
    "TotalEnergies",
    "Vår Energi"
   ],
-  "id": "NO111"
+  "id": "NO111",
+  "category": "Operational"
  },
  {
   "date": "2025-12-19",
@@ -2880,7 +2991,8 @@
   "other_partners": [
    "Petoro"
   ],
-  "id": "NO112"
+  "id": "NO112",
+  "category": "Operational"
  },
  {
   "date": "2025-12-19",
@@ -2904,7 +3016,8 @@
    "DNO",
    "ORLEN"
   ],
-  "id": "NO113"
+  "id": "NO113",
+  "category": "Operational"
  },
  {
   "date": "2025-12-22",
@@ -2931,7 +3044,8 @@
    "TotalEnergies",
    "Petoro"
   ],
-  "id": "NO114"
+  "id": "NO114",
+  "category": "Operational"
  },
  {
   "date": "2025-12-22",
@@ -2958,7 +3072,8 @@
    "Petoro",
    "Kistos"
   ],
-  "id": "NO115"
+  "id": "NO115",
+  "category": "Operational"
  },
  {
   "date": "2025-12-23",
@@ -2986,7 +3101,8 @@
    "Petoro",
    "Repsol"
   ],
-  "id": "NO116"
+  "id": "NO116",
+  "category": "Operational"
  },
  {
   "date": "2025-12-23",
@@ -3009,7 +3125,8 @@
   "other_partners": [
    "OKEA"
   ],
-  "id": "NO117"
+  "id": "NO117",
+  "category": "Operational"
  },
  {
   "date": "2025-12-29",
@@ -3033,7 +3150,8 @@
    "Aker BP",
    "DNO"
   ],
-  "id": "NO118"
+  "id": "NO118",
+  "category": "Operational"
  },
  {
   "date": "2025-12-31",
@@ -3060,7 +3178,8 @@
    "Harbour",
    "Repsol"
   ],
-  "id": "NO119"
+  "id": "NO119",
+  "category": "Operational"
  },
  {
   "date": "2026-01-13",
@@ -3118,7 +3237,8 @@
    "Repsol",
    "TotalEnergies"
   ],
-  "id": "NO120"
+  "id": "NO120",
+  "category": "Operational"
  },
  {
   "date": "2026-01-16",
@@ -3141,7 +3261,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO121"
+  "id": "NO121",
+  "category": "Operational"
  },
  {
   "date": "2026-01-19",
@@ -3168,7 +3289,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO122"
+  "id": "NO122",
+  "category": "Operational"
  },
  {
   "date": "2026-01-20",
@@ -3191,7 +3313,8 @@
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO123"
+  "id": "NO123",
+  "category": "Operational"
  },
  {
   "date": "2026-01-28",
@@ -3220,7 +3343,8 @@
    "Lime",
    "M Vest"
   ],
-  "id": "NO124"
+  "id": "NO124",
+  "category": "Operational"
  },
  {
   "date": "2026-02-02",
@@ -3245,7 +3369,8 @@
    "OMV",
    "Harbour"
   ],
-  "id": "NO125"
+  "id": "NO125",
+  "category": "Operational"
  },
  {
   "date": "2026-02-12",
@@ -3268,7 +3393,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO126"
+  "id": "NO126",
+  "category": "Operational"
  },
  {
   "date": "2026-02-13",
@@ -3297,7 +3423,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO127"
+  "id": "NO127",
+  "category": "Operational"
  },
  {
   "date": "2026-02-13",
@@ -3324,7 +3451,8 @@
    "Petoro",
    "Vår Energi"
   ],
-  "id": "NO128"
+  "id": "NO128",
+  "category": "Operational"
  },
  {
   "date": "2026-02-14",
@@ -3351,7 +3479,8 @@
    "Equinor",
    "Petoro"
   ],
-  "id": "NO129"
+  "id": "NO129",
+  "category": "Operational"
  },
  {
   "date": "2026-02-16",
@@ -3376,7 +3505,8 @@
    "OMV",
    "Petoro"
   ],
-  "id": "NO130"
+  "id": "NO130",
+  "category": "Operational"
  },
  {
   "date": "2026-02-16",
@@ -3406,7 +3536,8 @@
    "Equinor",
    "Vår Energi"
   ],
-  "id": "NO131"
+  "id": "NO131",
+  "category": "Operational"
  },
  {
   "date": "2026-02-17",
@@ -3429,7 +3560,8 @@
   "other_partners": [
    "OMV"
   ],
-  "id": "NO132"
+  "id": "NO132",
+  "category": "Operational"
  },
  {
   "date": "2026-02-17",
@@ -3454,7 +3586,8 @@
    "Equinor",
    "Petoro"
   ],
-  "id": "NO133"
+  "id": "NO133",
+  "category": "Operational"
  },
  {
   "date": "2026-02-18",
@@ -3479,7 +3612,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO134"
+  "id": "NO134",
+  "category": "Operational"
  },
  {
   "date": "2026-02-18",
@@ -3511,7 +3645,8 @@
    "Harbour",
    "OKEA"
   ],
-  "id": "NO135"
+  "id": "NO135",
+  "category": "Operational"
  },
  {
   "date": "2026-03-01",
@@ -3536,7 +3671,8 @@
    "Equinor",
    "Petoro"
   ],
-  "id": "NO136"
+  "id": "NO136",
+  "category": "Operational"
  },
  {
   "date": "2026-03-02",
@@ -3565,7 +3701,8 @@
    "Harbour",
    "Petoro"
   ],
-  "id": "NO137"
+  "id": "NO137",
+  "category": "Operational"
  },
  {
   "date": "2026-03-02",
@@ -3590,7 +3727,8 @@
    "Aker BP",
    "Equinor"
   ],
-  "id": "NO138"
+  "id": "NO138",
+  "category": "Operational"
  },
  {
   "date": "2026-03-10",
@@ -3613,7 +3751,8 @@
   "other_partners": [
    "INPEX Idemitsu"
   ],
-  "id": "NO139"
+  "id": "NO139",
+  "category": "Operational"
  },
  {
   "date": "2026-03-11",
@@ -3636,7 +3775,8 @@
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO140"
+  "id": "NO140",
+  "category": "Operational"
  },
  {
   "date": "2026-03-13",
@@ -3661,7 +3801,8 @@
    "DNO",
    "Harbour"
   ],
-  "id": "NO141"
+  "id": "NO141",
+  "category": "Operational"
  },
  {
   "date": "2026-03-14",
@@ -3697,7 +3838,8 @@
    "OMV",
    "INPEX Idemitsu"
   ],
-  "id": "NO142"
+  "id": "NO142",
+  "category": "Operational"
  },
  {
   "date": "2026-03-15",
@@ -3741,7 +3883,8 @@
    "Petoro",
    "INPEX Idemitsu"
   ],
-  "id": "NO143"
+  "id": "NO143",
+  "category": "Operational"
  },
  {
   "date": "2026-03-17",
@@ -3764,7 +3907,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO144"
+  "id": "NO144",
+  "category": "Operational"
  },
  {
   "date": "2026-03-18",
@@ -3789,7 +3933,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO145"
+  "id": "NO145",
+  "category": "Operational"
  },
  {
   "date": "2026-03-23",
@@ -3814,7 +3959,8 @@
    "Vår Energi",
    "INPEX Idemitsu"
   ],
-  "id": "NO146"
+  "id": "NO146",
+  "category": "Operational"
  },
  {
   "date": "2026-03-25",
@@ -3843,7 +3989,8 @@
    "Lime",
    "M Vest"
   ],
-  "id": "NO147"
+  "id": "NO147",
+  "category": "Operational"
  },
  {
   "date": "2026-03-26",
@@ -3868,7 +4015,8 @@
    "Aker BP",
    "OKEA"
   ],
-  "id": "NO148"
+  "id": "NO148",
+  "category": "Operational"
  },
  {
   "date": "2026-03-26",
@@ -3891,7 +4039,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO149"
+  "id": "NO149",
+  "category": "Operational"
  },
  {
   "date": "2026-03-26",
@@ -3911,7 +4060,8 @@
   "upcoming": "N",
   "net": "",
   "other_partners": [],
-  "id": "NO150"
+  "id": "NO150",
+  "category": "Operational"
  },
  {
   "date": "2026-03-27",
@@ -3935,7 +4085,8 @@
    "Aker BP",
    "Equinor"
   ],
-  "id": "NO151"
+  "id": "NO151",
+  "category": "Operational"
  },
  {
   "date": "2026-04-07",
@@ -3960,7 +4111,8 @@
    "Equinor",
    "DNO"
   ],
-  "id": "NO152"
+  "id": "NO152",
+  "category": "Operational"
  },
  {
   "date": "2026-04-14",
@@ -3989,7 +4141,8 @@
    "Aker BP",
    "Pandion"
   ],
-  "id": "NO153"
+  "id": "NO153",
+  "category": "Operational"
  },
  {
   "date": "2026-04-15",
@@ -4012,7 +4165,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO154"
+  "id": "NO154",
+  "category": "Operational"
  },
  {
   "date": "2026-04-20",
@@ -4041,7 +4195,8 @@
    "OKEA",
    "Japex"
   ],
-  "id": "NO155"
+  "id": "NO155",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-04-22",
@@ -4068,7 +4223,8 @@
    "Petoro",
    "ConocoPhillips"
   ],
-  "id": "NO156"
+  "id": "NO156",
+  "category": "Operational"
  },
  {
   "date": "2026-05-05",
@@ -4091,7 +4247,8 @@
   "other_partners": [
    "ORLEN"
   ],
-  "id": "NO157"
+  "id": "NO157",
+  "category": "Operational"
  },
  {
   "date": "2026-05-05",
@@ -4120,7 +4277,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO158"
+  "id": "NO158",
+  "category": "Operational"
  },
  {
   "date": "2026-05-08",
@@ -4145,7 +4303,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO159"
+  "id": "NO159",
+  "category": "Operational"
  },
  {
   "date": "2026-05-11",
@@ -4172,7 +4331,8 @@
    "Harbour",
    "Shell"
   ],
-  "id": "NO160"
+  "id": "NO160",
+  "category": "Operational"
  },
  {
   "date": "2026-05-17",
@@ -4195,7 +4355,8 @@
   "other_partners": [
    "Lime"
   ],
-  "id": "NO161"
+  "id": "NO161",
+  "category": "Operational"
  },
  {
   "date": "2026-05-21",
@@ -4218,7 +4379,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO162"
+  "id": "NO162",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-05-27",
@@ -4248,7 +4410,8 @@
    "OKEA",
    "Pandion"
   ],
-  "id": "NO163"
+  "id": "NO163",
+  "category": "Operational"
  },
  {
   "date": "2026-05-28",
@@ -4268,7 +4431,8 @@
   "upcoming": "N",
   "net": "",
   "other_partners": [],
-  "id": "NO164"
+  "id": "NO164",
+  "category": "Operational"
  },
  {
   "date": "2026-05-29",
@@ -4292,7 +4456,8 @@
    "DNO",
    "Equinor"
   ],
-  "id": "NO165"
+  "id": "NO165",
+  "category": "Operational"
  },
  {
   "date": "2026-05-29",
@@ -4320,7 +4485,8 @@
    "ORLEN",
    "Vår Energi"
   ],
-  "id": "NO166"
+  "id": "NO166",
+  "category": "Operational"
  },
  {
   "date": "2026-06-15",
@@ -4347,7 +4513,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO167"
+  "id": "NO167",
+  "category": "Operational"
  },
  {
   "date": "2026-06-16",
@@ -4374,7 +4541,8 @@
    "Petoro",
    "Vår Energi"
   ],
-  "id": "NO168"
+  "id": "NO168",
+  "category": "Operational"
  },
  {
   "date": "2026-06-18",
@@ -4397,7 +4565,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO169"
+  "id": "NO169",
+  "category": "Operational"
  },
  {
   "date": "2026-06-18",
@@ -4420,7 +4589,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO170"
+  "id": "NO170",
+  "category": "Operational"
  },
  {
   "date": "2026-06-18",
@@ -4447,7 +4617,8 @@
    "DNO",
    "ORLEN"
   ],
-  "id": "NO171"
+  "id": "NO171",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-06-22",
@@ -4474,7 +4645,8 @@
    "Aker BP",
    "DNO"
   ],
-  "id": "NO172"
+  "id": "NO172",
+  "category": "Operational"
  },
  {
   "date": "2026-06-25",
@@ -4503,7 +4675,8 @@
    "Harbour",
    "Pandion"
   ],
-  "id": "NO173"
+  "id": "NO173",
+  "category": "Operational"
  },
  {
   "date": "2026-06-30",
@@ -4526,7 +4699,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO174"
+  "id": "NO174",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-06-30",
@@ -4550,7 +4724,8 @@
    "DNO",
    "INPEX Idemitsu"
   ],
-  "id": "NO175"
+  "id": "NO175",
+  "category": "Operational"
  },
  {
   "date": "2026-06-30",
@@ -4576,7 +4751,8 @@
    "OMV",
    "Repsol"
   ],
-  "id": "NO176"
+  "id": "NO176",
+  "category": "Operational"
  },
  {
   "date": "2026-06-30",
@@ -4599,7 +4775,8 @@
   "other_partners": [
    "Wellesley"
   ],
-  "id": "NO177"
+  "id": "NO177",
+  "category": "Operational"
  },
  {
   "date": "2026-06-30",
@@ -4623,7 +4800,8 @@
    "OKEA",
    "Wellesley"
   ],
-  "id": "NO178"
+  "id": "NO178",
+  "category": "Operational"
  },
  {
   "date": "2026-07-01",
@@ -4648,7 +4826,8 @@
    "Petoro",
    "DNO"
   ],
-  "id": "NO179"
+  "id": "NO179",
+  "category": "Operational"
  },
  {
   "date": "2026-07-01",
@@ -4671,7 +4850,8 @@
   "other_partners": [
    "DNO"
   ],
-  "id": "NO180"
+  "id": "NO180",
+  "category": "Operational"
  },
  {
   "date": "2026-07-15",
@@ -4696,7 +4876,8 @@
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO181"
+  "id": "NO181",
+  "category": "Operational"
  },
  {
   "date": "2026-07-21",
@@ -4716,7 +4897,8 @@
   "upcoming": "N",
   "net": "",
   "other_partners": [],
-  "id": "NO182"
+  "id": "NO182",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-07-23",
@@ -4741,7 +4923,8 @@
    "Vår Energi",
    "Petoro"
   ],
-  "id": "NO183"
+  "id": "NO183",
+  "category": "Operational"
  },
  {
   "date": "2026-08-01",
@@ -4770,7 +4953,8 @@
    "TotalEnergies",
    "ConocoPhillips"
   ],
-  "id": "NO184"
+  "id": "NO184",
+  "category": "Operational"
  },
  {
   "date": "2026-08-11",
@@ -4793,7 +4977,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO185"
+  "id": "NO185",
+  "category": "Operational"
  },
  {
   "date": "2026-08-13",
@@ -4823,7 +5008,8 @@
    "DNO",
    "Concedo"
   ],
-  "id": "NO186"
+  "id": "NO186",
+  "category": "Operational"
  },
  {
   "date": "2026-08-19",
@@ -4848,7 +5034,8 @@
    "ConocoPhillips",
    "INPEX Idemitsu"
   ],
-  "id": "NO187"
+  "id": "NO187",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-08-24",
@@ -4871,7 +5058,8 @@
   "other_partners": [
    "Aker BP"
   ],
-  "id": "NO188"
+  "id": "NO188",
+  "category": "Operational"
  },
  {
   "date": "2026-08-24",
@@ -4896,7 +5084,8 @@
    "Aker BP",
    "Vår Energi"
   ],
-  "id": "NO189"
+  "id": "NO189",
+  "category": "Operational"
  },
  {
   "date": "2026-08-26",
@@ -4925,7 +5114,8 @@
    "Japex",
    "Equinor"
   ],
-  "id": "NO190"
+  "id": "NO190",
+  "category": "Operational"
  },
  {
   "date": "2026-09-01",
@@ -4945,7 +5135,8 @@
   "upcoming": "N",
   "net": "",
   "other_partners": [],
-  "id": "NO191"
+  "id": "NO191",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-09-01",
@@ -4965,7 +5156,8 @@
   "upcoming": "N",
   "net": "",
   "other_partners": [],
-  "id": "NO192"
+  "id": "NO192",
+  "category": "Operational"
  },
  {
   "date": "2026-09-11",
@@ -4988,7 +5180,8 @@
   "other_partners": [
    "DNO"
   ],
-  "id": "NO193"
+  "id": "NO193",
+  "category": "Operational"
  },
  {
   "date": "2026-09-16",
@@ -5015,7 +5208,8 @@
    "INPEX Idemitsu",
    "Harbour"
   ],
-  "id": "NO194"
+  "id": "NO194",
+  "category": "Operational"
  },
  {
   "date": "2026-09-25",
@@ -5040,7 +5234,8 @@
    "Equinor",
    "DNO"
   ],
-  "id": "NO195"
+  "id": "NO195",
+  "category": "Operational"
  },
  {
   "date": "2026-09-30",
@@ -5064,7 +5259,8 @@
    "Aker BP",
    "Equinor"
   ],
-  "id": "NO196"
+  "id": "NO196",
+  "category": "Operational"
  },
  {
   "date": "2026-09-30",
@@ -5090,7 +5286,8 @@
    "Pandion",
    "Vår Energi"
   ],
-  "id": "NO197"
+  "id": "NO197",
+  "category": "Operational"
  },
  {
   "date": "2026-09-30",
@@ -5114,7 +5311,8 @@
    "DNO",
    "Vår Energi"
   ],
-  "id": "NO198"
+  "id": "NO198",
+  "category": "Operational"
  },
  {
   "date": "2026-09-30",
@@ -5138,7 +5336,8 @@
    "Japex",
    "OKEA"
   ],
-  "id": "NO199"
+  "id": "NO199",
+  "category": "Operational"
  },
  {
   "date": "2026-09-30",
@@ -5162,7 +5361,8 @@
    "Pandion",
    "Vår Energi"
   ],
-  "id": "NO200"
+  "id": "NO200",
+  "category": "Operational"
  },
  {
   "date": "2026-10-07",
@@ -5191,7 +5391,8 @@
    "Vår Energi",
    "Harbour"
   ],
-  "id": "NO201"
+  "id": "NO201",
+  "category": "Operational"
  },
  {
   "date": "2026-10-14",
@@ -5216,7 +5417,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO202"
+  "id": "NO202",
+  "category": "Operational"
  },
  {
   "date": "2026-10-14",
@@ -5239,7 +5441,8 @@
   "other_partners": [
    "Kistos"
   ],
-  "id": "NO203"
+  "id": "NO203",
+  "category": "Capital and deals"
  },
  {
   "date": "2026-10-19",
@@ -5262,7 +5465,8 @@
   "other_partners": [
    "Equinor"
   ],
-  "id": "NO204"
+  "id": "NO204",
+  "category": "Operational"
  },
  {
   "date": "2026-10-23",
@@ -5289,7 +5493,8 @@
    "Lime",
    "M Vest"
   ],
-  "id": "NO205"
+  "id": "NO205",
+  "category": "Operational"
  },
  {
   "date": "2026-10-28",
@@ -5309,7 +5514,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO206"
+  "id": "NO206",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5329,7 +5535,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO207"
+  "id": "NO207",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5349,7 +5556,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO208"
+  "id": "NO208",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5369,7 +5577,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO209"
+  "id": "NO209",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5389,7 +5598,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO210"
+  "id": "NO210",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5409,7 +5619,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO211"
+  "id": "NO211",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-29",
@@ -5429,7 +5640,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO212"
+  "id": "NO212",
+  "category": "Corporate"
  },
  {
   "date": "2026-10-31",
@@ -5454,7 +5666,8 @@
    "DNO",
    "Concedo"
   ],
-  "id": "NO213"
+  "id": "NO213",
+  "category": "Operational"
  },
  {
   "date": "2026-11-03",
@@ -5474,7 +5687,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO214"
+  "id": "NO214",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-05",
@@ -5494,7 +5708,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO215"
+  "id": "NO215",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-05",
@@ -5514,7 +5729,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO216"
+  "id": "NO216",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-05",
@@ -5534,7 +5750,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO217"
+  "id": "NO217",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-11",
@@ -5554,7 +5771,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO218"
+  "id": "NO218",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-12",
@@ -5574,7 +5792,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO219"
+  "id": "NO219",
+  "category": "Corporate"
  },
  {
   "date": "2026-11-12",
@@ -5594,7 +5813,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO220"
+  "id": "NO220",
+  "category": "Corporate"
  },
  {
   "date": "2026-12-01",
@@ -5619,7 +5839,8 @@
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO221"
+  "id": "NO221",
+  "category": "Operational"
  },
  {
   "date": "2026-12-01",
@@ -5646,7 +5867,8 @@
    "Harbour",
    "Shell"
   ],
-  "id": "NO222"
+  "id": "NO222",
+  "category": "Operational"
  },
  {
   "date": "2027-01-01",
@@ -5706,7 +5928,8 @@
    "TotalEnergies",
    "Wellesley"
   ],
-  "id": "NO223"
+  "id": "NO223",
+  "category": "Operational"
  },
  {
   "date": "2027-01-01",
@@ -5733,7 +5956,8 @@
    "Lime",
    "M Vest"
   ],
-  "id": "NO224"
+  "id": "NO224",
+  "category": "Operational"
  },
  {
   "date": "2027-01-01",
@@ -5758,7 +5982,8 @@
    "Japex",
    "INPEX Idemitsu"
   ],
-  "id": "NO225"
+  "id": "NO225",
+  "category": "Operational"
  },
  {
   "date": "2027-01-18",
@@ -5778,7 +6003,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO226"
+  "id": "NO226",
+  "category": "Corporate"
  },
  {
   "date": "2027-01-26",
@@ -5798,7 +6024,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO227"
+  "id": "NO227",
+  "category": "Corporate"
  },
  {
   "date": "2027-02-04",
@@ -5818,7 +6045,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO228"
+  "id": "NO228",
+  "category": "Corporate"
  },
  {
   "date": "2027-02-04",
@@ -5838,7 +6066,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO229"
+  "id": "NO229",
+  "category": "Corporate"
  },
  {
   "date": "2027-02-09",
@@ -5858,7 +6087,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO230"
+  "id": "NO230",
+  "category": "Corporate"
  },
  {
   "date": "2027-02-10",
@@ -5878,7 +6108,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO231"
+  "id": "NO231",
+  "category": "Corporate"
  },
  {
   "date": "2027-02-10",
@@ -5898,7 +6129,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO232"
+  "id": "NO232",
+  "category": "Corporate"
  },
  {
   "date": "2027-03-19",
@@ -5918,7 +6150,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO233"
+  "id": "NO233",
+  "category": "Corporate"
  },
  {
   "date": "2027-03-25",
@@ -5938,7 +6171,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO234"
+  "id": "NO234",
+  "category": "Corporate"
  },
  {
   "date": "2027-04-12",
@@ -5958,7 +6192,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO235"
+  "id": "NO235",
+  "category": "Corporate"
  },
  {
   "date": "2027-04-14",
@@ -5978,7 +6213,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO236"
+  "id": "NO236",
+  "category": "Corporate"
  },
  {
   "date": "2027-04-23",
@@ -5998,7 +6234,8 @@
   "upcoming": "Y",
   "net": "tight",
   "other_partners": [],
-  "id": "NO237"
+  "id": "NO237",
+  "category": "Corporate"
  },
  {
   "date": "2027-04-29",
@@ -6018,7 +6255,8 @@
   "upcoming": "Y",
   "net": "loose",
   "other_partners": [],
-  "id": "NO238"
+  "id": "NO238",
+  "category": "Corporate"
  },
  {
   "date": "2027-06-01",
@@ -6043,7 +6281,8 @@
    "ORLEN",
    "Equinor"
   ],
-  "id": "NO239"
+  "id": "NO239",
+  "category": "Operational"
  },
  {
   "date": "2027-06-01",
@@ -6068,7 +6307,8 @@
    "DNO",
    "Concedo"
   ],
-  "id": "NO240"
+  "id": "NO240",
+  "category": "Operational"
  },
  {
   "date": "2027-07-12",
@@ -6088,7 +6328,8 @@
   "upcoming": "Y",
   "net": "loose",
   "other_partners": [],
-  "id": "NO241"
+  "id": "NO241",
+  "category": "Corporate"
  },
  {
   "date": "2027-07-23",
@@ -6108,7 +6349,8 @@
   "upcoming": "Y",
   "net": "loose",
   "other_partners": [],
-  "id": "NO242"
+  "id": "NO242",
+  "category": "Corporate"
  },
  {
   "date": "2027-07-30",
@@ -6128,7 +6370,8 @@
   "upcoming": "Y",
   "net": "loose",
   "other_partners": [],
-  "id": "NO243"
+  "id": "NO243",
+  "category": "Corporate"
  },
  {
   "date": "2027-09-28",
@@ -6148,7 +6391,8 @@
   "upcoming": "Y",
   "net": "loose",
   "other_partners": [],
-  "id": "NO244"
+  "id": "NO244",
+  "category": "Corporate"
  },
  {
   "date": "2027-10-01",
@@ -6175,7 +6419,8 @@
    "Petoro",
    "TotalEnergies"
   ],
-  "id": "NO245"
+  "id": "NO245",
+  "category": "Operational"
  },
  {
   "date": "2027-10-01",
@@ -6202,6 +6447,7 @@
    "Petoro",
    "INPEX Idemitsu"
   ],
-  "id": "NO246"
+  "id": "NO246",
+  "category": "Operational"
  }
 ]

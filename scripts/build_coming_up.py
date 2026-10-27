@@ -86,6 +86,16 @@ def ticker_code(company):
     return ticker_symbol(company) or clean(company.get("short_name"))
 
 
+def screen_market(exchange):
+    text = clean(exchange).lower()
+    if text == "asx":
+        return "ASX"
+    venues = ("stockholm", "first north", "helsinki", "oslo børs", "oslo bors", "euronext growth oslo")
+    if any(venue in text for venue in venues):
+        return "Nordic"
+    return "London"
+
+
 def sector_of(type_value):
     """Oil and gas stays Oil and gas. Every other commodity, including Helium and Coal, is Mining."""
     text = clean(type_value)
@@ -129,26 +139,35 @@ def item_record(**fields):
     return record
 
 
+def clean_url(value):
+    if value is None:
+        return ""
+    return str(value).replace("\r", " ").replace("\n", " ").strip()
+
+
 def london_items(rows):
     items = []
     for row in rows:
-        if clean(row.get("exchange")) == "ASX":
+        market = screen_market(row.get("exchange"))
+        if market == "ASX":
             continue
         code = clean(row.get("code"))
         name = clean(row.get("name"))
+        prefix = "D" if market == "Nordic" else "L"
         for index, raw in enumerate(row.get("upcoming") or []):
             if not isinstance(raw, dict) or not raw.get("date"):
                 continue
             anchor, label, approx, suffix = place(raw.get("date"), raw.get("date_precision") or "exact")
             items.append(item_record(
-                id=f"L-{code}-{raw.get('date')}-{index}",
+                id=f"{prefix}-{code}-{raw.get('date')}-{index}",
                 anchor=anchor.isoformat(),
                 precision=raw.get("date_precision") or "exact",
                 date_label=label,
                 approx=approx,
                 suffix=suffix,
-                market="London",
+                market=market,
                 sector=sector_of(row.get("type")),
+                category=clean(raw.get("category")),
                 company_name=name,
                 company_code=code,
                 link_key=code,
@@ -156,7 +175,7 @@ def london_items(rows):
                 headline=clean(raw.get("headline")),
                 band=band_value(raw.get("net")),
                 material="Y" if raw.get("material_if_delivered") == "Y" else "N",
-                source_url=clean(raw.get("source_url")),
+                source_url=clean_url(raw.get("source_url")),
             ))
     return items
 
@@ -190,6 +209,7 @@ def norway_items(events, companies, screen):
             suffix=suffix,
             market="Norway",
             sector="Oil and gas",
+            category=clean(event.get("category")),
             company_name=name,
             company_code=code,
             link_key=code,
@@ -197,7 +217,7 @@ def norway_items(events, companies, screen):
             headline=clean(event.get("title")),
             band=band_value(event.get("net")),
             material="Y" if event.get("material") == "Y" else "N",
-            source_url=clean(event.get("source_url")),
+            source_url=clean_url(event.get("source_url")),
         ))
     return items
 
@@ -238,12 +258,16 @@ def ics_document(items, stamp):
         summary = f"{item['company_name']} ({item['company_code']}): {item['headline']}{item['suffix']}"
         band = {"tight": "Tight", "loose": "Loose"}.get(item["band"], "n/a")
         description = (
-            f"Market: {item['market']}. Sector: {item.get('sector') or 'Mining'}. Type: {item['type']}. "
+            f"Market: {item['market']}. Sector: {item.get('sector') or 'Mining'}. "
+            f"Category: {item.get('category') or 'n/a'}. Type: {item['type']}. "
             f"Company: {item['company_name']} ({item['company_code']}). "
             f"Material: {'Yes' if item['material'] == 'Y' else 'No'}. Band: {band}."
         )
-        if item["source_url"]:
+        if item["source_url"] and "&" not in item["source_url"]:
             description += f" Source: {item['source_url']}"
+        categories = ",".join(
+            escape_ics(part) for part in (item.get("market"), item.get("category")) if part
+        )
         props = [
             "BEGIN:VEVENT",
             f"SUMMARY:{escape_ics(summary)}",
@@ -251,7 +275,7 @@ def ics_document(items, stamp):
             f"DTEND;VALUE=DATE:{end.strftime('%Y%m%d')}",
             f"DTSTAMP:{stamp}",
             f"UID:{item['id']}@moonshot",
-            f"CATEGORIES:{escape_ics(item['market'])}",
+            f"CATEGORIES:{categories}",
             f"DESCRIPTION:{escape_ics(description)}",
         ]
         if item["source_url"]:
@@ -282,11 +306,22 @@ def main():
     )
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     (ROOT / "coming_up.ics").write_bytes(ics_document(forward, stamp))
-    text = json.dumps(payload)
-    if "&" in text or b"&" in (ROOT / "coming_up.ics").read_bytes():
+    visible = json.dumps([{key: value for key, value in item.items() if key != "source_url"} for item in forward])
+    ics_lines = []
+    skipping_url = False
+    for line in (ROOT / "coming_up.ics").read_bytes().decode("utf-8").split("\r\n"):
+        if line.startswith("URL:"):
+            skipping_url = True
+            continue
+        if skipping_url and line.startswith(" "):
+            continue
+        skipping_url = False
+        ics_lines.append(line)
+    if "&" in visible or "&" in "\n".join(ics_lines):
         raise SystemExit("ampersand leaked into coming up output")
     print(f"as_of {today.isoformat()}")
-    print(f"items {len(forward)} london {sum(1 for item in forward if item['market'] == 'London')} norway {sum(1 for item in forward if item['market'] == 'Norway')}")
+    counts = {name: sum(1 for item in forward if item["market"] == name) for name in ("London", "Norway", "Nordic")}
+    print(f"items {len(forward)} london {counts['London']} norway {counts['Norway']} nordic {counts['Nordic']}")
     for label, end in (
         ("30", today + timedelta(days=30)),
         ("90", today + timedelta(days=90)),

@@ -1092,9 +1092,11 @@ function renderCards(rows) {
 const SVG_NS = "http://www.w3.org/2000/svg";
 const LANE_CAP = 25;
 const LANE = 50;
-const PAD_TOP = 28;
-const PAD_BOT = 34;
 const DAY_MS = 86400000;
+const MARK_R = 4.25;
+const BIN_PX = 18;
+let popTimer = 0;
+let popPinned = false;
 
 function svgEl(tag, attrs) {
   const node = document.createElementNS(SVG_NS, tag);
@@ -1196,45 +1198,60 @@ function monthTicks(width, bounds) {
     const show = visibleDays >= 18;
     const year = monthDate.getUTCFullYear();
     const name = MONTHS[monthDate.getUTCMonth()];
-    const withYear = first || monthDate.getUTCMonth() === 0;
+    const opening = first;
+    const yearEdge = monthDate.getUTCMonth() === 0;
+    const align = opening && !show ? "start" : "middle";
     ticks.push({
       line: cursor >= bounds.start && cursor <= bounds.end ? xFor(cursor, width, bounds) : null,
-      labelX: xFor((visibleStart + visibleEnd) / 2, width, bounds),
-      show,
-      text: show && withYear ? `${name} ’${String(year).slice(2)}` : name,
+      labelX: align === "start" ? xFor(visibleStart, width, bounds) + 4 : xFor((visibleStart + visibleEnd) / 2, width, bounds),
+      show: show || yearEdge || opening,
+      yearEdge,
+      year,
+      align,
+      text: name,
     });
-    if (show) first = false;
+    if (show || opening) first = false;
   }
   return ticks;
 }
 
-function spreadDots(dots) {
-  const byLane = new Map();
-  dots.forEach((dot) => {
-    if (!byLane.has(dot.key)) byLane.set(dot.key, []);
-    byLane.get(dot.key).push(dot);
+function countWidth(count) {
+  return Math.max(18, String(count).length * 6.4 + 12);
+}
+
+function clusterLane(dots) {
+  const sorted = dots.slice().sort((a, b) => a.x - b.x || String(a.item.id).localeCompare(String(b.item.id)));
+  const groups = [];
+  sorted.forEach((dot) => {
+    const last = groups[groups.length - 1];
+    if (last && dot.x - last.xStart < BIN_PX) last.dots.push(dot);
+    else groups.push({ dots: [dot], xStart: dot.x });
   });
-  byLane.forEach((list) => {
-    list.sort((a, b) => a.x - b.x || String(a.item.id).localeCompare(String(b.item.id)));
-    let cluster = [];
-    const flush = () => {
-      const count = cluster.length;
-      if (count > 1) {
-        const sameX = Math.abs(cluster[0].x - cluster[count - 1].x) < 2;
-        cluster.forEach((dot, index) => {
-          const shift = (index - (count - 1) / 2) * 18;
-          if (sameX) dot.xOff = shift;
-          else dot.yOff = shift;
-        });
-      }
-      cluster = [];
-    };
-    list.forEach((dot) => {
-      if (cluster.length && dot.x - cluster[cluster.length - 1].x > 18) flush();
-      cluster.push(dot);
-    });
-    flush();
-  });
+  return groups;
+}
+
+function layoutGroup(group, y, width) {
+  const dots = group.dots;
+  const shownCount = dots.length <= 3 ? dots.length : 2;
+  const shown = dots.slice(0, shownCount);
+  const hidden = dots.slice(shownCount);
+  const gap = 11;
+  const centers = shown.map((_, index) => index * gap);
+  let countW = 0;
+  if (hidden.length) {
+    countW = countWidth(hidden.length);
+    const last = centers.length ? centers[centers.length - 1] : 0;
+    centers.push(last + MARK_R + countW / 2 + 3);
+  }
+  const span = centers.length ? centers[centers.length - 1] : 0;
+  const mid = dots.reduce((sum, dot) => sum + dot.x, 0) / dots.length;
+  const edge = 8 + (hidden.length ? countW / 2 : MARK_R);
+  let origin = mid - span / 2;
+  if (origin < edge) origin = edge;
+  if (origin + span > width - edge) origin = Math.max(edge, width - edge - span);
+  const placed = shown.map((dot, index) => ({ kind: "event", dot, x: origin + centers[index], y }));
+  if (hidden.length) placed.push({ kind: "count", hidden, x: origin + centers[centers.length - 1], y, width: countW });
+  return placed;
 }
 
 function markerColor(item) {
@@ -1243,9 +1260,71 @@ function markerColor(item) {
   return cssVar("--accent", "#4f7cff");
 }
 
-function drawDot(dot) {
+function hideCluster(force) {
+  if (popPinned && !force) return;
+  clearTimeout(popTimer);
+  popPinned = false;
+  const pop = document.getElementById("chartPopover");
+  if (!pop) return;
+  pop.hidden = true;
+  pop.replaceChildren();
+}
+
+function placeCluster(anchor) {
+  const pop = document.getElementById("chartPopover");
+  if (!pop || pop.hidden) return;
+  const rect = anchor.getBoundingClientRect();
+  const width = Math.min(320, window.innerWidth - 16);
+  let left = rect.left;
+  if (left + width > window.innerWidth - 8) left = window.innerWidth - width - 8;
+  pop.style.width = `${width}px`;
+  pop.style.left = `${Math.max(8, left)}px`;
+  pop.style.top = `${rect.bottom + 6}px`;
+  const box = pop.getBoundingClientRect();
+  if (box.bottom > window.innerHeight - 8) pop.style.top = `${Math.max(8, rect.top - box.height - 6)}px`;
+}
+
+function showCluster(anchor, dots, pin) {
+  clearTimeout(popTimer);
+  const pop = document.getElementById("chartPopover");
+  if (!pop) return;
+  if (pin) popPinned = true;
+  const noun = dots.length === 1 ? "event" : "events";
+  pop.hidden = false;
+  pop.replaceChildren(
+    el("p", { class: "eyebrow", text: `${dots.length} more ${noun}` }),
+    el("ul", { class: "cluster-list" }, dots.map((dot) => {
+      const item = dot.item;
+      return el("li", {}, [
+        el("button", {
+          type: "button",
+          class: item.setback ? "cluster-item is-setback" : "cluster-item",
+          onClick: (event) => {
+            event.stopPropagation();
+            hideCluster(true);
+            toggle(item.id, true);
+          },
+        }, [
+          el("span", { class: "cap-date", text: item.label || formatSort(item.sort, item.precision) }),
+          el("span", { class: "cluster-line", text: showText(item.headline) }),
+        ]),
+      ]);
+    })),
+  );
+  placeCluster(anchor);
+}
+
+function armHideCluster() {
+  clearTimeout(popTimer);
+  popTimer = setTimeout(() => hideCluster(false), 220);
+}
+
+function drawDot(placed) {
+  const dot = placed.dot;
   const item = dot.item;
   const color = markerColor(item);
+  const cx = placed.x;
+  const cy = placed.y;
   const group = svgEl("g", {
     class: state.open.has(item.id) ? "dot is-open" : "dot",
     tabindex: "0",
@@ -1253,10 +1332,8 @@ function drawDot(dot) {
     "data-id": item.id,
     "aria-label": `${item.label || formatSort(item.sort, item.precision)}. ${showText(dot.company.label || dot.company.name)}. ${showText(item.headline)}.`,
   });
-  const cx = dot.x + dot.xOff;
-  const cy = dot.y + dot.yOff;
-  group.append(svgEl("circle", { cx, cy, r: 14, fill: "transparent" }));
-  group.append(svgEl("circle", { class: "halo", cx, cy, r: 11 }));
+  group.append(svgEl("circle", { cx, cy, r: 8, fill: "transparent" }));
+  group.append(svgEl("circle", { class: "halo", cx, cy, r: 6.4 }));
   const gate = item.pilots.some((pilot) => pilot.gate === "Y");
   const exit = item.pilots.some((pilot) => pilot.exit === "Y");
   if (gate) {
@@ -1264,11 +1341,11 @@ function drawDot(dot) {
       class: "gate-ring",
       cx,
       cy,
-      r: 9.6,
+      r: 6.2,
       fill: "none",
       stroke: cssVar("--accent", "#4f7cff"),
-      "stroke-width": "1.15",
-      "stroke-opacity": "0.62",
+      "stroke-width": "1.1",
+      "stroke-opacity": "0.7",
     }));
   }
   const happened = !item.upcoming && item.sort <= todayIso();
@@ -1276,89 +1353,131 @@ function drawDot(dot) {
     class: "mark",
     fill: happened ? color : cssVar("--panel", "#111722"),
     stroke: color,
-    "stroke-width": 2,
+    "stroke-width": item.setback ? 2 : 1.6,
   };
   const mark = exit
-    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 7.2} ${cx + 7.2},${cy} ${cx},${cy + 7.2} ${cx - 7.2},${cy}` })
-    : svgEl("circle", { ...paint, cx, cy, r: 6.5 });
-  if (item.precision !== "day" && item.precision !== "exact") mark.setAttribute("stroke-dasharray", "2.2 1.8");
+    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
+    : svgEl("circle", { ...paint, cx, cy, r: MARK_R });
+  if (item.precision !== "day" && item.precision !== "exact") mark.setAttribute("stroke-dasharray", "1.6 1.3");
   group.append(mark);
   group.addEventListener("click", (event) => {
     event.stopPropagation();
+    hideCluster(true);
     toggle(item.id, true);
   });
   group.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
     event.preventDefault();
+    hideCluster(true);
     toggle(item.id, true);
   });
   return group;
 }
 
+function drawCount(placed) {
+  const hidden = placed.hidden;
+  const label = `+${hidden.length}`;
+  const w = placed.width;
+  const h = 14;
+  const open = hidden.some((dot) => state.open.has(dot.item.id));
+  const group = svgEl("g", {
+    class: open ? "dot count-dot is-open" : "dot count-dot",
+    tabindex: "0",
+    role: "button",
+    "data-ids": hidden.map((dot) => dot.item.id).join(" "),
+    "aria-label": `${hidden.length} more events. Opens the list.`,
+  });
+  group.append(svgEl("rect", {
+    class: "count-mark",
+    x: placed.x - w / 2,
+    y: placed.y - h / 2,
+    width: w,
+    height: h,
+    rx: 7,
+    stroke: cssVar("--border-strong", "#364157"),
+    "stroke-width": "1",
+  }));
+  const text = svgEl("text", {
+    class: "count-label",
+    x: placed.x,
+    y: placed.y + 0.5,
+    "text-anchor": "middle",
+    "dominant-baseline": "central",
+  });
+  text.textContent = label;
+  group.append(text);
+  group.addEventListener("mouseenter", () => showCluster(group, hidden, false));
+  group.addEventListener("mouseleave", armHideCluster);
+  group.addEventListener("focus", () => showCluster(group, hidden, false));
+  group.addEventListener("blur", armHideCluster);
+  group.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showCluster(group, hidden, true);
+  });
+  group.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideCluster(true);
+      return;
+    }
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    showCluster(group, hidden, true);
+    const first = document.querySelector("#chartPopover button");
+    if (first) first.focus();
+  });
+  return group;
+}
+
 function buildSvg(lanes, rows, width, bounds) {
-  const height = PAD_TOP + lanes.length * LANE + PAD_BOT;
+  const height = lanes.length * LANE;
   const root = svgEl("svg", { width, height, viewBox: `0 0 ${width} ${height}` });
+  const defs = svgEl("defs");
   const laneIndex = new Map(lanes.map((lane, index) => [lane.key, index]));
+  lanes.forEach((lane, index) => {
+    const clip = svgEl("clipPath", { id: `lane-clip-${index}` });
+    clip.append(svgEl("rect", { x: 0, y: index * LANE, width, height: LANE }));
+    defs.append(clip);
+  });
+  root.append(defs);
   lanes.forEach((lane, index) => {
     if (index % 2) {
       root.append(svgEl("rect", {
         x: 0,
-        y: PAD_TOP + index * LANE,
+        y: index * LANE,
         width,
         height: LANE,
         fill: cssVar("--zebra", "#151c28"),
       }));
     }
     if (index > 0) {
-      const y = PAD_TOP + index * LANE + 0.5;
+      const y = index * LANE + 0.5;
       root.append(svgEl("line", { x1: 0, x2: width, y1: y, y2: y, stroke: cssVar("--border", "#252d3c") }));
     }
   });
-  root.append(svgEl("line", { x1: 0, x2: width, y1: PAD_TOP + 0.5, y2: PAD_TOP + 0.5, stroke: cssVar("--border-strong", "#364157") }));
-  const base = PAD_TOP + lanes.length * LANE + 0.5;
-  root.append(svgEl("line", { x1: 0, x2: width, y1: base, y2: base, stroke: cssVar("--border-strong", "#364157") }));
   monthTicks(width, bounds).forEach((tick) => {
-    if (tick.line != null) {
-      root.append(svgEl("line", {
-        x1: tick.line,
-        x2: tick.line,
-        y1: PAD_TOP,
-        y2: PAD_TOP + lanes.length * LANE,
-        stroke: cssVar("--border", "#252d3c"),
-      }));
-    }
-    if (tick.show) {
-      const label = svgEl("text", { x: tick.labelX, y: PAD_TOP + lanes.length * LANE + 20, "text-anchor": "middle", class: "month-label" });
-      label.textContent = tick.text;
-      root.append(label);
-    }
+    if (tick.line == null) return;
+    root.append(svgEl("line", {
+      x1: tick.line,
+      x2: tick.line,
+      y1: 0,
+      y2: height,
+      stroke: tick.yearEdge ? cssVar("--border-strong", "#364157") : cssVar("--border", "#252d3c"),
+      "stroke-width": tick.yearEdge ? "1.25" : "1",
+    }));
   });
   const today = todayMs();
+  let todayX = null;
   if (today >= bounds.start && today <= bounds.end) {
-    const x = xFor(today, width, bounds);
+    todayX = xFor(today, width, bounds);
     root.append(svgEl("line", {
-      x1: x,
-      x2: x,
-      y1: PAD_TOP,
-      y2: PAD_TOP + lanes.length * LANE,
+      x1: todayX,
+      x2: todayX,
+      y1: 0,
+      y2: height,
       class: "today-line",
     }));
-    const tagW = 52;
-    const tagX = Math.max(4, Math.min(x - tagW / 2, width - tagW - 4));
-    root.append(svgEl("rect", {
-      x: tagX,
-      y: 5,
-      width: tagW,
-      height: 18,
-      rx: 9,
-      fill: cssVar("--panel", "#111722"),
-      stroke: cssVar("--border-strong", "#364157"),
-    }));
-    const todayText = svgEl("text", { x: tagX + tagW / 2, y: 17.5, "text-anchor": "middle", class: "today-label" });
-    todayText.textContent = "Today";
-    root.append(todayText);
   }
-  const dots = [];
+  const byLane = new Map();
   rows.forEach((item) => {
     const time = sortMs(item.sort);
     if (!Number.isFinite(time)) return;
@@ -1366,20 +1485,21 @@ function buildSvg(lanes, rows, width, bounds) {
       const key = companyKey(company);
       const index = laneIndex.get(key);
       if (index == null) return;
-      dots.push({
-        item,
-        company,
-        key,
-        x: xFor(time, width, bounds),
-        y: PAD_TOP + index * LANE + LANE / 2,
-        xOff: 0,
-        yOff: 0,
-      });
+      if (!byLane.has(key)) byLane.set(key, []);
+      byLane.get(key).push({ item, company, key, time, x: xFor(time, width, bounds) });
     });
   });
-  spreadDots(dots);
-  dots.forEach((dot) => root.append(drawDot(dot)));
-  return root;
+  lanes.forEach((lane, index) => {
+    const layer = svgEl("g", { "clip-path": `url(#lane-clip-${index})` });
+    const y = index * LANE + LANE / 2;
+    clusterLane(byLane.get(lane.key) || []).forEach((group) => {
+      layoutGroup(group, y, width).forEach((placed) => {
+        layer.append(placed.kind === "count" ? drawCount(placed) : drawDot(placed));
+      });
+    });
+    root.append(layer);
+  });
+  return { root, todayX };
 }
 
 function chartStampFor(rows) {
@@ -1422,11 +1542,108 @@ function renderChartDetail(rows) {
   ]));
 }
 
+function axisBox(node, origin) {
+  const box = node.getBoundingClientRect();
+  return { node, left: box.left - origin, right: box.right - origin, top: box.top, bottom: box.bottom };
+}
+
+function pinAxisLeft(node, left) {
+  node.style.left = `${Math.round(left)}px`;
+  node.style.transform = "none";
+}
+
+function axisOverlap(a, b, gap) {
+  return a.left < b.right + gap && a.right + gap > b.left;
+}
+
+function settleAxisLabels(monthNodes, yearNodes, pill, width) {
+  const track = monthNodes[0]?.parentElement || yearNodes[0]?.parentElement || pill?.parentElement;
+  if (!track) return;
+  const origin = track.getBoundingClientRect().left;
+  const gap = 6;
+  const kept = [];
+  monthNodes.forEach((node) => {
+    if (!node.isConnected) return;
+    let box = axisBox(node, origin);
+    const span = box.right - box.left;
+    if (box.left < 2) {
+      pinAxisLeft(node, 2);
+      box = axisBox(node, origin);
+    }
+    if (box.right > width - 2) {
+      pinAxisLeft(node, Math.max(2, width - 2 - span));
+      box = axisBox(node, origin);
+    }
+    const prev = kept[kept.length - 1];
+    if (prev && axisOverlap(prev, box, gap)) {
+      const prefer = node.dataset.yearEdge === "true" || node.dataset.last === "true";
+      if (prefer && prev.node.dataset.yearEdge !== "true") {
+        prev.node.remove();
+        kept.pop();
+        const earlier = kept[kept.length - 1];
+        if (earlier && axisOverlap(earlier, box, gap)) {
+          node.remove();
+          return;
+        }
+      } else {
+        node.remove();
+        return;
+      }
+    }
+    kept.push(box);
+  });
+  const years = [];
+  yearNodes.forEach((node) => {
+    if (!node.isConnected) return;
+    let box = axisBox(node, origin);
+    if (box.left < 2) {
+      pinAxisLeft(node, 2);
+      box = axisBox(node, origin);
+    }
+    const prev = years[years.length - 1];
+    if (prev && axisOverlap(prev, box, gap)) {
+      pinAxisLeft(node, prev.right + gap);
+      box = axisBox(node, origin);
+      if (box.right > width - 2) {
+        node.remove();
+        return;
+      }
+    }
+    years.push(box);
+  });
+  if (!pill) return;
+  let pillBox = axisBox(pill, origin);
+  years.forEach((year) => {
+    if (!year.node.isConnected) return;
+    const box = axisBox(year.node, origin);
+    if (!axisOverlap(pillBox, box, gap)) return;
+    const pillW = pillBox.right - pillBox.left;
+    const yearW = box.right - box.left;
+    const yearOnRight = box.left >= pillBox.left;
+    if (yearOnRight && pillBox.right + gap + yearW <= width - 2) {
+      pinAxisLeft(year.node, pillBox.right + gap);
+      return;
+    }
+    const pillLeft = box.left - gap - pillW;
+    if (pillLeft >= 2) {
+      pinAxisLeft(pill, pillLeft);
+      pillBox = axisBox(pill, origin);
+      return;
+    }
+    const pillRight = box.right + gap;
+    if (pillRight + pillW <= width - 2) {
+      pinAxisLeft(pill, pillRight);
+      pillBox = axisBox(pill, origin);
+    }
+  });
+}
+
 function renderChart(rows) {
   const scroll = document.getElementById("chartScroll");
   const empty = document.getElementById("chartEmpty");
   const meta = document.getElementById("chartMeta");
   const more = document.getElementById("chartMore");
+  hideCluster(true);
   if (!scroll || !empty || !meta || !more) return;
   if (!rows.length) {
     scroll.replaceChildren();
@@ -1467,46 +1684,99 @@ function renderChart(rows) {
   scroll.hidden = false;
   const bounds = chartBounds(rows);
   const narrow = window.matchMedia("(max-width: 820px)").matches;
-  const labels = el("div", { class: "label-col" }, [
-    el("div", { class: "axis-spacer" }, [
-      el("span", { class: "wide-only", text: "Company" }),
-      el("span", { class: "narrow-only", text: "Ticker" }),
-    ]),
-    ...lanes.map((lane, index) => el("div", {
+  const laneNodes = lanes.map((lane, index) => {
+    const full = lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name);
+    return el("div", {
       class: index % 2 ? "lane alt" : "lane",
-      title: lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name),
+      title: full,
     }, [
-      lane.code ? el("span", { class: "tick", text: showText(lane.code) }) : null,
+      lane.code ? el("span", { class: "tick", title: showText(lane.code), text: showText(lane.code) }) : null,
       lane.onScreen
         ? el("button", {
           type: "button",
           class: "name lane-link",
+          title: full,
           onClick: () => {
             if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(lane.code);
           },
           text: showText(lane.name),
         })
-        : el("span", { class: "name", text: showText(lane.name) }),
-    ])),
-    el("div", { class: "bottom-spacer" }),
-  ]);
+        : el("span", { class: "name", title: full, text: showText(lane.name) }),
+    ]);
+  });
+  const labels = el("div", { class: "label-col" }, laneNodes);
   const plot = el("div", { class: "plot-col" });
+  const canvas = el("div", { class: "plot-canvas" });
   const months = (bounds.end - bounds.start) / (30.437 * DAY_MS);
-  plot.style.minWidth = `${Math.round(Math.max(680, months * 48))}px`;
-  scroll.replaceChildren(el("div", { class: "chart-grid" }, [labels, plot]));
-  const width = Math.max(1, Math.round(plot.getBoundingClientRect().width));
-  plot.append(buildSvg(lanes, rows, width, bounds));
+  const minWidth = Math.round(Math.max(680, months * 48));
+  canvas.style.minWidth = `${minWidth}px`;
+  plot.append(canvas);
+  const track = el("div", { class: "chart-axis-track" });
+  const axis = el("div", { class: "chart-axis" }, [
+    el("div", { class: "chart-axis-gutter" }, [
+      el("span", { class: "wide-only", text: "Company" }),
+      el("span", { class: "narrow-only", text: "Ticker" }),
+    ]),
+    el("div", { class: "chart-axis-window" }, [track]),
+  ]);
+  scroll.replaceChildren(el("div", { class: "chart-frame" }, [
+    axis,
+    el("div", { class: "chart-grid" }, [labels, plot]),
+  ]));
+  const width = Math.max(minWidth, Math.round(plot.getBoundingClientRect().width));
+  canvas.style.width = `${width}px`;
+  const built = buildSvg(lanes, rows, width, bounds);
+  canvas.append(built.root);
+  track.style.width = `${width}px`;
+  const ticks = monthTicks(width, bounds).filter((tick) => tick.show);
+  const monthNodes = ticks.map((tick, index) => {
+    const alignStart = tick.align === "start";
+    return el("span", {
+      class: "chart-axis-label",
+      style: `left:${Math.round(tick.labelX)}px;transform:translateX(${alignStart ? "0" : "-50%"})`,
+      "data-year-edge": tick.yearEdge ? "true" : "false",
+      "data-last": index === ticks.length - 1 ? "true" : "false",
+      text: tick.text,
+    });
+  });
+  const seenYears = new Set();
+  const yearNodes = [];
+  ticks.forEach((tick) => {
+    if (seenYears.has(tick.year)) return;
+    seenYears.add(tick.year);
+    const anchor = tick.yearEdge && tick.line != null ? tick.line + 4 : tick.align === "start" ? tick.labelX : Math.max(4, (tick.line != null ? tick.line : tick.labelX) + 2);
+    yearNodes.push(el("span", {
+      class: "chart-axis-year",
+      style: `left:${Math.round(anchor)}px`,
+      text: String(tick.year),
+    }));
+  });
+  track.append(...monthNodes, ...yearNodes);
+  let pill = null;
+  if (built.todayX != null) {
+    const pillW = 52;
+    const pillLeft = Math.max(2, Math.min(built.todayX - pillW / 2, width - pillW - 2));
+    pill = el("span", {
+      class: "today-pill",
+      style: `left:${Math.round(pillLeft)}px;width:${pillW}px`,
+      text: "Today",
+    });
+    track.append(pill);
+  }
+  settleAxisLabels(monthNodes, yearNodes, pill, width);
+  const syncAxis = () => { track.style.transform = `translateX(${-plot.scrollLeft}px)`; };
+  plot.addEventListener("scroll", () => {
+    syncAxis();
+    hideCluster(true);
+  });
+  if (built.todayX != null && plot.scrollWidth > plot.clientWidth + 2) {
+    plot.scrollLeft = Math.max(0, built.todayX - plot.clientWidth * 0.42);
+  }
+  syncAxis();
   const rangeText = `${formatSort(new Date(bounds.start).toISOString().slice(0, 10), "day")} to ${formatSort(new Date(bounds.end).toISOString().slice(0, 10), "day")}`;
   scroll.setAttribute("aria-label", narrow
     ? `Company timeline from ${rangeText}. Scroll sideways for other months.`
     : `Company timeline from ${rangeText}.`);
-  const line = scroll.querySelector(".today-line");
-  if (line && scroll.scrollWidth > scroll.clientWidth + 2) {
-    const x = Number(line.getAttribute("x1"));
-    const labelW = scroll.querySelector(".label-col").getBoundingClientRect().width;
-    const visiblePlot = Math.max(1, scroll.clientWidth - labelW);
-    scroll.scrollLeft = Math.max(0, x - visiblePlot * 0.42);
-  }
 }
 
 function scheduleChart(rows) {
@@ -1518,7 +1788,10 @@ function scheduleChart(rows) {
   const stamp = chartStampFor(rows);
   if (stamp === chartStamp && !chartDirty && document.getElementById("chartScroll")?.childElementCount) {
     document.querySelectorAll("#chartScroll .dot").forEach((dot) => {
-      dot.classList.toggle("is-open", state.open.has(dot.getAttribute("data-id")));
+      const id = dot.getAttribute("data-id");
+      const ids = (dot.getAttribute("data-ids") || "").split(" ").filter(Boolean);
+      const open = id ? state.open.has(id) : ids.some((item) => state.open.has(item));
+      dot.classList.toggle("is-open", open);
     });
     return;
   }
@@ -1663,12 +1936,29 @@ function bindChrome() {
   const chartScroll = document.getElementById("chartScroll");
   if (chartScroll) {
     chartScroll.addEventListener("keydown", (event) => {
-      if (event.target !== chartScroll) return;
+      if (event.target !== chartScroll && !event.target.classList.contains("plot-col")) return;
       if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      const plot = chartScroll.querySelector(".plot-col");
+      if (!plot) return;
       event.preventDefault();
-      chartScroll.scrollLeft += event.key === "ArrowRight" ? 80 : -80;
+      plot.scrollLeft += event.key === "ArrowRight" ? 80 : -80;
     });
   }
+  const chartPopover = document.getElementById("chartPopover");
+  if (chartPopover) {
+    chartPopover.addEventListener("mouseenter", () => clearTimeout(popTimer));
+    chartPopover.addEventListener("mouseleave", armHideCluster);
+  }
+  document.addEventListener("click", (event) => {
+    const pop = document.getElementById("chartPopover");
+    if (!pop || pop.hidden) return;
+    if (pop.contains(event.target)) return;
+    if (event.target.closest && event.target.closest(".count-dot")) return;
+    hideCluster(true);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") hideCluster(true);
+  });
   new MutationObserver(() => {
     if (document.documentElement.dataset.view === "events" && chartDirty) scheduleChart(chartRows);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-view"] });

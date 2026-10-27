@@ -39,6 +39,8 @@ const state = {
   country: "all",
   background: false,
   watchOnly: false,
+  chartAll: false,
+  chartFocus: "",
   shown: PAGE,
   open: new Set(),
 };
@@ -49,6 +51,12 @@ let typeOptions = [];
 let sectorOptions = [];
 let countryOptions = [];
 let screenCodes = new Set();
+let linkCodes = new Set();
+let across = [];
+let chartRows = [];
+let chartTimer = 0;
+let chartDirty = false;
+let chartStamp = "";
 
 function el(tag, props, children) {
   const node = document.createElement(tag);
@@ -289,6 +297,19 @@ function pctLabel(raw) {
   return `${number < 0 ? "−" : ""}${text.replace(/^[+-]/, "")}%`;
 }
 
+function moveNumber(value) {
+  if (value == null || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function moveSet(event) {
+  if (!event) return null;
+  const moves = { r5: moveNumber(event.r5), r20: moveNumber(event.r20), r60: moveNumber(event.r60) };
+  if (moves.r5 == null && moves.r20 == null && moves.r60 == null) return null;
+  return moves;
+}
+
 function reactionText(event, market) {
   const values = [event.r5, event.r20, event.r60];
   const numeric = values.map((value) => (value == null || value === "" ? null : Number(value)));
@@ -366,15 +387,16 @@ function buildProfiles(screen, norwayCompanies, countryIndex) {
       if (!existing.code) existing.code = tickerFromListing(company.listing_ticker);
       return;
     }
+    const code = tickerFromListing(company.listing_ticker);
     profiles.push({
       name: company.name,
       label: company.short_name || company.name,
-      code: tickerFromListing(company.listing_ticker),
+      code,
       band: norwayBand(company),
       markets: ["Norway"],
       sector: "Oil and gas",
       countries: [],
-      onScreen: false,
+      onScreen: !!code,
     });
   });
   assignCountries(profiles, countryIndex);
@@ -400,6 +422,7 @@ function rowShell(id, when, companies, fields) {
     affects: [],
     pilots: [],
     reaction: fields.reaction || "",
+    moves: fields.moves || null,
     note: fields.note || "",
     slip: "",
     ...classify(fields.material, fields.setback, fields.upcoming),
@@ -446,6 +469,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
         material: !setback,
         setback,
         reaction: reactionText(event, profile.markets[0]),
+        moves: moveSet(event),
       }));
     });
   });
@@ -549,7 +573,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
       code: item.company_code || "",
       markets: item.market ? [item.market] : [],
       sector: item.sector || "",
-      onScreen: screenCodes.has(item.company_code),
+      onScreen: screenCodes.has(item.company_code) || linkCodes.has(item.company_code),
     };
     if (!profile.countries.length) {
       const found = countryIndex.get(profile.code);
@@ -684,6 +708,7 @@ function selectField(key, label, choices, current) {
   select.addEventListener("change", () => {
     state[key] = select.value;
     state.shown = PAGE;
+    state.chartAll = false;
     select.closest(".field").classList.toggle("active", select.value !== fieldDefault(key));
     writeUrl();
     render();
@@ -711,6 +736,7 @@ function mountFilters() {
   search.addEventListener("input", () => {
     state.q = search.value;
     state.shown = PAGE;
+    state.chartAll = false;
     search.closest(".field").classList.toggle("active", search.value.trim() !== "");
     writeUrl();
     render();
@@ -725,6 +751,7 @@ function mountFilters() {
     input.checked = state.types.includes(type);
     input.addEventListener("change", () => {
       state.types = [...menu.querySelectorAll("input:checked")].map((box) => box.value);
+      state.chartAll = false;
       summary.textContent = typeSummary();
       menu.closest(".field").classList.toggle("active", state.types.length > 0);
       state.shown = PAGE;
@@ -732,6 +759,16 @@ function mountFilters() {
       render();
     });
     menu.append(el("label", {}, [input, type]));
+  });
+  menu.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    const boxes = [...menu.querySelectorAll("input")];
+    const index = boxes.indexOf(document.activeElement);
+    if (!boxes.length) return;
+    event.preventDefault();
+    const shift = event.key === "ArrowDown" ? 1 : -1;
+    const next = boxes[(index + shift + boxes.length) % boxes.length];
+    next.focus();
   });
   const typeField = el("div", { class: state.types.length ? "field type active" : "field type" }, [
     "Event type",
@@ -745,6 +782,7 @@ function mountFilters() {
     "aria-pressed": state.background ? "true" : "false",
     onClick: (event) => {
       state.background = !state.background;
+      state.chartAll = false;
       event.currentTarget.setAttribute("aria-pressed", state.background ? "true" : "false");
       event.currentTarget.closest(".field").classList.toggle("active", state.background);
       state.shown = PAGE;
@@ -774,6 +812,7 @@ function mountFilters() {
         "aria-pressed": state.watchOnly ? "true" : "false",
         onClick: (event) => {
           state.watchOnly = !state.watchOnly;
+          state.chartAll = false;
           event.currentTarget.setAttribute("aria-pressed", state.watchOnly ? "true" : "false");
           event.currentTarget.closest(".field").classList.toggle("active", state.watchOnly);
           state.shown = PAGE;
@@ -797,6 +836,8 @@ function clearFilters() {
   state.country = "all";
   state.background = false;
   state.watchOnly = false;
+  state.chartAll = false;
+  state.chartFocus = "";
   state.shown = PAGE;
   state.open.clear();
   mountFilters();
@@ -809,7 +850,7 @@ function companyNode(company) {
     el("span", { class: "cap-name", text: showText(company.label || company.name) }),
     company.code ? el("span", { class: "co-ticker", text: showText(company.code) }) : null,
   ];
-  if (!company.onScreen || !company.code) return el("span", { class: "tl-plain" }, body);
+  if (!company.code || !(company.onScreen || linkCodes.has(company.code))) return el("span", { class: "tl-plain" }, body);
   return el("button", {
     type: "button",
     class: "co-link",
@@ -831,7 +872,7 @@ function tagNodes(item) {
 
 function sourceLink(url, label) {
   const href = safeUrl(url);
-  if (!href) return el("span", { text: "—" });
+  if (!href) return null;
   return el("a", {
     href,
     target: "_blank",
@@ -839,6 +880,24 @@ function sourceLink(url, label) {
     onClick: (event) => event.stopPropagation(),
     text: label || "Source",
   });
+}
+
+function sourceIcon(url) {
+  const href = safeUrl(url);
+  if (!href) return null;
+  const icon = svgEl("svg", { viewBox: "0 0 16 16", width: "16", height: "16", "aria-hidden": "true" });
+  icon.append(
+    svgEl("path", { d: "M3.2 6.2V12.8h6.6", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
+    svgEl("path", { d: "M8 3.2h4.8V8M12.8 3.2 7 9", fill: "none", stroke: "currentColor", "stroke-width": "1.4", "stroke-linecap": "round", "stroke-linejoin": "round" }),
+  );
+  return el("a", {
+    class: "source-icon",
+    href,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    "aria-label": "Source. Opens in a new tab.",
+    onClick: (event) => event.stopPropagation(),
+  }, [icon]);
 }
 
 function fact(key, value, extra) {
@@ -874,22 +933,90 @@ function pilotBlock(pilot) {
   return block;
 }
 
+function moveLabel(value) {
+  if (value == null) return "-";
+  const body = Math.abs(value).toFixed(1);
+  return value < 0 ? `−${body}` : body;
+}
+
+function partnerLines(item) {
+  const codes = item.companies.map((company) => company.code).filter(Boolean);
+  if (!codes.length || !across.length) return [];
+  return across.filter((entry) => {
+    const affected = entry.affected_codes || [];
+    const hit = codes.some((code) => affected.some((other) => codesMatch(code, other)));
+    if (!hit) return false;
+    return datesClose(item.sort, item.precision, entry.date);
+  });
+}
+
+function partnerBlock(entries) {
+  const shown = entries.slice(0, 6);
+  const list = el("ul", { class: "cap-events" }, shown.map((entry) => {
+    const code = String(entry.source_code || "").trim();
+    const parsed = parseDate(entry.date, "exact");
+    const name = code && linkCodes.has(code)
+      ? el("button", {
+        type: "button",
+        class: "co-link",
+        onClick: (event) => {
+          event.stopPropagation();
+          if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(code);
+        },
+        text: code,
+      })
+      : el("span", { class: "cap-code", text: showText(code) });
+    return el("li", { class: "cap-event" }, [
+      el("span", { class: "cap-date", text: parsed ? formatSort(parsed.sort, "day") : showText(entry.date) }),
+      name,
+      el("span", { text: showText(entry.headline) }),
+      entry.relation ? el("span", { class: "place-label", text: showText(entry.relation) }) : null,
+      entry.note ? el("span", { class: "cap-date", text: showText(entry.note) }) : null,
+    ]);
+  }));
+  return el("div", {}, [
+    el("p", { class: "eyebrow", text: "Related events from partners" }),
+    list,
+    entries.length > shown.length ? el("p", { class: "label-notes", text: `${entries.length - shown.length} more on this date.` }) : null,
+  ]);
+}
+
 function detailNode(item) {
   const parts = [];
-  if (item.reaction) parts.push(el("p", { class: "label-notes", text: `Reaction: ${item.reaction}` }));
+  if (item.moves) {
+    parts.push(el("p", { class: "eyebrow", text: "Historical context" }));
+    parts.push(el("p", { class: "moves", text: `r5 ${moveLabel(item.moves.r5)} · r20 ${moveLabel(item.moves.r20)} · r60 ${moveLabel(item.moves.r60)}` }));
+    parts.push(el("p", { class: "label-notes", text: "Share-price change after the event. Context only." }));
+  }
+  const source = sourceLink(item.sourceUrl, "Source");
+  if (source) parts.push(el("p", {}, [source]));
+  const partners = partnerLines(item);
+  if (partners.length) parts.push(partnerBlock(partners));
   item.pilots.forEach((pilot) => parts.push(pilotBlock(pilot)));
   if (item.note) parts.push(el("p", { class: "label-notes", text: showText(item.note) }));
-  return parts.length ? el("div", { class: "cap-expand" }, parts) : null;
+  if (!parts.length) parts.push(el("p", { class: "label-notes", text: "No source, share-price reaction, or partner event on file." }));
+  return el("div", { class: "cap-expand" }, parts);
 }
 
-function hasDetail(item) {
-  return !!(item.reaction || item.pilots.length || item.note);
+function visibleEventNode(id) {
+  const nodes = [...document.querySelectorAll(`[data-event-id="${CSS.escape(id)}"]`)];
+  return nodes.find((node) => node.getClientRects().length) || null;
 }
 
-function toggle(id) {
+function toggle(id, fromChart) {
   if (state.open.has(id)) state.open.delete(id);
   else state.open.add(id);
+  if (fromChart) state.chartFocus = state.open.has(id) ? id : "";
+  else if (state.chartFocus === id && !state.open.has(id)) state.chartFocus = "";
   render();
+  if (fromChart && state.open.has(id)) {
+    requestAnimationFrame(() => {
+      const row = visibleEventNode(id);
+      const detail = document.getElementById("chartDetail");
+      if (row) row.scrollIntoView({ block: "nearest" });
+      else if (detail && !detail.hidden) detail.scrollIntoView({ block: "nearest" });
+    });
+  }
 }
 
 function onRowKey(event, id) {
@@ -914,21 +1041,21 @@ function renderTable(rows) {
   const body = el("tbody");
   rows.forEach((item) => {
     const open = state.open.has(item.id);
-    const detail = hasDetail(item);
     const main = el("tr", {
       class: open ? "is-open" : "",
-      tabindex: detail ? "0" : null,
-      role: detail ? "button" : null,
-      "aria-expanded": detail ? (open ? "true" : "false") : null,
-      onClick: detail ? () => toggle(item.id) : null,
-      onKeydown: detail ? (event) => onRowKey(event, item.id) : null,
+      tabindex: "0",
+      role: "button",
+      "data-event-id": item.id,
+      "aria-expanded": open ? "true" : "false",
+      onClick: () => toggle(item.id),
+      onKeydown: (event) => onRowKey(event, item.id),
     });
     main.append(
       el("td", { class: "date" }, [dateNode(item)]),
       el("td", {}, [el("span", { class: "tl-cos" }, item.companies.map(companyNode))]),
       el("td", {}, [el("span", { class: "tl-tags" }, [item.type ? showText(item.type) : "—", item.category ? el("span", { class: "cat-tag", text: showText(item.category) }) : null])]),
       el("td", {}, [el("span", { class: "tl-headline" }, [el("span", { text: showText(item.headline) }), el("span", { class: "tl-tags" }, tagNodes(item).slice(1))])]),
-      el("td", {}, [sourceLink(item.sourceUrl)]),
+      el("td", {}, [sourceIcon(item.sourceUrl)]),
     );
     body.append(main);
     if (open) {
@@ -943,23 +1070,462 @@ function renderTable(rows) {
 function renderCards(rows) {
   return rows.map((item) => {
     const open = state.open.has(item.id);
-    const detail = hasDetail(item);
     return el("article", {
       class: open ? "card is-selected" : "card",
-      tabindex: detail ? "0" : null,
-      role: detail ? "button" : null,
-      "aria-expanded": detail ? (open ? "true" : "false") : null,
-      onClick: detail ? () => toggle(item.id) : null,
-      onKeydown: detail ? (event) => onRowKey(event, item.id) : null,
+      tabindex: "0",
+      role: "button",
+      "data-event-id": item.id,
+      "aria-expanded": open ? "true" : "false",
+      onClick: () => toggle(item.id),
+      onKeydown: (event) => onRowKey(event, item.id),
     }, [
       el("div", { class: "card-top" }, [el("time", { text: item.label || formatSort(item.sort, item.precision) }), item.type ? el("span", { text: showText(item.type) }) : null]),
       el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
       el("p", { class: "card-what", text: showText(item.headline) }),
       el("div", { class: "tl-tags" }, tagNodes(item)),
-      el("div", { class: "card-meta" }, [sourceLink(item.sourceUrl)]),
+      el("div", { class: "card-meta" }, [sourceIcon(item.sourceUrl)]),
       open ? detailNode(item) : null,
     ]);
   });
+}
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+const LANE_CAP = 25;
+const LANE = 50;
+const PAD_TOP = 28;
+const PAD_BOT = 34;
+const DAY_MS = 86400000;
+
+function svgEl(tag, attrs) {
+  const node = document.createElementNS(SVG_NS, tag);
+  if (attrs) {
+    for (const [key, value] of Object.entries(attrs)) {
+      if (value == null) continue;
+      node.setAttribute(key, String(value));
+    }
+  }
+  return node;
+}
+
+function cssVar(name, fallback) {
+  const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return value || fallback;
+}
+
+function sortMs(sort) {
+  const match = String(sort || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return NaN;
+  return Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+}
+
+function todayMs() {
+  const now = new Date();
+  return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+function companyKey(company) {
+  return company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+}
+
+function chartBounds(rows) {
+  const today = todayMs();
+  const pad = 5 * DAY_MS;
+  const times = rows.map((item) => sortMs(item.sort)).filter((time) => Number.isFinite(time));
+  if (state.range === "upcoming") {
+    const last = times.reduce((max, time) => Math.max(max, time), today + 30 * DAY_MS);
+    return { start: today - pad, end: last + pad };
+  }
+  if (state.range === "30") return { start: sortMs(shiftDays(todayIso(), -30)) - pad, end: today + pad };
+  if (state.range === "90") return { start: sortMs(shiftDays(todayIso(), -90)) - pad, end: today + pad };
+  if (state.range === "12m") return { start: sortMs(shiftMonths(todayIso(), -12)) - pad, end: today + pad };
+  let start = today;
+  let end = today;
+  times.forEach((time) => {
+    if (time < start) start = time;
+    if (time > end) end = time;
+  });
+  if (end - start < 30 * DAY_MS) {
+    start -= 15 * DAY_MS;
+    end += 15 * DAY_MS;
+  }
+  return { start: start - pad, end: end + pad };
+}
+
+function buildLanes(rows) {
+  const map = new Map();
+  rows.forEach((item) => {
+    item.companies.forEach((company) => {
+      if (state.watchOnly) {
+        if (!company.code || !window.moonshotWatch || !window.moonshotWatch.has(company.code)) return;
+      }
+      const key = companyKey(company);
+      let lane = map.get(key);
+      if (!lane) {
+        lane = {
+          key,
+          code: company.code || "",
+          name: company.label || company.name || company.code || "Company",
+          onScreen: !!(company.code && (company.onScreen || linkCodes.has(company.code))),
+          count: 0,
+        };
+        map.set(key, lane);
+      }
+      lane.count += 1;
+    });
+  });
+  return [...map.values()].sort((a, b) => b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" }));
+}
+
+function xFor(time, width, bounds) {
+  const pad = 16;
+  const span = Math.max(width - pad * 2, 1);
+  const ratio = (time - bounds.start) / Math.max(bounds.end - bounds.start, 1);
+  return pad + Math.min(1, Math.max(0, ratio)) * span;
+}
+
+function monthTicks(width, bounds) {
+  const ticks = [];
+  let first = true;
+  const origin = new Date(bounds.start);
+  for (let cursor = Date.UTC(origin.getUTCFullYear(), origin.getUTCMonth(), 1); cursor <= bounds.end; cursor = Date.UTC(new Date(cursor).getUTCFullYear(), new Date(cursor).getUTCMonth() + 1, 1)) {
+    const monthDate = new Date(cursor);
+    const next = Date.UTC(monthDate.getUTCFullYear(), monthDate.getUTCMonth() + 1, 1);
+    const visibleStart = Math.max(cursor, bounds.start);
+    const visibleEnd = Math.min(next, bounds.end);
+    const visibleDays = (visibleEnd - visibleStart) / DAY_MS;
+    const show = visibleDays >= 18;
+    const year = monthDate.getUTCFullYear();
+    const name = MONTHS[monthDate.getUTCMonth()];
+    const withYear = first || monthDate.getUTCMonth() === 0;
+    ticks.push({
+      line: cursor >= bounds.start && cursor <= bounds.end ? xFor(cursor, width, bounds) : null,
+      labelX: xFor((visibleStart + visibleEnd) / 2, width, bounds),
+      show,
+      text: show && withYear ? `${name} ’${String(year).slice(2)}` : name,
+    });
+    if (show) first = false;
+  }
+  return ticks;
+}
+
+function spreadDots(dots) {
+  const byLane = new Map();
+  dots.forEach((dot) => {
+    if (!byLane.has(dot.key)) byLane.set(dot.key, []);
+    byLane.get(dot.key).push(dot);
+  });
+  byLane.forEach((list) => {
+    list.sort((a, b) => a.x - b.x || String(a.item.id).localeCompare(String(b.item.id)));
+    let cluster = [];
+    const flush = () => {
+      const count = cluster.length;
+      if (count > 1) {
+        const sameX = Math.abs(cluster[0].x - cluster[count - 1].x) < 2;
+        cluster.forEach((dot, index) => {
+          const shift = (index - (count - 1) / 2) * 18;
+          if (sameX) dot.xOff = shift;
+          else dot.yOff = shift;
+        });
+      }
+      cluster = [];
+    };
+    list.forEach((dot) => {
+      if (cluster.length && dot.x - cluster[cluster.length - 1].x > 18) flush();
+      cluster.push(dot);
+    });
+    flush();
+  });
+}
+
+function markerColor(item) {
+  if (item.setback) return cssVar("--amber", "#f0b429");
+  if (item.background) return cssVar("--muted", "#8b97a8");
+  return cssVar("--accent", "#4f7cff");
+}
+
+function drawDot(dot) {
+  const item = dot.item;
+  const color = markerColor(item);
+  const group = svgEl("g", {
+    class: state.open.has(item.id) ? "dot is-open" : "dot",
+    tabindex: "0",
+    role: "button",
+    "data-id": item.id,
+    "aria-label": `${item.label || formatSort(item.sort, item.precision)}. ${showText(dot.company.label || dot.company.name)}. ${showText(item.headline)}.`,
+  });
+  const cx = dot.x + dot.xOff;
+  const cy = dot.y + dot.yOff;
+  group.append(svgEl("circle", { cx, cy, r: 14, fill: "transparent" }));
+  group.append(svgEl("circle", { class: "halo", cx, cy, r: 11 }));
+  const gate = item.pilots.some((pilot) => pilot.gate === "Y");
+  const exit = item.pilots.some((pilot) => pilot.exit === "Y");
+  if (gate) {
+    group.append(svgEl("circle", {
+      class: "gate-ring",
+      cx,
+      cy,
+      r: 9.6,
+      fill: "none",
+      stroke: cssVar("--accent", "#4f7cff"),
+      "stroke-width": "1.15",
+      "stroke-opacity": "0.62",
+    }));
+  }
+  const happened = !item.upcoming && item.sort <= todayIso();
+  const paint = {
+    class: "mark",
+    fill: happened ? color : cssVar("--panel", "#111722"),
+    stroke: color,
+    "stroke-width": 2,
+  };
+  const mark = exit
+    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 7.2} ${cx + 7.2},${cy} ${cx},${cy + 7.2} ${cx - 7.2},${cy}` })
+    : svgEl("circle", { ...paint, cx, cy, r: 6.5 });
+  if (item.precision !== "day" && item.precision !== "exact") mark.setAttribute("stroke-dasharray", "2.2 1.8");
+  group.append(mark);
+  group.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggle(item.id, true);
+  });
+  group.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    toggle(item.id, true);
+  });
+  return group;
+}
+
+function buildSvg(lanes, rows, width, bounds) {
+  const height = PAD_TOP + lanes.length * LANE + PAD_BOT;
+  const root = svgEl("svg", { width, height, viewBox: `0 0 ${width} ${height}` });
+  const laneIndex = new Map(lanes.map((lane, index) => [lane.key, index]));
+  lanes.forEach((lane, index) => {
+    if (index % 2) {
+      root.append(svgEl("rect", {
+        x: 0,
+        y: PAD_TOP + index * LANE,
+        width,
+        height: LANE,
+        fill: cssVar("--zebra", "#151c28"),
+      }));
+    }
+    if (index > 0) {
+      const y = PAD_TOP + index * LANE + 0.5;
+      root.append(svgEl("line", { x1: 0, x2: width, y1: y, y2: y, stroke: cssVar("--border", "#252d3c") }));
+    }
+  });
+  root.append(svgEl("line", { x1: 0, x2: width, y1: PAD_TOP + 0.5, y2: PAD_TOP + 0.5, stroke: cssVar("--border-strong", "#364157") }));
+  const base = PAD_TOP + lanes.length * LANE + 0.5;
+  root.append(svgEl("line", { x1: 0, x2: width, y1: base, y2: base, stroke: cssVar("--border-strong", "#364157") }));
+  monthTicks(width, bounds).forEach((tick) => {
+    if (tick.line != null) {
+      root.append(svgEl("line", {
+        x1: tick.line,
+        x2: tick.line,
+        y1: PAD_TOP,
+        y2: PAD_TOP + lanes.length * LANE,
+        stroke: cssVar("--border", "#252d3c"),
+      }));
+    }
+    if (tick.show) {
+      const label = svgEl("text", { x: tick.labelX, y: PAD_TOP + lanes.length * LANE + 20, "text-anchor": "middle", class: "month-label" });
+      label.textContent = tick.text;
+      root.append(label);
+    }
+  });
+  const today = todayMs();
+  if (today >= bounds.start && today <= bounds.end) {
+    const x = xFor(today, width, bounds);
+    root.append(svgEl("line", {
+      x1: x,
+      x2: x,
+      y1: PAD_TOP,
+      y2: PAD_TOP + lanes.length * LANE,
+      class: "today-line",
+    }));
+    const tagW = 52;
+    const tagX = Math.max(4, Math.min(x - tagW / 2, width - tagW - 4));
+    root.append(svgEl("rect", {
+      x: tagX,
+      y: 5,
+      width: tagW,
+      height: 18,
+      rx: 9,
+      fill: cssVar("--panel", "#111722"),
+      stroke: cssVar("--border-strong", "#364157"),
+    }));
+    const todayText = svgEl("text", { x: tagX + tagW / 2, y: 17.5, "text-anchor": "middle", class: "today-label" });
+    todayText.textContent = "Today";
+    root.append(todayText);
+  }
+  const dots = [];
+  rows.forEach((item) => {
+    const time = sortMs(item.sort);
+    if (!Number.isFinite(time)) return;
+    item.companies.forEach((company) => {
+      const key = companyKey(company);
+      const index = laneIndex.get(key);
+      if (index == null) return;
+      dots.push({
+        item,
+        company,
+        key,
+        x: xFor(time, width, bounds),
+        y: PAD_TOP + index * LANE + LANE / 2,
+        xOff: 0,
+        yOff: 0,
+      });
+    });
+  });
+  spreadDots(dots);
+  dots.forEach((dot) => root.append(drawDot(dot)));
+  return root;
+}
+
+function chartStampFor(rows) {
+  return JSON.stringify({
+    range: state.range,
+    tier: state.tier,
+    band: state.band,
+    types: state.types,
+    sector: state.sector,
+    market: state.market,
+    category: state.category,
+    country: state.country,
+    background: state.background,
+    watchOnly: state.watchOnly,
+    q: state.q,
+    chartAll: state.chartAll,
+    n: rows.length,
+    a: rows[0] && rows[0].id,
+    b: rows.length ? rows[rows.length - 1].id : "",
+  });
+}
+
+function renderChartDetail(rows) {
+  const slot = document.getElementById("chartDetail");
+  if (!slot) return;
+  const item = state.chartFocus ? rows.find((row) => row.id === state.chartFocus) : null;
+  const index = item ? rows.indexOf(item) : -1;
+  const onPage = index >= 0 && index < state.shown;
+  if (!item || !state.open.has(item.id) || onPage) {
+    slot.hidden = true;
+    slot.replaceChildren();
+    return;
+  }
+  slot.hidden = false;
+  slot.replaceChildren(el("div", {}, [
+    el("p", { class: "cap-date", text: item.label || formatSort(item.sort, item.precision) }),
+    el("div", { class: "tl-cos" }, item.companies.map(companyNode)),
+    el("p", { class: "card-what", text: showText(item.headline) }),
+    detailNode(item),
+  ]));
+}
+
+function renderChart(rows) {
+  const scroll = document.getElementById("chartScroll");
+  const empty = document.getElementById("chartEmpty");
+  const meta = document.getElementById("chartMeta");
+  const more = document.getElementById("chartMore");
+  if (!scroll || !empty || !meta || !more) return;
+  if (!rows.length) {
+    scroll.replaceChildren();
+    scroll.hidden = true;
+    empty.hidden = false;
+    empty.replaceChildren(
+      el("strong", { text: "No events in this view" }),
+      el("p", { text: "The chart uses the same filters as the list." }),
+    );
+    meta.textContent = "No events";
+    more.hidden = true;
+    return;
+  }
+  const allLanes = buildLanes(rows);
+  const capped = !state.watchOnly && !state.chartAll && allLanes.length > LANE_CAP;
+  const lanes = capped ? allLanes.slice(0, LANE_CAP) : allLanes;
+  const companyNoun = allLanes.length === 1 ? "company" : "companies";
+  const eventNoun = rows.length === 1 ? "event" : "events";
+  const companyText = lanes.length === allLanes.length ? `${allLanes.length} ${companyNoun}` : `${lanes.length} of ${allLanes.length} ${companyNoun}`;
+  meta.textContent = `${companyText} · ${rows.length.toLocaleString("en-GB")} ${eventNoun}`;
+  if (!state.watchOnly && allLanes.length > LANE_CAP) {
+    more.hidden = false;
+    more.textContent = state.chartAll ? "Show the top 25" : `Show all ${allLanes.length} companies`;
+  } else {
+    more.hidden = true;
+  }
+  if (!lanes.length) {
+    scroll.replaceChildren();
+    scroll.hidden = true;
+    empty.hidden = false;
+    empty.replaceChildren(
+      el("strong", { text: "No companies in this view" }),
+      el("p", { text: "The chart uses the same filters as the list." }),
+    );
+    return;
+  }
+  empty.hidden = true;
+  scroll.hidden = false;
+  const bounds = chartBounds(rows);
+  const narrow = window.matchMedia("(max-width: 820px)").matches;
+  const labels = el("div", { class: "label-col" }, [
+    el("div", { class: "axis-spacer" }, [
+      el("span", { class: "wide-only", text: "Company" }),
+      el("span", { class: "narrow-only", text: "Ticker" }),
+    ]),
+    ...lanes.map((lane, index) => el("div", {
+      class: index % 2 ? "lane alt" : "lane",
+      title: lane.code ? `${showText(lane.name)} (${showText(lane.code)})` : showText(lane.name),
+    }, [
+      lane.code ? el("span", { class: "tick", text: showText(lane.code) }) : null,
+      lane.onScreen
+        ? el("button", {
+          type: "button",
+          class: "name lane-link",
+          onClick: () => {
+            if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(lane.code);
+          },
+          text: showText(lane.name),
+        })
+        : el("span", { class: "name", text: showText(lane.name) }),
+    ])),
+    el("div", { class: "bottom-spacer" }),
+  ]);
+  const plot = el("div", { class: "plot-col" });
+  const months = (bounds.end - bounds.start) / (30.437 * DAY_MS);
+  plot.style.minWidth = `${Math.round(Math.max(680, months * 48))}px`;
+  scroll.replaceChildren(el("div", { class: "chart-grid" }, [labels, plot]));
+  const width = Math.max(1, Math.round(plot.getBoundingClientRect().width));
+  plot.append(buildSvg(lanes, rows, width, bounds));
+  const rangeText = `${formatSort(new Date(bounds.start).toISOString().slice(0, 10), "day")} to ${formatSort(new Date(bounds.end).toISOString().slice(0, 10), "day")}`;
+  scroll.setAttribute("aria-label", narrow
+    ? `Company timeline from ${rangeText}. Scroll sideways for other months.`
+    : `Company timeline from ${rangeText}.`);
+  const line = scroll.querySelector(".today-line");
+  if (line && scroll.scrollWidth > scroll.clientWidth + 2) {
+    const x = Number(line.getAttribute("x1"));
+    const labelW = scroll.querySelector(".label-col").getBoundingClientRect().width;
+    const visiblePlot = Math.max(1, scroll.clientWidth - labelW);
+    scroll.scrollLeft = Math.max(0, x - visiblePlot * 0.42);
+  }
+}
+
+function scheduleChart(rows) {
+  chartRows = rows;
+  if (document.documentElement.dataset.view !== "events") {
+    chartDirty = true;
+    return;
+  }
+  const stamp = chartStampFor(rows);
+  if (stamp === chartStamp && !chartDirty && document.getElementById("chartScroll")?.childElementCount) {
+    document.querySelectorAll("#chartScroll .dot").forEach((dot) => {
+      dot.classList.toggle("is-open", state.open.has(dot.getAttribute("data-id")));
+    });
+    return;
+  }
+  chartDirty = false;
+  chartStamp = stamp;
+  cancelAnimationFrame(chartTimer);
+  chartTimer = requestAnimationFrame(() => renderChart(rows));
 }
 
 function subtitle() {
@@ -994,12 +1560,16 @@ function render() {
     document.getElementById("tableWrap").replaceChildren();
     document.getElementById("cards").replaceChildren();
     more.hidden = true;
+    renderChartDetail(rows);
+    scheduleChart(rows);
     return;
   }
   empty.hidden = true;
   document.getElementById("tableWrap").replaceChildren(renderTable(visible));
   document.getElementById("cards").replaceChildren(...renderCards(visible));
   more.hidden = visible.length >= rows.length;
+  renderChartDetail(rows);
+  scheduleChart(rows);
 }
 
 function showError() {
@@ -1034,6 +1604,12 @@ async function main() {
       loadJson("data/coming_up.json"),
     ]);
     screenCodes = new Set(screen.map((row) => row.code).filter(Boolean));
+    linkCodes = new Set(screenCodes);
+    norwayCompanies.forEach((company) => {
+      const code = tickerFromListing(company.listing_ticker);
+      if (code) linkCodes.add(code);
+    });
+    across = Array.isArray(readAcross) ? readAcross : [];
     const built = buildTimeline(
       screen,
       norwayEvents,
@@ -1076,6 +1652,26 @@ function bindChrome() {
   paintThemeButton();
   const showMore = document.getElementById("showMore");
   if (showMore) showMore.addEventListener("click", () => { state.shown += PAGE; render(); });
+  const chartMore = document.getElementById("chartMore");
+  if (chartMore) {
+    chartMore.addEventListener("click", () => {
+      state.chartAll = !state.chartAll;
+      chartStamp = "";
+      scheduleChart(chartRows);
+    });
+  }
+  const chartScroll = document.getElementById("chartScroll");
+  if (chartScroll) {
+    chartScroll.addEventListener("keydown", (event) => {
+      if (event.target !== chartScroll) return;
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      event.preventDefault();
+      chartScroll.scrollLeft += event.key === "ArrowRight" ? 80 : -80;
+    });
+  }
+  new MutationObserver(() => {
+    if (document.documentElement.dataset.view === "events" && chartDirty) scheduleChart(chartRows);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-view"] });
   const clear = document.getElementById("clearFilters");
   if (clear) clear.addEventListener("click", clearFilters);
   const themeButton = document.getElementById("themeButton");

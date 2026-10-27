@@ -64,7 +64,7 @@
         <details>
           <summary>How to read the timeline</summary>
           <div class="howto-body">
-            <p>Pilot events, screen events, and the Norwegian shelf, newest first. The page opens on the last 12 months, with material events and setbacks. Background shelf items stay behind Show background. Upcoming switches to the coming up list, soonest first.</p>
+            <p>Pilot events, screen events, and the Norwegian shelf, newest first. The page opens on the last 12 months, with material events and setbacks. Background shelf items stay behind Show background. Upcoming switches to the coming up list, soonest first. The chart above the list uses the same filters. It shows up to 25 companies, the ones with the most events in the view. Watchlist shows every pinned name. A Today line marks the current day.</p>
             <dl>
               <dt>Material</dt>
               <dd>Large enough to matter for the company.</dd>
@@ -78,6 +78,12 @@
               <dd>On Upcoming, a guided date with no announcement. The original guidance is in the tooltip.</dd>
               <dt>Pilot detail</dt>
               <dd>Open a pilot row for the risk removed, the stage reached, and the other register labels.</dd>
+              <dt>Chart</dt>
+              <dd>One lane per company. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. The chart scrolls sideways inside its own box.</dd>
+              <dt>Historical context</dt>
+              <dd>r5, r20, and r60 are the share-price change after the event. They are context, not a signal.</dd>
+              <dt>Source</dt>
+              <dd>A link icon opens the filing or release. The cell stays empty when none is on file.</dd>
             </dl>
           </div>
         </details>
@@ -93,6 +99,15 @@
         <div class="event-meta">
           <p class="showing" id="showing" aria-live="polite"></p>
           <button type="button" class="clear-link" id="clearFilters" hidden>Clear filters</button>
+        </div>
+        <div class="chart-block" id="chartBlock">
+          <div class="chart-head">
+            <p class="panel-meta" id="chartMeta"></p>
+            <button type="button" class="show-more" id="chartMore" hidden>Show all companies</button>
+          </div>
+          <div class="chart-scroll" id="chartScroll" tabindex="0" role="region" aria-label="Company timeline"></div>
+          <div class="empty" id="chartEmpty" hidden></div>
+          <div class="chart-detail" id="chartDetail" hidden></div>
         </div>
         <div class="empty" id="tableEmpty" hidden></div>
         <div class="table-wrap wide-only cap-scroll" id="tableWrap"></div>

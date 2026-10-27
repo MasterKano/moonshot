@@ -1,4 +1,4 @@
-const state = { horizon: "30", market: "all", materialOnly: false };
+const state = { horizon: "30", market: "all", sector: "all", materialOnly: false };
 let items = [];
 
 function el(tag, props, children) {
@@ -67,6 +67,7 @@ function safeUrl(url) {
 function inView(item, today, end) {
   if (item.anchor < today || item.anchor > end) return false;
   if (state.market !== "all" && item.market !== state.market) return false;
+  if (state.sector !== "all" && item.sector !== state.sector) return false;
   return true;
 }
 
@@ -75,11 +76,7 @@ function noun(count) {
 }
 
 function openItem(item) {
-  if (item.market === "London" && typeof window.moonshotOpenScreen === "function") {
-    window.moonshotOpenScreen(item.link_key);
-    return;
-  }
-  if (typeof window.moonshotOpenNorway === "function") window.moonshotOpenNorway(item.link_key);
+  if (typeof window.moonshotOpenScreen === "function") window.moonshotOpenScreen(item.link_key);
 }
 
 function companyButton(item) {
@@ -175,7 +172,7 @@ function render() {
     empty.hidden = false;
     empty.replaceChildren(
       el("strong", { text: "No events in this window" }),
-      el("p", { text: "Widen the range, or turn off Material only." }),
+      el("p", { text: "Widen the range, or set the filters back to All." }),
     );
   } else {
     empty.hidden = true;
@@ -189,18 +186,21 @@ function render() {
   document.body.dataset.comingEnd = end;
 }
 
-function mountFilters() {
-  const select = el("select", { "data-coming-market": "1" });
-  [["all", "All"], ["London", "London"], ["Norway", "Norway"]].forEach(([value, text]) => {
-    select.append(el("option", { value, text }));
-  });
+function filterSelect(key, label, options) {
+  const select = el("select", { [`data-coming-${key}`]: "1" });
+  select.append(el("option", { value: "all", text: "All" }), ...options.map((value) => el("option", { value, text: value })));
   select.addEventListener("change", () => {
-    state.market = select.value;
+    state[key] = select.value;
     select.closest(".field").classList.toggle("active", select.value !== "all");
     render();
   });
+  return el("label", { class: "field" }, [label, select]);
+}
+
+function mountFilters() {
   document.getElementById("coming-filters").replaceChildren(
-    el("label", { class: "field" }, ["Market", select]),
+    filterSelect("market", "Market", ["London", "Norway"]),
+    filterSelect("sector", "Sector", ["Oil and gas", "Mining"]),
     el("label", { class: "field" }, [
       "Material",
       el("button", {

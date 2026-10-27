@@ -1,0 +1,956 @@
+{
+ "country": "Angola",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "AET",
+   "name": "Afentra plc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Block 3/05",
+     "working_interest": "30%, rising to 33.33% on Etu acquisition",
+     "operator": "Sonangol",
+     "stage": "Production (H1 2026 net 5,777 bopd); Impala-2 drilling",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781"
+    },
+    {
+     "licence": "Block 3/05A",
+     "working_interest": "21.33%, rising to 24.99% on Etu acquisition",
+     "operator": "Sonangol",
+     "stage": "Development; Pacassa SW discovery, sidetrack to first oil Q1 2027",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/etu-acquisition-update-/9809496"
+    },
+    {
+     "licence": "Block 3/24",
+     "working_interest": "Held (see release)",
+     "operator": "Afentra",
+     "stage": "Appraisal of discoveries",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9714326"
+    },
+    {
+     "licence": "KON4 (Quenguela Norte)",
+     "working_interest": "35%",
+     "operator": "Afentra",
+     "stage": "Field redevelopment study; focused seismic H1 2027",
+     "basin": "Kwanza Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/award-of-kon4-licence-onshore-angola/9586509"
+    },
+    {
+     "licence": "KON15, KON19",
+     "working_interest": "45%",
+     "operator": "Sonangol",
+     "stage": "Exploration; KON15 2D seismic",
+     "basin": "Kwanza Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538"
+    },
+    {
+     "licence": "Block 23",
+     "working_interest": "40%",
+     "operator": "Sonangol",
+     "stage": "Exploration (offshore Kwanza)",
+     "basin": "Kwanza Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538"
+    }
+   ]
+  },
+  {
+   "code": "BWE.OL",
+   "name": "BW Energy Limited",
+   "in_dataset": true,
+   "exchange": "Oslo Bors",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Blocks 14 and 14K",
+     "working_interest": "Economic exposure about 8,000 bopd and about 19 mmbbl net 2P via framework with Etu (Chevron interests); earlier Azule deal pre-empted",
+     "operator": "Chevron (sale to Etu pending)",
+     "stage": "Production; transaction pending approvals",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://newsweb.oslobors.no/message/681215"
+    }
+   ]
+  },
+  {
+   "code": "CHAR",
+   "name": "Chariot Limited",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Blocks 14 and 14K",
+     "working_interest": "Economic exposure up to about 4,000 bopd (Azule 20%/10% via Etu) plus about 4,000 bopd (Chevron 31%/15.5% via Etu)",
+     "operator": "Chevron",
+     "stage": "Production; first transaction completion imminent, second to follow",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/increasing-exposure-to-assets-offshore-angola/9747172"
+    }
+   ]
+  },
+  {
+   "code": "ENOG",
+   "name": "Energean plc",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Blocks 14 and 14K",
+     "working_interest": "None: agreed 31%/15.5% from Chevron (12 Mar 2026), pre-empted by Etu",
+     "operator": "Chevron",
+     "stage": "Exited; Etu signed SPA in Aug 2026, Energean letter of credit released",
+     "basin": "Lower Congo Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/results-for-half-year-ended-30-june-2026/9761841"
+    }
+   ]
+  },
+  {
+   "code": "SEI",
+   "name": "Sintana Energy Inc.",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "KON-16",
+     "working_interest": "Indirect 5% (via Corcel CorKon, which holds 85%) plus 2.5% net profit interest; US$2.5m",
+     "operator": "Corcel (CorKon)",
+     "stage": "Exploration; completion expected before end 2026, pre-salt well targeted 2027",
+     "basin": "Kwanza Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626"
+    }
+   ]
+  },
+  {
+   "code": "PRE",
+   "name": "Pensana plc",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Rare earths",
+   "project": "Longonjo (Huambo province)",
+   "note": "Construction about 30% complete; commissioning moved to early 2028, full production late 2028"
+  }
+ ],
+ "context": [
+  "Chevron",
+  "Etu Energias",
+  "Azule Energy",
+  "Sonangol",
+  "Maurel et Prom",
+  "NIS Naftagas",
+  "Shell Trading",
+  "Corcel (KON-16 operator; not in screen)",
+  "Cascade Natural Resources (Pensana funder)"
+ ],
+ "catalysts": [
+  {
+   "date": "2025-11-27",
+   "date_precision": "exact",
+   "net": null,
+   "type": "study",
+   "headline": "Longonjo study lifts heavy rare earth output up to fivefold",
+   "category": "Operational",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PRE",
+     "interest": "100% (Ozango)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PRE"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/longonjo-study-lifts-hree-production-fivefold/9260255",
+   "status": "past"
+  },
+  {
+   "date": "2025-12-12",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "BW Energy and Maurel et Prom agree to buy Azule 20% of Block 14 and 10% of Block 14K (BW 10%/5%)",
+   "category": "Capital and deals",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "10% Block 14, 5% Block 14K",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/661849",
+   "status": "past"
+  },
+  {
+   "date": "2026-01-13",
+   "date_precision": "exact",
+   "net": null,
+   "type": "resource",
+   "headline": "Afentra 2C contingent resource up over 400% to 87.3 mmboe net",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "Blocks 3/05, 3/05A, 3/24",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/contingent-resource-upgrade/9349068",
+   "status": "past"
+  },
+  {
+   "date": "2026-02-06",
+   "date_precision": "exact",
+   "net": null,
+   "type": "setback",
+   "headline": "JV partner to pre-empt BW Energy Block 14 deal with Azule",
+   "category": "Capital and deals",
+   "tier": "setback",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "10% Block 14 (pre-empted)",
+     "in_dataset": true
+    },
+    {
+     "code": "CHAR",
+     "interest": "Financing the pre-empting buyer, Etu",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "CHAR"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/665030",
+   "status": "past"
+  },
+  {
+   "date": "2026-02-19",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "Chariot raises about US$24m to part-finance Etu purchase of Azule Block 14 and 14K interests",
+   "category": "Capital and deals",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "CHAR",
+     "interest": "Exposure up to about 4,000 bopd",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "CHAR"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/acquisition-funding-of-oil-production-in-angola/9439010",
+   "status": "past"
+  },
+  {
+   "date": "2026-03-03",
+   "date_precision": "exact",
+   "net": null,
+   "type": "construction",
+   "headline": "Longonjo construction on track for 2027 first production",
+   "category": "Operational",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PRE",
+     "interest": "100% (Ozango)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PRE"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/construction-on-track-for-2027-first-producti-/9454960",
+   "status": "past",
+   "note": "Superseded on 26 Oct 2026"
+  },
+  {
+   "date": "2026-03-12",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "Energean agrees to buy Chevron 31% operated Block 14 and 15.5% Block 14K (about 13,000 bopd net)",
+   "category": "Capital and deals",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "ENOG",
+     "interest": "31% Block 14, 15.5% Block 14K",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ENOG"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/strategic-entry-offshore-angola/9470270",
+   "status": "past"
+  },
+  {
+   "date": "2026-05-27",
+   "date_precision": "exact",
+   "net": null,
+   "type": "licence change",
+   "headline": "Afentra awarded operated KON4 (Quenguela Norte), 35%",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Kwanza Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "35% (operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/award-of-kon4-licence-onshore-angola/9586509",
+   "status": "past"
+  },
+  {
+   "date": "2026-06-03",
+   "date_precision": "exact",
+   "net": null,
+   "type": "funding",
+   "headline": "Afentra raises about US$40m in equity",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/proposed-equity-fundraising-/9600569",
+   "status": "past"
+  },
+  {
+   "date": "2026-06-03",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "Etu moves to pre-empt Energean purchase of Chevron Block 14 interests",
+   "category": "Capital and deals",
+   "tier": "setback",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "ENOG",
+     "interest": "31% Block 14 (pre-empted)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ENOG"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/energean--enog/update-on-angola-transaction-/9598393",
+   "status": "past",
+   "note": "Etu signed the SPA in Aug 2026 (Energean HY results, https://www.investegate.co.uk/announcement/rns/energean--enog/results-for-half-year-ended-30-june-2026/9761841)"
+  },
+  {
+   "date": "2026-07-07",
+   "date_precision": "exact",
+   "net": null,
+   "type": "funding",
+   "headline": "Afentra refinances with US$125m Gunvor prepayment facility",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-and-financial-update-/9654881",
+   "status": "past"
+  },
+  {
+   "date": "2026-08-11",
+   "date_precision": "exact",
+   "net": null,
+   "type": "discovery or drill result",
+   "headline": "Pacassa SW oil discovery, Block 3/05A (136 m net pay, up to about 70 mmbo gross)",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "21.33% Block 3/05A",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9714326",
+   "status": "past"
+  },
+  {
+   "date": "2026-08-28",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "BW Energy and Chariot back Etu purchase of Chevron Block 14 and 14K interests (BW about 8,000 bopd exposure)",
+   "category": "Capital and deals",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "About 8,000 bopd exposure",
+     "in_dataset": true
+    },
+    {
+     "code": "CHAR",
+     "interest": "About 4,000 bopd added exposure",
+     "in_dataset": true
+    },
+    {
+     "code": "ENOG",
+     "interest": "Displaced buyer",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "CHAR",
+    "ENOG"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://newsweb.oslobors.no/message/681215",
+   "status": "past",
+   "note": "Chariot release 1 Sep 2026: https://www.investegate.co.uk/announcement/rns/chariot-limited--char/increasing-exposure-to-assets-offshore-angola/9747172"
+  },
+  {
+   "date": "2026-09-10",
+   "date_precision": "exact",
+   "net": null,
+   "type": "mna",
+   "headline": "Sintana signs definitive documents for indirect 5% of KON-16",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "Kwanza Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "Indirect 5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "Corcel (operator)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-06",
+   "date_precision": "exact",
+   "net": null,
+   "type": "permit or approval",
+   "headline": "Decree for Block 3/05 part of Etu acquisition published; 3/05A decree awaited",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "30% Block 3/05 (33.33% after Etu deal)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/etu-acquisition-update-/9809496",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-12",
+   "date_precision": "exact",
+   "net": null,
+   "type": "setback",
+   "headline": "Pacassa SW needs a sidetrack after operational problems; Impala-2 spudded",
+   "category": "Operational",
+   "tier": "setback",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "30% Block 3/05 (33.33% after Etu deal)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781",
+   "status": "past"
+  },
+  {
+   "date": "2026-10-26",
+   "date_precision": "exact",
+   "net": null,
+   "type": "delay",
+   "headline": "Longonjo commissioning moved to early 2028 (was 2027); US$75m to US$90m equity sought",
+   "category": "Operational",
+   "tier": "setback",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PRE",
+     "interest": "100% (Ozango)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PRE"
+   ],
+   "other_partners": [
+    "Cascade Natural Resources"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296",
+   "status": "past"
+  },
+  {
+   "date": "2026-11-30",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "trading update",
+   "headline": "Afentra trading update",
+   "category": "Corporate",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "Group",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-11-30",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "funding",
+   "headline": "Cascade tranche to Pensana due within 14 days of 26 Oct",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PRE",
+     "interest": "100% (Ozango)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PRE"
+   ],
+   "other_partners": [
+    "Cascade Natural Resources"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296",
+   "status": "upcoming"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "half",
+   "net": "loose",
+   "type": "mna",
+   "headline": "Completion of Etu purchase of Azule Block 14 and 14K interests (Chariot financing)",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "CHAR",
+     "interest": "Exposure up to about 4,000 bopd",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "CHAR"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622",
+   "status": "upcoming",
+   "note": "Described as imminent; a closing is not material"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "half",
+   "net": "loose",
+   "type": "mna",
+   "headline": "Completion of Sintana KON-16 entry",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "Kwanza Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "Indirect 5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "Corcel"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626",
+   "status": "upcoming"
+  },
+  {
+   "date": "2027-01-31",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "first production",
+   "headline": "Impala-2 first oil, Block 3/05 (about 4,000 bopd gross)",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "30% Block 3/05 (33.33% after Etu deal)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781",
+   "status": "upcoming"
+  },
+  {
+   "date": "2027-03-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "first production",
+   "headline": "Pacassa SW first oil after sidetrack, Block 3/05A",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "21.33% Block 3/05A",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781",
+   "status": "upcoming"
+  },
+  {
+   "date": "2027-06-30",
+   "date_precision": "half",
+   "net": "loose",
+   "type": "drilling start",
+   "headline": "Block 3/05 hydraulic workover programme, early 2027",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "30% Block 3/05 (33.33% after Etu deal)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/operational-update-/9816781",
+   "status": "upcoming"
+  },
+  {
+   "date": "2027-06-30",
+   "date_precision": "half",
+   "net": "loose",
+   "type": "mna",
+   "headline": "Completion of Etu purchase of Chevron Block 14 and 14K interests (BW and Chariot exposure)",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "BWE.OL",
+     "interest": "About 8,000 bopd exposure",
+     "in_dataset": true
+    },
+    {
+     "code": "CHAR",
+     "interest": "About 4,000 bopd added exposure",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "BWE.OL",
+    "CHAR"
+   ],
+   "other_partners": [
+    "Chevron (31%, operator; sale to Etu pending)",
+    "Etu Energias",
+    "Azule Energy (20%; sale to Etu pending)",
+    "Sonangol",
+    "Maurel et Prom",
+    "Shell Trading (acquisition debt)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622",
+   "status": "upcoming",
+   "note": "Chariot: to follow the first transaction, early 2027; BW: subject to approvals (https://newsweb.oslobors.no/message/681215)"
+  },
+  {
+   "date": "2027-06-30",
+   "date_precision": "half",
+   "net": "loose",
+   "type": "study",
+   "headline": "KON4 focused seismic",
+   "category": "Operational",
+   "tier": "background",
+   "basin": "Kwanza Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "35% (operator)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538",
+   "status": "upcoming"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "mna",
+   "headline": "Completion of Afentra Etu acquisition (3/05A decree awaited)",
+   "category": "Capital and deals",
+   "tier": "background",
+   "basin": "Lower Congo Basin",
+   "affected": [
+    {
+     "code": "AET",
+     "interest": "30% Block 3/05 (33.33% after Etu deal)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "AET"
+   ],
+   "other_partners": [
+    "Sonangol (operator)",
+    "Maurel et Prom",
+    "NIS Naftagas"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/afentra--aet/etu-acquisition-update-/9809496",
+   "status": "upcoming",
+   "note": "Guided Q3 2026; see slipped.json"
+  },
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "funding",
+   "headline": "Pensana US$75m to US$90m equity for Ozango",
+   "category": "Capital and deals",
+   "tier": "material",
+   "basin": null,
+   "affected": [
+    {
+     "code": "PRE",
+     "interest": "100% (Ozango)",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "PRE"
+   ],
+   "other_partners": [
+    "Cascade Natural Resources"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/prn/pensana--pre/update-on-financing-and-mine-development/9840296",
+   "status": "upcoming"
+  },
+  {
+   "date": "2027-12-31",
+   "date_precision": "year",
+   "net": null,
+   "type": "well spud",
+   "headline": "KON-16 pre-salt exploration well",
+   "category": "Operational",
+   "tier": "material",
+   "basin": "Kwanza Basin",
+   "affected": [
+    {
+     "code": "SEI",
+     "interest": "Indirect 5%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "SEI"
+   ],
+   "other_partners": [
+    "Corcel (operator)"
+   ],
+   "source_url": "https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/kon-16-definitive-transaction-documents-executed/9764626",
+   "status": "upcoming",
+   "note": "Year precision; may fall after the 12-month window"
+  }
+ ]
+}

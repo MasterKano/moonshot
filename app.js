@@ -38,6 +38,7 @@ const state = {
   category: "all",
   country: "all",
   background: false,
+  watchOnly: false,
   shown: PAGE,
   open: new Set(),
 };
@@ -619,6 +620,7 @@ function filtered() {
     if (state.market !== "all" && !item.companies.some((company) => company.markets.includes(state.market))) return false;
     if (state.category !== "all" && item.category !== state.category) return false;
     if (state.country !== "all" && !item.companies.some((company) => (company.countries || []).includes(state.country))) return false;
+    if (state.watchOnly && !item.companies.some((company) => company.code && window.moonshotWatch && window.moonshotWatch.has(company.code))) return false;
     if (query) {
       const blob = [item.headline, ...item.companies.flatMap((company) => [company.label, company.name, company.code])].join(" ").replaceAll("&", "and").toLowerCase();
       if (!blob.includes(query)) return false;
@@ -628,7 +630,7 @@ function filtered() {
 }
 
 function isDefault() {
-  return !state.q.trim() && state.tier === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background;
+  return !state.q.trim() && state.tier === "all" && state.range === "12m" && state.band === "all" && !state.types.length && state.sector === "all" && state.market === "all" && state.category === "all" && state.country === "all" && !state.background && !state.watchOnly;
 }
 
 function readUrl() {
@@ -763,6 +765,23 @@ function mountFilters() {
     selectField("category", "Category", [["all", "All"], ...CATEGORIES.map((value) => [value, value])], state.category),
     selectField("country", "Country", [["all", "All"], ...countryOptions.map((value) => [value, value])], state.country),
     el("label", { class: state.background ? "field active" : "field" }, ["Background", background]),
+    el("label", { class: state.watchOnly ? "field active" : "field" }, [
+      "Watchlist",
+      el("button", {
+        type: "button",
+        class: "toggle-btn",
+        id: "events-watch",
+        "aria-pressed": state.watchOnly ? "true" : "false",
+        onClick: (event) => {
+          state.watchOnly = !state.watchOnly;
+          event.currentTarget.setAttribute("aria-pressed", state.watchOnly ? "true" : "false");
+          event.currentTarget.closest(".field").classList.toggle("active", state.watchOnly);
+          state.shown = PAGE;
+          render();
+        },
+        text: "Watchlist",
+      }),
+    ]),
   );
 }
 
@@ -777,6 +796,7 @@ function clearFilters() {
   state.category = "all";
   state.country = "all";
   state.background = false;
+  state.watchOnly = false;
   state.shown = PAGE;
   state.open.clear();
   mountFilters();
@@ -963,7 +983,14 @@ function render() {
   const more = document.getElementById("moreRow");
   if (!rows.length) {
     empty.hidden = false;
-    empty.replaceChildren(el("strong", { text: "Nothing in this view" }), el("p", { text: "No events match these filters." }));
+    const pinned = window.moonshotWatch ? window.moonshotWatch.codes().length : 0;
+    const title = state.watchOnly && !pinned ? "No companies pinned" : "Nothing in this view";
+    const detail = state.watchOnly && !pinned
+      ? "Star a company to build a watchlist."
+      : state.watchOnly
+        ? "No pinned companies in this view."
+        : "No events match these filters.";
+    empty.replaceChildren(el("strong", { text: title }), el("p", { text: detail }));
     document.getElementById("tableWrap").replaceChildren();
     document.getElementById("cards").replaceChildren();
     more.hidden = true;
@@ -989,7 +1016,7 @@ async function loadJson(path) {
 
 async function main() {
   try {
-    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, readAcross, slipped, coming] = await Promise.all([
+    const [eventsCsv, companiesCsv, screen, norwayEvents, norwayCompanies, falklands, namibia, guyana, southAfrica, gabon, angola, colombia, readAcross, slipped, coming] = await Promise.all([
       fetch("data/events.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("events"); return response.text(); }),
       fetch("data/companies.csv", { cache: "no-cache" }).then((response) => { if (!response.ok) throw new Error("companies"); return response.text(); }),
       loadJson("data/smallcaps.json"),
@@ -999,6 +1026,9 @@ async function main() {
       loadJson("data/namibia.json"),
       loadJson("data/guyana.json"),
       loadJson("data/south_africa.json"),
+      loadJson("data/gabon.json"),
+      loadJson("data/angola.json"),
+      loadJson("data/colombia.json"),
       loadJson("data/read_across.json"),
       loadJson("data/slipped.json"),
       loadJson("data/coming_up.json"),
@@ -1010,7 +1040,7 @@ async function main() {
       norwayCompanies,
       rowsToObjects(eventsCsv),
       rowsToObjects(companiesCsv),
-      [falklands, namibia, guyana, southAfrica],
+      [falklands, namibia, guyana, southAfrica, gabon, angola, colombia],
       readAcross,
       slipped,
       coming,
@@ -1059,6 +1089,12 @@ function bindChrome() {
       if (meta) meta.setAttribute("content", next === "light" ? "#eef1f6" : "#0b0f16");
       try { localStorage.setItem("moonshot-theme", next); } catch (err) { /* ignore */ }
       paintThemeButton();
+    });
+  }
+  if (window.moonshotWatch) {
+    window.moonshotWatch.subscribe(() => {
+      if (document.body.dataset.ready !== "true") return;
+      render();
     });
   }
   window.addEventListener("popstate", () => {

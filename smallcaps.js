@@ -62,6 +62,7 @@ const capsState = {
   stage: "all",
   hasUpcoming: false,
   showBackground: false,
+  watchOnly: false,
   sortKey: "name",
   sortDir: "asc",
   open: new Set(),
@@ -228,11 +229,10 @@ function indexCountries(files) {
     if (!countryOptions.includes(name)) countryOptions.push(name);
     (file.companies || []).forEach((company) => {
       if (!isListed(company.in_dataset) || !company.code) return;
-      [company.code, bareCode(company.code)].forEach((code) => {
-        if (!code) return;
-        if (!countryByCode.has(code)) countryByCode.set(code, new Set());
-        countryByCode.get(code).add(name);
-      });
+      const code = String(company.code).trim();
+      if (!code) return;
+      if (!countryByCode.has(code)) countryByCode.set(code, new Set());
+      countryByCode.get(code).add(name);
     });
   });
 }
@@ -483,6 +483,7 @@ function searchBlob(row) {
 }
 
 function matches(row) {
+  if (capsState.watchOnly && !(window.moonshotWatch && window.moonshotWatch.has(row.code))) return false;
   if (capsState.market !== "all" && !row.markets.includes(capsState.market)) return false;
   if (capsState.sector !== "all" && row.sector !== capsState.sector) return false;
   if (capsState.country !== "all" && !(row.countries || []).includes(capsState.country)) return false;
@@ -574,10 +575,13 @@ function latestNode(row) {
 }
 
 function companyNode(row) {
-  return el("span", {}, [
+  const name = el("span", {}, [
     el("span", { class: "cap-name", text: showText(row.name) }),
     el("span", { class: "cap-code", text: showText(row.code) }),
   ]);
+  const star = window.moonshotWatch ? window.moonshotWatch.star(row.code, row.name) : null;
+  if (!star) return name;
+  return el("span", { class: "co-with-star" }, [star, name]);
 }
 
 function headlineLink(item) {
@@ -875,7 +879,11 @@ function renderCards(rows) {
         latestNode(row),
       ]),
     ]);
-    const card = el("article", { class: open ? "card cap-card is-open" : "card cap-card" }, [button]);
+    const star = window.moonshotWatch ? window.moonshotWatch.star(row.code, row.name) : null;
+    const card = el("article", { class: open ? "card cap-card is-open" : "card cap-card" }, [
+      star ? el("div", { class: "card-star" }, [star]) : null,
+      button,
+    ]);
     if (open) card.append(el("div", { class: "cap-expand" }, [expandBody(row)]));
     return card;
   }));
@@ -894,10 +902,14 @@ function renderLists() {
     tableWrap.replaceChildren();
     cards.replaceChildren();
     empty.hidden = false;
-    empty.replaceChildren(
-      el("strong", { text: "No companies match" }),
-      el("p", { text: "Clear the search, turn off Has upcoming, or set every filter back to All." }),
-    );
+    const pinned = window.moonshotWatch ? window.moonshotWatch.codes().length : 0;
+    const title = capsState.watchOnly && !pinned ? "No companies pinned" : capsState.watchOnly ? "No pinned companies" : "No companies match";
+    const detail = capsState.watchOnly && !pinned
+      ? "Star a company to build a watchlist."
+      : capsState.watchOnly
+        ? "No pinned companies in this view."
+        : "Clear the search, turn off Has upcoming, or set every filter back to All.";
+    empty.replaceChildren(el("strong", { text: title }), el("p", { text: detail }));
     return;
   }
   empty.hidden = true;
@@ -977,6 +989,21 @@ function mountFilters() {
       },
       text: "Show background",
     }),
+  ]), el("label", { class: capsState.watchOnly ? "field active" : "field" }, [
+    "Watchlist",
+    el("button", {
+      type: "button",
+      class: "toggle-btn",
+      id: "smallcaps-watch",
+      "aria-pressed": capsState.watchOnly ? "true" : "false",
+      onClick: (event) => {
+        capsState.watchOnly = !capsState.watchOnly;
+        event.currentTarget.setAttribute("aria-pressed", capsState.watchOnly ? "true" : "false");
+        event.currentTarget.closest(".field").classList.toggle("active", capsState.watchOnly);
+        renderLists();
+      },
+      text: "Watchlist",
+    }),
   ]));
 }
 
@@ -991,11 +1018,11 @@ function bindSearch() {
 
 function applyTab(tab, persist) {
   const mapped = tab === "norway" ? "smallcaps" : tab;
-  const allowed = ["events", "smallcaps", "coming", "countries"];
+  const allowed = ["events", "smallcaps", "coming", "countries", "watchlist"];
   const next = allowed.includes(mapped) ? mapped : "events";
   document.documentElement.dataset.view = next;
   document.body.dataset.view = next;
-  ["smallcaps", "coming", "countries"].forEach((id) => {
+  ["smallcaps", "coming", "countries", "watchlist"].forEach((id) => {
     const panel = document.getElementById(id);
     if (panel) panel.hidden = next !== id;
   });
@@ -1006,7 +1033,7 @@ function applyTab(tab, persist) {
   });
   const skip = document.querySelector(".skip");
   if (skip) {
-    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "coming" ? ["#coming", "Skip to coming up"] : next === "countries" ? ["#countries", "Skip to countries"] : ["#timeline", "Skip to timeline"];
+    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "coming" ? ["#coming", "Skip to coming up"] : next === "countries" ? ["#countries", "Skip to countries"] : next === "watchlist" ? ["#watchlist", "Skip to watchlist"] : ["#timeline", "Skip to timeline"];
     skip.href = target[0];
     skip.textContent = target[1];
   }
@@ -1117,7 +1144,7 @@ async function loadJson(path) {
 }
 
 async function loadCaps() {
-  const [data, companies, events, summary, across, slippedRows, falklands, namibia, guyana, southAfrica] = await Promise.all([
+  const [data, companies, events, summary, across, slippedRows, falklands, namibia, guyana, southAfrica, gabon, angola, colombia] = await Promise.all([
     loadJson("data/smallcaps.json"),
     loadJson("data/norway_companies.json"),
     loadJson("data/norway_events.json"),
@@ -1128,11 +1155,14 @@ async function loadCaps() {
     loadJson("data/namibia.json"),
     loadJson("data/guyana.json"),
     loadJson("data/south_africa.json"),
+    loadJson("data/gabon.json"),
+    loadJson("data/angola.json"),
+    loadJson("data/colombia.json"),
   ]);
   if (!Array.isArray(data) || !Array.isArray(companies) || !Array.isArray(events)) throw new Error("smallcaps");
   readAcross = Array.isArray(across) ? across : [];
   slipped = Array.isArray(slippedRows) ? slippedRows : [];
-  indexCountries([falklands, namibia, guyana, southAfrica]);
+  indexCountries([falklands, namibia, guyana, southAfrica, gabon, angola, colombia]);
   caps = foldNorway(data.map(normalize), companies, events);
   assignCountries(caps);
   document.getElementById("smallcaps-loading").hidden = true;
@@ -1164,6 +1194,7 @@ function resetScreenFilters() {
   capsState.stage = "all";
   capsState.hasUpcoming = false;
   capsState.showBackground = false;
+  capsState.watchOnly = false;
   const search = document.getElementById("smallcaps-search");
   if (search) {
     search.value = "";
@@ -1177,6 +1208,12 @@ function resetScreenFilters() {
   if (upcoming) upcoming.setAttribute("aria-pressed", "false");
   const background = document.getElementById("smallcaps-background");
   if (background) background.setAttribute("aria-pressed", "false");
+  const watch = document.getElementById("smallcaps-watch");
+  if (watch) {
+    watch.setAttribute("aria-pressed", "false");
+    const field = watch.closest(".field");
+    if (field) field.classList.remove("active");
+  }
 }
 
 function revealScreen(code) {
@@ -1204,7 +1241,13 @@ function boot() {
   window.moonshotOpenScreen = openScreenCompany;
   const view = document.documentElement.dataset.view;
   const initial = view === "norway" ? "smallcaps" : view;
-  applyTab(initial === "smallcaps" || initial === "coming" || initial === "countries" ? initial : "events", false);
+  applyTab(initial === "smallcaps" || initial === "coming" || initial === "countries" || initial === "watchlist" ? initial : "events", false);
+  if (window.moonshotWatch) {
+    window.moonshotWatch.subscribe(() => {
+      if (!caps.length) return;
+      renderLists();
+    });
+  }
   loadCaps().catch(showCapsError);
 }
 

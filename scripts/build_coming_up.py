@@ -245,6 +245,9 @@ def country_items(screen, seen):
         "namibia.json": "NA",
         "guyana.json": "GY",
         "south_africa.json": "ZA",
+        "gabon.json": "GA",
+        "angola.json": "AO",
+        "colombia.json": "CO",
     }
     items = []
     for filename, slug in names.items():
@@ -253,7 +256,7 @@ def country_items(screen, seen):
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
         for index, catalyst in enumerate(data.get("catalysts") or []):
-            if not catalyst.get("date"):
+            if not catalyst.get("date") or catalyst.get("status") == "past":
                 continue
             try:
                 anchor, label, approx, suffix = place(catalyst.get("date"), catalyst.get("date_precision") or "exact")

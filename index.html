@@ -26,6 +26,7 @@
         if (savedTab === "norway" || savedTab === "smallcaps") tab = "smallcaps";
         else if (savedTab === "coming") tab = "coming";
         else if (savedTab === "countries") tab = "countries";
+        else if (savedTab === "watchlist") tab = "watchlist";
       } catch (err) {}
       root.setAttribute("data-view", tab);
     })();
@@ -48,10 +49,11 @@
   <main class="wrap" id="main">
     <div class="view-bar">
       <div class="segment view-tabs" role="tablist" aria-label="Choose a view">
+        <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
         <button type="button" role="tab" id="tab-events" data-view="events" aria-controls="events-view" aria-selected="true">Events</button>
         <button type="button" role="tab" id="tab-coming" data-view="coming" aria-controls="coming" aria-selected="false" tabindex="-1">Coming up</button>
-        <button type="button" role="tab" id="tab-smallcaps" data-view="smallcaps" aria-controls="smallcaps" aria-selected="false" tabindex="-1">Screen</button>
         <button type="button" role="tab" id="tab-countries" data-view="countries" aria-controls="countries" aria-selected="false" tabindex="-1">Countries</button>
+        <button type="button" role="tab" id="tab-watchlist" data-view="watchlist" aria-controls="watchlist" aria-selected="false" tabindex="-1">Watchlist</button>
       </div>
     </div>
     <div id="events-view">
@@ -157,24 +159,40 @@
       <div class="panel-head">
         <div>
           <h2 id="countries-title">Countries</h2>
-          <p class="panel-sub">Companies and dated catalysts in the Falkland Islands, Namibia, Guyana, and South Africa. A name in the screen opens that row.</p>
+          <p class="panel-sub">Companies and dated catalysts by country. A name in the screen opens that row.</p>
         </div>
       </div>
       <div id="countries-body"></div>
       <p class="loading" id="countries-loading">Loading countries…</p>
     </section>
+    <section class="panel" id="watchlist" aria-labelledby="watchlist-title" hidden>
+      <div class="panel-head">
+        <div>
+          <h2 id="watchlist-title">Watchlist</h2>
+          <p class="panel-sub">Pinned companies, kept in this browser. Copy the link to open the same list on another device.</p>
+        </div>
+      </div>
+      <div class="watch-share">
+        <label class="field">Share link
+          <input id="watch-link" type="text" readonly spellcheck="false" aria-label="Watchlist link">
+        </label>
+        <button type="button" class="subscribe" id="watch-copy" disabled>Copy link</button>
+      </div>
+      <p class="loading" id="watch-loading">Loading the watchlist…</p>
+      <div id="watch-body"></div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="wrap">
+      <p class="as-of">Data as of 27 Oct 2026.</p>
       <p class="source-events">Source: pilot register, company screen, and Norwegian shelf, as of 27 Oct 2026.</p>
       <p class="source-caps">Source: ASX and London screen, Nordic small caps, and Norwegian shelf, as of 27 Oct 2026.</p>
-      <p class="source-norway">Source: Sodir FactPages, as of 26 Oct 2026.</p>
-      <p class="source-coming">Source: company guidance and Sodir FactPages.</p>
+      <p class="source-coming">Source: company guidance and Sodir FactPages, as of 27 Oct 2026.</p>
       <p class="source-countries">Source: company guidance and licence registers, as of 27 Oct 2026.</p>
+      <p class="source-watch">Source: company screen, coming up list, and country files, as of 27 Oct 2026.</p>
     </div>
   </footer>
-  <div class="scrim" id="scrim" hidden></div>
-  <div class="popover" id="popover" role="dialog" aria-modal="false" tabindex="-1" hidden></div>
+  <script type="module" src="watchlist.js"></script>
   <script type="module" src="app.js"></script>
   <script type="module" src="smallcaps.js"></script>
   <script type="module" src="comingup.js"></script>

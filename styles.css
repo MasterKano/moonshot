@@ -1463,6 +1463,48 @@ table.countries thead th, table.catalysts thead th {
   text-overflow: ellipsis;
 }
 
+.chart-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.chart-legend span { display: inline-flex; align-items: center; gap: 5px; }
+
+.legend-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-positive { background: var(--accent); }
+.legend-neutral { background: var(--muted); }
+.legend-star { color: var(--amber); font-style: normal; font-weight: 700; }
+.legend-count {
+  padding: 0 5px;
+  border: 1px solid var(--border-strong);
+  border-radius: 99px;
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.chart-block.is-collapsed .chart-scroll,
+.chart-block.is-collapsed #chartEmpty,
+.chart-block.is-collapsed #chartDetail { display: none; }
+
 .chart-detail {
   margin-top: 10px;
   padding: 12px;

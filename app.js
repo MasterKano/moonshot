@@ -44,6 +44,8 @@ const state = {
   watchOnly: false,
   chartAll: false,
   chartFocus: "",
+  chartOpen: true,
+  chartSort: "next",
   shown: PAGE,
   open: new Set(),
 };
@@ -57,6 +59,8 @@ let screenCodes = new Set();
 let linkCodes = new Set();
 let across = [];
 let chartRows = [];
+let nextCatalyst = new Map();
+let latestMaterial = new Map();
 let chartTimer = 0;
 let chartDirty = false;
 let chartStamp = "";
@@ -726,6 +730,26 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     if (kind) types.add(kind);
     item.companies.forEach((company) => { if (company.sector) sectors.add(company.sector); });
   });
+  const catalyst = new Map();
+  forward.forEach((item) => {
+    item.companies.forEach((company) => {
+      const key = company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+      const prev = catalyst.get(key);
+      if (!prev || item.sort < prev) catalyst.set(key, item.sort);
+    });
+  });
+  const materialDates = new Map();
+  rows.forEach((item) => {
+    const material = item.significance === "material" || item.material || item.setback || item.direction === "negative";
+    if (!material) return;
+    item.companies.forEach((company) => {
+      const key = company.code ? `c:${company.code}` : `n:${showText(company.label || company.name)}`;
+      const prev = materialDates.get(key);
+      if (!prev || item.sort > prev) materialDates.set(key, item.sort);
+    });
+  });
+  nextCatalyst = catalyst;
+  latestMaterial = materialDates;
   return {
     events: rows,
     upcoming: forward,
@@ -1466,7 +1490,24 @@ function buildLanes(rows) {
       lane.count += 1;
     });
   });
-  return [...map.values()].sort((a, b) => b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" }));
+  const pinned = (lane) => !!(lane.code && window.moonshotWatch && window.moonshotWatch.has(lane.code));
+  return [...map.values()].sort((a, b) => {
+    if (state.chartSort === "count") return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+    if (state.chartSort === "watch") {
+      const pin = Number(pinned(b)) - Number(pinned(a));
+      if (pin) return pin;
+    }
+    if (state.chartSort === "latest") {
+      const left = latestMaterial.get(a.key) || "";
+      const right = latestMaterial.get(b.key) || "";
+      if (left !== right) return right.localeCompare(left);
+      return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+    }
+    const left = nextCatalyst.get(a.key) || "9999-99-99";
+    const right = nextCatalyst.get(b.key) || "9999-99-99";
+    if (left !== right) return left.localeCompare(right);
+    return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
+  });
 }
 
 function xFor(time, width, bounds) {
@@ -1546,9 +1587,19 @@ function layoutGroup(group, y, width) {
 }
 
 function markerColor(item) {
-  if (item.setback) return cssVar("--amber", "#f0b429");
-  if (item.background) return cssVar("--muted", "#8b97a8");
+  if (item.setback || item.direction === "negative") return cssVar("--amber", "#f0b429");
+  if (item.direction === "neutral" || item.background || item.significance === "background") return cssVar("--muted", "#8b97a8");
   return cssVar("--accent", "#4f7cff");
+}
+
+function starPoints(cx, cy, radius) {
+  const points = [];
+  for (let i = 0; i < 10; i += 1) {
+    const arm = i % 2 ? radius * 0.42 : radius;
+    const angle = -Math.PI / 2 + (i * Math.PI) / 5;
+    points.push(`${(cx + Math.cos(angle) * arm).toFixed(2)},${(cy + Math.sin(angle) * arm).toFixed(2)}`);
+  }
+  return points.join(" ");
 }
 
 function hideCluster(force) {
@@ -1646,9 +1697,11 @@ function drawDot(placed) {
     stroke: color,
     "stroke-width": item.setback ? 2 : 1.6,
   };
-  const mark = exit
-    ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
-    : svgEl("circle", { ...paint, cx, cy, r: MARK_R });
+  const mark = item.setback || item.direction === "negative"
+    ? svgEl("polygon", { ...paint, points: starPoints(cx, cy, 5.2) })
+    : exit
+      ? svgEl("polygon", { ...paint, points: `${cx},${cy - 5} ${cx + 5},${cy} ${cx},${cy + 5} ${cx - 5},${cy}` })
+      : svgEl("circle", { ...paint, cx, cy, r: MARK_R });
   if (item.precision !== "day" && item.precision !== "exact") mark.setAttribute("stroke-dasharray", "1.6 1.3");
   group.append(mark);
   group.addEventListener("click", (event) => {
@@ -1810,6 +1863,7 @@ function chartStampFor(rows) {
     watchOnly: state.watchOnly,
     q: state.q,
     chartAll: state.chartAll,
+    chartSort: state.chartSort,
     n: rows.length,
     a: rows[0] && rows[0].id,
     b: rows.length ? rows[rows.length - 1].id : "",
@@ -2225,6 +2279,42 @@ function bindChrome() {
   paintThemeButton();
   const showMore = document.getElementById("showMore");
   if (showMore) showMore.addEventListener("click", () => { state.shown += PAGE; render(); });
+  const chartToggle = document.getElementById("chartToggle");
+  const chartSort = document.getElementById("chartSort");
+  try {
+    state.chartOpen = localStorage.getItem("moonshot-chart-open") !== "0";
+    const savedSort = localStorage.getItem("moonshot-chart-sort");
+    if (savedSort === "next" || savedSort === "latest" || savedSort === "watch" || savedSort === "count") state.chartSort = savedSort;
+  } catch (err) { /* keep defaults */ }
+  const paintChartChrome = () => {
+    const block = document.getElementById("chartBlock");
+    if (block) block.classList.toggle("is-collapsed", !state.chartOpen);
+    if (chartToggle) {
+      chartToggle.textContent = state.chartOpen ? "Hide timeline" : "Show timeline";
+      chartToggle.setAttribute("aria-expanded", state.chartOpen ? "true" : "false");
+    }
+    if (chartSort) chartSort.value = state.chartSort;
+  };
+  paintChartChrome();
+  if (chartToggle) {
+    chartToggle.addEventListener("click", () => {
+      state.chartOpen = !state.chartOpen;
+      try { localStorage.setItem("moonshot-chart-open", state.chartOpen ? "1" : "0"); } catch (err) { /* ignore */ }
+      paintChartChrome();
+      if (state.chartOpen) {
+        chartStamp = "";
+        scheduleChart(chartRows);
+      }
+    });
+  }
+  if (chartSort) {
+    chartSort.addEventListener("change", () => {
+      state.chartSort = chartSort.value;
+      try { localStorage.setItem("moonshot-chart-sort", state.chartSort); } catch (err) { /* ignore */ }
+      chartStamp = "";
+      scheduleChart(chartRows);
+    });
+  }
   const chartMore = document.getElementById("chartMore");
   if (chartMore) {
     chartMore.addEventListener("click", () => {

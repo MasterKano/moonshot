@@ -79,7 +79,7 @@
               <dt>Pilot detail</dt>
               <dd>Open a pilot row for the risk removed, the stage reached, and the other register labels.</dd>
               <dt>Chart</dt>
-              <dd>One lane per company. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. A crowded week shows up to three markers, then a count for the rest. Months sit on the top axis. The chart scrolls sideways inside its own box.</dd>
+              <dd>One lane per company. Hide timeline collapses it and remembers that choice. Sort lanes by next catalyst, latest material change, watchlist first, or most events. It shows up to 25 companies. Watchlist shows every pinned name. A filled marker has happened. An open marker is still ahead. A dashed outline means the date is a month or a wider window, not a single day. Colour follows direction or significance. A star is a setback. A crowded week shows up to three markers, then a count for the rest. Months sit on the top axis. The chart scrolls sideways inside its own box.</dd>
               <dt>Historical context</dt>
               <dd>r5, r20, and r60 are the share-price change after the event. They are context, not a signal.</dd>
               <dt>Source</dt>
@@ -101,6 +101,23 @@
           <button type="button" class="clear-link" id="clearFilters" hidden>Clear filters</button>
         </div>
         <div class="chart-block" id="chartBlock">
+          <div class="chart-tools">
+            <button type="button" class="toggle-btn" id="chartToggle" aria-expanded="true" aria-controls="chartScroll">Hide timeline</button>
+            <label class="sort-label">Sort lanes by
+              <select id="chartSort" aria-label="Sort lanes by">
+                <option value="next">Next catalyst</option>
+                <option value="latest">Latest material change</option>
+                <option value="watch">Watchlist first</option>
+                <option value="count">Most events</option>
+              </select>
+            </label>
+          </div>
+          <p class="chart-legend" id="chartLegend">
+            <span><i class="legend-swatch legend-positive"></i> Positive or material</span>
+            <span><i class="legend-swatch legend-neutral"></i> Neutral or background</span>
+            <span><i class="legend-star" aria-hidden="true">★</i> Setback</span>
+            <span><i class="legend-count">+N</i> More events that week</span>
+          </p>
           <div class="chart-head">
             <p class="panel-meta" id="chartMeta"></p>
             <button type="button" class="show-more" id="chartMore" hidden>Show all companies</button>

@@ -1,0 +1,225 @@
+{
+ "country": "Falkland Islands",
+ "as_of": "2026-10-27",
+ "sources": {
+  "licence_register": "https://falklands.gov.fk/mineralresources/images/jdownloads/2026.05.25-PRODUCTION_LICENCE_STATUS_AS_OF_4th_March_26_plus_area.pdf",
+  "fig_extension": "https://en.mercopress.com/2026/09/21/falklands-government-extends-all-offshore-oil-licences-for-five-years",
+  "bor_half_year": "https://www.investegate.co.uk/announcement/rns/borders-southern-petroleum--bor/half-year-financial-report/9780712"
+ },
+ "companies": [
+  {
+   "code": "NVPT",
+   "name": "Navitas Petroleum LP",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL032, PL033 (Sea Lion discovery area); PL003a, PL003b, PL004a, PL004b, PL004c, PL005",
+   "working_interest": "65%",
+   "operator": "Navitas (operator)",
+   "stage": "Developer (Sea Lion NDA 1 sanctioned Dec 2025, first oil targeted Q1 2028)",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": "NVPT",
+   "name": "Navitas Petroleum LP",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL001",
+   "working_interest": "65% (farm-in approved by FIG 21 Sep 2026)",
+   "operator": "Navitas (incoming operator)",
+   "stage": "Exploration (well planned early 2027)",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": "RKH",
+   "name": "Rockhopper Exploration plc",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL032, PL033 (Sea Lion); PL003a/b, PL004a/b/c, PL005 via Desire Petroleum and Rockhopper Exploration (Oil)",
+   "working_interest": "35%",
+   "operator": "Navitas",
+   "stage": "Developer (non-operating partner)",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": "RKH",
+   "name": "Rockhopper Exploration plc (via Falkland Oil and Gas Ltd)",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL011, PL012, PL014",
+   "working_interest": "100%",
+   "operator": "Falkland Oil and Gas Ltd (Rockhopper subsidiary)",
+   "stage": "Exploration (dormant)",
+   "basin": "South and East Falkland Basin"
+  },
+  {
+   "code": null,
+   "name": "JHI Associates Inc (private, Toronto)",
+   "in_dataset": "N",
+   "sector": "Oil and gas",
+   "licence": "PL001",
+   "working_interest": "35% after Navitas farm-in (100% on the March 2026 register)",
+   "operator": "Navitas (incoming); JHI Falkland Inc on the register",
+   "stage": "Exploration; being acquired by Eco",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": "ECO",
+   "name": "Eco (Atlantic) Oil and Gas Ltd",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL001 (indirect)",
+   "working_interest": "6.6% of JHI now; 35% of PL001 on completion of the JHI acquisition",
+   "operator": "Navitas",
+   "stage": "Exploration (carried to US$14m net on the PL001 well and appraisal)",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": "BOR",
+   "name": "Borders and Southern Petroleum plc",
+   "in_dataset": "Y",
+   "sector": "Oil and gas",
+   "licence": "PL018 (incl. Darwin East discovery area), PL019, PL020",
+   "working_interest": "100%",
+   "operator": "Borders and Southern (operator)",
+   "stage": "Discovery awaiting appraisal; farm-out process running",
+   "basin": "South Falkland Basin"
+  },
+  {
+   "code": null,
+   "name": "Argos Resources Ltd",
+   "in_dataset": "N",
+   "sector": "Oil and gas",
+   "licence": "None (former PL001 holder; now held by JHI)",
+   "working_interest": "0%",
+   "operator": null,
+   "stage": "No current interest",
+   "basin": "North Falkland Basin"
+  },
+  {
+   "code": null,
+   "name": "Harbour Energy plc",
+   "in_dataset": "N",
+   "sector": "Oil and gas",
+   "licence": "None (exited Sea Lion to Navitas, 2021 to 2022 deals)",
+   "working_interest": "0%",
+   "operator": null,
+   "stage": "No current interest",
+   "basin": "North Falkland Basin"
+  }
+ ],
+ "catalysts": [
+  {
+   "date": "2026-12-31",
+   "date_precision": "month",
+   "net": "tight",
+   "type": "Permit or approval",
+   "headline": "Falkland Islands Government to formally issue the five-year licence extensions announced 21 September 2026, before all current terms expire on 31 December 2026",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
+   "affected": [
+    {
+     "code": "NVPT",
+     "interest": "65% Sea Lion and PL001"
+    },
+    {
+     "code": "RKH",
+     "interest": "35% Sea Lion"
+    },
+    {
+     "code": "ECO",
+     "interest": "35% PL001 via JHI"
+    },
+    {
+     "code": "BOR",
+     "interest": "100% PL018 to PL020"
+    }
+   ],
+   "category": "Operational"
+  },
+  {
+   "date": "2026-12-31",
+   "date_precision": "month",
+   "net": "loose",
+   "type": "MnA",
+   "headline": "Completion of Eco acquisition of JHI Associates (35% of PL001) once the PL001 extension is issued",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/navitas-update-on-pl001-block-1-cbk-/9737676",
+   "affected": [
+    {
+     "code": "ECO",
+     "interest": "35% PL001"
+    }
+   ],
+   "category": "Capital and deals"
+  },
+  {
+   "date": "2027-03-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "Drilling start",
+   "headline": "Rig arrival and start of Sea Lion NDA Phase 1 development drilling (11 wells), early 2027",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/sea-lion-update-potential-capital-raise/9736066",
+   "affected": [
+    {
+     "code": "NVPT",
+     "interest": "65%"
+    },
+    {
+     "code": "RKH",
+     "interest": "35%"
+    }
+   ],
+   "category": "Operational"
+  },
+  {
+   "date": "2027-03-31",
+   "date_precision": "quarter",
+   "net": "loose",
+   "type": "Drilling start",
+   "headline": "Navitas multi-target PL001 exploration well (first target about 640 MMbbl gross 2U), early 2027",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/navitas-update-on-pl001-block-1-cbk-/9737676",
+   "affected": [
+    {
+     "code": "NVPT",
+     "interest": "65%"
+    },
+    {
+     "code": "ECO",
+     "interest": "35% via JHI"
+    }
+   ],
+   "category": "Operational"
+  },
+  {
+   "date": "2027-06-30",
+   "date_precision": "month",
+   "net": "loose",
+   "type": "Results due",
+   "headline": "Rockhopper and Borders and Southern full-year 2026 results due by end of June 2027",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684",
+   "affected": [
+    {
+     "code": "RKH",
+     "interest": null
+    },
+    {
+     "code": "BOR",
+     "interest": null
+    }
+   ],
+   "category": "Corporate"
+  }
+ ],
+ "beyond_window": [
+  {
+   "date": "2028-03-31",
+   "date_precision": "quarter",
+   "headline": "Sea Lion NDA Phase 1 first oil via the Aoka Mizu FPSO (about 55,000 bopd gross)",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/9797684"
+  },
+  {
+   "date": "2028-06-30",
+   "date_precision": "half",
+   "headline": "Central Development Area plan to FIG and FID (OSX-1 FPSO, 38 wells)",
+   "source_url": "https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rkh/sea-lion-update-potential-capital-raise/9736066"
+  }
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "country": "South Africa",
+ "as_of": "2026-10-27",
+ "companies": [
+  {
+   "code": "ECO",
+   "name": "Eco (Atlantic) Oil and Gas Ltd",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Block 3B/4B",
+     "working_interest": "5.25%, carried through first two wells; US$11.5m due on final drilling permit and first spud",
+     "operator": "TotalEnergies (33%)",
+     "stage": "Exploration; EA appeals dismissed 13 Oct 2026 (judicial review still possible); first well Nayla not yet dated",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/audited-results-for-the-year-ended-31-march-2026/9682989"
+    },
+    {
+     "licence": "Block 1 CBK",
+     "working_interest": "37.5% after farm-down to Navitas (completed 22 Sep 2026); option over a further 20% from OrangeBasin Energies",
+     "operator": "Navitas",
+     "stage": "Exploration; Navitas carries Eco through the work programme",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/completion-of-farm-down-in-block-1-cbk/9783214"
+    }
+   ]
+  },
+  {
+   "code": "MER.ST",
+   "name": "Meren Energy Inc.",
+   "in_dataset": true,
+   "exchange": "Nasdaq Stockholm",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Block 3B/4B",
+     "working_interest": "18% direct (Africa Oil SA)",
+     "operator": "TotalEnergies",
+     "stage": "Exploration; EA appeals dismissed 13 Oct 2026",
+     "basin": "Orange Basin",
+     "source_url": "https://view.news.eu.nasdaq.com/view?id=b16e8159aa6997e41dfd847836c9a0f8c&lang=en&src=listed",
+     "note": "18% per public farm-in records; Meren report says direct interest without restating the figure"
+    }
+   ]
+  },
+  {
+   "code": "NVPT",
+   "name": "Navitas Petroleum LP",
+   "in_dataset": true,
+   "exchange": "Tel Aviv Stock Exchange",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Block 1 CBK",
+     "working_interest": "37.5% (up to 47.5% via the OrangeBasin option)",
+     "operator": "Navitas",
+     "stage": "Exploration; operator since 22 Sep 2026",
+     "basin": "Orange Basin",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/eco-atlantic-oil-gas-npv-di---eco/completion-of-farm-down-in-block-1-cbk/9783214"
+    }
+   ]
+  },
+  {
+   "code": "TRP",
+   "name": "Tower Resources plc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Algoa-Gamtoos",
+     "working_interest": "50%",
+     "operator": "Tower",
+     "stage": "Exploration; carrying value impaired (legislative uncertainty)",
+     "basin": "Outeniqua Basin (Algoa sub-basin)",
+     "source_url": "https://www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-results/9792645"
+    }
+   ]
+  },
+  {
+   "code": "AEC",
+   "name": "Africa Energy Corp.",
+   "in_dataset": false,
+   "exchange": "TSX-V / Nasdaq First North",
+   "sector": "Oil and gas",
+   "interests": [
+    {
+     "licence": "Block 11B/12B (Brulpadda, Luiperd)",
+     "working_interest": "indirect via Main Street 1549 (target 75% direct, subject to approvals)",
+     "operator": "Main Street 1549",
+     "stage": "Development application and ESIA under way (Sep 2026)",
+     "basin": "Outeniqua Basin",
+     "source_url": "https://africaenergycorp.com/operations/south-africa-block-11b-12b/"
+    }
+   ]
+  },
+  {
+   "code": "WWI",
+   "name": "West Wits Mining Limited",
+   "in_dataset": true,
+   "exchange": "ASX",
+   "sector": "Mining",
+   "commodity": "Gold",
+   "project": "Qala Shallows, Central Rand"
+  },
+  {
+   "code": "VR8",
+   "name": "Vanadium Resources Limited",
+   "in_dataset": true,
+   "exchange": "ASX",
+   "sector": "Mining",
+   "commodity": "Vanadium",
+   "project": "Steelpoortdrift, Limpopo"
+  },
+  {
+   "code": "KZG",
+   "name": "Kazera Global plc",
+   "in_dataset": true,
+   "exchange": "AIM",
+   "sector": "Mining",
+   "commodity": "Diamonds and mineral sands",
+   "project": "Alexander Bay"
+  },
+  {
+   "code": "PAF",
+   "name": "Pan African Resources plc",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Gold",
+   "project": "South African gold operations (also Tennant Mines, Australia)"
+  },
+  {
+   "code": "THS",
+   "name": "Tharisa plc",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Platinum group metals and chrome",
+   "project": "Tharisa mine (Karo is in Zimbabwe)"
+  },
+  {
+   "code": "RBW",
+   "name": "Rainbow Rare Earths Limited",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Rare earths",
+   "project": "Phalaborwa"
+  },
+  {
+   "code": "TGA",
+   "name": "Thungela Resources Limited",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Coal",
+   "project": "South African thermal coal mines"
+  },
+  {
+   "code": "NEO",
+   "name": "Neo Energy Metals plc",
+   "in_dataset": true,
+   "exchange": "Main Market",
+   "sector": "Mining",
+   "commodity": "Uranium",
+   "project": "Beatrix (Free State)",
+   "note": "Country inferred from the Beatrix mining right; dataset description does not name the country"
+  }
+ ],
+ "catalysts": [
+  {
+   "date": null,
+   "date_precision": "undated",
+   "net": null,
+   "type": "Well spud",
+   "headline": "Block 3B/4B first exploration well (Nayla) can proceed after the Minister dismissed all 47 EA appeals on 13 Oct 2026; spud not yet dated and judicial review still possible",
+   "category": "Operational",
+   "basin": "Orange Basin",
+   "affected": [
+    {
+     "code": "ECO",
+     "interest": "5.25% carried; US$11.5m on final permit and spud",
+     "in_dataset": true
+    },
+    {
+     "code": "MER.ST",
+     "interest": "18%",
+     "in_dataset": true
+    }
+   ],
+   "affected_codes": [
+    "ECO",
+    "MER.ST"
+   ],
+   "other_partners": [
+    "TotalEnergies 33% (operator)",
+    "QatarEnergy 24%",
+    "Ricocure 19.75%"
+   ],
+   "source_url": "https://www.engineeringnews.co.za/article/south-africa-dismisses-appeals-against-exploration-in-totalenergies-block-3b4b-2026-10-16",
+   "status": "upcoming"
+  }
+ ]
+}

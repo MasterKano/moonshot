@@ -9,7 +9,8 @@ const BANDS = [
   ["large", "Large"],
   ["private", "Private"],
 ];
-const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv"];
+const MARKETS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const SCREEN_PILOTS = new Set(["LUN", "MAU", "FDY", "LUNR", "ORRON"]);
 const CATEGORIES = ["Operational", "Capital and deals", "Corporate"];
 const SECTOR_ORDER = ["Oil and gas", "Mining", "Royalty and stream", "Renewables"];
 const RISK_LABELS = {
@@ -133,8 +134,10 @@ function namesClose(a, b) {
   const right = nameKey(b);
   if (!left || !right) return false;
   if (left === right) return true;
-  if (left.length >= 6 && right.length >= 6 && (left.includes(right) || right.includes(left))) return true;
-  return false;
+  const shorter = left.length <= right.length ? left : right;
+  const longer = left.length <= right.length ? right : left;
+  if (shorter.length < 6) return false;
+  return ` ${longer} `.includes(` ${shorter} `);
 }
 
 function bareCode(code) {
@@ -341,11 +344,38 @@ function indexCountries(files) {
   return map;
 }
 
+function profileByCode(profiles, code) {
+  if (!code) return null;
+  return profiles.find((profile) => codesMatch(profile.code, code)) || null;
+}
+
 function findProfile(profiles, name) {
+  const key = nameKey(name);
+  if (!key) return null;
+  const exact = profiles.find((profile) => [profile.shortName, profile.name, profile.label].some((value) => nameKey(value) === key));
+  if (exact) return exact;
   for (const profile of profiles) {
-    if (namesClose(profile.name, name) || namesClose(profile.label, name)) return profile;
+    if (namesClose(profile.name, name) || namesClose(profile.label, name) || namesClose(profile.shortName, name)) return profile;
   }
   return null;
+}
+
+function parentPhrase(parent) {
+  if (!parent || typeof parent !== "object") return "";
+  const name = showText(parent.name).replace(/\s+(ASA|AB|plc|SE|AG|S\.A\.|SA)$/i, "").trim();
+  const ticker = showText(parent.ticker);
+  if (!name || name === "—") return "";
+  return ticker && ticker !== "—" ? `${name} (${ticker})` : name;
+}
+
+function withIdentity(profile, listingStatus, parentListed, legalName) {
+  profile.listingStatus = listingStatus || profile.listingStatus || "";
+  profile.parentListed = parentListed || profile.parentListed || null;
+  const phrase = parentPhrase(profile.parentListed);
+  if (String(profile.listingStatus).toLowerCase() === "subsidiary of listed" && phrase && legalName) {
+    profile.label = `${legalName}, part of ${phrase}`;
+  }
+  return profile;
 }
 
 function blankProfile(name) {
@@ -371,6 +401,7 @@ function assignCountries(profiles, countryIndex) {
 function buildProfiles(screen, norwayCompanies, countryIndex) {
   const profiles = screen.map((row) => ({
     name: row.name,
+    shortName: row.name,
     label: row.name,
     code: row.code || "",
     band: bandKeyFromLabel(row.band),
@@ -378,26 +409,35 @@ function buildProfiles(screen, norwayCompanies, countryIndex) {
     sector: sectorOfType(row.type),
     countries: [],
     onScreen: true,
+    listingStatus: "listed",
+    parentListed: null,
   }));
   norwayCompanies.forEach((company) => {
-    const existing = findProfile(profiles, company.short_name) || findProfile(profiles, company.name);
+    const listedCode = tickerFromListing(company.listing_ticker);
+    const code = listedCode || String(company.short_name || "").trim();
+    const existing = profileByCode(profiles, listedCode)
+      || (!listedCode && (findProfile(profiles, company.short_name) || findProfile(profiles, company.name)));
     if (existing) {
       if (!existing.markets.includes("Norway")) existing.markets.push("Norway");
       if (!existing.band) existing.band = norwayBand(company);
-      if (!existing.code) existing.code = tickerFromListing(company.listing_ticker);
+      if (!existing.code) existing.code = code;
+      if (!existing.shortName) existing.shortName = company.short_name || "";
       return;
     }
-    const code = tickerFromListing(company.listing_ticker);
-    profiles.push({
+    const profile = {
       name: company.name,
+      shortName: company.short_name || company.name,
       label: company.short_name || company.name,
       code,
       band: norwayBand(company),
       markets: ["Norway"],
       sector: "Oil and gas",
       countries: [],
-      onScreen: !!code,
-    });
+      onScreen: true,
+      listingStatus: company.listing_status || "",
+      parentListed: company.parent_listed || null,
+    };
+    profiles.push(withIdentity(profile, company.listing_status, company.parent_listed, company.name));
   });
   assignCountries(profiles, countryIndex);
   return profiles;
@@ -495,7 +535,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   const rows = [];
 
   screen.forEach((company) => {
-    const profile = findProfile(profiles, company.name) || blankProfile(company.name);
+    const profile = profileByCode(profiles, company.code) || (!company.code && findProfile(profiles, company.name)) || blankProfile(company.name);
     (company.events || []).forEach((event, index) => {
       const when = parseDate(event.date, "exact");
       if (!when) return;
@@ -541,17 +581,27 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     const when = parseDate(row.date, row.date && /^\d{4}-\d{2}$/.test(row.date) ? "month" : "exact");
     if (!when) return;
     const meta = byTicker.get(row.ticker);
-    let profile = findProfile(profiles, row.company);
+    let profile = profileByCode(profiles, row.ticker) || (!row.ticker && findProfile(profiles, row.company));
     if (!profile) {
+      const exchange = meta && meta.exchange;
+      const markets = [];
+      const venue = String(exchange || "").toLowerCase();
+      if (venue.includes("stockholm") || venue.includes("oslo") || venue.includes("helsinki")) markets.push("Nordic");
+      if (venue.includes("tsx") || venue.includes("toronto")) markets.push("TSX");
+      if (venue.includes("london") || venue.includes("aim")) markets.push("London");
+      if (venue.includes("asx")) markets.push("ASX");
       profile = {
         name: row.company,
+        shortName: row.company,
         label: row.company,
         code: row.ticker,
         band: bandFromCap(meta && meta.market_cap_usd_m),
-        markets: [],
+        markets,
         sector: PILOT_SECTORS[meta && meta.sector] || "",
         countries: [],
-        onScreen: false,
+        onScreen: SCREEN_PILOTS.has(row.ticker),
+        listingStatus: "listed",
+        parentListed: null,
       };
       profiles.push(profile);
     }
@@ -578,7 +628,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
     let host = null;
     let best = 0;
     rows.forEach((item) => {
-      const sameCompany = item.companies.some((company) => namesClose(company.label, row.company) || namesClose(company.name, row.company));
+      const sameCompany = item.companies.some((company) => codesMatch(company.code, row.ticker) || (!row.ticker && (namesClose(company.label, row.company) || namesClose(company.name, row.company) || namesClose(company.shortName, row.company))));
       if (!sameCompany || !datesClose(item.sort, item.precision, row.date)) return;
       const score = headlineScore(item.headline, row.what_happened);
       if (score > best) { host = item; best = score; }
@@ -885,10 +935,17 @@ function clearFilters() {
   render();
 }
 
+function notListedTag(company) {
+  const status = String(company.listingStatus || "").toLowerCase();
+  if (status !== "private" && status !== "state") return null;
+  return el("span", { class: "not-listed", title: "Private or state entity, with no stock-exchange listing.", text: "Not listed" });
+}
+
 function companyNode(company) {
   const body = [
     el("span", { class: "cap-name", text: showText(company.label || company.name) }),
     company.code ? el("span", { class: "co-ticker", text: showText(company.code) }) : null,
+    notListedTag(company),
   ];
   if (!company.code || !(company.onScreen || linkCodes.has(company.code))) return el("span", { class: "tl-plain" }, body);
   return el("button", {
@@ -1967,9 +2024,10 @@ async function main() {
       loadJson("data/coming_up.json"),
     ]);
     screenCodes = new Set(screen.map((row) => row.code).filter(Boolean));
+    SCREEN_PILOTS.forEach((code) => screenCodes.add(code));
     linkCodes = new Set(screenCodes);
     norwayCompanies.forEach((company) => {
-      const code = tickerFromListing(company.listing_ticker);
+      const code = tickerFromListing(company.listing_ticker) || String(company.short_name || "").trim();
       if (code) linkCodes.add(code);
     });
     across = Array.isArray(readAcross) ? readAcross : [];
@@ -1986,6 +2044,9 @@ async function main() {
     );
     events = built.events;
     upcoming = built.upcoming;
+    const companyKeys = new Set();
+    events.forEach((item) => item.companies.forEach((company) => companyKeys.add(company.code || company.label || company.name)));
+    document.body.dataset.chartCompanies = String(companyKeys.size);
     typeOptions = built.types;
     sectorOptions = built.sectors;
     countryOptions = built.countries;

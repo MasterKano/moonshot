@@ -2,7 +2,8 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
 const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Nasdaq Stockholm", "Nasdaq Helsinki", "Nasdaq First North Sweden", "Oslo Børs", "Euronext Growth Oslo", "Tel Aviv Stock Exchange", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
-const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv"];
+const MARKET_OPTIONS = ["London", "ASX", "Norway", "Nordic", "Tel Aviv", "TSX"];
+const PILOT_CODES = ["LUN", "MAU", "FDY", "LUNR", "ORRON"];
 const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const CATEGORY_OPTIONS = ["Operational", "Capital and deals", "Corporate"];
 const BAND_ORDER = ["Micro (US$5-100M)", "Main (US$100M-5B)"];
@@ -284,6 +285,27 @@ function screenCode(company) {
   return tickerSymbol(company) || String(company.short_name || "").trim();
 }
 
+function parentPhrase(parent) {
+  if (!parent || typeof parent !== "object") return "";
+  const name = showText(parent.name).replace(/\s+(ASA|AB|plc|SE|AG|S\.A\.|SA)$/i, "").trim();
+  const ticker = showText(parent.ticker);
+  if (!name || name === "—") return "";
+  return ticker && ticker !== "—" ? `${name} (${ticker})` : name;
+}
+
+function identityName(company) {
+  const legal = company.name || company.short_name || "";
+  const phrase = parentPhrase(company.parent_listed);
+  if (company.listing_status === "subsidiary of listed" && phrase) return `${legal}, part of ${phrase}`;
+  return legal;
+}
+
+function notListedTag(row) {
+  const status = String(row.listingStatus || "").toLowerCase();
+  if (status !== "private" && status !== "state") return null;
+  return el("span", { class: "not-listed", title: "Private or state entity, with no stock-exchange listing.", text: "Not listed" });
+}
+
 function nameMatches(shortName, companyName) {
   const short = String(shortName || "").trim().toLowerCase();
   const name = String(companyName || "").trim().toLowerCase();
@@ -360,6 +382,8 @@ function normalize(raw, index) {
     sector: sectorOf(row.type),
     markets: [listingMarket(row.exchange)],
     shelf: false,
+    listingStatus: "listed",
+    parentListed: null,
   };
 }
 
@@ -427,7 +451,7 @@ function norwayRow(company, pack, range) {
   return {
     id: `no:${code}`,
     code,
-    name: company.name,
+    name: identityName(company),
     exchange: venueOf(company.listing_ticker),
     band: null,
     type: "Oil and gas",
@@ -451,7 +475,139 @@ function norwayRow(company, pack, range) {
     sector: "Oil and gas",
     markets: ["Norway"],
     shelf: true,
+    listingStatus: company.listing_status || "",
+    parentListed: company.parent_listed || null,
   };
+}
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+  const src = String(text).replace(/^\uFEFF/, "");
+  for (let i = 0; i < src.length; i++) {
+    const c = src[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (src[i + 1] === '"') { field += '"'; i += 1; }
+        else inQuotes = false;
+      } else field += c;
+    } else if (c === '"') inQuotes = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+    else if (c !== "\r") field += c;
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows.filter((cells) => cells.some((cell) => cell.trim() !== ""));
+}
+
+function rowsToObjects(text) {
+  const table = parseCsv(text);
+  if (!table.length) return [];
+  const headers = table[0].map((header) => header.trim());
+  return table.slice(1).map((cells) => {
+    const obj = {};
+    headers.forEach((header, i) => { obj[header] = (cells[i] ?? "").trim(); });
+    return obj;
+  });
+}
+
+function pilotSector(sector) {
+  const text = String(sector || "").toLowerCase();
+  if (text.includes("oil")) return "Oil and gas";
+  if (text.includes("renew")) return "Renewables";
+  if (text.includes("royalty")) return "Royalty and stream";
+  return "Mining";
+}
+
+function pilotMarkets(exchange) {
+  const text = String(exchange || "").toLowerCase();
+  const markets = [];
+  if (text.includes("stockholm") || text.includes("helsinki") || text.includes("oslo")) markets.push("Nordic");
+  if (text.includes("tsx") || text.includes("toronto")) markets.push("TSX");
+  if (text.includes("asx")) markets.push("ASX");
+  if (text.includes("london") || /\baim\b/.test(text)) markets.push("London");
+  return markets.length ? markets : ["TSX"];
+}
+
+function pilotBand(cap) {
+  const number = asNumber(cap);
+  if (number == null) return null;
+  if (number >= 5000) return "Large";
+  if (number >= 100) return "Main (US$100M-5B)";
+  if (number >= 5) return "Micro (US$5-100M)";
+  return null;
+}
+
+function mapPilotEvent(event) {
+  const monthOnly = /^\d{4}-\d{2}$/.test(String(event.date || ""));
+  return {
+    date: event.date,
+    date_precision: monthOnly ? "month" : "exact",
+    type: displayType(event.event_type || event.risk_removed),
+    headline: event.what_happened,
+    setback: false,
+    source_url: event.source_url,
+    source_status: event.source_status,
+    source_link_level: event.source_link_level,
+    last_checked: event.last_checked,
+    sources: event.source_url ? [event.source_url] : [],
+    category: "",
+    material_if_delivered: event.material === "Y" ? "Y" : "N",
+    r5: null,
+    r20: null,
+    r60: null,
+    significance: event.significance || "",
+    direction: event.direction || "",
+    event_type: event.event_type || "",
+  };
+}
+
+function foldPilots(rows, companies, events) {
+  const wanted = new Set(PILOT_CODES);
+  companies.forEach((company) => {
+    const code = String(company.ticker || "").trim().toUpperCase();
+    if (!wanted.has(code)) return;
+    if (rows.some((row) => String(row.code).toUpperCase() === code)) return;
+    const own = events.filter((event) => String(event.ticker || "").toUpperCase() === code);
+    own.sort((a, b) => String(b.date).localeCompare(String(a.date)) || showText(a.what_happened).localeCompare(showText(b.what_happened)));
+    const material = own.filter((event) => event.material === "Y");
+    const latest = material[0] || own[0];
+    const cap = asNumber(company.market_cap_usd_m);
+    const commodity = showText(company.commodity);
+    rows.push({
+      id: `pilot:${code}`,
+      code,
+      name: company.company,
+      exchange: showText(company.exchange).replaceAll(";", ","),
+      band: pilotBand(cap),
+      type: commodity === "—" ? commodity : commodity.charAt(0).toUpperCase() + commodity.slice(1),
+      stage: displayType(company.stage),
+      description: company.notes,
+      cap,
+      median: null,
+      currency: company.market_cap_currency,
+      asOf: company.mktcap_as_of,
+      events12m: material.length,
+      latestDate: latest ? latest.date : null,
+      latestType: latest ? (latest.event_type || latest.risk_removed) : null,
+      latestHeadline: latest ? latest.what_happened : null,
+      setbacks: 0,
+      cash: null,
+      url: "",
+      events: own.map(mapPilotEvent),
+      upcoming: [],
+      upcomingCount: 0,
+      nextDate: null,
+      sector: pilotSector(company.sector),
+      markets: pilotMarkets(company.exchange),
+      shelf: false,
+      listingStatus: "listed",
+      parentListed: null,
+    });
+  });
+  return rows;
 }
 
 function foldNorway(rows, companies, events) {
@@ -576,8 +732,9 @@ function latestNode(row) {
 
 function companyNode(row) {
   const name = el("span", {}, [
-    el("span", { class: "cap-name", text: showText(row.name) }),
+    el("span", { class: "cap-name", title: showText(row.name), text: showText(row.name) }),
     el("span", { class: "cap-code", text: showText(row.code) }),
+    notListedTag(row),
   ]);
   const star = window.moonshotWatch ? window.moonshotWatch.star(row.code, row.name) : null;
   if (!star) return name;
@@ -1143,14 +1300,22 @@ async function loadJson(path) {
   return response.json();
 }
 
+async function loadText(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(path);
+  return response.text();
+}
+
 async function loadCaps() {
-  const [data, companies, events, summary, across, slippedRows, falklands, namibia, guyana, southAfrica, gabon, angola, colombia] = await Promise.all([
+  const [data, companies, events, summary, across, slippedRows, pilotCompanies, pilotEvents, falklands, namibia, guyana, southAfrica, gabon, angola, colombia] = await Promise.all([
     loadJson("data/smallcaps.json"),
     loadJson("data/norway_companies.json"),
     loadJson("data/norway_events.json"),
     loadJson("data/smallcaps_reaction_summary.json"),
     loadJson("data/read_across.json"),
     loadJson("data/slipped.json"),
+    loadText("data/companies.csv"),
+    loadText("data/events.csv"),
     loadJson("data/falklands.json"),
     loadJson("data/namibia.json"),
     loadJson("data/guyana.json"),
@@ -1163,7 +1328,7 @@ async function loadCaps() {
   readAcross = Array.isArray(across) ? across : [];
   slipped = Array.isArray(slippedRows) ? slippedRows : [];
   indexCountries([falklands, namibia, guyana, southAfrica, gabon, angola, colombia]);
-  caps = foldNorway(data.map(normalize), companies, events);
+  caps = foldPilots(foldNorway(data.map(normalize), companies, events), rowsToObjects(pilotCompanies), rowsToObjects(pilotEvents));
   assignCountries(caps);
   document.getElementById("smallcaps-loading").hidden = true;
   renderReactions(summary);

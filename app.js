@@ -55,6 +55,7 @@ const state = {
 let events = [];
 let upcoming = [];
 let fundingByCode = new Map();
+let screenProfiles = [];
 let typeOptions = [];
 let sectorOptions = [];
 let countryOptions = [];
@@ -731,6 +732,7 @@ function buildTimeline(screen, norwayEvents, norwayCompanies, pilotRows, pilotCo
   });
 
   rememberSplitRoots(profiles);
+  screenProfiles = profiles.filter((profile) => profile.onScreen || (profile.code && screenCodes.has(profile.code)));
   rows.forEach((item) => {
     item.affects = affectsFor(readAcross, item.companies, item.sort, item.precision, item.headline);
   });
@@ -1757,6 +1759,18 @@ function chartBounds(rows) {
   return { start: start - pad, end: end + pad };
 }
 
+function companyVisible(company) {
+  if (state.watchOnly && !(company.code && window.moonshotWatch && window.moonshotWatch.has(company.code))) return false;
+  if (state.band !== "all" && company.band !== state.band) return false;
+  if (state.sector !== "all" && company.sector !== state.sector) return false;
+  if (state.market !== "all" && !(company.markets || []).includes(state.market)) return false;
+  if (state.country !== "all" && !(company.countries || []).includes(state.country)) return false;
+  const query = state.q.trim().toLowerCase();
+  if (!query) return true;
+  const blob = [company.label, company.name, company.code, company.shortName].join(" ").replaceAll("&", "and").toLowerCase();
+  return blob.includes(query);
+}
+
 function buildLanes(rows) {
   const map = new Map();
   rows.forEach((item) => {
@@ -1793,8 +1807,32 @@ function buildLanes(rows) {
       lane.count += 1;
     });
   });
+  // Companies with no event in this filter still belong to the same list as the Screen.
+  if (!state.briefIds || !state.briefIds.size) {
+    screenProfiles.forEach((company) => {
+      if (!companyVisible(company)) return;
+      const key = companyKey(company);
+      if (map.has(key)) return;
+      const subsidiary = subsidiaryOfListed(company);
+      const chip = subsidiary ? parentTicker(company) : (company.code || "");
+      const name = subsidiary ? parentShortLabel(company) : (company.label || company.name || company.code || "Company");
+      const full = subsidiary ? (company.label || company.name || name) : "";
+      map.set(key, {
+        key,
+        code: chip,
+        name,
+        title: full || (chip ? `${showText(name)} (${showText(chip)})` : showText(name)),
+        screenCode: company.code || chip,
+        onScreen: true,
+        count: 0,
+        subsidiary,
+      });
+    });
+  }
   const pinned = (lane) => !!(lane.code && window.moonshotWatch && window.moonshotWatch.has(lane.code));
   return [...map.values()].sort((a, b) => {
+    const presence = Number(b.count > 0) - Number(a.count > 0);
+    if (presence) return presence;
     if (state.chartSort === "count") return b.count - a.count || showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" });
     if (state.chartSort === "watch") {
       const pin = Number(pinned(b)) - Number(pinned(a));

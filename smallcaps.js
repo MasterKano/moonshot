@@ -352,7 +352,12 @@ function findScreenRow(company, rows) {
     const byCode = rows.find((row) => String(row.code).toUpperCase() === symbol);
     if (byCode) return byCode;
   }
-  return rows.find((row) => nameMatches(company.short_name, row.name)) || null;
+  return rows.find((row) => {
+    if (!nameMatches(company.short_name, row.name)) return false;
+    // A different listed ticker is a different company. "TotalEnergies" must not swallow TotalEnergies EP Gabon.
+    if (symbol && row.code && String(row.code).toUpperCase() !== symbol) return false;
+    return true;
+  }) || null;
 }
 
 function displayType(value) {

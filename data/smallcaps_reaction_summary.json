@@ -1,0 +1,873 @@
+{
+ "method": "Abnormal return in % = share price move minus market index move (ASX: S&P/ASX Small Ordinaries; London AIM: FTSE AIM All-Share; London Main Market: FTSE All-Share). Day 1 = first close on or after the event date, measured from the prior close. Historical context only.",
+ "as_of": "2026-10-26 close",
+ "by_tier": {
+  "background": {
+   "1d": {
+    "n": 4598,
+    "median": 0.0,
+    "mean": 0.6,
+    "hit_rate": 50.5,
+    "iqr": [
+     -2.5,
+     2.8
+    ]
+   },
+   "5d": {
+    "n": 4531,
+    "median": -0.4,
+    "mean": 1.0,
+    "hit_rate": 47.8,
+    "iqr": [
+     -5.8,
+     5.2
+    ]
+   },
+   "20d": {
+    "n": 4212,
+    "median": -1.1,
+    "mean": 2.5,
+    "hit_rate": 47.4,
+    "iqr": [
+     -11.5,
+     11.2
+    ]
+   },
+   "60d": {
+    "n": 3473,
+    "median": -1.6,
+    "mean": 9.6,
+    "hit_rate": 48.3,
+    "iqr": [
+     -18.6,
+     23.1
+    ]
+   },
+   "small_sample": false,
+   "day1_abs_vs_20d_abs_median_pct": 23.7
+  },
+  "material": {
+   "1d": {
+    "n": 556,
+    "median": 1.7,
+    "mean": 3.6,
+    "hit_rate": 62.2,
+    "iqr": [
+     -1.9,
+     6.5
+    ]
+   },
+   "5d": {
+    "n": 551,
+    "median": 0.7,
+    "mean": 5.4,
+    "hit_rate": 51.7,
+    "iqr": [
+     -4.8,
+     9.4
+    ]
+   },
+   "20d": {
+    "n": 512,
+    "median": -0.7,
+    "mean": 6.5,
+    "hit_rate": 49.2,
+    "iqr": [
+     -13.2,
+     15.9
+    ]
+   },
+   "60d": {
+    "n": 419,
+    "median": 0.1,
+    "mean": 14.5,
+    "hit_rate": 50.4,
+    "iqr": [
+     -20.1,
+     30.2
+    ]
+   },
+   "small_sample": false,
+   "day1_abs_vs_20d_abs_median_pct": 31.1
+  },
+  "setback": {
+   "1d": {
+    "n": 18,
+    "median": -1.5,
+    "mean": -1.4,
+    "hit_rate": 33.3,
+    "iqr": [
+     -2.9,
+     1.4
+    ]
+   },
+   "5d": {
+    "n": 18,
+    "median": -3.4,
+    "mean": -2.0,
+    "hit_rate": 22.2,
+    "iqr": [
+     -8.1,
+     -0.4
+    ]
+   },
+   "20d": {
+    "n": 18,
+    "median": -7.9,
+    "mean": -2.0,
+    "hit_rate": 38.9,
+    "iqr": [
+     -22.4,
+     6.1
+    ]
+   },
+   "60d": {
+    "n": 15,
+    "median": -16.2,
+    "mean": 1.5,
+    "hit_rate": 26.7,
+    "iqr": [
+     -34.0,
+     0.8
+    ]
+   },
+   "small_sample": false,
+   "day1_abs_vs_20d_abs_median_pct": 15.0
+  }
+ },
+ "by_type": {
+  "Discovery or drill result": {
+   "1d": {
+    "n": 88,
+    "median": 1.9,
+    "mean": 3.2,
+    "hit_rate": 59.1,
+    "iqr": [
+     -2.5,
+     7.3
+    ]
+   },
+   "5d": {
+    "n": 86,
+    "median": 1.1,
+    "mean": 4.9,
+    "hit_rate": 53.5,
+    "iqr": [
+     -4.5,
+     12.1
+    ]
+   },
+   "20d": {
+    "n": 78,
+    "median": -2.3,
+    "mean": 10.0,
+    "hit_rate": 48.7,
+    "iqr": [
+     -13.7,
+     19.6
+    ]
+   },
+   "60d": {
+    "n": 63,
+    "median": 0.4,
+    "mean": 32.2,
+    "hit_rate": 50.8,
+    "iqr": [
+     -16.5,
+     50.5
+    ]
+   },
+   "small_sample": false
+  },
+  "FID or construction decision": {
+   "1d": {
+    "n": 5,
+    "median": -0.7,
+    "mean": -1.1,
+    "hit_rate": 40.0,
+    "iqr": [
+     -7.0,
+     2.2
+    ]
+   },
+   "5d": {
+    "n": 5,
+    "median": -3.4,
+    "mean": -6.3,
+    "hit_rate": 40.0,
+    "iqr": [
+     -14.0,
+     2.1
+    ]
+   },
+   "20d": {
+    "n": 4,
+    "median": -10.7,
+    "mean": -5.3,
+    "hit_rate": 50.0,
+    "iqr": [
+     -23.2,
+     7.3
+    ]
+   },
+   "60d": {
+    "n": 4,
+    "median": -18.9,
+    "mean": -6.7,
+    "hit_rate": 25.0,
+    "iqr": [
+     -24.1,
+     -1.6
+    ]
+   },
+   "small_sample": true
+  },
+  "First production": {
+   "1d": {
+    "n": 17,
+    "median": 4.2,
+    "mean": 4.8,
+    "hit_rate": 82.4,
+    "iqr": [
+     2.3,
+     8.0
+    ]
+   },
+   "5d": {
+    "n": 17,
+    "median": 0.8,
+    "mean": 3.1,
+    "hit_rate": 58.8,
+    "iqr": [
+     -1.7,
+     10.3
+    ]
+   },
+   "20d": {
+    "n": 15,
+    "median": -1.0,
+    "mean": 0.2,
+    "hit_rate": 46.7,
+    "iqr": [
+     -7.8,
+     6.1
+    ]
+   },
+   "60d": {
+    "n": 11,
+    "median": 2.0,
+    "mean": 4.5,
+    "hit_rate": 54.5,
+    "iqr": [
+     -15.5,
+     8.8
+    ]
+   },
+   "small_sample": false
+  },
+  "Funding": {
+   "1d": {
+    "n": 111,
+    "median": 1.2,
+    "mean": 3.1,
+    "hit_rate": 63.1,
+    "iqr": [
+     -2.0,
+     6.8
+    ]
+   },
+   "5d": {
+    "n": 111,
+    "median": 0.1,
+    "mean": 3.5,
+    "hit_rate": 50.5,
+    "iqr": [
+     -4.9,
+     9.6
+    ]
+   },
+   "20d": {
+    "n": 105,
+    "median": -3.0,
+    "mean": 4.1,
+    "hit_rate": 44.8,
+    "iqr": [
+     -15.1,
+     11.7
+    ]
+   },
+   "60d": {
+    "n": 90,
+    "median": -6.5,
+    "mean": 6.8,
+    "hit_rate": 40.0,
+    "iqr": [
+     -22.1,
+     15.8
+    ]
+   },
+   "small_sample": false
+  },
+  "MnA": {
+   "1d": {
+    "n": 157,
+    "median": 1.2,
+    "mean": 3.8,
+    "hit_rate": 61.8,
+    "iqr": [
+     -1.8,
+     5.4
+    ]
+   },
+   "5d": {
+    "n": 154,
+    "median": 0.1,
+    "mean": 4.7,
+    "hit_rate": 50.0,
+    "iqr": [
+     -4.2,
+     8.8
+    ]
+   },
+   "20d": {
+    "n": 146,
+    "median": 1.6,
+    "mean": 7.3,
+    "hit_rate": 53.4,
+    "iqr": [
+     -8.9,
+     16.6
+    ]
+   },
+   "60d": {
+    "n": 122,
+    "median": 6.8,
+    "mean": 18.4,
+    "hit_rate": 59.8,
+    "iqr": [
+     -12.8,
+     32.5
+    ]
+   },
+   "small_sample": false
+  },
+  "Permit or approval": {
+   "1d": {
+    "n": 46,
+    "median": 3.1,
+    "mean": 6.4,
+    "hit_rate": 65.2,
+    "iqr": [
+     -1.1,
+     9.3
+    ]
+   },
+   "5d": {
+    "n": 46,
+    "median": 5.0,
+    "mean": 5.4,
+    "hit_rate": 60.9,
+    "iqr": [
+     -4.5,
+     11.8
+    ]
+   },
+   "20d": {
+    "n": 42,
+    "median": 7.4,
+    "mean": 9.2,
+    "hit_rate": 66.7,
+    "iqr": [
+     -10.5,
+     19.3
+    ]
+   },
+   "60d": {
+    "n": 35,
+    "median": 3.1,
+    "mean": 8.5,
+    "hit_rate": 57.1,
+    "iqr": [
+     -18.7,
+     17.1
+    ]
+   },
+   "small_sample": false
+  },
+  "Reserve": {
+   "1d": {
+    "n": 18,
+    "median": -0.1,
+    "mean": -0.5,
+    "hit_rate": 44.4,
+    "iqr": [
+     -1.9,
+     2.2
+    ]
+   },
+   "5d": {
+    "n": 18,
+    "median": -4.5,
+    "mean": -3.3,
+    "hit_rate": 38.9,
+    "iqr": [
+     -7.8,
+     3.2
+    ]
+   },
+   "20d": {
+    "n": 18,
+    "median": -7.5,
+    "mean": -3.5,
+    "hit_rate": 27.8,
+    "iqr": [
+     -15.4,
+     7.2
+    ]
+   },
+   "60d": {
+    "n": 14,
+    "median": -15.2,
+    "mean": -9.9,
+    "hit_rate": 28.6,
+    "iqr": [
+     -30.7,
+     6.5
+    ]
+   },
+   "small_sample": false
+  },
+  "Resource": {
+   "1d": {
+    "n": 71,
+    "median": 2.3,
+    "mean": 4.3,
+    "hit_rate": 64.8,
+    "iqr": [
+     -1.9,
+     6.9
+    ]
+   },
+   "5d": {
+    "n": 71,
+    "median": 2.4,
+    "mean": 16.8,
+    "hit_rate": 57.7,
+    "iqr": [
+     -5.9,
+     10.4
+    ]
+   },
+   "20d": {
+    "n": 67,
+    "median": -0.8,
+    "mean": 11.7,
+    "hit_rate": 49.3,
+    "iqr": [
+     -14.0,
+     12.6
+    ]
+   },
+   "60d": {
+    "n": 52,
+    "median": -3.3,
+    "mean": 16.6,
+    "hit_rate": 48.1,
+    "iqr": [
+     -22.0,
+     29.7
+    ]
+   },
+   "small_sample": false
+  },
+  "Setback": {
+   "1d": {
+    "n": 18,
+    "median": -1.5,
+    "mean": -1.4,
+    "hit_rate": 33.3,
+    "iqr": [
+     -2.9,
+     1.4
+    ]
+   },
+   "5d": {
+    "n": 18,
+    "median": -3.4,
+    "mean": -2.0,
+    "hit_rate": 22.2,
+    "iqr": [
+     -8.1,
+     -0.4
+    ]
+   },
+   "20d": {
+    "n": 18,
+    "median": -7.9,
+    "mean": -2.0,
+    "hit_rate": 38.9,
+    "iqr": [
+     -22.4,
+     6.1
+    ]
+   },
+   "60d": {
+    "n": 15,
+    "median": -16.2,
+    "mean": 1.5,
+    "hit_rate": 26.7,
+    "iqr": [
+     -34.0,
+     0.8
+    ]
+   },
+   "small_sample": false
+  },
+  "Study": {
+   "1d": {
+    "n": 43,
+    "median": 1.8,
+    "mean": 2.9,
+    "hit_rate": 62.8,
+    "iqr": [
+     -2.4,
+     5.3
+    ]
+   },
+   "5d": {
+    "n": 43,
+    "median": -2.0,
+    "mean": 1.4,
+    "hit_rate": 41.9,
+    "iqr": [
+     -6.4,
+     4.5
+    ]
+   },
+   "20d": {
+    "n": 37,
+    "median": -5.4,
+    "mean": -1.4,
+    "hit_rate": 37.8,
+    "iqr": [
+     -14.2,
+     10.0
+    ]
+   },
+   "60d": {
+    "n": 28,
+    "median": 3.3,
+    "mean": 5.9,
+    "hit_rate": 50.0,
+    "iqr": [
+     -18.2,
+     23.9
+    ]
+   },
+   "small_sample": false
+  }
+ },
+ "by_type_background": {
+  "Discovery or drill result": {
+   "1d": {
+    "n": 468,
+    "median": 0.6,
+    "mean": 1.3,
+    "hit_rate": 56.8,
+    "iqr": [
+     -2.7,
+     4.5
+    ]
+   },
+   "5d": {
+    "n": 463,
+    "median": 0.2,
+    "mean": 1.3,
+    "hit_rate": 51.0,
+    "iqr": [
+     -6.0,
+     7.1
+    ]
+   },
+   "20d": {
+    "n": 433,
+    "median": 0.1,
+    "mean": 2.5,
+    "hit_rate": 50.6,
+    "iqr": [
+     -12.1,
+     13.5
+    ]
+   },
+   "60d": {
+    "n": 339,
+    "median": 2.1,
+    "mean": 9.4,
+    "hit_rate": 54.3,
+    "iqr": [
+     -17.8,
+     27.0
+    ]
+   },
+   "small_sample": false
+  },
+  "Funding": {
+   "1d": {
+    "n": 178,
+    "median": -0.4,
+    "mean": 0.6,
+    "hit_rate": 45.5,
+    "iqr": [
+     -6.4,
+     3.4
+    ]
+   },
+   "5d": {
+    "n": 174,
+    "median": -2.5,
+    "mean": -0.1,
+    "hit_rate": 37.9,
+    "iqr": [
+     -10.6,
+     3.7
+    ]
+   },
+   "20d": {
+    "n": 166,
+    "median": -4.1,
+    "mean": 0.6,
+    "hit_rate": 36.1,
+    "iqr": [
+     -16.9,
+     7.9
+    ]
+   },
+   "60d": {
+    "n": 138,
+    "median": -3.1,
+    "mean": 14.4,
+    "hit_rate": 47.1,
+    "iqr": [
+     -21.1,
+     29.6
+    ]
+   },
+   "small_sample": false
+  },
+  "MnA": {
+   "1d": {
+    "n": 32,
+    "median": -0.7,
+    "mean": 2.7,
+    "hit_rate": 43.8,
+    "iqr": [
+     -2.2,
+     5.4
+    ]
+   },
+   "5d": {
+    "n": 32,
+    "median": 2.1,
+    "mean": 3.3,
+    "hit_rate": 59.4,
+    "iqr": [
+     -3.2,
+     7.9
+    ]
+   },
+   "20d": {
+    "n": 26,
+    "median": -5.3,
+    "mean": -3.5,
+    "hit_rate": 30.8,
+    "iqr": [
+     -16.6,
+     2.6
+    ]
+   },
+   "60d": {
+    "n": 20,
+    "median": -10.3,
+    "mean": 4.7,
+    "hit_rate": 40.0,
+    "iqr": [
+     -15.9,
+     8.1
+    ]
+   },
+   "small_sample": false
+  },
+  "Other (unclassified)": {
+   "1d": {
+    "n": 1343,
+    "median": 0.3,
+    "mean": 1.2,
+    "hit_rate": 54.1,
+    "iqr": [
+     -2.9,
+     4.1
+    ]
+   },
+   "5d": {
+    "n": 1330,
+    "median": -0.0,
+    "mean": 1.8,
+    "hit_rate": 49.8,
+    "iqr": [
+     -5.8,
+     6.8
+    ]
+   },
+   "20d": {
+    "n": 1244,
+    "median": -1.0,
+    "mean": 3.0,
+    "hit_rate": 48.0,
+    "iqr": [
+     -11.7,
+     12.1
+    ]
+   },
+   "60d": {
+    "n": 1031,
+    "median": -1.9,
+    "mean": 9.5,
+    "hit_rate": 47.2,
+    "iqr": [
+     -17.7,
+     23.9
+    ]
+   },
+   "small_sample": false
+  },
+  "Permit or approval": {
+   "1d": {
+    "n": 32,
+    "median": -0.3,
+    "mean": 2.0,
+    "hit_rate": 40.6,
+    "iqr": [
+     -3.7,
+     3.0
+    ]
+   },
+   "5d": {
+    "n": 32,
+    "median": -0.7,
+    "mean": 0.9,
+    "hit_rate": 43.8,
+    "iqr": [
+     -7.7,
+     4.4
+    ]
+   },
+   "20d": {
+    "n": 30,
+    "median": -2.1,
+    "mean": 6.9,
+    "hit_rate": 50.0,
+    "iqr": [
+     -11.9,
+     17.1
+    ]
+   },
+   "60d": {
+    "n": 24,
+    "median": 10.1,
+    "mean": 58.2,
+    "hit_rate": 54.2,
+    "iqr": [
+     -12.7,
+     32.3
+    ]
+   },
+   "small_sample": false
+  },
+  "Routine": {
+   "1d": {
+    "n": 2512,
+    "median": -0.1,
+    "mean": 0.1,
+    "hit_rate": 48.1,
+    "iqr": [
+     -2.2,
+     2.0
+    ]
+   },
+   "5d": {
+    "n": 2468,
+    "median": -0.5,
+    "mean": 0.7,
+    "hit_rate": 46.8,
+    "iqr": [
+     -5.3,
+     4.4
+    ]
+   },
+   "20d": {
+    "n": 2284,
+    "median": -1.1,
+    "mean": 2.5,
+    "hit_rate": 47.5,
+    "iqr": [
+     -10.8,
+     10.4
+    ]
+   },
+   "60d": {
+    "n": 1899,
+    "median": -1.6,
+    "mean": 9.0,
+    "hit_rate": 48.1,
+    "iqr": [
+     -19.0,
+     22.0
+    ]
+   },
+   "small_sample": false
+  },
+  "Study": {
+   "1d": {
+    "n": 33,
+    "median": -0.1,
+    "mean": -0.6,
+    "hit_rate": 45.5,
+    "iqr": [
+     -2.1,
+     2.1
+    ]
+   },
+   "5d": {
+    "n": 32,
+    "median": -1.5,
+    "mean": -2.1,
+    "hit_rate": 40.6,
+    "iqr": [
+     -8.4,
+     2.6
+    ]
+   },
+   "20d": {
+    "n": 29,
+    "median": -1.6,
+    "mean": -2.3,
+    "hit_rate": 37.9,
+    "iqr": [
+     -11.1,
+     4.4
+    ]
+   },
+   "60d": {
+    "n": 22,
+    "median": -11.6,
+    "mean": -5.5,
+    "hit_rate": 27.3,
+    "iqr": [
+     -25.4,
+     1.7
+    ]
+   },
+   "small_sample": false
+  }
+ }
+}

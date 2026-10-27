@@ -18,97 +18,145 @@
     "date": "2026-10-26",
     "type": "Discovery or drill result",
     "headline": "Bornite Hills Drilling Hits 11.5m @ 2.00% Cu - Peak at 16.3%",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-10-13",
     "type": "Discovery or drill result",
     "headline": "New Cu Discovery on 2.8km Structure Parallel to Danvers 1",
-    "setback": false
+    "setback": false,
+    "r5": -7.3,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-10-06",
     "type": "Discovery or drill result",
     "headline": "76.5m @ 2.01% Cu Expands Copper Envelope at Danvers 1",
-    "setback": false
+    "setback": false,
+    "r5": 8.5,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-21",
     "type": "Discovery or drill result",
     "headline": "Bornite Hills Delivers Significant Copper Discovery at Rae",
-    "setback": false
+    "setback": false,
+    "r5": 19.1,
+    "r20": 19.6,
+    "r60": null
    },
    {
     "date": "2026-09-15",
     "type": "Funding",
     "headline": "Hancock Prospecting Acquires 13.5% Strategic Stake in WCN",
-    "setback": false
+    "setback": false,
+    "r5": 63.3,
+    "r20": 72.6,
+    "r60": null
    },
    {
     "date": "2026-09-02",
     "type": "Discovery or drill result",
     "headline": "23m at 6.18% Cu Extends Ultra High-Grade Danvers 3",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": 37.4,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Discovery or drill result",
     "headline": "Step-out Drilling Expands Danvers 3 - 42m @ 1.43% Cu",
-    "setback": false
+    "setback": false,
+    "r5": -1.9,
+    "r20": 6.6,
+    "r60": null
    },
    {
     "date": "2026-07-28",
     "type": "Discovery or drill result",
     "headline": "First Diamond Drill Hole Assays 50.9M at 2.81% Cu",
-    "setback": false
+    "setback": false,
+    "r5": -6.0,
+    "r20": -12.8,
+    "r60": 48.9
    },
    {
     "date": "2026-06-17",
     "type": "Discovery or drill result",
     "headline": "Major Copper Discovery at Rae Adjacent to Teshierpi Fault",
-    "setback": false
+    "setback": false,
+    "r5": -16.2,
+    "r20": -17.3,
+    "r60": -15.5
    },
    {
     "date": "2026-06-12",
     "type": "MnA",
     "headline": "Completion of Great Bear Divestment and Receipt of $1.2M Cash",
-    "setback": false
+    "setback": false,
+    "r5": 6.0,
+    "r20": -16.0,
+    "r60": -12.6
    },
    {
     "date": "2026-06-10",
     "type": "Discovery or drill result",
     "headline": "Exceptional-Grade Copper Discovery at Danvers",
-    "setback": false
+    "setback": false,
+    "r5": 43.1,
+    "r20": 1.1,
+    "r60": 18.3
    },
    {
     "date": "2026-05-20",
     "type": "Funding",
     "headline": "Astrotricha Capital SECZ Cornerstones WCNO Underwriting",
-    "setback": false
+    "setback": false,
+    "r5": -19.3,
+    "r20": 22.9,
+    "r60": 0.7
    },
    {
     "date": "2026-02-23",
     "type": "MnA",
     "headline": "Sale of Great Bear Project for A$5.8m and Board Changes",
-    "setback": false
+    "setback": false,
+    "r5": 4.4,
+    "r20": 11.0,
+    "r60": 28.2
    },
    {
     "date": "2025-11-03",
     "type": "MnA",
     "headline": "Strategic acquisition of Bornite Lake prospect at Rae",
-    "setback": false
+    "setback": false,
+    "r5": -6.3,
+    "r20": -8.5,
+    "r60": -19.1
    },
    {
     "date": "2025-10-31",
     "type": "MnA",
     "headline": "Completion of Sale of Reedy South Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": 2.3,
+    "r20": -16.2,
+    "r60": -16.0
    },
    {
     "date": "2025-10-28",
     "type": "Discovery or drill result",
     "headline": "Drilling at Stark Identifies Sedimentary Copper Discovery",
-    "setback": false
+    "setback": false,
+    "r5": 5.8,
+    "r20": -4.4,
+    "r60": -12.0
    }
   ],
   "exchange": "ASX",
@@ -136,67 +184,100 @@
     "date": "2026-10-12",
     "type": "Funding",
     "headline": "NMR secures refinancing to support gold production growth",
-    "setback": false
+    "setback": false,
+    "r5": 2.8,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-07",
     "type": "Discovery or drill result",
     "headline": "North Pit drilling returns 19m at 3.09g/t gold at Blackjack",
-    "setback": false
+    "setback": false,
+    "r5": -15.9,
+    "r20": -21.5,
+    "r60": null
    },
    {
     "date": "2026-09-03",
     "type": "MnA",
     "headline": "NMR executes Joint Venture agreement with Citigold",
-    "setback": false
+    "setback": false,
+    "r5": -3.7,
+    "r20": -20.1,
+    "r60": null
    },
    {
     "date": "2026-04-23",
     "type": "First production",
     "headline": "Blackjack restart delivers 315oz dore",
-    "setback": false
+    "setback": false,
+    "r5": 1.6,
+    "r20": -1.6,
+    "r60": 4.3
    },
    {
     "date": "2026-04-20",
     "type": "Discovery or drill result",
     "headline": "NMR - 5.45m @ 14.23g/t Au Diamond Drilling, Blackjack",
-    "setback": false
+    "setback": false,
+    "r5": 12.9,
+    "r20": 4.2,
+    "r60": -3.3
    },
    {
     "date": "2026-04-07",
     "type": "Funding",
     "headline": "Unsecured Funding Facility",
-    "setback": false
+    "setback": false,
+    "r5": -9.9,
+    "r20": -19.9,
+    "r60": -22.6
    },
    {
     "date": "2026-03-09",
     "type": "Discovery or drill result",
     "headline": "NMR hits 18m @ 11.33g/t Au from 12m at Podosky, QLD",
-    "setback": false
+    "setback": false,
+    "r5": 3.4,
+    "r20": -25.5,
+    "r60": -34.2
    },
    {
     "date": "2026-02-26",
     "type": "Discovery or drill result",
     "headline": "NMR hits 14m @ 8.21g/t Au from 15m at Podosky, QLD",
-    "setback": false
+    "setback": false,
+    "r5": -2.5,
+    "r20": -25.1,
+    "r60": -41.5
    },
    {
     "date": "2026-02-16",
     "type": "Discovery or drill result",
     "headline": "NMR hits 10m @ 7.14g/t Au from 16m at Blackjack",
-    "setback": false
+    "setback": false,
+    "r5": -9.6,
+    "r20": -13.6,
+    "r60": -40.9
    },
    {
     "date": "2026-01-30",
     "type": "Discovery or drill result",
     "headline": "NMR hits 14m @ 4.29g/t Au from 9m at Blackjack",
-    "setback": false
+    "setback": false,
+    "r5": 50.4,
+    "r20": 59.8,
+    "r60": -2.6
    },
    {
     "date": "2025-12-02",
     "type": "MnA",
     "headline": "Joint Venture with Haoma Mining to develop Ravenswood Gold",
-    "setback": false
+    "setback": false,
+    "r5": -5.2,
+    "r20": -22.6,
+    "r60": 31.9
    }
   ],
   "exchange": "ASX",
@@ -224,67 +305,100 @@
     "date": "2026-09-30",
     "type": "Discovery or drill result",
     "headline": "High-Grade Results at Cloncurry with 11m at 4.23% CuEq",
-    "setback": false
+    "setback": false,
+    "r5": 5.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-16",
     "type": "Resource",
     "headline": "Cloncurry Resource Update Delivers 18% Copper Increase",
-    "setback": false
+    "setback": false,
+    "r5": -1.0,
+    "r20": -17.9,
+    "r60": null
    },
    {
     "date": "2026-09-02",
     "type": "Discovery or drill result",
     "headline": "Mt Oxide Discovery Grows to 2.3km with New Chidna Zone",
-    "setback": false
+    "setback": false,
+    "r5": -3.3,
+    "r20": -4.1,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Resource",
     "headline": "Wynberg Gold-Copper Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 20.0,
+    "r20": -1.1,
+    "r60": null
    },
    {
     "date": "2026-07-20",
     "type": "MnA",
     "headline": "TNC divests Bundarra Copper Project and retains upside",
-    "setback": false
+    "setback": false,
+    "r5": -1.7,
+    "r20": 1.1,
+    "r60": -21.8
    },
    {
     "date": "2026-07-02",
     "type": "Discovery or drill result",
     "headline": "TNC hits 25m @ 4.2% CuEq in new Wallace North structure",
-    "setback": false
+    "setback": false,
+    "r5": 5.3,
+    "r20": 11.8,
+    "r60": -3.1
    },
    {
     "date": "2026-06-18",
     "type": "MnA",
     "headline": "RNX: Renegade completes $2.88m Carpentaria JV divestment",
-    "setback": false
+    "setback": false,
+    "r5": -15.0,
+    "r20": 1.6,
+    "r60": -10.9
    },
    {
     "date": "2026-04-20",
     "type": "MnA",
     "headline": "TNC strengthens Cloncurry Copper Project with Strategic JV",
-    "setback": false
+    "setback": false,
+    "r5": 4.3,
+    "r20": 2.2,
+    "r60": 1.3
    },
    {
     "date": "2026-02-10",
     "type": "Resource",
     "headline": "Cloncurry Copper Project - Great Australia Resource Update",
-    "setback": false
+    "setback": false,
+    "r5": -5.9,
+    "r20": -5.1,
+    "r60": -17.6
    },
    {
     "date": "2025-11-18",
     "type": "Discovery or drill result",
     "headline": "TNC hits 7 m @ 7.9% Cu at Mount Oxide's new Aquila Discovery",
-    "setback": false
+    "setback": false,
+    "r5": 16.6,
+    "r20": 40.5,
+    "r60": 38.0
    },
    {
     "date": "2025-11-04",
     "type": "Discovery or drill result",
     "headline": "TNC extends Mt Oxide copper discovery strike to beyond 500m",
-    "setback": false
+    "setback": false,
+    "r5": 11.2,
+    "r20": 123.0,
+    "r60": 97.2
    }
   ],
   "exchange": "ASX",
@@ -312,61 +426,91 @@
     "date": "2026-10-07",
     "type": "Study",
     "headline": "Incentives Increase Green River Post-Tax NPV8 to US$1.05B",
-    "setback": false
+    "setback": false,
+    "r5": -4.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-21",
     "type": "Funding",
     "headline": "Strategic Offtake and Financing MoU with Wogen and Xcelsior",
-    "setback": false
+    "setback": false,
+    "r5": 1.7,
+    "r20": -9.4,
+    "r60": null
    },
    {
     "date": "2026-09-11",
     "type": "Funding",
     "headline": "Anson Receives $212M Additional Tax Credit from Utah",
-    "setback": false
+    "setback": false,
+    "r5": -4.7,
+    "r20": -6.2,
+    "r60": null
    },
    {
     "date": "2026-09-04",
     "type": "Funding",
     "headline": "ASN Receives $193M Incentive from Utah Inland Port Authority",
-    "setback": false
+    "setback": false,
+    "r5": -1.6,
+    "r20": -8.7,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Funding",
     "headline": "Utah Backs Green River with Potential US$357.7 M Incentive",
-    "setback": false
+    "setback": false,
+    "r5": -0.4,
+    "r20": 6.6,
+    "r60": null
    },
    {
     "date": "2026-07-22",
     "type": "Funding",
     "headline": "First Tranche Payment from POSCO Holdings",
-    "setback": false
+    "setback": false,
+    "r5": -2.3,
+    "r20": 1.4,
+    "r60": -6.3
    },
    {
     "date": "2026-06-11",
     "type": "MnA",
     "headline": "Anson and POSCO Sign Binding Agreement for DLE Demo Plant",
-    "setback": false
+    "setback": false,
+    "r5": -1.9,
+    "r20": -7.6,
+    "r60": 3.4
    },
    {
     "date": "2026-05-19",
     "type": "Study",
     "headline": "Engineering Study Confirms Green River as Low-Cost Producer",
-    "setback": false
+    "setback": false,
+    "r5": -10.2,
+    "r20": -27.5,
+    "r60": -34.2
    },
    {
     "date": "2026-05-04",
     "type": "Resource",
     "headline": "Anson Upgrades Green River JORC Resource Estimate by 650%",
-    "setback": false
+    "setback": false,
+    "r5": 0.1,
+    "r20": 5.3,
+    "r60": -11.2
    },
    {
     "date": "2025-12-08",
     "type": "Funding",
     "headline": "ASN Signs MoU Lithium Chloride Offtake Agreement with Nusano",
-    "setback": false
+    "setback": false,
+    "r5": -3.5,
+    "r20": 3.9,
+    "r60": -19.2
    }
   ],
   "exchange": "ASX",
@@ -394,61 +538,91 @@
     "date": "2026-09-21",
     "type": "Study",
     "headline": "Updated Mining Study for Liontown Gold Operation",
-    "setback": false
+    "setback": false,
+    "r5": -6.0,
+    "r20": -31.9,
+    "r60": null
    },
    {
     "date": "2026-07-15",
     "type": "Resource",
     "headline": "Significant Upgrade to Liontown Resource",
-    "setback": false
+    "setback": false,
+    "r5": 1.0,
+    "r20": 25.9,
+    "r60": 1.6
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Mt Moss Acquisition Completed and Production Pathway Advanced",
-    "setback": false
+    "setback": false,
+    "r5": 1.3,
+    "r20": 2.4,
+    "r60": 35.3
    },
    {
     "date": "2026-06-09",
     "type": "MnA",
     "headline": "Sunshine Divests Non-Core Hodgkinson Project",
-    "setback": false
+    "setback": false,
+    "r5": -3.0,
+    "r20": -2.9,
+    "r60": 21.8
    },
    {
     "date": "2026-05-13",
     "type": "Discovery or drill result",
     "headline": "Drilling returns 22m @ 20.25g/t Au from Liontown Gold Panel",
-    "setback": false
+    "setback": false,
+    "r5": -1.0,
+    "r20": -4.8,
+    "r60": 18.6
    },
    {
     "date": "2026-04-30",
     "type": "MnA",
     "headline": "Mt Moss Acquisition and Successful Capital Raising",
-    "setback": false
+    "setback": false,
+    "r5": -21.0,
+    "r20": 15.2,
+    "r60": 0.7
    },
    {
     "date": "2026-04-20",
     "type": "Discovery or drill result",
     "headline": "Further Shallow High-Grade Results incld. 14m @ 12.38g/t Au",
-    "setback": false
+    "setback": false,
+    "r5": 10.9,
+    "r20": -4.5,
+    "r60": -1.9
    },
    {
     "date": "2026-02-16",
     "type": "Study",
     "headline": "Robust Mining Study for Liontown Gold Operation",
-    "setback": false
+    "setback": false,
+    "r5": -4.8,
+    "r20": -4.9,
+    "r60": -23.6
    },
    {
     "date": "2025-11-26",
     "type": "Resource",
     "headline": "Significant Upgrade in Liontown Shallow Gold Resource",
-    "setback": false
+    "setback": false,
+    "r5": 1.1,
+    "r20": 10.2,
+    "r60": 103.7
    },
    {
     "date": "2025-11-17",
     "type": "Discovery or drill result",
     "headline": "Final diamond drill results include 4.5m @ 17.23g/t Au",
-    "setback": false
+    "setback": false,
+    "r5": -5.9,
+    "r20": -5.9,
+    "r60": 93.5
    }
   ],
   "exchange": "ASX",
@@ -476,55 +650,82 @@
     "date": "2026-09-08",
     "type": "Permit or approval",
     "headline": "MORRO DO FERRO GRANTED MINAS GERAIS PRIORITY PROJECT STATUS",
-    "setback": false
+    "setback": false,
+    "r5": -15.3,
+    "r20": -19.8,
+    "r60": null
    },
    {
     "date": "2026-09-07",
     "type": "Discovery or drill result",
     "headline": "NEW HIGH GRADE REE ZONE DISCOVERED AT DEPTH",
-    "setback": false
+    "setback": false,
+    "r5": -5.8,
+    "r20": -10.5,
+    "r60": null
    },
    {
     "date": "2026-04-27",
     "type": "MnA",
     "headline": "HIGH GRADE MORRO DO FERRO REE PROJECT ACQUISITION COMPLETE",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": 2.6,
+    "r60": 1.0
    },
    {
     "date": "2026-03-05",
     "type": "MnA",
     "headline": "PNN TO ACQUIRE COMPLEMENTARY, HIGH GRADE RARE EARTH PROJECT",
-    "setback": false
+    "setback": false,
+    "r5": -5.8,
+    "r20": 1.3,
+    "r60": 28.1
    },
    {
     "date": "2026-01-14",
     "type": "Setback",
     "headline": "PNN TERMINATES RINCON LITHIUM JV TO RETAIN 100% OWNERSHIP",
-    "setback": true
+    "setback": true,
+    "r5": 19.7,
+    "r20": 8.6,
+    "r60": 41.4
    },
    {
     "date": "2025-12-01",
     "type": "MnA",
     "headline": "Power completes acquisition of Santa Anna Project, Brazil",
-    "setback": false
+    "setback": false,
+    "r5": 29.1,
+    "r20": -11.9,
+    "r60": 26.8
    },
    {
     "date": "2025-11-27",
     "type": "Study",
     "headline": "PNN DELIVERS DEVELOPMENT STUDY FOR INCAHUASI LITHIUM PROJECT",
-    "setback": false
+    "setback": false,
+    "r5": 8.3,
+    "r20": -4.9,
+    "r60": 12.4
    },
    {
     "date": "2025-11-20",
     "type": "MnA",
     "headline": "POWER ADVANCES RINCON LITHIUM PROJECT JOINT VENTURE",
-    "setback": false
+    "setback": false,
+    "r5": -5.9,
+    "r20": -6.4,
+    "r60": 5.7
    },
    {
     "date": "2025-11-10",
     "type": "MnA",
     "headline": "Amended - PNN to Acquire High Grade Rare Earth Project",
-    "setback": false
+    "setback": false,
+    "r5": 5.2,
+    "r20": 34.0,
+    "r60": 10.2
    }
   ],
   "exchange": "ASX",
@@ -552,49 +753,73 @@
     "date": "2026-09-08",
     "type": "Discovery or drill result",
     "headline": "SOUTHWEST RETURNS 14M @ 3.13G/T and 80M @ 1.30G/T 3E",
-    "setback": false
+    "setback": false,
+    "r5": -7.3,
+    "r20": -28.1,
+    "r60": null
    },
    {
     "date": "2026-07-13",
     "type": "Discovery or drill result",
     "headline": "SOUTHWEST DISCOVERY CONTINUES TO GROW",
-    "setback": false
+    "setback": false,
+    "r5": -8.1,
+    "r20": -6.1,
+    "r60": -30.0
    },
    {
     "date": "2026-02-27",
     "type": "Funding",
     "headline": "$85 Million Institutional Placement to Advance Southwest",
-    "setback": false
+    "setback": false,
+    "r5": -11.8,
+    "r20": -23.7,
+    "r60": -6.6
    },
    {
     "date": "2026-02-11",
     "type": "Discovery or drill result",
     "headline": "New Thick Ti-V-Ga Discovery Across Southwest SW3 and SW4",
-    "setback": false
+    "setback": false,
+    "r5": 17.8,
+    "r20": -10.2,
+    "r60": -2.3
    },
    {
     "date": "2026-01-27",
     "type": "Discovery or drill result",
     "headline": "Major High-Grade Platinum Group Metal Discovery at Southwest",
-    "setback": false
+    "setback": false,
+    "r5": 59.7,
+    "r20": 119.7,
+    "r60": 99.6
    },
    {
     "date": "2026-01-14",
     "type": "Discovery or drill result",
     "headline": "New Platinum Group Metal Sulfide Discovery at SW5",
-    "setback": false
+    "setback": false,
+    "r5": 28.2,
+    "r20": 160.8,
+    "r60": 136.4
    },
    {
     "date": "2026-01-06",
     "type": "Discovery or drill result",
     "headline": "New Platinum Group Metal Sulfide Discovery at Dante",
-    "setback": false
+    "setback": false,
+    "r5": 3.7,
+    "r20": 182.1,
+    "r60": 116.2
    },
    {
     "date": "2025-11-03",
     "type": "Discovery or drill result",
     "headline": "Multiple Titanium-Sulfide Reefs Discovered at Southwest",
-    "setback": false
+    "setback": false,
+    "r5": -23.3,
+    "r20": -25.5,
+    "r60": 77.0
    }
   ],
   "exchange": "ASX",
@@ -622,43 +847,64 @@
     "date": "2026-08-27",
     "type": "Study",
     "headline": "Scoping Study Update",
-    "setback": false
+    "setback": false,
+    "r5": -14.5,
+    "r20": -8.4,
+    "r60": null
    },
    {
     "date": "2026-07-01",
     "type": "Funding",
     "headline": "Financial Close and First Drawdown of Senior Loan Facility",
-    "setback": false
+    "setback": false,
+    "r5": 5.9,
+    "r20": -5.7,
+    "r60": 5.1
    },
    {
     "date": "2026-05-21",
     "type": "Funding",
     "headline": "Binding Term Sheet for New ZAR 875M Senior Loan Facility",
-    "setback": false
+    "setback": false,
+    "r5": 1.2,
+    "r20": -1.5,
+    "r60": -20.9
    },
    {
     "date": "2026-04-29",
     "type": "MnA",
     "headline": "WWI Enters Agreement to Divest Mt Cecelia Project",
-    "setback": false
+    "setback": false,
+    "r5": -9.5,
+    "r20": -5.2,
+    "r60": -28.9
    },
    {
     "date": "2026-03-18",
     "type": "First production",
     "headline": "West Wits Achieves First Gold at Qala Shallows",
-    "setback": false
+    "setback": false,
+    "r5": -12.2,
+    "r20": -12.4,
+    "r60": -37.8
    },
    {
     "date": "2026-02-02",
     "type": "Resource",
     "headline": "2.2Moz Increase to WBP Global Resource Estimate to 7.24Moz",
-    "setback": false
+    "setback": false,
+    "r5": 7.7,
+    "r20": 14.9,
+    "r60": -10.6
    },
    {
     "date": "2026-01-20",
     "type": "Funding",
     "headline": "WWI Raises $27.5M to Advance Gold and Uranium Projects",
-    "setback": false
+    "setback": false,
+    "r5": -13.9,
+    "r20": -6.2,
+    "r60": -15.5
    }
   ],
   "exchange": "ASX",
@@ -686,43 +932,64 @@
     "date": "2026-04-23",
     "type": "Funding",
     "headline": "$20M Placement to Accelerate US Critical Minerals Strategy",
-    "setback": false
+    "setback": false,
+    "r5": -12.1,
+    "r20": -27.5,
+    "r60": -36.9
    },
    {
     "date": "2026-03-02",
     "type": "MnA",
     "headline": "Acquisition of Processing Mill and Tungsten Stockpiles",
-    "setback": false
+    "setback": false,
+    "r5": 7.0,
+    "r20": 36.9,
+    "r60": 43.5
    },
    {
     "date": "2026-02-09",
     "type": "Discovery or drill result",
     "headline": "New Gold Discovery at Golden Gate South",
-    "setback": false
+    "setback": false,
+    "r5": -1.2,
+    "r20": -13.4,
+    "r60": 33.3
    },
    {
     "date": "2025-12-02",
     "type": "Discovery or drill result",
     "headline": "Golden Gate Discovery Grows with Multiple Gold Intercepts",
-    "setback": false
+    "setback": false,
+    "r5": -22.8,
+    "r20": -29.9,
+    "r60": -43.1
    },
    {
     "date": "2025-11-03",
     "type": "Discovery or drill result",
     "headline": "Significant Gold Discoveries Continue at Golden Gate",
-    "setback": false
+    "setback": false,
+    "r5": -18.2,
+    "r20": -30.5,
+    "r60": -49.1
    },
    {
     "date": "2025-10-31",
     "type": "MnA",
     "headline": "RML to Acquire Processing Mill and Tungsten Stockpiles",
-    "setback": false
+    "setback": false,
+    "r5": -0.1,
+    "r20": -16.7,
+    "r60": -32.5
    },
    {
     "date": "2025-10-28",
     "type": "Discovery or drill result",
     "headline": "Significant Gold Discovery at Horse Heaven Project",
-    "setback": false
+    "setback": false,
+    "r5": 15.8,
+    "r20": -15.7,
+    "r60": -17.0
    }
   ],
   "exchange": "ASX",
@@ -750,37 +1017,55 @@
     "date": "2026-10-23",
     "type": "MnA",
     "headline": "Strategic Portfolio Farmout to Beach Energy",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-03",
     "type": "Discovery or drill result",
     "headline": "Regionally impactful flow testing at Lorelle-3H",
-    "setback": false
+    "setback": false,
+    "r5": -39.8,
+    "r20": -37.9,
+    "r60": -0.5
    },
    {
     "date": "2026-04-24",
     "type": "Resource",
     "headline": "24% Increase in Taroom Trough Gas Resources",
-    "setback": false
+    "setback": false,
+    "r5": 2.7,
+    "r20": -15.6,
+    "r60": -31.7
    },
    {
     "date": "2025-12-24",
     "type": "Permit or approval",
     "headline": "Elixir granted PCA 356 in the Taroom Trough",
-    "setback": false
+    "setback": false,
+    "r5": 12.0,
+    "r20": 16.9,
+    "r60": 38.4
    },
    {
     "date": "2025-11-25",
     "type": "Funding",
     "headline": "Omega takes 19.4% stake supporting $16.6m raise",
-    "setback": false
+    "setback": false,
+    "r5": 49.3,
+    "r20": 53.9,
+    "r60": 118.3
    },
    {
     "date": "2025-11-06",
     "type": "Resource",
     "headline": "Increase in Taroom Trough Contingent Gas Resources",
-    "setback": false
+    "setback": false,
+    "r5": -1.8,
+    "r20": 77.6,
+    "r60": 89.0
    }
   ],
   "exchange": "ASX",
@@ -808,37 +1093,55 @@
     "date": "2026-10-23",
     "type": "MnA",
     "headline": "QMines Completes $1.4 Million Sale of Drilling Business",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-10-12",
     "type": "Discovery or drill result",
     "headline": "Copper Discovery at Mt Chalmers",
-    "setback": false
+    "setback": false,
+    "r5": -6.5,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-18",
     "type": "MnA",
     "headline": "Strategic Land Acquisitions Unlock Botos Deposit",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": 11.8,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Resource",
     "headline": "Mt Mackenzie Resource Upgrade Delivers 32% Increase in Gold",
-    "setback": false
+    "setback": false,
+    "r5": 5.8,
+    "r20": 24.3,
+    "r60": null
    },
    {
     "date": "2026-04-20",
     "type": "Funding",
     "headline": "QIC Invests $15m to Fast-Track Mt Chalmers into Development",
-    "setback": false
+    "setback": false,
+    "r5": 11.3,
+    "r20": 25.1,
+    "r60": 13.1
    },
    {
     "date": "2026-02-23",
     "type": "Resource",
     "headline": "Develin Creek Resource Upgrade Unlocks Expansion Planning",
-    "setback": false
+    "setback": false,
+    "r5": 3.8,
+    "r20": 7.2,
+    "r60": 12.1
    }
   ],
   "exchange": "ASX",
@@ -866,37 +1169,55 @@
     "date": "2026-10-13",
     "type": "MnA",
     "headline": "TSK:Completion of sale of Green Exploration to AuKing Mining",
-    "setback": false
+    "setback": false,
+    "r5": -15.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-10-13",
     "type": "MnA",
     "headline": "AKN to Acquire High Grade Greenland Niobium Project",
-    "setback": false
+    "setback": false,
+    "r5": -15.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-18",
     "type": "MnA",
     "headline": "TSK: AKN to acquire 100% of Green Exploration from TSK",
-    "setback": false
+    "setback": false,
+    "r5": 10.2,
+    "r20": 16.4,
+    "r60": null
    },
    {
     "date": "2026-08-04",
     "type": "MnA",
     "headline": "TSK: Proposed Sale of Machinga REE Project to AuKing Mining",
-    "setback": false
+    "setback": false,
+    "r5": -11.0,
+    "r20": -32.5,
+    "r60": -44.9
    },
    {
     "date": "2026-08-04",
     "type": "MnA",
     "headline": "AuKing to Acquire High Grade Heavy Rare Earths Project",
-    "setback": false
+    "setback": false,
+    "r5": -11.0,
+    "r20": -32.5,
+    "r60": -44.9
    },
    {
     "date": "2026-01-29",
     "type": "MnA",
     "headline": "Acquisition of Tin and Silver Prospects",
-    "setback": false
+    "setback": false,
+    "r5": 34.9,
+    "r20": 16.5,
+    "r60": 182.1
    }
   ],
   "exchange": "ASX",
@@ -924,43 +1245,64 @@
     "date": "2026-10-01",
     "type": "First production",
     "headline": "First Gold Revenues from Wonawinta",
-    "setback": false
+    "setback": false,
+    "r5": -6.9,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-21",
     "type": "First production",
     "headline": "Gold Production Restarts at Wonawinta",
-    "setback": false
+    "setback": false,
+    "r5": 12.5,
+    "r20": -16.7,
+    "r60": null
    },
    {
     "date": "2026-07-13",
     "type": "Reserve",
     "headline": "Updated Ore Reserve - Wonawinta Silver Mine",
-    "setback": false
+    "setback": false,
+    "r5": -7.6,
+    "r20": -19.7,
+    "r60": -32.9
    },
    {
     "date": "2026-03-23",
     "type": "Study",
     "headline": "Amended Announcement - Updated Cobar Basin PFS",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": -2.2,
+    "r60": -16.7
    },
    {
     "date": "2026-02-05",
     "type": "Setback",
     "headline": "Draft Panel Decision to Decline Taranaki VTM Application",
-    "setback": true
+    "setback": true,
+    "r5": -26.1,
+    "r20": -24.3,
+    "r60": -45.1
    },
    {
     "date": "2026-01-30",
     "type": "Study",
     "headline": "Cobar Basin PFS Shows Substantial Increase in Profit and NPV",
-    "setback": false
+    "setback": false,
+    "r5": -24.0,
+    "r20": -34.0,
+    "r60": -45.6
    },
    {
     "date": "2025-12-01",
     "type": "Funding",
     "headline": "Term Sheet for US$22.5 million Loan Facility Executed",
-    "setback": false
+    "setback": false,
+    "r5": -15.0,
+    "r20": 31.6,
+    "r60": 84.1
    }
   ],
   "exchange": "ASX",
@@ -988,37 +1330,55 @@
     "date": "2026-07-03",
     "type": "MnA",
     "headline": "West Arunta Divestment Completed",
-    "setback": false
+    "setback": false,
+    "r5": 2.0,
+    "r20": 11.1,
+    "r60": -9.9
    },
    {
     "date": "2026-07-03",
     "type": "MnA",
     "headline": "M96: Completion of Acquisition of Viper Project",
-    "setback": false
+    "setback": false,
+    "r5": 2.0,
+    "r20": 11.1,
+    "r60": -9.9
    },
    {
     "date": "2026-05-06",
     "type": "Discovery or drill result",
     "headline": "22m @ 66.2g/t Au in New High-Grade Zone Parallel to Vadrians",
-    "setback": false
+    "setback": false,
+    "r5": 65.9,
+    "r20": 19.6,
+    "r60": 22.1
    },
    {
     "date": "2026-04-27",
     "type": "MnA",
     "headline": "Caprice Divests West Arunta Assets for $2.89 Million",
-    "setback": false
+    "setback": false,
+    "r5": 1.8,
+    "r20": 34.2,
+    "r60": 11.9
    },
    {
     "date": "2026-01-19",
     "type": "Discovery or drill result",
     "headline": "High Grades from Island Gold including 19m at 4.6 g/t Gold",
-    "setback": false
+    "setback": false,
+    "r5": 3.9,
+    "r20": -8.0,
+    "r60": -13.0
    },
    {
     "date": "2025-12-18",
     "type": "MnA",
     "headline": "Comet Exploration Project Acquisition Completes",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": 10.8,
+    "r60": -4.9
    }
   ],
   "exchange": "ASX",
@@ -1046,37 +1406,55 @@
     "date": "2026-07-02",
     "type": "Resource",
     "headline": "Severn Resource Up 64%",
-    "setback": false
+    "setback": false,
+    "r5": 11.7,
+    "r20": 9.3,
+    "r60": 34.1
    },
    {
     "date": "2026-05-04",
     "type": "Funding",
     "headline": "$22.1M Placement to Advance Heemskirk",
-    "setback": false
+    "setback": false,
+    "r5": 0.1,
+    "r20": 5.5,
+    "r60": 1.5
    },
    {
     "date": "2026-04-30",
     "type": "Funding",
     "headline": "$17 Million Strategic Placement to Metals X",
-    "setback": false
+    "setback": false,
+    "r5": 6.3,
+    "r20": 12.2,
+    "r60": 2.2
    },
    {
     "date": "2026-03-05",
     "type": "Discovery or drill result",
     "headline": "New High-Grade Tin Lode Discovered Below Severn Resource",
-    "setback": false
+    "setback": false,
+    "r5": 2.5,
+    "r20": -12.5,
+    "r60": -7.2
    },
    {
     "date": "2026-02-23",
     "type": "Resource",
     "headline": "Queen Hill Resource Up 41%",
-    "setback": false
+    "setback": false,
+    "r5": 36.9,
+    "r20": 14.2,
+    "r60": 24.5
    },
    {
     "date": "2026-02-10",
     "type": "MnA",
     "headline": "Stellar Completes Granite Tor Tin Project Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -5.7,
+    "r20": 15.5,
+    "r60": 4.2
    }
   ],
   "exchange": "ASX",
@@ -1104,31 +1482,46 @@
     "date": "2026-10-12",
     "type": "Resource",
     "headline": "45% Increase to MRE at Kelpie Tin Deposit",
-    "setback": false
+    "setback": false,
+    "r5": -12.6,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-29",
     "type": "Discovery or drill result",
     "headline": "High-Grade Tin at Kelpie including 3m @ 9.32% Sn",
-    "setback": false
+    "setback": false,
+    "r5": 16.7,
+    "r20": 15.8,
+    "r60": 0.4
    },
    {
     "date": "2026-06-03",
     "type": "Discovery or drill result",
     "headline": "New High-Grade Lode Position Discovered",
-    "setback": false
+    "setback": false,
+    "r5": -0.1,
+    "r20": -12.3,
+    "r60": 37.6
    },
    {
     "date": "2026-05-18",
     "type": "MnA",
     "headline": "AMN: Completion of Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -7.4,
+    "r20": -21.8,
+    "r60": 14.7
    },
    {
     "date": "2026-04-22",
     "type": "MnA",
     "headline": "Mount Squires Divestment",
-    "setback": false
+    "setback": false,
+    "r5": 7.0,
+    "r20": -3.8,
+    "r60": 13.8
    }
   ],
   "exchange": "ASX",
@@ -1156,31 +1549,46 @@
     "date": "2026-10-05",
     "type": "MnA",
     "headline": "BCM Acquires MAGSUL process plant",
-    "setback": false
+    "setback": false,
+    "r5": -6.5,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-06-30",
     "type": "Study",
     "headline": "Ema BFS Delivers Exceptional Economics",
-    "setback": false
+    "setback": false,
+    "r5": 17.0,
+    "r20": -11.8,
+    "r60": 35.2
    },
    {
     "date": "2026-06-15",
     "type": "Permit or approval",
     "headline": "Federal Mines Agency Approval",
-    "setback": false
+    "setback": false,
+    "r5": 24.9,
+    "r20": 32.0,
+    "r60": 102.2
    },
    {
     "date": "2026-04-22",
     "type": "Resource",
     "headline": "Ema Indicated MRE Increases 58% to 392Mt",
-    "setback": false
+    "setback": false,
+    "r5": 2.6,
+    "r20": 11.2,
+    "r60": 58.2
    },
    {
     "date": "2026-04-20",
     "type": "Funding",
     "headline": "BCM and SAM to enter strategic partnership",
-    "setback": false
+    "setback": false,
+    "r5": 26.9,
+    "r20": 39.2,
+    "r60": 78.8
    }
   ],
   "exchange": "ASX",
@@ -1208,31 +1616,46 @@
     "date": "2026-07-27",
     "type": "Funding",
     "headline": "Japan's Hanwa Signs Strategic Investment and Offtake LOI",
-    "setback": false
+    "setback": false,
+    "r5": 18.1,
+    "r20": 5.2,
+    "r60": -14.6
    },
    {
     "date": "2026-07-16",
     "type": "Funding",
     "headline": "Talga and Dainen Execute Offtake LOI for Japan Anode Supply",
-    "setback": false
+    "setback": false,
+    "r5": 10.9,
+    "r20": 20.1,
+    "r60": -3.9
    },
    {
     "date": "2026-07-03",
     "type": "Funding",
     "headline": "Talga Anode Sales Commence Under Nyobolt Offtake",
-    "setback": false
+    "setback": false,
+    "r5": 22.2,
+    "r20": 46.6,
+    "r60": 26.1
    },
    {
     "date": "2026-01-27",
     "type": "Permit or approval",
     "headline": "Swedish Government adopts Detailed Plan for Graphite Mine",
-    "setback": false
+    "setback": false,
+    "r5": -4.3,
+    "r20": -16.7,
+    "r60": -28.1
    },
    {
     "date": "2025-11-20",
     "type": "Funding",
     "headline": "Talga receives A$13.3m Industriklivet grant funds",
-    "setback": false
+    "setback": false,
+    "r5": -4.3,
+    "r20": -19.0,
+    "r60": -16.7
    }
   ],
   "exchange": "ASX",
@@ -1260,31 +1683,46 @@
     "date": "2026-06-24",
     "type": "Resource",
     "headline": "Western Queen Gold Resources Upgraded to 433koz",
-    "setback": false
+    "setback": false,
+    "r5": 8.8,
+    "r20": 11.7,
+    "r60": 35.1
    },
    {
     "date": "2026-05-15",
     "type": "MnA",
     "headline": "Sale of Lamil Project to Aventine Resources",
-    "setback": false
+    "setback": false,
+    "r5": -4.2,
+    "r20": -22.3,
+    "r60": -20.7
    },
    {
     "date": "2026-05-04",
     "type": "MnA",
     "headline": "Rumble sells 2.5% Western Queen gold NSR royalty for A$10m",
-    "setback": false
+    "setback": false,
+    "r5": 19.7,
+    "r20": 11.2,
+    "r60": -1.4
    },
    {
     "date": "2026-02-06",
     "type": "MnA",
     "headline": "Thunderstorm Gold Project Acquisition Complete and Cleansing",
-    "setback": false
+    "setback": false,
+    "r5": -0.0,
+    "r20": 6.5,
+    "r60": 24.2
    },
    {
     "date": "2025-11-27",
     "type": "Study",
     "headline": "Western Queen South Scoping Study",
-    "setback": false
+    "setback": false,
+    "r5": -2.8,
+    "r20": 10.0,
+    "r60": 24.3
    }
   ],
   "exchange": "ASX",
@@ -1312,31 +1750,46 @@
     "date": "2026-06-10",
     "type": "Resource",
     "headline": "Marenica Resource Increases by 31%",
-    "setback": false
+    "setback": false,
+    "r5": -1.6,
+    "r20": -5.0,
+    "r60": 14.7
    },
    {
     "date": "2026-04-15",
     "type": "Resource",
     "headline": "Koppies Project resource base increased to 76.2 Mlb U3O8",
-    "setback": false
+    "setback": false,
+    "r5": 10.7,
+    "r20": -12.1,
+    "r60": -19.2
    },
    {
     "date": "2026-02-05",
     "type": "Resource",
     "headline": "Marenica Resource Update Doubles Grade",
-    "setback": false
+    "setback": false,
+    "r5": -10.4,
+    "r20": -14.2,
+    "r60": -29.6
    },
    {
     "date": "2025-12-23",
     "type": "MnA",
     "headline": "Acquisition of Napperby Uranium Resource",
-    "setback": false
+    "setback": false,
+    "r5": 13.4,
+    "r20": 37.7,
+    "r60": 13.1
    },
    {
     "date": "2025-10-31",
     "type": "Funding",
     "headline": "$25M to Accelerate U-pgrade Plant and Resource Drilling",
-    "setback": false
+    "setback": false,
+    "r5": -26.5,
+    "r20": -26.2,
+    "r60": 7.7
    }
   ],
   "exchange": "ASX",
@@ -1364,25 +1817,37 @@
     "date": "2026-10-20",
     "type": "Study",
     "headline": "Jupiter Scoping Study Defines Pathway to Development",
-    "setback": false
+    "setback": false,
+    "r5": -14.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-10-12",
     "type": "Resource",
     "headline": "Jupiter Delivers First 160Mt Indicated Rare Earth Resource",
-    "setback": false
+    "setback": false,
+    "r5": -1.2,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-29",
     "type": "Study",
     "headline": "Mt Lindsay Study Delivers Strong Tungsten and Tin Economics",
-    "setback": false
+    "setback": false,
+    "r5": 16.6,
+    "r20": -14.2,
+    "r60": null
    },
    {
     "date": "2026-09-14",
     "type": "Resource",
     "headline": "Critica Updates Mt Lindsay Mineral Resource to JORC 2012",
-    "setback": false
+    "setback": false,
+    "r5": -5.9,
+    "r20": 16.2,
+    "r60": null
    }
   ],
   "exchange": "ASX",
@@ -1410,25 +1875,37 @@
     "date": "2026-10-19",
     "type": "Discovery or drill result",
     "headline": "First Hole at Errabiddy Hits 12m @ 2.8g/t Gold from Surface",
-    "setback": false
+    "setback": false,
+    "r5": -4.6,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-28",
     "type": "Funding",
     "headline": "$30 Million Placement Positions Falcon to Expand Drilling",
-    "setback": false
+    "setback": false,
+    "r5": -13.1,
+    "r20": -18.6,
+    "r60": null
    },
    {
     "date": "2026-02-16",
     "type": "Discovery or drill result",
     "headline": "Blue Moon extended 80m along strike hitting 0.4m @ 167g/t Au",
-    "setback": false
+    "setback": false,
+    "r5": -10.9,
+    "r20": -19.6,
+    "r60": -33.7
    },
    {
     "date": "2025-12-18",
     "type": "Discovery or drill result",
     "headline": "Blue Moon Extended Along Strike Hitting 2.75m @ 41.9g/t Au",
-    "setback": false
+    "setback": false,
+    "r5": 13.9,
+    "r20": 42.0,
+    "r60": 20.1
    }
   ],
   "exchange": "ASX",
@@ -1456,25 +1933,37 @@
     "date": "2026-10-08",
     "type": "Funding",
     "headline": "Torque Completes A$25 million Placement",
-    "setback": false
+    "setback": false,
+    "r5": -6.1,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-07",
     "type": "Resource",
     "headline": "MRE Update - Paris Gold Deposit",
-    "setback": false
+    "setback": false,
+    "r5": -10.1,
+    "r20": -15.3,
+    "r60": -20.4
    },
    {
     "date": "2026-02-12",
     "type": "Discovery or drill result",
     "headline": "20m at 5.8g/t Gold in Paris as High-Grade System Grows",
-    "setback": false
+    "setback": false,
+    "r5": -4.7,
+    "r20": 85.4,
+    "r60": 77.7
    },
    {
     "date": "2025-11-13",
     "type": "Discovery or drill result",
     "headline": "First Extension Hole at HHH Hits 5m at 15.2 g/t Gold",
-    "setback": false
+    "setback": false,
+    "r5": 17.8,
+    "r20": 25.9,
+    "r60": 15.3
    }
   ],
   "exchange": "ASX",
@@ -1502,25 +1991,37 @@
     "date": "2026-09-24",
     "type": "Permit or approval",
     "headline": "Madaouela Mining Convention Formally Executed",
-    "setback": false
+    "setback": false,
+    "r5": -20.6,
+    "r20": -9.9,
+    "r60": null
    },
    {
     "date": "2026-08-24",
     "type": "Resource",
     "headline": "Madaouela Foreign Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 18.5,
+    "r20": -1.6,
+    "r60": null
    },
    {
     "date": "2026-06-24",
     "type": "Permit or approval",
     "headline": "Muntanga ESIA and RAP approvals",
-    "setback": false
+    "setback": false,
+    "r5": -3.0,
+    "r20": -15.0,
+    "r60": 7.7
    },
    {
     "date": "2026-03-03",
     "type": "Resource",
     "headline": "Uranium Resources increase by 24%",
-    "setback": false
+    "setback": false,
+    "r5": 6.6,
+    "r20": -2.0,
+    "r60": 0.3
    }
   ],
   "exchange": "ASX",
@@ -1548,25 +2049,37 @@
     "date": "2026-09-17",
     "type": "Discovery or drill result",
     "headline": "NORTH HORSESHOE CANYON DISCOVERY AND CORRIDOR EXPANSION",
-    "setback": false
+    "setback": false,
+    "r5": 2.6,
+    "r20": -10.5,
+    "r60": null
    },
    {
     "date": "2026-08-04",
     "type": "MnA",
     "headline": "OD6 COMPLETES ACQUISITION OF HIGH-GRADE QUINN PROJECT",
-    "setback": false
+    "setback": false,
+    "r5": -12.5,
+    "r20": -4.0,
+    "r60": -22.5
    },
    {
     "date": "2026-04-09",
     "type": "Discovery or drill result",
     "headline": "CONTINUOUS HIGH-GRADE FLUORSPAR 12m @ 40.8% CAF2",
-    "setback": false
+    "setback": false,
+    "r5": 52.6,
+    "r20": 33.2,
+    "r60": -0.7
    },
    {
     "date": "2026-03-04",
     "type": "MnA",
     "headline": "OD6 TO ACQUIRE ULTRA HIGH GRADE USA FLUORSPAR PROJECTS",
-    "setback": false
+    "setback": false,
+    "r5": 83.2,
+    "r20": 104.8,
+    "r60": 167.0
    }
   ],
   "exchange": "ASX",
@@ -1594,25 +2107,37 @@
     "date": "2026-09-17",
     "type": "Discovery or drill result",
     "headline": "Drilling hits 48m @ 1.13g/t Au across multiple stacked zones",
-    "setback": false
+    "setback": false,
+    "r5": -22.7,
+    "r20": -30.9,
+    "r60": null
    },
    {
     "date": "2026-08-26",
     "type": "MnA",
     "headline": "Sentinel completes acquisition of 1.0Moz Big Springs Project",
-    "setback": false
+    "setback": false,
+    "r5": -0.5,
+    "r20": -20.2,
+    "r60": null
    },
    {
     "date": "2026-08-10",
     "type": "Discovery or drill result",
     "headline": "Maiden Columbia drill-hole returns 46.8m at 5.5 g/t gold",
-    "setback": false
+    "setback": false,
+    "r5": 12.4,
+    "r20": 5.3,
+    "r60": null
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Sentinel to acquire the 1.0Moz Big Springs Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": -0.3,
+    "r20": -14.5,
+    "r60": -32.7
    }
   ],
   "exchange": "ASX",
@@ -1640,25 +2165,37 @@
     "date": "2026-09-16",
     "type": "MnA",
     "headline": "Significant Processing Infrastructure Acquired for Burbanks",
-    "setback": false
+    "setback": false,
+    "r5": 10.6,
+    "r20": 12.2,
+    "r60": null
    },
    {
     "date": "2026-09-09",
     "type": "Resource",
     "headline": "Union Jack Acquisition and Major Resource Upgrade",
-    "setback": false
+    "setback": false,
+    "r5": 1.4,
+    "r20": 0.2,
+    "r60": null
    },
    {
     "date": "2026-05-25",
     "type": "Resource",
     "headline": "Munda Gold Deposit Mineral Resource Increased by 32%",
-    "setback": false
+    "setback": false,
+    "r5": 0.7,
+    "r20": -22.9,
+    "r60": -25.6
    },
    {
     "date": "2025-11-05",
     "type": "First production",
     "headline": "First Munda Gold Mine Sales at average A$6,130 an ounce",
-    "setback": false
+    "setback": false,
+    "r5": -2.2,
+    "r20": 1.1,
+    "r60": 0.0
    }
   ],
   "exchange": "ASX",
@@ -1686,25 +2223,37 @@
     "date": "2026-09-10",
     "type": "Discovery or drill result",
     "headline": "MAIDEN DRILLING AT LINKA TUNGSTEN DELIVERS 14M @ 0.56% WO3",
-    "setback": false
+    "setback": false,
+    "r5": 25.0,
+    "r20": 26.3,
+    "r60": null
    },
    {
     "date": "2026-06-29",
     "type": "MnA",
     "headline": "VIKING DIVESTS NON-CORE GOLD PROJECT FOR UP TO $5M",
-    "setback": false
+    "setback": false,
+    "r5": 9.0,
+    "r20": 3.8,
+    "r60": 19.8
    },
    {
     "date": "2026-02-24",
     "type": "Discovery or drill result",
     "headline": "VIKING SEES HIGH-GRADES AT LINKA INC. 12.2M AT 1.3% WO3",
-    "setback": false
+    "setback": false,
+    "r5": 75.0,
+    "r20": 12.3,
+    "r60": -5.4
    },
    {
     "date": "2025-12-16",
     "type": "MnA",
     "headline": "VKA TO ACQUIRE PRODUCTION PROVEN USA TUNGSTEN PROJECTS",
-    "setback": false
+    "setback": false,
+    "r5": 25.6,
+    "r20": 21.8,
+    "r60": 178.1
    }
   ],
   "exchange": "ASX",
@@ -1732,25 +2281,37 @@
     "date": "2026-08-26",
     "type": "Resource",
     "headline": "Significant Scandium Resource Upgrade",
-    "setback": false
+    "setback": false,
+    "r5": 27.8,
+    "r20": 51.6,
+    "r60": null
    },
    {
     "date": "2026-03-24",
     "type": "Resource",
     "headline": "Major Heavy Rare Earth Resource at Mount Ridley Project",
-    "setback": false
+    "setback": false,
+    "r5": 14.7,
+    "r20": 23.9,
+    "r60": -6.1
    },
    {
     "date": "2026-01-28",
     "type": "Resource",
     "headline": "367.98Mt Scandium Resource Estimate at Mount Ridley Project",
-    "setback": false
+    "setback": false,
+    "r5": -12.7,
+    "r20": -3.3,
+    "r60": 0.1
    },
    {
     "date": "2025-10-28",
     "type": "Resource",
     "headline": "838.7Mt Gallium Resource Estimate at Mt Ridley Project",
-    "setback": false
+    "setback": false,
+    "r5": 1020.8,
+    "r20": 665.6,
+    "r60": 595.5
    }
   ],
   "exchange": "ASX",
@@ -1778,25 +2339,37 @@
     "date": "2026-08-11",
     "type": "MnA",
     "headline": "Austral Resources to Acquire Hammer Metals",
-    "setback": false
+    "setback": false,
+    "r5": -4.5,
+    "r20": 8.4,
+    "r60": null
    },
    {
     "date": "2026-06-11",
     "type": "MnA",
     "headline": "Larvotto Resources To Acquire Hammer Metals",
-    "setback": false
+    "setback": false,
+    "r5": 7.6,
+    "r20": 18.6,
+    "r60": 59.9
    },
    {
     "date": "2026-01-27",
     "type": "Resource",
     "headline": "Copper-Gold Resource Declared at South Hope",
-    "setback": false
+    "setback": false,
+    "r5": 2.5,
+    "r20": 22.4,
+    "r60": -8.1
    },
    {
     "date": "2025-11-04",
     "type": "MnA",
     "headline": "Ownership Regained over two areas within Mount Isa East JV",
-    "setback": false
+    "setback": false,
+    "r5": -12.6,
+    "r20": -11.4,
+    "r60": 33.9
    }
   ],
   "exchange": "ASX",
@@ -1824,25 +2397,37 @@
     "date": "2026-08-03",
     "type": "Study",
     "headline": "Independence Scoping Study Delivers Strong Post Tax NPV",
-    "setback": false
+    "setback": false,
+    "r5": 12.1,
+    "r20": 14.7,
+    "r60": -23.4
    },
    {
     "date": "2026-05-13",
     "type": "Resource",
     "headline": "Independence Project MRE Increased to 2.2Moz",
-    "setback": false
+    "setback": false,
+    "r5": 8.5,
+    "r20": -12.3,
+    "r60": -14.0
    },
    {
     "date": "2026-02-17",
     "type": "Permit or approval",
     "headline": "Shafter Major Permitting Secured",
-    "setback": false
+    "setback": false,
+    "r5": 13.2,
+    "r20": -3.6,
+    "r60": 3.1
    },
    {
     "date": "2025-11-21",
     "type": "MnA",
     "headline": "High-Grade Shafter Silver Project Acquisition Completed",
-    "setback": false
+    "setback": false,
+    "r5": 8.1,
+    "r20": 48.2,
+    "r60": 71.1
    }
   ],
   "exchange": "ASX",
@@ -1870,25 +2455,37 @@
     "date": "2026-07-28",
     "type": "MnA",
     "headline": "AT4 to Acquire Transformational US Critical Metals Refinery",
-    "setback": false
+    "setback": false,
+    "r5": 23.9,
+    "r20": 70.8,
+    "r60": 6.9
    },
    {
     "date": "2026-03-10",
     "type": "Discovery or drill result",
     "headline": "MAIDEN DRILLING DELIVERS HIGH-GRADE ANTIMONY DISCOVERY",
-    "setback": false
+    "setback": false,
+    "r5": -29.7,
+    "r20": -42.0,
+    "r60": -61.9
    },
    {
     "date": "2026-01-28",
     "type": "MnA",
     "headline": "AT4 ACQUIRES FULLY PERMITTED U.S. TUNGSTEN MILL",
-    "setback": false
+    "setback": false,
+    "r5": -22.5,
+    "r20": -18.9,
+    "r60": -48.0
    },
    {
     "date": "2025-12-23",
     "type": "MnA",
     "headline": "ATAA to spin out Drummond and NSW assets",
-    "setback": false
+    "setback": false,
+    "r5": -3.9,
+    "r20": 38.6,
+    "r60": 0.0
    }
   ],
   "exchange": "ASX",
@@ -1916,25 +2513,37 @@
     "date": "2026-07-24",
     "type": "Funding",
     "headline": "Bauxite Offtake and Investment Framework Agreement",
-    "setback": false
+    "setback": false,
+    "r5": -15.5,
+    "r20": 21.9,
+    "r60": -9.3
    },
    {
     "date": "2026-07-01",
     "type": "Funding",
     "headline": "Indicative Term Sheet Prepayment and Offtake Facility",
-    "setback": false
+    "setback": false,
+    "r5": 8.6,
+    "r20": 11.7,
+    "r60": 74.1
    },
    {
     "date": "2026-02-05",
     "type": "Resource",
     "headline": "Wuudagu D, E and F Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 22.4,
+    "r20": -3.1,
+    "r60": -21.9
    },
    {
     "date": "2026-01-20",
     "type": "Resource",
     "headline": "Wuudagu B and C Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 11.8,
+    "r20": 101.8,
+    "r60": 33.6
    }
   ],
   "exchange": "ASX",
@@ -1962,25 +2571,37 @@
     "date": "2026-03-03",
     "type": "Funding",
     "headline": "A$55M Placement to accelerate Paris",
-    "setback": false
+    "setback": false,
+    "r5": -28.1,
+    "r20": -36.0,
+    "r60": -43.4
    },
    {
     "date": "2026-02-27",
     "type": "Reserve",
     "headline": "Paris DFS Confirms Maiden Ore Reserve, Strong Economics",
-    "setback": false
+    "setback": false,
+    "r5": -18.6,
+    "r20": -34.9,
+    "r60": -41.0
    },
    {
     "date": "2026-01-19",
     "type": "MnA",
     "headline": "TVN: Tivan completes acquisition of the Molyhil Project",
-    "setback": false
+    "setback": false,
+    "r5": 6.2,
+    "r20": -16.8,
+    "r60": -36.8
    },
    {
     "date": "2025-12-16",
     "type": "Study",
     "headline": "Paris Silver DFS Update - Optimisation and Recovery Lift",
-    "setback": false
+    "setback": false,
+    "r5": 32.6,
+    "r20": 91.9,
+    "r60": 10.8
    }
   ],
   "exchange": "ASX",
@@ -2008,19 +2629,28 @@
     "date": "2026-10-21",
     "type": "Discovery or drill result",
     "headline": "WCE-Falcon JV Reports 12m @ 2.8g/t Gold at Errabiddy",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-09",
     "type": "Discovery or drill result",
     "headline": "Elizabeth Hill New High Grade Silver Discovery",
-    "setback": false
+    "setback": false,
+    "r5": 0.6,
+    "r20": 7.6,
+    "r60": -29.4
    },
    {
     "date": "2026-04-22",
     "type": "Resource",
     "headline": "Elizabeth Hill - 2.8Moz Silver Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": -20.2,
+    "r20": -17.9,
+    "r60": -37.7
    }
   ],
   "exchange": "ASX",
@@ -2048,19 +2678,28 @@
     "date": "2026-10-19",
     "type": "Discovery or drill result",
     "headline": "High-Grade Gold Lode discovered at Cosmopolitan Gold Mine",
-    "setback": false
+    "setback": false,
+    "r5": -16.1,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-06-05",
     "type": "MnA",
     "headline": "Acquisition of 100% of Yundamindra and Kookynie Projects",
-    "setback": false
+    "setback": false,
+    "r5": -12.5,
+    "r20": -16.0,
+    "r60": 15.2
    },
    {
     "date": "2026-02-02",
     "type": "MnA",
     "headline": "NME: NME divests Arika Joint Venture interest",
-    "setback": false
+    "setback": false,
+    "r5": -4.8,
+    "r20": 9.0,
+    "r60": -5.2
    }
   ],
   "exchange": "ASX",
@@ -2088,19 +2727,28 @@
     "date": "2026-10-19",
     "type": "MnA",
     "headline": "Completion of Serra Negra Project Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -1.4,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-17",
     "type": "Discovery or drill result",
     "headline": "New Serra Negra Discovery Highlights District Potential",
-    "setback": false
+    "setback": false,
+    "r5": -2.0,
+    "r20": -0.6,
+    "r60": null
    },
    {
     "date": "2026-04-28",
     "type": "MnA",
     "headline": "Oceana acquires global-scale rare earths project in Brazil",
-    "setback": false
+    "setback": false,
+    "r5": 14.3,
+    "r20": 22.1,
+    "r60": -19.2
    }
   ],
   "exchange": "ASX",
@@ -2128,19 +2776,28 @@
     "date": "2026-10-16",
     "type": "Study",
     "headline": "Tiris BFS Confirms Low-Cost, Near-Term Uranium Project",
-    "setback": false
+    "setback": false,
+    "r5": -1.9,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-02-02",
     "type": "Funding",
     "headline": "Aura Energy Successfully Raises A$20 million via Placement",
-    "setback": false
+    "setback": false,
+    "r5": -23.5,
+    "r20": -38.9,
+    "r60": -29.2
    },
    {
     "date": "2026-01-23",
     "type": "Funding",
     "headline": "Investment establishes C$50M valuation for Haggan project",
-    "setback": false
+    "setback": false,
+    "r5": 22.5,
+    "r20": -18.1,
+    "r60": -14.8
    }
   ],
   "exchange": "ASX",
@@ -2168,19 +2825,28 @@
     "date": "2026-10-13",
     "type": "Funding",
     "headline": "Strategic $20M Placement with Strong Institutional Support",
-    "setback": false
+    "setback": false,
+    "r5": -0.5,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-05-20",
     "type": "Funding",
     "headline": "$22 Million Strategic Investment by Kinterra Capital",
-    "setback": false
+    "setback": false,
+    "r5": 33.3,
+    "r20": 38.0,
+    "r60": 40.9
    },
    {
     "date": "2026-03-03",
     "type": "Permit or approval",
     "headline": "Maronan Silver Project Mineral Development Licence Granted",
-    "setback": false
+    "setback": false,
+    "r5": -17.0,
+    "r20": -30.8,
+    "r60": -17.3
    }
   ],
   "exchange": "ASX",
@@ -2208,25 +2874,37 @@
     "date": "2026-10-13",
     "type": "Resource",
     "headline": "Bramaderos resource up 72% to 6.2Moz AuEq",
-    "setback": false
+    "setback": false,
+    "r5": 8.3,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-05-11",
     "type": "Setback",
     "headline": "Retraction announcement of scoping study",
-    "setback": true
+    "setback": true,
+    "r5": -8.5,
+    "r20": -31.9,
+    "r60": -52.6
    },
    {
     "date": "2026-02-04",
     "type": "Discovery or drill result",
     "headline": "Discovery of high grade surface mineralisation at Porotillo",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": -15.9,
+    "r60": -23.5
    },
    {
     "date": "2025-11-24",
     "type": "Resource",
     "headline": "Bramaderos resource jumps 33% to 3.6Moz AuEq",
-    "setback": false
+    "setback": false,
+    "r5": -5.8,
+    "r20": -26.6,
+    "r60": -30.4
    }
   ],
   "exchange": "ASX",
@@ -2254,19 +2932,28 @@
     "date": "2026-10-12",
     "type": "Discovery or drill result",
     "headline": "First Chalkos holes return Cu-Ag grades at Otniel discovery",
-    "setback": false
+    "setback": false,
+    "r5": -54.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-07",
     "type": "Funding",
     "headline": "$20m Institutional-led Placement to Accelerate Drilling",
-    "setback": false
+    "setback": false,
+    "r5": 7.4,
+    "r20": -17.0,
+    "r60": null
    },
    {
     "date": "2026-07-02",
     "type": "Discovery or drill result",
     "headline": "New Copper Discoveries boost Chalkos Project",
-    "setback": false
+    "setback": false,
+    "r5": 30.3,
+    "r20": 6.7,
+    "r60": 450.1
    }
   ],
   "exchange": "ASX",
@@ -2294,19 +2981,28 @@
     "date": "2026-10-08",
     "type": "Discovery or drill result",
     "headline": "White Caps drilling restarts, follows 13.5m @ 7.67 g/t gold",
-    "setback": false
+    "setback": false,
+    "r5": -4.4,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-29",
     "type": "Funding",
     "headline": "A$26.25m Raised for Drilling at Golconda and White Caps",
-    "setback": false
+    "setback": false,
+    "r5": -28.1,
+    "r20": -22.4,
+    "r60": -44.0
    },
    {
     "date": "2026-06-22",
     "type": "Discovery or drill result",
     "headline": "13.5m at 7.67 g/t gold at White Caps",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": -17.9,
+    "r60": -27.9
    }
   ],
   "exchange": "ASX",
@@ -2334,19 +3030,28 @@
     "date": "2026-10-08",
     "type": "Funding",
     "headline": "Inventory Prepayment Facility and Export Permitting",
-    "setback": false
+    "setback": false,
+    "r5": -17.3,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-23",
     "type": "Funding",
     "headline": "Strategic Funding Package - Balance Sheet Reset",
-    "setback": false
+    "setback": false,
+    "r5": -21.1,
+    "r20": -49.0,
+    "r60": -56.8
    },
    {
     "date": "2026-02-06",
     "type": "Funding",
     "headline": "Completion of A$76 million Placement",
-    "setback": false
+    "setback": false,
+    "r5": -28.5,
+    "r20": -28.7,
+    "r60": -64.6
    }
   ],
   "exchange": "ASX",
@@ -2374,25 +3079,37 @@
     "date": "2026-09-25",
     "type": "Resource",
     "headline": "Mineral Resource Increases to 59.0Mlbs U3O8 at Lance Project",
-    "setback": false
+    "setback": false,
+    "r5": -3.0,
+    "r20": -15.3,
+    "r60": null
    },
    {
     "date": "2026-09-24",
     "type": "Setback",
     "headline": "Non-Cash Impairment",
-    "setback": true
+    "setback": true,
+    "r5": -4.1,
+    "r20": -16.7,
+    "r60": null
    },
    {
     "date": "2026-06-10",
     "type": "Funding",
     "headline": "Convertible Note Debt Facility Agreement Executed",
-    "setback": false
+    "setback": false,
+    "r5": 11.5,
+    "r20": -3.0,
+    "r60": -20.9
    },
    {
     "date": "2026-05-14",
     "type": "Funding",
     "headline": "Peninsula Secures US$56M Funding Package",
-    "setback": false
+    "setback": false,
+    "r5": 2.9,
+    "r20": -1.9,
+    "r60": -30.1
    }
   ],
   "exchange": "ASX",
@@ -2420,19 +3137,28 @@
     "date": "2026-09-21",
     "type": "MnA",
     "headline": "Sale of Canadian Assets",
-    "setback": false
+    "setback": false,
+    "r5": -0.8,
+    "r20": -7.6,
+    "r60": null
    },
    {
     "date": "2026-07-21",
     "type": "MnA",
     "headline": "Los Warbos Project Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": 10.5,
+    "r20": 1.5,
+    "r60": 49.7
    },
    {
     "date": "2026-05-11",
     "type": "MnA",
     "headline": "La Lorena Project Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": 45.7,
+    "r20": 93.5,
+    "r60": 106.5
    }
   ],
   "exchange": "ASX",
@@ -2460,19 +3186,28 @@
     "date": "2026-08-25",
     "type": "Resource",
     "headline": "Mons Cupri Mineral Resource Update",
-    "setback": false
+    "setback": false,
+    "r5": 14.1,
+    "r20": -0.8,
+    "r60": null
    },
    {
     "date": "2026-02-24",
     "type": "Study",
     "headline": "Whim Creek DFS Update Confirms Outstanding Economics",
-    "setback": false
+    "setback": false,
+    "r5": 1.9,
+    "r20": 0.7,
+    "r60": 33.1
    },
    {
     "date": "2025-12-08",
     "type": "Funding",
     "headline": "Anax Completes Strategic Placement and Secures Loan Funding",
-    "setback": false
+    "setback": false,
+    "r5": 24.4,
+    "r20": 120.3,
+    "r60": 213.3
    }
   ],
   "exchange": "ASX",
@@ -2500,19 +3235,28 @@
     "date": "2026-08-19",
     "type": "Discovery or drill result",
     "headline": "Further High-Grade Silver Discovered Outside MRE",
-    "setback": false
+    "setback": false,
+    "r5": 1.4,
+    "r20": -13.2,
+    "r60": null
    },
    {
     "date": "2026-07-23",
     "type": "MnA",
     "headline": "Strategic Acquisition and Land Consolidation at Maverick",
-    "setback": false
+    "setback": false,
+    "r5": -2.1,
+    "r20": 14.2,
+    "r60": -3.9
    },
    {
     "date": "2025-12-09",
     "type": "Resource",
     "headline": "Resource grows 59Moz to 539Moz AgEq at 71g/t",
-    "setback": false
+    "setback": false,
+    "r5": 11.8,
+    "r20": 39.1,
+    "r60": 45.2
    }
   ],
   "exchange": "ASX",
@@ -2540,19 +3284,28 @@
     "date": "2026-08-18",
     "type": "MnA",
     "headline": "AMD acquires Pilbara iron ore project targeting DSO deposits",
-    "setback": false
+    "setback": false,
+    "r5": -0.9,
+    "r20": 30.3,
+    "r60": null
    },
    {
     "date": "2026-06-24",
     "type": "MnA",
     "headline": "Arrow completes Yarraloola Copper Project acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -23.4,
+    "r20": 29.5,
+    "r60": 304.2
    },
    {
     "date": "2026-04-28",
     "type": "MnA",
     "headline": "Arrow to acquire Yarraloola Copper Project in WA Pilbara",
-    "setback": false
+    "setback": false,
+    "r5": 0.5,
+    "r20": -63.6,
+    "r60": -70.1
    }
   ],
   "exchange": "ASX",
@@ -2580,19 +3333,28 @@
     "date": "2026-07-20",
     "type": "Funding",
     "headline": "JGH Signs Non-Binding Agreement to Secure Est. $1.1B Funding",
-    "setback": false
+    "setback": false,
+    "r5": -26.8,
+    "r20": -38.8,
+    "r60": -33.5
    },
    {
     "date": "2026-06-01",
     "type": "Reserve",
     "headline": "Jade Books First Ever Gas Reserve in Mongolia",
-    "setback": false
+    "setback": false,
+    "r5": 5.0,
+    "r20": 24.1,
+    "r60": -6.5
    },
    {
     "date": "2025-11-10",
     "type": "Funding",
     "headline": "$70m LOI Signed for Red Lake Development",
-    "setback": false
+    "setback": false,
+    "r5": -3.1,
+    "r20": -3.6,
+    "r60": -29.9
    }
   ],
   "exchange": "ASX",
@@ -2620,19 +3382,28 @@
     "date": "2026-07-16",
     "type": "Discovery or drill result",
     "headline": "High-Grade Results Confirm New Shackle Discovery",
-    "setback": false
+    "setback": false,
+    "r5": 8.0,
+    "r20": 8.4,
+    "r60": 2.0
    },
    {
     "date": "2026-07-09",
     "type": "Study",
     "headline": "Stage 1 Scoping Study Supports Development at Tuckanarra",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": 3.2,
+    "r60": 16.6
    },
    {
     "date": "2026-07-07",
     "type": "Resource",
     "headline": "New Cable Resource Increased to 60% Indicated",
-    "setback": false
+    "setback": false,
+    "r5": -8.5,
+    "r20": -1.8,
+    "r60": 5.1
    }
   ],
   "exchange": "ASX",
@@ -2660,19 +3431,28 @@
     "date": "2026-05-18",
     "type": "MnA",
     "headline": "Cauldron Acquires Tenements Surrounding Manyingee",
-    "setback": false
+    "setback": false,
+    "r5": -18.7,
+    "r20": 13.7,
+    "r60": 62.8
    },
    {
     "date": "2025-12-17",
     "type": "Discovery or drill result",
     "headline": "New Discovery at Yanrey Uranium Project",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": 26.8,
+    "r60": 22.7
    },
    {
     "date": "2025-11-25",
     "type": "Discovery or drill result",
     "headline": "New Discovery of Thick High-Grade Uranium at Manyingee North",
-    "setback": false
+    "setback": false,
+    "r5": 15.7,
+    "r20": 19.4,
+    "r60": 71.9
    }
   ],
   "exchange": "ASX",
@@ -2700,19 +3480,28 @@
     "date": "2026-04-29",
     "type": "MnA",
     "headline": "Completion of Pickle Crow Gold Project Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -15.0,
+    "r20": -19.7,
+    "r60": -46.0
    },
    {
     "date": "2026-02-04",
     "type": "Funding",
     "headline": "Successful A$35m Placement",
-    "setback": false
+    "setback": false,
+    "r5": 15.7,
+    "r20": 6.4,
+    "r60": -14.2
    },
    {
     "date": "2026-02-02",
     "type": "MnA",
     "headline": "Pickle Crow Gold Project Acquisition and Placement",
-    "setback": false
+    "setback": false,
+    "r5": 17.9,
+    "r20": 9.1,
+    "r60": -9.2
    }
   ],
   "exchange": "ASX",
@@ -2740,19 +3529,28 @@
     "date": "2026-04-09",
     "type": "MnA",
     "headline": "Acquisition of Highly Prospective Historical Asset-North NSW",
-    "setback": false
+    "setback": false,
+    "r5": -6.3,
+    "r20": -15.1,
+    "r60": -20.0
    },
    {
     "date": "2025-12-17",
     "type": "Discovery or drill result",
     "headline": "Discovery of New Parallel Silver Lode at Webbs",
-    "setback": false
+    "setback": false,
+    "r5": -4.2,
+    "r20": 31.8,
+    "r60": -15.9
    },
    {
     "date": "2025-11-28",
     "type": "MnA",
     "headline": "Completion of the Acquisition of Webbs Consol Silver Project",
-    "setback": false
+    "setback": false,
+    "r5": 7.1,
+    "r20": 24.2,
+    "r60": 14.6
    }
   ],
   "exchange": "ASX",
@@ -2780,19 +3578,28 @@
     "date": "2026-10-14",
     "type": "FID or construction decision",
     "headline": "FID to deliver the Savage River Underground",
-    "setback": false
+    "setback": false,
+    "r5": 2.1,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-30",
     "type": "Setback",
     "headline": "Potential Non-Cash Impairment of Carrying Value of Assets",
-    "setback": true
+    "setback": true,
+    "r5": -1.1,
+    "r20": -11.2,
+    "r60": -16.2
    },
    {
     "date": "2026-04-02",
     "type": "Reserve",
     "headline": "Savage River Mineral Resources and Ore Reserves Update",
-    "setback": false
+    "setback": false,
+    "r5": -4.5,
+    "r20": -12.5,
+    "r60": -24.1
    }
   ],
   "exchange": "ASX",
@@ -2820,13 +3627,19 @@
     "date": "2026-10-05",
     "type": "Study",
     "headline": "V-Iron Plant Scoping Study Supports Progression to DFS",
-    "setback": false
+    "setback": false,
+    "r5": -11.8,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-04-28",
     "type": "Funding",
     "headline": "US Vanadium Non Binding Offtake Term Sheet",
-    "setback": false
+    "setback": false,
+    "r5": 27.0,
+    "r20": 1.4,
+    "r60": -18.6
    }
   ],
   "exchange": "ASX",
@@ -2854,13 +3667,19 @@
     "date": "2026-09-29",
     "type": "Discovery or drill result",
     "headline": "50m @ 4.9g/t Au Leads Final Mt Olympus Results",
-    "setback": false
+    "setback": false,
+    "r5": -0.1,
+    "r20": -4.1,
+    "r60": null
    },
    {
     "date": "2025-11-05",
     "type": "Study",
     "headline": "Compelling Mt Olympus Scoping Study",
-    "setback": false
+    "setback": false,
+    "r5": 13.5,
+    "r20": 23.4,
+    "r60": 14.9
    }
   ],
   "exchange": "ASX",
@@ -2888,13 +3707,19 @@
     "date": "2026-09-22",
     "type": "MnA",
     "headline": "Completion of Strategic Demerger of North Queensland Assets",
-    "setback": false
+    "setback": false,
+    "r5": -0.8,
+    "r20": -3.4,
+    "r60": null
    },
    {
     "date": "2026-09-21",
     "type": "Resource",
     "headline": "White Dam Gold Copper Project - Vertigo MRE Update",
-    "setback": false
+    "setback": false,
+    "r5": 5.0,
+    "r20": -10.1,
+    "r60": null
    }
   ],
   "exchange": "ASX",
@@ -2922,13 +3747,19 @@
     "date": "2026-09-03",
     "type": "MnA",
     "headline": "IXR AND USSM TO FORM USA MAGNET RECYCLING JV",
-    "setback": false
+    "setback": false,
+    "r5": 18.1,
+    "r20": 46.6,
+    "r60": null
    },
    {
     "date": "2026-01-27",
     "type": "Funding",
     "headline": "UK GOVT PROVIDES GBP12M GRANT OFFER TO IONIC TECHNOLOGIES",
-    "setback": false
+    "setback": false,
+    "r5": -14.5,
+    "r20": -16.3,
+    "r60": -33.0
    }
   ],
   "exchange": "ASX",
@@ -2956,13 +3787,19 @@
     "date": "2026-08-13",
     "type": "Funding",
     "headline": "LIFT Closes C$23 Million Public Offering",
-    "setback": false
+    "setback": false,
+    "r5": -5.1,
+    "r20": -8.3,
+    "r60": null
    },
    {
     "date": "2026-06-24",
     "type": "MnA",
     "headline": "Li-Ft enters Agreement to Acquire Renard Mine Site",
-    "setback": false
+    "setback": false,
+    "r5": -14.7,
+    "r20": -26.2,
+    "r60": -49.4
    }
   ],
   "exchange": "ASX",
@@ -2990,19 +3827,28 @@
     "date": "2026-06-19",
     "type": "Reserve",
     "headline": "Updated Ore Reserve - Caravel Copper Project",
-    "setback": false
+    "setback": false,
+    "r5": -13.5,
+    "r20": -13.9,
+    "r60": 10.8
    },
    {
     "date": "2026-06-15",
     "type": "Funding",
     "headline": "$15 Million Royalty Funding Arrangement",
-    "setback": false
+    "setback": false,
+    "r5": 6.8,
+    "r20": -3.6,
+    "r60": 13.0
    },
    {
     "date": "2025-11-14",
     "type": "Setback",
     "headline": "Strategic Mine Plan Update - Retraction",
-    "setback": true
+    "setback": true,
+    "r5": -1.7,
+    "r20": 20.2,
+    "r60": 71.7
    }
   ],
   "exchange": "ASX",
@@ -3030,13 +3876,19 @@
     "date": "2026-06-11",
     "type": "MnA",
     "headline": "Killi Acquires Major WA Iron Ore Project",
-    "setback": false
+    "setback": false,
+    "r5": -10.4,
+    "r20": -18.2,
+    "r60": 14.1
    },
    {
     "date": "2026-02-11",
     "type": "Discovery or drill result",
     "headline": "Large Mineralised Breccia Discovered at Mt Rawdon West",
-    "setback": false
+    "setback": false,
+    "r5": 19.8,
+    "r20": 23.3,
+    "r60": 479.1
    }
   ],
   "exchange": "ASX",
@@ -3064,13 +3916,19 @@
     "date": "2026-05-28",
     "type": "Permit or approval",
     "headline": "Petroleum Production Sharing Agreement Signed",
-    "setback": false
+    "setback": false,
+    "r5": 2.1,
+    "r20": -18.1,
+    "r60": -7.3
    },
    {
     "date": "2026-01-27",
     "type": "Funding",
     "headline": "Al Mansour Holdings Strategic Partnership Update",
-    "setback": false
+    "setback": false,
+    "r5": -55.8,
+    "r20": -53.0,
+    "r60": -27.8
    }
   ],
   "exchange": "ASX",
@@ -3098,13 +3956,19 @@
     "date": "2026-04-08",
     "type": "Resource",
     "headline": "33Moz AgEq JORC Mineral Resource for Yoquivo",
-    "setback": false
+    "setback": false,
+    "r5": 14.6,
+    "r20": 6.5,
+    "r60": -27.0
    },
    {
     "date": "2026-01-21",
     "type": "Discovery or drill result",
     "headline": "New High Grade Gold Zone Discovered Near Happy Valley",
-    "setback": false
+    "setback": false,
+    "r5": 1.7,
+    "r20": -13.7,
+    "r60": -32.6
    }
   ],
   "exchange": "ASX",
@@ -3132,31 +3996,46 @@
     "date": "2026-03-26",
     "type": "Funding",
     "headline": "Equity Raising and Strategic Funding Proposals",
-    "setback": false
+    "setback": false,
+    "r5": -3.2,
+    "r20": -13.6,
+    "r60": -7.3
    },
    {
     "date": "2026-03-16",
     "type": "Setback",
     "headline": "Tesla offtake alleged default cure date extended",
-    "setback": true
+    "setback": true,
+    "r5": -15.7,
+    "r20": -33.4,
+    "r60": -34.4
    },
    {
     "date": "2026-03-02",
     "type": "Funding",
     "headline": "Syrah signs Balama binding offtake with NextSource",
-    "setback": false
+    "setback": false,
+    "r5": 4.5,
+    "r20": -34.9,
+    "r60": -48.9
    },
    {
     "date": "2026-01-19",
     "type": "Setback",
     "headline": "Tesla offtake alleged default cure date extended",
-    "setback": true
+    "setback": true,
+    "r5": -4.2,
+    "r20": -14.8,
+    "r60": -50.5
    },
    {
     "date": "2025-11-17",
     "type": "Setback",
     "headline": "Tesla offtake alleged default cure date extended",
-    "setback": true
+    "setback": true,
+    "r5": -2.9,
+    "r20": -6.1,
+    "r60": -19.8
    }
   ],
   "exchange": "ASX",
@@ -3184,13 +4063,19 @@
     "date": "2025-12-03",
     "type": "Funding",
     "headline": "Capital Raising of $35m to Underpin Activities and Growth",
-    "setback": false
+    "setback": false,
+    "r5": 1.0,
+    "r20": -3.0,
+    "r60": 45.2
    },
    {
     "date": "2025-12-01",
     "type": "MnA",
     "headline": "DevEx to Acquire Alligator Energy's NT Uranium Tenure",
-    "setback": false
+    "setback": false,
+    "r5": 19.0,
+    "r20": -1.2,
+    "r60": 33.0
    }
   ],
   "exchange": "ASX",
@@ -3218,7 +4103,10 @@
     "date": "2026-10-14",
     "type": "Study",
     "headline": "Mt York PFS and Extensional Drilling Results",
-    "setback": false
+    "setback": false,
+    "r5": -4.3,
+    "r20": null,
+    "r60": null
    }
   ],
   "exchange": "ASX",
@@ -3246,7 +4134,10 @@
     "date": "2026-09-29",
     "type": "Permit or approval",
     "headline": "Lake Resources Granted Environmental Impact Declaration",
-    "setback": false
+    "setback": false,
+    "r5": 7.8,
+    "r20": -17.0,
+    "r60": null
    }
   ],
   "exchange": "ASX",
@@ -3274,7 +4165,10 @@
     "date": "2026-06-09",
     "type": "MnA",
     "headline": "Golden Patricia Acquisition from Barrick Completed",
-    "setback": false
+    "setback": false,
+    "r5": -3.0,
+    "r20": -8.9,
+    "r60": -11.4
    }
   ],
   "exchange": "ASX",
@@ -3302,7 +4196,10 @@
     "date": "2026-04-28",
     "type": "Study",
     "headline": "Flemington delivers standout Scoping Study economics",
-    "setback": false
+    "setback": false,
+    "r5": 62.7,
+    "r20": 36.5,
+    "r60": 23.8
    }
   ],
   "exchange": "ASX",
@@ -3330,7 +4227,10 @@
     "date": "2026-04-22",
     "type": "Resource",
     "headline": "Aileron Resources Grow by Over 50% to 120Mt",
-    "setback": false
+    "setback": false,
+    "r5": 28.5,
+    "r20": 4.9,
+    "r60": -0.4
    }
   ],
   "exchange": "ASX",
@@ -3358,7 +4258,10 @@
     "date": "2026-04-21",
     "type": "MnA",
     "headline": "Acquisition of Advanced Lithium Project, Minas Gerais Brazil",
-    "setback": false
+    "setback": false,
+    "r5": 156.1,
+    "r20": 195.2,
+    "r60": 195.4
    }
   ],
   "exchange": "ASX",
@@ -3386,7 +4289,10 @@
     "date": "2026-02-17",
     "type": "MnA",
     "headline": "KRR to acquire High-Grade Mindoolah Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": 75.9,
+    "r20": 52.6,
+    "r60": 8.9
    }
   ],
   "exchange": "ASX",
@@ -3414,7 +4320,10 @@
     "date": "2025-11-03",
     "type": "Funding",
     "headline": "LKY Receives up to US$191M Potential Support from EXIM Bank",
-    "setback": false
+    "setback": false,
+    "r5": -2.0,
+    "r20": -8.6,
+    "r60": -50.5
    }
   ],
   "exchange": "ASX",
@@ -3442,7 +4351,10 @@
     "date": "2025-10-31",
     "type": "Funding",
     "headline": "$35 Million Placement to Accelerate Growth at Southern Cross",
-    "setback": false
+    "setback": false,
+    "r5": -1.6,
+    "r20": 11.2,
+    "r60": -5.4
    }
   ],
   "exchange": "ASX",
@@ -3470,61 +4382,91 @@
     "date": "2026-05-29",
     "type": "MnA",
     "headline": "Acquires Strategic Surface Land at Topaz Project",
-    "setback": false
+    "setback": false,
+    "r5": -3.0,
+    "r20": -9.3,
+    "r60": -15.5
    },
    {
     "date": "2026-03-04",
     "type": "Discovery or drill result",
     "headline": "Pressurized Gas Encounter at Jetstream #7",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": 21.9,
+    "r60": 0.6
    },
    {
     "date": "2026-02-09",
     "type": "Discovery or drill result",
     "headline": "Reports Pressurized Gas Encounter at Jetstream 6",
-    "setback": false
+    "setback": false,
+    "r5": 3.2,
+    "r20": -5.9,
+    "r60": -10.7
    },
    {
     "date": "2026-01-09",
     "type": "Discovery or drill result",
     "headline": "Additional High-Pressure Gas Encounter Jetstream 5",
-    "setback": false
+    "setback": false,
+    "r5": 10.2,
+    "r20": 63.4,
+    "r60": 101.7
    },
    {
     "date": "2026-01-05",
     "type": "MnA",
     "headline": "Acquisition of Michigan Helium Exploration Assets",
-    "setback": false
+    "setback": false,
+    "r5": 22.5,
+    "r20": 70.0,
+    "r60": 129.7
    },
    {
     "date": "2025-12-08",
     "type": "Discovery or drill result",
     "headline": "Pressurised Gas Encounter Jetstream #5",
-    "setback": false
+    "setback": false,
+    "r5": 9.4,
+    "r20": 48.1,
+    "r60": 145.7
    },
    {
     "date": "2025-11-18",
     "type": "Discovery or drill result",
     "headline": "Pressurised Gas Encounter at Jetstream #4",
-    "setback": false
+    "setback": false,
+    "r5": -2.2,
+    "r20": 0.2,
+    "r60": 151.0
    },
    {
     "date": "2025-11-04",
     "type": "MnA",
     "headline": "Definitive Agreement to Acquire Land Position",
-    "setback": false
+    "setback": false,
+    "r5": -10.6,
+    "r20": -18.2,
+    "r60": 82.9
    },
    {
     "date": "2025-10-30",
     "type": "Discovery or drill result",
     "headline": "Jetstream #3 Encounters Gas Near-1000 PSI",
-    "setback": false
+    "setback": false,
+    "r5": -2.6,
+    "r20": -17.6,
+    "r60": 103.5
    },
    {
     "date": "2025-10-27",
     "type": "MnA",
     "headline": "Proposed Acquisition Michigan Helium Assets",
-    "setback": false
+    "setback": false,
+    "r5": -0.5,
+    "r20": -12.7,
+    "r60": 91.5
    }
   ],
   "exchange": "AIM",
@@ -3555,55 +4497,82 @@
     "date": "2026-10-01",
     "type": "MnA",
     "headline": "Completion of acquisition of Spirit Energy assets",
-    "setback": false
+    "setback": false,
+    "r5": 1.9,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-13",
     "type": "Setback",
     "headline": "Termination of Serica Offer for Pharos Energy plc",
-    "setback": true
+    "setback": true,
+    "r5": 3.9,
+    "r20": 16.1,
+    "r60": null
    },
    {
     "date": "2026-07-27",
     "type": "MnA",
     "headline": "Recommended acquisition of Pharos Energy plc",
-    "setback": false
+    "setback": false,
+    "r5": -7.2,
+    "r20": -4.6,
+    "r60": 7.3
    },
    {
     "date": "2026-07-23",
     "type": "Funding",
     "headline": "New Reserves Based Lending Facilities Completion",
-    "setback": false
+    "setback": false,
+    "r5": -4.3,
+    "r20": -1.5,
+    "r60": 8.7
    },
    {
     "date": "2026-06-11",
     "type": "MnA",
     "headline": "Completion of acquisition of assets from ONE-Dyas",
-    "setback": false
+    "setback": false,
+    "r5": -13.4,
+    "r20": -13.6,
+    "r60": -8.5
    },
    {
     "date": "2026-03-26",
     "type": "MnA",
     "headline": "Completion of acquisition of TotalEnergies assets",
-    "setback": false
+    "setback": false,
+    "r5": 3.0,
+    "r20": -1.4,
+    "r60": -12.2
    },
    {
     "date": "2025-12-16",
     "type": "MnA",
     "headline": "Acquisition of assets from Spirit Energy",
-    "setback": false
+    "setback": false,
+    "r5": 5.0,
+    "r20": 14.9,
+    "r60": 61.1
    },
    {
     "date": "2025-12-11",
     "type": "MnA",
     "headline": "Completion of acquisition of Prax Upstream Limited",
-    "setback": false
+    "setback": false,
+    "r5": 1.0,
+    "r20": 5.8,
+    "r60": 57.5
    },
    {
     "date": "2025-11-04",
     "type": "Funding",
     "headline": "Farm-in to UK North Sea P2530 Licence",
-    "setback": false
+    "setback": false,
+    "r5": -2.9,
+    "r20": -19.4,
+    "r60": -9.6
    }
   ],
   "exchange": "AIM",
@@ -3662,55 +4631,82 @@
     "date": "2026-07-22",
     "type": "Resource",
     "headline": "Updated Mineral Resource Estimate at ABC Project",
-    "setback": false
+    "setback": false,
+    "r5": -1.3,
+    "r20": 20.2,
+    "r60": 10.0
    },
    {
     "date": "2026-05-14",
     "type": "Setback",
     "headline": "Retraction of ABC Project Scoping Study Release",
-    "setback": true
+    "setback": true,
+    "r5": -7.8,
+    "r20": -24.6,
+    "r60": -28.0
    },
    {
     "date": "2026-05-13",
     "type": "Study",
     "headline": "ABC Project Scoping Study",
-    "setback": false
+    "setback": false,
+    "r5": -10.9,
+    "r20": -26.4,
+    "r60": -29.5
    },
    {
     "date": "2026-03-31",
     "type": "Funding",
     "headline": "Strategic Partnership Signed in Guinea",
-    "setback": false
+    "setback": false,
+    "r5": 8.5,
+    "r20": -8.6,
+    "r60": -22.5
    },
    {
     "date": "2026-03-12",
     "type": "FID or construction decision",
     "headline": "Doropo Final Investment Decision Approved",
-    "setback": false
+    "setback": false,
+    "r5": -3.4,
+    "r20": 1.6,
+    "r60": -28.4
    },
    {
     "date": "2026-03-05",
     "type": "Reserve",
     "headline": "Ore Reserves and Mineral Resource Statement",
-    "setback": false
+    "setback": false,
+    "r5": -4.5,
+    "r20": -2.4,
+    "r60": -20.9
    },
    {
     "date": "2026-02-05",
     "type": "Permit or approval",
     "headline": "Mining Permit Awarded for Doropo Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": 7.3,
+    "r20": 18.4,
+    "r60": -5.6
    },
    {
     "date": "2025-12-15",
     "type": "Study",
     "headline": "Updated Doropo DFS",
-    "setback": false
+    "setback": false,
+    "r5": 4.5,
+    "r20": 11.7,
+    "r60": 32.9
    },
    {
     "date": "2025-11-18",
     "type": "Resource",
     "headline": "Initial Mineral Resource at La Debo",
-    "setback": false
+    "setback": false,
+    "r5": -0.6,
+    "r20": 4.6,
+    "r60": 34.5
    }
   ],
   "exchange": "Main Market",
@@ -3741,49 +4737,73 @@
     "date": "2026-05-29",
     "type": "Study",
     "headline": "Orom Cross Graphite DFS NPV10 up 15% to US$1.254bn",
-    "setback": false
+    "setback": false,
+    "r5": -9.3,
+    "r20": -17.4,
+    "r60": -19.2
    },
    {
     "date": "2026-05-18",
     "type": "Resource",
     "headline": "Beehive Deposit Maiden JORC Resource",
-    "setback": false
+    "setback": false,
+    "r5": 2.4,
+    "r20": -4.0,
+    "r60": -15.9
    },
    {
     "date": "2026-03-06",
     "type": "Resource",
     "headline": "Maiden 16.9 Mt JORC Resource for Iyan Deposit",
-    "setback": false
+    "setback": false,
+    "r5": -5.9,
+    "r20": -25.1,
+    "r60": -24.1
    },
    {
     "date": "2026-01-23",
     "type": "Funding",
     "headline": "European Processing and Offtake with Alkeemia",
-    "setback": false
+    "setback": false,
+    "r5": -1.3,
+    "r20": 1.1,
+    "r60": 3.2
    },
    {
     "date": "2025-12-23",
     "type": "Discovery or drill result",
     "headline": "Beehive Returns 92.55m @ 6.83% TGC from Surface",
-    "setback": false
+    "setback": false,
+    "r5": 3.0,
+    "r20": 14.6,
+    "r60": 12.1
    },
    {
     "date": "2025-12-09",
     "type": "Funding",
     "headline": "Offtake MOU with Yunasko Ltd.",
-    "setback": false
+    "setback": false,
+    "r5": -3.8,
+    "r20": -5.5,
+    "r60": 36.8
    },
    {
     "date": "2025-12-01",
     "type": "Study",
     "headline": "DFS Results Confirms Outstanding Economics",
-    "setback": false
+    "setback": false,
+    "r5": -9.5,
+    "r20": -10.4,
+    "r60": 21.4
    },
    {
     "date": "2025-11-27",
     "type": "Resource",
     "headline": "JORC Resource Upgrade",
-    "setback": false
+    "setback": false,
+    "r5": -9.3,
+    "r20": -19.7,
+    "r60": 1.6
    }
   ],
   "exchange": "Main Market",
@@ -3815,7 +4835,7 @@
   "material_events_12m": 7,
   "latest_event_date": "2026-10-07",
   "latest_event_type": "Resource",
-  "latest_event_headline": "Substantial Maiden Resource Estimate at Wapouz\u00e9",
+  "latest_event_headline": "Substantial Maiden Resource Estimate at Wapouzé",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Gold and base metals explorer in Turkey, East Africa and West Africa; Bibemi PEA and ESIA approval, Mbe resource growth",
@@ -3823,44 +4843,65 @@
    {
     "date": "2026-10-07",
     "type": "Resource",
-    "headline": "Substantial Maiden Resource Estimate at Wapouz\u00e9",
-    "setback": false
+    "headline": "Substantial Maiden Resource Estimate at Wapouzé",
+    "setback": false,
+    "r5": -0.2,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-18",
     "type": "MnA",
     "headline": "Sale of Muratdere Royalty",
-    "setback": false
+    "setback": false,
+    "r5": 4.3,
+    "r20": -6.5,
+    "r60": null
    },
    {
     "date": "2026-07-23",
     "type": "Resource",
     "headline": "Resources at Mbe increased to 1.66m oz gold",
-    "setback": false
+    "setback": false,
+    "r5": -3.1,
+    "r20": -16.1,
+    "r60": -22.6
    },
    {
     "date": "2026-07-06",
     "type": "MnA",
     "headline": "Completion of Senala Joint Venture Agreement",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": -6.4,
+    "r60": -22.6
    },
    {
     "date": "2026-04-13",
     "type": "Resource",
     "headline": "Total Resources at Mbe increased to 1.23m oz gold",
-    "setback": false
+    "setback": false,
+    "r5": 13.0,
+    "r20": 6.3,
+    "r60": 28.6
    },
    {
     "date": "2025-12-16",
     "type": "Study",
     "headline": "Preliminary Economic Assessment for Bibemi Project",
-    "setback": false
+    "setback": false,
+    "r5": -15.6,
+    "r20": -10.5,
+    "r60": -3.9
    },
    {
     "date": "2025-11-20",
     "type": "Permit or approval",
     "headline": "Approval of ESIA Study for Bibemi Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": -4.6,
+    "r20": 13.4,
+    "r60": 30.9
    }
   ],
   "exchange": "AIM",
@@ -3910,43 +4951,64 @@
     "date": "2026-07-29",
     "type": "Resource",
     "headline": "Updated Mineral Resource Estimate and publica...",
-    "setback": false
+    "setback": false,
+    "r5": 5.3,
+    "r20": 7.7,
+    "r60": 10.9
    },
    {
     "date": "2026-07-13",
     "type": "MnA",
     "headline": "Gardaq A/S exploration JV funding secured",
-    "setback": false
+    "setback": false,
+    "r5": -1.0,
+    "r20": 19.1,
+    "r60": 36.2
    },
    {
     "date": "2026-04-30",
     "type": "Funding",
     "headline": "Amaroq Doubles Revolving Credit Facility to U...",
-    "setback": false
+    "setback": false,
+    "r5": 6.4,
+    "r20": -2.7,
+    "r60": -5.8
    },
    {
     "date": "2025-12-23",
     "type": "MnA",
     "headline": "Closing of Strategic Acquisitions, Total Voti...",
-    "setback": false
+    "setback": false,
+    "r5": 11.1,
+    "r20": 24.1,
+    "r60": -4.9
    },
    {
     "date": "2025-11-19",
     "type": "Funding",
     "headline": "Improved debt financing agreement",
-    "setback": false
+    "setback": false,
+    "r5": 1.5,
+    "r20": 5.0,
+    "r60": 18.9
    },
    {
     "date": "2025-11-04",
     "type": "Discovery or drill result",
     "headline": "Discovery of Rare Earth Elements in South Gre...",
-    "setback": false
+    "setback": false,
+    "r5": 6.0,
+    "r20": 11.6,
+    "r60": 71.9
    },
    {
     "date": "2025-10-28",
     "type": "Discovery or drill result",
     "headline": "New Gold Discoveries Across Greenland with Gr...",
-    "setback": false
+    "setback": false,
+    "r5": -2.6,
+    "r20": 11.2,
+    "r60": 42.6
    }
   ],
   "exchange": "Main Market",
@@ -3987,37 +5049,55 @@
     "date": "2026-10-02",
     "type": "Funding",
     "headline": "Ministerial Approval - Namibia Licences Farm-down",
-    "setback": false
+    "setback": false,
+    "r5": -13.9,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-06-29",
     "type": "Funding",
     "headline": "Ministerial Approval for Namibia PEL 98 Farm-Out",
-    "setback": false
+    "setback": false,
+    "r5": 10.6,
+    "r20": 32.9,
+    "r60": -12.0
    },
    {
     "date": "2026-04-13",
     "type": "Funding",
     "headline": "Farm down of Namibian portfolio to BP",
-    "setback": false
+    "setback": false,
+    "r5": 12.5,
+    "r20": -3.2,
+    "r60": -0.8
    },
    {
     "date": "2026-03-11",
     "type": "MnA",
     "headline": "Acquisition of JHI and Navitas Partnership",
-    "setback": false
+    "setback": false,
+    "r5": 29.8,
+    "r20": 16.3,
+    "r60": 12.7
    },
    {
     "date": "2026-03-02",
     "type": "Funding",
     "headline": "Navitas Signs Farm-In for North Falklands Licence",
-    "setback": false
+    "setback": false,
+    "r5": 6.3,
+    "r20": 30.5,
+    "r60": 33.0
    },
    {
     "date": "2025-12-04",
     "type": "Funding",
     "headline": "Strategic Partnership with Navitas Petroleum",
-    "setback": false
+    "setback": false,
+    "r5": 155.2,
+    "r20": 334.5,
+    "r60": 489.8
    }
   ],
   "exchange": "AIM",
@@ -4048,37 +5128,55 @@
     "date": "2026-09-02",
     "type": "Permit or approval",
     "headline": "2A Mining Right Granted",
-    "setback": false
+    "setback": false,
+    "r5": 23.7,
+    "r20": 1.2,
+    "r60": null
    },
    {
     "date": "2026-08-24",
     "type": "Study",
     "headline": "2A Technical Report",
-    "setback": false
+    "setback": false,
+    "r5": 0.1,
+    "r20": 13.0,
+    "r60": null
    },
    {
     "date": "2026-07-20",
     "type": "Funding",
     "headline": "US$750,000 Strategic Partnership Payment Received",
-    "setback": false
+    "setback": false,
+    "r5": 8.5,
+    "r20": 3.1,
+    "r60": -3.8
    },
    {
     "date": "2026-07-07",
     "type": "MnA",
     "headline": "Acquisition of additional interests in WHM and DBM",
-    "setback": false
+    "setback": false,
+    "r5": 23.1,
+    "r20": 26.3,
+    "r60": 30.3
    },
    {
     "date": "2026-05-26",
     "type": "Permit or approval",
     "headline": "WHM Strategic Production Sharing Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 4.9,
+    "r20": 12.9,
+    "r60": 56.0
    },
    {
     "date": "2025-11-03",
     "type": "Permit or approval",
     "headline": "Withdrawal of 2A Mining Right Objection",
-    "setback": false
+    "setback": false,
+    "r5": 8.6,
+    "r20": 11.8,
+    "r60": -20.9
    }
   ],
   "exchange": "AIM",
@@ -4109,37 +5207,55 @@
     "date": "2026-06-29",
     "type": "Reserve",
     "headline": "March 2026 Group Ore Reserve Statement",
-    "setback": false
+    "setback": false,
+    "r5": -6.7,
+    "r20": -15.9,
+    "r60": -14.0
    },
    {
     "date": "2026-06-01",
     "type": "Funding",
     "headline": "Execution of Debt Facilities and Havieron Approval",
-    "setback": false
+    "setback": false,
+    "r5": -5.7,
+    "r20": -5.9,
+    "r60": -1.4
    },
    {
     "date": "2026-05-26",
     "type": "Permit or approval",
     "headline": "Havieron Environmental Approvals Received",
-    "setback": false
+    "setback": false,
+    "r5": 5.0,
+    "r20": 7.0,
+    "r60": -1.5
    },
    {
     "date": "2026-03-30",
     "type": "Resource",
     "headline": "December 2025 Group Mineral Resource Stmt.",
-    "setback": false
+    "setback": false,
+    "r5": 25.8,
+    "r20": 29.9,
+    "r60": 14.5
    },
    {
     "date": "2026-03-30",
     "type": "Resource",
     "headline": "December 2025 O'Callaghans Mineral Resource Stmt.",
-    "setback": false
+    "setback": false,
+    "r5": 25.8,
+    "r20": 29.9,
+    "r60": 14.5
    },
    {
     "date": "2025-12-01",
     "type": "Study",
-    "headline": "Havieron Project \u2013 Feasibility Study",
-    "setback": false
+    "headline": "Havieron Project – Feasibility Study",
+    "setback": false,
+    "r5": 9.1,
+    "r20": 36.8,
+    "r60": 77.9
    }
   ],
   "exchange": "AIM",
@@ -4170,31 +5286,46 @@
     "date": "2026-10-16",
     "type": "Permit or approval",
     "headline": "EG-08 PSC Phase 1 Further Extension",
-    "setback": false
+    "setback": false,
+    "r5": -4.9,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-05-29",
     "type": "Funding",
     "headline": "MMHD Approval of Farm-out to Fuhai",
-    "setback": false
+    "setback": false,
+    "r5": -1.0,
+    "r20": 5.1,
+    "r60": 27.8
    },
    {
     "date": "2026-03-27",
     "type": "Permit or approval",
     "headline": "FEL 4/19 Licence Extension Approval",
-    "setback": false
+    "setback": false,
+    "r5": -2.2,
+    "r20": 20.0,
+    "r60": 14.3
    },
    {
     "date": "2026-02-12",
     "type": "Permit or approval",
     "headline": "EG-08 PSC Phase 1 Extension Finalised",
-    "setback": false
+    "setback": false,
+    "r5": 15.8,
+    "r20": 16.6,
+    "r60": 6.8
    },
    {
     "date": "2025-12-30",
     "type": "Funding",
     "headline": "EG-08 Farm-out Agreement Signed",
-    "setback": false
+    "setback": false,
+    "r5": 1.3,
+    "r20": -15.1,
+    "r60": -26.5
    }
   ],
   "exchange": "AIM",
@@ -4235,31 +5366,46 @@
     "date": "2026-10-02",
     "type": "First production",
     "headline": "Hope and Gorob: Commercial Production Commences",
-    "setback": false
+    "setback": false,
+    "r5": 13.8,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-06-11",
     "type": "Funding",
     "headline": "Hope and Gorob Project Financing and Offtake Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 17.8,
+    "r20": 1.9,
+    "r60": 18.9
    },
    {
     "date": "2026-04-08",
     "type": "Resource",
     "headline": "Hope and Gorob Project-New Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 20.9,
+    "r20": 0.8,
+    "r60": 103.5
    },
    {
     "date": "2025-12-17",
     "type": "MnA",
     "headline": "Completion of NLZM Processing Plant Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": -2.6,
+    "r20": 32.6,
+    "r60": 32.0
    },
    {
     "date": "2025-10-31",
     "type": "Funding",
     "headline": "Prepayment Facility and concentrate offtake agreed",
-    "setback": false
+    "setback": false,
+    "r5": -16.0,
+    "r20": -33.7,
+    "r60": -11.7
    }
   ],
   "exchange": "AIM",
@@ -4309,31 +5455,46 @@
     "date": "2026-09-11",
     "type": "Study",
     "headline": "Pan African completes Definitive Feasibility ...",
-    "setback": false
+    "setback": false,
+    "r5": -1.2,
+    "r20": -8.0,
+    "r60": null
    },
    {
     "date": "2026-07-01",
     "type": "MnA",
     "headline": "Implementation of the Emmerson Scheme",
-    "setback": false
+    "setback": false,
+    "r5": 1.8,
+    "r20": -5.1,
+    "r60": 32.9
    },
    {
     "date": "2026-06-11",
     "type": "MnA",
     "headline": "Proposed Acquisition of Emmerson Resources - ...",
-    "setback": false
+    "setback": false,
+    "r5": 14.6,
+    "r20": -12.7,
+    "r60": 29.2
    },
    {
     "date": "2026-03-09",
     "type": "MnA",
     "headline": "Pan African to acquire Emmerson Resources",
-    "setback": false
+    "setback": false,
+    "r5": -8.3,
+    "r20": -7.4,
+    "r60": -29.4
    },
    {
     "date": "2025-11-27",
     "type": "Study",
     "headline": "Completion of Feasibility Study on Soweto Clu...",
-    "setback": false
+    "setback": false,
+    "r5": 3.7,
+    "r20": 18.6,
+    "r60": 65.7
    }
   ],
   "exchange": "Main Market",
@@ -4401,31 +5562,46 @@
     "date": "2026-09-09",
     "type": "Study",
     "headline": "Scoping Study Shows Strategic Rare Earth Potential",
-    "setback": false
+    "setback": false,
+    "r5": 4.5,
+    "r20": 3.5,
+    "r60": null
    },
    {
     "date": "2026-04-16",
     "type": "Study",
     "headline": "Kasiya Definitive Feasibility Study Results",
-    "setback": false
+    "setback": false,
+    "r5": 2.6,
+    "r20": -5.4,
+    "r60": -17.9
    },
    {
     "date": "2026-03-18",
     "type": "Resource",
     "headline": "Kasiya MRE Significantly Upgraded Ahead of DFS",
-    "setback": false
+    "setback": false,
+    "r5": -7.0,
+    "r20": -5.0,
+    "r60": -28.2
    },
    {
     "date": "2026-03-12",
     "type": "Funding",
     "headline": "Sovereign Signs Rutile Offtake MoU with Mitsui",
-    "setback": false
+    "setback": false,
+    "r5": -2.0,
+    "r20": -14.3,
+    "r60": -30.8
    },
    {
     "date": "2026-02-17",
     "type": "Funding",
     "headline": "Project Vault Participant Traxys Signs Offtake MOU",
-    "setback": false
+    "setback": false,
+    "r5": 19.9,
+    "r20": 20.7,
+    "r60": -3.5
    }
   ],
   "exchange": "AIM",
@@ -4466,31 +5642,46 @@
     "date": "2026-09-01",
     "type": "MnA",
     "headline": "2nd Copper JV Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 64.8,
+    "r20": 96.9,
+    "r60": null
    },
    {
     "date": "2026-03-19",
     "type": "MnA",
     "headline": "Copper JV Agreement Signed with Xinhai Mining",
-    "setback": false
+    "setback": false,
+    "r5": 7.0,
+    "r20": 16.6,
+    "r60": 32.1
    },
    {
     "date": "2025-12-11",
     "type": "MnA",
     "headline": "JV Agreement for Development of Verkhuba",
-    "setback": false
+    "setback": false,
+    "r5": 34.3,
+    "r20": 0.0,
+    "r60": 6.6
    },
    {
     "date": "2025-12-01",
     "type": "Funding",
-    "headline": "\u00a31.8M Strategic Investment by Endeavour Mining",
-    "setback": false
+    "headline": "£1.8M Strategic Investment by Endeavour Mining",
+    "setback": false,
+    "r5": 39.7,
+    "r20": 65.2,
+    "r60": 68.6
    },
    {
     "date": "2025-11-13",
     "type": "MnA",
     "headline": "$25M+ Strategic JV Agreement with Endeavour Mining",
-    "setback": false
+    "setback": false,
+    "r5": 9.0,
+    "r20": 49.9,
+    "r60": 95.1
    }
   ],
   "exchange": "Main Market",
@@ -4531,31 +5722,46 @@
     "date": "2026-06-10",
     "type": "MnA",
     "headline": "Significant Acquisition in Malaysia",
-    "setback": false
+    "setback": false,
+    "r5": 32.3,
+    "r20": 17.1,
+    "r60": 37.9
    },
    {
     "date": "2026-04-02",
     "type": "Permit or approval",
     "headline": "PSC Signing in Peninsular Malaysia",
-    "setback": false
+    "setback": false,
+    "r5": -3.6,
+    "r20": 7.2,
+    "r60": 10.7
    },
    {
     "date": "2026-02-11",
     "type": "Permit or approval",
     "headline": "EnQuest awarded PSC interest in Malaysia",
-    "setback": false
+    "setback": false,
+    "r5": 5.0,
+    "r20": 30.9,
+    "r60": 33.1
    },
    {
     "date": "2026-02-09",
     "type": "Permit or approval",
     "headline": "EnQuest awarded PSC extension",
-    "setback": false
+    "setback": false,
+    "r5": 19.3,
+    "r20": 46.4,
+    "r60": 52.1
    },
    {
     "date": "2025-11-10",
     "type": "Funding",
     "headline": "New senior secured debt facilities",
-    "setback": false
+    "setback": false,
+    "r5": 8.2,
+    "r20": -6.6,
+    "r60": 2.4
    }
   ],
   "exchange": "Main Market",
@@ -4614,31 +5820,46 @@
     "date": "2026-05-26",
     "type": "Study",
     "headline": "Revised PFS for Optimised Dokwe Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": 6.8,
+    "r20": 4.3,
+    "r60": -16.3
    },
    {
     "date": "2026-05-26",
     "type": "Funding",
     "headline": "Agreement for Strategic Investment - Tranche 2 CDI",
-    "setback": false
+    "setback": false,
+    "r5": 6.8,
+    "r20": 4.3,
+    "r60": -16.3
    },
    {
     "date": "2026-05-18",
     "type": "MnA",
     "headline": "Sale of 13.6% Interest in Zenit for US$19.5m Cash",
-    "setback": false
+    "setback": false,
+    "r5": 1.1,
+    "r20": 5.8,
+    "r60": -21.4
    },
    {
     "date": "2026-01-23",
     "type": "Funding",
     "headline": "Xinhai Strategic Investment and Notice of GM",
-    "setback": false
+    "setback": false,
+    "r5": 30.6,
+    "r20": 26.2,
+    "r60": 43.5
    },
    {
     "date": "2025-12-03",
     "type": "First production",
     "headline": "Tavsan First Pour",
-    "setback": false
+    "setback": false,
+    "r5": 10.4,
+    "r20": 2.4,
+    "r60": 42.2
    }
   ],
   "exchange": "AIM",
@@ -4669,25 +5890,37 @@
     "date": "2026-10-22",
     "type": "MnA",
     "headline": "Proposed Acquisition of Lions Bay Resources",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-03-31",
     "type": "MnA",
     "headline": "Acquisition of 30% of Lions Bay Resources",
-    "setback": false
+    "setback": false,
+    "r5": -3.9,
+    "r20": -22.8,
+    "r60": -25.6
    },
    {
     "date": "2026-03-16",
     "type": "MnA",
     "headline": "Partial Sale of Interest in CleanTech Lithium Plc",
-    "setback": false
+    "setback": false,
+    "r5": -3.5,
+    "r20": -4.4,
+    "r60": -23.9
    },
    {
     "date": "2026-03-10",
     "type": "MnA",
     "headline": "Disposal of partial interest in Fulcrum Metals Plc",
-    "setback": false
+    "setback": false,
+    "r5": -3.9,
+    "r20": -2.2,
+    "r60": -32.3
    }
   ],
   "exchange": "AIM",
@@ -4728,25 +5961,37 @@
     "date": "2026-10-15",
     "type": "Funding",
     "headline": "PGM concentrate offtake agreement with Valterra",
-    "setback": false
+    "setback": false,
+    "r5": -1.5,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-24",
     "type": "Permit or approval",
     "headline": "Karo signs Special Mining Lease Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 5.6,
+    "r20": 5.3,
+    "r60": null
    },
    {
     "date": "2026-06-25",
     "type": "Funding",
     "headline": "Nedbank ZAR750 million Asset Finance Facility",
-    "setback": false
+    "setback": false,
+    "r5": -2.9,
+    "r20": 1.0,
+    "r60": 7.5
    },
    {
     "date": "2025-11-12",
     "type": "Funding",
     "headline": "Debt facilities with Absa Bank and Standard Bank",
-    "setback": false
+    "setback": false,
+    "r5": 3.5,
+    "r20": -3.7,
+    "r60": 33.0
    }
   ],
   "exchange": "Main Market",
@@ -4805,25 +6050,37 @@
     "date": "2026-10-14",
     "type": "MnA",
     "headline": "Acquisition of further Paradox Basin acreage",
-    "setback": false
+    "setback": false,
+    "r5": 8.2,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Acquisition of further Paradox Basin acreage",
-    "setback": false
+    "setback": false,
+    "r5": 6.1,
+    "r20": 4.2,
+    "r60": -7.0
    },
    {
     "date": "2026-06-26",
     "type": "MnA",
     "headline": "Acquisition of additional acreage and divestment",
-    "setback": false
+    "setback": false,
+    "r5": 13.3,
+    "r20": 16.0,
+    "r60": -6.3
    },
    {
     "date": "2026-05-21",
     "type": "MnA",
     "headline": "Further divestment of undeveloped acreage",
-    "setback": false
+    "setback": false,
+    "r5": -4.2,
+    "r20": -4.1,
+    "r60": -1.0
    }
   ],
   "exchange": "AIM",
@@ -4854,25 +6111,37 @@
     "date": "2026-10-14",
     "type": "MnA",
     "headline": "Acquisition of Ringhorne Production Licences",
-    "setback": false
+    "setback": false,
+    "r5": 1.1,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-15",
     "type": "MnA",
     "headline": "Completed Acquisition of Blocks 3 and 4",
-    "setback": false
+    "setback": false,
+    "r5": -4.1,
+    "r20": -7.5,
+    "r60": null
    },
    {
     "date": "2026-06-18",
     "type": "FID or construction decision",
     "headline": "Balder Next FID",
-    "setback": false
+    "setback": false,
+    "r5": 3.8,
+    "r20": 24.4,
+    "r60": 39.7
    },
    {
     "date": "2025-12-09",
     "type": "MnA",
     "headline": "Acquisition - Block 9 and Block 3 and 4, Oman",
-    "setback": false
+    "setback": false,
+    "r5": 25.3,
+    "r20": 15.2,
+    "r60": 71.0
    }
   ],
   "exchange": "AIM",
@@ -4931,25 +6200,37 @@
     "date": "2026-10-13",
     "type": "Permit or approval",
     "headline": "Receipt of Kazakh regulatory approval",
-    "setback": false
+    "setback": false,
+    "r5": -5.7,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Reserve",
     "headline": "Mineral Resource and Ore Reserve Update",
-    "setback": false
+    "setback": false,
+    "r5": 0.1,
+    "r20": 16.2,
+    "r60": null
    },
    {
     "date": "2026-06-02",
     "type": "MnA",
     "headline": "Proposed acquisition of Cygnus Metals Limited",
-    "setback": false
+    "setback": false,
+    "r5": -10.2,
+    "r20": -10.1,
+    "r60": 1.8
    },
    {
     "date": "2026-03-03",
     "type": "Reserve",
     "headline": "Sasa Mineral Resource and Ore Reserve Statement",
-    "setback": false
+    "setback": false,
+    "r5": -21.2,
+    "r20": -21.5,
+    "r60": -35.9
    }
   ],
   "exchange": "AIM",
@@ -4980,25 +6261,37 @@
     "date": "2026-09-25",
     "type": "MnA",
     "headline": "Increased Cash Offer for Capricorn by Genel Energy",
-    "setback": false
+    "setback": false,
+    "r5": 10.2,
+    "r20": 6.9,
+    "r60": null
    },
    {
     "date": "2026-09-17",
     "type": "MnA",
     "headline": "Revised All-Cash Offer for Capricorn by DNO",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": 11.0,
+    "r60": null
    },
    {
     "date": "2026-09-01",
     "type": "MnA",
     "headline": "Recommended Cash Acquisition of Capricorn by DNO",
-    "setback": false
+    "setback": false,
+    "r5": 11.9,
+    "r20": 25.9,
+    "r60": null
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Recommended cash acquisition of Capricorn by Genel",
-    "setback": false
+    "setback": false,
+    "r5": 19.8,
+    "r20": 25.2,
+    "r60": 35.0
    }
   ],
   "exchange": "Main Market",
@@ -5029,25 +6322,37 @@
     "date": "2026-09-15",
     "type": "Discovery or drill result",
     "headline": "Orosur Mining Announces Discovery at El Cedro",
-    "setback": false
+    "setback": false,
+    "r5": 73.1,
+    "r20": 17.0,
+    "r60": null
    },
    {
     "date": "2026-06-09",
     "type": "Discovery or drill result",
     "headline": "New mineralised zones discovered at APTA",
-    "setback": false
+    "setback": false,
+    "r5": 1.3,
+    "r20": -9.5,
+    "r60": -23.1
    },
    {
     "date": "2026-04-14",
     "type": "Discovery or drill result",
     "headline": "New mineralised zone discovered near Pepas",
-    "setback": false
+    "setback": false,
+    "r5": 26.2,
+    "r20": 4.5,
+    "r60": -2.5
    },
    {
     "date": "2026-02-10",
     "type": "Resource",
     "headline": "Maiden Mineral Resource Estimate at Pepas",
-    "setback": false
+    "setback": false,
+    "r5": -34.6,
+    "r20": -37.4,
+    "r60": -38.4
    }
   ],
   "exchange": "AIM",
@@ -5088,25 +6393,37 @@
     "date": "2026-09-03",
     "type": "Resource",
     "headline": "Philippines Prospect: Prospective Resources Update",
-    "setback": false
+    "setback": false,
+    "r5": -7.6,
+    "r20": -48.0,
+    "r60": null
    },
    {
     "date": "2026-08-13",
     "type": "Permit or approval",
     "headline": "Grant of Petroleum Mining Permit to Matahio NZ",
-    "setback": false
+    "setback": false,
+    "r5": 57.4,
+    "r20": 98.4,
+    "r60": null
    },
    {
     "date": "2026-04-08",
     "type": "MnA",
     "headline": "Acquisition, funding and capital reorganisation",
-    "setback": false
+    "setback": false,
+    "r5": -26.5,
+    "r20": -48.4,
+    "r60": -69.2
    },
    {
     "date": "2026-03-10",
     "type": "Permit or approval",
     "headline": "Award of Chuditch-2 Environmental Licence",
-    "setback": false
+    "setback": false,
+    "r5": -1.6,
+    "r20": 6.8,
+    "r60": -55.6
    }
   ],
   "exchange": "AIM",
@@ -5165,25 +6482,37 @@
     "date": "2026-08-28",
     "type": "Resource",
     "headline": "Maiden Mineral Resource Estimate at Motapa",
-    "setback": false
+    "setback": false,
+    "r5": 3.0,
+    "r20": 0.3,
+    "r60": null
    },
    {
     "date": "2026-08-28",
     "type": "Resource",
     "headline": "Blanket Mine M and I Resources Increases by 22%",
-    "setback": false
+    "setback": false,
+    "r5": 3.0,
+    "r20": 0.3,
+    "r60": null
    },
    {
     "date": "2026-01-15",
     "type": "Funding",
     "headline": "Pricing of Upsized $125M Convertible Notes",
-    "setback": false
+    "setback": false,
+    "r5": -11.2,
+    "r20": -13.2,
+    "r60": -20.4
    },
    {
     "date": "2025-11-25",
     "type": "Study",
     "headline": "Feasibility Study for Bilboes Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": -1.9,
+    "r20": -6.0,
+    "r60": -7.6
    }
   ],
   "exchange": "AIM",
@@ -5224,25 +6553,37 @@
     "date": "2026-08-19",
     "type": "Resource",
     "headline": "MRE Upgrade at Pitfield Titanium Project",
-    "setback": false
+    "setback": false,
+    "r5": -3.5,
+    "r20": -17.9,
+    "r60": null
    },
    {
     "date": "2026-06-24",
     "type": "MnA",
     "headline": "Completion of Sale of Eclipse Mining Lease",
-    "setback": false
+    "setback": false,
+    "r5": 5.6,
+    "r20": -3.4,
+    "r60": -7.4
    },
    {
     "date": "2026-05-19",
     "type": "MnA",
     "headline": "Execution of SPA for Eclipse Mining Lease",
-    "setback": false
+    "setback": false,
+    "r5": 6.6,
+    "r20": 4.9,
+    "r60": 47.3
    },
    {
     "date": "2025-12-30",
     "type": "MnA",
     "headline": "Conditional Sale of 75% of Eclipse Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": 14.4,
+    "r20": -4.5,
+    "r60": -12.9
    }
   ],
   "exchange": "AIM",
@@ -5292,25 +6633,37 @@
     "date": "2026-08-17",
     "type": "Study",
     "headline": "Updated Feasibility Study Enhances Taronga Value",
-    "setback": false
+    "setback": false,
+    "r5": -2.0,
+    "r20": -23.3,
+    "r60": null
    },
    {
     "date": "2026-08-13",
     "type": "Reserve",
     "headline": "Updated Mineral Reserve Estimate",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": -5.0,
+    "r60": null
    },
    {
     "date": "2026-04-30",
     "type": "Resource",
     "headline": "Updated Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": -7.0,
+    "r20": -4.6,
+    "r60": -26.9
    },
    {
     "date": "2025-11-05",
     "type": "Funding",
     "headline": "Letter of Interest from Export-Import Bank",
-    "setback": false
+    "setback": false,
+    "r5": 1.5,
+    "r20": 9.8,
+    "r60": 96.0
    }
   ],
   "exchange": "Main Market",
@@ -5341,25 +6694,37 @@
     "date": "2026-07-15",
     "type": "Reserve",
     "headline": "First JORC Reserve declared, JORC Resource updated",
-    "setback": false
+    "setback": false,
+    "r5": -2.5,
+    "r20": -9.2,
+    "r60": -15.8
    },
    {
     "date": "2026-07-15",
     "type": "Study",
     "headline": "Barroso Li Project: Definitive Feasibility Study",
-    "setback": false
+    "setback": false,
+    "r5": -2.5,
+    "r20": -9.2,
+    "r60": -15.8
    },
    {
     "date": "2026-05-06",
     "type": "Permit or approval",
     "headline": "Second temporary land access granted",
-    "setback": false
+    "setback": false,
+    "r5": 7.8,
+    "r20": 11.7,
+    "r60": -1.7
    },
    {
     "date": "2026-01-09",
     "type": "Funding",
-    "headline": "Approval of up to \u20ac110m Portuguese State Grant",
-    "setback": false
+    "headline": "Approval of up to €110m Portuguese State Grant",
+    "setback": false,
+    "r5": 23.8,
+    "r20": 29.3,
+    "r60": 35.1
    }
   ],
   "exchange": "AIM",
@@ -5427,25 +6792,37 @@
     "date": "2026-07-08",
     "type": "Funding",
     "headline": "Tungsten Mining and Processing Strategic Partnership",
-    "setback": false
+    "setback": false,
+    "r5": -14.9,
+    "r20": -26.3,
+    "r60": -30.8
    },
    {
     "date": "2026-06-30",
     "type": "Study",
     "headline": "Pilot Mountain Pre-Feasibility Study Results",
-    "setback": false
+    "setback": false,
+    "r5": -8.4,
+    "r20": -25.2,
+    "r60": -29.5
    },
    {
     "date": "2026-06-17",
     "type": "MnA",
     "headline": "Acquisition of Lincoln Estates and Water Rights",
-    "setback": false
+    "setback": false,
+    "r5": 4.4,
+    "r20": -25.0,
+    "r60": -21.2
    },
    {
     "date": "2026-06-04",
     "type": "Discovery or drill result",
     "headline": "Discovery of Tremor Zone at Pilot Mountain",
-    "setback": false
+    "setback": false,
+    "r5": -20.8,
+    "r20": -15.2,
+    "r60": -26.6
    }
   ],
   "exchange": "AIM",
@@ -5495,25 +6872,37 @@
     "date": "2026-04-17",
     "type": "Funding",
     "headline": "US$165 million Strategic Investment to suppor...",
-    "setback": false
+    "setback": false,
+    "r5": 14.9,
+    "r20": 15.6,
+    "r60": -24.1
    },
    {
     "date": "2026-02-10",
     "type": "Funding",
     "headline": "US$ 160 million Strategic Equity Investment",
-    "setback": false
+    "setback": false,
+    "r5": 18.9,
+    "r20": 0.8,
+    "r60": 1.3
    },
    {
     "date": "2025-12-09",
     "type": "Funding",
     "headline": "US$100 million Strategic Equity Investment",
-    "setback": false
+    "setback": false,
+    "r5": -3.7,
+    "r20": -18.6,
+    "r60": -10.1
    },
    {
     "date": "2025-10-28",
     "type": "Funding",
     "headline": "U.S. EXIM debt funding to accelerate U.S. min...",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": -18.7,
+    "r60": -12.5
    }
   ],
   "exchange": "Main Market",
@@ -5554,7 +6943,7 @@
   "material_events_12m": 3,
   "latest_event_date": "2026-10-20",
   "latest_event_type": "Study",
-  "latest_event_headline": "2026 Gediktepe Competent Person\u2019s Report",
+  "latest_event_headline": "2026 Gediktepe Competent Person’s Report",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Copper, zinc and gold miner in Turkey; first copper concentrate at Gediktepe in Sep 2026 with a new CPR",
@@ -5562,20 +6951,29 @@
    {
     "date": "2026-10-20",
     "type": "Study",
-    "headline": "2026 Gediktepe Competent Person\u2019s Report",
-    "setback": false
+    "headline": "2026 Gediktepe Competent Person’s Report",
+    "setback": false,
+    "r5": -6.8,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-09-07",
     "type": "MnA",
     "headline": "ACG to Acquire Licence to Extend Gold Production",
-    "setback": false
+    "setback": false,
+    "r5": -0.2,
+    "r20": -3.7,
+    "r60": null
    },
    {
     "date": "2026-09-01",
     "type": "First production",
     "headline": "ACG Achieves First Copper Concentrate Production",
-    "setback": false
+    "setback": false,
+    "r5": -0.8,
+    "r20": -6.8,
+    "r60": null
    }
   ],
   "exchange": "Main Market",
@@ -5616,25 +7014,37 @@
     "date": "2026-09-25",
     "type": "MnA",
     "headline": "Genel Energy PLC: INCREASED RECOMMENDED CASH OFFER for Capricorn Energy plc by Genel Energy No.9 Limited",
-    "setback": false
+    "setback": false,
+    "r5": -6.7,
+    "r20": -9.8,
+    "r60": null
    },
    {
     "date": "2026-08-13",
     "type": "First production",
     "headline": "Genel Energy PLC: Operational Update (Tawke and Peshkabir production restarted)",
-    "setback": false
+    "setback": false,
+    "r5": 10.3,
+    "r20": -6.8,
+    "r60": null
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Genel Energy PLC: RECOMMENDED CASH ACQUISITIO...",
-    "setback": false
+    "setback": false,
+    "r5": 9.3,
+    "r20": -7.2,
+    "r60": 19.5
    },
    {
     "date": "2026-05-07",
     "type": "Setback",
     "headline": "Genel Energy PLC: Trading and operations update Q1 2026",
-    "setback": true
+    "setback": true,
+    "r5": -2.7,
+    "r20": 5.7,
+    "r60": -8.8
    }
   ],
   "exchange": "Main Market",
@@ -5684,7 +7094,7 @@
   "material_events_12m": 3,
   "latest_event_date": "2026-09-22",
   "latest_event_type": "Study",
-  "latest_event_headline": "Meridian\u2019s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+  "latest_event_headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Cabacal copper and gold project in Brazil; DFS delivered in Sep 2026",
@@ -5692,20 +7102,29 @@
    {
     "date": "2026-09-22",
     "type": "Study",
-    "headline": "Meridian\u2019s DFS Delivers NPV5 USD 2.09B and 108% IRR",
-    "setback": false
+    "headline": "Meridian’s DFS Delivers NPV5 USD 2.09B and 108% IRR",
+    "setback": false,
+    "r5": 23.0,
+    "r20": 8.1,
+    "r60": null
    },
    {
     "date": "2026-06-17",
     "type": "Discovery or drill result",
     "headline": "Meridian Discovers 2nd VMS Layer at Santa Helena",
-    "setback": false
+    "setback": false,
+    "r5": -1.6,
+    "r20": -14.5,
+    "r60": 6.5
    },
    {
     "date": "2026-05-14",
     "type": "Discovery or drill result",
-    "headline": "Meridian Announces \u00c1lamo Discovery and High Grades",
-    "setback": false
+    "headline": "Meridian Announces Álamo Discovery and High Grades",
+    "setback": false,
+    "r5": -3.4,
+    "r20": -20.6,
+    "r60": -27.2
    }
   ],
   "exchange": "Main Market",
@@ -5746,19 +7165,28 @@
     "date": "2026-09-17",
     "type": "Reserve",
     "headline": "Arrow Provides Mid Year 2026 Reserves Update",
-    "setback": false
+    "setback": false,
+    "r5": 5.2,
+    "r20": 9.8,
+    "r60": null
    },
    {
     "date": "2026-08-14",
     "type": "MnA",
     "headline": "Arrow Announces Alberta Property Acquisition",
-    "setback": false
+    "setback": false,
+    "r5": 0.1,
+    "r20": 24.4,
+    "r60": null
    },
    {
     "date": "2026-03-20",
     "type": "Reserve",
     "headline": "Operational Update and 2025 Year-End Reserves",
-    "setback": false
+    "setback": false,
+    "r5": -7.9,
+    "r20": -13.3,
+    "r60": 14.0
    }
   ],
   "exchange": "AIM",
@@ -5789,19 +7217,28 @@
     "date": "2026-09-10",
     "type": "MnA",
     "headline": "KON-16: Definitive Transaction Documents Executed",
-    "setback": false
+    "setback": false,
+    "r5": -1.4,
+    "r20": 1.4,
+    "r60": null
    },
    {
     "date": "2026-08-20",
     "type": "Funding",
-    "headline": "Portfolio Update \u2013 Strategic Investment",
-    "setback": false
+    "headline": "Portfolio Update – Strategic Investment",
+    "setback": false,
+    "r5": -3.9,
+    "r20": -4.6,
+    "r60": null
    },
    {
     "date": "2026-03-18",
     "type": "Permit or approval",
     "headline": "PEL87 Extension Granted",
-    "setback": false
+    "setback": false,
+    "r5": 4.2,
+    "r20": 12.0,
+    "r60": -24.8
    }
   ],
   "exchange": "AIM",
@@ -5860,19 +7297,28 @@
     "date": "2026-09-03",
     "type": "MnA",
     "headline": "Diversified Announces Accretive Acquisition o...",
-    "setback": false
+    "setback": false,
+    "r5": -0.8,
+    "r20": -8.9,
+    "r60": null
    },
    {
     "date": "2026-05-06",
     "type": "MnA",
     "headline": "Diversified and Carlyle Partner to Acquire As...",
-    "setback": false
+    "setback": false,
+    "r5": -2.9,
+    "r20": -13.9,
+    "r60": -24.7
    },
    {
     "date": "2026-02-26",
     "type": "MnA",
     "headline": "Diversified to Acquire Complementary, High-Qu...",
-    "setback": false
+    "setback": false,
+    "r5": 16.0,
+    "r20": 37.8,
+    "r60": 22.7
    }
   ],
   "exchange": "Main Market",
@@ -5903,19 +7349,28 @@
     "date": "2026-09-01",
     "type": "MnA",
     "headline": "MKANGO COMPLETES ACQUISITION OF REMLOY",
-    "setback": false
+    "setback": false,
+    "r5": 14.8,
+    "r20": 13.8,
+    "r60": null
    },
    {
     "date": "2026-05-20",
     "type": "MnA",
     "headline": "AGREEMENT WITH HERAEUS TO ACQUIRE HERAEUS REMLOY",
-    "setback": false
+    "setback": false,
+    "r5": 8.2,
+    "r20": -3.4,
+    "r60": -5.7
    },
    {
     "date": "2026-03-19",
     "type": "Study",
-    "headline": "FEASIBILITY STUDY: SONGWE and PFS RESULTS: PU\u0141AWY",
-    "setback": false
+    "headline": "FEASIBILITY STUDY: SONGWE and PFS RESULTS: PUŁAWY",
+    "setback": false,
+    "r5": -2.2,
+    "r20": -20.5,
+    "r60": -13.2
    }
   ],
   "exchange": "AIM",
@@ -5946,19 +7401,28 @@
     "date": "2026-08-26",
     "type": "Reserve",
     "headline": "Sea Lion Reserves Evaluation",
-    "setback": false
+    "setback": false,
+    "r5": 12.5,
+    "r20": -5.8,
+    "r60": null
    },
    {
     "date": "2026-04-02",
     "type": "Reserve",
     "headline": "Sea Lion Reserves Evaluation",
-    "setback": false
+    "setback": false,
+    "r5": 4.0,
+    "r20": -0.8,
+    "r60": -14.6
    },
    {
     "date": "2025-12-10",
     "type": "FID or construction decision",
     "headline": "Final Investment Decision on Sea Lion",
-    "setback": false
+    "setback": false,
+    "r5": -20.1,
+    "r20": -24.0,
+    "r60": -22.6
    }
   ],
   "exchange": "AIM",
@@ -5999,19 +7463,28 @@
     "date": "2026-08-17",
     "type": "Funding",
     "headline": "Financial Close and Execution of Strategic Funding",
-    "setback": false
+    "setback": false,
+    "r5": 23.0,
+    "r20": 31.6,
+    "r60": null
    },
    {
     "date": "2026-08-05",
     "type": "Permit or approval",
     "headline": "NaCC Approval for Brandberg West earn-in agreement",
-    "setback": false
+    "setback": false,
+    "r5": 3.2,
+    "r20": 53.8,
+    "r60": null
    },
    {
     "date": "2026-04-20",
     "type": "Funding",
     "headline": "Strategic Equity Placement To Accelerate Growth",
-    "setback": false
+    "setback": false,
+    "r5": 4.2,
+    "r20": 3.7,
+    "r60": 3.0
    }
   ],
   "exchange": "AIM",
@@ -6042,25 +7515,37 @@
     "date": "2026-08-10",
     "type": "MnA",
     "headline": "Strategic Transaction to Accelerate Copper Growth",
-    "setback": false
+    "setback": false,
+    "r5": 7.4,
+    "r20": -0.4,
+    "r60": null
    },
    {
     "date": "2026-05-28",
     "type": "Funding",
     "headline": "Strategic Investment to Support Copper Growth",
-    "setback": false
+    "setback": false,
+    "r5": -1.0,
+    "r20": -3.4,
+    "r60": -12.6
    },
    {
     "date": "2026-03-24",
     "type": "Setback",
     "headline": "Molefe Mine Phase 1 Drilling Results delayed",
-    "setback": true
+    "setback": true,
+    "r5": -4.0,
+    "r20": -25.6,
+    "r60": -33.6
    },
    {
     "date": "2026-01-02",
     "type": "MnA",
     "headline": "Closing of Sale of South African Operations",
-    "setback": false
+    "setback": false,
+    "r5": 6.1,
+    "r20": 39.4,
+    "r60": 2.5
    }
   ],
   "exchange": "AIM",
@@ -6101,25 +7586,37 @@
     "date": "2026-08-13",
     "type": "Setback",
     "headline": "TERMINATION OF SERICA OFFER and SHAREHOLDER MEETINGS",
-    "setback": true
+    "setback": true,
+    "r5": -0.2,
+    "r20": -1.0,
+    "r60": null
    },
    {
     "date": "2026-08-07",
     "type": "MnA",
     "headline": "Recommended Increased Acquisition of Pharos",
-    "setback": false
+    "setback": false,
+    "r5": -3.4,
+    "r20": -5.4,
+    "r60": null
    },
    {
     "date": "2026-07-27",
     "type": "MnA",
     "headline": "Recommended acquisition of Pharos Energy plc",
-    "setback": false
+    "setback": false,
+    "r5": 25.9,
+    "r20": 20.7,
+    "r60": 18.8
    },
    {
     "date": "2026-06-24",
     "type": "MnA",
     "headline": "RECOMMENDED ACQUISITION OF PHAROS ENERGY PLC",
-    "setback": false
+    "setback": false,
+    "r5": -3.4,
+    "r20": -0.6,
+    "r60": 14.2
    }
   ],
   "exchange": "Main Market",
@@ -6169,19 +7666,28 @@
     "date": "2026-07-16",
     "type": "Resource",
     "headline": "Updated MRE Incorporates Heavy Rare Earth Elements",
-    "setback": false
+    "setback": false,
+    "r5": -6.1,
+    "r20": -12.6,
+    "r60": -20.5
    },
    {
     "date": "2026-05-06",
     "type": "Funding",
     "headline": "Growth Capital Facility",
-    "setback": false
+    "setback": false,
+    "r5": -22.0,
+    "r20": -41.9,
+    "r60": -45.9
    },
    {
     "date": "2026-05-05",
     "type": "Resource",
     "headline": "Monte Muambe MRE Results - Fluorspar and Gallium",
-    "setback": false
+    "setback": false,
+    "r5": -29.1,
+    "r20": -45.7,
+    "r60": -51.5
    }
   ],
   "exchange": "Main Market",
@@ -6212,19 +7718,28 @@
     "date": "2026-07-14",
     "type": "First production",
     "headline": "First Helium Sold from Pinon Canyon Plant",
-    "setback": false
+    "setback": false,
+    "r5": -1.7,
+    "r20": -11.6,
+    "r60": -29.9
    },
    {
     "date": "2026-06-04",
     "type": "Funding",
     "headline": "Helium Offtake Agreement for Galactica Project",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": -11.1,
+    "r60": -31.3
    },
    {
     "date": "2025-12-22",
     "type": "First production",
     "headline": "Successful First Gas at Galactica Helium Plant",
-    "setback": false
+    "setback": false,
+    "r5": 20.4,
+    "r20": 16.2,
+    "r60": 81.6
    }
   ],
   "exchange": "AIM",
@@ -6255,19 +7770,28 @@
     "date": "2026-07-13",
     "type": "MnA",
     "headline": "Completion of Acquisition of Keyes Helium Complex",
-    "setback": false
+    "setback": false,
+    "r5": -0.4,
+    "r20": 11.3,
+    "r60": -1.1
    },
    {
     "date": "2026-07-02",
     "type": "MnA",
     "headline": "Acquisition, Placing and Retail Offer",
-    "setback": false
+    "setback": false,
+    "r5": -8.1,
+    "r20": -8.6,
+    "r60": -15.3
    },
    {
     "date": "2026-06-08",
     "type": "MnA",
     "headline": "Agreement to Acquire TSD LLC and Drilling Rig",
-    "setback": false
+    "setback": false,
+    "r5": -3.5,
+    "r20": -33.0,
+    "r60": -26.6
    }
   ],
   "exchange": "AIM",
@@ -6298,19 +7822,28 @@
     "date": "2026-07-09",
     "type": "First production",
     "headline": "Commencement of production at Silverking",
-    "setback": false
+    "setback": false,
+    "r5": 1.4,
+    "r20": 23.7,
+    "r60": -12.9
    },
    {
     "date": "2026-06-02",
     "type": "Permit or approval",
     "headline": "Amghas mining licence grant and plant build-out",
-    "setback": false
+    "setback": false,
+    "r5": 22.2,
+    "r20": 13.1,
+    "r60": 19.7
    },
    {
     "date": "2026-02-03",
     "type": "Permit or approval",
     "headline": "Silverking Mining Licence Joint Venture",
-    "setback": false
+    "setback": false,
+    "r5": 18.4,
+    "r20": 37.3,
+    "r60": 12.6
    }
   ],
   "exchange": "AIM",
@@ -6341,19 +7874,28 @@
     "date": "2026-05-27",
     "type": "Permit or approval",
     "headline": "Award of KON4 Licence Onshore Angola",
-    "setback": false
+    "setback": false,
+    "r5": -5.3,
+    "r20": -10.6,
+    "r60": 1.0
    },
    {
     "date": "2026-01-13",
     "type": "Resource",
     "headline": "Contingent Resource Upgrade",
-    "setback": false
+    "setback": false,
+    "r5": 6.8,
+    "r20": 18.0,
+    "r60": 93.9
    },
    {
     "date": "2025-12-18",
     "type": "MnA",
     "headline": "Afentra Completes Somaliland Divestment",
-    "setback": false
+    "setback": false,
+    "r5": -1.4,
+    "r20": 10.9,
+    "r60": 64.5
    }
   ],
   "exchange": "AIM",
@@ -6412,19 +7954,28 @@
     "date": "2026-05-07",
     "type": "MnA",
     "headline": "Binding Scheme Implementation Deed with Huayou",
-    "setback": false
+    "setback": false,
+    "r5": 7.3,
+    "r20": 9.7,
+    "r60": 6.4
    },
    {
     "date": "2026-03-20",
     "type": "Permit or approval",
     "headline": "Parliamentary Ratification of Ewoyaa Mining Lease",
-    "setback": false
+    "setback": false,
+    "r5": -21.8,
+    "r20": -21.1,
+    "r60": -26.0
    },
    {
     "date": "2025-12-22",
     "type": "Permit or approval",
     "headline": "Ratification Process - Ewoyaa Mining Lease",
-    "setback": false
+    "setback": false,
+    "r5": 25.3,
+    "r20": 31.2,
+    "r60": 125.2
    }
   ],
   "exchange": "AIM",
@@ -6474,19 +8025,28 @@
     "date": "2026-04-27",
     "type": "Funding",
     "headline": "Refinancing Transaction successfully completed",
-    "setback": false
+    "setback": false,
+    "r5": 40.0,
+    "r20": 40.6,
+    "r60": 17.7
    },
    {
     "date": "2026-02-20",
     "type": "Funding",
     "headline": "Refinancing Transaction and Lock-Up Agreement",
-    "setback": false
+    "setback": false,
+    "r5": -8.4,
+    "r20": 30.6,
+    "r60": 69.6
    },
    {
     "date": "2026-02-20",
     "type": "MnA",
     "headline": "Tullow signs SPA to acquire TEN FPSO in Ghana",
-    "setback": false
+    "setback": false,
+    "r5": -8.4,
+    "r20": 30.6,
+    "r60": 69.6
    }
   ],
   "exchange": "Main Market",
@@ -6536,19 +8096,28 @@
     "date": "2026-04-22",
     "type": "Permit or approval",
     "headline": "Dunajec Licence Award, Poland",
-    "setback": false
+    "setback": false,
+    "r5": 5.8,
+    "r20": 0.4,
+    "r60": -4.2
    },
    {
     "date": "2026-04-01",
     "type": "Permit or approval",
     "headline": "San Licence Award, Poland",
-    "setback": false
+    "setback": false,
+    "r5": -12.9,
+    "r20": -20.6,
+    "r60": -20.1
    },
    {
     "date": "2026-01-28",
     "type": "Permit or approval",
     "headline": "Italy: Selva Malvezzi Production Concession",
-    "setback": false
+    "setback": false,
+    "r5": 2.5,
+    "r20": 6.2,
+    "r60": 14.6
    }
   ],
   "exchange": "AIM",
@@ -6598,19 +8167,28 @@
     "date": "2026-04-01",
     "type": "Permit or approval",
     "headline": "Sagebrush Operatorship Approved",
-    "setback": false
+    "setback": false,
+    "r5": -4.7,
+    "r20": -29.1,
+    "r60": -28.4
    },
    {
     "date": "2026-02-26",
     "type": "Permit or approval",
     "headline": "Coyote Wash receives formal BIA Approval",
-    "setback": false
+    "setback": false,
+    "r5": 5.7,
+    "r20": 19.5,
+    "r60": -20.1
    },
    {
     "date": "2025-12-15",
     "type": "Resource",
     "headline": "Sagebrush Resource Update",
-    "setback": false
+    "setback": false,
+    "r5": 34.9,
+    "r20": 29.0,
+    "r60": 32.8
    }
   ],
   "exchange": "AIM",
@@ -6651,13 +8229,19 @@
     "date": "2026-10-20",
     "type": "MnA",
     "headline": "Gulf Keystone to combine with ShaMaran Petrol...",
-    "setback": false
+    "setback": false,
+    "r5": -5.4,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2025-11-17",
     "type": "First production",
     "headline": "First lifting of IOC pipeline exports",
-    "setback": false
+    "setback": false,
+    "r5": 0.8,
+    "r20": -1.0,
+    "r60": 2.0
    }
   ],
   "exchange": "Main Market",
@@ -6707,13 +8291,19 @@
     "date": "2026-10-14",
     "type": "MnA",
     "headline": "Completion of sale of Croatian geothermal company",
-    "setback": false
+    "setback": false,
+    "r5": 3.6,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-04-24",
     "type": "MnA",
     "headline": "Sale of Croatian geothermal company",
-    "setback": false
+    "setback": false,
+    "r5": 3.2,
+    "r20": 7.2,
+    "r60": 31.3
    }
   ],
   "exchange": "AIM",
@@ -6754,13 +8344,19 @@
     "date": "2026-10-12",
     "type": "Permit or approval",
     "headline": "Ampasindava Exploitation Permit Formalised",
-    "setback": false
+    "setback": false,
+    "r5": -6.4,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2026-01-26",
     "type": "Study",
     "headline": "Completion of Pre-Feasibility Study",
-    "setback": false
+    "setback": false,
+    "r5": 25.6,
+    "r20": 34.5,
+    "r60": 65.5
    }
   ],
   "exchange": "Main Market",
@@ -6791,13 +8387,19 @@
     "date": "2026-09-23",
     "type": "Funding",
     "headline": "Strategic Tungsten Supply and Offtake Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 2.3,
+    "r20": -18.1,
+    "r60": null
    },
    {
     "date": "2026-08-25",
     "type": "Funding",
     "headline": "Strategic Investment by the UK Government NWF",
-    "setback": false
+    "setback": false,
+    "r5": 17.8,
+    "r20": 5.5,
+    "r60": null
    }
   ],
   "exchange": "AIM",
@@ -6838,13 +8440,19 @@
     "date": "2026-09-09",
     "type": "MnA",
     "headline": "Sale of Indokal Limited and Special Dividend",
-    "setback": false
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    },
    {
     "date": "2025-11-06",
     "type": "MnA",
-    "headline": "Sale of Asiamet\u2019s Interest in the KSK Project",
-    "setback": false
+    "headline": "Sale of Asiamet’s Interest in the KSK Project",
+    "setback": false,
+    "r5": 36.6,
+    "r20": 40.5,
+    "r60": 38.1
    }
   ],
   "exchange": "AIM",
@@ -6875,13 +8483,19 @@
     "date": "2026-09-08",
     "type": "Funding",
     "headline": "US$15 Million Loan Facility from Fevamotinico",
-    "setback": false
+    "setback": false,
+    "r5": -1.1,
+    "r20": 14.1,
+    "r60": null
    },
    {
     "date": "2026-09-07",
     "type": "First production",
     "headline": "Restart of production at Ukrainian operations",
-    "setback": false
+    "setback": false,
+    "r5": 0.3,
+    "r20": 12.3,
+    "r60": null
    }
   ],
   "exchange": "Main Market",
@@ -6912,13 +8526,19 @@
     "date": "2026-08-24",
     "type": "Funding",
     "headline": "Vast Admitted to DIBC and Cornerstone Consortium",
-    "setback": false
+    "setback": false,
+    "r5": -3.3,
+    "r20": 4.3,
+    "r60": null
    },
    {
     "date": "2025-12-22",
     "type": "MnA",
     "headline": "Proposed Acquisition: Gulf International Minerals",
-    "setback": false
+    "setback": false,
+    "r5": 3.1,
+    "r20": -2.4,
+    "r60": 4.9
    }
   ],
   "exchange": "AIM",
@@ -6968,13 +8588,19 @@
     "date": "2026-07-02",
     "type": "Permit or approval",
     "headline": "Mining Lease Granted - Northern Zone Gold Project",
-    "setback": false
+    "setback": false,
+    "r5": -21.3,
+    "r20": -20.0,
+    "r60": -32.1
    },
    {
     "date": "2025-12-23",
     "type": "Permit or approval",
     "headline": "Kalgoorlie Gold - Native Title Agreements Signed",
-    "setback": false
+    "setback": false,
+    "r5": -0.8,
+    "r20": 45.1,
+    "r60": 9.6
    }
   ],
   "exchange": "AIM",
@@ -6996,7 +8622,7 @@
   "material_events_12m": 2,
   "latest_event_date": "2026-05-15",
   "latest_event_type": "Funding",
-  "latest_event_headline": "CORNISH METALS ANNOUNCES \u00a352 MILLION CREDIT F...",
+  "latest_event_headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.9 qtrs runway (yfinance, low conf)",
   "description": "South Crofty tin mine in Cornwall; GBP 52 million credit facility and US EXIM letter of interest",
@@ -7004,14 +8630,20 @@
    {
     "date": "2026-05-15",
     "type": "Funding",
-    "headline": "CORNISH METALS ANNOUNCES \u00a352 MILLION CREDIT F...",
-    "setback": false
+    "headline": "CORNISH METALS ANNOUNCES £52 MILLION CREDIT F...",
+    "setback": false,
+    "r5": -2.5,
+    "r20": 16.8,
+    "r60": 16.7
    },
    {
     "date": "2026-02-05",
     "type": "Funding",
     "headline": "LOI FROM EXPORT-IMPORT BANK OF THE UNITED STATES",
-    "setback": false
+    "setback": false,
+    "r5": 10.7,
+    "r20": -11.5,
+    "r60": -20.3
    }
   ],
   "exchange": "AIM",
@@ -7061,7 +8693,7 @@
   "material_events_12m": 2,
   "latest_event_date": "2026-05-05",
   "latest_event_type": "Permit or approval",
-  "latest_event_headline": "Amap\u00e1 \u2013 Installation Licence Granted",
+  "latest_event_headline": "Amapá – Installation Licence Granted",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.2 qtrs runway (yfinance, low conf)",
   "description": "Amapa iron ore project in Brazil; preliminary and installation licences granted in 2026",
@@ -7069,14 +8701,20 @@
    {
     "date": "2026-05-05",
     "type": "Permit or approval",
-    "headline": "Amap\u00e1 \u2013 Installation Licence Granted",
-    "setback": false
+    "headline": "Amapá – Installation Licence Granted",
+    "setback": false,
+    "r5": 41.3,
+    "r20": 40.9,
+    "r60": 5.6
    },
    {
     "date": "2026-01-06",
     "type": "Permit or approval",
-    "headline": "Grant of Preliminary Environmental Licence - Amap\u00e1",
-    "setback": false
+    "headline": "Grant of Preliminary Environmental Licence - Amapá",
+    "setback": false,
+    "r5": 36.8,
+    "r20": 7.6,
+    "r60": 48.0
    }
   ],
   "exchange": "AIM",
@@ -7117,13 +8755,19 @@
     "date": "2026-03-31",
     "type": "Reserve",
     "headline": "Positive Pre-Feasibility Study and Reserves Declared",
-    "setback": false
+    "setback": false,
+    "r5": -9.3,
+    "r20": -24.7,
+    "r60": -38.8
    },
    {
     "date": "2025-11-10",
     "type": "Resource",
     "headline": "Laguna Verde Resource Increase",
-    "setback": false
+    "setback": false,
+    "r5": 9.5,
+    "r20": -13.9,
+    "r60": 59.5
    }
   ],
   "exchange": "AIM",
@@ -7164,13 +8808,19 @@
     "date": "2026-03-26",
     "type": "Resource",
     "headline": "Redmoor - 2026 Mineral Resource Estimate",
-    "setback": false
+    "setback": false,
+    "r5": -19.7,
+    "r20": 13.2,
+    "r60": -22.4
    },
    {
     "date": "2026-02-26",
     "type": "Discovery or drill result",
     "headline": "Redmoor - Discovery of New Tin Zone",
-    "setback": false
+    "setback": false,
+    "r5": 5.8,
+    "r20": 59.2,
+    "r60": 52.0
    }
   ],
   "exchange": "AIM",
@@ -7211,13 +8861,19 @@
     "date": "2026-03-18",
     "type": "Permit or approval",
     "headline": "Vietnam Field Development Plan Approved",
-    "setback": false
+    "setback": false,
+    "r5": 11.5,
+    "r20": -5.0,
+    "r60": 0.2
    },
    {
     "date": "2026-02-26",
     "type": "Reserve",
     "headline": "Guidance and Reserves Update",
-    "setback": false
+    "setback": false,
+    "r5": -7.0,
+    "r20": 23.6,
+    "r60": 34.4
    }
   ],
   "exchange": "AIM",
@@ -7267,13 +8923,19 @@
     "date": "2026-03-11",
     "type": "Study",
     "headline": "Mosaic Agreement and Uberaba Economic Assessment",
-    "setback": false
+    "setback": false,
+    "r5": 1.4,
+    "r20": -14.2,
+    "r60": -2.2
    },
    {
     "date": "2025-11-10",
     "type": "Resource",
     "headline": "Phalaborwa Resource Update to include Yttrium",
-    "setback": false
+    "setback": false,
+    "r5": 10.0,
+    "r20": 3.1,
+    "r60": -9.1
    }
   ],
   "exchange": "Main Market",
@@ -7332,13 +8994,19 @@
     "date": "2026-02-19",
     "type": "MnA",
     "headline": "Acquisition Funding of Oil Production in Angola",
-    "setback": false
+    "setback": false,
+    "r5": -14.4,
+    "r20": -8.6,
+    "r60": 1.2
    },
    {
     "date": "2025-12-18",
     "type": "MnA",
     "headline": "Disposal of Water Business",
-    "setback": false
+    "setback": false,
+    "r5": -3.4,
+    "r20": -8.9,
+    "r60": -13.4
    }
   ],
   "exchange": "AIM",
@@ -7388,13 +9056,19 @@
     "date": "2025-12-23",
     "type": "MnA",
     "headline": "Government Approve Sale of Kangerluarsuk to Amaroq",
-    "setback": false
+    "setback": false,
+    "r5": -1.7,
+    "r20": 75.2,
+    "r60": 163.9
    },
    {
     "date": "2025-11-03",
     "type": "MnA",
     "headline": "Binding Heads of Term With US Group to JV Disko",
-    "setback": false
+    "setback": false,
+    "r5": -10.3,
+    "r20": -30.5,
+    "r60": 23.9
    }
   ],
   "exchange": "AIM",
@@ -7435,19 +9109,28 @@
     "date": "2026-05-06",
     "type": "Setback",
     "headline": "Termination of share purchase agreement",
-    "setback": true
+    "setback": true,
+    "r5": 32.4,
+    "r20": 102.1,
+    "r60": 203.6
    },
    {
     "date": "2025-11-11",
     "type": "MnA",
     "headline": "ACQUISITION OF ADDITIONAL RE-ENTRY TARGETS",
-    "setback": false
+    "setback": false,
+    "r5": -22.2,
+    "r20": -28.6,
+    "r60": 48.9
    },
    {
     "date": "2025-11-04",
     "type": "Funding",
     "headline": "Placing and Debt Facility",
-    "setback": false
+    "setback": false,
+    "r5": 5.2,
+    "r20": -18.8,
+    "r60": 24.2
    }
   ],
   "exchange": "Main Market",
@@ -7478,7 +9161,10 @@
     "date": "2026-10-15",
     "type": "Permit or approval",
     "headline": "Acreage Expansion Around Temaris Cluster PSC",
-    "setback": false
+    "setback": false,
+    "r5": 6.8,
+    "r20": null,
+    "r60": null
    }
   ],
   "exchange": "AIM",
@@ -7546,7 +9232,10 @@
     "date": "2026-09-18",
     "type": "Funding",
     "headline": "Project Finance and Equity Subscription Agreement",
-    "setback": false
+    "setback": false,
+    "r5": 78.5,
+    "r20": 56.0,
+    "r60": null
    }
   ],
   "exchange": "AIM",
@@ -7578,7 +9267,7 @@
   "material_events_12m": 1,
   "latest_event_date": "2026-09-02",
   "latest_event_type": "Resource",
-  "latest_event_headline": "Updated MRE \u2013 45% increase in contained tin",
+  "latest_event_headline": "Updated MRE – 45% increase in contained tin",
   "setbacks_12m": 0,
   "cash_flag": "Cash risk: about 0.8 qtrs runway (yfinance, low conf)",
   "description": "Tin explorer in the DRC (Kalayi); updated MRE with 45 percent more contained tin",
@@ -7586,8 +9275,11 @@
    {
     "date": "2026-09-02",
     "type": "Resource",
-    "headline": "Updated MRE \u2013 45% increase in contained tin",
-    "setback": false
+    "headline": "Updated MRE – 45% increase in contained tin",
+    "setback": false,
+    "r5": -25.9,
+    "r20": -29.8,
+    "r60": null
    }
   ],
   "exchange": "AIM",
@@ -7628,7 +9320,10 @@
     "date": "2026-08-27",
     "type": "Study",
     "headline": "Tulu Kapi Underground Mine PEA and Development Plan",
-    "setback": false
+    "setback": false,
+    "r5": 2.0,
+    "r20": -42.3,
+    "r60": null
    }
   ],
   "exchange": "AIM",
@@ -7687,7 +9382,10 @@
     "date": "2026-08-26",
     "type": "Resource",
     "headline": "Upgraded JORC Resource at Kathleen Valley",
-    "setback": false
+    "setback": false,
+    "r5": -15.4,
+    "r20": -18.3,
+    "r60": null
    }
   ],
   "exchange": "Main Market",
@@ -7737,7 +9435,10 @@
     "date": "2026-06-25",
     "type": "Funding",
     "headline": "Letter of Approval for PEL96 Farm-out",
-    "setback": false
+    "setback": false,
+    "r5": 0.2,
+    "r20": -10.2,
+    "r60": -23.0
    }
   ],
   "exchange": "AIM",
@@ -7778,7 +9479,10 @@
     "date": "2026-06-24",
     "type": "Funding",
     "headline": "Upsizing of Revolving Credit Facility to $230...",
-    "setback": false
+    "setback": false,
+    "r5": -0.0,
+    "r20": -7.7,
+    "r60": -12.2
    }
   ],
   "exchange": "Main Market",
@@ -7828,19 +9532,28 @@
     "date": "2026-04-28",
     "type": "Resource",
     "headline": "Results of Updated Mineral Resource and Reser...",
-    "setback": false
+    "setback": false,
+    "r5": 5.8,
+    "r20": 12.0,
+    "r60": -9.8
    },
    {
     "date": "2026-01-31",
     "type": "Setback",
     "headline": "Fatality at Palito Complex",
-    "setback": true
+    "setback": true,
+    "r5": -9.6,
+    "r20": 3.9,
+    "r60": 3.0
    },
    {
     "date": "2026-01-26",
     "type": "Setback",
     "headline": "Fatality at Coringa Mine",
-    "setback": true
+    "setback": true,
+    "r5": -8.1,
+    "r20": -9.7,
+    "r60": -1.3
    }
   ],
   "exchange": "AIM",
@@ -7881,7 +9594,10 @@
     "date": "2026-04-21",
     "type": "First production",
     "headline": "Zone II Production Commenced",
-    "setback": false
+    "setback": false,
+    "r5": 8.5,
+    "r20": 7.7,
+    "r60": 7.7
    }
   ],
   "exchange": "AIM",
@@ -7922,7 +9638,10 @@
     "date": "2026-04-09",
     "type": "MnA",
     "headline": "Proposed Acquisition of Silver Lake Project, W.A.",
-    "setback": false
+    "setback": false,
+    "r5": -14.1,
+    "r20": -29.0,
+    "r60": -36.1
    }
   ],
   "exchange": "AIM",
@@ -7953,13 +9672,19 @@
     "date": "2026-04-09",
     "type": "First production",
     "headline": "Restart of Production from the Energean Power FPSO",
-    "setback": false
+    "setback": false,
+    "r5": -0.6,
+    "r20": 4.5,
+    "r60": -18.0
    },
    {
     "date": "2026-03-02",
     "type": "Setback",
     "headline": "Temporary Suspension of Production from FPSO",
-    "setback": true
+    "setback": true,
+    "r5": 5.5,
+    "r20": 6.2,
+    "r60": -6.9
    }
   ],
   "exchange": "Main Market",
@@ -8009,7 +9734,10 @@
     "date": "2026-03-17",
     "type": "Funding",
     "headline": "Strategic Investment by US investor group",
-    "setback": false
+    "setback": false,
+    "r5": 1.4,
+    "r20": -0.7,
+    "r60": -0.1
    }
   ],
   "exchange": "Main Market",
@@ -8050,7 +9778,10 @@
     "date": "2026-03-05",
     "type": "Study",
     "headline": "Technical Report for Cory Moruga onshore Trinidad",
-    "setback": false
+    "setback": false,
+    "r5": -2.3,
+    "r20": -2.0,
+    "r60": 8.8
    }
   ],
   "exchange": "Main Market",
@@ -8118,7 +9849,10 @@
     "date": "2026-02-25",
     "type": "Reserve",
     "headline": "2025 Year-End Oil Reserves",
-    "setback": false
+    "setback": false,
+    "r5": 16.4,
+    "r20": 42.7,
+    "r60": 46.1
    }
   ],
   "exchange": "AIM",
@@ -8168,7 +9902,10 @@
     "date": "2026-02-10",
     "type": "Funding",
     "headline": "Proposed Strategic Investment in Zanaga Project",
-    "setback": false
+    "setback": false,
+    "r5": -28.8,
+    "r20": -23.1,
+    "r60": -34.9
    }
   ],
   "exchange": "AIM",
@@ -8218,7 +9955,10 @@
     "date": "2026-01-26",
     "type": "Study",
     "headline": "POSITIVE PRE-FEASIBILITY STUDY FOR DOUTA PROJECT",
-    "setback": false
+    "setback": false,
+    "r5": -4.9,
+    "r20": -5.7,
+    "r60": -11.4
    }
   ],
   "exchange": "AIM",
@@ -8250,7 +9990,7 @@
   "material_events_12m": 1,
   "latest_event_date": "2026-01-19",
   "latest_event_type": "Funding",
-  "latest_event_headline": "\u00a38 Million Strategic Investment and Placement",
+  "latest_event_headline": "£8 Million Strategic Investment and Placement",
   "setbacks_12m": 0,
   "cash_flag": null,
   "description": "Uranium explorer; GBP 8 million strategic investment and placement",
@@ -8258,8 +9998,11 @@
    {
     "date": "2026-01-19",
     "type": "Funding",
-    "headline": "\u00a38 Million Strategic Investment and Placement",
-    "setback": false
+    "headline": "£8 Million Strategic Investment and Placement",
+    "setback": false,
+    "r5": null,
+    "r20": null,
+    "r60": null
    }
   ],
   "exchange": "Main Market",
@@ -8300,7 +10043,10 @@
     "date": "2025-12-17",
     "type": "MnA",
     "headline": "Tiernan Gold Completes Qualifying Transaction",
-    "setback": false
+    "setback": false,
+    "r5": 5.5,
+    "r20": 19.8,
+    "r60": 32.6
    }
   ],
   "exchange": "Main Market",
@@ -8341,7 +10087,10 @@
     "date": "2025-12-10",
     "type": "FID or construction decision",
     "headline": "Sea Lion FID Announcement",
-    "setback": false
+    "setback": false,
+    "r5": -14.0,
+    "r20": -23.0,
+    "r60": -15.3
    }
   ],
   "exchange": "AIM",
@@ -8382,7 +10131,10 @@
     "date": "2025-12-01",
     "type": "MnA",
     "headline": "Sale of Goedehoop North",
-    "setback": false
+    "setback": false,
+    "r5": 10.3,
+    "r20": 18.1,
+    "r60": 30.2
    }
   ],
   "exchange": "Main Market",
@@ -8423,7 +10175,10 @@
     "date": "2025-12-01",
     "type": "First production",
     "headline": "First Shipment of Spodumene Concentrates",
-    "setback": false
+    "setback": false,
+    "r5": -2.5,
+    "r20": -8.8,
+    "r60": 10.0
    }
   ],
   "exchange": "AIM",

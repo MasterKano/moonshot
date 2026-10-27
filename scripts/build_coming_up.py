@@ -12,6 +12,7 @@ windows on top of this list.
 
 import calendar
 import json
+import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -73,12 +74,47 @@ def place(iso, precision):
     return current, label, False, ""
 
 
-def ticker_code(company):
+def ticker_symbol(company):
     ticker = clean(company.get("listing_ticker"))
     symbol = ticker.split(":")[-1].strip() if ":" in ticker else ""
     if symbol and "," not in symbol and "(" not in symbol and len(symbol) <= 8:
         return symbol
-    return clean(company.get("short_name"))
+    return ""
+
+
+def ticker_code(company):
+    return ticker_symbol(company) or clean(company.get("short_name"))
+
+
+def sector_of(type_value):
+    """Oil and gas stays Oil and gas. Every other commodity, including Helium and Coal, is Mining."""
+    text = clean(type_value)
+    suffix = " (low confidence)"
+    if text.endswith(suffix):
+        text = text[: -len(suffix)].strip()
+    return "Oil and gas" if text == "Oil and gas" else "Mining"
+
+
+def name_matches(short_name, company_name):
+    short = clean(short_name).lower()
+    name = clean(company_name).lower()
+    if not short or not name:
+        return False
+    if short in re.split(r"[^a-z0-9]+", name):
+        return True
+    return name == short or name.startswith(short + " ")
+
+
+def match_screen(company, rows):
+    symbol = ticker_symbol(company).upper()
+    if symbol:
+        for row in rows:
+            if clean(row.get("code")).upper() == symbol:
+                return row
+    for row in rows:
+        if name_matches(company.get("short_name"), row.get("name")):
+            return row
+    return None
 
 
 def band_value(value):
@@ -112,6 +148,7 @@ def london_items(rows):
                 approx=approx,
                 suffix=suffix,
                 market="London",
+                sector=sector_of(row.get("type")),
                 company_name=name,
                 company_code=code,
                 link_key=code,
@@ -124,7 +161,8 @@ def london_items(rows):
     return items
 
 
-def norway_items(events, companies):
+def norway_items(events, companies, screen):
+    """Shelf events stay market Norway. A name already on the London screen, such as Kistos, keeps that screen code."""
     by_short = {clean(company.get("short_name")): company for company in companies}
     items = []
     for event in events:
@@ -136,6 +174,13 @@ def norway_items(events, companies):
         names = [clean(name) for name in (event.get("companies") or []) if clean(name)]
         short = operator if operator in by_short else (names[0] if names else "")
         company = by_short.get(short, {})
+        matched = match_screen(company, screen) if company else None
+        if matched:
+            code = clean(matched.get("code"))
+            name = clean(matched.get("name"))
+        else:
+            code = ticker_code(company) if company else short
+            name = clean(company.get("name")) or short
         items.append(item_record(
             id=f"N-{clean(event.get('id')) or event.get('date')}",
             anchor=anchor.isoformat(),
@@ -144,9 +189,10 @@ def norway_items(events, companies):
             approx=approx,
             suffix=suffix,
             market="Norway",
-            company_name=clean(company.get("name")) or short,
-            company_code=ticker_code(company) if company else short,
-            link_key=short,
+            sector="Oil and gas",
+            company_name=name,
+            company_code=code,
+            link_key=code,
             type=display_type(event.get("type")),
             headline=clean(event.get("title")),
             band=band_value(event.get("net")),
@@ -192,7 +238,7 @@ def ics_document(items, stamp):
         summary = f"{item['company_name']} ({item['company_code']}): {item['headline']}{item['suffix']}"
         band = {"tight": "Tight", "loose": "Loose"}.get(item["band"], "n/a")
         description = (
-            f"Market: {item['market']}. Type: {item['type']}. "
+            f"Market: {item['market']}. Sector: {item.get('sector') or 'Mining'}. Type: {item['type']}. "
             f"Company: {item['company_name']} ({item['company_code']}). "
             f"Material: {'Yes' if item['material'] == 'Y' else 'No'}. Band: {band}."
         )
@@ -221,7 +267,7 @@ def main():
     screen = json.loads((ROOT / "data" / "smallcaps.json").read_text(encoding="utf-8"))
     norway = json.loads((ROOT / "data" / "norway_events.json").read_text(encoding="utf-8"))
     companies = json.loads((ROOT / "data" / "norway_companies.json").read_text(encoding="utf-8"))
-    items = london_items(screen) + norway_items(norway, companies)
+    items = london_items(screen) + norway_items(norway, companies, screen)
     forward = [item for item in items if item["anchor"] >= today.isoformat()]
     forward.sort(key=lambda item: (item["anchor"], item["market"], item["company_name"], item["id"]))
     payload = {

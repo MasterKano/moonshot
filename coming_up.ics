@@ -6,25 +6,26 @@ BEGIN:VEVENT
 SUMMARY:Equinor Energy AS (EQNR): Equinor Q3 2026 results
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO206@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Equinor Energy AS (EQNR
- ). Material: No. Band: Tight. Source: https://www.equinor.com/investors/ev
- ents-and-presentations
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Eq
+ uinor Energy AS (EQNR). Material: No. Band: Tight. Source: https://www.equ
+ inor.com/investors/events-and-presentations
 URL:https://www.equinor.com/investors/events-and-presentations
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:A/S Norske Shell (SHEL): Shell Q3 2026 results and interim dividend
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO212@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: A/S Norske Shell (SHEL)
- . Material: No. Band: Tight. Source: https://www.shell.com/news-and-insigh
- ts/newsroom/news-and-media-releases/2026/advance-notice-of-third-quarter-2
- 026-results-and-third-quarter-2026-interim-dividend-announcement.html
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: A/
+ S Norske Shell (SHEL). Material: No. Band: Tight. Source: https://www.shel
+ l.com/news-and-insights/newsroom/news-and-media-releases/2026/advance-noti
+ ce-of-third-quarter-2026-results-and-third-quarter-2026-interim-dividend-a
+ nnouncement.html
 URL:https://www.shell.com/news-and-insights/newsroom/news-and-media-release
  s/2026/advance-notice-of-third-quarter-2026-results-and-third-quarter-2026
  -interim-dividend-announcement.html
@@ -33,47 +34,49 @@ BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO207@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Aker BP ASA (AKRBP). Ma
- terial: No. Band: Tight. Source: https://akerbp.com/en/investor/calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Ak
+ er BP ASA (AKRBP). Material: No. Band: Tight. Source: https://akerbp.com/e
+ n/investor/calendar/
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:DNO Norge AS (DNO): DNO Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO208@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: DNO Norge AS (DNO). Mat
- erial: No. Band: Tight. Source: https://www.dno.no/en/investors/calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: DN
+ O Norge AS (DNO). Material: No. Band: Tight. Source: https://www.dno.no/en
+ /investors/calendar/
 URL:https://www.dno.no/en/investors/calendar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO209@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Tight. Source: https://www.omv.com/en/investors/financial
- -calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Tight. Source: https://www.omv.com/e
+ n/investors/financial-calendar
 URL:https://www.omv.com/en/investors/financial-calendar
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Repsol Norge AS (REP): Repsol Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO211@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Repsol Norge AS (REP). 
- Material: No. Band: Tight. Source: https://www.repsol.com/en/shareholders-
- and-investors/calendar/third-quarter-2026-financial-results-presentation/i
- ndex.cshtml
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Re
+ psol Norge AS (REP). Material: No. Band: Tight. Source: https://www.repsol
+ .com/en/shareholders-and-investors/calendar/third-quarter-2026-financial-r
+ esults-presentation/index.cshtml
 URL:https://www.repsol.com/en/shareholders-and-investors/calendar/third-qua
  rter-2026-financial-results-presentation/index.cshtml
 END:VEVENT
@@ -81,12 +84,12 @@ BEGIN:VEVENT
 SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q3 2026 results
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO210@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: TotalEnergies EP Norge 
- AS (TTE). Material: No. Band: Tight. Source: https://totalenergies.com/new
- s/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: To
+ talEnergies EP Norge AS (TTE). Material: No. Band: Tight. Source: https://
+ totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -94,13 +97,13 @@ SUMMARY:Atlantic Lithium Limited (ALL): Scheme meeting to approve Huayou ta
  keover expected November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ALL-2026-11-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Atlantic Lithium Limited (A
- LL). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/atlantic-lithium-limited-npv-di---all/2026-annual-financial-
- report/9766680
+DESCRIPTION:Market: London. Sector: Mining. Type: MnA. Company: Atlantic Li
+ thium Limited (ALL). Material: Yes. Band: Tight. Source: https://www.inves
+ tegate.co.uk/announcement/rns/atlantic-lithium-limited-npv-di---all/2026-a
+ nnual-financial-report/9766680
 URL:https://www.investegate.co.uk/announcement/rns/atlantic-lithium-limited
  -npv-di---all/2026-annual-financial-report/9766680
 END:VEVENT
@@ -109,13 +112,13 @@ SUMMARY:Bezant Resources plc (BZT): First Hope and Gorob concentrate shipme
  nt in early November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-BZT-2026-11-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Bezant Resourc
- es plc (BZT). Material: Yes. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/bezant-resources--bzt/interim-results-for-the-six-m
- onths-to-30-june-2026/9797671
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Bezant Resources plc (BZT). Material: Yes. Band: Tight. Source: https://
+ www.investegate.co.uk/announcement/rns/bezant-resources--bzt/interim-resul
+ ts-for-the-six-months-to-30-june-2026/9797671
 URL:https://www.investegate.co.uk/announcement/rns/bezant-resources--bzt/in
  terim-results-for-the-six-months-to-30-june-2026/9797671
 END:VEVENT
@@ -124,13 +127,13 @@ SUMMARY:Quantum Helium Limited (QHE): Sagebrush-1 larger-volume propped fra
  cture stimulation targeted November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-QHE-2026-11-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Quantum Helium L
- imited (QHE). Material: Yes. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/quantum-helium-limited--qhe/sagebrush-stimulation-a
- nd-operations-update-/9824416
+DESCRIPTION:Market: London. Sector: Mining. Type: Drilling start. Company: 
+ Quantum Helium Limited (QHE). Material: Yes. Band: Tight. Source: https://
+ www.investegate.co.uk/announcement/rns/quantum-helium-limited--qhe/sagebru
+ sh-stimulation-and-operations-update-/9824416
 URL:https://www.investegate.co.uk/announcement/rns/quantum-helium-limited--
  qhe/sagebrush-stimulation-and-operations-update-/9824416
 END:VEVENT
@@ -139,13 +142,13 @@ SUMMARY:Tharisa plc (THS): Project debt drawdowns expected to commence from
   November 2026 (month)
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-THS-2026-11-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Tharisa plc (THS). Mate
- rial: No. Band: Tight. Source: https://www.investegate.co.uk/announcement/
- rns/tharisa-di---ths/production-report-for-q4-and-full-year-fy2026-/981908
- 9
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Tharisa
+  plc (THS). Material: No. Band: Tight. Source: https://www.investegate.co.
+ uk/announcement/rns/tharisa-di---ths/production-report-for-q4-and-full-yea
+ r-fy2026-/9819089
 URL:https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/product
  ion-report-for-q4-and-full-year-fy2026-/9819089
 END:VEVENT
@@ -153,12 +156,12 @@ BEGIN:VEVENT
 SUMMARY:OKEA ASA (OKEA): OKEA Q3 2026 results
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO214@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OKEA ASA (OKEA). Materi
- al: No. Band: Tight. Source: https://www.okea.no/investor/financial-calend
- ar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OK
+ EA ASA (OKEA). Material: No. Band: Tight. Source: https://www.okea.no/inve
+ stor/financial-calendar/
 URL:https://www.okea.no/investor/financial-calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -166,12 +169,12 @@ SUMMARY:ConocoPhillips Skandinavia AS (COP): ConocoPhillips Q3 2026 results
   and call
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO216@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: ConocoPhillips Skandina
- via AS (COP). Material: No. Band: Tight. Source: https://www.conocophillip
- s.com/news-media/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Co
+ nocoPhillips Skandinavia AS (COP). Material: No. Band: Tight. Source: http
+ s://www.conocophillips.com/news-media/
 URL:https://www.conocophillips.com/news-media/
 END:VEVENT
 BEGIN:VEVENT
@@ -179,12 +182,12 @@ SUMMARY:Harbour Energy Norge AS (HBR): Harbour Energy trading and operation
  s update
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO215@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Harbour Energy Norge AS
-  (HBR). Material: No. Band: Tight. Source: https://www.harbourenergy.com/i
- nvestors/financial-calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Ha
+ rbour Energy Norge AS (HBR). Material: No. Band: Tight. Source: https://ww
+ w.harbourenergy.com/investors/financial-calendar/
 URL:https://www.harbourenergy.com/investors/financial-calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -192,13 +195,13 @@ SUMMARY:ORLEN Upstream Norway AS (PKN): ORLEN Q3 2026 consolidated report (
  moved forward from 19 Nov)
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO217@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: ORLEN Upstream Norway A
- S (PKN). Material: No. Band: Tight. Source: https://www.orlen.pl/pl/relacj
- e-inwestorskie/raporty-i-publikacje/raporty-biezace/2026/02/Raport-biezacy
- -nr-35-2026
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OR
+ LEN Upstream Norway AS (PKN). Material: No. Band: Tight. Source: https://w
+ ww.orlen.pl/pl/relacje-inwestorskie/raporty-i-publikacje/raporty-biezace/2
+ 026/02/Raport-biezacy-nr-35-2026
 URL:https://www.orlen.pl/pl/relacje-inwestorskie/raporty-i-publikacje/rapor
  ty-biezace/2026/02/Raport-biezacy-nr-35-2026
 END:VEVENT
@@ -207,13 +210,13 @@ SUMMARY:Petrotal Corporation (PTAL): Q3 2026 results webcast on 9 November
  2026
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PTAL-2026-11-09-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Petrotal Corporatio
- n (PTAL). Material: No. Band: Tight. Source: https://www.investegate.co.uk
- /announcement/rns/petrotal-corporation-npv-di---ptal/q3-2026-operations-an
- d-financial-updates/9821322
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Results due. Company
+ : Petrotal Corporation (PTAL). Material: No. Band: Tight. Source: https://
+ www.investegate.co.uk/announcement/rns/petrotal-corporation-npv-di---ptal/
+ q3-2026-operations-and-financial-updates/9821322
 URL:https://www.investegate.co.uk/announcement/rns/petrotal-corporation-npv
  -di---ptal/q3-2026-operations-and-financial-updates/9821322
 END:VEVENT
@@ -221,12 +224,12 @@ BEGIN:VEVENT
 SUMMARY:Vår Energi ASA (VAR): Vår Energi extraordinary general meeting
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO218@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Shareholder meeting. Company: Vår Energi
-  ASA (VAR). Material: No. Band: Tight. Source: https://varenergi.no/en/inv
- estors/financial-calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Shareholder meeting.
+  Company: Vår Energi ASA (VAR). Material: No. Band: Tight. Source: https:
+ //varenergi.no/en/investors/financial-calendar/
 URL:https://varenergi.no/en/investors/financial-calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -234,36 +237,37 @@ SUMMARY:INPEX Idemitsu Norge AS (INPEX Idemitsu): INPEX results for nine mo
  nths to 30 Sep 2026 (investor meeting 13 Nov)
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO219@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: INPEX Idemitsu Norge AS
-  (INPEX Idemitsu). Material: No. Band: Tight. Source: https://www.inpex.li
- ve/english/ir/calendar.html
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: IN
+ PEX Idemitsu Norge AS (INPEX Idemitsu). Material: No. Band: Tight. Source:
+  https://www.inpex.live/english/ir/calendar.html
 URL:https://www.inpex.live/english/ir/calendar.html
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Japex Norge AS (1662): JAPEX results for 2Q FY2027/3
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO220@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Japex Norge AS (1662). 
- Material: No. Band: Tight. Source: https://www.japex.co.jp/en/ir/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Ja
+ pex Norge AS (1662). Material: No. Band: Tight. Source: https://www.japex.
+ co.jp/en/ir/
 URL:https://www.japex.co.jp/en/ir/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pan African Resources plc (PAF): AGM on 19 November 2026
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PAF-2026-11-19-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Pan African Resources plc
-  (PAF). Material: No. Band: Tight. Source: https://www.investegate.co.uk/a
- nnouncement/prn/pan-african-resources--paf/summarised-audited-results-for-
- the-year-ended-/9774204
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Pan Afric
+ an Resources plc (PAF). Material: No. Band: Tight. Source: https://www.inv
+ estegate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audi
+ ted-results-for-the-year-ended-/9774204
 URL:https://www.investegate.co.uk/announcement/prn/pan-african-resources--p
  af/summarised-audited-results-for-the-year-ended-/9774204
 END:VEVENT
@@ -273,13 +277,13 @@ SUMMARY:Zanaga Iron Ore Company Limited (ZIOC): Red Arc Minerals strategic
  nancing)
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ZIOC-2026-11-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Zanaga Iron Ore Company
-  Limited (ZIOC). Material: Yes. Band: Tight. Source: https://www.investega
- te.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc/interim-results
- -for-six-months-ended-30-june-2026-/9795204
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Zanaga 
+ Iron Ore Company Limited (ZIOC). Material: Yes. Band: Tight. Source: https
+ ://www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc
+ /interim-results-for-six-months-ended-30-june-2026-/9795204
 URL:https://www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-d
  i---zioc/interim-results-for-six-months-ended-30-june-2026-/9795204
 END:VEVENT
@@ -288,13 +292,13 @@ SUMMARY:Atlantic Lithium Limited (ALL): Scheme implementation expected Dece
  mber 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ALL-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Atlantic Lithium Limited (A
- LL). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/atlantic-lithium-limited-npv-di---all/2026-annual-financial-
- report/9766680
+DESCRIPTION:Market: London. Sector: Mining. Type: MnA. Company: Atlantic Li
+ thium Limited (ALL). Material: Yes. Band: Tight. Source: https://www.inves
+ tegate.co.uk/announcement/rns/atlantic-lithium-limited-npv-di---all/2026-a
+ nnual-financial-report/9766680
 URL:https://www.investegate.co.uk/announcement/rns/atlantic-lithium-limited
  -npv-di---all/2026-annual-financial-report/9766680
 END:VEVENT
@@ -303,13 +307,13 @@ SUMMARY:Hochschild Mining plc (HOC): Monte Do Carmo FID in December 2026 (m
  onth)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-HOC-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Ho
- chschild Mining plc (HOC). Material: Yes. Band: Tight. Source: https://www
- .investegate.co.uk/announcement/rns/hochschild-mining--hoc/q3-and-9-month-
- production-report/9832838
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Hochschild Mining plc (HOC). Material: Yes. Band: Tight. Sou
+ rce: https://www.investegate.co.uk/announcement/rns/hochschild-mining--hoc
+ /q3-and-9-month-production-report/9832838
 URL:https://www.investegate.co.uk/announcement/rns/hochschild-mining--hoc/q
  3-and-9-month-production-report/9832838
 END:VEVENT
@@ -318,12 +322,13 @@ SUMMARY:Kistos Holdings plc (KIST): Balder Phase VI first oil scheduled for
   December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KIST-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Kistos Holding
- s plc (KIST). Material: Yes. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/kistos-holdings--kist/interim-results/9771745
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Kistos Holdings plc (KIST). Material: Yes. Band: Tight. Source: htt
+ ps://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/interim-
+ results/9771745
 URL:https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/in
  terim-results/9771745
 END:VEVENT
@@ -332,13 +337,13 @@ SUMMARY:Pan African Resources plc (PAF): FID on new tailings retreatment pr
  oject (DFS done\, US$216m capex) expected December 2026 (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PAF-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Pa
- n African Resources plc (PAF). Material: Yes. Band: Tight. Source: https:/
- /www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summari
- sed-audited-results-for-the-year-ended-/9774204
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Pan African Resources plc (PAF). Material: Yes. Band: Tight.
+  Source: https://www.investegate.co.uk/announcement/prn/pan-african-resour
+ ces--paf/summarised-audited-results-for-the-year-ended-/9774204
 URL:https://www.investegate.co.uk/announcement/prn/pan-african-resources--p
  af/summarised-audited-results-for-the-year-ended-/9774204
 END:VEVENT
@@ -347,13 +352,13 @@ SUMMARY:Zanaga Iron Ore Company Limited (ZIOC): AGM in December 2026 (month
  )
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ZIOC-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Zanaga Iron Ore Company L
- imited (ZIOC). Material: No. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc/interim-results-fo
- r-six-months-ended-30-june-2026-/9795204
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Zanaga Ir
+ on Ore Company Limited (ZIOC). Material: No. Band: Tight. Source: https://
+ www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-di---zioc/in
+ terim-results-for-six-months-ended-30-june-2026-/9795204
 URL:https://www.investegate.co.uk/announcement/rns/zanaga-iron-ore-co-ltd-d
  i---zioc/interim-results-for-six-months-ended-30-june-2026-/9795204
 END:VEVENT
@@ -362,12 +367,12 @@ SUMMARY:Aker BP ASA (AKRBP): Hugin A platform sailaway planned December 202
  6 (Yggdrasil) (month)
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO221@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Milestone. Company: Aker BP ASA (AKRBP). 
- Material: No. Band: Tight. Source: https://akerbp.com/wp-content/uploads/2
- 026/07/aker-bp-2026-q2-presentation.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Milestone. Company: 
+ Aker BP ASA (AKRBP). Material: No. Band: Tight. Source: https://akerbp.com
+ /wp-content/uploads/2026/07/aker-bp-2026-q2-presentation.pdf
 URL:https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-presentat
  ion.pdf
 END:VEVENT
@@ -376,13 +381,13 @@ SUMMARY:Neo Energy Metals plc (NEO): Ministerial consent for Beatrix Mining
   Right transfer required on or before 6 December 2026
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-NEO-2026-12-06-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Neo Energy M
- etals plc (NEO). Material: Yes. Band: Tight. Source: https://www.investega
- te.co.uk/announcement/rns/neo-energy-metals--neo/operational-update-for-pe
- riod-ended-30-june-2026/9642985
+DESCRIPTION:Market: London. Sector: Mining. Type: Permit or approval. Compa
+ ny: Neo Energy Metals plc (NEO). Material: Yes. Band: Tight. Source: https
+ ://www.investegate.co.uk/announcement/rns/neo-energy-metals--neo/operation
+ al-update-for-period-ended-30-june-2026/9642985
 URL:https://www.investegate.co.uk/announcement/rns/neo-energy-metals--neo/o
  perational-update-for-period-ended-30-june-2026/9642985
 END:VEVENT
@@ -391,13 +396,13 @@ SUMMARY:ACG Metals Limited (ACG): Gediktepe full commercial production incl
  uding zinc concentrate by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ACG-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: ACG Metals Lim
- ited (ACG). Material: Yes. Band: Tight. Source: https://www.investegate.co
- .uk/announcement/rns/acg-acquisition-company-limited-cls-a-npv-di---acg/h1
- -2026-interim-results/9776263
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : ACG Metals Limited (ACG). Material: Yes. Band: Tight. Source: https://ww
+ w.investegate.co.uk/announcement/rns/acg-acquisition-company-limited-cls-a
+ -npv-di---acg/h1-2026-interim-results/9776263
 URL:https://www.investegate.co.uk/announcement/rns/acg-acquisition-company-
  limited-cls-a-npv-di---acg/h1-2026-interim-results/9776263
 END:VEVENT
@@ -406,12 +411,13 @@ SUMMARY:Amaroq Ltd. (AMRQ): Further update on Maarrmorilik development plan
  s during Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-AMRQ-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Amaroq Ltd. (AMRQ). Mater
- ial: No. Band: Tight. Source: https://www.investegate.co.uk/announcement/g
- nw/amaroq-ltd---amrq/q2-2026-operational-and-financial-results/9719004
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Amaroq Lt
+ d. (AMRQ). Material: No. Band: Tight. Source: https://www.investegate.co.u
+ k/announcement/gnw/amaroq-ltd---amrq/q2-2026-operational-and-financial-res
+ ults/9719004
 URL:https://www.investegate.co.uk/announcement/gnw/amaroq-ltd---amrq/q2-202
  6-operational-and-financial-results/9719004
 END:VEVENT
@@ -420,13 +426,13 @@ SUMMARY:Borders and Southern Petroleum plc (BOR): Falklands licence extensi
  ons expected to be signed before year end (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-BOR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Borders and 
- Southern Petroleum plc (BOR). Material: Yes. Band: Tight. Source: https://
- www.investegate.co.uk/announcement/rns/borders-southern-petroleum--bor/hal
- f-year-financial-report/9780712
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Permit or approval. 
+ Company: Borders and Southern Petroleum plc (BOR). Material: Yes. Band: Ti
+ ght. Source: https://www.investegate.co.uk/announcement/rns/borders-southe
+ rn-petroleum--bor/half-year-financial-report/9780712
 URL:https://www.investegate.co.uk/announcement/rns/borders-southern-petrole
  um--bor/half-year-financial-report/9780712
 END:VEVENT
@@ -435,13 +441,13 @@ SUMMARY:Caledonia Mining Corporation plc (CMCL): Firm 2027 production and c
  ost guidance after budgeting at end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-CMCL-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Caledonia Mining Co
- rporation plc (CMCL). Material: No. Band: Tight. Source: https://www.inves
- tegate.co.uk/announcement/rns/caledonia-mining-corporation-di---cmcl/resul
- ts-for-q2-and-half-year-ended-june-30-2026/9711895
+DESCRIPTION:Market: London. Sector: Mining. Type: Results due. Company: Cal
+ edonia Mining Corporation plc (CMCL). Material: No. Band: Tight. Source: h
+ ttps://www.investegate.co.uk/announcement/rns/caledonia-mining-corporation
+ -di---cmcl/results-for-q2-and-half-year-ended-june-30-2026/9711895
 URL:https://www.investegate.co.uk/announcement/rns/caledonia-mining-corpora
  tion-di---cmcl/results-for-q2-and-half-year-ended-june-30-2026/9711895
 END:VEVENT
@@ -450,12 +456,12 @@ SUMMARY:Chariot Limited (CHAR): First Angolan oil transaction expected to c
  lose H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-CHAR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Chariot Limited (CHAR). Mat
- erial: Yes. Band: Loose. Source: https://www.investegate.co.uk/announcemen
- t/rns/chariot-limited--char/h1-2026-results/9797622
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Chario
+ t Limited (CHAR). Material: Yes. Band: Loose. Source: https://www.investeg
+ ate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622
 URL:https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1
  -2026-results/9797622
 END:VEVENT
@@ -464,13 +470,13 @@ SUMMARY:Cleantech Lithium plc (CTL): ASX dual listing targeted Q4 2026 (app
  rox.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-CTL-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Cleantech Lithium plc (
- CTL). Material: No. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/cleantech-lithium--ctl/interim-results-for-six-month-ending-
- 30-june-2026/9780758
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Cleante
+ ch Lithium plc (CTL). Material: No. Band: Tight. Source: https://www.inves
+ tegate.co.uk/announcement/rns/cleantech-lithium--ctl/interim-results-for-s
+ ix-month-ending-30-june-2026/9780758
 URL:https://www.investegate.co.uk/announcement/rns/cleantech-lithium--ctl/i
  nterim-results-for-six-month-ending-30-june-2026/9780758
 END:VEVENT
@@ -479,13 +485,13 @@ SUMMARY:Cornish Metals plc (TIN): Overall engineering completion expected b
  y end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TIN-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Cornish Metals plc (TIN).
-  Material: No. Band: Tight. Source: https://www.investegate.co.uk/announce
- ment/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-mon
- ths-/9788241
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Cornish M
+ etals plc (TIN). Material: No. Band: Tight. Source: https://www.investegat
+ e.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results
+ -for-the-six-months-/9788241
 URL:https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/
  unaudited-interim-results-for-the-six-months-/9788241
 END:VEVENT
@@ -494,12 +500,13 @@ SUMMARY:East Star Resources plc (EST): Drill Rulikha Target 1 prospect in Q
  4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-EST-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: East Star Resour
- ces plc (EST). Material: No. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/east-star-resources--est/half-year-report/9783165
+DESCRIPTION:Market: London. Sector: Mining. Type: Drilling start. Company: 
+ East Star Resources plc (EST). Material: No. Band: Tight. Source: https://
+ www.investegate.co.uk/announcement/rns/east-star-resources--est/half-year-
+ report/9783165
 URL:https://www.investegate.co.uk/announcement/rns/east-star-resources--est
  /half-year-report/9783165
 END:VEVENT
@@ -508,12 +515,13 @@ SUMMARY:Empire Metals Limited (EEE): ASX dual listing on track for H2 2026
  (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-EEE-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Empire Metals Limited (
- EEE). Material: No. Band: Loose. Source: https://www.investegate.co.uk/ann
- ouncement/rns/empire-metals-limited-npv-di---eee/interim-results/9742112
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Empire 
+ Metals Limited (EEE). Material: No. Band: Loose. Source: https://www.inves
+ tegate.co.uk/announcement/rns/empire-metals-limited-npv-di---eee/interim-r
+ esults/9742112
 URL:https://www.investegate.co.uk/announcement/rns/empire-metals-limited-np
  v-di---eee/interim-results/9742112
 END:VEVENT
@@ -522,12 +530,13 @@ SUMMARY:Energean plc (ENOG): Angola entry completion by year-end 2026 (appr
  ox.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ENOG-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Energean plc (ENOG). Materi
- al: Yes. Band: Tight. Source: https://www.investegate.co.uk/announcement/r
- ns/energean--enog/trading-statement-operational-update/9576511
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Energe
+ an plc (ENOG). Material: Yes. Band: Tight. Source: https://www.investegate
+ .co.uk/announcement/rns/energean--enog/trading-statement-operational-updat
+ e/9576511
 URL:https://www.investegate.co.uk/announcement/rns/energean--enog/trading-s
  tatement-operational-update/9576511
 END:VEVENT
@@ -536,12 +545,12 @@ SUMMARY:Enquest plc (ENQ): Malaysian acquisitions to complete on 31 Decembe
  r 2026 (Group above 100\,000 boepd)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ENQ-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Enquest plc (ENQ). Material
- : Yes. Band: Tight. Source: https://www.investegate.co.uk/announcement/rns
- /enquest--enq/half-year-results/9752860
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Enques
+ t plc (ENQ). Material: Yes. Band: Tight. Source: https://www.investegate.c
+ o.uk/announcement/rns/enquest--enq/half-year-results/9752860
 URL:https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-r
  esults/9752860
 END:VEVENT
@@ -550,13 +559,13 @@ SUMMARY:Genel Energy plc (GENL): New 3D seismic acquisition in H2 2026 (app
  rox.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GENL-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Genel Energy plc (GENL). 
- Material: No. Band: Loose. Source: https://www.investegate.co.uk/announcem
- ent/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-for-the-p-/9
- 702685
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Gene
+ l Energy plc (GENL). Material: No. Band: Loose. Source: https://www.invest
+ egate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited
+ -results-for-the-p-/9702685
 URL:https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel
  -energy-plc-unaudited-results-for-the-p-/9702685
 END:VEVENT
@@ -565,13 +574,13 @@ SUMMARY:Jadestone Energy plc (JSE): Nam Du/U Minh FID and farm-out by end o
  f 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-JSE-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Ja
- destone Energy plc (JSE). Material: Yes. Band: Tight. Source: https://www.
- investegate.co.uk/announcement/rns/jadestone-energy--jse/2026-half-year-re
- sults-/9742142
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: FID or construction 
+ decision. Company: Jadestone Energy plc (JSE). Material: Yes. Band: Tight.
+  Source: https://www.investegate.co.uk/announcement/rns/jadestone-energy--
+ jse/2026-half-year-results-/9742142
 URL:https://www.investegate.co.uk/announcement/rns/jadestone-energy--jse/20
  26-half-year-results-/9742142
 END:VEVENT
@@ -580,12 +589,13 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Tulu Kapi project debt drawdown on
   track for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KEFI-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Kefi Gold and Copper pl
- c (KEFI). Material: Yes. Band: Tight. Source: https://www.investegate.co.u
- k/announcement/rns/kefi-gold-and-copper--kefi/operational-update/9702439
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Kefi Go
+ ld and Copper plc (KEFI). Material: Yes. Band: Tight. Source: https://www.
+ investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operational-
+ update/9702439
 URL:https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--ke
  fi/operational-update/9702439
 END:VEVENT
@@ -594,13 +604,13 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Jibal Qutman Stage 1 FID targeted
  H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KEFI-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Ke
- fi Gold and Copper plc (KEFI). Material: Yes. Band: Loose. Source: https:/
- /www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operati
- onal-update/9702439
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Kefi Gold and Copper plc (KEFI). Material: Yes. Band: Loose.
+  Source: https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copp
+ er--kefi/operational-update/9702439
 URL:https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--ke
  fi/operational-update/9702439
 END:VEVENT
@@ -609,12 +619,13 @@ SUMMARY:Kenmare Resources plc (KMR): SMO 2 mining upgrade equipment on site
  \, commissioning expected Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KMR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Kenmare Resources plc (KM
- R). Material: No. Band: Tight. Source: https://wp-kenmare-2024.s3.eu-west-
- 2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Production-Update.pdf
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Kenmare R
+ esources plc (KMR). Material: No. Band: Tight. Source: https://wp-kenmare-
+ 2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Produ
+ ction-Update.pdf
 URL:https://wp-kenmare-2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-1
  0-15-KMR-Q3-2026-Production-Update.pdf
 END:VEVENT
@@ -623,12 +634,13 @@ SUMMARY:Kistos Holdings plc (KIST): Oman Block 9 acquisition completion exp
  ected H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KIST-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Kistos Holdings plc (KIST).
-  Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/announc
- ement/rns/kistos-holdings--kist/interim-results/9771745
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Kistos
+  Holdings plc (KIST). Material: Yes. Band: Loose. Source: https://www.inve
+ stegate.co.uk/announcement/rns/kistos-holdings--kist/interim-results/97717
+ 45
 URL:https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/in
  terim-results/9771745
 END:VEVENT
@@ -637,12 +649,13 @@ SUMMARY:Kodal Minerals plc (KOD): Target to increase Bougouni lithium MRE f
  rom 31Mt to 50Mt by end 2026 (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KOD-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Kodal Minerals plc (KO
- D). Material: Yes. Band: Loose. Source: https://kodalminerals.com/wp-conte
- nt/uploads/2026/06/Kodal-AGM-Presentation-24-June-2026-FINAL.pdf
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Kodal 
+ Minerals plc (KOD). Material: Yes. Band: Loose. Source: https://kodalminer
+ als.com/wp-content/uploads/2026/06/Kodal-AGM-Presentation-24-June-2026-FIN
+ AL.pdf
 URL:https://kodalminerals.com/wp-content/uploads/2026/06/Kodal-AGM-Presenta
  tion-24-June-2026-FINAL.pdf
 END:VEVENT
@@ -651,13 +664,13 @@ SUMMARY:Meridian Mining plc (MNO): Cabacal Definitive Feasibility Study tar
  geted for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-MNO-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Meridian Mining plc (MNO)
- . Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/announ
- cement/rns/meridian-mining-plc--mno/meridian-reports-half-year-financial-r
- esults/9719036
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Meridian 
+ Mining plc (MNO). Material: Yes. Band: Tight. Source: https://www.investeg
+ ate.co.uk/announcement/rns/meridian-mining-plc--mno/meridian-reports-half-
+ year-financial-results/9719036
 URL:https://www.investegate.co.uk/announcement/rns/meridian-mining-plc--mno
  /meridian-reports-half-year-financial-results/9719036
 END:VEVENT
@@ -666,12 +679,12 @@ SUMMARY:Mila Resources plc (MILA): Initial Yarrol MRE scheduled for 2026 (a
  pprox.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-MILA-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Mila Resources plc (MI
- LA). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/ann
- ouncement/rns/mila-resources--mila/final-results/9833713
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Mila R
+ esources plc (MILA). Material: Yes. Band: Loose. Source: https://www.inves
+ tegate.co.uk/announcement/rns/mila-resources--mila/final-results/9833713
 URL:https://www.investegate.co.uk/announcement/rns/mila-resources--mila/fin
  al-results/9833713
 END:VEVENT
@@ -680,12 +693,13 @@ SUMMARY:Oriole Resources plc (ORR): Maiden MRE and/or JORC Exploration Targ
  et for Wapouze in 2026 (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ORR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Oriole Resources plc (
- ORR). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/an
- nouncement/rns/oriole-resources--orr/interim-results-/9783191
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Oriole
+  Resources plc (ORR). Material: Yes. Band: Loose. Source: https://www.inve
+ stegate.co.uk/announcement/rns/oriole-resources--orr/interim-results-/9783
+ 191
 URL:https://www.investegate.co.uk/announcement/rns/oriole-resources--orr/in
  terim-results-/9783191
 END:VEVENT
@@ -694,12 +708,13 @@ SUMMARY:Oriole Resources plc (ORR): Exploitation Licence application for Wa
  pouze to be submitted later in the year (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ORR-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Oriole Resou
- rces plc (ORR). Material: No. Band: Loose. Source: https://www.investegate
- .co.uk/announcement/rns/oriole-resources--orr/interim-results-/9783191
+DESCRIPTION:Market: London. Sector: Mining. Type: Permit or approval. Compa
+ ny: Oriole Resources plc (ORR). Material: No. Band: Loose. Source: https:/
+ /www.investegate.co.uk/announcement/rns/oriole-resources--orr/interim-resu
+ lts-/9783191
 URL:https://www.investegate.co.uk/announcement/rns/oriole-resources--orr/in
  terim-results-/9783191
 END:VEVENT
@@ -708,13 +723,13 @@ SUMMARY:Orosur Mining Inc (OMI): Potential APTA resource estimate later thi
  s year (approx.\, 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-OMI-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Orosur Mining Inc (OMI
- ). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/annou
- ncement/rns/orosur-mining-inc--omi/orosur-mining-inc-full-year-2026-result
- s-/9792643
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Orosur
+  Mining Inc (OMI). Material: Yes. Band: Loose. Source: https://www.investe
+ gate.co.uk/announcement/rns/orosur-mining-inc--omi/orosur-mining-inc-full-
+ year-2026-results-/9792643
 URL:https://www.investegate.co.uk/announcement/rns/orosur-mining-inc--omi/o
  rosur-mining-inc-full-year-2026-results-/9792643
 END:VEVENT
@@ -723,12 +738,13 @@ SUMMARY:Pharos Energy plc (PHAR): El Fayum six-well programme scheduled to
  complete by end of year (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PHAR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Pharos Energy plc (PHAR).
-  Material: No. Band: Tight. Source: https://www.investegate.co.uk/announce
- ment/rns/pharos-energy--phar/2026-interim-results/9785618
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Phar
+ os Energy plc (PHAR). Material: No. Band: Tight. Source: https://www.inves
+ tegate.co.uk/announcement/rns/pharos-energy--phar/2026-interim-results/978
+ 5618
 URL:https://www.investegate.co.uk/announcement/rns/pharos-energy--phar/2026
  -interim-results/9785618
 END:VEVENT
@@ -737,13 +753,13 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Licence extension to 5 Feb
  ruary 2027 expected before end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRD-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Predator Oil
-  and Gas Holdings plc (PRD). Material: No. Band: Tight. Source: https://ww
- w.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/in
- terim-financial-statements/9798892
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Permit or approval. 
+ Company: Predator Oil and Gas Holdings plc (PRD). Material: No. Band: Tigh
+ t. Source: https://www.investegate.co.uk/announcement/rns/predator-oil-gas
+ -holdings-npv--prd/interim-financial-statements/9798892
 URL:https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holding
  s-npv--prd/interim-financial-statements/9798892
 END:VEVENT
@@ -752,12 +768,13 @@ SUMMARY:Prospex Energy plc (PXEN): ST3 water injection test starting Q4 202
  6 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PXEN-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Prospex Energy plc (PXEN)
- . Material: No. Band: Tight. Source: https://www.investegate.co.uk/announc
- ement/rns/prospex-energy--pxen/half-year-report/9792618
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Pros
+ pex Energy plc (PXEN). Material: No. Band: Tight. Source: https://www.inve
+ stegate.co.uk/announcement/rns/prospex-energy--pxen/half-year-report/97926
+ 18
 URL:https://www.investegate.co.uk/announcement/rns/prospex-energy--pxen/hal
  f-year-report/9792618
 END:VEVENT
@@ -766,13 +783,13 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Phalaborwa Pre-Feasibility Study
   targeted Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-RBW-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Rainbow Rare Earths Limit
- ed (RBW). Material: Yes. Band: Tight. Source: https://www.investegate.co.u
- k/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-result
- s-for-year-ended-30-june-2026/9832858
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Rainbow R
+ are Earths Limited (RBW). Material: Yes. Band: Tight. Source: https://www.
+ investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/pr
+ eliminary-results-for-year-ended-30-june-2026/9832858
 URL:https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limi
  ted-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858
 END:VEVENT
@@ -781,12 +798,12 @@ SUMMARY:Rome Resources plc (RMR): 2027 exploration programme to be finalise
  d and announced by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-RMR-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Rome Resources plc (RMR).
-  Material: No. Band: Tight. Source: https://www.investegate.co.uk/announce
- ment/rns/rome-resources--rmr/half-year-results/9797591
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Rome Reso
+ urces plc (RMR). Material: No. Band: Tight. Source: https://www.investegat
+ e.co.uk/announcement/rns/rome-resources--rmr/half-year-results/9797591
 URL:https://www.investegate.co.uk/announcement/rns/rome-resources--rmr/half
  -year-results/9797591
 END:VEVENT
@@ -795,12 +812,13 @@ SUMMARY:Savannah Resources plc (SAV): RECAPE submission in Q4 2026 (approx.
  \, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SAV-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Savannah Res
- ources plc (SAV). Material: No. Band: Tight. Source: https://www.investega
- te.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514
+DESCRIPTION:Market: London. Sector: Mining. Type: Permit or approval. Compa
+ ny: Savannah Resources plc (SAV). Material: No. Band: Tight. Source: https
+ ://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-
+ results/9778514
 URL:https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/
  interim-results/9778514
 END:VEVENT
@@ -809,12 +827,13 @@ SUMMARY:Savannah Resources plc (SAV): Post due diligence conditional projec
  t finance offers by end of 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SAV-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Savannah Resources plc 
- (SAV). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/a
- nnouncement/rns/savannah-resources--sav/interim-results/9778514
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Savanna
+ h Resources plc (SAV). Material: Yes. Band: Tight. Source: https://www.inv
+ estegate.co.uk/announcement/rns/savannah-resources--sav/interim-results/97
+ 78514
 URL:https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/
  interim-results/9778514
 END:VEVENT
@@ -823,13 +842,13 @@ SUMMARY:Seascape Energy Asia plc (SEA): Temaris Cluster Field Development a
  nd Abandonment Plan submission Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEA-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Seascape Ene
- rgy Asia plc (SEA). Material: Yes. Band: Tight. Source: https://www.invest
- egate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results
- -and-investor-webcast/9797863
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Permit or approval. 
+ Company: Seascape Energy Asia plc (SEA). Material: Yes. Band: Tight. Sourc
+ e: https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc
+ --sea/interim-results-and-investor-webcast/9797863
 URL:https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc
  --sea/interim-results-and-investor-webcast/9797863
 END:VEVENT
@@ -838,13 +857,13 @@ SUMMARY:Seascape Energy Asia plc (SEA): Block 2A rig award anticipated mid-
  Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEA-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Seascape Energy Asia plc 
- (SEA). Material: No. Band: Tight. Source: https://www.investegate.co.uk/an
- nouncement/rns/seascape-energy-asia-plc--sea/interim-results-and-investor-
- webcast/9797863
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Seas
+ cape Energy Asia plc (SEA). Material: No. Band: Tight. Source: https://www
+ .investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-
+ results-and-investor-webcast/9797863
 URL:https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc
  --sea/interim-results-and-investor-webcast/9797863
 END:VEVENT
@@ -853,13 +872,13 @@ SUMMARY:Seascape Energy Asia plc (SEA): DEWA Cluster sanction targeted arou
  nd end of 2026 (operator EnQuest) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEA-2026-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Se
- ascape Energy Asia plc (SEA). Material: Yes. Band: Tight. Source: https://
- www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--sea/inter
- im-results-and-investor-webcast/9797863
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: FID or construction 
+ decision. Company: Seascape Energy Asia plc (SEA). Material: Yes. Band: Ti
+ ght. Source: https://www.investegate.co.uk/announcement/rns/seascape-energ
+ y-asia-plc--sea/interim-results-and-investor-webcast/9797863
 URL:https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc
  --sea/interim-results-and-investor-webcast/9797863
 END:VEVENT
@@ -868,13 +887,13 @@ SUMMARY:Serabi Gold plc (SRB): Coringa transition to mechanised sublevel st
  oping on track for Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SRB-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Serabi Gold plc (SRB). Ma
- terial: No. Band: Tight. Source: https://www.investegate.co.uk/announcemen
- t/gnw/serabi-gold--srb/reports-q3-2026-production-operational-high-/983271
- 8
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Serabi Go
+ ld plc (SRB). Material: No. Band: Tight. Source: https://www.investegate.c
+ o.uk/announcement/gnw/serabi-gold--srb/reports-q3-2026-production-operatio
+ nal-high-/9832718
 URL:https://www.investegate.co.uk/announcement/gnw/serabi-gold--srb/reports
  -q3-2026-production-operational-high-/9832718
 END:VEVENT
@@ -883,13 +902,13 @@ SUMMARY:Sintana Energy Inc. (SEI): Fast-track seismic results from first se
  ason expected Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEI-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Sintana Energy Inc.
-  (SEI). Material: No. Band: Tight. Source: https://www.investegate.co.uk/a
- nnouncement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-
- to-30-june-2026-/9742130
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Results due. Company
+ : Sintana Energy Inc. (SEI). Material: No. Band: Tight. Source: https://ww
+ w.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-resu
+ lts-for-the-3-months-to-30-june-2026-/9742130
 URL:https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei
  /interim-results-for-the-3-months-to-30-june-2026-/9742130
 END:VEVENT
@@ -898,13 +917,13 @@ SUMMARY:Sintana Energy Inc. (SEI): Acquisition completion expected H2 2026
  (within 2026) (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEI-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Sintana Energy Inc. (SEI). 
- Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/announce
- ment/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-to-30-j
- une-2026-/9742130
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Sintan
+ a Energy Inc. (SEI). Material: Yes. Band: Loose. Source: https://www.inves
+ tegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-results-for
+ -the-3-months-to-30-june-2026-/9742130
 URL:https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei
  /interim-results-for-the-3-months-to-30-june-2026-/9742130
 END:VEVENT
@@ -913,12 +932,12 @@ SUMMARY:Sunda Energy plc (SNDA): Completion of NZ acquisition (Matahio) to
  follow government consent (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SNDA-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Sunda Energy plc (SNDA). Ma
- terial: Yes. Band: Tight. Source: https://www.investegate.co.uk/announceme
- nt/rns/sunda-energy--snda/interim-results-/9764277
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Sunda 
+ Energy plc (SNDA). Material: Yes. Band: Tight. Source: https://www.investe
+ gate.co.uk/announcement/rns/sunda-energy--snda/interim-results-/9764277
 URL:https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/inter
  im-results-/9764277
 END:VEVENT
@@ -927,13 +946,13 @@ SUMMARY:Thor Explorations Ltd (THX): Updated Douta MRE targeted by end of t
  he year (for optimised PFS) (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-THX-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Thor Explorations Ltd 
- (THX). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/a
- nnouncement/mfn/thor-explorations-ltd-di---thx/thor-explorations-announces
- -q3-2026-operating-/9821588
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Thor E
+ xplorations Ltd (THX). Material: Yes. Band: Tight. Source: https://www.inv
+ estegate.co.uk/announcement/mfn/thor-explorations-ltd-di---thx/thor-explor
+ ations-announces-q3-2026-operating-/9821588
 URL:https://www.investegate.co.uk/announcement/mfn/thor-explorations-ltd-di
  ---thx/thor-explorations-announces-q3-2026-operating-/9821588
 END:VEVENT
@@ -942,13 +961,13 @@ SUMMARY:Thungela Resources Limited (TGA): Goedehoop North sale expected to
  complete in H2 2026 (approx.\, H2 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TGA-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Thungela Resources Limited 
- (TGA). Material: No. Band: Loose. Source: https://www.investegate.co.uk/an
- nouncement/rns/thungela-resources-limited-npv-di---tga/interim-results-ann
- ouncement-2026/9723785
+DESCRIPTION:Market: London. Sector: Mining. Type: MnA. Company: Thungela Re
+ sources Limited (TGA). Material: No. Band: Loose. Source: https://www.inve
+ stegate.co.uk/announcement/rns/thungela-resources-limited-npv-di---tga/int
+ erim-results-announcement-2026/9723785
 URL:https://www.investegate.co.uk/announcement/rns/thungela-resources-limit
  ed-npv-di---tga/interim-results-announcement-2026/9723785
 END:VEVENT
@@ -957,13 +976,13 @@ SUMMARY:Upland Resources Limited (UPL): Three wells to be connected to pipe
  line with production before year-end (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-UPL-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Upland Resourc
- es Limited (UPL). Material: Yes. Band: Tight. Source: https://www.investeg
- ate.co.uk/announcement/rns/upland-resources-limited-npv--upl/drilling-prod
- uction-report/9780787
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Upland Resources Limited (UPL). Material: Yes. Band: Tight. Source:
+  https://www.investegate.co.uk/announcement/rns/upland-resources-limited-n
+ pv--upl/drilling-production-report/9780787
 URL:https://www.investegate.co.uk/announcement/rns/upland-resources-limited
  -npv--upl/drilling-production-report/9780787
 END:VEVENT
@@ -972,13 +991,13 @@ SUMMARY:Vast Resources plc (VAST): Soviet Tailings pilot flotation plant co
  mmissioning Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-VAST-2026-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Vast Resources
-  plc (VAST). Material: Yes. Band: Tight. Source: https://www.investegate.c
- o.uk/announcement/rns/vast-resources--vast/q3-2026-aprelevka-production-re
- port-/9816783
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Vast Resources plc (VAST). Material: Yes. Band: Tight. Source: https://w
+ ww.investegate.co.uk/announcement/rns/vast-resources--vast/q3-2026-aprelev
+ ka-production-report-/9816783
 URL:https://www.investegate.co.uk/announcement/rns/vast-resources--vast/q3-
  2026-aprelevka-production-report-/9816783
 END:VEVENT
@@ -987,13 +1006,13 @@ SUMMARY:Vast Resources plc (VAST): Assaying for maiden Soviet Tailings MRE
  scheduled Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-VAST-2026-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Vast Resources plc 
- (VAST). Material: No. Band: Tight. Source: https://www.investegate.co.uk/a
- nnouncement/rns/vast-resources--vast/q3-2026-aprelevka-production-report-/
- 9816783
+DESCRIPTION:Market: London. Sector: Mining. Type: Results due. Company: Vas
+ t Resources plc (VAST). Material: No. Band: Tight. Source: https://www.inv
+ estegate.co.uk/announcement/rns/vast-resources--vast/q3-2026-aprelevka-pro
+ duction-report-/9816783
 URL:https://www.investegate.co.uk/announcement/rns/vast-resources--vast/q3-
  2026-aprelevka-production-report-/9816783
 END:VEVENT
@@ -1002,12 +1021,12 @@ SUMMARY:Equinor Energy AS (EQNR): Irpa (Aasta Hansteen tie-back) first gas
  targeted Q4 2026 (approx.\, Q4 2026)
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO222@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: First oil. Company: Equinor Energy AS (EQ
- NR). Material: Yes. Band: Tight. Source: https://www.equinor.com/energy/ir
- pa
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: First oil. Company: 
+ Equinor Energy AS (EQNR). Material: Yes. Band: Tight. Source: https://www.
+ equinor.com/energy/irpa
 URL:https://www.equinor.com/energy/irpa
 END:VEVENT
 BEGIN:VEVENT
@@ -1015,12 +1034,13 @@ SUMMARY:Afentra plc (AET): Impala-2 first oil expected January 2027 (about
  4\,000 bopd gross) (month)
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-AET-2027-01-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Afentra plc (A
- ET). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/afentra--aet/operational-update-/9816781
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Afentra plc (AET). Material: Yes. Band: Tight. Source: https://www.
+ investegate.co.uk/announcement/rns/afentra--aet/operational-update-/981678
+ 1
 URL:https://www.investegate.co.uk/announcement/rns/afentra--aet/operational
  -update-/9816781
 END:VEVENT
@@ -1028,12 +1048,13 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q4 2026 trading statement
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO226@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Tight. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Tight. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1042,12 +1063,13 @@ SUMMARY:Serica Energy plc (SQZ): 2027 guidance to be given in Trading and O
  perations Update on 20 January 2027
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SQZ-2027-01-20-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Serica Energy plc (
- SQZ). Material: No. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/serica-energy--sqz/trading-and-operations-update/9828249
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Results due. Company
+ : Serica Energy plc (SQZ). Material: No. Band: Tight. Source: https://www.
+ investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-operatio
+ ns-update/9828249
 URL:https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/tradi
  ng-and-operations-update/9828249
 END:VEVENT
@@ -1055,12 +1077,12 @@ BEGIN:VEVENT
 SUMMARY:Vår Energi ASA (VAR): Vår Energi Q4 2026 trading update
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO227@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Vår Energi ASA (VAR). 
- Material: No. Band: Tight. Source: https://varenergi.no/en/investors/finan
- cial-calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: V
+ år Energi ASA (VAR). Material: No. Band: Tight. Source: https://varenergi
+ .no/en/investors/financial-calendar/
 URL:https://varenergi.no/en/investors/financial-calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -1068,13 +1090,13 @@ SUMMARY:Jubilee Metals Group plc (JLP): Project G development targeted to c
  ommence from February 2027 (month)
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-JLP-2027-02-28-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Ju
- bilee Metals Group plc (JLP). Material: No. Band: Tight. Source: https://w
- ww.investegate.co.uk/announcement/rns/jubilee-metals-group--jlp/fy2026-pro
- duction-and-operational-update-/9769108
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Jubilee Metals Group plc (JLP). Material: No. Band: Tight. S
+ ource: https://www.investegate.co.uk/announcement/rns/jubilee-metals-group
+ --jlp/fy2026-production-and-operational-update-/9769108
 URL:https://www.investegate.co.uk/announcement/rns/jubilee-metals-group--jl
  p/fy2026-production-and-operational-update-/9769108
 END:VEVENT
@@ -1083,13 +1105,13 @@ SUMMARY:Pan African Resources plc (PAF): First power from Tennant Mines 6.3
  MW solar PV facility by February 2027 (month)
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PAF-2027-02-28-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Pan African Re
- sources plc (PAF). Material: No. Band: Tight. Source: https://www.investeg
- ate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-r
- esults-for-the-year-ended-/9774204
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Pan African Resources plc (PAF). Material: No. Band: Tight. Source: http
+ s://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summ
+ arised-audited-results-for-the-year-ended-/9774204
 URL:https://www.investegate.co.uk/announcement/prn/pan-african-resources--p
  af/summarised-audited-results-for-the-year-ended-/9774204
 END:VEVENT
@@ -1097,24 +1119,25 @@ BEGIN:VEVENT
 SUMMARY:Equinor Energy AS (EQNR): Equinor Q4 and full year 2026 results
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO228@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Equinor Energy AS (EQNR
- ). Material: No. Band: Tight. Source: https://www.equinor.com/investors/ev
- ents-and-presentations
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Eq
+ uinor Energy AS (EQNR). Material: No. Band: Tight. Source: https://www.equ
+ inor.com/investors/events-and-presentations
 URL:https://www.equinor.com/investors/events-and-presentations
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q4 and full year 2026 results
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270205
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO229@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Tight. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Tight. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1123,23 +1146,24 @@ SUMMARY:Vår Energi ASA (VAR): Vår Energi Q4 2026 results and Capital Mark
  ets Update
 DTSTART;VALUE=DATE:20270209
 DTEND;VALUE=DATE:20270210
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO230@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results and CMD. Company: Vår Energi ASA
-  (VAR). Material: No. Band: Tight. Source: https://varenergi.no/en/investo
- rs/financial-calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results and CMD. Com
+ pany: Vår Energi ASA (VAR). Material: No. Band: Tight. Source: https://va
+ renergi.no/en/investors/financial-calendar/
 URL:https://varenergi.no/en/investors/financial-calendar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP Q4 2026 results
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO231@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Aker BP ASA (AKRBP). Ma
- terial: No. Band: Tight. Source: https://akerbp.com/en/investor/calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Ak
+ er BP ASA (AKRBP). Material: No. Band: Tight. Source: https://akerbp.com/e
+ n/investor/calendar/
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -1147,12 +1171,12 @@ SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q4 and full year 202
  6 results
 DTSTART;VALUE=DATE:20270210
 DTEND;VALUE=DATE:20270211
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO232@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: TotalEnergies EP Norge 
- AS (TTE). Material: No. Band: Tight. Source: https://totalenergies.com/new
- s/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: To
+ talEnergies EP Norge AS (TTE). Material: No. Band: Tight. Source: https://
+ totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -1160,12 +1184,13 @@ SUMMARY:Tullow Oil plc (TLW): TEN FPSO acquisition completion expected Marc
  h 2027 (month)
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270302
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TLW-2027-03-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Tullow Oil plc (TLW). Mater
- ial: Yes. Band: Tight. Source: https://www.investegate.co.uk/announcement/
- rns/tullow-oil--tlw/replacement-2026-half-year-results/9793960
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Tullow
+  Oil plc (TLW). Material: Yes. Band: Tight. Source: https://www.investegat
+ e.co.uk/announcement/rns/tullow-oil--tlw/replacement-2026-half-year-result
+ s/9793960
 URL:https://www.investegate.co.uk/announcement/rns/tullow-oil--tlw/replacem
  ent-2026-half-year-results/9793960
 END:VEVENT
@@ -1173,11 +1198,12 @@ BEGIN:VEVENT
 SUMMARY:Aker BP ASA (AKRBP): Aker BP annual report 2026
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO233@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: Aker BP ASA (AKRBP). Ma
- terial: No. Band: Tight. Source: https://akerbp.com/en/investor/calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: Ak
+ er BP ASA (AKRBP). Material: No. Band: Tight. Source: https://akerbp.com/e
+ n/investor/calendar/
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
@@ -1185,12 +1211,12 @@ SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Sustainability and C
  limate investor workshop
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO234@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Investor event. Company: TotalEnergies EP
-  Norge AS (TTE). Material: No. Band: Tight. Source: https://totalenergies.
- com/news/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Investor event. Comp
+ any: TotalEnergies EP Norge AS (TTE). Material: No. Band: Tight. Source: h
+ ttps://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -1198,12 +1224,13 @@ SUMMARY:Afentra plc (AET): Pacassa SW sidetrack first oil anticipated Q1 20
  27 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-AET-2027-03-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Afentra plc (A
- ET). Material: Yes. Band: Tight. Source: https://www.investegate.co.uk/ann
- ouncement/rns/afentra--aet/operational-update-/9816781
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Afentra plc (AET). Material: Yes. Band: Tight. Source: https://www.
+ investegate.co.uk/announcement/rns/afentra--aet/operational-update-/981678
+ 1
 URL:https://www.investegate.co.uk/announcement/rns/afentra--aet/operational
  -update-/9816781
 END:VEVENT
@@ -1212,13 +1239,13 @@ SUMMARY:Cornish Metals plc (TIN): South Crofty process plant construction t
  o begin Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TIN-2027-03-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Co
- rnish Metals plc (TIN). Material: No. Band: Tight. Source: https://www.inv
- estegate.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-
- results-for-the-six-months-/9788241
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Cornish Metals plc (TIN). Material: No. Band: Tight. Source:
+  https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/un
+ audited-interim-results-for-the-six-months-/9788241
 URL:https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/
  unaudited-interim-results-for-the-six-months-/9788241
 END:VEVENT
@@ -1227,13 +1254,13 @@ SUMMARY:Gulf Keystone Petroleum Ltd (GKP): PF-2 water handling start-up tar
  geted Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GKP-2027-03-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Gulf Keystone 
- Petroleum Ltd (GKP). Material: No. Band: Tight. Source: https://www.invest
- egate.co.uk/announcement/mfn/gulf-keystone-petroleum-ltd-com-shs-di---gkp/
- 2026-half-year-results-announcement/9737591
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Gulf Keystone Petroleum Ltd (GKP). Material: No. Band: Tight. Sourc
+ e: https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-
+ ltd-com-shs-di---gkp/2026-half-year-results-announcement/9737591
 URL:https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-
  ltd-com-shs-di---gkp/2026-half-year-results-announcement/9737591
 END:VEVENT
@@ -1242,13 +1269,13 @@ SUMMARY:Petrotal Corporation (PTAL): Bretana production back to about 20\,0
  00 bopd by end of Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PTAL-2027-03-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Petrotal Corporation (PTA
- L). Material: No. Band: Tight. Source: https://www.investegate.co.uk/annou
- ncement/rns/petrotal-corporation-npv-di---ptal/q3-2026-operations-and-fina
- ncial-updates/9821322
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Petr
+ otal Corporation (PTAL). Material: No. Band: Tight. Source: https://www.in
+ vestegate.co.uk/announcement/rns/petrotal-corporation-npv-di---ptal/q3-202
+ 6-operations-and-financial-updates/9821322
 URL:https://www.investegate.co.uk/announcement/rns/petrotal-corporation-npv
  -di---ptal/q3-2026-operations-and-financial-updates/9821322
 END:VEVENT
@@ -1257,13 +1284,13 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Snowcap-3 first oil sales
  targeted Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRD-2027-03-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Predator Oil a
- nd Gas Holdings plc (PRD). Material: Yes. Band: Tight. Source: https://www
- .investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/int
- erim-financial-statements/9798892
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Predator Oil and Gas Holdings plc (PRD). Material: Yes. Band: Tight
+ . Source: https://www.investegate.co.uk/announcement/rns/predator-oil-gas-
+ holdings-npv--prd/interim-financial-statements/9798892
 URL:https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holding
  s-npv--prd/interim-financial-statements/9798892
 END:VEVENT
@@ -1272,13 +1299,13 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): MOU-6 partial divestment t
  argeted early Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRD-2027-03-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Predator Oil and Gas Holdin
- gs plc (PRD). Material: Yes. Band: Tight. Source: https://www.investegate.
- co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-financia
- l-statements/9798892
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Predat
+ or Oil and Gas Holdings plc (PRD). Material: Yes. Band: Tight. Source: htt
+ ps://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-npv-
+ -prd/interim-financial-statements/9798892
 URL:https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holding
  s-npv--prd/interim-financial-statements/9798892
 END:VEVENT
@@ -1287,12 +1314,13 @@ SUMMARY:Savannah Resources plc (SAV): Environmental licence\, project finan
  ce and offtake finalised in Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SAV-2027-03-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Savannah Res
- ources plc (SAV). Material: Yes. Band: Tight. Source: https://www.investeg
- ate.co.uk/announcement/rns/savannah-resources--sav/interim-results/9778514
+DESCRIPTION:Market: London. Sector: Mining. Type: Permit or approval. Compa
+ ny: Savannah Resources plc (SAV). Material: Yes. Band: Tight. Source: http
+ s://www.investegate.co.uk/announcement/rns/savannah-resources--sav/interim
+ -results/9778514
 URL:https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/
  interim-results/9778514
 END:VEVENT
@@ -1301,12 +1329,13 @@ SUMMARY:Tharisa plc (THS): Mechanical installation planned to start Q1 2027
   (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-THS-2027-03-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Tharisa plc (THS). Materi
- al: No. Band: Tight. Source: https://www.investegate.co.uk/announcement/rn
- s/tharisa-di---ths/production-report-for-q4-and-full-year-fy2026-/9819089
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Tharisa p
+ lc (THS). Material: No. Band: Tight. Source: https://www.investegate.co.uk
+ /announcement/rns/tharisa-di---ths/production-report-for-q4-and-full-year-
+ fy2026-/9819089
 URL:https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/product
  ion-report-for-q4-and-full-year-fy2026-/9819089
 END:VEVENT
@@ -1315,13 +1344,13 @@ SUMMARY:Tungsten West plc (TUN): Hemerdon restart construction and full com
  missioning complete by end of Q1 2027 (approx.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TUN-2027-03-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Tungsten West 
- plc (TUN). Material: Yes. Band: Tight. Source: https://www.investegate.co.
- uk/announcement/rns/tungsten-west--tun/financial-results-for-the-year-ende
- d-31-march-2026/9752872
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Tungsten West plc (TUN). Material: Yes. Band: Tight. Source: https://www
+ .investegate.co.uk/announcement/rns/tungsten-west--tun/financial-results-f
+ or-the-year-ended-31-march-2026/9752872
 URL:https://www.investegate.co.uk/announcement/rns/tungsten-west--tun/finan
  cial-results-for-the-year-ended-31-march-2026/9752872
 END:VEVENT
@@ -1330,12 +1359,13 @@ SUMMARY:Equinor Energy AS (EQNR): APA 2026 award planned start of 2027 (app
  rox.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO223@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Licence award. Company: Equinor Energy AS
-  (EQNR). Material: No. Band: Tight. Source: https://www.regjeringen.no/no/
- aktuelt/stor-interesse-for-nytt-leteareal-i-tfo-2026/id3172356/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Licence award. Compa
+ ny: Equinor Energy AS (EQNR). Material: No. Band: Tight. Source: https://w
+ ww.regjeringen.no/no/aktuelt/stor-interesse-for-nytt-leteareal-i-tfo-2026/
+ id3172356/
 URL:https://www.regjeringen.no/no/aktuelt/stor-interesse-for-nytt-leteareal
  -i-tfo-2026/id3172356/
 END:VEVENT
@@ -1344,11 +1374,12 @@ SUMMARY:Equinor Energy AS (EQNR): Mistral Nord well planned early 2027 (app
  rox.\, Q1 2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO225@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Well spud. Company: Equinor Energy AS (EQ
- NR). Material: No. Band: Tight. Source: https://www.japex.co.jp
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Well spud. Company: 
+ Equinor Energy AS (EQNR). Material: No. Band: Tight. Source: https://www.j
+ apex.co.jp
 URL:https://www.japex.co.jp
 END:VEVENT
 BEGIN:VEVENT
@@ -1356,12 +1387,12 @@ SUMMARY:OKEA ASA (OKEA): Bestla first oil expected early 2027 (approx.\, Q1
   2027)
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO224@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: First oil. Company: OKEA ASA (OKEA). Mate
- rial: Yes. Band: Tight. Source: https://okea.no/wp-content/uploads/2026/09
- /2026-09-16-Pareto-Energy-Conference.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: First oil. Company: 
+ OKEA ASA (OKEA). Material: Yes. Band: Tight. Source: https://okea.no/wp-co
+ ntent/uploads/2026/09/2026-09-16-Pareto-Energy-Conference.pdf
 URL:https://okea.no/wp-content/uploads/2026/09/2026-09-16-Pareto-Energy-Con
  ference.pdf
 END:VEVENT
@@ -1369,12 +1400,13 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q1 2027 trading statement
 DTSTART;VALUE=DATE:20270412
 DTEND;VALUE=DATE:20270413
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO235@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Tight. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Tight. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1383,36 +1415,37 @@ SUMMARY:Aker BP ASA (AKRBP): Aker BP calendar entry (unlabelled\; likely AG
  M)
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO236@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Shareholder meeting. Company: Aker BP ASA
-  (AKRBP). Material: No. Band: Tight. Source: https://akerbp.com/en/investo
- r/calendar/
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Shareholder meeting.
+  Company: Aker BP ASA (AKRBP). Material: No. Band: Tight. Source: https://
+ akerbp.com/en/investor/calendar/
 URL:https://akerbp.com/en/investor/calendar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q1 2027 results
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270424
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO237@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: TotalEnergies EP Norge 
- AS (TTE). Material: No. Band: Tight. Source: https://totalenergies.com/new
- s/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: To
+ talEnergies EP Norge AS (TTE). Material: No. Band: Tight. Source: https://
+ totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q1 2027 results
 DTSTART;VALUE=DATE:20270429
 DTEND;VALUE=DATE:20270430
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO238@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Loose. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Loose. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1421,12 +1454,12 @@ SUMMARY:Aker BP ASA (AKRBP): Kjøttkake drilling and pipeline installation
  planned to start June 2027 (month)
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO240@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Milestone. Company: Aker BP ASA (AKRBP). 
- Material: No. Band: Loose. Source: https://akerbp.com/wp-content/uploads/2
- 026/06/2026-kjottkake.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Milestone. Company: 
+ Aker BP ASA (AKRBP). Material: No. Band: Loose. Source: https://akerbp.com
+ /wp-content/uploads/2026/06/2026-kjottkake.pdf
 URL:https://akerbp.com/wp-content/uploads/2026/06/2026-kjottkake.pdf
 END:VEVENT
 BEGIN:VEVENT
@@ -1434,12 +1467,12 @@ SUMMARY:80 Mile plc (80M): Greenland drilling expected in winter 2027\, sub
  ject to permitting (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-80M-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: 80 Mile plc (80M
- ). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/annou
- ncement/rns/80-mile--80m/interim-results-/9773913
+DESCRIPTION:Market: London. Sector: Mining. Type: Drilling start. Company: 
+ 80 Mile plc (80M). Material: Yes. Band: Loose. Source: https://www.investe
+ gate.co.uk/announcement/rns/80-mile--80m/interim-results-/9773913
 URL:https://www.investegate.co.uk/announcement/rns/80-mile--80m/interim-res
  ults-/9773913
 END:VEVENT
@@ -1448,12 +1481,12 @@ SUMMARY:Afentra plc (AET): Focused seismic programme considered for KON4 in
   H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-AET-2027-06-30-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Afentra plc (AET). Materi
- al: No. Band: Loose. Source: https://www.investegate.co.uk/announcement/rn
- s/afentra--aet/2026-half-year-results-/9771538
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Afen
+ tra plc (AET). Material: No. Band: Loose. Source: https://www.investegate.
+ co.uk/announcement/rns/afentra--aet/2026-half-year-results-/9771538
 URL:https://www.investegate.co.uk/announcement/rns/afentra--aet/2026-half-y
  ear-results-/9771538
 END:VEVENT
@@ -1462,12 +1495,12 @@ SUMMARY:Chariot Limited (CHAR): Second Angolan transaction to follow early
  2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-CHAR-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Chariot Limited (CHAR). Mat
- erial: Yes. Band: Loose. Source: https://www.investegate.co.uk/announcemen
- t/rns/chariot-limited--char/h1-2026-results/9797622
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Chario
+ t Limited (CHAR). Material: Yes. Band: Loose. Source: https://www.investeg
+ ate.co.uk/announcement/rns/chariot-limited--char/h1-2026-results/9797622
 URL:https://www.investegate.co.uk/announcement/rns/chariot-limited--char/h1
  -2026-results/9797622
 END:VEVENT
@@ -1476,13 +1509,13 @@ SUMMARY:Cornish Metals plc (TIN): Dewatering to 400-level and shaft refurbi
  shment in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TIN-2027-06-30-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Cornish Metals plc (TIN).
-  Material: No. Band: Loose. Source: https://www.investegate.co.uk/announce
- ment/mfn/cornish-metals-plc--tin/unaudited-interim-results-for-the-six-mon
- ths-/9788241
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Cornish M
+ etals plc (TIN). Material: No. Band: Loose. Source: https://www.investegat
+ e.co.uk/announcement/mfn/cornish-metals-plc--tin/unaudited-interim-results
+ -for-the-six-months-/9788241
 URL:https://www.investegate.co.uk/announcement/mfn/cornish-metals-plc--tin/
  unaudited-interim-results-for-the-six-months-/9788241
 END:VEVENT
@@ -1491,13 +1524,13 @@ SUMMARY:Energean plc (ENOG): Katlan first gas on track for H1 2027 (approx.
  \, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ENOG-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Energean plc (
- ENOG). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/a
- nnouncement/rns/energean--enog/trading-statement-operational-update/957651
- 1
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Energean plc (ENOG). Material: Yes. Band: Loose. Source: https://ww
+ w.investegate.co.uk/announcement/rns/energean--enog/trading-statement-oper
+ ational-update/9576511
 URL:https://www.investegate.co.uk/announcement/rns/energean--enog/trading-s
  tatement-operational-update/9576511
 END:VEVENT
@@ -1506,12 +1539,12 @@ SUMMARY:Enquest plc (ENQ): First oil from second well in programme expected
   early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ENQ-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Enquest plc (E
- NQ). Material: No. Band: Loose. Source: https://www.investegate.co.uk/anno
- uncement/rns/enquest--enq/half-year-results/9752860
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Enquest plc (ENQ). Material: No. Band: Loose. Source: https://www.i
+ nvestegate.co.uk/announcement/rns/enquest--enq/half-year-results/9752860
 URL:https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-r
  esults/9752860
 END:VEVENT
@@ -1520,13 +1553,13 @@ SUMMARY:Europa Oil and Gas (Holdings) plc (EOG): Barracuda exploration well
   (EG-08) targeted to spud in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-EOG-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Europa Oil and G
- as (Holdings) plc (EOG). Material: Yes. Band: Loose. Source: https://www.i
- nvestegate.co.uk/announcement/rns/europa-oil-gas-holdings---eog/interim-re
- sults/9769101
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Europa Oil and Gas (Holdings) plc (EOG). Material: Yes. Band: Loose. 
+ Source: https://www.investegate.co.uk/announcement/rns/europa-oil-gas-hold
+ ings---eog/interim-results/9769101
 URL:https://www.investegate.co.uk/announcement/rns/europa-oil-gas-holdings-
  --eog/interim-results/9769101
 END:VEVENT
@@ -1535,13 +1568,13 @@ SUMMARY:Genel Energy plc (GENL): First MWO exploration well on the licence
  in H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GENL-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Genel Energy plc
-  (GENL). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-fo
- r-the-p-/9702685
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Genel Energy plc (GENL). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc
+ -unaudited-results-for-the-p-/9702685
 URL:https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel
  -energy-plc-unaudited-results-for-the-p-/9702685
 END:VEVENT
@@ -1550,13 +1583,13 @@ SUMMARY:Griffin Mining Limited (GFM): TSF4 approval and return to full capa
  city expected early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GFM-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Permit or approval. Company: Griffin Mini
- ng Limited (GFM). Material: Yes. Band: Loose. Source: https://www.investeg
- ate.co.uk/announcement/rns/griffin-mining-ltd---gfm/half-year-financial-re
- port/9765337
+DESCRIPTION:Market: London. Sector: Mining. Type: Permit or approval. Compa
+ ny: Griffin Mining Limited (GFM). Material: Yes. Band: Loose. Source: http
+ s://www.investegate.co.uk/announcement/rns/griffin-mining-ltd---gfm/half-y
+ ear-financial-report/9765337
 URL:https://www.investegate.co.uk/announcement/rns/griffin-mining-ltd---gfm
  /half-year-financial-report/9765337
 END:VEVENT
@@ -1565,13 +1598,13 @@ SUMMARY:Guardian Metal Resources plc (GMET): Pilot Mountain Definitive Feas
  ibility Study in period to June 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GMET-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Guardian Metal Resources 
- plc (GMET). Material: Yes. Band: Loose. Source: https://www.investegate.co
- .uk/announcement/rns/guardian-metal-resources-plc--gmet/financial-results-
- for-the-year-ended-30-june-2026/9776253
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Guardian 
+ Metal Resources plc (GMET). Material: Yes. Band: Loose. Source: https://ww
+ w.investegate.co.uk/announcement/rns/guardian-metal-resources-plc--gmet/fi
+ nancial-results-for-the-year-ended-30-june-2026/9776253
 URL:https://www.investegate.co.uk/announcement/rns/guardian-metal-resources
  -plc--gmet/financial-results-for-the-year-ended-30-june-2026/9776253
 END:VEVENT
@@ -1580,13 +1613,13 @@ SUMMARY:Guardian Metal Resources plc (GMET): Maiden resource at Tempiute in
   period to June 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GMET-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Guardian Metal Resourc
- es plc (GMET). Material: Yes. Band: Loose. Source: https://www.investegate
- .co.uk/announcement/rns/guardian-metal-resources-plc--gmet/financial-resul
- ts-for-the-year-ended-30-june-2026/9776253
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Guardi
+ an Metal Resources plc (GMET). Material: Yes. Band: Loose. Source: https:/
+ /www.investegate.co.uk/announcement/rns/guardian-metal-resources-plc--gmet
+ /financial-results-for-the-year-ended-30-june-2026/9776253
 URL:https://www.investegate.co.uk/announcement/rns/guardian-metal-resources
  -plc--gmet/financial-results-for-the-year-ended-30-june-2026/9776253
 END:VEVENT
@@ -1595,13 +1628,13 @@ SUMMARY:Jadestone Energy plc (JSE): Stag production restart expected Q2 202
  7 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-JSE-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Jadestone Ener
- gy plc (JSE). Material: No. Band: Loose. Source: https://www.investegate.c
- o.uk/announcement/rns/jadestone-energy--jse/2026-half-year-results-/974214
- 2
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Jadestone Energy plc (JSE). Material: No. Band: Loose. Source: http
+ s://www.investegate.co.uk/announcement/rns/jadestone-energy--jse/2026-half
+ -year-results-/9742142
 URL:https://www.investegate.co.uk/announcement/rns/jadestone-energy--jse/20
  26-half-year-results-/9742142
 END:VEVENT
@@ -1610,12 +1643,13 @@ SUMMARY:Kenmare Resources plc (KMR): SMO 3 construction and commissioning e
  xpected H1 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KMR-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Kenmare Resources plc (KM
- R). Material: No. Band: Loose. Source: https://wp-kenmare-2024.s3.eu-west-
- 2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Production-Update.pdf
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Kenmare R
+ esources plc (KMR). Material: No. Band: Loose. Source: https://wp-kenmare-
+ 2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-10-15-KMR-Q3-2026-Produ
+ ction-Update.pdf
 URL:https://wp-kenmare-2024.s3.eu-west-2.amazonaws.com/media/2026/10/2026-1
  0-15-KMR-Q3-2026-Production-Update.pdf
 END:VEVENT
@@ -1624,12 +1658,13 @@ SUMMARY:Mila Resources plc (MILA): Further resource drilling scheduled H1 2
  027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-MILA-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Mila Resources p
- lc (MILA). Material: No. Band: Loose. Source: https://www.investegate.co.u
- k/announcement/rns/mila-resources--mila/final-results/9833713
+DESCRIPTION:Market: London. Sector: Mining. Type: Drilling start. Company: 
+ Mila Resources plc (MILA). Material: No. Band: Loose. Source: https://www.
+ investegate.co.uk/announcement/rns/mila-resources--mila/final-results/9833
+ 713
 URL:https://www.investegate.co.uk/announcement/rns/mila-resources--mila/fin
  al-results/9833713
 END:VEVENT
@@ -1638,12 +1673,13 @@ SUMMARY:Nativo Resources plc (NTVO): La Patona gold plant commissioning exp
  ected Q2 2027 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-NTVO-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Nativo Resourc
- es plc (NTVO). Material: Yes. Band: Loose. Source: https://www.investegate
- .co.uk/announcement/rns/nativo-resources--ntvo/half-year-report/9785123
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Nativo Resources plc (NTVO). Material: Yes. Band: Loose. Source: https:/
+ /www.investegate.co.uk/announcement/rns/nativo-resources--ntvo/half-year-r
+ eport/9785123
 URL:https://www.investegate.co.uk/announcement/rns/nativo-resources--ntvo/h
  alf-year-report/9785123
 END:VEVENT
@@ -1652,13 +1688,13 @@ SUMMARY:Pan African Resources plc (PAF): First blast at new mine developmen
  t scheduled for early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PAF-2027-06-30-3@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Pan African Re
- sources plc (PAF). Material: No. Band: Loose. Source: https://www.investeg
- ate.co.uk/announcement/prn/pan-african-resources--paf/summarised-audited-r
- esults-for-the-year-ended-/9774204
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Pan African Resources plc (PAF). Material: No. Band: Loose. Source: http
+ s://www.investegate.co.uk/announcement/prn/pan-african-resources--paf/summ
+ arised-audited-results-for-the-year-ended-/9774204
 URL:https://www.investegate.co.uk/announcement/prn/pan-african-resources--p
  af/summarised-audited-results-for-the-year-ended-/9774204
 END:VEVENT
@@ -1667,12 +1703,13 @@ SUMMARY:Pensana plc (PRE): Mining and stockpiling at Longonjo planned to st
  art early 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRE-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Pensana plc (PRE). Materi
- al: No. Band: Loose. Source: https://www.investegate.co.uk/announcement/pr
- n/pensana--pre/unaudited-interim-results-for-the-six-months-/9495809
+DESCRIPTION:Market: London. Sector: Mining. Type: Other. Company: Pensana p
+ lc (PRE). Material: No. Band: Loose. Source: https://www.investegate.co.uk
+ /announcement/prn/pensana--pre/unaudited-interim-results-for-the-six-month
+ s-/9495809
 URL:https://www.investegate.co.uk/announcement/prn/pensana--pre/unaudited-i
  nterim-results-for-the-six-months-/9495809
 END:VEVENT
@@ -1681,12 +1718,13 @@ SUMMARY:Pharos Energy plc (PHAR): Scheme expected to become effective in 1H
   2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PHAR-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: MnA. Company: Pharos Energy plc (PHAR). M
- aterial: Yes. Band: Loose. Source: https://www.investegate.co.uk/announcem
- ent/rns/pharos-energy--phar/2026-interim-results/9785618
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: MnA. Company: Pharos
+  Energy plc (PHAR). Material: Yes. Band: Loose. Source: https://www.invest
+ egate.co.uk/announcement/rns/pharos-energy--phar/2026-interim-results/9785
+ 618
 URL:https://www.investegate.co.uk/announcement/rns/pharos-energy--phar/2026
  -interim-results/9785618
 END:VEVENT
@@ -1695,13 +1733,13 @@ SUMMARY:Predator Oil and Gas Holdings plc (PRD): Placings needed in Q2 2027
   to meet commitments (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRD-2027-06-30-3@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Predator Oil and Gas Ho
- ldings plc (PRD). Material: Yes. Band: Loose. Source: https://www.investeg
- ate.co.uk/announcement/rns/predator-oil-gas-holdings-npv--prd/interim-fina
- ncial-statements/9798892
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Funding. Company: Pr
+ edator Oil and Gas Holdings plc (PRD). Material: Yes. Band: Loose. Source:
+  https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holdings-
+ npv--prd/interim-financial-statements/9798892
 URL:https://www.investegate.co.uk/announcement/rns/predator-oil-gas-holding
  s-npv--prd/interim-financial-statements/9798892
 END:VEVENT
@@ -1710,13 +1748,13 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Phalaborwa DFS expected H1 2027
  (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-RBW-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Rainbow Rare Earths Limit
- ed (RBW). Material: Yes. Band: Loose. Source: https://www.investegate.co.u
- k/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-result
- s-for-year-ended-30-june-2026/9832858
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Rainbow R
+ are Earths Limited (RBW). Material: Yes. Band: Loose. Source: https://www.
+ investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/pr
+ eliminary-results-for-year-ended-30-june-2026/9832858
 URL:https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limi
  ted-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858
 END:VEVENT
@@ -1725,13 +1763,13 @@ SUMMARY:Rockhopper Exploration plc (RKH): Sea Lion development drilling exp
  ected to commence early 2027 (first oil Q1 2028) (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-RKH-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Rockhopper Explo
- ration plc (RKH). Material: Yes. Band: Loose. Source: https://www.investeg
- ate.co.uk/announcement/rns/rockhopper-exploration--rkh/half-year-report/97
- 97684
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Rockhopper Exploration plc (RKH). Material: Yes. Band: Loose. Source:
+  https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--rk
+ h/half-year-report/9797684
 URL:https://www.investegate.co.uk/announcement/rns/rockhopper-exploration--
  rkh/half-year-report/9797684
 END:VEVENT
@@ -1740,13 +1778,13 @@ SUMMARY:Savannah Resources plc (SAV): Barroso lithium FID targeted early 20
  27 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SAV-2027-06-30-3@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: FID or construction decision. Company: Sa
- vannah Resources plc (SAV). Material: Yes. Band: Loose. Source: https://ww
- w.investegate.co.uk/announcement/rns/savannah-resources--sav/interim-resul
- ts/9778514
+DESCRIPTION:Market: London. Sector: Mining. Type: FID or construction decis
+ ion. Company: Savannah Resources plc (SAV). Material: Yes. Band: Loose. So
+ urce: https://www.investegate.co.uk/announcement/rns/savannah-resources--s
+ av/interim-results/9778514
 URL:https://www.investegate.co.uk/announcement/rns/savannah-resources--sav/
  interim-results/9778514
 END:VEVENT
@@ -1755,13 +1793,13 @@ SUMMARY:Sintana Energy Inc. (SEI): Full PSDM seismic results expected Q2 20
  27 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEI-2027-06-30-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Sintana Energy Inc.
-  (SEI). Material: No. Band: Loose. Source: https://www.investegate.co.uk/a
- nnouncement/rns/sintana-energy-inc---sei/interim-results-for-the-3-months-
- to-30-june-2026-/9742130
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Results due. Company
+ : Sintana Energy Inc. (SEI). Material: No. Band: Loose. Source: https://ww
+ w.investegate.co.uk/announcement/rns/sintana-energy-inc---sei/interim-resu
+ lts-for-the-3-months-to-30-june-2026-/9742130
 URL:https://www.investegate.co.uk/announcement/rns/sintana-energy-inc---sei
  /interim-results-for-the-3-months-to-30-june-2026-/9742130
 END:VEVENT
@@ -1770,12 +1808,13 @@ SUMMARY:Strategic Minerals plc (SML): 22\,500m Redmoor drilling completion
  targeted Q2 2027 (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SML-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Results due. Company: Strategic Minerals 
- plc (SML). Material: No. Band: Loose. Source: https://www.investegate.co.u
- k/announcement/rns/strategic-minerals--sml/half-year-report/9790269
+DESCRIPTION:Market: London. Sector: Mining. Type: Results due. Company: Str
+ ategic Minerals plc (SML). Material: No. Band: Loose. Source: https://www.
+ investegate.co.uk/announcement/rns/strategic-minerals--sml/half-year-repor
+ t/9790269
 URL:https://www.investegate.co.uk/announcement/rns/strategic-minerals--sml/
  half-year-report/9790269
 END:VEVENT
@@ -1784,12 +1823,13 @@ SUMMARY:Sunda Energy plc (SNDA): Oru-2 exploration well expected to spud ea
  rly 2027 (approx.\, H1 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SNDA-2027-06-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Sunda Energy plc
-  (SNDA). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/rns/sunda-energy--snda/interim-results-/9764277
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Sunda Energy plc (SNDA). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/rns/sunda-energy--snda/interim-results-
+ /9764277
 URL:https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/inter
  im-results-/9764277
 END:VEVENT
@@ -1798,13 +1838,13 @@ SUMMARY:Tower Resources plc (TRP): NJOM-3 well spud expected early Q2 2027
  (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TRP-2027-06-30-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Tower Resources 
- plc (TRP). Material: Yes. Band: Loose. Source: https://www.investegate.co.
- uk/announcement/rns/tower-resources--trp/interim-results-to-30-june-2026-/
- 9792645
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Tower Resources plc (TRP). Material: Yes. Band: Loose. Source: https:
+ //www.investegate.co.uk/announcement/rns/tower-resources--trp/interim-resu
+ lts-to-30-june-2026-/9792645
 URL:https://www.investegate.co.uk/announcement/rns/tower-resources--trp/int
  erim-results-to-30-june-2026-/9792645
 END:VEVENT
@@ -1813,12 +1853,12 @@ SUMMARY:Aker BP ASA (AKRBP): Yggdrasil and Valhall PWP-Fenris first oil tar
  geted 2027 (summer per Aker BP Q2 2026) (approx.\, Q2 2027)
 DTSTART;VALUE=DATE:20270630
 DTEND;VALUE=DATE:20270701
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO239@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: First oil. Company: Aker BP ASA (AKRBP). 
- Material: Yes. Band: Loose. Source: https://akerbp.com/wp-content/uploads/
- 2026/07/aker-bp-2026-q2-report.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: First oil. Company: 
+ Aker BP ASA (AKRBP). Material: Yes. Band: Loose. Source: https://akerbp.co
+ m/wp-content/uploads/2026/07/aker-bp-2026-q2-report.pdf
 URL:https://akerbp.com/wp-content/uploads/2026/07/aker-bp-2026-q2-report.pd
  f
 END:VEVENT
@@ -1826,12 +1866,13 @@ BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q2 2027 trading statement
 DTSTART;VALUE=DATE:20270712
 DTEND;VALUE=DATE:20270713
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO241@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Loose. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Loose. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1839,24 +1880,25 @@ BEGIN:VEVENT
 SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Q2 2027 results
 DTSTART;VALUE=DATE:20270723
 DTEND;VALUE=DATE:20270724
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO242@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: TotalEnergies EP Norge 
- AS (TTE). Material: No. Band: Loose. Source: https://totalenergies.com/new
- s/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: To
+ talEnergies EP Norge AS (TTE). Material: No. Band: Loose. Source: https://
+ totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OMV Norge AS (OMV): OMV Q2 2027 results
 DTSTART;VALUE=DATE:20270730
 DTEND;VALUE=DATE:20270731
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO243@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Results. Company: OMV Norge AS (OMV). Mat
- erial: No. Band: Loose. Source: https://www.omv.com/downloads/2026/10/ade7
- 6aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Calendar%202027.pdf
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Results. Company: OM
+ V Norge AS (OMV). Material: No. Band: Loose. Source: https://www.omv.com/d
+ ownloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5f41/OMV%20Financial%20Ca
+ lendar%202027.pdf
 URL:https://www.omv.com/downloads/2026/10/ade76aac-72a2-9c77-62e6-7d257dbf5
  f41/OMV%20Financial%20Calendar%202027.pdf
 END:VEVENT
@@ -1864,12 +1906,12 @@ BEGIN:VEVENT
 SUMMARY:TotalEnergies EP Norge AS (TTE): TotalEnergies Investor Day 2027
 DTSTART;VALUE=DATE:20270928
 DTEND;VALUE=DATE:20270929
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO244@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: Investor event. Company: TotalEnergies EP
-  Norge AS (TTE). Material: No. Band: Loose. Source: https://totalenergies.
- com/news/calendar
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: Investor event. Comp
+ any: TotalEnergies EP Norge AS (TTE). Material: No. Band: Loose. Source: h
+ ttps://totalenergies.com/news/calendar
 URL:https://totalenergies.com/news/calendar
 END:VEVENT
 BEGIN:VEVENT
@@ -1877,12 +1919,13 @@ SUMMARY:Empire Metals Limited (EEE): Further Pitfield MRE upgrade in mid-20
  27 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-EEE-2027-09-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Resource. Company: Empire Metals Limited 
- (EEE). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/a
- nnouncement/rns/empire-metals-limited-npv-di---eee/interim-results/9742112
+DESCRIPTION:Market: London. Sector: Mining. Type: Resource. Company: Empire
+  Metals Limited (EEE). Material: Yes. Band: Loose. Source: https://www.inv
+ estegate.co.uk/announcement/rns/empire-metals-limited-npv-di---eee/interim
+ -results/9742112
 URL:https://www.investegate.co.uk/announcement/rns/empire-metals-limited-np
  v-di---eee/interim-results/9742112
 END:VEVENT
@@ -1891,13 +1934,13 @@ SUMMARY:Rainbow Rare Earths Limited (RBW): Additional funding expected to b
  e required in Q3 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-RBW-2027-09-30-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Funding. Company: Rainbow Rare Earths Lim
- ited (RBW). Material: Yes. Band: Loose. Source: https://www.investegate.co
- .uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/preliminary-resu
- lts-for-year-ended-30-june-2026/9832858
+DESCRIPTION:Market: London. Sector: Mining. Type: Funding. Company: Rainbow
+  Rare Earths Limited (RBW). Material: Yes. Band: Loose. Source: https://ww
+ w.investegate.co.uk/announcement/rns/rainbow-rare-earths-limited-npv--rbw/
+ preliminary-results-for-year-ended-30-june-2026/9832858
 URL:https://www.investegate.co.uk/announcement/rns/rainbow-rare-earths-limi
  ted-npv--rbw/preliminary-results-for-year-ended-30-june-2026/9832858
 END:VEVENT
@@ -1906,13 +1949,13 @@ SUMMARY:Seascape Energy Asia plc (SEA): Kertang well spud scheduled for sum
  mer 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SEA-2027-09-30-3@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Seascape Energy 
- Asia plc (SEA). Material: Yes. Band: Loose. Source: https://www.investegat
- e.co.uk/announcement/rns/seascape-energy-asia-plc--sea/interim-results-and
- -investor-webcast/9797863
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Seascape Energy Asia plc (SEA). Material: Yes. Band: Loose. Source: h
+ ttps://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc--se
+ a/interim-results-and-investor-webcast/9797863
 URL:https://www.investegate.co.uk/announcement/rns/seascape-energy-asia-plc
  --sea/interim-results-and-investor-webcast/9797863
 END:VEVENT
@@ -1921,12 +1964,13 @@ SUMMARY:Serica Energy plc (SQZ): Bruce drilling campaign (SCE and SCW wells
  ) to begin in Q3 2027 (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SQZ-2027-09-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Serica Energy pl
- c (SQZ). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Serica Energy plc (SQZ). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-oper
+ ations-update/9828249
 URL:https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/tradi
  ng-and-operations-update/9828249
 END:VEVENT
@@ -1935,12 +1979,13 @@ SUMMARY:Tullow Oil plc (TLW): Rig for 2027-28 Ghana Campaign 2 (up to 10 we
  lls) arriving around mid-year (approx.\, Q3 2027)
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-TLW-2027-09-30-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Tullow Oil plc (
- TLW). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/an
- nouncement/rns/tullow-oil--tlw/replacement-2026-half-year-results/9793960
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Tullow Oil plc (TLW). Material: Yes. Band: Loose. Source: https://www
+ .investegate.co.uk/announcement/rns/tullow-oil--tlw/replacement-2026-half-
+ year-results/9793960
 URL:https://www.investegate.co.uk/announcement/rns/tullow-oil--tlw/replacem
  ent-2026-half-year-results/9793960
 END:VEVENT
@@ -1949,13 +1994,13 @@ SUMMARY:Bezant Resources plc (BZT): Drilling expected to commence during 20
  27 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-BZT-2027-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Bezant Resources
-  plc (BZT). Material: No. Band: Loose. Source: https://www.investegate.co.
- uk/announcement/rns/bezant-resources--bzt/interim-results-for-the-six-mont
- hs-to-30-june-2026/9797671
+DESCRIPTION:Market: London. Sector: Mining. Type: Drilling start. Company: 
+ Bezant Resources plc (BZT). Material: No. Band: Loose. Source: https://www
+ .investegate.co.uk/announcement/rns/bezant-resources--bzt/interim-results-
+ for-the-six-months-to-30-june-2026/9797671
 URL:https://www.investegate.co.uk/announcement/rns/bezant-resources--bzt/in
  terim-results-for-the-six-months-to-30-june-2026/9797671
 END:VEVENT
@@ -1964,13 +2009,13 @@ SUMMARY:Blencowe Resources plc (BRES): Close about US$45m project financing
   to commence Orom-Cross P1 production in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-BRES-2027-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Blencowe Resou
- rces plc (BRES). Material: Yes. Band: Loose. Source: https://www.investega
- te.co.uk/announcement/rns/blencowe-resources--bres/half-year-financial-rep
- ort/9585922
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Blencowe Resources plc (BRES). Material: Yes. Band: Loose. Source: https
+ ://www.investegate.co.uk/announcement/rns/blencowe-resources--bres/half-ye
+ ar-financial-report/9585922
 URL:https://www.investegate.co.uk/announcement/rns/blencowe-resources--bres
  /half-year-financial-report/9585922
 END:VEVENT
@@ -1979,13 +2024,13 @@ SUMMARY:Cadence Minerals plc (KDNC): DFS planned to commence in 2027 (appro
  x.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KDNC-2027-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Cadence Minerals plc (KDN
- C). Material: No. Band: Loose. Source: https://www.investegate.co.uk/annou
- ncement/rns/cadence-minerals--kdnc/interim-results-for-six-months-ended-30
- -june-2026/9796971
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Cadence M
+ inerals plc (KDNC). Material: No. Band: Loose. Source: https://www.investe
+ gate.co.uk/announcement/rns/cadence-minerals--kdnc/interim-results-for-six
+ -months-ended-30-june-2026/9796971
 URL:https://www.investegate.co.uk/announcement/rns/cadence-minerals--kdnc/i
  nterim-results-for-six-months-ended-30-june-2026/9796971
 END:VEVENT
@@ -1994,12 +2039,12 @@ SUMMARY:Enquest plc (ENQ): Ninian Bypass Project scheduled to complete in 2
  027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-ENQ-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Other. Company: Enquest plc (ENQ). Materi
- al: No. Band: Loose. Source: https://www.investegate.co.uk/announcement/rn
- s/enquest--enq/half-year-results/9752860
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Other. Company: Enqu
+ est plc (ENQ). Material: No. Band: Loose. Source: https://www.investegate.
+ co.uk/announcement/rns/enquest--enq/half-year-results/9752860
 URL:https://www.investegate.co.uk/announcement/rns/enquest--enq/half-year-r
  esults/9752860
 END:VEVENT
@@ -2008,13 +2053,13 @@ SUMMARY:Genel Energy plc (GENL): Two commitment wells on Oman Block 54 in 2
  027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GENL-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Genel Energy plc
-  (GENL). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/eqs/genel-energy--genl/genel-energy-plc-unaudited-results-fo
- r-the-p-/9702685
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Genel Energy plc (GENL). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel-energy-plc
+ -unaudited-results-for-the-p-/9702685
 URL:https://www.investegate.co.uk/announcement/eqs/genel-energy--genl/genel
  -energy-plc-unaudited-results-for-the-p-/9702685
 END:VEVENT
@@ -2023,13 +2068,13 @@ SUMMARY:Gulf Keystone Petroleum Ltd (GKP): Potential return to Shaikan fiel
  d development and drilling in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-GKP-2027-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Gulf Keystone Pe
- troleum Ltd (GKP). Material: Yes. Band: Loose. Source: https://www.investe
- gate.co.uk/announcement/mfn/gulf-keystone-petroleum-ltd-com-shs-di---gkp/2
- 026-half-year-results-announcement/9737591
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Gulf Keystone Petroleum Ltd (GKP). Material: Yes. Band: Loose. Source
+ : https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-l
+ td-com-shs-di---gkp/2026-half-year-results-announcement/9737591
 URL:https://www.investegate.co.uk/announcement/mfn/gulf-keystone-petroleum-
  ltd-com-shs-di---gkp/2026-half-year-results-announcement/9737591
 END:VEVENT
@@ -2038,13 +2083,13 @@ SUMMARY:Kefi Gold and Copper plc (KEFI): Tulu Kapi commissioning targeted t
  o commence late 2027 (approx.\, H2 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KEFI-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Kefi Gold and 
- Copper plc (KEFI). Material: No. Band: Loose. Source: https://www.investeg
- ate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/operational-update/9
- 702439
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Kefi Gold and Copper plc (KEFI). Material: No. Band: Loose. Source: http
+ s://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--kefi/oper
+ ational-update/9702439
 URL:https://www.investegate.co.uk/announcement/rns/kefi-gold-and-copper--ke
  fi/operational-update/9702439
 END:VEVENT
@@ -2053,12 +2098,13 @@ SUMMARY:Kistos Holdings plc (KIST): Balder Next start-up expected by end of
   2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-KIST-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Kistos Holding
- s plc (KIST). Material: Yes. Band: Loose. Source: https://www.investegate.
- co.uk/announcement/rns/kistos-holdings--kist/interim-results/9771745
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: First production. Co
+ mpany: Kistos Holdings plc (KIST). Material: Yes. Band: Loose. Source: htt
+ ps://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/interim-
+ results/9771745
 URL:https://www.investegate.co.uk/announcement/rns/kistos-holdings--kist/in
  terim-results/9771745
 END:VEVENT
@@ -2067,12 +2113,13 @@ SUMMARY:Metals One plc (MET1): Evolution targets first Chilalo graphite con
  centrate in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-MET1-2027-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Metals One plc
-  (MET1). Material: No. Band: Loose. Source: https://www.investegate.co.uk/
- announcement/rns/metals-one--met1/half-year-financial-report/9799196
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Metals One plc (MET1). Material: No. Band: Loose. Source: https://www.in
+ vestegate.co.uk/announcement/rns/metals-one--met1/half-year-financial-repo
+ rt/9799196
 URL:https://www.investegate.co.uk/announcement/rns/metals-one--met1/half-ye
  ar-financial-report/9799196
 END:VEVENT
@@ -2081,13 +2128,13 @@ SUMMARY:Pensana plc (PRE): Longonjo first production and commissioning sche
  duled for 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PRE-2027-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Pensana plc (P
- RE). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/ann
- ouncement/prn/pensana--pre/unaudited-interim-results-for-the-six-months-/9
- 495809
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Pensana plc (PRE). Material: Yes. Band: Loose. Source: https://www.inves
+ tegate.co.uk/announcement/prn/pensana--pre/unaudited-interim-results-for-t
+ he-six-months-/9495809
 URL:https://www.investegate.co.uk/announcement/prn/pensana--pre/unaudited-i
  nterim-results-for-the-six-months-/9495809
 END:VEVENT
@@ -2096,12 +2143,13 @@ SUMMARY:Prospex Energy plc (PXEN): Potential development well in 2027 (appr
  ox.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-PXEN-2027-12-31-1@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Prospex Energy p
- lc (PXEN). Material: No. Band: Loose. Source: https://www.investegate.co.u
- k/announcement/rns/prospex-energy--pxen/half-year-report/9792618
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Prospex Energy plc (PXEN). Material: No. Band: Loose. Source: https:/
+ /www.investegate.co.uk/announcement/rns/prospex-energy--pxen/half-year-rep
+ ort/9792618
 URL:https://www.investegate.co.uk/announcement/rns/prospex-energy--pxen/hal
  f-year-report/9792618
 END:VEVENT
@@ -2110,12 +2158,13 @@ SUMMARY:Serica Energy plc (SQZ): Exploration at Skerryvore next year (appro
  x.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SQZ-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Serica Energy pl
- c (SQZ). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/rns/serica-energy--sqz/trading-and-operations-update/9828249
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Serica Energy plc (SQZ). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/rns/serica-energy--sqz/trading-and-oper
+ ations-update/9828249
 URL:https://www.investegate.co.uk/announcement/rns/serica-energy--sqz/tradi
  ng-and-operations-update/9828249
 END:VEVENT
@@ -2124,13 +2173,13 @@ SUMMARY:Sovereign Metals Limited (SVML): Pre-Feasibility Study integrating
  rare earths into Kasiya\, completion targeted 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SVML-2027-12-31-0@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Study. Company: Sovereign Metals Limited 
- (SVML). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/
- announcement/rns/sovereign-metals-limited-npv-di---svml/annual-financial-r
- eport/9790283
+DESCRIPTION:Market: London. Sector: Mining. Type: Study. Company: Sovereign
+  Metals Limited (SVML). Material: Yes. Band: Loose. Source: https://www.in
+ vestegate.co.uk/announcement/rns/sovereign-metals-limited-npv-di---svml/an
+ nual-financial-report/9790283
 URL:https://www.investegate.co.uk/announcement/rns/sovereign-metals-limited
  -npv-di---svml/annual-financial-report/9790283
 END:VEVENT
@@ -2139,12 +2188,13 @@ SUMMARY:Sunda Energy plc (SNDA): KTJ (Chuditch PSC) wells expected to be dr
  illed in 2027 (approx.\, 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-SNDA-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: Drilling start. Company: Sunda Energy plc
-  (SNDA). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk
- /announcement/rns/sunda-energy--snda/interim-results-/9764277
+DESCRIPTION:Market: London. Sector: Oil and gas. Type: Drilling start. Comp
+ any: Sunda Energy plc (SNDA). Material: Yes. Band: Loose. Source: https://
+ www.investegate.co.uk/announcement/rns/sunda-energy--snda/interim-results-
+ /9764277
 URL:https://www.investegate.co.uk/announcement/rns/sunda-energy--snda/inter
  im-results-/9764277
 END:VEVENT
@@ -2153,13 +2203,13 @@ SUMMARY:Tharisa plc (THS): First ore to mill targeted Q4 calendar 2027 (com
  missioning July to October 2027) (approx.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:L-THS-2027-12-31-2@moonshot
 CATEGORIES:London
-DESCRIPTION:Market: London. Type: First production. Company: Tharisa plc (T
- HS). Material: Yes. Band: Loose. Source: https://www.investegate.co.uk/ann
- ouncement/rns/tharisa-di---ths/production-report-for-q4-and-full-year-fy20
- 26-/9819089
+DESCRIPTION:Market: London. Sector: Mining. Type: First production. Company
+ : Tharisa plc (THS). Material: Yes. Band: Loose. Source: https://www.inves
+ tegate.co.uk/announcement/rns/tharisa-di---ths/production-report-for-q4-an
+ d-full-year-fy2026-/9819089
 URL:https://www.investegate.co.uk/announcement/rns/tharisa-di---ths/product
  ion-report-for-q4-and-full-year-fy2026-/9819089
 END:VEVENT
@@ -2168,12 +2218,12 @@ SUMMARY:Equinor Energy AS (EQNR): Johan Sverdrup Phase 3 first oil targeted
   Q4 2027 (approx.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO245@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: First oil. Company: Equinor Energy AS (EQ
- NR). Material: Yes. Band: Loose. Source: https://newsweb.oslobors.no/messa
- ge/650425
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: First oil. Company: 
+ Equinor Energy AS (EQNR). Material: Yes. Band: Loose. Source: https://news
+ web.oslobors.no/message/650425
 URL:https://newsweb.oslobors.no/message/650425
 END:VEVENT
 BEGIN:VEVENT
@@ -2181,12 +2231,13 @@ SUMMARY:Equinor Energy AS (EQNR): Wisting PDO submission planned Q4 2027 (a
  pprox.\, Q4 2027)
 DTSTART;VALUE=DATE:20271231
 DTEND;VALUE=DATE:20280101
-DTSTAMP:20261027T114237Z
+DTSTAMP:20261027T120027Z
 UID:N-NO246@moonshot
 CATEGORIES:Norway
-DESCRIPTION:Market: Norway. Type: PDO submitted. Company: Equinor Energy AS
-  (EQNR). Material: Yes. Band: Loose. Source: https://www.equinor.com/news/
- 20260625-wisting-proposal-environmental-impact-assessment-programme
+DESCRIPTION:Market: Norway. Sector: Oil and gas. Type: PDO submitted. Compa
+ ny: Equinor Energy AS (EQNR). Material: Yes. Band: Loose. Source: https://
+ www.equinor.com/news/20260625-wisting-proposal-environmental-impact-assess
+ ment-programme
 URL:https://www.equinor.com/news/20260625-wisting-proposal-environmental-im
  pact-assessment-programme
 END:VEVENT

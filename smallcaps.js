@@ -1,8 +1,13 @@
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const TAB_KEY = "moonshot-tab";
 const STAGE_ORDER = ["Explorer", "Resource defined", "Study stage", "Developer", "Producer"];
-const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market"];
+const EXCHANGE_ORDER = ["ASX", "AIM", "Main Market", "Oslo", "London", "Warsaw", "Paris", "NYSE", "Vienna", "Madrid", "Tokyo", "Private/State"];
+const MARKET_OPTIONS = ["London", "ASX", "Norway"];
+const SECTOR_OPTIONS = ["Oil and gas", "Mining"];
 const BAND_ORDER = ["Micro (US$5-100M)", "Main (US$100M-5B)"];
+const REACTION_TIP = "Share move minus index move after the event, in %";
+const REACTION_CAPTION = "Historical context from the past year of events (27 Oct 2025 to 26 Oct 2026). Medians. Past reactions do not predict future ones.";
+const REACTION_HORIZONS = [["1d", "1 day"], ["5d", "5 days"], ["20d", "20 days"], ["60d", "60 days"]];
 const SORTS = [
   ["name", "asc", "Company A to Z"],
   ["name", "desc", "Company Z to A"],
@@ -46,11 +51,14 @@ const COLUMNS = [
 
 const capsState = {
   q: "",
+  market: "all",
+  sector: "all",
   exchange: "all",
   band: "all",
   type: "all",
   stage: "all",
   hasUpcoming: false,
+  showBackground: false,
   sortKey: "name",
   sortDir: "asc",
   open: new Set(),
@@ -150,6 +158,79 @@ function stageKey(stage) {
   return String(stage ?? "").replace(/ \(low confidence\)$/, "").trim();
 }
 
+// Sector is coarser than Type. "Oil and gas", with or without a low-confidence
+// suffix, is Oil and gas. Every other commodity, including Helium and Coal, is Mining.
+function sectorOf(type) {
+  return stageKey(type) === "Oil and gas" ? "Oil and gas" : "Mining";
+}
+
+function listingMarket(exchange) {
+  return exchange === "ASX" ? "ASX" : "London";
+}
+
+function isoFromLocal(date) {
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${month}-${day}`;
+}
+
+function shiftMonths(iso, months) {
+  const [year, month, day] = iso.split("-").map(Number);
+  const cursor = new Date(year, month - 1 + months, 1);
+  const last = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 0).getDate();
+  cursor.setDate(Math.min(day, last));
+  return isoFromLocal(cursor);
+}
+
+function norwayWindow() {
+  const today = isoFromLocal(new Date());
+  return { today, start: shiftMonths(today, -12), end: shiftMonths(today, 12) };
+}
+
+function tickerSymbol(company) {
+  const ticker = String(company.listing_ticker || "").trim();
+  if (!ticker.includes(":")) return "";
+  const symbol = ticker.split(":").pop().trim();
+  if (!symbol || symbol.includes(",") || symbol.includes("(") || symbol.length > 8) return "";
+  return symbol;
+}
+
+function venueOf(ticker) {
+  const text = String(ticker || "").trim();
+  if (!text || /^unlisted\b/i.test(text)) return "Private/State";
+  let head = text.split(":")[0].trim().split(/\s+and\s+/i)[0].trim();
+  if (/^london\b/i.test(head)) return "London";
+  if (/^oslo\b/i.test(head)) return "Oslo";
+  return head || "Private/State";
+}
+
+function screenCode(company) {
+  return tickerSymbol(company) || String(company.short_name || "").trim();
+}
+
+function nameMatches(shortName, companyName) {
+  const short = String(shortName || "").trim().toLowerCase();
+  const name = String(companyName || "").trim().toLowerCase();
+  if (!short || !name) return false;
+  if (name.split(/[^a-z0-9]+/).includes(short)) return true;
+  return name === short || name.startsWith(`${short} `);
+}
+
+function findScreenRow(company, rows) {
+  const symbol = tickerSymbol(company).toUpperCase();
+  if (symbol) {
+    const byCode = rows.find((row) => String(row.code).toUpperCase() === symbol);
+    if (byCode) return byCode;
+  }
+  return rows.find((row) => nameMatches(company.short_name, row.name)) || null;
+}
+
+function displayType(value) {
+  const text = showText(value);
+  if (text === "—") return text;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 function setbackLabel(value) {
   if (blank(value) && value !== false) return "—";
   if (value === true || value === "Y" || value === "yes" || value === "Yes") return "Yes";
@@ -200,7 +281,118 @@ function normalize(raw, index) {
     upcoming: (Array.isArray(row.upcoming) ? row.upcoming : []).filter((item) => item && typeof item === "object"),
     upcomingCount: asNumber(row.upcoming_count),
     nextDate: row.next_event_date,
+    sector: sectorOf(row.type),
+    markets: [listingMarket(row.exchange)],
+    shelf: false,
   };
+}
+
+function mapNorwayEvent(event) {
+  const upcoming = event.upcoming === "Y";
+  const material = event.material === "Y";
+  const setback = event.setback === "Y";
+  return {
+    date: event.date,
+    date_precision: event.date_confidence || "exact",
+    type: displayType(event.type),
+    headline: event.title,
+    setback,
+    source_url: event.source_url,
+    net: event.net === "tight" || event.net === "loose" ? event.net : "",
+    material_if_delivered: material ? "Y" : "N",
+    r5: null,
+    r20: null,
+    r60: null,
+    norway: true,
+    background: !material && !setback && !upcoming,
+  };
+}
+
+function norwayPack(shortName, events, range) {
+  const past = [];
+  const upcoming = [];
+  events.forEach((event) => {
+    if (!event || event.date < range.start || event.date > range.end) return;
+    const names = Array.isArray(event.companies) ? event.companies : [];
+    if (!names.includes(shortName) && event.operator !== shortName) return;
+    const mapped = mapNorwayEvent(event);
+    if (event.upcoming === "Y") upcoming.push(mapped);
+    else past.push(mapped);
+  });
+  past.sort((a, b) => String(b.date).localeCompare(String(a.date)) || showText(a.headline).localeCompare(showText(b.headline)));
+  upcoming.sort((a, b) => String(a.date).localeCompare(String(b.date)) || showText(a.headline).localeCompare(showText(b.headline)));
+  return { past, upcoming };
+}
+
+function applyNorwayStats(row, pack, today) {
+  const material = pack.past.filter((event) => event.material_if_delivered === "Y" && event.date <= today);
+  const setbacks = pack.past.filter((event) => event.setback && event.date <= today);
+  row.events12m = (row.events12m || 0) + material.length;
+  row.setbacks = (row.setbacks || 0) + setbacks.length;
+  const latest = material[0];
+  if (latest && (!row.latestDate || latest.date > row.latestDate)) {
+    row.latestDate = latest.date;
+    row.latestType = latest.type;
+    row.latestHeadline = latest.headline;
+  }
+  row.events = [...row.events, ...pack.past].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  row.upcoming = [...row.upcoming, ...pack.upcoming].sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  row.upcomingCount = row.upcoming.length;
+  row.nextDate = row.upcoming.length ? row.upcoming[0].date : null;
+  if (!row.markets.includes("Norway")) row.markets.push("Norway");
+  row.shelf = true;
+}
+
+function norwayRow(company, pack, range) {
+  const code = screenCode(company);
+  const pastMaterial = pack.past.filter((event) => event.material_if_delivered === "Y" && event.date <= range.today);
+  const latest = pastMaterial[0];
+  return {
+    id: `no:${code}`,
+    code,
+    name: company.name,
+    exchange: venueOf(company.listing_ticker),
+    band: null,
+    type: "Oil and gas",
+    stage: null,
+    description: company.note,
+    cap: null,
+    median: null,
+    currency: null,
+    asOf: company.as_of,
+    events12m: pastMaterial.length,
+    latestDate: latest ? latest.date : null,
+    latestType: latest ? latest.type : null,
+    latestHeadline: latest ? latest.headline : null,
+    setbacks: pack.past.filter((event) => event.setback && event.date <= range.today).length,
+    cash: null,
+    url: "",
+    events: pack.past,
+    upcoming: pack.upcoming,
+    upcomingCount: pack.upcoming.length,
+    nextDate: pack.upcoming.length ? pack.upcoming[0].date : null,
+    sector: "Oil and gas",
+    markets: ["Norway"],
+    shelf: true,
+  };
+}
+
+function foldNorway(rows, companies, events) {
+  const range = norwayWindow();
+  const extras = [];
+  companies.forEach((company) => {
+    const shortName = String(company.short_name || "").trim();
+    if (!shortName) return;
+    const pack = norwayPack(shortName, events, range);
+    const existing = findScreenRow(company, rows);
+    if (existing) {
+      applyNorwayStats(existing, pack, range.today);
+      return;
+    }
+    extras.push(norwayRow(company, pack, range));
+  });
+  extras.sort((a, b) => showText(a.name).localeCompare(showText(b.name), "en", { sensitivity: "base" }));
+  return rows.concat(extras);
 }
 
 function searchBlob(row) {
@@ -214,6 +406,8 @@ function searchBlob(row) {
 }
 
 function matches(row) {
+  if (capsState.market !== "all" && !row.markets.includes(capsState.market)) return false;
+  if (capsState.sector !== "all" && row.sector !== capsState.sector) return false;
   if (capsState.exchange !== "all" && showText(row.exchange) !== capsState.exchange) return false;
   if (capsState.band !== "all" && showText(row.band) !== capsState.band) return false;
   if (capsState.type !== "all" && showText(row.type) !== capsState.type) return false;
@@ -314,15 +508,43 @@ function headlineLink(item) {
   return el("a", { href, target: "_blank", rel: "noopener noreferrer", text });
 }
 
+function eventDate(event) {
+  if (event.date_precision && event.date_precision !== "exact") return formatUpcomingDate(event);
+  return formatDate(event.date);
+}
+
+function reactionText(value) {
+  const number = asNumber(value);
+  if (number == null) return { text: "-", tone: "flat" };
+  const body = Math.abs(number).toFixed(1);
+  if (number < 0) return { text: `−${body}`, tone: "down" };
+  if (number > 0) return { text: body, tone: "up" };
+  return { text: body, tone: "flat" };
+}
+
+function reactionNode(event) {
+  return el("span", { class: "reacts", title: REACTION_TIP }, ["r5", "r20", "r60"].map((key) => {
+    const bit = reactionText(event[key]);
+    return el("span", { class: bit.tone, text: `${key} ${bit.text}` });
+  }));
+}
+
+function visibleEvents(row) {
+  return row.events.filter((event) => capsState.showBackground || !event.background);
+}
+
 function expandBody(row) {
-  const events = row.events.length
-    ? el("ul", { class: "cap-events" }, row.events.map((event) => el("li", { class: "cap-event" }, [
-      el("span", { class: "cap-date", text: formatDate(event.date) }),
+  const listed = visibleEvents(row);
+  const hidden = row.events.length - listed.length;
+  const events = listed.length
+    ? el("ul", { class: "cap-events" }, listed.map((event) => el("li", { class: "cap-event" }, [
+      el("span", { class: "cap-date", text: eventDate(event) }),
       el("span", { text: showText(event.type) }),
       el("span", { text: showText(event.headline) }),
       el("span", { text: `Setback: ${setbackLabel(event.setback)}` }),
+      reactionNode(event),
     ])))
-    : el("p", { class: "cap-desc", text: "No events listed." });
+    : el("p", { class: "cap-desc", text: hidden ? "Background events are hidden." : "No events listed." });
   const upcoming = row.upcoming.length
     ? [
       el("p", { class: "eyebrow", text: "Upcoming" }),
@@ -516,6 +738,8 @@ function mountSort() {
 
 function mountFilters() {
   const filters = [
+    ["market", "Market", MARKET_OPTIONS],
+    ["sector", "Sector", SECTOR_OPTIONS],
     ["exchange", "Exchange", choiceList(caps.map((row) => showText(row.exchange)), EXCHANGE_ORDER)],
     ["band", "Band", choiceList(caps.map((row) => showText(row.band)), BAND_ORDER)],
     ["type", "Type", choiceList(caps.map((row) => showText(row.type)), [])],
@@ -537,13 +761,27 @@ function mountFilters() {
       type: "button",
       class: "toggle-btn",
       id: "smallcaps-upcoming",
-      "aria-pressed": "false",
+      "aria-pressed": capsState.hasUpcoming ? "true" : "false",
       onClick: (event) => {
         capsState.hasUpcoming = !capsState.hasUpcoming;
         event.currentTarget.setAttribute("aria-pressed", capsState.hasUpcoming ? "true" : "false");
         renderLists();
       },
       text: "Has upcoming",
+    }),
+  ]), el("label", { class: "field" }, [
+    "Background",
+    el("button", {
+      type: "button",
+      class: "toggle-btn",
+      id: "smallcaps-background",
+      "aria-pressed": capsState.showBackground ? "true" : "false",
+      onClick: (event) => {
+        capsState.showBackground = !capsState.showBackground;
+        event.currentTarget.setAttribute("aria-pressed", capsState.showBackground ? "true" : "false");
+        renderLists();
+      },
+      text: "Show background",
     }),
   ]));
 }
@@ -558,11 +796,12 @@ function bindSearch() {
 }
 
 function applyTab(tab, persist) {
-  const allowed = ["events", "smallcaps", "norway", "coming"];
-  const next = allowed.includes(tab) ? tab : "events";
+  const mapped = tab === "norway" ? "smallcaps" : tab;
+  const allowed = ["events", "smallcaps", "coming"];
+  const next = allowed.includes(mapped) ? mapped : "events";
   document.documentElement.dataset.view = next;
   document.body.dataset.view = next;
-  ["smallcaps", "norway", "coming"].forEach((id) => {
+  ["smallcaps", "coming"].forEach((id) => {
     const panel = document.getElementById(id);
     if (panel) panel.hidden = next !== id;
   });
@@ -573,7 +812,7 @@ function applyTab(tab, persist) {
   });
   const skip = document.querySelector(".skip");
   if (skip) {
-    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "norway" ? ["#norway", "Skip to Norway"] : next === "coming" ? ["#coming", "Skip to coming up"] : ["#timeline", "Skip to timeline"];
+    const target = next === "smallcaps" ? ["#smallcaps", "Skip to screen"] : next === "coming" ? ["#coming", "Skip to coming up"] : ["#timeline", "Skip to timeline"];
     skip.href = target[0];
     skip.textContent = target[1];
   }
@@ -611,18 +850,95 @@ function showCapsError() {
   empty.replaceChildren(el("p", { class: "error", text: "The screen could not be loaded. Refresh the page to try again." }));
 }
 
+function formatMove(value) {
+  const number = asNumber(value);
+  if (number == null) return "—";
+  const body = Math.abs(number).toFixed(1);
+  return number < 0 ? `−${body}` : body;
+}
+
+function formatShare(value) {
+  const number = asNumber(value);
+  if (number == null) return "—";
+  const rounded = Math.round(number * 10) / 10;
+  const body = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+  return `${body}%`;
+}
+
+function reactionCell(stat) {
+  const dim = !stat || stat.n < 10;
+  return el("td", { class: dim ? "react-dim" : "" }, [
+    el("span", { class: "react-med", text: stat ? formatMove(stat.median) : "—" }),
+    el("span", { class: "react-hit", text: stat ? `${formatShare(stat.hit_rate)} positive` : "" }),
+    el("span", { class: "react-n", text: stat ? `n ${stat.n}` : "" }),
+  ]);
+}
+
+function reactionGroup(label, block) {
+  const stats = REACTION_HORIZONS.map(([key]) => block?.[key]);
+  const dim = stats.every((stat) => !stat || stat.n < 10);
+  const row = el("tr", { class: dim ? "react-dim" : "" });
+  row.append(el("th", { scope: "row", text: label }));
+  stats.forEach((stat) => row.append(reactionCell(stat)));
+  return row;
+}
+
+function reactionTable(groups) {
+  const table = el("table", { class: "react-table" });
+  const head = el("tr");
+  head.append(el("th", { scope: "col", text: "" }));
+  REACTION_HORIZONS.forEach(([, label]) => head.append(el("th", { scope: "col", text: label })));
+  table.append(el("thead", {}, [head]));
+  const body = el("tbody");
+  groups.forEach(([label, block]) => body.append(reactionGroup(label, block)));
+  table.append(body);
+  return el("div", { class: "react-scroll" }, [table]);
+}
+
+function renderReactions(summary) {
+  const panel = document.getElementById("react-panel");
+  const body = document.getElementById("react-body");
+  const caption = document.getElementById("react-caption");
+  if (!panel || !body || !caption || !summary || typeof summary !== "object") return;
+  const tiers = summary.by_tier || {};
+  const types = summary.by_type || {};
+  caption.textContent = REACTION_CAPTION;
+  body.replaceChildren(
+    el("p", { class: "eyebrow", text: "By tier" }),
+    reactionTable([
+      ["Material", tiers.material],
+      ["Background", tiers.background],
+      ["Setback", tiers.setback],
+    ]),
+    el("p", { class: "eyebrow", text: "By event type" }),
+    reactionTable(Object.entries(types)),
+  );
+  panel.hidden = false;
+}
+
+async function loadJson(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(path);
+  return response.json();
+}
+
 async function loadCaps() {
-  const response = await fetch("data/smallcaps.json", { cache: "no-cache" });
-  if (!response.ok) throw new Error("smallcaps");
-  const data = await response.json();
-  if (!Array.isArray(data)) throw new Error("smallcaps");
-  caps = data.map(normalize);
+  const [data, companies, events, summary] = await Promise.all([
+    loadJson("data/smallcaps.json"),
+    loadJson("data/norway_companies.json"),
+    loadJson("data/norway_events.json"),
+    loadJson("data/smallcaps_reaction_summary.json"),
+  ]);
+  if (!Array.isArray(data) || !Array.isArray(companies) || !Array.isArray(events)) throw new Error("smallcaps");
+  caps = foldNorway(data.map(normalize), companies, events);
   document.getElementById("smallcaps-loading").hidden = true;
+  renderReactions(summary);
   mountFilters();
   mountSort();
   bindSearch();
   renderLists();
   document.body.dataset.caps = String(caps.length);
+  document.body.dataset.shelf = String(caps.filter((row) => row.shelf).length);
   if (pendingScreen) {
     const code = pendingScreen;
     pendingScreen = "";
@@ -634,11 +950,14 @@ let pendingScreen = "";
 
 function resetScreenFilters() {
   capsState.q = "";
+  capsState.market = "all";
+  capsState.sector = "all";
   capsState.exchange = "all";
   capsState.band = "all";
   capsState.type = "all";
   capsState.stage = "all";
   capsState.hasUpcoming = false;
+  capsState.showBackground = false;
   const search = document.getElementById("smallcaps-search");
   if (search) {
     search.value = "";
@@ -650,6 +969,8 @@ function resetScreenFilters() {
   });
   const upcoming = document.getElementById("smallcaps-upcoming");
   if (upcoming) upcoming.setAttribute("aria-pressed", "false");
+  const background = document.getElementById("smallcaps-background");
+  if (background) background.setAttribute("aria-pressed", "false");
 }
 
 function revealScreen(code) {
@@ -676,8 +997,8 @@ function boot() {
   window.moonshotApplyTab = applyTab;
   window.moonshotOpenScreen = openScreenCompany;
   const view = document.documentElement.dataset.view;
-  const initial = view === "smallcaps" || view === "norway" || view === "coming" ? view : "events";
-  applyTab(initial, false);
+  const initial = view === "norway" ? "smallcaps" : view;
+  applyTab(initial === "smallcaps" || initial === "coming" ? initial : "events", false);
   loadCaps().catch(showCapsError);
 }
 
